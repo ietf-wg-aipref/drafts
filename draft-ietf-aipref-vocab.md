@@ -24,7 +24,7 @@ venue:
   latest: "https://paul2keller.github.io/opt-out-vocab-id/draft-keller-aipref-vocab.html"
 
 author:
-  - 
+  -
     fullname: Paul Keller
     organization: Open Future
     email: paul@openfuture.eu
