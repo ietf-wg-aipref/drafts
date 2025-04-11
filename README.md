@@ -1,6 +1,6 @@
 <!-- regenerate: off -->
 
-# A
+# AIPREF Working Drafts
 
 This is the working area for the IETF [AIPREF Working Group](https://datatracker.ietf.org/group/aipref/documents/) Internet-Drafts.
 
