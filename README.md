@@ -1,13 +1,23 @@
-<!-- regenerate: on (set to off if you edit this file) -->
+<!-- regenerate: off -->
 
-# Proposal for an Opt-Out Vocabulary
+# A
 
-This is the working area for the IETF [AIPREF Working Group](https://datatracker.ietf.org/group/aipref/documents/) Internet-Draft, "Proposal for an Opt-Out Vocabulary".
+This is the working area for the IETF [AIPREF Working Group](https://datatracker.ietf.org/group/aipref/documents/) Internet-Drafts.
+
+We are developing a simple means for people to express their preferences about how their content is used by text and data mining systems, especially for the training of AI.
+
+The work includes a vocabulary of terms and their meanings.  We define how someone might create expressions that encode their preferences about how content might be used using those terms.  We also create concrete methods for conveying those expressions to those who might use content.
+
+## Vocabulary
 
 * [Editor's Copy](https://ietf-wg-aipref.github.io/drafts/#go.draft-ietf-aipref-vocab.html)
 * [Datatracker Page](https://datatracker.ietf.org/doc/draft-ietf-aipref-vocab)
 * [Working Group Draft](https://datatracker.ietf.org/doc/html/draft-ietf-aipref-vocab)
 * [Compare Editor's Copy to Working Group Draft](https://ietf-wg-aipref.github.io/drafts/#go.draft-ietf-aipref-vocab.diff)
+
+## Protocol Elements
+
+Coming soon.
 
 
 ## Contributing
