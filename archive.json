@@ -1,0 +1,327 @@
+{
+  "magic": "E!vIA5L86J2I",
+  "timestamp": "2025-04-13T03:18:19.244258+00:00",
+  "repo": "ietf-wg-aipref/drafts",
+  "labels": [
+    {
+      "name": "vocabulary",
+      "description": "",
+      "color": "954F69"
+    },
+    {
+      "name": "location attachment",
+      "description": "",
+      "color": "6784C2"
+    },
+    {
+      "name": "combination",
+      "description": "",
+      "color": "576322"
+    },
+    {
+      "name": "editorial",
+      "description": "A matter that the editors can dispose of without working group consensus",
+      "color": "fbca04"
+    },
+    {
+      "name": "applicability statement",
+      "description": null,
+      "color": "aaaaaa"
+    }
+  ],
+  "issues": [
+    {
+      "number": 1,
+      "id": "I_kwDOOWk1-s6x9xuR",
+      "title": "Search and Discovery",
+      "url": "https://github.com/ietf-wg-aipref/drafts/issues/1",
+      "state": "OPEN",
+      "author": "mnot",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [
+        "vocabulary"
+      ],
+      "body": "Discussed in the Brussels meeting - there was broad agreement in the room that because search and discovery are often intertwined with AI, and because robots.txt also implicates search and discovery, it is important to attempt to address these use cases in our vocabulary.",
+      "createdAt": "2025-04-10T13:45:58Z",
+      "updatedAt": "2025-04-10T13:45:58Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 2,
+      "id": "I_kwDOOWk1-s6x9y2N",
+      "title": "Inference-time preferences",
+      "url": "https://github.com/ietf-wg-aipref/drafts/issues/2",
+      "state": "OPEN",
+      "author": "mnot",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [
+        "vocabulary"
+      ],
+      "body": "Discussed in the Brussels meeting -- there was broad support for also defining at least one vocabulary term for inference-time use of content by models. More than one term may be necessary, but the sense of the room was that we should keep this as simple as possible at the first instance.",
+      "createdAt": "2025-04-10T13:47:22Z",
+      "updatedAt": "2025-04-10T13:49:48Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 3,
+      "id": "I_kwDOOWk1-s6x9zZe",
+      "title": "TDM",
+      "url": "https://github.com/ietf-wg-aipref/drafts/issues/3",
+      "state": "OPEN",
+      "author": "mnot",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [
+        "vocabulary"
+      ],
+      "body": "Discussed in the Brussels meeting. There was some question of whether it was necessary to define a broad TMD term in the vocabulary, but there was not agreement about removing it.",
+      "createdAt": "2025-04-10T13:48:11Z",
+      "updatedAt": "2025-04-10T13:48:11Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 4,
+      "id": "I_kwDOOWk1-s6x90Sj",
+      "title": "Eurocentricity",
+      "url": "https://github.com/ietf-wg-aipref/drafts/issues/4",
+      "state": "OPEN",
+      "author": "mnot",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [
+        "vocabulary",
+        "editorial"
+      ],
+      "body": "The draft is currently written in a Europe-specific way.",
+      "createdAt": "2025-04-10T13:49:27Z",
+      "updatedAt": "2025-04-10T13:50:03Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 5,
+      "id": "I_kwDOOWk1-s6x91fb",
+      "title": "Hierarchy",
+      "url": "https://github.com/ietf-wg-aipref/drafts/issues/5",
+      "state": "OPEN",
+      "author": "mnot",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [
+        "vocabulary"
+      ],
+      "body": "The proposed vocabulary has nesting / hierarchy - use of one term can imply the use of another. In the Brussels meeting, we discussed that this may not always prove to be the case, but no conclusions were reached.",
+      "createdAt": "2025-04-10T13:51:06Z",
+      "updatedAt": "2025-04-10T13:51:06Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 6,
+      "id": "I_kwDOOWk1-s6x92li",
+      "title": "Definitions",
+      "url": "https://github.com/ietf-wg-aipref/drafts/issues/6",
+      "state": "OPEN",
+      "author": "mnot",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [
+        "vocabulary"
+      ],
+      "body": "Discussed in the Brussels meeting - the definition of terms like 'AI' need to be examined and potentially refined.",
+      "createdAt": "2025-04-10T13:52:33Z",
+      "updatedAt": "2025-04-10T13:52:33Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 7,
+      "id": "I_kwDOOWk1-s6x95aO",
+      "title": "Mapping vocabulary to preferences",
+      "url": "https://github.com/ietf-wg-aipref/drafts/issues/7",
+      "state": "OPEN",
+      "author": "mnot",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [
+        "vocabulary"
+      ],
+      "body": "Discussed in the Brussels meeting. The vocabulary is abstract; it defines terms (e.g., \"X\") but does not define how to declare preferences (e.g., \"I do not prefer X\").",
+      "createdAt": "2025-04-10T13:56:30Z",
+      "updatedAt": "2025-04-10T13:56:30Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 8,
+      "id": "I_kwDOOWk1-s6x96yH",
+      "title": "Vocabulary interface to preferences",
+      "url": "https://github.com/ietf-wg-aipref/drafts/issues/8",
+      "state": "OPEN",
+      "author": "mnot",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [
+        "vocabulary"
+      ],
+      "body": "Discussed in the Brussels meeting. The vocabulary (even when mapped to preferences; see #7) does not specify how an attachment mechanism should express it. \n\nSense of the room in Brussels was that:\n* The vocabulary should define an abstract model\n* The vocabulary should also define a preferred / recommended mapping to strings (i.e., a serialisation)\n* Individual attachment mechanisms can opt into using that serialisation, or may define their own",
+      "createdAt": "2025-04-10T13:58:31Z",
+      "updatedAt": "2025-04-10T13:58:31Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 10,
+      "id": "I_kwDOOWk1-s6yKWAe",
+      "title": "\"Good\" uses",
+      "url": "https://github.com/ietf-wg-aipref/drafts/issues/10",
+      "state": "OPEN",
+      "author": "mnot",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [
+        "applicability statement"
+      ],
+      "body": "E.g., spam filtering, identifying offensive language\n\nSense in Brussels was that this would be covered by the legal regime, not vocabulary.",
+      "createdAt": "2025-04-11T15:53:29Z",
+      "updatedAt": "2025-04-11T15:53:29Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 11,
+      "id": "I_kwDOOWk1-s6yKWj4",
+      "title": "\"Bad\" uses",
+      "url": "https://github.com/ietf-wg-aipref/drafts/issues/11",
+      "state": "OPEN",
+      "author": "mnot",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [
+        "vocabulary"
+      ],
+      "body": "E.g., weapons, biometrics, other uses that content owners may not want to countenance. \n\nSense in Brussels was that we will not address this in the first deliverables, but might consider in future extensions.",
+      "createdAt": "2025-04-11T15:54:27Z",
+      "updatedAt": "2025-04-11T15:54:27Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 12,
+      "id": "I_kwDOOWk1-s6yKYDf",
+      "title": "Time preferences are applied",
+      "url": "https://github.com/ietf-wg-aipref/drafts/issues/12",
+      "state": "OPEN",
+      "author": "mnot",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [
+        "location attachment"
+      ],
+      "body": "Content might be gathered a long time before it is used. Which location-based attachment should apply to such content -- that requested at approximately the same time as the content, or the most current document?",
+      "createdAt": "2025-04-11T15:56:57Z",
+      "updatedAt": "2025-04-11T15:56:57Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 13,
+      "id": "I_kwDOOWk1-s6yKa0q",
+      "title": "Identifying the set of relevant attachment mechanisms",
+      "url": "https://github.com/ietf-wg-aipref/drafts/issues/13",
+      "state": "OPEN",
+      "author": "mnot",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [
+        "location attachment",
+        "applicability statement"
+      ],
+      "body": "The architecture we're developing accommodates attachment mechanisms that we define in our \"core\" documents, as well as future extensions -- including those defined by us and by third parties.\n\nContent providers need to know which attachment mechanisms will be paid attention to, and consumers of preferences need to know which ones they're supposed to check. \n\nThere might be:\n\n* one canonical list (e.g., in our specification or an IANA registry)\n* more than one list (e.g., defined per-use-case, such as for crawling-to-train vs inference-time)\n* undefined list (e.g., defined by legal authority)",
+      "createdAt": "2025-04-11T16:00:54Z",
+      "updatedAt": "2025-04-11T16:00:54Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 14,
+      "id": "I_kwDOOWk1-s6yKcat",
+      "title": "Combination",
+      "url": "https://github.com/ietf-wg-aipref/drafts/issues/14",
+      "state": "OPEN",
+      "author": "mnot",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [
+        "combination",
+        "applicability statement"
+      ],
+      "body": "In Brussels, a sense emerged that we would only address combination for different preferences for the same content (e.g., robots.txt and HTTP header applied to the same file). We would not address combination of preferences from different sources (e.g., the same image from two different sites).\n\nThis should be documented in the applicability statement. We also need to determine the algorithm, e.g.,\n\n* Most restrictive\n* Most specific attachment\n* Most specific preference",
+      "createdAt": "2025-04-11T16:02:56Z",
+      "updatedAt": "2025-04-11T16:02:56Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 15,
+      "id": "I_kwDOOWk1-s6yKc-z",
+      "title": "Applicability Statement",
+      "url": "https://github.com/ietf-wg-aipref/drafts/issues/15",
+      "state": "OPEN",
+      "author": "mnot",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [
+        "applicability statement"
+      ],
+      "body": "This issue captures potential items to discuss in an applicability statement intended for regulators and other parties using the framework we define.\n\n",
+      "createdAt": "2025-04-11T16:03:46Z",
+      "updatedAt": "2025-04-11T16:03:52Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "- opt-in vs opt-out\n- robots time dimension\n- disparate assertions from multiple sources\n- hosted content\n- rightsholder identification\n- accessibility, academic / research / spam filters, impact upon other \"good\" uses\n- data protection / privacy\n- enforcement / audit\n- bot identification / authentication\n- TDM is very broad",
+          "createdAt": "2025-04-11T16:03:50Z",
+          "updatedAt": "2025-04-11T16:03:50Z"
+        }
+      ]
+    }
+  ],
+  "pulls": [
+    {
+      "number": 9,
+      "id": "PR_kwDOOWk1-s6SHngM",
+      "title": "A better README",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/9",
+      "state": "MERGED",
+      "author": "martinthomson",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "@mnot, you probably want to have a say here.  I'll be guided by you here as to whether you want to merge this and fix it up, or whether you want to redo it.",
+      "createdAt": "2025-04-10T15:09:21Z",
+      "updatedAt": "2025-04-11T05:43:14Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "75ee55bfaec63f6cc9d7c197fe4f07c6b153c291",
+      "headRepository": "ietf-wg-aipref/drafts",
+      "headRefName": "readme",
+      "headRefOid": "0d404886530e91ccaaf6709f3286ac505ca43294",
+      "closedAt": "2025-04-11T05:42:18Z",
+      "mergedAt": "2025-04-11T05:42:18Z",
+      "mergedBy": "mnot",
+      "mergeCommit": {
+        "oid": "2505596c61a1e2ac6430b2ab027afe48bda9aa2e"
+      },
+      "comments": [],
+      "reviews": []
+    }
+  ]
+}
