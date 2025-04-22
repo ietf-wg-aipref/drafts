@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-04-13T03:18:19.244258+00:00",
+  "timestamp": "2025-04-22T01:54:12.284070+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -263,9 +263,17 @@
       ],
       "body": "In Brussels, a sense emerged that we would only address combination for different preferences for the same content (e.g., robots.txt and HTTP header applied to the same file). We would not address combination of preferences from different sources (e.g., the same image from two different sites).\n\nThis should be documented in the applicability statement. We also need to determine the algorithm, e.g.,\n\n* Most restrictive\n* Most specific attachment\n* Most specific preference",
       "createdAt": "2025-04-11T16:02:56Z",
-      "updatedAt": "2025-04-11T16:02:56Z",
+      "updatedAt": "2025-04-22T01:40:33Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "We have an issue regarding specificity and whether \"nesting\" is a desirable thing (#5).  If we resolve that, then the logical thing to do is ensure that only the most-specific preference applies.\n\nSetting that aside, we still need to resolve the question of how to resolve conflicting preferences for the same thing.  I heard that most restrictive was perhaps the safest approach, but there are some potential secondary information channels that might lead to weighting things differently.  For instance, an HTTP header field might be considered as an override for something in robots.txt rather than having both preferences apply.\n\nThings to consider also are the specificity associated with different channels.  If both HTTP header field and robots.txt apply and we go with most specific, most restrictive (in that order) then a more specific \"allow\" statement in robots.txt would override a less specific \"deny\" statement in the header field.  That might be surprising to the entity specifying the \"deny\" preference.  Either is potentially acceptable, but we need to be very clear about what the properties of the system are, especially for cases like this.",
+          "createdAt": "2025-04-22T01:40:32Z",
+          "updatedAt": "2025-04-22T01:40:32Z"
+        }
+      ]
     },
     {
       "number": 15,
