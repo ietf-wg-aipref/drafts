@@ -4,6 +4,8 @@
 
 This is the working area for the IETF [AIPREF Working Group](https://datatracker.ietf.org/group/aipref/documents/) Internet-Drafts.
 
+**NOTE**: _Substantive discussion in issues is strongly discouraged; please use the mailing list._
+
 We are developing a simple means for people to express their preferences about how their content is used by text and data mining systems, especially for the training of AI.
 
 The work includes a vocabulary of terms and their meanings.  We define how someone might create expressions that encode their preferences about how content might be used using those terms.  We also create concrete methods for conveying those expressions to those who might use content.
