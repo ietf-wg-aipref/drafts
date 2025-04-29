@@ -46,19 +46,28 @@ informative:
 
 --- abstract
 
-This document proposes a standardized vocabulary of use cases that can be targeted when expressing machine-readable opt-outs related to Text and Data Mining (TDM) and AI training. The vocabulary is agnostic to specific opt-out mechanisms and enables declaring parties to communicate restrictions or permissions regarding the use of their digital assets in a structured and interoperable manner. It defines three key use cases—TDM, AI Training, and Generative AI Training—which can be referenced by opt-out systems to ensure consistent interpretation across different implementations.
+This document proposes a standardized vocabulary for expressing preferences related to how content is consumed by automated processing systems.
+This vocabulary allows for the creation of structured declarations about restrictions or permissions for use of digital assets.
+The vocabulary is agnostic to the means by which it is conveyed.
+The definitions in the vocabulary enable a shared understanding between entities that express their preference and those that consume the associated digital assets.
 
 --- middle
 
 # Introduction
 
-The purpose of this document is to provide a common vocabulary that can be used for machine-readable opt-outs by parties who wish to restrict the use of their assets for the purpose of AI training and other forms of Text and Data Mining (TDM).
+This document defines a common vocabulary of terms for automated systems that process digital assets.
+The primary purpose of this vocabulary is to enable machine-readable expressions of preferences about how digital assets are used by automated processing systems, such as AI training and other forms of Text and Data Mining (TDM).
 
-The elements of the vocabulary can be used to describe, in a standardized way, the types of uses that a declaring party may wish to restrict (or allow), thereby ensuring that opt-outs can be communicated, processed and stored in a consistent and interoperable manner.
+The elements of the vocabulary can be used to describe, in a standardized way, the types of uses that a declaring party may wish to explicitly restrict or allow.
+This ensures that preferences - either to indicate an opt-out or to explicitly admit a given usage - can be communicated, processed and stored in a consistent and interoperable manner.
 
-The vocabulary is agnostic to the technical implementations of opt-out systems and is designed to ensure that opt-out information can be effectively exchanged between different systems. The vocabulary is intended to govern the use of works in the context of training AI models and other forms of TDM but does not concern itself with the collection of training data (crawling). In particular the vocabulary is not intended for expressing instructions or restrictions related to crawling for the purpose of building a search index, as there are already more specific standards and protocols for this purpose including but not limited to {{!RFC9309}}.
+The vocabulary is agnostic to the technical implementations of how systems process digital assets.
+It is designed to ensure that preference information can be effectively exchanged between different systems.
 
-The vocabulary is intended to both work in contexts where such opt-outs expressed to the declaring party give rise to legal obligation (such as rights reservation made by rightholders) and in contexts where this is not the case. It is without prejudice to applicable laws and the applicability of exceptions and limitations.
+The vocabulary is intended to govern the use of works in the context of training AI models and other forms of TDM but does not concern itself with the mechanisms involved in obtaining content (that is, crawling).
+In particular the vocabulary is not intended for expressing instructions related to crawling for the purpose of building a search index, as there are already more specific standards and protocols for this purpose including but not limited to {{!RFC9309}}.
+
+The vocabulary is intended to both work in contexts where such preferences result in legal obligations (such as rights reservation made by rightholders) and in contexts where this is not the case. It is without prejudice to applicable laws and the applicability of exceptions and limitations.
 
 # Conventions and Definitions
 
@@ -67,7 +76,7 @@ The vocabulary is intended to both work in contexts where such opt-outs expresse
 # Definitions
 
 * **Asset:** A digital file or stream of data, usually with associated metadata.
-* **Declaring party:** The entity that expresses an opt-out with regards to an Asset.
+* **Declaring party:** The entity that expresses an preference with regards to an Asset.
 
 # Vocabulary Structure
 
@@ -75,7 +84,7 @@ The vocabulary consists of the overarching TDM (Text and Data Mining) category a
 
 # Proposed Vocabulary
 
-The following categories are defined for use in the opt-out vocabulary:
+The following categories are defined for use in the vocabulary:
 
 * **TDM**: Text and Data Mining. The act of using one or more assets in the context of any automated analytical technique aimed at analyzing text and data in digital form in order to generate information which includes but is not limited to patterns, trends and correlations.
 * **AI Training**: The act of training AI models
@@ -91,7 +100,7 @@ When using this vocabulary more specific instructions — either based on the vo
 
 ## Relationship between categories
 
-The TDM category is the overarching category that includes the AI training category. Generative AI training is a subset of the AI training category. Both AI training and generative AI training are considered to be forms of TDM. As such, when a Declaring Party opts out of TDM, they also opt out of these categories. AI model developers processing opt-outs must therefore interpret an opt-out from TDM to also mean an opt-out from Generative AI Training and AI Training.
+The TDM category is the overarching category that includes the AI training category. Generative AI training is a subset of the AI training category. Both AI training and generative AI training are considered to be forms of TDM. As such, when a Declaring Party expresses a preference regarding TDM, that preference applies to the other categories. AI model developers processing preference expressions must therefore interpret a preference regarding TDM to also mean apply to Generative AI Training and AI Training.
 
 The figure below shows the relationship between the currently defined categories:
 
@@ -145,7 +154,7 @@ Systems referencing the vocabulary must not introduce additional categories that
 
 # Usage
 
-The vocabulary may be used by declaring that an opt-out system or entity expressing or processing opt-outs uses the terms defined in the "Proposed Vocabulary" section above, directly or via mappings, in accordance with how they are defined in this document.
+The vocabulary may be used by referencing the terms defined in the "Proposed Vocabulary" section above, directly or via mappings, in accordance with how they are defined in this document.
 
 # Security Considerations
 
