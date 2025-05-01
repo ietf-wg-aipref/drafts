@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-04-22T01:54:12.284070+00:00",
+  "timestamp": "2025-05-01T02:04:54.538317+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -300,6 +300,24 @@
           "updatedAt": "2025-04-11T16:03:50Z"
         }
       ]
+    },
+    {
+      "number": 18,
+      "id": "I_kwDOOWk1-s60mW0h",
+      "title": "Opt-in / Opt-out",
+      "url": "https://github.com/ietf-wg-aipref/drafts/issues/18",
+      "state": "OPEN",
+      "author": "mnot",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [
+        "vocabulary"
+      ],
+      "body": "The \u201copt-out\u201d framing needs to be replaced by a preferences framing, without bias to opt-out or opt-in.",
+      "createdAt": "2025-04-30T02:33:36Z",
+      "updatedAt": "2025-04-30T02:33:36Z",
+      "closedAt": null,
+      "comments": []
     }
   ],
   "pulls": [
@@ -328,6 +346,58 @@
       "mergeCommit": {
         "oid": "2505596c61a1e2ac6430b2ab027afe48bda9aa2e"
       },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 16,
+      "id": "PR_kwDOOWk1-s6USWLD",
+      "title": "Move to standards track",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/16",
+      "state": "OPEN",
+      "author": "martinthomson",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "In looking through the draft and the scope of this work item, it seems like this work is going to have to define something concrete.  That is, any attachment draft (which will be a protocol for real) will need to normatively reference this document in order for it to make sense.  In that spirit, I think that we need this to be a standards-track document, not an informational document.\r\n\r\nChanging the intended status here will make all that possible.",
+      "createdAt": "2025-04-29T06:09:41Z",
+      "updatedAt": "2025-04-29T06:09:41Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "4108aab72df429e84dd7d7bb4be9aeb78ea392e0",
+      "headRepository": "ietf-wg-aipref/drafts",
+      "headRefName": "std-status",
+      "headRefOid": "25e0615ad5e5fb781bd59fafc01e7c992c8fcf93",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 17,
+      "id": "PR_kwDOOWk1-s6USgGb",
+      "title": "First cut at removing the opt-out language",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/17",
+      "state": "OPEN",
+      "author": "martinthomson",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "This was as little as I could manage with respect to turning \"opt-out\" to something more general: \"preferences\" or \"expressions of preference\".\r\n\r\nThere are a bunch of other challenges to address that we should probably look into.  Some of those change the language a lot more, but I thought that it was a good idea to get rid of the opt-out bias as a first order of business.",
+      "createdAt": "2025-04-29T06:32:57Z",
+      "updatedAt": "2025-04-29T06:32:57Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "4108aab72df429e84dd7d7bb4be9aeb78ea392e0",
+      "headRepository": "ietf-wg-aipref/drafts",
+      "headRefName": "opt-not",
+      "headRefOid": "40772891ea6f51e6b9aaefe579f79e457a682d7f",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
       "comments": [],
       "reviews": []
     }
