@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-05-01T02:04:54.538317+00:00",
+  "timestamp": "2025-05-04T02:05:52.738593+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -225,9 +225,17 @@
       ],
       "body": "Content might be gathered a long time before it is used. Which location-based attachment should apply to such content -- that requested at approximately the same time as the content, or the most current document?",
       "createdAt": "2025-04-11T15:56:57Z",
-      "updatedAt": "2025-04-11T15:56:57Z",
+      "updatedAt": "2025-05-02T11:33:43Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "lrosenthol",
+          "authorAssociation": "NONE",
+          "body": "this is an excellent question - which goes into all sorts of directions when one considered the \"validity lifetime\" of such declarations, and also the places from which the assets were obtained.\n\nFor example, if the source no longer exists (i.e., 404), if the TLS cert for the site has expired, etc.",
+          "createdAt": "2025-05-02T11:33:42Z",
+          "updatedAt": "2025-05-02T11:33:42Z"
+        }
+      ]
     },
     {
       "number": 13,
@@ -244,9 +252,17 @@
       ],
       "body": "The architecture we're developing accommodates attachment mechanisms that we define in our \"core\" documents, as well as future extensions -- including those defined by us and by third parties.\n\nContent providers need to know which attachment mechanisms will be paid attention to, and consumers of preferences need to know which ones they're supposed to check. \n\nThere might be:\n\n* one canonical list (e.g., in our specification or an IANA registry)\n* more than one list (e.g., defined per-use-case, such as for crawling-to-train vs inference-time)\n* undefined list (e.g., defined by legal authority)",
       "createdAt": "2025-04-11T16:00:54Z",
-      "updatedAt": "2025-04-11T16:00:54Z",
+      "updatedAt": "2025-05-02T11:31:36Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "lrosenthol",
+          "authorAssociation": "NONE",
+          "body": "I would also think that there are two primary categories of attachment - location-based & unit/asset-based - and how that aspect is expressed",
+          "createdAt": "2025-05-02T11:31:35Z",
+          "updatedAt": "2025-05-02T11:31:35Z"
+        }
+      ]
     },
     {
       "number": 14,
@@ -387,7 +403,7 @@
       "labels": [],
       "body": "This was as little as I could manage with respect to turning \"opt-out\" to something more general: \"preferences\" or \"expressions of preference\".\r\n\r\nThere are a bunch of other challenges to address that we should probably look into.  Some of those change the language a lot more, but I thought that it was a good idea to get rid of the opt-out bias as a first order of business.",
       "createdAt": "2025-04-29T06:32:57Z",
-      "updatedAt": "2025-04-29T06:32:57Z",
+      "updatedAt": "2025-05-02T15:08:50Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "4108aab72df429e84dd7d7bb4be9aeb78ea392e0",
@@ -399,7 +415,84 @@
       "mergedBy": null,
       "mergeCommit": null,
       "comments": [],
-      "reviews": []
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWk1-s6nmF8I",
+          "commit": {
+            "abbreviatedOid": "4077289"
+          },
+          "author": "lrosenthol",
+          "authorAssociation": "NONE",
+          "state": "CHANGES_REQUESTED",
+          "body": "",
+          "createdAt": "2025-05-02T11:26:23Z",
+          "updatedAt": "2025-05-02T11:29:46Z",
+          "comments": [
+            {
+              "originalPosition": 5,
+              "body": "Should we bring up the whole gathered vs. processed dichotomy here?",
+              "createdAt": "2025-05-02T11:26:23Z",
+              "updatedAt": "2025-05-02T11:29:46Z"
+            },
+            {
+              "originalPosition": 6,
+              "body": "```suggestion\r\nThis vocabulary allows for the creation of declarations about restrictions or permissions for use of digital assets.\r\n```",
+              "createdAt": "2025-05-02T11:26:38Z",
+              "updatedAt": "2025-05-02T11:29:46Z"
+            },
+            {
+              "originalPosition": 6,
+              "body": "structured is a feature of serialization, and this document doesn't cover serialization",
+              "createdAt": "2025-05-02T11:26:57Z",
+              "updatedAt": "2025-05-02T11:29:46Z"
+            },
+            {
+              "originalPosition": 20,
+              "body": "```suggestion\r\nThis ensures that preferences - either to indicate an opt-out or to explicitly admit a given usage - can be communicated and processed in a consistent and interoperable manner.\r\n```",
+              "createdAt": "2025-05-02T11:28:03Z",
+              "updatedAt": "2025-05-02T11:29:46Z"
+            },
+            {
+              "originalPosition": 20,
+              "body": "storage implies serialization",
+              "createdAt": "2025-05-02T11:28:11Z",
+              "updatedAt": "2025-05-02T11:29:46Z"
+            },
+            {
+              "originalPosition": 27,
+              "body": "I would move this to the top, since this, IMO is a KEY PART of this work!",
+              "createdAt": "2025-05-02T11:28:43Z",
+              "updatedAt": "2025-05-02T11:29:46Z"
+            },
+            {
+              "originalPosition": 39,
+              "body": "```suggestion\r\n* **Declaring party:** The entity that expresses a preference with regards to an Asset.\r\n```",
+              "createdAt": "2025-05-02T11:29:14Z",
+              "updatedAt": "2025-05-02T11:29:46Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s6nn59f",
+          "commit": {
+            "abbreviatedOid": "4077289"
+          },
+          "author": "Jo-Levy",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-05-02T15:08:49Z",
+          "updatedAt": "2025-05-02T15:08:50Z",
+          "comments": [
+            {
+              "originalPosition": 20,
+              "body": "Stored can also imply that the machine-readable preference expressed is stored without serialization for later review/consumption by future downstream users. Other ways to express this concept: communicated, processed, and \"maintained for future use.\" ",
+              "createdAt": "2025-05-02T15:08:49Z",
+              "updatedAt": "2025-05-02T15:08:50Z"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
