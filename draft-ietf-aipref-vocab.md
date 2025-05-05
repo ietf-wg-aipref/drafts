@@ -76,7 +76,7 @@ The vocabulary is intended to both work in contexts where such preferences resul
 # Definitions
 
 * **Asset:** A digital file or stream of data, usually with associated metadata.
-* **Declaring party:** The entity that expresses an preference with regards to an Asset.
+* **Declaring party:** The entity that expresses a preference with regards to an Asset.
 
 # Vocabulary Structure
 
