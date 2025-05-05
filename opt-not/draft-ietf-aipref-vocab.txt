@@ -5,8 +5,8 @@
 AI Preferences                                                 P. Keller
 Internet-Draft                                               Open Future
 Intended status: Informational                           M. Thomson, Ed.
-Expires: 31 October 2025                                         Mozilla
-                                                           29 April 2025
+Expires: 6 November 2025                                         Mozilla
+                                                              5 May 2025
 
 
                    Proposal for an Opt-Out Vocabulary
@@ -55,7 +55,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 31 October 2025.
+   This Internet-Draft will expire on 6 November 2025.
 
 Copyright Notice
 
@@ -137,7 +137,7 @@ Table of Contents
    *  *Asset:* A digital file or stream of data, usually with associated
       metadata.
 
-   *  *Declaring party:* The entity that expresses an preference with
+   *  *Declaring party:* The entity that expresses a preference with
       regards to an Asset.
 
 4.  Vocabulary Structure
