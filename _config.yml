@@ -1,0 +1,7 @@
+  title: AI Preferences Drafts
+  description: Drafts currently under development in the AI Preferences Working Group
+  remote_theme: ietf-wg-aipref/theme@main
+  titles_from_headings:
+    enabled:     true
+    strip_title: true
+    collections: false
