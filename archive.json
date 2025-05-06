@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-05-04T02:05:52.738593+00:00",
+  "timestamp": "2025-05-06T01:57:13.878835+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -334,6 +334,22 @@
       "updatedAt": "2025-04-30T02:33:36Z",
       "closedAt": null,
       "comments": []
+    },
+    {
+      "number": 19,
+      "id": "I_kwDOOWk1-s61GW2Q",
+      "title": "Move AI intent to the top",
+      "url": "https://github.com/ietf-wg-aipref/drafts/issues/19",
+      "state": "OPEN",
+      "author": "martinthomson",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Regarding the statement of what the document is intended to address (AI training first, generic automated processing second, I think):\r\n\r\n> I would move this to the top, since this, IMO is a KEY PART of this work!\r\n\r\n_Originally posted by @lrosenthol in https://github.com/ietf-wg-aipref/drafts/pull/17#discussion_r2071478546_\r\n            ",
+      "createdAt": "2025-05-05T00:22:30Z",
+      "updatedAt": "2025-05-05T00:22:30Z",
+      "closedAt": null,
+      "comments": []
     }
   ],
   "pulls": [
@@ -403,13 +419,13 @@
       "labels": [],
       "body": "This was as little as I could manage with respect to turning \"opt-out\" to something more general: \"preferences\" or \"expressions of preference\".\r\n\r\nThere are a bunch of other challenges to address that we should probably look into.  Some of those change the language a lot more, but I thought that it was a good idea to get rid of the opt-out bias as a first order of business.",
       "createdAt": "2025-04-29T06:32:57Z",
-      "updatedAt": "2025-05-02T15:08:50Z",
+      "updatedAt": "2025-05-05T00:22:44Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "4108aab72df429e84dd7d7bb4be9aeb78ea392e0",
       "headRepository": "ietf-wg-aipref/drafts",
       "headRefName": "opt-not",
-      "headRefOid": "40772891ea6f51e6b9aaefe579f79e457a682d7f",
+      "headRefOid": "b5fc8ec90d2a7057c1408792272a91a65eafe506",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
@@ -489,6 +505,46 @@
               "body": "Stored can also imply that the machine-readable preference expressed is stored without serialization for later review/consumption by future downstream users. Other ways to express this concept: communicated, processed, and \"maintained for future use.\" ",
               "createdAt": "2025-05-02T15:08:49Z",
               "updatedAt": "2025-05-02T15:08:50Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s6ntLUR",
+          "commit": {
+            "abbreviatedOid": "4077289"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-05-05T00:20:45Z",
+          "updatedAt": "2025-05-05T00:20:45Z",
+          "comments": [
+            {
+              "originalPosition": 5,
+              "body": "I appreciate the edit.  It's better than mine, which was aiming for the minimum change.\r\n\r\nI still need to consult with Paul about how we want to proceed with this.  It might be easier if we did a complete rewrite (as you have done) than pick at the edges.  However, that reduces the traceability of our changes.",
+              "createdAt": "2025-05-05T00:20:45Z",
+              "updatedAt": "2025-05-05T00:20:46Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s6ntLWU",
+          "commit": {
+            "abbreviatedOid": "4077289"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-05-05T00:21:17Z",
+          "updatedAt": "2025-05-05T00:21:17Z",
+          "comments": [
+            {
+              "originalPosition": 6,
+              "body": "Yet.  My understanding of the defined scope of this document is that it will include serialization and processing.",
+              "createdAt": "2025-05-05T00:21:17Z",
+              "updatedAt": "2025-05-05T00:21:17Z"
             }
           ]
         }
