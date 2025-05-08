@@ -46,28 +46,24 @@ informative:
 
 --- abstract
 
-This document proposes a standardized vocabulary for expressing preferences related to how content is consumed by automated processing systems.
-This vocabulary allows for the creation of structured declarations about restrictions or permissions for use of digital assets.
-The vocabulary is agnostic to the means by which it is conveyed.
-The definitions in the vocabulary enable a shared understanding between entities that express their preference and those that consume the associated digital assets.
+This document proposes a standardized vocabulary for expressing preferences related to how digital assets are used by automated processing systems. 
+This vocabulary allows for the creation of structured declarations about restrictions or permissions for use of digital assets by such systems. 
+The vocabulary is agnostic to the means by which it is conveyed. 
+The definitions in the vocabulary facilitate a shared understanding between entities that express such preferences and those that use the associated digital assets.
 
 --- middle
 
 # Introduction
 
-This document defines a common vocabulary of terms for automated systems that process digital assets.
-The primary purpose of this vocabulary is to enable machine-readable expressions of preferences about how digital assets are used by automated processing systems, such as AI training and other forms of Text and Data Mining (TDM).
+This document defines a common vocabulary of terms for automated systems that process digital assets. The primary purpose of this vocabulary is to enable machine-readable expressions of preferences about how digital assets are used by automated processing systems, in the context of training AI models and other forms of text and data mining (TDM).
 
-The elements of the vocabulary can be used to describe, in a standardized way, the types of uses that a declaring party may wish to explicitly restrict or allow.
-This ensures that preferences - either to indicate an opt-out or to explicitly admit a given usage - can be communicated, processed and stored in a consistent and interoperable manner.
+The terms defined by the vocabulary can be used to describe, in a standardized way, the types of uses that a declaring party may wish to explicitly restrict or allow. This ensures that preferences—expressed as restrictions or permissions concerning specific types of use defined by the vocabulary—can be communicated, processed, and stored in a consistent and interoperable manner.
 
-The vocabulary is agnostic to the technical implementations of how systems process digital assets.
-It is designed to ensure that preference information can be effectively exchanged between different systems.
+The vocabulary is agnostic to the technical implementations of how systems process preferences expressed via the terms defined by the vocabulary. It is designed to ensure that preference information can be effectively exchanged between different systems.
 
-The vocabulary is intended to govern the use of works in the context of training AI models and other forms of TDM but does not concern itself with the mechanisms involved in obtaining content (that is, crawling).
-In particular the vocabulary is not intended for expressing instructions related to crawling for the purpose of building a search index, as there are already more specific standards and protocols for this purpose including but not limited to {{!RFC9309}}.
+The vocabulary is intended to govern the use of digital assets in the context of training AI models and other forms of TDM, but does not concern itself with the mechanisms involved in obtaining digital assets (i.e. crawling).
 
-The vocabulary is intended to both work in contexts where such preferences result in legal obligations (such as rights reservation made by rightholders) and in contexts where this is not the case. It is without prejudice to applicable laws and the applicability of exceptions and limitations.
+The vocabulary is intended to work in contexts where such preferences result in legal obligations (such as rights reservations made by rightholders in jurisdictions with conditional TDM exceptions), and in contexts where this is not the case. It is without prejudice to applicable laws and the applicability of exceptions and limitations to copyright.
 
 # Conventions and Definitions
 
