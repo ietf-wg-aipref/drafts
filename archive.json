@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-05-06T01:57:13.878835+00:00",
+  "timestamp": "2025-05-08T01:58:55.013612+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -62,9 +62,17 @@
       ],
       "body": "Discussed in the Brussels meeting -- there was broad support for also defining at least one vocabulary term for inference-time use of content by models. More than one term may be necessary, but the sense of the room was that we should keep this as simple as possible at the first instance.",
       "createdAt": "2025-04-10T13:47:22Z",
-      "updatedAt": "2025-04-10T13:49:48Z",
+      "updatedAt": "2025-05-07T16:30:32Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "BradSilver99",
+          "authorAssociation": "NONE",
+          "body": "Are there inference-time uses beyond RAG that others think we should include?  As was expressed in Brussels, the scraping of content for use in summarizing/synthesizing responses to user queries (i.e. at inference time) was a core concern for publishers - which is what we would currently refer to as accomplished via RAG.  I believe this should be the focus.   ",
+          "createdAt": "2025-05-07T16:30:31Z",
+          "updatedAt": "2025-05-07T16:30:31Z"
+        }
+      ]
     },
     {
       "number": 3,
@@ -92,14 +100,16 @@
       "state": "OPEN",
       "author": "mnot",
       "authorAssociation": "CONTRIBUTOR",
-      "assignees": [],
+      "assignees": [
+        "martinthomson"
+      ],
       "labels": [
         "vocabulary",
         "editorial"
       ],
       "body": "The draft is currently written in a Europe-specific way.",
       "createdAt": "2025-04-10T13:49:27Z",
-      "updatedAt": "2025-04-10T13:50:03Z",
+      "updatedAt": "2025-05-06T06:28:52Z",
       "closedAt": null,
       "comments": []
     },
@@ -147,13 +157,15 @@
       "state": "OPEN",
       "author": "mnot",
       "authorAssociation": "CONTRIBUTOR",
-      "assignees": [],
+      "assignees": [
+        "martinthomson"
+      ],
       "labels": [
         "vocabulary"
       ],
       "body": "Discussed in the Brussels meeting. The vocabulary is abstract; it defines terms (e.g., \"X\") but does not define how to declare preferences (e.g., \"I do not prefer X\").",
       "createdAt": "2025-04-10T13:56:30Z",
-      "updatedAt": "2025-04-10T13:56:30Z",
+      "updatedAt": "2025-05-06T06:28:10Z",
       "closedAt": null,
       "comments": []
     },
@@ -165,13 +177,15 @@
       "state": "OPEN",
       "author": "mnot",
       "authorAssociation": "CONTRIBUTOR",
-      "assignees": [],
+      "assignees": [
+        "martinthomson"
+      ],
       "labels": [
         "vocabulary"
       ],
       "body": "Discussed in the Brussels meeting. The vocabulary (even when mapped to preferences; see #7) does not specify how an attachment mechanism should express it. \n\nSense of the room in Brussels was that:\n* The vocabulary should define an abstract model\n* The vocabulary should also define a preferred / recommended mapping to strings (i.e., a serialisation)\n* Individual attachment mechanisms can opt into using that serialisation, or may define their own",
       "createdAt": "2025-04-10T13:58:31Z",
-      "updatedAt": "2025-04-10T13:58:31Z",
+      "updatedAt": "2025-05-06T06:26:01Z",
       "closedAt": null,
       "comments": []
     },
@@ -279,7 +293,7 @@
       ],
       "body": "In Brussels, a sense emerged that we would only address combination for different preferences for the same content (e.g., robots.txt and HTTP header applied to the same file). We would not address combination of preferences from different sources (e.g., the same image from two different sites).\n\nThis should be documented in the applicability statement. We also need to determine the algorithm, e.g.,\n\n* Most restrictive\n* Most specific attachment\n* Most specific preference",
       "createdAt": "2025-04-11T16:02:56Z",
-      "updatedAt": "2025-04-22T01:40:33Z",
+      "updatedAt": "2025-05-06T06:44:43Z",
       "closedAt": null,
       "comments": [
         {
@@ -288,6 +302,20 @@
           "body": "We have an issue regarding specificity and whether \"nesting\" is a desirable thing (#5).  If we resolve that, then the logical thing to do is ensure that only the most-specific preference applies.\n\nSetting that aside, we still need to resolve the question of how to resolve conflicting preferences for the same thing.  I heard that most restrictive was perhaps the safest approach, but there are some potential secondary information channels that might lead to weighting things differently.  For instance, an HTTP header field might be considered as an override for something in robots.txt rather than having both preferences apply.\n\nThings to consider also are the specificity associated with different channels.  If both HTTP header field and robots.txt apply and we go with most specific, most restrictive (in that order) then a more specific \"allow\" statement in robots.txt would override a less specific \"deny\" statement in the header field.  That might be surprising to the entity specifying the \"deny\" preference.  Either is potentially acceptable, but we need to be very clear about what the properties of the system are, especially for cases like this.",
           "createdAt": "2025-04-22T01:40:32Z",
           "updatedAt": "2025-04-22T01:40:32Z"
+        },
+        {
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "@mnot, I notice that you flagged this as being for an applicability statement.  I suspect that we will want to have some sort of rules for processing in the core vocabulary draft.  The less those are definitive, the more we'll end up relying on things like applicability statements.",
+          "createdAt": "2025-05-06T06:41:26Z",
+          "updatedAt": "2025-05-06T06:41:26Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Yep - it's flagged both for that and for the combination bit (which per Brussels discussion is likely to end up in the vocab document).",
+          "createdAt": "2025-05-06T06:44:42Z",
+          "updatedAt": "2025-05-06T06:44:42Z"
         }
       ]
     },
@@ -325,13 +353,16 @@
       "state": "OPEN",
       "author": "mnot",
       "authorAssociation": "CONTRIBUTOR",
-      "assignees": [],
+      "assignees": [
+        "martinthomson"
+      ],
       "labels": [
-        "vocabulary"
+        "vocabulary",
+        "editorial"
       ],
       "body": "The \u201copt-out\u201d framing needs to be replaced by a preferences framing, without bias to opt-out or opt-in.",
       "createdAt": "2025-04-30T02:33:36Z",
-      "updatedAt": "2025-04-30T02:33:36Z",
+      "updatedAt": "2025-05-06T06:28:58Z",
       "closedAt": null,
       "comments": []
     },
@@ -343,13 +374,110 @@
       "state": "OPEN",
       "author": "martinthomson",
       "authorAssociation": "CONTRIBUTOR",
-      "assignees": [],
-      "labels": [],
+      "assignees": [
+        "martinthomson"
+      ],
+      "labels": [
+        "vocabulary",
+        "editorial"
+      ],
       "body": "Regarding the statement of what the document is intended to address (AI training first, generic automated processing second, I think):\r\n\r\n> I would move this to the top, since this, IMO is a KEY PART of this work!\r\n\r\n_Originally posted by @lrosenthol in https://github.com/ietf-wg-aipref/drafts/pull/17#discussion_r2071478546_\r\n            ",
       "createdAt": "2025-05-05T00:22:30Z",
-      "updatedAt": "2025-05-05T00:22:30Z",
+      "updatedAt": "2025-05-06T06:29:39Z",
       "closedAt": null,
       "comments": []
+    },
+    {
+      "number": 20,
+      "id": "I_kwDOOWk1-s61coY0",
+      "title": "How can prior preferences be updated?",
+      "url": "https://github.com/ietf-wg-aipref/drafts/issues/20",
+      "state": "OPEN",
+      "author": "gitnnelg",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "How can preferences previously specified for an asset be updated?\n\nCould an Expires After label be applied in a AI Preferences file?\n\nCould a URL be provided that identifies that the location of the current preferences be specified?\n\nIs there a means for a publisher of a preference to label a prior preference as expired?",
+      "createdAt": "2025-05-06T22:38:41Z",
+      "updatedAt": "2025-05-06T22:38:41Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 21,
+      "id": "I_kwDOOWk1-s61crLA",
+      "title": "How to express preferences for multi-element media ?",
+      "url": "https://github.com/ietf-wg-aipref/drafts/issues/21",
+      "state": "OPEN",
+      "author": "gitnnelg",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "How shall preferences in the vocabulary distinguish between media elements in multi-element media?\n\nA few cases that can be built into more complete cases:\n\n1. Media with 1 -Video element and 2-single audio track\n2. Images with 1-Picture element and 2-A descriptive element\n3. Media with 1-Video element, 2-single audio element, 3-closed caption/description element\n4. Media with 1-video, and 2a,b,c...N   distinct audio elements \n\n\nIn all the above examples, who would different preference expressions be expressed in the vocabulary?",
+      "createdAt": "2025-05-06T22:44:47Z",
+      "updatedAt": "2025-05-06T23:10:52Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "That's a question for attachment mechanisms.  If content is delivered over HTTP, then we have either robots.txt or headers that can only describe preferences for resources or representations.  If something is comprised of multiple components, those will be unable to target specific components unless they are exposed as discrete HTTP resources.\n\nIf this use case is important to you, then I'd suggest that you need to define a more complex attachment method specific to the media container.  None of the attachment methods we've talked about thus far are capable of that sort of finer-grained targeting.",
+          "createdAt": "2025-05-06T22:48:24Z",
+          "updatedAt": "2025-05-06T22:48:24Z"
+        },
+        {
+          "author": "gitnnelg",
+          "authorAssociation": "NONE",
+          "body": "it may well be that for complex media types that a specialized attachment mechanism is required. \n\nThe current focus is on vocabulary, so it is not unreasonable to consider including a media element distinguishing ability in the vocabulary which then would enable binding mechanisms to use the vocabulary element in their binding.\n\nwhile it's very likely some binding mechanism will be able to distinctly bind different preferences to individual media elements,   the container approach to bundling media elements so that they can be transmitted as a single container is commonly used.    \n\nSo even in the HTTP example, when a container of multiple-media elements is the discrete asset at the HTTP level, there would be usefulness in being able to express different preferences for the elements in the container.    Typically these will be an expression of different preferences for Video than for Audio, especially when the audio element may consist of spoken words and of music.",
+          "createdAt": "2025-05-06T23:10:51Z",
+          "updatedAt": "2025-05-06T23:10:51Z"
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "id": "I_kwDOOWk1-s61csNE",
+      "title": "Territory expression?",
+      "url": "https://github.com/ietf-wg-aipref/drafts/issues/22",
+      "state": "OPEN",
+      "author": "gitnnelg",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "How can territory be expressed in the vocabulary?\n\nPreference setting may want to express something like:\n\nIn the US the preferrences are:   .....\nIn the UK the preferences are:    ....\nThe default preferences, unless a more specific policy is provided are: ....\n\n",
+      "createdAt": "2025-05-06T22:47:57Z",
+      "updatedAt": "2025-05-07T12:35:35Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "I don't see this as a necessary extension.  That is, because it is possible for a server to adapt content to the requester.  For instance, look at the incoming (apparent) geolocation and send different preferences according to that.\n\nThat's far less complicated for a consumer and it means that the producer doesn't have to reveal the entirety of their preferences/policy to each requester.",
+          "createdAt": "2025-05-06T22:52:59Z",
+          "updatedAt": "2025-05-06T22:52:59Z"
+        },
+        {
+          "author": "gitnnelg",
+          "authorAssociation": "NONE",
+          "body": "Crawler location identification can be problematic at request time.     This could be because (1) the geo-location of the crawler ASN/IP is not accurate   (2) the crawler is operating out of multiple ASN/IP to load balance its access. (3) the crawler is in territory A, but the preferences will be applied in territory B.\n\nSo would seem that there would be usefulness in having the option to express preferences to be applied by territory so that the complete set could be communicated as a whole ",
+          "createdAt": "2025-05-06T23:01:08Z",
+          "updatedAt": "2025-05-06T23:01:08Z"
+        },
+        {
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "I just don't see this as being sufficiently useful.  I would rather advise people to say \"no\" and give them a way to do more in-depth negotiation of terms of use.  Outside of any machine-readable format.  Yes, that means lawyers.  And no, I don't see that as a problem.  We've got more than enough complexity for our machine-readable solution without adding geopolitics selectors to the pile.",
+          "createdAt": "2025-05-06T23:19:46Z",
+          "updatedAt": "2025-05-06T23:19:46Z"
+        },
+        {
+          "author": "bquinn",
+          "authorAssociation": "NONE",
+          "body": "FYI, the TDMRep protocol has some work in this area. They effectively define three states that can be declared by rights holders:\n\n1. \"yes you can scrape\"\n2. no you can't scrape\" and\n3. \"you can scrape only under the conditions specified in the accompanying metadata field\".\n\nOption 3 can then refer to an ODRL policy which can specify any number of restrictions including territory and others.\n\nWe at IPTC have created some tools to make creating these policies easier: [RightsML/ODRL generator](https://iptc.org/std/RightsML/generator/) and [simplerights.iptc.org](https://simplerights.iptc.org/).\n\nBut parsing ODRL is not trivial, so we fully expect most bots/AI providers to treat \"you can only scrape if...\" as equivalent to \"no\".",
+          "createdAt": "2025-05-07T12:35:35Z",
+          "updatedAt": "2025-05-07T12:35:35Z"
+        }
+      ]
     }
   ],
   "pulls": [
@@ -419,7 +547,7 @@
       "labels": [],
       "body": "This was as little as I could manage with respect to turning \"opt-out\" to something more general: \"preferences\" or \"expressions of preference\".\r\n\r\nThere are a bunch of other challenges to address that we should probably look into.  Some of those change the language a lot more, but I thought that it was a good idea to get rid of the opt-out bias as a first order of business.",
       "createdAt": "2025-04-29T06:32:57Z",
-      "updatedAt": "2025-05-05T00:22:44Z",
+      "updatedAt": "2025-05-07T13:52:47Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "4108aab72df429e84dd7d7bb4be9aeb78ea392e0",
@@ -545,6 +673,66 @@
               "body": "Yet.  My understanding of the defined scope of this document is that it will include serialization and processing.",
               "createdAt": "2025-05-05T00:21:17Z",
               "updatedAt": "2025-05-05T00:21:17Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s6oA3J1",
+          "commit": {
+            "abbreviatedOid": "4077289"
+          },
+          "author": "lrosenthol",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-05-06T15:52:40Z",
+          "updatedAt": "2025-05-06T15:52:41Z",
+          "comments": [
+            {
+              "originalPosition": 6,
+              "body": "Yes and no @martinthomson .\r\n\r\nMy understanding was that we agreed to start the document with a general purpose vocabulary, and then we would use that in a \"second part\" which would be a specific serialization/processing use case (e.g., HTTP headers)",
+              "createdAt": "2025-05-06T15:52:40Z",
+              "updatedAt": "2025-05-06T15:52:41Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s6oFANB",
+          "commit": {
+            "abbreviatedOid": "4077289"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-05-06T22:46:09Z",
+          "updatedAt": "2025-05-06T22:46:09Z",
+          "comments": [
+            {
+              "originalPosition": 6,
+              "body": "The demarcation that I had in mind was that we'd describe a general abstract model here and an exemplary serialization.  The HTTP/robots.txt attachment document would normatively depend on that serialization, but other attachment methods might choose instead to normatively depend on the abstract model instead and define their own serialization.\r\n\r\nNow that I spent more words, does that match your understanding?",
+              "createdAt": "2025-05-06T22:46:09Z",
+              "updatedAt": "2025-05-06T22:46:09Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s6oMh1g",
+          "commit": {
+            "abbreviatedOid": "4077289"
+          },
+          "author": "lrosenthol",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-05-07T13:52:47Z",
+          "updatedAt": "2025-05-07T13:52:47Z",
+          "comments": [
+            {
+              "originalPosition": 6,
+              "body": "Yes, I agree with that...and means I continue to stand by comment about removing \"structured\".",
+              "createdAt": "2025-05-07T13:52:47Z",
+              "updatedAt": "2025-05-07T13:52:47Z"
             }
           ]
         }
