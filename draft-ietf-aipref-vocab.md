@@ -46,9 +46,9 @@ informative:
 
 --- abstract
 
-This document proposes a standardized vocabulary for expressing preferences related to how digital assets are used by automated processing systems. 
-This vocabulary allows for the creation of structured declarations about restrictions or permissions for use of digital assets by such systems. 
-The vocabulary is agnostic to the means by which it is conveyed. 
+This document proposes a standardized vocabulary for expressing preferences related to how digital assets are used by automated processing systems.
+This vocabulary allows for the creation of structured declarations about restrictions or permissions for use of digital assets by such systems.
+The vocabulary is agnostic to the means by which it is conveyed.
 The definitions in the vocabulary facilitate a shared understanding between entities that express such preferences and those that use the associated digital assets.
 
 --- middle
