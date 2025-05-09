@@ -61,7 +61,8 @@ The terms defined by the vocabulary can be used to describe, in a standardized w
 Preferences are then expressed as a grant or denial of permission concerning each of the types of use defined in the vocabulary.
 This ensures that preferences can be communicated, processed, and stored in a consistent and interoperable manner.
 
-The vocabulary is agnostic to the technical implementations of how systems process preferences expressed via the terms defined by the vocabulary. It is designed to ensure that preference information can be effectively exchanged between different systems.
+The vocabulary is neutral to the technical details of how systems act on preferences.
+It is designed to ensure that preference information can be exchanged between different systems and consistently understood.
 
 The vocabulary is intended to govern the use of digital assets in the context of training AI models and other forms of TDM, but does not concern itself with the mechanisms involved in obtaining digital assets (i.e. crawling).
 
