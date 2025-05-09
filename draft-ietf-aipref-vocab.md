@@ -64,7 +64,8 @@ This ensures that preferences can be communicated, processed, and stored in a co
 The vocabulary is neutral to the technical details of how systems act on preferences.
 It is designed to ensure that preference information can be exchanged between different systems and consistently understood.
 
-The vocabulary is intended to govern the use of digital assets in the context of training AI models and other forms of TDM, but does not concern itself with the mechanisms involved in obtaining digital assets (i.e. crawling).
+The vocabulary is intended to govern the use of digital assets for the training of AI models and other forms of automated processing.
+It does not concern itself with the mechanisms involved in obtaining digital assets (i.e., crawling).
 
 The vocabulary is intended to work in contexts where such preferences result in legal obligations (such as rights reservations made by rightholders in jurisdictions with conditional TDM exceptions), and in contexts where this is not the case. It is without prejudice to applicable laws and the applicability of exceptions and limitations to copyright.
 
