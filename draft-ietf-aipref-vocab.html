@@ -8,7 +8,10 @@
 <meta content="Paul Keller" name="author">
 <meta content="Martin Thomson" name="author">
 <meta content="
-       This document proposes a standardized vocabulary of use cases that can be targeted when expressing machine-readable opt-outs related to Text and Data Mining (TDM) and AI training. The vocabulary is agnostic to specific opt-out mechanisms and enables declaring parties to communicate restrictions or permissions regarding the use of their digital assets in a structured and interoperable manner. It defines three key use cases—TDM, AI Training, and Generative AI Training—which can be referenced by opt-out systems to ensure consistent interpretation across different implementations. 
+       This document proposes a standardized vocabulary for expressing preferences related to how digital assets are used by automated processing systems.
+This vocabulary allows for the creation of structured declarations about restrictions or permissions for use of digital assets by such systems.
+The vocabulary is agnostic to the means by which it is conveyed.
+The definitions in the vocabulary facilitate a shared understanding between entities that express such preferences and those that use the associated digital assets. 
     " name="description">
 <meta content="xml2rfc 3.28.1" name="generator">
 <meta content="AI Preferences" name="keyword">
@@ -17,7 +20,7 @@
 <meta content="draft-ietf-aipref-vocab-latest" name="ietf.draft">
 <!-- Generator version information:
   xml2rfc 3.28.1
-    Python 3.12.9
+    Python 3.12.10
     ConfigArgParse 1.7
     google-i18n-address 3.1.1
     intervaltree 3.1.0
@@ -1047,11 +1050,11 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <thead><tr>
 <td class="left">Internet-Draft</td>
 <td class="center">Opt-Out Vocab</td>
-<td class="right">April 2025</td>
+<td class="right">May 2025</td>
 </tr></thead>
 <tfoot><tr>
 <td class="left">Keller &amp; Thomson</td>
-<td class="center">Expires 12 October 2025</td>
+<td class="center">Expires 10 November 2025</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1064,12 +1067,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <dd class="internet-draft">draft-ietf-aipref-vocab-latest</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2025-04-10" class="published">10 April 2025</time>
+<time datetime="2025-05-09" class="published">9 May 2025</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Informational</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2025-10-12">12 October 2025</time></dd>
+<dd class="expires"><time datetime="2025-11-10">10 November 2025</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1087,7 +1090,10 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <h1 id="title">Proposal for an Opt-Out Vocabulary</h1>
 <section id="section-abstract">
       <h2 id="abstract"><a href="#abstract" class="selfRef">Abstract</a></h2>
-<p id="section-abstract-1">This document proposes a standardized vocabulary of use cases that can be targeted when expressing machine-readable opt-outs related to Text and Data Mining (TDM) and AI training. The vocabulary is agnostic to specific opt-out mechanisms and enables declaring parties to communicate restrictions or permissions regarding the use of their digital assets in a structured and interoperable manner. It defines three key use cases—TDM, AI Training, and Generative AI Training—which can be referenced by opt-out systems to ensure consistent interpretation across different implementations.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
+<p id="section-abstract-1">This document proposes a standardized vocabulary for expressing preferences related to how digital assets are used by automated processing systems.
+This vocabulary allows for the creation of structured declarations about restrictions or permissions for use of digital assets by such systems.
+The vocabulary is agnostic to the means by which it is conveyed.
+The definitions in the vocabulary facilitate a shared understanding between entities that express such preferences and those that use the associated digital assets.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
 </section>
 <section class="note rfcEditorRemove" id="section-note.1">
       <h2 id="name-about-this-document">
@@ -1124,7 +1130,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 12 October 2025.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 10 November 2025.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1211,10 +1217,15 @@ svg :is([fill="white"], [fill^="#fff"]) {
       <h2 id="name-introduction">
 <a href="#section-1" class="section-number selfRef">1. </a><a href="#name-introduction" class="section-name selfRef">Introduction</a>
       </h2>
-<p id="section-1-1">The purpose of this document is to provide a common vocabulary that can be used for machine-readable opt-outs by parties who wish to restrict the use of their assets for the purpose of AI training and other forms of Text and Data Mining (TDM).<a href="#section-1-1" class="pilcrow">¶</a></p>
-<p id="section-1-2">The elements of the vocabulary can be used to describe, in a standardized way, the types of uses that a declaring party may wish to restrict (or allow), thereby ensuring that opt-outs can be communicated, processed and stored in a consistent and interoperable manner.<a href="#section-1-2" class="pilcrow">¶</a></p>
-<p id="section-1-3">The vocabulary is agnostic to the technical implementations of opt-out systems and is designed to ensure that opt-out information can be effectively exchanged between different systems. The vocabulary is intended to govern the use of works in the context of training AI models and other forms of TDM but does not concern itself with the collection of training data (crawling). In particular the vocabulary is not intended for expressing instructions or restrictions related to crawling for the purpose of building a search index, as there are already more specific standards and protocols for this purpose including but not limited to <span>[<a href="#RFC9309" class="cite xref">RFC9309</a>]</span>.<a href="#section-1-3" class="pilcrow">¶</a></p>
-<p id="section-1-4">The vocabulary is intended to both work in contexts where such opt-outs expressed to the declaring party give rise to legal obligation (such as rights reservation made by rightholders) and in contexts where this is not the case. It is without prejudice to applicable laws and the applicability of exceptions and limitations.<a href="#section-1-4" class="pilcrow">¶</a></p>
+<p id="section-1-1">This document defines a common vocabulary of terms for automated systems that process digital assets. The primary purpose of this vocabulary is to enable machine-readable expressions of preferences about how digital assets are used by automated processing systems, in the context of training AI models and other forms of text and data mining (TDM).<a href="#section-1-1" class="pilcrow">¶</a></p>
+<p id="section-1-2">The terms defined by the vocabulary can be used to describe, in a standardized way, the types of uses that a declaring party may wish to explicitly restrict or allow.
+Preferences are then expressed as a grant or denial of permission concerning each of the types of use defined in the vocabulary.
+This ensures that preferences can be communicated, processed, and stored in a consistent and interoperable manner.<a href="#section-1-2" class="pilcrow">¶</a></p>
+<p id="section-1-3">The vocabulary is neutral to the technical details of how systems act on preferences.
+It is designed to ensure that preference information can be exchanged between different systems and consistently understood.<a href="#section-1-3" class="pilcrow">¶</a></p>
+<p id="section-1-4">The vocabulary is intended to govern the use of digital assets for the training of AI models and other forms of automated processing.
+It does not concern itself with the mechanisms involved in obtaining digital assets (i.e., crawling).<a href="#section-1-4" class="pilcrow">¶</a></p>
+<p id="section-1-5">The vocabulary is intended to work in contexts where such preferences result in legal obligations (such as rights reservations made by rightholders in jurisdictions with conditional TDM exceptions), and in contexts where this is not the case. It is without prejudice to applicable laws and the applicability of exceptions and limitations to copyright.<a href="#section-1-5" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="conventions-and-definitions">
@@ -1238,7 +1249,7 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
           <p id="section-3-1.1.1"><strong>Asset:</strong> A digital file or stream of data, usually with associated metadata.<a href="#section-3-1.1.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="section-3-1.2">
-          <p id="section-3-1.2.1"><strong>Declaring party:</strong> The entity that expresses an opt-out with regards to an Asset.<a href="#section-3-1.2.1" class="pilcrow">¶</a></p>
+          <p id="section-3-1.2.1"><strong>Declaring party:</strong> The entity that expresses a preference with regards to an Asset.<a href="#section-3-1.2.1" class="pilcrow">¶</a></p>
 </li>
       </ul>
 </section>
@@ -1256,7 +1267,7 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
       <h2 id="name-proposed-vocabulary">
 <a href="#section-5" class="section-number selfRef">5. </a><a href="#name-proposed-vocabulary" class="section-name selfRef">Proposed Vocabulary</a>
       </h2>
-<p id="section-5-1">The following categories are defined for use in the opt-out vocabulary:<a href="#section-5-1" class="pilcrow">¶</a></p>
+<p id="section-5-1">The following categories are defined for use in the vocabulary:<a href="#section-5-1" class="pilcrow">¶</a></p>
 <ul class="normal">
 <li class="normal" id="section-5-2.1">
           <p id="section-5-2.1.1"><strong>TDM</strong>: Text and Data Mining. The act of using one or more assets in the context of any automated analytical technique aimed at analyzing text and data in digital form in order to generate information which includes but is not limited to patterns, trends and correlations.<a href="#section-5-2.1.1" class="pilcrow">¶</a></p>
@@ -1283,7 +1294,7 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
         <h3 id="name-relationship-between-catego">
 <a href="#section-5.2" class="section-number selfRef">5.2. </a><a href="#name-relationship-between-catego" class="section-name selfRef">Relationship between categories</a>
         </h3>
-<p id="section-5.2-1">The TDM category is the overarching category that includes the AI training category. Generative AI training is a subset of the AI training category. Both AI training and generative AI training are considered to be forms of TDM. As such, when a Declaring Party opts out of TDM, they also opt out of these categories. AI model developers processing opt-outs must therefore interpret an opt-out from TDM to also mean an opt-out from Generative AI Training and AI Training.<a href="#section-5.2-1" class="pilcrow">¶</a></p>
+<p id="section-5.2-1">The TDM category is the overarching category that includes the AI training category. Generative AI training is a subset of the AI training category. Both AI training and generative AI training are considered to be forms of TDM. As such, when a Declaring Party expresses a preference regarding TDM, that preference applies to the other categories. AI model developers processing preference expressions must therefore interpret a preference regarding TDM to also mean apply to Generative AI Training and AI Training.<a href="#section-5.2-1" class="pilcrow">¶</a></p>
 <p id="section-5.2-2">The figure below shows the relationship between the currently defined categories:<a href="#section-5.2-2" class="pilcrow">¶</a></p>
 <span id="name-nms-view-of-device-state"></span><figure id="figure-1">
           <div id="section-5.2-3.1">
@@ -1323,7 +1334,7 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
       <h2 id="name-usage">
 <a href="#section-6" class="section-number selfRef">6. </a><a href="#name-usage" class="section-name selfRef">Usage</a>
       </h2>
-<p id="section-6-1">The vocabulary may be used by declaring that an opt-out system or entity expressing or processing opt-outs uses the terms defined in the "Proposed Vocabulary" section above, directly or via mappings, in accordance with how they are defined in this document.<a href="#section-6-1" class="pilcrow">¶</a></p>
+<p id="section-6-1">The vocabulary may be used by referencing the terms defined in the "Proposed Vocabulary" section above, directly or via mappings, in accordance with how they are defined in this document.<a href="#section-6-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="security-considerations">
