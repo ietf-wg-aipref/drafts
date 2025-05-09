@@ -111,10 +111,10 @@ Table of Contents
    can be exchanged between different systems and consistently
    understood.
 
-   The vocabulary is intended to govern the use of digital assets in the
-   context of training AI models and other forms of TDM, but does not
-   concern itself with the mechanisms involved in obtaining digital
-   assets (i.e. crawling).
+   The vocabulary is intended to govern the use of digital assets for
+   the training of AI models and other forms of automated processing.
+   It does not concern itself with the mechanisms involved in obtaining
+   digital assets (i.e., crawling).
 
    The vocabulary is intended to work in contexts where such preferences
    result in legal obligations (such as rights reservations made by
