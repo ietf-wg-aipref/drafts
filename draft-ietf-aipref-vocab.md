@@ -57,7 +57,9 @@ The definitions in the vocabulary facilitate a shared understanding between enti
 
 This document defines a common vocabulary of terms for automated systems that process digital assets. The primary purpose of this vocabulary is to enable machine-readable expressions of preferences about how digital assets are used by automated processing systems, in the context of training AI models and other forms of text and data mining (TDM).
 
-The terms defined by the vocabulary can be used to describe, in a standardized way, the types of uses that a declaring party may wish to explicitly restrict or allow. This ensures that preferences—expressed as restrictions or permissions concerning specific types of use defined by the vocabulary—can be communicated, processed, and stored in a consistent and interoperable manner.
+The terms defined by the vocabulary can be used to describe, in a standardized way, the types of uses that a declaring party may wish to explicitly restrict or allow.
+Preferences are then expressed as a grant or denial of permission concerning each of the types of use defined in the vocabulary.
+This ensures that preferences can be communicated, processed, and stored in a consistent and interoperable manner.
 
 The vocabulary is agnostic to the technical implementations of how systems process preferences expressed via the terms defined by the vocabulary. It is designed to ensure that preference information can be effectively exchanged between different systems.
 
