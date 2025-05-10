@@ -1,7 +1,7 @@
 ---
 title: "Proposal for an Opt-Out Vocabulary"
 abbrev: "Opt-Out Vocab"
-category: info
+category: std
 
 docname: draft-ietf-aipref-vocab-latest
 submissiontype: IETF
