@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-05-08T01:58:55.013612+00:00",
+  "timestamp": "2025-05-11T02:03:58.674149+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -350,7 +350,7 @@
       "id": "I_kwDOOWk1-s60mW0h",
       "title": "Opt-in / Opt-out",
       "url": "https://github.com/ietf-wg-aipref/drafts/issues/18",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "mnot",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [
@@ -362,8 +362,8 @@
       ],
       "body": "The \u201copt-out\u201d framing needs to be replaced by a preferences framing, without bias to opt-out or opt-in.",
       "createdAt": "2025-04-30T02:33:36Z",
-      "updatedAt": "2025-05-06T06:28:58Z",
-      "closedAt": null,
+      "updatedAt": "2025-05-09T11:17:26Z",
+      "closedAt": "2025-05-09T11:17:26Z",
       "comments": []
     },
     {
@@ -392,31 +392,39 @@
       "id": "I_kwDOOWk1-s61coY0",
       "title": "How can prior preferences be updated?",
       "url": "https://github.com/ietf-wg-aipref/drafts/issues/20",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "gitnnelg",
       "authorAssociation": "NONE",
       "assignees": [],
       "labels": [],
       "body": "How can preferences previously specified for an asset be updated?\n\nCould an Expires After label be applied in a AI Preferences file?\n\nCould a URL be provided that identifies that the location of the current preferences be specified?\n\nIs there a means for a publisher of a preference to label a prior preference as expired?",
       "createdAt": "2025-05-06T22:38:41Z",
-      "updatedAt": "2025-05-06T22:38:41Z",
-      "closedAt": null,
-      "comments": []
+      "updatedAt": "2025-05-09T07:08:53Z",
+      "closedAt": "2025-05-09T07:08:53Z",
+      "comments": [
+        {
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Closing until it's raised and discussed on list.",
+          "createdAt": "2025-05-09T07:08:53Z",
+          "updatedAt": "2025-05-09T07:08:53Z"
+        }
+      ]
     },
     {
       "number": 21,
       "id": "I_kwDOOWk1-s61crLA",
       "title": "How to express preferences for multi-element media ?",
       "url": "https://github.com/ietf-wg-aipref/drafts/issues/21",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "gitnnelg",
       "authorAssociation": "NONE",
       "assignees": [],
       "labels": [],
       "body": "How shall preferences in the vocabulary distinguish between media elements in multi-element media?\n\nA few cases that can be built into more complete cases:\n\n1. Media with 1 -Video element and 2-single audio track\n2. Images with 1-Picture element and 2-A descriptive element\n3. Media with 1-Video element, 2-single audio element, 3-closed caption/description element\n4. Media with 1-video, and 2a,b,c...N   distinct audio elements \n\n\nIn all the above examples, who would different preference expressions be expressed in the vocabulary?",
       "createdAt": "2025-05-06T22:44:47Z",
-      "updatedAt": "2025-05-06T23:10:52Z",
-      "closedAt": null,
+      "updatedAt": "2025-05-09T07:08:56Z",
+      "closedAt": "2025-05-09T07:08:55Z",
       "comments": [
         {
           "author": "martinthomson",
@@ -431,6 +439,13 @@
           "body": "it may well be that for complex media types that a specialized attachment mechanism is required. \n\nThe current focus is on vocabulary, so it is not unreasonable to consider including a media element distinguishing ability in the vocabulary which then would enable binding mechanisms to use the vocabulary element in their binding.\n\nwhile it's very likely some binding mechanism will be able to distinctly bind different preferences to individual media elements,   the container approach to bundling media elements so that they can be transmitted as a single container is commonly used.    \n\nSo even in the HTTP example, when a container of multiple-media elements is the discrete asset at the HTTP level, there would be usefulness in being able to express different preferences for the elements in the container.    Typically these will be an expression of different preferences for Video than for Audio, especially when the audio element may consist of spoken words and of music.",
           "createdAt": "2025-05-06T23:10:51Z",
           "updatedAt": "2025-05-06T23:10:51Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Closing until it's raised and discussed on list.",
+          "createdAt": "2025-05-09T07:08:55Z",
+          "updatedAt": "2025-05-09T07:08:55Z"
         }
       ]
     },
@@ -439,15 +454,15 @@
       "id": "I_kwDOOWk1-s61csNE",
       "title": "Territory expression?",
       "url": "https://github.com/ietf-wg-aipref/drafts/issues/22",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "gitnnelg",
       "authorAssociation": "NONE",
       "assignees": [],
       "labels": [],
       "body": "How can territory be expressed in the vocabulary?\n\nPreference setting may want to express something like:\n\nIn the US the preferrences are:   .....\nIn the UK the preferences are:    ....\nThe default preferences, unless a more specific policy is provided are: ....\n\n",
       "createdAt": "2025-05-06T22:47:57Z",
-      "updatedAt": "2025-05-07T12:35:35Z",
-      "closedAt": null,
+      "updatedAt": "2025-05-09T07:08:58Z",
+      "closedAt": "2025-05-09T07:08:57Z",
       "comments": [
         {
           "author": "martinthomson",
@@ -476,6 +491,13 @@
           "body": "FYI, the TDMRep protocol has some work in this area. They effectively define three states that can be declared by rights holders:\n\n1. \"yes you can scrape\"\n2. no you can't scrape\" and\n3. \"you can scrape only under the conditions specified in the accompanying metadata field\".\n\nOption 3 can then refer to an ODRL policy which can specify any number of restrictions including territory and others.\n\nWe at IPTC have created some tools to make creating these policies easier: [RightsML/ODRL generator](https://iptc.org/std/RightsML/generator/) and [simplerights.iptc.org](https://simplerights.iptc.org/).\n\nBut parsing ODRL is not trivial, so we fully expect most bots/AI providers to treat \"you can only scrape if...\" as equivalent to \"no\".",
           "createdAt": "2025-05-07T12:35:35Z",
           "updatedAt": "2025-05-07T12:35:35Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Closing until it's raised and discussed on list.",
+          "createdAt": "2025-05-09T07:08:57Z",
+          "updatedAt": "2025-05-09T07:08:57Z"
         }
       ]
     }
@@ -540,25 +562,35 @@
       "id": "PR_kwDOOWk1-s6USgGb",
       "title": "First cut at removing the opt-out language",
       "url": "https://github.com/ietf-wg-aipref/drafts/pull/17",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "martinthomson",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "This was as little as I could manage with respect to turning \"opt-out\" to something more general: \"preferences\" or \"expressions of preference\".\r\n\r\nThere are a bunch of other challenges to address that we should probably look into.  Some of those change the language a lot more, but I thought that it was a good idea to get rid of the opt-out bias as a first order of business.",
       "createdAt": "2025-04-29T06:32:57Z",
-      "updatedAt": "2025-05-07T13:52:47Z",
+      "updatedAt": "2025-05-09T11:17:27Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "4108aab72df429e84dd7d7bb4be9aeb78ea392e0",
       "headRepository": "ietf-wg-aipref/drafts",
       "headRefName": "opt-not",
-      "headRefOid": "b5fc8ec90d2a7057c1408792272a91a65eafe506",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
-      "comments": [],
+      "headRefOid": "31ce267a47b10ad5820cc7a2c4793e7244d1902c",
+      "closedAt": "2025-05-09T11:17:25Z",
+      "mergedAt": "2025-05-09T11:17:25Z",
+      "mergedBy": "martinthomson",
+      "mergeCommit": {
+        "oid": "9d8f3bca94b2ead2a7226ff1efed7eb298076e0f"
+      },
+      "comments": [
+        {
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Paul and I have discussed this and we're going to take this and continue to iterate.  There are a few minor points where I think @lrosenthol is more correct, but we'll need to iterate a few more times before we're done.",
+          "createdAt": "2025-05-09T11:17:22Z",
+          "updatedAt": "2025-05-09T11:17:22Z"
+        }
+      ],
       "reviews": [
         {
           "id": "PRR_kwDOOWk1-s6nmF8I",
@@ -566,7 +598,7 @@
             "abbreviatedOid": "4077289"
           },
           "author": "lrosenthol",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "state": "CHANGES_REQUESTED",
           "body": "",
           "createdAt": "2025-05-02T11:26:23Z",
@@ -682,7 +714,7 @@
             "abbreviatedOid": "4077289"
           },
           "author": "lrosenthol",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "state": "COMMENTED",
           "body": "",
           "createdAt": "2025-05-06T15:52:40Z",
@@ -722,7 +754,7 @@
             "abbreviatedOid": "4077289"
           },
           "author": "lrosenthol",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "state": "COMMENTED",
           "body": "",
           "createdAt": "2025-05-07T13:52:47Z",
@@ -733,6 +765,101 @@
               "body": "Yes, I agree with that...and means I continue to stand by comment about removing \"structured\".",
               "createdAt": "2025-05-07T13:52:47Z",
               "updatedAt": "2025-05-07T13:52:47Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s6oXE7i",
+          "commit": {
+            "abbreviatedOid": "4077289"
+          },
+          "author": "paul2keller",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-05-08T10:11:38Z",
+          "updatedAt": "2025-05-08T10:11:39Z",
+          "comments": [
+            {
+              "originalPosition": 20,
+              "body": "That is indeed what we tried to imply by saying the that preferences can be stored.\r\n",
+              "createdAt": "2025-05-08T10:11:39Z",
+              "updatedAt": "2025-05-08T10:11:39Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 23,
+      "id": "PR_kwDOOWk1-s6Vam7Y",
+      "title": "Rewrite Introduction + Abstract to remove focus on opt-out",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/23",
+      "state": "MERGED",
+      "author": "paul2keller",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "This is based on the language proposed by @martinthomson in #17 but tries to add some more consitency for key terms. The main substantial change is the removal of the passage about crawling for building search indexes as I am assuming we cannot maintain that approach within the IETF controlled version (and we have decided to add a #1 category to the vocabulary anyway)",
+      "createdAt": "2025-05-08T10:59:29Z",
+      "updatedAt": "2025-05-09T09:48:03Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "opt-not",
+      "baseRefOid": "b5fc8ec90d2a7057c1408792272a91a65eafe506",
+      "headRepository": "ietf-wg-aipref/drafts",
+      "headRefName": "opt-not-intro",
+      "headRefOid": "454a12976a93640dabf15815c67487099f656b40",
+      "closedAt": "2025-05-09T09:48:01Z",
+      "mergedAt": "2025-05-09T09:48:01Z",
+      "mergedBy": "martinthomson",
+      "mergeCommit": {
+        "oid": "31ce267a47b10ad5820cc7a2c4793e7244d1902c"
+      },
+      "comments": [
+        {
+          "author": "paul2keller",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Thanks @martinthomson these all look good to me",
+          "createdAt": "2025-05-09T07:15:30Z",
+          "updatedAt": "2025-05-09T07:15:30Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWk1-s6oeubR",
+          "commit": {
+            "abbreviatedOid": "9918528"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "A few suggestions, but this looks good overall.",
+          "createdAt": "2025-05-08T23:51:39Z",
+          "updatedAt": "2025-05-08T23:59:19Z",
+          "comments": [
+            {
+              "originalPosition": 10,
+              "body": "```suggestion\r\nThis document proposes a standardized vocabulary for expressing preferences related to how digital assets are used by automated processing systems.\r\nThis vocabulary allows for the creation of structured declarations about restrictions or permissions for use of digital assets by such systems.\r\nThe vocabulary is agnostic to the means by which it is conveyed.\r\n```",
+              "createdAt": "2025-05-08T23:51:40Z",
+              "updatedAt": "2025-05-08T23:59:19Z"
+            },
+            {
+              "originalPosition": 23,
+              "body": "The middle clause of this second sentence seems a little rough to me.  Perhaps:\r\n\r\n```suggestion\r\nThe terms defined by the vocabulary can be used to describe, in a standardized way, the types of uses that a declaring party may wish to explicitly restrict or allow.\r\nPreferences are then expressed as a grant or denial of permission concerning each of the types of use defined in the vocabulary.\r\nThis ensures that preferences can be communicated, processed, and stored in a consistent and interoperable manner.\r\n```\r\n\r\n(I'm moving to sentence-per-line as much as possible so that these sorts of changes are easier to manage. The underlying format doesn't really care what we do, so I'm OK with anything really.)",
+              "createdAt": "2025-05-08T23:55:48Z",
+              "updatedAt": "2025-05-08T23:59:19Z"
+            },
+            {
+              "originalPosition": 27,
+              "body": "```suggestion\r\nThe vocabulary is neutral to the technical details of how systems act on preferences.\r\nIt is designed to ensure that preference information can be exchanged between different systems and consistently understood.\r\n```",
+              "createdAt": "2025-05-08T23:57:26Z",
+              "updatedAt": "2025-05-08T23:59:19Z"
+            },
+            {
+              "originalPosition": 31,
+              "body": "```suggestion\r\nThe vocabulary is intended to govern the use of digital assets for the training of AI models and other forms of automated processing.\r\nIt does not concern itself with the mechanisms involved in obtaining digital assets (i.e., crawling).\r\n```\r\n\r\nTrying to keep sentence length down, that's all.",
+              "createdAt": "2025-05-08T23:58:35Z",
+              "updatedAt": "2025-05-08T23:59:19Z"
             }
           ]
         }
