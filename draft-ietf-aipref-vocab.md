@@ -185,7 +185,7 @@ The use of assets for Generative AI Training is a proper subset of AI Training u
 
 # Usage
 
-The vocabulary is used by referencing the terms defined in the "Proposed Vocabulary" section above, directly or via mappings, in accordance with how they are defined in this document.
+The vocabulary is used by referencing the terms defined in the {{vocab}} section above, directly or via mappings, in accordance with how they are defined in this document.
 
 ## More Specific Instructions
 
