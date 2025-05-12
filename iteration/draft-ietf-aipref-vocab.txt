@@ -236,8 +236,8 @@ Table of Contents
 6.  Usage
 
    The vocabulary is used by referencing the terms defined in the
-   "Proposed Vocabulary" section above, directly or via mappings, in
-   accordance with how they are defined in this document.
+   Section 5 section above, directly or via mappings, in accordance with
+   how they are defined in this document.
 
 6.1.  More Specific Instructions
 
