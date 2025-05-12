@@ -8,7 +8,10 @@
 <meta content="Paul Keller" name="author">
 <meta content="Martin Thomson" name="author">
 <meta content="
-       This document proposes a standardized vocabulary of use cases that can be targeted when expressing machine-readable opt-outs related to Text and Data Mining (TDM) and AI training. The vocabulary is agnostic to specific opt-out mechanisms and enables declaring parties to communicate restrictions or permissions regarding the use of their digital assets in a structured and interoperable manner. It defines three key use cases—TDM, AI Training, and Generative AI Training—which can be referenced by opt-out systems to ensure consistent interpretation across different implementations. 
+       This document proposes a standardized vocabulary for expressing preferences related to how digital assets are used by automated processing systems.
+This vocabulary allows for the creation of structured declarations about restrictions or permissions for use of digital assets by such systems.
+The vocabulary is agnostic to the means by which it is conveyed.
+The definitions in the vocabulary facilitate a shared understanding between entities that express such preferences and those that use the associated digital assets. 
     " name="description">
 <meta content="xml2rfc 3.28.1" name="generator">
 <meta content="AI Preferences" name="keyword">
@@ -17,7 +20,7 @@
 <meta content="draft-ietf-aipref-vocab-latest" name="ietf.draft">
 <!-- Generator version information:
   xml2rfc 3.28.1
-    Python 3.12.9
+    Python 3.12.10
     ConfigArgParse 1.7
     google-i18n-address 3.1.1
     intervaltree 3.1.0
@@ -1047,11 +1050,11 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <thead><tr>
 <td class="left">Internet-Draft</td>
 <td class="center">Opt-Out Vocab</td>
-<td class="right">April 2025</td>
+<td class="right">May 2025</td>
 </tr></thead>
 <tfoot><tr>
 <td class="left">Keller &amp; Thomson</td>
-<td class="center">Expires 12 October 2025</td>
+<td class="center">Expires 13 November 2025</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1064,12 +1067,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <dd class="internet-draft">draft-ietf-aipref-vocab-latest</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2025-04-10" class="published">10 April 2025</time>
+<time datetime="2025-05-12" class="published">12 May 2025</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Informational</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2025-10-12">12 October 2025</time></dd>
+<dd class="expires"><time datetime="2025-11-13">13 November 2025</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1087,7 +1090,10 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <h1 id="title">Proposal for an Opt-Out Vocabulary</h1>
 <section id="section-abstract">
       <h2 id="abstract"><a href="#abstract" class="selfRef">Abstract</a></h2>
-<p id="section-abstract-1">This document proposes a standardized vocabulary of use cases that can be targeted when expressing machine-readable opt-outs related to Text and Data Mining (TDM) and AI training. The vocabulary is agnostic to specific opt-out mechanisms and enables declaring parties to communicate restrictions or permissions regarding the use of their digital assets in a structured and interoperable manner. It defines three key use cases—TDM, AI Training, and Generative AI Training—which can be referenced by opt-out systems to ensure consistent interpretation across different implementations.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
+<p id="section-abstract-1">This document proposes a standardized vocabulary for expressing preferences related to how digital assets are used by automated processing systems.
+This vocabulary allows for the creation of structured declarations about restrictions or permissions for use of digital assets by such systems.
+The vocabulary is agnostic to the means by which it is conveyed.
+The definitions in the vocabulary facilitate a shared understanding between entities that express such preferences and those that use the associated digital assets.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
 </section>
 <section class="note rfcEditorRemove" id="section-note.1">
       <h2 id="name-about-this-document">
@@ -1124,7 +1130,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 12 October 2025.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 13 November 2025.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1163,21 +1169,32 @@ svg :is([fill="white"], [fill^="#fff"]) {
             <p id="section-toc.1-1.3.1" class="keepWithNext"><a href="#section-3" class="auto internal xref">3</a>.  <a href="#name-definitions" class="internal xref">Definitions</a></p>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4">
-            <p id="section-toc.1-1.4.1"><a href="#section-4" class="auto internal xref">4</a>.  <a href="#name-vocabulary-structure" class="internal xref">Vocabulary Structure</a></p>
+            <p id="section-toc.1-1.4.1"><a href="#section-4" class="auto internal xref">4</a>.  <a href="#name-statements-of-preference" class="internal xref">Statements of Preference</a></p>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5">
-            <p id="section-toc.1-1.5.1"><a href="#section-5" class="auto internal xref">5</a>.  <a href="#name-proposed-vocabulary" class="internal xref">Proposed Vocabulary</a></p>
+            <p id="section-toc.1-1.5.1"><a href="#section-5" class="auto internal xref">5</a>.  <a href="#name-vocabulary-definition" class="internal xref">Vocabulary Definition</a></p>
 <ul class="compact toc ulBare ulEmpty">
 <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5.2.1">
-                <p id="section-toc.1-1.5.2.1.1"><a href="#section-5.1" class="auto internal xref">5.1</a>.  <a href="#name-relationship-with-more-spec" class="internal xref">Relationship with more specific instructions</a></p>
+                <p id="section-toc.1-1.5.2.1.1"><a href="#section-5.1" class="auto internal xref">5.1</a>.  <a href="#name-text-and-data-mining-tdm-ca" class="internal xref">Text and Data Mining (TDM) Category</a></p>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5.2.2">
-                <p id="section-toc.1-1.5.2.2.1"><a href="#section-5.2" class="auto internal xref">5.2</a>.  <a href="#name-relationship-between-catego" class="internal xref">Relationship between categories</a></p>
+                <p id="section-toc.1-1.5.2.2.1"><a href="#section-5.2" class="auto internal xref">5.2</a>.  <a href="#name-ai-training-category" class="internal xref">AI Training Category</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5.2.3">
+                <p id="section-toc.1-1.5.2.3.1"><a href="#section-5.3" class="auto internal xref">5.3</a>.  <a href="#name-generative-ai-training-cate" class="internal xref">Generative AI Training Category</a></p>
 </li>
             </ul>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6">
             <p id="section-toc.1-1.6.1"><a href="#section-6" class="auto internal xref">6</a>.  <a href="#name-usage" class="internal xref">Usage</a></p>
+<ul class="compact toc ulBare ulEmpty">
+<li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.1">
+                <p id="section-toc.1-1.6.2.1.1"><a href="#section-6.1" class="auto internal xref">6.1</a>.  <a href="#name-more-specific-instructions" class="internal xref">More Specific Instructions</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.2">
+                <p id="section-toc.1-1.6.2.2.1"><a href="#section-6.2" class="auto internal xref">6.2</a>.  <a href="#name-vocabulary-extensions" class="internal xref">Vocabulary Extensions</a></p>
+</li>
+            </ul>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.7">
             <p id="section-toc.1-1.7.1"><a href="#section-7" class="auto internal xref">7</a>.  <a href="#name-security-considerations" class="internal xref">Security Considerations</a></p>
@@ -1211,10 +1228,15 @@ svg :is([fill="white"], [fill^="#fff"]) {
       <h2 id="name-introduction">
 <a href="#section-1" class="section-number selfRef">1. </a><a href="#name-introduction" class="section-name selfRef">Introduction</a>
       </h2>
-<p id="section-1-1">The purpose of this document is to provide a common vocabulary that can be used for machine-readable opt-outs by parties who wish to restrict the use of their assets for the purpose of AI training and other forms of Text and Data Mining (TDM).<a href="#section-1-1" class="pilcrow">¶</a></p>
-<p id="section-1-2">The elements of the vocabulary can be used to describe, in a standardized way, the types of uses that a declaring party may wish to restrict (or allow), thereby ensuring that opt-outs can be communicated, processed and stored in a consistent and interoperable manner.<a href="#section-1-2" class="pilcrow">¶</a></p>
-<p id="section-1-3">The vocabulary is agnostic to the technical implementations of opt-out systems and is designed to ensure that opt-out information can be effectively exchanged between different systems. The vocabulary is intended to govern the use of works in the context of training AI models and other forms of TDM but does not concern itself with the collection of training data (crawling). In particular the vocabulary is not intended for expressing instructions or restrictions related to crawling for the purpose of building a search index, as there are already more specific standards and protocols for this purpose including but not limited to <span>[<a href="#RFC9309" class="cite xref">RFC9309</a>]</span>.<a href="#section-1-3" class="pilcrow">¶</a></p>
-<p id="section-1-4">The vocabulary is intended to both work in contexts where such opt-outs expressed to the declaring party give rise to legal obligation (such as rights reservation made by rightholders) and in contexts where this is not the case. It is without prejudice to applicable laws and the applicability of exceptions and limitations.<a href="#section-1-4" class="pilcrow">¶</a></p>
+<p id="section-1-1">This document defines a common vocabulary of terms for automated systems that process digital assets. The primary purpose of this vocabulary is to enable machine-readable expressions of preferences about how digital assets are used by automated processing systems, in the context of training AI models and other forms of text and data mining (TDM).<a href="#section-1-1" class="pilcrow">¶</a></p>
+<p id="section-1-2">The terms defined by the vocabulary can be used to describe, in a standardized way, the types of uses that a declaring party may wish to explicitly restrict or allow.
+Preferences are then expressed as a grant or denial of permission concerning each of the types of use defined in the vocabulary.
+This ensures that preferences can be communicated, processed, and stored in a consistent and interoperable manner.<a href="#section-1-2" class="pilcrow">¶</a></p>
+<p id="section-1-3">The vocabulary is neutral to the technical details of how systems act on preferences.
+It is designed to ensure that preference information can be exchanged between different systems and consistently understood.<a href="#section-1-3" class="pilcrow">¶</a></p>
+<p id="section-1-4">The vocabulary is intended to govern the use of digital assets for the training of AI models and other forms of automated processing.
+It does not concern itself with the mechanisms involved in obtaining digital assets (i.e., crawling).<a href="#section-1-4" class="pilcrow">¶</a></p>
+<p id="section-1-5">The vocabulary is intended to work in contexts where such preferences result in legal obligations (such as rights reservations made by rightholders in jurisdictions with conditional TDM exceptions), and in contexts where this is not the case. It is without prejudice to applicable laws and the applicability of exceptions and limitations to copyright.<a href="#section-1-5" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="conventions-and-definitions">
@@ -1238,82 +1260,102 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
           <p id="section-3-1.1.1"><strong>Asset:</strong> A digital file or stream of data, usually with associated metadata.<a href="#section-3-1.1.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="section-3-1.2">
-          <p id="section-3-1.2.1"><strong>Declaring party:</strong> The entity that expresses an opt-out with regards to an Asset.<a href="#section-3-1.2.1" class="pilcrow">¶</a></p>
+          <p id="section-3-1.2.1"><strong>Declaring party:</strong> The entity that expresses a preference with regards to an Asset.<a href="#section-3-1.2.1" class="pilcrow">¶</a></p>
 </li>
       </ul>
 </section>
 </div>
-<div id="vocabulary-structure">
+<div id="statements-of-preference">
 <section id="section-4">
-      <h2 id="name-vocabulary-structure">
-<a href="#section-4" class="section-number selfRef">4. </a><a href="#name-vocabulary-structure" class="section-name selfRef">Vocabulary Structure</a>
+      <h2 id="name-statements-of-preference">
+<a href="#section-4" class="section-number selfRef">4. </a><a href="#name-statements-of-preference" class="section-name selfRef">Statements of Preference</a>
       </h2>
-<p id="section-4-1">The vocabulary consists of the overarching TDM (Text and Data Mining) category and a number of specific use cases that can be addressed independently. The overarching category <code>TDM</code> is based on the definition of Text and Data Mining in Article 2(2) of <span>[<a href="#EUCD2019" class="cite xref">EUCD2019</a>]</span>.<a href="#section-4-1" class="pilcrow">¶</a></p>
+<p id="section-4-1">The vocabulary is a set of categories,
+each of which is defined to cover a class of usage for assets.
+<a href="#vocab" class="auto internal xref">Section 5</a> defines these categories in more detail.<a href="#section-4-1" class="pilcrow">¶</a></p>
+<p id="section-4-2">A statement of preference is made about an asset.
+Statements of preferences can assign preferences
+to each of the categories of use in the vocabulary.
+Preferences regarding each category can be expressed
+either to allow or disallow the usage associated with the category.<a href="#section-4-2" class="pilcrow">¶</a></p>
+<p id="section-4-3">A statement of preferences can express preferences
+about some, all, or none of the categories from the vocabulary.
+This can mean that no preference is expressed for a given usage category.<a href="#section-4-3" class="pilcrow">¶</a></p>
+<p id="section-4-4">Some categories describe a proper subset of the usages of other categories.
+A preference that is expressed for the more general category applies
+if no preference is expressed for the more specific category.<a href="#section-4-4" class="pilcrow">¶</a></p>
+<p id="section-4-5">For example, the TDM category might be assigned a preference that allows the associated usage.
+In the absence of any statement of preference regarding the AI Training category,
+that usage would be also be allowed,
+as AI Training is a subset of the TDM category.
+In comparison, an explicit preference regarding AI Training might disallow that usage,
+while permitting other usage within the TDM category.<a href="#section-4-5" class="pilcrow">¶</a></p>
+<p id="section-4-6">After processing a statement of preferences
+the recipient can assume that each category of use has a preference
+in one of three states: "allowed", "disallowed", or "unknown".<a href="#section-4-6" class="pilcrow">¶</a></p>
 </section>
 </div>
-<div id="proposed-vocabulary">
+<div id="vocab">
 <section id="section-5">
-      <h2 id="name-proposed-vocabulary">
-<a href="#section-5" class="section-number selfRef">5. </a><a href="#name-proposed-vocabulary" class="section-name selfRef">Proposed Vocabulary</a>
+      <h2 id="name-vocabulary-definition">
+<a href="#section-5" class="section-number selfRef">5. </a><a href="#name-vocabulary-definition" class="section-name selfRef">Vocabulary Definition</a>
       </h2>
-<p id="section-5-1">The following categories are defined for use in the opt-out vocabulary:<a href="#section-5-1" class="pilcrow">¶</a></p>
-<ul class="normal">
-<li class="normal" id="section-5-2.1">
-          <p id="section-5-2.1.1"><strong>TDM</strong>: Text and Data Mining. The act of using one or more assets in the context of any automated analytical technique aimed at analyzing text and data in digital form in order to generate information which includes but is not limited to patterns, trends and correlations.<a href="#section-5-2.1.1" class="pilcrow">¶</a></p>
-</li>
-        <li class="normal" id="section-5-2.2">
-          <p id="section-5-2.2.1"><strong>AI Training</strong>: The act of training AI models<a href="#section-5-2.2.1" class="pilcrow">¶</a></p>
-</li>
-        <li class="normal" id="section-5-2.3">
-          <p id="section-5-2.3.1"><strong>Generative AI Training</strong>: The act of training General Purpose AI models that have the capacity to generate text, images or other forms of synthetic content, or the act of training other types of AI models that have the purpose of generating text, images or other forms of synthetic content.<a href="#section-5-2.3.1" class="pilcrow">¶</a></p>
-</li>
-      </ul>
-<p id="section-5-3">This list of specific use cases may be expanded in the future, should a consensus emerge between stakeholders, to include categories that address additional use cases as they emerge. In addition to these categories defined in the vocabulary, it is also expected that some systems implementing this vocabulary may extend this list with additional categories for their particular needs.<a href="#section-5-3" class="pilcrow">¶</a></p>
-<div id="relationship-with-more-specific-instructions">
-<section id="section-5.1">
-        <h3 id="name-relationship-with-more-spec">
-<a href="#section-5.1" class="section-number selfRef">5.1. </a><a href="#name-relationship-with-more-spec" class="section-name selfRef">Relationship with more specific instructions</a>
-        </h3>
-<p id="section-5.1-1">The vocabulary does not preclude the use of other specific categories. Any opt-outs based on this vocabulary shall not be interpreted as restricting the use of the work(s) strictly for the purpose of search and discovery as long as no restriction is declared through search-specific means such as <span>[<a href="#RFC9309" class="cite xref">RFC9309</a>]</span>.<a href="#section-5.1-1" class="pilcrow">¶</a></p>
-<p id="section-5.1-2">When using this vocabulary more specific instructions — either based on the vocabulary or derived from other protocols — should be given preference over less specific ones.<a href="#section-5.1-2" class="pilcrow">¶</a></p>
-</section>
-</div>
-<div id="relationship-between-categories">
-<section id="section-5.2">
-        <h3 id="name-relationship-between-catego">
-<a href="#section-5.2" class="section-number selfRef">5.2. </a><a href="#name-relationship-between-catego" class="section-name selfRef">Relationship between categories</a>
-        </h3>
-<p id="section-5.2-1">The TDM category is the overarching category that includes the AI training category. Generative AI training is a subset of the AI training category. Both AI training and generative AI training are considered to be forms of TDM. As such, when a Declaring Party opts out of TDM, they also opt out of these categories. AI model developers processing opt-outs must therefore interpret an opt-out from TDM to also mean an opt-out from Generative AI Training and AI Training.<a href="#section-5.2-1" class="pilcrow">¶</a></p>
-<p id="section-5.2-2">The figure below shows the relationship between the currently defined categories:<a href="#section-5.2-2" class="pilcrow">¶</a></p>
+<p id="section-5-1">This section defines the categories of use in the vocabulary.<a href="#section-5-1" class="pilcrow">¶</a></p>
+<p id="section-5-2">The figure below shows the relationship between these categories:<a href="#section-5-2" class="pilcrow">¶</a></p>
 <span id="name-nms-view-of-device-state"></span><figure id="figure-1">
-          <div id="section-5.2-3.1">
-            <div class="alignLeft art-svg artwork" id="section-5.2-3.1.1">
+        <div id="section-5-3.1">
+          <div class="alignLeft art-svg artwork" id="section-5-3.1.1">
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="750" height="300" viewBox="0 0 750 300" text-anchor="middle" stroke-width="2" font-size="14" font-family="sans-serif">
-                <title>Opt-out vocabulary overview</title>
-                <!-- Outer Box -->
+              <title>Opt-out vocabulary overview</title>
+              <!-- Outer Box -->
 
           <rect x="50" y="50" width="630" height="220" rx="15" ry="15" fill="white" stroke="black"></rect>
-                <text x="365" y="80">Text and Data Mining</text>
-                <!-- AI Training Box -->
+              <text x="365" y="80">Text and Data Mining</text>
+              <!-- AI Training Box -->
 
           <rect x="80" y="100" width="380" height="130" rx="10" ry="10" fill="white" stroke="black"></rect>
-                <text x="380" y="170">AI Training</text>
-                <!-- Generative AI Training Box -->
+              <text x="380" y="170">AI Training</text>
+              <!-- Generative AI Training Box -->
 
           <rect x="110" y="130" width="200" height="70" rx="5" ry="5" fill="white" stroke="black"></rect>
-                <text x="210" y="170">Generative AI Training</text>
-                <!-- Additional Use Cases Box -->
+              <text x="210" y="170">Generative AI Training</text>
+              <!-- Additional Use Cases Box -->
 
           <rect x="500" y="100" width="150" height="130" class="dotted" rx="5" ry="5" fill="white" stroke="black" stroke-dasharray="5,5"></rect>
-                <text x="575" y="160">[possibly]:</text>
-                <text x="575" y="180">additional use cases</text>
-              </svg><a href="#section-5.2-3.1.1" class="pilcrow">¶</a>
+              <text x="575" y="160">[possibly]:</text>
+              <text x="575" y="180">additional use cases</text>
+            </svg><a href="#section-5-3.1.1" class="pilcrow">¶</a>
 </div>
 </div>
 <figcaption><a href="#figure-1" class="selfRef">Figure 1</a>:
 <a href="#name-nms-view-of-device-state" class="selfRef">NMS View of Device State</a>
-          </figcaption></figure>
-<p id="section-5.2-4">Systems referencing the vocabulary must not introduce additional categories that include existing categories defined in the vocabulary or otherwise include additional hierarchical relationships.<a href="#section-5.2-4" class="pilcrow">¶</a></p>
+        </figcaption></figure>
+<p id="section-5-4">This list of specific use cases may be expanded in the future, should a consensus emerge between stakeholders, to include categories that address additional use cases as they emerge. In addition to these categories defined in the vocabulary, it is also expected that some systems implementing this vocabulary may extend this list with additional categories for their particular needs.<a href="#section-5-4" class="pilcrow">¶</a></p>
+<div id="text-and-data-mining-tdm-category">
+<section id="section-5.1">
+        <h3 id="name-text-and-data-mining-tdm-ca">
+<a href="#section-5.1" class="section-number selfRef">5.1. </a><a href="#name-text-and-data-mining-tdm-ca" class="section-name selfRef">Text and Data Mining (TDM) Category</a>
+        </h3>
+<p id="section-5.1-1">The act of using one or more assets in the context of any automated analytical technique aimed at analyzing text and data in digital form in order to generate information which includes but is not limited to patterns, trends and correlations.<a href="#section-5.1-1" class="pilcrow">¶</a></p>
+<p id="section-5.1-2">The overarching TDM category is based on the definition of Text and Data Mining in Article 2(2) of <span>[<a href="#EUCD2019" class="cite xref">EUCD2019</a>]</span>.<a href="#section-5.1-2" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="ai-training-category">
+<section id="section-5.2">
+        <h3 id="name-ai-training-category">
+<a href="#section-5.2" class="section-number selfRef">5.2. </a><a href="#name-ai-training-category" class="section-name selfRef">AI Training Category</a>
+        </h3>
+<p id="section-5.2-1">The act of training machine learning models or artificial intelligence (AI).<a href="#section-5.2-1" class="pilcrow">¶</a></p>
+<p id="section-5.2-2">The use of assets for AI Training is a proper subset of TDM usage.<a href="#section-5.2-2" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="generative-ai-training-category">
+<section id="section-5.3">
+        <h3 id="name-generative-ai-training-cate">
+<a href="#section-5.3" class="section-number selfRef">5.3. </a><a href="#name-generative-ai-training-cate" class="section-name selfRef">Generative AI Training Category</a>
+        </h3>
+<p id="section-5.3-1">The act of training General Purpose AI models that have the capacity to generate text, images or other forms of synthetic content, or the act of training other types of AI models that have the purpose of generating text, images or other forms of synthetic content.<a href="#section-5.3-1" class="pilcrow">¶</a></p>
+<p id="section-5.3-2">The use of assets for Generative AI Training is a proper subset of AI Training usage.<a href="#section-5.3-2" class="pilcrow">¶</a></p>
 </section>
 </div>
 </section>
@@ -1323,7 +1365,40 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
       <h2 id="name-usage">
 <a href="#section-6" class="section-number selfRef">6. </a><a href="#name-usage" class="section-name selfRef">Usage</a>
       </h2>
-<p id="section-6-1">The vocabulary may be used by declaring that an opt-out system or entity expressing or processing opt-outs uses the terms defined in the "Proposed Vocabulary" section above, directly or via mappings, in accordance with how they are defined in this document.<a href="#section-6-1" class="pilcrow">¶</a></p>
+<p id="section-6-1">The vocabulary is used by referencing the terms defined in the "Proposed Vocabulary" section above, directly or via mappings, in accordance with how they are defined in this document.<a href="#section-6-1" class="pilcrow">¶</a></p>
+<div id="more-specific-instructions">
+<section id="section-6.1">
+        <h3 id="name-more-specific-instructions">
+<a href="#section-6.1" class="section-number selfRef">6.1. </a><a href="#name-more-specific-instructions" class="section-name selfRef">More Specific Instructions</a>
+        </h3>
+<p id="section-6.1-1">A recipient of a statement of preferences that follows this model might receive more specific instructions
+in two ways:<a href="#section-6.1-1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-6.1-2.1">
+            <p id="section-6.1-2.1.1">Extensions to the vocabulary might define more specific categories of usage.
+Preferences about more specific categories override those of any more general category.<a href="#section-6.1-2.1.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-6.1-2.2">
+            <p id="section-6.1-2.2.1">Statements of preferences are general purpose, machine-readable statements
+that cannot override contractual agreements or more specific statements.<a href="#section-6.1-2.2.1" class="pilcrow">¶</a></p>
+</li>
+        </ul>
+<p id="section-6.1-3">For instance, a statement of preferences might indicate that the use of an asset is disallowed for AI Training.
+If arrangements, such as contracts or terms of use,
+exist that explicitly permit the use of that asset,
+those arrangements likely apply,
+unless the terms of the arrangement explicitly say otherwise.<a href="#section-6.1-3" class="pilcrow">¶</a></p>
+<p id="section-6.1-4">The vocabulary does not preclude the use of other specific categories. Any opt-outs based on this vocabulary shall not be interpreted as restricting the use of the work(s) strictly for the purpose of search and discovery as long as no restriction is declared through search-specific means such as <span>[<a href="#RFC9309" class="cite xref">RFC9309</a>]</span>.<a href="#section-6.1-4" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="vocabulary-extensions">
+<section id="section-6.2">
+        <h3 id="name-vocabulary-extensions">
+<a href="#section-6.2" class="section-number selfRef">6.2. </a><a href="#name-vocabulary-extensions" class="section-name selfRef">Vocabulary Extensions</a>
+        </h3>
+<p id="section-6.2-1">Systems referencing the vocabulary must not introduce additional categories that include existing categories defined in the vocabulary or otherwise include additional hierarchical relationships.<a href="#section-6.2-1" class="pilcrow">¶</a></p>
+</section>
+</div>
 </section>
 </div>
 <div id="security-considerations">
