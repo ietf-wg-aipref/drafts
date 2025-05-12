@@ -78,31 +78,43 @@ The vocabulary is intended to work in contexts where such preferences result in 
 * **Asset:** A digital file or stream of data, usually with associated metadata.
 * **Declaring party:** The entity that expresses a preference with regards to an Asset.
 
-# Vocabulary Structure
+# Statements of Preference
 
-The vocabulary consists of the overarching TDM (Text and Data Mining) category and a number of specific use cases that can be addressed independently. The overarching category `TDM` is based on the definition of Text and Data Mining in Article 2(2) of {{EUCD2019}}.
+The vocabulary is a set of categories,
+each of which is defined to cover a class of usage for assets.
+{{vocab}} defines these categories in more detail.
 
-# Proposed Vocabulary
+A statement of preference is made about an asset.
+Statements of preferences can assign preferences
+to each of the categories of use in the vocabulary.
+Preferences regarding each category can be expressed
+either to allow or disallow the usage associated with the category.
 
-The following categories are defined for use in the vocabulary:
+A statement of preferences can express preferences
+about some, all, or none of the categories from the vocabulary.
+This can mean that no preference is expressed for a given usage category.
 
-* **TDM**: Text and Data Mining. The act of using one or more assets in the context of any automated analytical technique aimed at analyzing text and data in digital form in order to generate information which includes but is not limited to patterns, trends and correlations.
-* **AI Training**: The act of training AI models
-* **Generative AI Training**: The act of training General Purpose AI models that have the capacity to generate text, images or other forms of synthetic content, or the act of training other types of AI models that have the purpose of generating text, images or other forms of synthetic content.
+Some categories describe a proper subset of the usages of other categories.
+A preference that is expressed for the more general category applies
+if no preference is expressed for the more specific category.
 
-This list of specific use cases may be expanded in the future, should a consensus emerge between stakeholders, to include categories that address additional use cases as they emerge. In addition to these categories defined in the vocabulary, it is also expected that some systems implementing this vocabulary may extend this list with additional categories for their particular needs.
+For example, the TDM category might be assigned a preference that allows the associated usage.
+In the absence of any statement of preference regarding the AI Training category,
+that usage would be also be allowed,
+as AI Training is a subset of the TDM category.
+In comparison, an explicit preference regarding AI Training might disallow that usage,
+while permitting other usage within the TDM category.
 
-## Relationship with more specific instructions
+After processing a statement of preferences
+the recipient can assume that each category of use has a preference
+in one of three states: "allowed", "disallowed", or "unknown".
 
-The vocabulary does not preclude the use of other specific categories. Any opt-outs based on this vocabulary shall not be interpreted as restricting the use of the work(s) strictly for the purpose of search and discovery as long as no restriction is declared through search-specific means such as {{!RFC9309}}.
 
-When using this vocabulary more specific instructions — either based on the vocabulary or derived from other protocols — should be given preference over less specific ones.
+# Vocabulary Definition {#vocab}
 
-## Relationship between categories
+This section defines the categories of use in the vocabulary.
 
-The TDM category is the overarching category that includes the AI training category. Generative AI training is a subset of the AI training category. Both AI training and generative AI training are considered to be forms of TDM. As such, when a Declaring Party expresses a preference regarding TDM, that preference applies to the other categories. AI model developers processing preference expressions must therefore interpret a preference regarding TDM to also mean apply to Generative AI Training and AI Training.
-
-The figure below shows the relationship between the currently defined categories:
+The figure below shows the relationship between these categories:
 
 <figure>
 <name>NMS View of Device State</name>
@@ -150,11 +162,54 @@ The figure below shows the relationship between the currently defined categories
 </artset>
 </figure>
 
-Systems referencing the vocabulary must not introduce additional categories that include existing categories defined in the vocabulary or otherwise include additional hierarchical relationships.
+This list of specific use cases may be expanded in the future, should a consensus emerge between stakeholders, to include categories that address additional use cases as they emerge. In addition to these categories defined in the vocabulary, it is also expected that some systems implementing this vocabulary may extend this list with additional categories for their particular needs.
+
+## Text and Data Mining (TDM) Category
+
+The act of using one or more assets in the context of any automated analytical technique aimed at analyzing text and data in digital form in order to generate information which includes but is not limited to patterns, trends and correlations.
+
+The overarching TDM category is based on the definition of Text and Data Mining in Article 2(2) of {{EUCD2019}}.
+
+## AI Training Category
+
+The act of training machine learning models or artificial intelligence (AI).
+
+The use of assets for AI Training is a proper subset of TDM usage.
+
+## Generative AI Training Category
+
+The act of training General Purpose AI models that have the capacity to generate text, images or other forms of synthetic content, or the act of training other types of AI models that have the purpose of generating text, images or other forms of synthetic content.
+
+The use of assets for Generative AI Training is a proper subset of AI Training usage.
+
 
 # Usage
 
-The vocabulary may be used by referencing the terms defined in the "Proposed Vocabulary" section above, directly or via mappings, in accordance with how they are defined in this document.
+The vocabulary is used by referencing the terms defined in the "Proposed Vocabulary" section above, directly or via mappings, in accordance with how they are defined in this document.
+
+## More Specific Instructions
+
+A recipient of a statement of preferences that follows this model might receive more specific instructions
+in two ways:
+
+* Extensions to the vocabulary might define more specific categories of usage.
+  Preferences about more specific categories override those of any more general category.
+
+* Statements of preferences are general purpose, machine-readable statements
+  that cannot override contractual agreements or more specific statements.
+
+For instance, a statement of preferences might indicate that the use of an asset is disallowed for AI Training.
+If arrangements, such as contracts or terms of use,
+exist that explicitly permit the use of that asset,
+those arrangements likely apply,
+unless the terms of the arrangement explicitly say otherwise.
+
+The vocabulary does not preclude the use of other specific categories. Any opt-outs based on this vocabulary shall not be interpreted as restricting the use of the work(s) strictly for the purpose of search and discovery as long as no restriction is declared through search-specific means such as {{!RFC9309}}.
+
+## Vocabulary Extensions
+
+Systems referencing the vocabulary must not introduce additional categories that include existing categories defined in the vocabulary or otherwise include additional hierarchical relationships.
+
 
 # Security Considerations
 
