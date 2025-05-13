@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-05-11T02:03:58.674149+00:00",
+  "timestamp": "2025-05-13T01:59:15.679112+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -500,6 +500,32 @@
           "updatedAt": "2025-05-09T07:08:57Z"
         }
       ]
+    },
+    {
+      "number": 24,
+      "id": "I_kwDOOWk1-s62IxaP",
+      "title": "Is \"asset\" the right label?",
+      "url": "https://github.com/ietf-wg-aipref/drafts/issues/24",
+      "state": "OPEN",
+      "author": "martinthomson",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [
+        "editorial"
+      ],
+      "body": "In looking at this, the term \"asset\" might be assumed to imply ownership, such that preferences can only be expressed by entities that \"own\" the affected content.\n\nCan we instead use the more neutral term \"content\"?  Or, minimally, something that is less prejudicial about the arrangement between the entity that expresses a preference and the subject that is covered.",
+      "createdAt": "2025-05-12T06:12:48Z",
+      "updatedAt": "2025-05-12T07:56:54Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "paul2keller",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "I think the use of the term \"asset\" is fine in this context. To me it does not really imply ownership. if it implies something than this is value, wich feels appropriate. Also the proposed alternative \"content\" is something that many people on the rightholder side dislike (partially, because they feel it devalues creative expression).",
+          "createdAt": "2025-05-12T07:56:54Z",
+          "updatedAt": "2025-05-12T07:56:54Z"
+        }
+      ]
     }
   ],
   "pulls": [
@@ -864,6 +890,32 @@
           ]
         }
       ]
+    },
+    {
+      "number": 25,
+      "id": "PR_kwDOOWk1-s6VxyUV",
+      "title": "The abstract model",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/25",
+      "state": "OPEN",
+      "author": "martinthomson",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "There are a few things here that I'm struggling with, but I'm starting with the basics.\r\n\r\nThe first is to better define the abstract model.  That is, each category of use has a preference that is either \"allow\", \"disallow\", or \"unstated\".\r\n\r\nThe next is to give us more space for category definitions.  Right now, these are pretty short, but we'll need to say more.  I've not modified text much, but I've added notes about AI and GenAI being subsets of the preceding categories.\r\n\r\nThere is also new text on what it means to receive more specific instructions.  The old text was not clear about the ways in which things might be made more specific.  I've expanded this to note the two ways:\r\n\r\n1. that the vocabulary might be expanded\r\n2. there might be more specific instructions in agreements between users of assets and other actors that override any general statement that is made\r\n\r\nThis latter point seems to be a continual point of confusion in discussions thus far, so I'm not claiming that this addresses those concerns yet.  Still, it seemed necessary to get at least a basic statement in place.\r\n\r\nI've moved a few things around as well, to get things into a better flow.  In preparation for adding more text on exemplary serialization, search, inference, and other such things.",
+      "createdAt": "2025-05-12T06:53:18Z",
+      "updatedAt": "2025-05-12T14:13:35Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "9d8f3bca94b2ead2a7226ff1efed7eb298076e0f",
+      "headRepository": "ietf-wg-aipref/drafts",
+      "headRefName": "iteration",
+      "headRefOid": "263af734226b7fdb7c2e968477e25adcf9460220",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
     }
   ]
 }
