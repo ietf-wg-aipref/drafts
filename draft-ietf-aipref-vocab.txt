@@ -4,7 +4,7 @@
 
 AI Preferences                                                 P. Keller
 Internet-Draft                                               Open Future
-Intended status: Informational                           M. Thomson, Ed.
+Intended status: Standards Track                         M. Thomson, Ed.
 Expires: 15 November 2025                                        Mozilla
                                                              14 May 2025
 
