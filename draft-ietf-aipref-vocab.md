@@ -73,10 +73,14 @@ The vocabulary is intended to work in contexts where such preferences result in 
 
 {::boilerplate bcp14-tagged}
 
-# Definitions
+This document uses the following terms:
 
-* **Asset:** A digital file or stream of data, usually with associated metadata.
-* **Declaring party:** The entity that expresses a preference with regards to an Asset.
+{: newline="true" spacing="compact"}
+Asset:
+: A digital file or stream of data, usually with associated metadata.
+
+Declaring party:
+: The entity that expresses a preference with regards to an Asset.
 
 # Statements of Preference
 
