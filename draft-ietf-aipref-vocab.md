@@ -1,6 +1,6 @@
 ---
-title: "Proposal for an Opt-Out Vocabulary"
-abbrev: "Opt-Out Vocab"
+title: "A Vocabulary For Expressing AI Usage Preferences"
+abbrev: "AI Preferences"
 category: std
 
 docname: draft-ietf-aipref-vocab-latest
