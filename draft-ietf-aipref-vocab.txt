@@ -5,11 +5,11 @@
 AI Preferences                                                 P. Keller
 Internet-Draft                                               Open Future
 Intended status: Standards Track                         M. Thomson, Ed.
-Expires: 15 November 2025                                        Mozilla
-                                                             14 May 2025
+Expires: 16 November 2025                                        Mozilla
+                                                             15 May 2025
 
 
-                   Proposal for an Opt-Out Vocabulary
+            A Vocabulary For Expressing AI Usage Preferences
                      draft-ietf-aipref-vocab-latest
 
 Abstract
@@ -55,7 +55,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 15 November 2025.
+   This Internet-Draft will expire on 16 November 2025.
 
 Copyright Notice
 
