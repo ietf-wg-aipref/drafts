@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-05-13T01:59:15.679112+00:00",
+  "timestamp": "2025-05-15T01:56:42.096727+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -86,9 +86,9 @@
       "labels": [
         "vocabulary"
       ],
-      "body": "Discussed in the Brussels meeting. There was some question of whether it was necessary to define a broad TMD term in the vocabulary, but there was not agreement about removing it.",
+      "body": "Discussed in the Brussels meeting. There was some question of whether it was necessary to define a broad TDM term in the vocabulary, but there was not agreement about removing it.",
       "createdAt": "2025-04-10T13:48:11Z",
-      "updatedAt": "2025-04-10T13:48:11Z",
+      "updatedAt": "2025-05-14T06:59:16Z",
       "closedAt": null,
       "comments": []
     },
@@ -134,7 +134,7 @@
     {
       "number": 6,
       "id": "I_kwDOOWk1-s6x92li",
-      "title": "Definitions",
+      "title": "AI Definition",
       "url": "https://github.com/ietf-wg-aipref/drafts/issues/6",
       "state": "OPEN",
       "author": "mnot",
@@ -145,7 +145,7 @@
       ],
       "body": "Discussed in the Brussels meeting - the definition of terms like 'AI' need to be examined and potentially refined.",
       "createdAt": "2025-04-10T13:52:33Z",
-      "updatedAt": "2025-04-10T13:52:33Z",
+      "updatedAt": "2025-05-14T07:17:26Z",
       "closedAt": null,
       "comments": []
     },
@@ -165,9 +165,17 @@
       ],
       "body": "Discussed in the Brussels meeting. The vocabulary is abstract; it defines terms (e.g., \"X\") but does not define how to declare preferences (e.g., \"I do not prefer X\").",
       "createdAt": "2025-04-10T13:56:30Z",
-      "updatedAt": "2025-05-06T06:28:10Z",
+      "updatedAt": "2025-05-14T07:18:02Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "This is dealt with, at least in part, by #25.  We'll keep iterating and check in once that is done.",
+          "createdAt": "2025-05-14T07:18:00Z",
+          "updatedAt": "2025-05-14T07:18:00Z"
+        }
+      ]
     },
     {
       "number": 8,
@@ -515,7 +523,7 @@
       ],
       "body": "In looking at this, the term \"asset\" might be assumed to imply ownership, such that preferences can only be expressed by entities that \"own\" the affected content.\n\nCan we instead use the more neutral term \"content\"?  Or, minimally, something that is less prejudicial about the arrangement between the entity that expresses a preference and the subject that is covered.",
       "createdAt": "2025-05-12T06:12:48Z",
-      "updatedAt": "2025-05-12T07:56:54Z",
+      "updatedAt": "2025-05-13T22:33:16Z",
       "closedAt": null,
       "comments": [
         {
@@ -524,6 +532,20 @@
           "body": "I think the use of the term \"asset\" is fine in this context. To me it does not really imply ownership. if it implies something than this is value, wich feels appropriate. Also the proposed alternative \"content\" is something that many people on the rightholder side dislike (partially, because they feel it devalues creative expression).",
           "createdAt": "2025-05-12T07:56:54Z",
           "updatedAt": "2025-05-12T07:56:54Z"
+        },
+        {
+          "author": "lrosenthol",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "The other reason that many folks prefer *asset* over *content*, is that to many contents refers only to the human consumable parts (e.g., pixels, video, text, etc.) but does **not** include the machine readable elements (e.g., metadata).   Asset, however, apply to the whole thing.",
+          "createdAt": "2025-05-13T19:49:54Z",
+          "updatedAt": "2025-05-13T19:49:54Z"
+        },
+        {
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Was the term \"artifact\" ever suggested?  That doesn't carry the strong implication of being owned. It might carry an implication of age, but not as strongly.",
+          "createdAt": "2025-05-13T22:33:15Z",
+          "updatedAt": "2025-05-13T22:33:15Z"
         }
       ]
     }
@@ -562,24 +584,26 @@
       "id": "PR_kwDOOWk1-s6USWLD",
       "title": "Move to standards track",
       "url": "https://github.com/ietf-wg-aipref/drafts/pull/16",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "martinthomson",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "In looking through the draft and the scope of this work item, it seems like this work is going to have to define something concrete.  That is, any attachment draft (which will be a protocol for real) will need to normatively reference this document in order for it to make sense.  In that spirit, I think that we need this to be a standards-track document, not an informational document.\r\n\r\nChanging the intended status here will make all that possible.",
       "createdAt": "2025-04-29T06:09:41Z",
-      "updatedAt": "2025-04-29T06:09:41Z",
+      "updatedAt": "2025-05-14T07:15:15Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "4108aab72df429e84dd7d7bb4be9aeb78ea392e0",
       "headRepository": "ietf-wg-aipref/drafts",
       "headRefName": "std-status",
       "headRefOid": "25e0615ad5e5fb781bd59fafc01e7c992c8fcf93",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2025-05-14T07:15:14Z",
+      "mergedAt": "2025-05-14T07:15:14Z",
+      "mergedBy": "martinthomson",
+      "mergeCommit": {
+        "oid": "8ccacc0c07f17ece73b47e4016173fa1bfa9bc23"
+      },
       "comments": [],
       "reviews": []
     },
@@ -896,24 +920,26 @@
       "id": "PR_kwDOOWk1-s6VxyUV",
       "title": "The abstract model",
       "url": "https://github.com/ietf-wg-aipref/drafts/pull/25",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "martinthomson",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "There are a few things here that I'm struggling with, but I'm starting with the basics.\r\n\r\nThe first is to better define the abstract model.  That is, each category of use has a preference that is either \"allow\", \"disallow\", or \"unstated\".\r\n\r\nThe next is to give us more space for category definitions.  Right now, these are pretty short, but we'll need to say more.  I've not modified text much, but I've added notes about AI and GenAI being subsets of the preceding categories.\r\n\r\nThere is also new text on what it means to receive more specific instructions.  The old text was not clear about the ways in which things might be made more specific.  I've expanded this to note the two ways:\r\n\r\n1. that the vocabulary might be expanded\r\n2. there might be more specific instructions in agreements between users of assets and other actors that override any general statement that is made\r\n\r\nThis latter point seems to be a continual point of confusion in discussions thus far, so I'm not claiming that this addresses those concerns yet.  Still, it seemed necessary to get at least a basic statement in place.\r\n\r\nI've moved a few things around as well, to get things into a better flow.  In preparation for adding more text on exemplary serialization, search, inference, and other such things.",
       "createdAt": "2025-05-12T06:53:18Z",
-      "updatedAt": "2025-05-12T14:13:35Z",
+      "updatedAt": "2025-05-14T07:15:05Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "9d8f3bca94b2ead2a7226ff1efed7eb298076e0f",
       "headRepository": "ietf-wg-aipref/drafts",
       "headRefName": "iteration",
       "headRefOid": "263af734226b7fdb7c2e968477e25adcf9460220",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2025-05-14T07:15:03Z",
+      "mergedAt": "2025-05-14T07:15:03Z",
+      "mergedBy": "martinthomson",
+      "mergeCommit": {
+        "oid": "0bcf133490764d40e7ccc6b4078d48d0650f2494"
+      },
       "comments": [],
       "reviews": []
     }
