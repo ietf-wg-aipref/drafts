@@ -9,7 +9,7 @@ number:
 date:
 consensus: true
 v: 3
-area: "WIT"
+area: "Web and Internet Transport"
 workgroup: "AI Preferences"
 keyword:
  - AI Preferences
@@ -20,8 +20,8 @@ venue:
   type: "Working Group"
   mail: "ai-control@ietf.org"
   arch: "https://mailarchive.ietf.org/arch/browse/ai-control/"
-  github: "paul2keller/opt-out-vocab-id"
-  latest: "https://paul2keller.github.io/opt-out-vocab-id/draft-keller-aipref-vocab.html"
+  github: "ietf-wg-aipref/drafts"
+  latest: "https://ietf-wg-aipref.github.io/drafts/draft-ietf-aipref-vocab.html"
 
 author:
   -
