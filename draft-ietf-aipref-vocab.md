@@ -78,7 +78,7 @@ The vocabulary is intended to work in contexts where such preferences result in 
 * **Asset:** A digital file or stream of data, usually with associated metadata.
 * **Declaring party:** The entity that expresses a preference with regards to an Asset.
 
-# Statements of Preference
+# Statements of Preference {#model}
 
 The vocabulary is a set of categories,
 each of which is defined to cover a class of usage for assets.
@@ -164,19 +164,19 @@ The figure below shows the relationship between these categories:
 
 This list of specific use cases may be expanded in the future, should a consensus emerge between stakeholders, to include categories that address additional use cases as they emerge. In addition to these categories defined in the vocabulary, it is also expected that some systems implementing this vocabulary may extend this list with additional categories for their particular needs.
 
-## Text and Data Mining (TDM) Category
+## Text and Data Mining (TDM) Category {#tdm}
 
 The act of using one or more assets in the context of any automated analytical technique aimed at analyzing text and data in digital form in order to generate information which includes but is not limited to patterns, trends and correlations.
 
 The overarching TDM category is based on the definition of Text and Data Mining in Article 2(2) of {{EUCD2019}}.
 
-## AI Training Category
+## AI Training Category {#ai}
 
 The act of training machine learning models or artificial intelligence (AI).
 
 The use of assets for AI Training is a proper subset of TDM usage.
 
-## Generative AI Training Category
+## Generative AI Training Category {#genai}
 
 The act of training General Purpose AI models that have the capacity to generate text, images or other forms of synthetic content, or the act of training other types of AI models that have the purpose of generating text, images or other forms of synthetic content.
 
@@ -203,9 +203,142 @@ If arrangements, such as contracts exist that explicitly permit the use of that 
 
 The vocabulary does not preclude the use of other specific categories. Any statement of preference based on this vocabulary shall not be interpreted as restricting the use of the work(s) strictly for the purpose of search and discovery as long as no restriction is declared through search-specific means such as {{!RFC9309}}.
 
-## Vocabulary Extensions
+## Vocabulary Extensions {#vocab-extension}
 
 Systems referencing the vocabulary must not introduce additional categories that include existing categories defined in the vocabulary or otherwise include additional hierarchical relationships.
+
+
+# Serialization Format {#format}
+
+This section defines an exemplary serialization format for preferences.
+The format describes how the abstract model could be turned into a Unicode string or sequence of bytes.
+
+The format relies on the Dictionary type defined in {{Section 3.2 of !FIELDS=RFC9651}}.
+The dictionary keys correspond to usage categories
+and the dictionary values correspond to explicit preferences.
+
+For example, the following is a preference to allow AI training ({{ai}}),
+disallow generative AI training ({{genai}}), and
+and state no preference for other categories other than subsets of these categories:
+
+~~~
+ai=y, genai=n
+~~~
+
+
+## Usage Category Labels
+
+Each usage category in the vocabulary ({{vocab}}) is mapped to a short textual label.
+{{t-category-labels}} tabulates this mapping.
+
+| Category               | Label | Reference |
+|:-----------------------|:------|:----------|
+| Text and Data Mining   | tdm   | {{tdm}}   |
+| AI Training            | ai    | {{ai}}    |
+| Generative AI Training | genai | {{genai}} |
+{: #t-category-labels title="Mappings for Categories"}
+
+Any mapping for a new usage category can only use
+lowercase latin characters (a-z), digits (0-9), "_", "-", ".", or "*".
+These are encoded using the mappings in {{!ASCII=RFC0020}}.
+
+
+## Preference Labels
+
+The abstract model used has two options for preferences associated with each category:
+allow and disallow.
+These are mapped to single byte Tokens ({{Section 3.3.4 of !FIELDS}})
+of "y" and "n", respectively (without the quotes).
+
+
+## Text Encoding
+
+Structured Fields {{!FIELDS=RFC9651}} describes a byte-level encoding of information,
+not a text encoding.
+This makes this format suitable for inclusion in any protocol or format that carries bytes.
+
+Some formats are defined in terms of strings rather than bytes.
+These formats might need to decode the bytes of this format to obtain a string.
+As the syntax is limited to ASCII {{?ASCII=RFC0020}},
+an ASCII decoder or UTF-8 decoder {{?UTF8=RFC3629}} can be used.
+This results in the strings that this document uses.
+
+Processing (see {{processing}}) requires a sequence of bytes,
+so any format that uses strings needs to encode strings first.
+Again, this process can use ASCII or UTF-8.
+
+
+## Syntax Extensions
+
+There are two ways by which this syntax might be extended:
+the addition of new labels and the addition of parameters.
+
+New labels might be defined to correspond to new usage categories.
+{{vocab-extension}} addresses the considerations for defining new categories.
+New labels might also be defined for other types of extension
+that do not assign a preference to a usage category.
+In either case, when processing a parsed Dictionary to obtain preferences,
+any unknown labels MUST be ignored.
+
+The Dictionary syntax ({{Section 3.2 of !FIELDS}}) can associate parameters
+with each key-value pair.
+This document does not define any semantics for any parameters that might be included.
+When processing a parsed Dictionary to obtain preferences,
+any unknown parameters MUST be ignored.
+
+
+## Processing Algorithm {#processing}
+
+To process a series of bytes to recover the expressed preferences,
+those bytes are parsed into a Dictionary ({{Section 4.2.2 of !FIELDS}}),
+then preferences are assigned to each usage category in the vocabulary.
+
+The parsing algorithm for a Dictionary
+produces a keyed collection of values,
+each with a possibly-empty set of parameters.
+The parsing process guarantees that each key has at most one value and parameters.
+
+To obtain preferences for each of the categories in the vocabulary,
+iterate through the categories.
+For the label that corresponds to that category (see {{t-category-labels}}),
+obtain the corresponding value from the collection,
+disregarding any parameters.
+A preference is assigned as follows:
+
+* If the value is a Token with a value of "y" (not including quotes),
+  the associated preference is to allow that category of use.
+
+* If the value is a Token with a value of "n" (not including quotes),
+  the associated preference is to disallow that category of use.
+
+* Otherwise, a preference is not expressed for that category of use.
+
+Note that this last alternative includes
+the key being absent from the collection,
+values that are not Tokens,
+and Token values that are other than "y" or "n".
+All of these are not errors,
+they only result in no preference being inferred.
+
+An important note about this process and format is that,
+if the same key appears multiple times,
+only the last value is taken.
+This means that duplicating the same key could result in unexpected outcomes.
+For example, the following expresses no preferences:
+
+~~~
+ai=y, ai="n", genai=n, genai, tdm=n, tdm=()
+~~~
+
+If the parsing of the Dictionary fails, no preferences are expressed.
+This includes where keys include uppercase characters,
+as this format is case sensitive.
+
+
+## Alternative Formats
+
+This format is only a recommended way to represent preferences.
+The model described in {{model}}, can be used without this serialization.
 
 
 # Security Considerations
