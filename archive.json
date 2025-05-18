@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-05-15T01:56:42.096727+00:00",
+  "timestamp": "2025-05-18T02:05:32.032138+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -523,7 +523,7 @@
       ],
       "body": "In looking at this, the term \"asset\" might be assumed to imply ownership, such that preferences can only be expressed by entities that \"own\" the affected content.\n\nCan we instead use the more neutral term \"content\"?  Or, minimally, something that is less prejudicial about the arrangement between the entity that expresses a preference and the subject that is covered.",
       "createdAt": "2025-05-12T06:12:48Z",
-      "updatedAt": "2025-05-13T22:33:16Z",
+      "updatedAt": "2025-05-16T13:29:37Z",
       "closedAt": null,
       "comments": [
         {
@@ -546,6 +546,13 @@
           "body": "Was the term \"artifact\" ever suggested?  That doesn't carry the strong implication of being owned. It might carry an implication of age, but not as strongly.",
           "createdAt": "2025-05-13T22:33:15Z",
           "updatedAt": "2025-05-13T22:33:15Z"
+        },
+        {
+          "author": "lrosenthol",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": ">Was the term \"artifact\" ever suggested? That doesn't carry the strong implication of being owned. It might carry an implication of age, but not as strongly.\n\nArtifact is problematic because it has the connotation of being \"secondary\" or at least not the primary thing.",
+          "createdAt": "2025-05-16T13:29:36Z",
+          "updatedAt": "2025-05-16T13:29:36Z"
         }
       ]
     }
@@ -942,6 +949,184 @@
       },
       "comments": [],
       "reviews": []
+    },
+    {
+      "number": 26,
+      "id": "PR_kwDOOWk1-s6WPxJl",
+      "title": "Define an exemplary format",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/26",
+      "state": "OPEN",
+      "author": "martinthomson",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "As discussed, we want to define a recommended format.  This executes on that.  It uses Structured Fields, which will ensure that we have a very easy translation to HTTP fields.  It also fits neatly into the other formats we are considering.\r\n\r\nThere are some interesting implications that are worth highlighting. The text I've added goes into some of that in more detail, but just to list them for visibility:\r\n\r\n* This is a sequence of bytes, not a string.  That has implications for how it is included in some formats, but as RFC 9651 limits its syntax to a pretty small subset of the ASCII range, this is mostly just a theoretical consideration, not a practical one.\r\n\r\n* Parsing errors in RFC 9651 means that you lose everything.  No preference survives.  That means that authoring errors have consequences.  This is an artifact of the format being more of a computer-to-computer language, rather than being tolerant of human error.  I'm not thrilled with this, but recognize the trade-off involved.\r\n\r\n* Repeated keys mean that only the last one is taken.  Again, not thrilled with this, but think that the trade is tolerable.\r\n\r\n* Labels are lowercase only.  A lot of the list traffic has started to use AI=whatever; RFC 9651 doesn't let us shout.  I think that this is fine, but it's another minor ding.\r\n\r\nCloses #8.",
+      "createdAt": "2025-05-15T02:26:24Z",
+      "updatedAt": "2025-05-15T02:26:24Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "8ccacc0c07f17ece73b47e4016173fa1bfa9bc23",
+      "headRepository": "ietf-wg-aipref/drafts",
+      "headRefName": "format",
+      "headRefOid": "e6d88714998f6480390d7b5425c664f33efd454e",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 27,
+      "id": "PR_kwDOOWk1-s6WQHYG",
+      "title": "Remove opt-out from the title",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/27",
+      "state": "MERGED",
+      "author": "martinthomson",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "The changes we made to introductory text didn't catch the title, which now looks very wrong.\r\n\r\nHappy to have this wordsmithed.  This is just the best I could come up with.",
+      "createdAt": "2025-05-15T03:47:26Z",
+      "updatedAt": "2025-05-15T07:14:51Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "8ccacc0c07f17ece73b47e4016173fa1bfa9bc23",
+      "headRepository": "ietf-wg-aipref/drafts",
+      "headRefName": "title",
+      "headRefOid": "ff13966a2f5416d9c6316407ced5fca4badf6e80",
+      "closedAt": "2025-05-15T07:14:49Z",
+      "mergedAt": "2025-05-15T07:14:49Z",
+      "mergedBy": "paul2keller",
+      "mergeCommit": {
+        "oid": "13458c32917c20d30732333f4df125846a9c9692"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWk1-s6pbZJy",
+          "commit": {
+            "abbreviatedOid": "ff13966"
+          },
+          "author": "paul2keller",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "Looks good to me. If we end up having both TDM and search as categories in the vocab (which we are aiming for) then this probably will need additional wordsmithing at a later point but for now I think this is good as is and better aligned with our chartered purpose",
+          "createdAt": "2025-05-15T07:14:24Z",
+          "updatedAt": "2025-05-15T07:14:24Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 28,
+      "id": "PR_kwDOOWk1-s6WQQSd",
+      "title": "Switch to using aasvg for the diagram",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/28",
+      "state": "OPEN",
+      "author": "martinthomson",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "I've rearranged the diagram slightly to ensure that the categories are shown in the order we present them later.  I've also removed the \"other\" part, which didn't work that well otherwise.\r\n\r\nThis will get interesting when more items are added, but I have ideas on that front.\r\n\r\nSorry Paul, I destroyed your lovely hand-crafted SVG here.  I hope that's not an unacceptable loss.\r\n\r\n[Preview the SVG here](https://ietf-wg-aipref.github.io/drafts/ascii-art/draft-ietf-aipref-vocab.html#f-categories)",
+      "createdAt": "2025-05-15T04:23:25Z",
+      "updatedAt": "2025-05-15T04:23:25Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "8ccacc0c07f17ece73b47e4016173fa1bfa9bc23",
+      "headRepository": "ietf-wg-aipref/drafts",
+      "headRefName": "ascii-art",
+      "headRefOid": "058e860a1fa585cfcffaa36741bb142d3e40eab8",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 29,
+      "id": "PR_kwDOOWk1-s6WQUCR",
+      "title": "Merge definitions into the preceding section",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/29",
+      "state": "MERGED",
+      "author": "martinthomson",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Also move to a definition list.",
+      "createdAt": "2025-05-15T04:35:51Z",
+      "updatedAt": "2025-05-15T07:17:17Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "8ccacc0c07f17ece73b47e4016173fa1bfa9bc23",
+      "headRepository": "ietf-wg-aipref/drafts",
+      "headRefName": "redundant-definitions",
+      "headRefOid": "68100cf5d21fe2fca593aa6dd5bd756885498a2b",
+      "closedAt": "2025-05-15T07:17:15Z",
+      "mergedAt": "2025-05-15T07:17:15Z",
+      "mergedBy": "paul2keller",
+      "mergeCommit": {
+        "oid": "7947d0b1c92e849a78513fb453248ab67fd79733"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWk1-s6pbarm",
+          "commit": {
+            "abbreviatedOid": "68100cf"
+          },
+          "author": "paul2keller",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-05-15T07:16:48Z",
+          "updatedAt": "2025-05-15T07:16:48Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 30,
+      "id": "PR_kwDOOWk1-s6WQUnO",
+      "title": "Automatic update of venue information",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/30",
+      "state": "MERGED",
+      "author": "martinthomson",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2025-05-15T04:37:00Z",
+      "updatedAt": "2025-05-15T11:24:14Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "8ccacc0c07f17ece73b47e4016173fa1bfa9bc23",
+      "headRepository": "ietf-wg-aipref/drafts",
+      "headRefName": "update-venue",
+      "headRefOid": "71d16073ba2cecf3b20a6553459baafd792100ce",
+      "closedAt": "2025-05-15T11:24:13Z",
+      "mergedAt": "2025-05-15T11:24:12Z",
+      "mergedBy": "martinthomson",
+      "mergeCommit": {
+        "oid": "22128704272e00eba847c3bab293629d72c888a9"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWk1-s6pbaPd",
+          "commit": {
+            "abbreviatedOid": "71d1607"
+          },
+          "author": "paul2keller",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-05-15T07:16:05Z",
+          "updatedAt": "2025-05-15T07:16:05Z",
+          "comments": []
+        }
+      ]
     }
   ]
 }
