@@ -144,7 +144,7 @@ This list of specific use cases may be expanded in the future, should a consensu
 
 The act of using one or more assets in the context of any automated analytical technique aimed at analyzing text and data in digital form in order to generate information which includes but is not limited to patterns, trends and correlations.
 
-The overarching TDM category is based on the definition of Text and Data Mining in Article 2(2) of {{EUCD2019}}.
+The use of assets for TDM is encompaases all the subsequent categories.
 
 ## AI Training Category
 
@@ -157,7 +157,6 @@ The use of assets for AI Training is a proper subset of TDM usage.
 The act of training General Purpose AI models that have the capacity to generate text, images or other forms of synthetic content, or the act of training other types of AI models that have the purpose of generating text, images or other forms of synthetic content.
 
 The use of assets for Generative AI Training is a proper subset of AI Training usage.
-
 
 # Usage
 
