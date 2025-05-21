@@ -5,8 +5,8 @@
 AI Preferences                                                 P. Keller
 Internet-Draft                                               Open Future
 Intended status: Standards Track                         M. Thomson, Ed.
-Expires: 16 November 2025                                        Mozilla
-                                                             15 May 2025
+Expires: 22 November 2025                                        Mozilla
+                                                             21 May 2025
 
 
             A Vocabulary For Expressing AI Usage Preferences
@@ -55,7 +55,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 16 November 2025.
+   This Internet-Draft will expire on 22 November 2025.
 
 Copyright Notice
 
@@ -178,25 +178,24 @@ Table of Contents
 
    This section defines the categories of use in the vocabulary.
 
-   The figure below shows the relationship between these categories:
+   Figure 1 shows the relationship between these categories:
 
-+--------------------------------------------------------------------------+
-|                                                                          |
-|                          Text and Data Mining (TDM)                      |
-|                                                                          |
-| +--------------------------------------------+  +- - - - - - - - - - -+  |
-| |  +--------------------------+              |  |                     |  |
-| |  |                          |              |                           |
-| |  |                          |              |  |    [possibly]:      |  |
-| |  | Generative AI Training   |  AI Training |                           |
-| |  |                          |              |  |  Other use cases    |  |
-| |  |                          |              |                           |
-| |  +--------------------------+              |  |                     |  |
-| +--------------------------------------------+  +- - - - - - - - - - -+  |
-|                                                                          |
-+--------------------------------------------------------------------------+
+    .-------------------------------------------------.
+   |                                                   |
+   |               Text and Data Mining                |
+   |                                                   |
+   |   .-------------------------------------------.   |
+   |  |                .------------------------.   |  |
+   |  |               |                          |  |  |
+   |  |               |                          |  |  |
+   |  |  AI Training  |  Generative AI Training  |  |  |
+   |  |               |                          |  |  |
+   |  |               |                          |  |  |
+   |  |                '------------------------'   |  |
+   |   '-------------------------------------------'   |
+    '-------------------------------------------------'
 
-                  Figure 1: NMS View of Device State
+              Figure 1: Relationship Between Categories of Use
 
    This list of specific use cases may be expanded in the future, should
    a consensus emerge between stakeholders, to include categories that
