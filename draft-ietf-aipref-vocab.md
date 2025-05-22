@@ -211,11 +211,12 @@ Systems referencing the vocabulary must not introduce additional categories that
 # Exemplary Serialization Format {#format}
 
 This section defines an exemplary serialization format for preferences.
-The format describes how the abstract model could be turned into a Unicode string or sequence of bytes.
+The format describes how the abstract model could be turned into Unicode text or sequence of bytes.
 
 The format relies on the Dictionary type defined in {{Section 3.2 of !FIELDS=RFC9651}}.
 The dictionary keys correspond to usage categories
-and the dictionary values correspond to explicit preferences.
+and the dictionary values correspond to explicit preferences,
+which can be either "y" or "n"; see {{y-or-n}}.
 
 For example, the following is a preference to allow AI training ({{ai}}),
 disallow generative AI training ({{genai}}), and
@@ -243,7 +244,7 @@ lowercase latin characters (a-z), digits (0-9), "_", "-", ".", or "*".
 These are encoded using the mappings in {{!ASCII=RFC0020}}.
 
 
-## Preference Labels
+## Preference Labels {#y-or-n}
 
 The abstract model used has two options for preferences associated with each category:
 allow and disallow.
@@ -332,7 +333,8 @@ ai=y, ai="n", genai=n, genai, tdm=n, tdm=()
 
 If the parsing of the Dictionary fails, no preferences are expressed.
 This includes where keys include uppercase characters,
-as this format is case sensitive.
+as this format is case sensitive
+(more correctly, it operates on bytes, not strings).
 
 
 ## Alternative Formats
