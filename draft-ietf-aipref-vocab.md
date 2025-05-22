@@ -144,7 +144,7 @@ This list of specific use cases may be expanded in the future, should a consensu
 
 The act of using one or more assets in the context of any automated analytical technique aimed at analyzing text and data in digital form in order to generate information which includes but is not limited to patterns, trends and correlations.
 
-The use of assets for TDM is encompasses all the subsequent categories.
+The use of assets for TDM encompasses all the subsequent categories.
 
 ## AI Training Category
 
