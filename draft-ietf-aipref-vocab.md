@@ -315,7 +315,7 @@ as this format is case sensitive
 
 ## Alternative Formats
 
-This format is only a exemplary way to represent preferences.
+This format is only an exemplary way to represent preferences.
 The model described in {{model}}, can be used without this serialization.
 
 
