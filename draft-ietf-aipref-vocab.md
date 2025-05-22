@@ -208,7 +208,7 @@ The vocabulary does not preclude the use of other specific categories. Any state
 Systems referencing the vocabulary must not introduce additional categories that include existing categories defined in the vocabulary or otherwise include additional hierarchical relationships.
 
 
-# Serialization Format {#format}
+# Exemplary Serialization Format {#format}
 
 This section defines an exemplary serialization format for preferences.
 The format describes how the abstract model could be turned into a Unicode string or sequence of bytes.
@@ -248,7 +248,7 @@ These are encoded using the mappings in {{!ASCII=RFC0020}}.
 The abstract model used has two options for preferences associated with each category:
 allow and disallow.
 These are mapped to single byte Tokens ({{Section 3.3.4 of !FIELDS}})
-of "y" and "n", respectively (without the quotes).
+of `y` and `n`, respectively.
 
 
 ## Text Encoding
@@ -305,10 +305,10 @@ obtain the corresponding value from the collection,
 disregarding any parameters.
 A preference is assigned as follows:
 
-* If the value is a Token with a value of "y" (not including quotes),
+* If the value is a Token with a value of `y`,
   the associated preference is to allow that category of use.
 
-* If the value is a Token with a value of "n" (not including quotes),
+* If the value is a Token with a value of `n`,
   the associated preference is to disallow that category of use.
 
 * Otherwise, a preference is not expressed for that category of use.
@@ -337,7 +337,7 @@ as this format is case sensitive.
 
 ## Alternative Formats
 
-This format is only a recommended way to represent preferences.
+This format is only a exemplary way to represent preferences.
 The model described in {{model}}, can be used without this serialization.
 
 
