@@ -282,11 +282,12 @@ Table of Contents
 
    This section defines an exemplary serialization format for
    preferences.  The format describes how the abstract model could be
-   turned into a Unicode string or sequence of bytes.
+   turned into Unicode text or sequence of bytes.
 
    The format relies on the Dictionary type defined in Section 3.2 of
    [FIELDS].  The dictionary keys correspond to usage categories and the
-   dictionary values correspond to explicit preferences.
+   dictionary values correspond to explicit preferences, which can be
+   either "y" or "n"; see Section 7.2.
 
    For example, the following is a preference to allow AI training
    (Section 5.2), disallow generative AI training (Section 5.3), and and
@@ -396,7 +397,8 @@ Table of Contents
 
    If the parsing of the Dictionary fails, no preferences are expressed.
    This includes where keys include uppercase characters, as this format
-   is case sensitive.
+   is case sensitive (more correctly, it operates on bytes, not
+   strings).
 
 7.6.  Alternative Formats
 

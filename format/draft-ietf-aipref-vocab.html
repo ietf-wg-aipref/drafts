@@ -1427,10 +1427,11 @@ If arrangements, such as contracts exist that explicitly permit the use of that 
 <a href="#section-7" class="section-number selfRef">7. </a><a href="#name-exemplary-serialization-for" class="section-name selfRef">Exemplary Serialization Format</a>
       </h2>
 <p id="section-7-1">This section defines an exemplary serialization format for preferences.
-The format describes how the abstract model could be turned into a Unicode string or sequence of bytes.<a href="#section-7-1" class="pilcrow">¶</a></p>
+The format describes how the abstract model could be turned into Unicode text or sequence of bytes.<a href="#section-7-1" class="pilcrow">¶</a></p>
 <p id="section-7-2">The format relies on the Dictionary type defined in <span><a href="https://rfc-editor.org/rfc/rfc9651#section-3.2" class="relref">Section 3.2</a> of [<a href="#FIELDS" class="cite xref">FIELDS</a>]</span>.
 The dictionary keys correspond to usage categories
-and the dictionary values correspond to explicit preferences.<a href="#section-7-2" class="pilcrow">¶</a></p>
+and the dictionary values correspond to explicit preferences,
+which can be either "y" or "n"; see <a href="#y-or-n" class="auto internal xref">Section 7.2</a>.<a href="#section-7-2" class="pilcrow">¶</a></p>
 <p id="section-7-3">For example, the following is a preference to allow AI training (<a href="#ai" class="auto internal xref">Section 5.2</a>),
 disallow generative AI training (<a href="#genai" class="auto internal xref">Section 5.3</a>), and
 and state no preference for other categories other than subsets of these categories:<a href="#section-7-3" class="pilcrow">¶</a></p>
@@ -1489,7 +1490,7 @@ lowercase latin characters (a-z), digits (0-9), "_", "-", ".", or "*".
 These are encoded using the mappings in <span>[<a href="#ASCII" class="cite xref">ASCII</a>]</span>.<a href="#section-7.1-3" class="pilcrow">¶</a></p>
 </section>
 </div>
-<div id="preference-labels">
+<div id="y-or-n">
 <section id="section-7.2">
         <h3 id="name-preference-labels">
 <a href="#section-7.2" class="section-number selfRef">7.2. </a><a href="#name-preference-labels" class="section-name selfRef">Preference Labels</a>
@@ -1587,7 +1588,8 @@ ai=y, ai="n", genai=n, genai, tdm=n, tdm=()
 </div>
 <p id="section-7.5-8">If the parsing of the Dictionary fails, no preferences are expressed.
 This includes where keys include uppercase characters,
-as this format is case sensitive.<a href="#section-7.5-8" class="pilcrow">¶</a></p>
+as this format is case sensitive
+(more correctly, it operates on bytes, not strings).<a href="#section-7.5-8" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="alternative-formats">
