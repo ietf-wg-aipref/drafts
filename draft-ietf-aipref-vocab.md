@@ -192,7 +192,7 @@ The format describes how the abstract model could be turned into Unicode text or
 The format relies on the Dictionary type defined in {{Section 3.2 of !FIELDS=RFC9651}}.
 The dictionary keys correspond to usage categories
 and the dictionary values correspond to explicit preferences,
-which can be either "y" or "n"; see {{y-or-n}}.
+which can be either `y` or `n`; see {{y-or-n}}.
 
 For example, the following is a preference to allow AI training ({{ai}}),
 disallow generative AI training ({{genai}}), and
@@ -293,7 +293,7 @@ A preference is assigned as follows:
 Note that this last alternative includes
 the key being absent from the collection,
 values that are not Tokens,
-and Token values that are other than "y" or "n".
+and Token values that are other than `y` or `n`.
 All of these are not errors,
 they only result in no preference being inferred.
 
