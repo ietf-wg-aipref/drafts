@@ -1,6 +1,6 @@
 ---
-title: "Proposal for an Opt-Out Vocabulary"
-abbrev: "Opt-Out Vocab"
+title: "A Vocabulary For Expressing AI Usage Preferences"
+abbrev: "AI Preferences"
 category: std
 
 docname: draft-ietf-aipref-vocab-latest
@@ -9,7 +9,7 @@ number:
 date:
 consensus: true
 v: 3
-area: "WIT"
+area: "Web and Internet Transport"
 workgroup: "AI Preferences"
 keyword:
  - AI Preferences
@@ -20,8 +20,8 @@ venue:
   type: "Working Group"
   mail: "ai-control@ietf.org"
   arch: "https://mailarchive.ietf.org/arch/browse/ai-control/"
-  github: "paul2keller/opt-out-vocab-id"
-  latest: "https://paul2keller.github.io/opt-out-vocab-id/draft-keller-aipref-vocab.html"
+  github: "ietf-wg-aipref/drafts"
+  latest: "https://ietf-wg-aipref.github.io/drafts/draft-ietf-aipref-vocab.html"
 
 author:
   -
@@ -73,10 +73,14 @@ The vocabulary is intended to work in contexts where such preferences result in 
 
 {::boilerplate bcp14-tagged}
 
-# Definitions
+This document uses the following terms:
 
-* **Asset:** A digital file or stream of data, usually with associated metadata.
-* **Declaring party:** The entity that expresses a preference with regards to an Asset.
+{: newline="true" spacing="compact"}
+Asset:
+: A digital file or stream of data, usually with associated metadata.
+
+Declaring party:
+: The entity that expresses a preference with regards to an Asset.
 
 # Statements of Preference {#model}
 
@@ -114,53 +118,25 @@ in one of three states: "allowed", "disallowed", or "unknown".
 
 This section defines the categories of use in the vocabulary.
 
-The figure below shows the relationship between these categories:
+{{f-categories}} shows the relationship between these categories:
 
-<figure>
-<name>NMS View of Device State</name>
-<artset>
-<artwork type="svg">
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="750" height="300" viewBox="0 0 750 300" text-anchor="middle" stroke-width="2" font-size="14" font-family="sans-serif">
-  <title>Opt-out vocabulary overview</title>
-
-  <!-- Outer Box -->
-  <rect x="50" y="50" width="630" height="220" rx="15" ry="15" fill="white" stroke="black"/>
-  <text x="365" y="80">Text and Data Mining</text>
-
-  <!-- AI Training Box -->
-  <rect x="80" y="100" width="380" height="130" rx="10" ry="10" fill="white" stroke="black" />
-  <text x="380" y="170">AI Training</text>
-
-  <!-- Generative AI Training Box -->
-  <rect x="110" y="130" width="200" height="70" rx="5" ry="5" fill="white" stroke="black" />
-  <text x="210" y="170">Generative AI Training</text>
-
-  <!-- Additional Use Cases Box -->
-  <rect x="500" y="100" width="150" height="130" class="dotted" rx="5" ry="5" fill="white" stroke="black" stroke-dasharray="5,5" />
-  <text x="575" y="160">[possibly]:</text>
-  <text x="575" y="180">additional use cases</text>
-</svg>
-
-</artwork>
-<artwork type="ascii-art">
-+--------------------------------------------------------------------------+
-|                                                                          |
-|                          Text and Data Mining (TDM)                      |
-|                                                                          |
-| +--------------------------------------------+  +- - - - - - - - - - -+  |
-| |  +--------------------------+              |  |                     |  |
-| |  |                          |              |                           |
-| |  |                          |              |  |    [possibly]:      |  |
-| |  | Generative AI Training   |  AI Training |                           |
-| |  |                          |              |  |  Other use cases    |  |
-| |  |                          |              |                           |
-| |  +--------------------------+              |  |                     |  |
-| +--------------------------------------------+  +- - - - - - - - - - -+  |
-|                                                                          |
-+--------------------------------------------------------------------------+
-</artwork>
-</artset>
-</figure>
+~~~ aasvg
+ .-------------------------------------------------.
+|                                                   |
+|               Text and Data Mining                |
+|                                                   |
+|   .-------------------------------------------.   |
+|  |                .------------------------.   |  |
+|  |               |                          |  |  |
+|  |               |                          |  |  |
+|  |  AI Training  |  Generative AI Training  |  |  |
+|  |               |                          |  |  |
+|  |               |                          |  |  |
+|  |                '------------------------'   |  |
+|   '-------------------------------------------'   |
+ '-------------------------------------------------'
+~~~
+{: #f-categories title="Relationship Between Categories of Use"}
 
 This list of specific use cases may be expanded in the future, should a consensus emerge between stakeholders, to include categories that address additional use cases as they emerge. In addition to these categories defined in the vocabulary, it is also expected that some systems implementing this vocabulary may extend this list with additional categories for their particular needs.
 
