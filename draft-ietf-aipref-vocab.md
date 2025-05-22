@@ -312,11 +312,85 @@ This includes where keys include uppercase characters,
 as this format is case sensitive
 (more correctly, it operates on bytes, not strings).
 
+This process produces an abstract data structure
+that assigns a preference to each usage category
+as described in {{model}}.
+
 
 ## Alternative Formats
 
 This format is only a exemplary way to represent preferences.
-The model described in {{model}}, can be used without this serialization.
+The model described in {{model}}
+can be used without this serialization.
+Any alternative format needs to define how that model is represented
+and how to generate the same model
+from any alternative representation.
+
+
+# Consulting a Preference Expression {#consulting}
+
+After processing a preference expression ({{processing}}),
+an application can request the status of a specific usage category.
+
+A single preference expression can be evaluated for a usage category
+as follows:
+
+1. If the expression contains an explicit preference
+   (either to allow or disallow),
+   that is the result.
+
+2. Otherwise, if the usage category is a proper subset
+   of another usage category,
+   recursively apply this process to that category
+   and use the result of that process.
+
+3. Otherwise, no preference is expressed.
+
+This process results in three potential answers:
+allow, disallow, and no preference.
+Applications can use the answer to guide their behavior.
+
+One approach for dealing with a "no preference" answer
+is to assign a default.
+This document takes no position on what default might be chosen
+as that will depend on policy constraints
+beyond the scope of this specification.
+
+
+## Combining Preferences {#combining}
+
+The application might have multiple preference expressions,
+obtained using different methods.
+
+If multiple preference expressions are active,
+all preference expressions are consulted ({{consulting}}),
+unless some can be discarded ({{overriding}}).
+This might result in conflicting answers.
+
+Absent some other means of resolving conflicts,
+the following process applies to each usage category:
+
+* If any preference expression indicates that the usage is disallowed,
+  the result is that the usage is disallowed.
+
+* Otherwise, if any preference preference allows the usage,
+  the result is that the usage is allowed.
+
+* Otherwise, no preference is expressed.
+
+This process ensures that the most restrictive preference applies.
+
+
+## Overriding Preferences {#overriding}
+
+Any method of attaching preference expressions to assets
+can specify conditions
+where the preferences obtained using one method
+override those of another method.
+
+If an application has two preference expressions
+where one is defined as overriding the other,
+the overridden preference can be discarded.
 
 
 # Security Considerations
