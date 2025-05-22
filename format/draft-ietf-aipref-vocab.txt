@@ -9,7 +9,7 @@ Expires: 23 November 2025                                        Mozilla
                                                              22 May 2025
 
 
-                   Proposal for an Opt-Out Vocabulary
+            A Vocabulary For Expressing AI Usage Preferences
                      draft-ietf-aipref-vocab-latest
 
 Abstract
@@ -27,9 +27,9 @@ About This Document
 
    This note is to be removed before publishing as an RFC.
 
-   The latest revision of this draft can be found at
-   https://paul2keller.github.io/opt-out-vocab-id/draft-keller-aipref-
-   vocab.html.  Status information for this document may be found at
+   The latest revision of this draft can be found at https://ietf-wg-
+   aipref.github.io/drafts/draft-ietf-aipref-vocab.html.  Status
+   information for this document may be found at
    https://datatracker.ietf.org/doc/draft-ietf-aipref-vocab/.
 
    Discussion of this document takes place on the AI Preferences Working
@@ -38,7 +38,7 @@ About This Document
    https://www.ietf.org/mailman/listinfo/ai-control/.
 
    Source for this draft and an issue tracker can be found at
-   https://github.com/paul2keller/opt-out-vocab-id.
+   https://github.com/ietf-wg-aipref/drafts.
 
 Status of This Memo
 
@@ -75,27 +75,26 @@ Table of Contents
 
    1.  Introduction
    2.  Conventions and Definitions
-   3.  Definitions
-   4.  Statements of Preference
-   5.  Vocabulary Definition
-     5.1.  Text and Data Mining (TDM) Category
-     5.2.  AI Training Category
-     5.3.  Generative AI Training Category
-   6.  Usage
-     6.1.  More Specific Instructions
-     6.2.  Vocabulary Extensions
-   7.  Exemplary Serialization Format
-     7.1.  Usage Category Labels
-     7.2.  Preference Labels
-     7.3.  Text Encoding
-     7.4.  Syntax Extensions
-     7.5.  Processing Algorithm
-     7.6.  Alternative Formats
-   8.  Security Considerations
-   9.  IANA Considerations
-   10. References
-     10.1.  Normative References
-     10.2.  Informative References
+   3.  Statements of Preference
+   4.  Vocabulary Definition
+     4.1.  Text and Data Mining (TDM) Category
+     4.2.  AI Training Category
+     4.3.  Generative AI Training Category
+   5.  Usage
+     5.1.  More Specific Instructions
+     5.2.  Vocabulary Extensions
+   6.  Exemplary Serialization Format
+     6.1.  Usage Category Labels
+     6.2.  Preference Labels
+     6.3.  Text Encoding
+     6.4.  Syntax Extensions
+     6.5.  Processing Algorithm
+     6.6.  Alternative Formats
+   7.  Security Considerations
+   8.  IANA Considerations
+   9.  References
+     9.1.  Normative References
+     9.2.  Informative References
    Acknowledgments
    Authors' Addresses
 
@@ -141,18 +140,18 @@ Table of Contents
    BCP 14 [RFC2119] [RFC8174] when, and only when, they appear in all
    capitals, as shown here.
 
-3.  Definitions
+   This document uses the following terms:
 
-   *  *Asset:* A digital file or stream of data, usually with associated
+   Asset:
+      A digital file or stream of data, usually with associated
       metadata.
+   Declaring party:
+      The entity that expresses a preference with regards to an Asset.
 
-   *  *Declaring party:* The entity that expresses a preference with
-      regards to an Asset.
-
-4.  Statements of Preference
+3.  Statements of Preference
 
    The vocabulary is a set of categories, each of which is defined to
-   cover a class of usage for assets.  Section 5 defines these
+   cover a class of usage for assets.  Section 4 defines these
    categories in more detail.
 
    A statement of preference is made about an asset.  Statements of
@@ -182,29 +181,28 @@ Table of Contents
    that each category of use has a preference in one of three states:
    "allowed", "disallowed", or "unknown".
 
-5.  Vocabulary Definition
+4.  Vocabulary Definition
 
    This section defines the categories of use in the vocabulary.
 
-   The figure below shows the relationship between these categories:
+   Figure 1 shows the relationship between these categories:
 
-+--------------------------------------------------------------------------+
-|                                                                          |
-|                          Text and Data Mining (TDM)                      |
-|                                                                          |
-| +--------------------------------------------+  +- - - - - - - - - - -+  |
-| |  +--------------------------+              |  |                     |  |
-| |  |                          |              |                           |
-| |  |                          |              |  |    [possibly]:      |  |
-| |  | Generative AI Training   |  AI Training |                           |
-| |  |                          |              |  |  Other use cases    |  |
-| |  |                          |              |                           |
-| |  +--------------------------+              |  |                     |  |
-| +--------------------------------------------+  +- - - - - - - - - - -+  |
-|                                                                          |
-+--------------------------------------------------------------------------+
+    .-------------------------------------------------.
+   |                                                   |
+   |               Text and Data Mining                |
+   |                                                   |
+   |   .-------------------------------------------.   |
+   |  |                .------------------------.   |  |
+   |  |               |                          |  |  |
+   |  |               |                          |  |  |
+   |  |  AI Training  |  Generative AI Training  |  |  |
+   |  |               |                          |  |  |
+   |  |               |                          |  |  |
+   |  |                '------------------------'   |  |
+   |   '-------------------------------------------'   |
+    '-------------------------------------------------'
 
-                  Figure 1: NMS View of Device State
+              Figure 1: Relationship Between Categories of Use
 
    This list of specific use cases may be expanded in the future, should
    a consensus emerge between stakeholders, to include categories that
@@ -213,7 +211,7 @@ Table of Contents
    systems implementing this vocabulary may extend this list with
    additional categories for their particular needs.
 
-5.1.  Text and Data Mining (TDM) Category
+4.1.  Text and Data Mining (TDM) Category
 
    The act of using one or more assets in the context of any automated
    analytical technique aimed at analyzing text and data in digital form
@@ -223,14 +221,14 @@ Table of Contents
    The overarching TDM category is based on the definition of Text and
    Data Mining in Article 2(2) of [EUCD2019].
 
-5.2.  AI Training Category
+4.2.  AI Training Category
 
    The act of training machine learning models or artificial
    intelligence (AI).
 
    The use of assets for AI Training is a proper subset of TDM usage.
 
-5.3.  Generative AI Training Category
+4.3.  Generative AI Training Category
 
    The act of training General Purpose AI models that have the capacity
    to generate text, images or other forms of synthetic content, or the
@@ -240,13 +238,13 @@ Table of Contents
    The use of assets for Generative AI Training is a proper subset of AI
    Training usage.
 
-6.  Usage
+5.  Usage
 
    The vocabulary is used by referencing the terms defined in the
-   Section 5 section above, directly or via mappings, in accordance with
+   Section 4 section above, directly or via mappings, in accordance with
    how they are defined in this document.
 
-6.1.  More Specific Instructions
+5.1.  More Specific Instructions
 
    A recipient of a statement of preferences that follows this model
    might receive more specific instructions in two ways:
@@ -272,13 +270,13 @@ Table of Contents
    restriction is declared through search-specific means such as
    [RFC9309].
 
-6.2.  Vocabulary Extensions
+5.2.  Vocabulary Extensions
 
    Systems referencing the vocabulary must not introduce additional
    categories that include existing categories defined in the vocabulary
    or otherwise include additional hierarchical relationships.
 
-7.  Exemplary Serialization Format
+6.  Exemplary Serialization Format
 
    This section defines an exemplary serialization format for
    preferences.  The format describes how the abstract model could be
@@ -287,28 +285,28 @@ Table of Contents
    The format relies on the Dictionary type defined in Section 3.2 of
    [FIELDS].  The dictionary keys correspond to usage categories and the
    dictionary values correspond to explicit preferences, which can be
-   either "y" or "n"; see Section 7.2.
+   either y or n; see Section 6.2.
 
    For example, the following is a preference to allow AI training
-   (Section 5.2), disallow generative AI training (Section 5.3), and and
+   (Section 4.2), disallow generative AI training (Section 4.3), and and
    state no preference for other categories other than subsets of these
    categories:
 
    ai=y, genai=n
 
-7.1.  Usage Category Labels
+6.1.  Usage Category Labels
 
-   Each usage category in the vocabulary (Section 5) is mapped to a
+   Each usage category in the vocabulary (Section 4) is mapped to a
    short textual label.  Table 1 tabulates this mapping.
 
              +========================+=======+=============+
              | Category               | Label | Reference   |
              +========================+=======+=============+
-             | Text and Data Mining   | tdm   | Section 5.1 |
+             | Text and Data Mining   | tdm   | Section 4.1 |
              +------------------------+-------+-------------+
-             | AI Training            | ai    | Section 5.2 |
+             | AI Training            | ai    | Section 4.2 |
              +------------------------+-------+-------------+
-             | Generative AI Training | genai | Section 5.3 |
+             | Generative AI Training | genai | Section 4.3 |
              +------------------------+-------+-------------+
 
                      Table 1: Mappings for Categories
@@ -317,13 +315,13 @@ Table of Contents
    characters (a-z), digits (0-9), "_", "-", ".", or "*".  These are
    encoded using the mappings in [ASCII].
 
-7.2.  Preference Labels
+6.2.  Preference Labels
 
    The abstract model used has two options for preferences associated
    with each category: allow and disallow.  These are mapped to single
    byte Tokens (Section 3.3.4 of [FIELDS]) of y and n, respectively.
 
-7.3.  Text Encoding
+6.3.  Text Encoding
 
    Structured Fields [FIELDS] describes a byte-level encoding of
    information, not a text encoding.  This makes this format suitable
@@ -335,17 +333,17 @@ Table of Contents
    decoder or UTF-8 decoder [UTF8] can be used.  This results in the
    strings that this document uses.
 
-   Processing (see Section 7.5) requires a sequence of bytes, so any
+   Processing (see Section 6.5) requires a sequence of bytes, so any
    format that uses strings needs to encode strings first.  Again, this
    process can use ASCII or UTF-8.
 
-7.4.  Syntax Extensions
+6.4.  Syntax Extensions
 
    There are two ways by which this syntax might be extended: the
    addition of new labels and the addition of parameters.
 
    New labels might be defined to correspond to new usage categories.
-   Section 6.2 addresses the considerations for defining new categories.
+   Section 5.2 addresses the considerations for defining new categories.
    New labels might also be defined for other types of extension that do
    not assign a preference to a usage category.  In either case, when
    processing a parsed Dictionary to obtain preferences, any unknown
@@ -357,7 +355,7 @@ Table of Contents
    processing a parsed Dictionary to obtain preferences, any unknown
    parameters MUST be ignored.
 
-7.5.  Processing Algorithm
+6.5.  Processing Algorithm
 
    To process a series of bytes to recover the expressed preferences,
    those bytes are parsed into a Dictionary (Section 4.2.2 of [FIELDS]),
@@ -385,8 +383,8 @@ Table of Contents
 
    Note that this last alternative includes the key being absent from
    the collection, values that are not Tokens, and Token values that are
-   other than "y" or "n".  All of these are not errors, they only result
-   in no preference being inferred.
+   other than y or n.  All of these are not errors, they only result in
+   no preference being inferred.
 
    An important note about this process and format is that, if the same
    key appears multiple times, only the last value is taken.  This means
@@ -400,22 +398,22 @@ Table of Contents
    is case sensitive (more correctly, it operates on bytes, not
    strings).
 
-7.6.  Alternative Formats
+6.6.  Alternative Formats
 
    This format is only a exemplary way to represent preferences.  The
-   model described in Section 4, can be used without this serialization.
+   model described in Section 3, can be used without this serialization.
 
-8.  Security Considerations
+7.  Security Considerations
 
    TODO Security
 
-9.  IANA Considerations
+8.  IANA Considerations
 
    This document has no IANA actions.
 
-10.  References
+9.  References
 
-10.1.  Normative References
+9.1.  Normative References
 
    [ASCII]    Cerf, V., "ASCII format for network interchange", STD 80,
               RFC 20, DOI 10.17487/RFC0020, October 1969,
@@ -439,7 +437,7 @@ Table of Contents
               DOI 10.17487/RFC9309, September 2022,
               <https://www.rfc-editor.org/rfc/rfc9309>.
 
-10.2.  Informative References
+9.2.  Informative References
 
    [EUCD2019] European Union, "Directive (EU) 2019/790 of the European
               Parliament and of the Council of 17 April 2019 on
