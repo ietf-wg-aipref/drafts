@@ -158,6 +158,11 @@ The act of training General Purpose AI models that have the capacity to generate
 
 The use of assets for Generative AI Training is a proper subset of AI Training usage.
 
+## Search Category {#search}
+
+The act of using one or more assets to build a search index
+or as input to a trained AI/ML model that has the purpose of providing search results
+that include direct links to the location from where the asset was obtained.
 
 # Usage
 
