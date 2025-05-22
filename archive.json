@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-05-18T02:05:32.032138+00:00",
+  "timestamp": "2025-05-22T01:59:17.423881+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -960,21 +960,229 @@
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
-      "body": "As discussed, we want to define a recommended format.  This executes on that.  It uses Structured Fields, which will ensure that we have a very easy translation to HTTP fields.  It also fits neatly into the other formats we are considering.\r\n\r\nThere are some interesting implications that are worth highlighting. The text I've added goes into some of that in more detail, but just to list them for visibility:\r\n\r\n* This is a sequence of bytes, not a string.  That has implications for how it is included in some formats, but as RFC 9651 limits its syntax to a pretty small subset of the ASCII range, this is mostly just a theoretical consideration, not a practical one.\r\n\r\n* Parsing errors in RFC 9651 means that you lose everything.  No preference survives.  That means that authoring errors have consequences.  This is an artifact of the format being more of a computer-to-computer language, rather than being tolerant of human error.  I'm not thrilled with this, but recognize the trade-off involved.\r\n\r\n* Repeated keys mean that only the last one is taken.  Again, not thrilled with this, but think that the trade is tolerable.\r\n\r\n* Labels are lowercase only.  A lot of the list traffic has started to use AI=whatever; RFC 9651 doesn't let us shout.  I think that this is fine, but it's another minor ding.\r\n\r\nCloses #8.",
+      "body": "As discussed, we want to define a recommended format.  This executes on that.  It uses Structured Fields, which will ensure that we have a very easy translation to HTTP fields.  It also fits neatly into the other formats we are considering.\r\n\r\nThere are some interesting implications that are worth highlighting. The text I've added goes into some of that in more detail, but just to list them for visibility:\r\n\r\n* This is a sequence of bytes, not a string.  That has implications for how it is included in some formats, but as RFC 9651 limits its syntax to a pretty small subset of the ASCII range, this is mostly just a theoretical consideration, not a practical one.\r\n\r\n* Parsing errors in RFC 9651 means that you lose everything.  No preference survives.  That means that authoring errors have consequences.  This is an artifact of the format being more of a computer-to-computer language, rather than being tolerant of human error.  I'm not thrilled with this, but recognize the trade-off involved.\r\n\r\n* Repeated keys mean that only the last one is taken.  Again, not thrilled with this, but think that the trade is tolerable.\r\n\r\n* Labels are lowercase only.  A lot of the list traffic has started to use \"AI=whatever\"; RFC 9651 doesn't let us shout.  I think that this is fine, but it's another minor ding.\r\n\r\n* Some patterns of use that might be natural are invalid.  For instance, spaces around the \"=\" is invalid, so \"ai = n\" would result in a parsing error and no preference being registered.\r\n\r\nCloses #8.",
       "createdAt": "2025-05-15T02:26:24Z",
-      "updatedAt": "2025-05-15T02:26:24Z",
+      "updatedAt": "2025-05-22T01:35:15Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "8ccacc0c07f17ece73b47e4016173fa1bfa9bc23",
       "headRepository": "ietf-wg-aipref/drafts",
       "headRefName": "format",
-      "headRefOid": "e6d88714998f6480390d7b5425c664f33efd454e",
+      "headRefOid": "f68ec62c2ab3101e84d81d9abc12cf47abecabfe",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
       "mergeCommit": null,
-      "comments": [],
-      "reviews": []
+      "comments": [
+        {
+          "author": "paul2keller",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Thanks @martinthomson for this. This looks good to me (with the caveat, that I am not really in a position to evaluates the merits of the proposal versus other ways of doing this, but it seems fit for purpose). \r\n\r\nOne thing I was wondering after reading this, is how the hierarchy between categories is dealt with. based on what we have tdm=n also means ai=n and genai=n without the latter two having to be explicitly declared. wouldn't that be something that also needs to be addressed by the proposed processing algorithm? ",
+          "createdAt": "2025-05-21T10:12:21Z",
+          "updatedAt": "2025-05-21T10:12:21Z"
+        },
+        {
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "I realized that same thing myself today.  I wasn't sure if I should fix it here or do a follow-up.  I'll take another look tomorrow.",
+          "createdAt": "2025-05-21T10:52:35Z",
+          "updatedAt": "2025-05-21T10:52:35Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWk1-s6qUwba",
+          "commit": {
+            "abbreviatedOid": "e6d8871"
+          },
+          "author": "lrosenthol",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "CHANGES_REQUESTED",
+          "body": "",
+          "createdAt": "2025-05-21T12:40:46Z",
+          "updatedAt": "2025-05-21T12:58:18Z",
+          "comments": [
+            {
+              "originalPosition": 42,
+              "body": "```suggestion\r\n# Exemplary Serialization Format {#format}\r\n```",
+              "createdAt": "2025-05-21T12:40:47Z",
+              "updatedAt": "2025-05-21T12:58:18Z"
+            },
+            {
+              "originalPosition": 45,
+              "body": "By Unicode, you really mean UTF-8, yes?  If so, then say that since Unicode can be encoded in many ways.",
+              "createdAt": "2025-05-21T12:41:23Z",
+              "updatedAt": "2025-05-21T12:58:18Z"
+            },
+            {
+              "originalPosition": 50,
+              "body": "Add something here about the values, `y` and `n`, so that it is clear what they represent.  Or just refer to the later section",
+              "createdAt": "2025-05-21T12:42:35Z",
+              "updatedAt": "2025-05-21T12:58:18Z"
+            },
+            {
+              "originalPosition": 74,
+              "body": "Why do you say Unicode earlier, but now limit to ASCII?  Which is it?",
+              "createdAt": "2025-05-21T12:43:33Z",
+              "updatedAt": "2025-05-21T12:58:18Z"
+            },
+            {
+              "originalPosition": 73,
+              "body": "I'd remove `*`, it has confusing semantics.  \r\n\r\nAlso, `.` is frequently used to separate \"namespaces\" - do we want to have that semantic?  If so, should we make that official?",
+              "createdAt": "2025-05-21T12:44:27Z",
+              "updatedAt": "2025-05-21T12:58:18Z"
+            },
+            {
+              "originalPosition": 79,
+              "body": "at this time - unless we add a third in the vocab.\r\n\r\nAnd if we do, how would that be serialized?",
+              "createdAt": "2025-05-21T12:49:59Z",
+              "updatedAt": "2025-05-21T12:58:18Z"
+            },
+            {
+              "originalPosition": 82,
+              "body": "```suggestion\r\nof `y` and `n`, respectively.\r\n```",
+              "createdAt": "2025-05-21T12:50:51Z",
+              "updatedAt": "2025-05-21T12:58:18Z"
+            },
+            {
+              "originalPosition": 117,
+              "body": "So you think we should support parameters in the syntax but not provide any guidance on their usage?  Why not just disallow them?  Do we have a use case for them?",
+              "createdAt": "2025-05-21T12:53:52Z",
+              "updatedAt": "2025-05-21T12:58:18Z"
+            },
+            {
+              "originalPosition": 121,
+              "body": "Why do we need this here?  Isn't this defined in RFC 9651?  If so, just point there. ",
+              "createdAt": "2025-05-21T12:54:36Z",
+              "updatedAt": "2025-05-21T12:58:18Z"
+            },
+            {
+              "originalPosition": 136,
+              "body": "See - you are ignoring them anyway, so let's disallow from syntax to simplify the parsing rules!",
+              "createdAt": "2025-05-21T12:55:54Z",
+              "updatedAt": "2025-05-21T12:58:18Z"
+            },
+            {
+              "originalPosition": 139,
+              "body": "```suggestion\r\n* If the value is a Token with a value of `y`,\r\n```",
+              "createdAt": "2025-05-21T12:56:11Z",
+              "updatedAt": "2025-05-21T12:58:18Z"
+            },
+            {
+              "originalPosition": 142,
+              "body": "```suggestion\r\n* If the value is a Token with a value of `n`,\r\n```",
+              "createdAt": "2025-05-21T12:56:27Z",
+              "updatedAt": "2025-05-21T12:58:18Z"
+            },
+            {
+              "originalPosition": 166,
+              "body": "If this format is based on bytes and not strings - there is no such thing as case sensitivity, as that only applies to strings with a text encoding...which this does not have!",
+              "createdAt": "2025-05-21T12:57:54Z",
+              "updatedAt": "2025-05-21T12:58:18Z"
+            },
+            {
+              "originalPosition": 171,
+              "body": "```suggestion\r\nThis format is only a exemplary way to represent preferences.\r\n```",
+              "createdAt": "2025-05-21T12:58:11Z",
+              "updatedAt": "2025-05-21T12:58:18Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s6qcKGs",
+          "commit": {
+            "abbreviatedOid": "02f7786"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "Thanks for the review @lrosenthol.  This is very helpful.\r\n\r\nThere are a few things here that I think are worth raising on-list.  I've got a few things to tweak on top of the suggestions as well.",
+          "createdAt": "2025-05-22T01:21:15Z",
+          "updatedAt": "2025-05-22T01:34:10Z",
+          "comments": [
+            {
+              "originalPosition": 45,
+              "body": "Hm, Unicode string has a definition that doesn't match what I wanted: https://www.unicode.org/versions/Unicode16.0.0/core-spec/chapter-3/#G32765\r\n\r\nWhat I'm looking for is probably Unicode text: a term without apparent definition, though Unicode uses it often.  Or maybe \"coded character sequence\": https://www.unicode.org/versions/Unicode16.0.0/core-spec/chapter-3/#G45138  (which is spectacularly opaque, so I might just use \"Unicode text\").\r\n\r\nWDYT?",
+              "createdAt": "2025-05-22T01:21:15Z",
+              "updatedAt": "2025-05-22T01:34:10Z"
+            },
+            {
+              "originalPosition": 77,
+              "body": "```suggestion\r\n## Preference Labels {#y-or-n}\r\n```",
+              "createdAt": "2025-05-22T01:22:51Z",
+              "updatedAt": "2025-05-22T01:34:10Z"
+            },
+            {
+              "originalPosition": 49,
+              "body": "```suggestion\r\nand the dictionary values correspond to explicit preferences,\r\nwhich can be either \"y\" or \"n\"; see {{y-or-n}}.\r\n```",
+              "createdAt": "2025-05-22T01:23:07Z",
+              "updatedAt": "2025-05-22T01:34:10Z"
+            },
+            {
+              "originalPosition": 74,
+              "body": "Given the range from which the codepoints are drawn, does it matter?",
+              "createdAt": "2025-05-22T01:24:28Z",
+              "updatedAt": "2025-05-22T01:34:10Z"
+            },
+            {
+              "originalPosition": 73,
+              "body": "This is a description of the restrictions in the RFC 9651 format, which I would suggest we not mess with.  It creates the possibility of having things with `*` in it, but that's not something I would endorse.  Like you, I think that `*` is confusing.  As is the mixing of `_` and `-`.",
+              "createdAt": "2025-05-22T01:25:32Z",
+              "updatedAt": "2025-05-22T01:34:10Z"
+            },
+            {
+              "originalPosition": 79,
+              "body": "We'd need to update this document, but we could pick something that fits the grammar (or possibly not), as needs dictate.  If we wanted to say that usage is conditional, then we might pick `c` or even `conditional`.  There are many possibilities.  However, this comes with costs that we'd have to weigh.  It's possible that a later extension to this set is too difficult, due to the impact on existing usage.",
+              "createdAt": "2025-05-22T01:27:34Z",
+              "updatedAt": "2025-05-22T01:34:10Z"
+            },
+            {
+              "originalPosition": 117,
+              "body": "Firstly, this is just how we allow for some possibility of extensibility.\r\n\r\nSecondly, this is the best practice for using the RFC 9651 format.\r\n\r\nHowever, there are more concrete reasons as well.  In speaking with the people who care about search indexing, they indicated that this would be useful for them.  Potentially.\r\n\r\nImagine a case where you had `search=y`.  You might use parameters to communicate things that search engines respect, like how large a snippet can be taken of content: `search=y;max-snippet=100`  (In whatever unit we agree.)  I think that the general view is that this might be a good way to make the HTTP header version of this fit better with existing robots.txt extensions.\r\n\r\nI'm not 100% on that model.  There are a few wrinkles that would need to be worked out.  But it seems like it is easy enough to accommodate at least the possibility, especially given the first two points above.",
+              "createdAt": "2025-05-22T01:31:26Z",
+              "updatedAt": "2025-05-22T01:34:10Z"
+            },
+            {
+              "originalPosition": 121,
+              "body": "The processing in RFC 9651 gets you a dictionary, not our abstract model.",
+              "createdAt": "2025-05-22T01:31:54Z",
+              "updatedAt": "2025-05-22T01:34:10Z"
+            },
+            {
+              "originalPosition": 136,
+              "body": "See above.",
+              "createdAt": "2025-05-22T01:32:02Z",
+              "updatedAt": "2025-05-22T01:34:10Z"
+            },
+            {
+              "originalPosition": 166,
+              "body": "It's a convenient fiction.\r\n\r\n```suggestion\r\nas this format is case sensitive\r\n(more correctly, it operates on bytes, not strings).\r\n```",
+              "createdAt": "2025-05-22T01:32:50Z",
+              "updatedAt": "2025-05-22T01:34:10Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s6qcOdM",
+          "commit": {
+            "abbreviatedOid": "02f7786"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-05-22T01:34:37Z",
+          "updatedAt": "2025-05-22T01:34:37Z",
+          "comments": [
+            {
+              "originalPosition": 45,
+              "body": "```suggestion\r\nThe format describes how the abstract model could be turned into Unicode text or sequence of bytes.\r\n```",
+              "createdAt": "2025-05-22T01:34:37Z",
+              "updatedAt": "2025-05-22T01:34:37Z"
+            }
+          ]
+        }
+      ]
     },
     {
       "number": 27,
@@ -1023,24 +1231,26 @@
       "id": "PR_kwDOOWk1-s6WQQSd",
       "title": "Switch to using aasvg for the diagram",
       "url": "https://github.com/ietf-wg-aipref/drafts/pull/28",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "martinthomson",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "I've rearranged the diagram slightly to ensure that the categories are shown in the order we present them later.  I've also removed the \"other\" part, which didn't work that well otherwise.\r\n\r\nThis will get interesting when more items are added, but I have ideas on that front.\r\n\r\nSorry Paul, I destroyed your lovely hand-crafted SVG here.  I hope that's not an unacceptable loss.\r\n\r\n[Preview the SVG here](https://ietf-wg-aipref.github.io/drafts/ascii-art/draft-ietf-aipref-vocab.html#f-categories)",
       "createdAt": "2025-05-15T04:23:25Z",
-      "updatedAt": "2025-05-15T04:23:25Z",
+      "updatedAt": "2025-05-21T10:50:23Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "8ccacc0c07f17ece73b47e4016173fa1bfa9bc23",
       "headRepository": "ietf-wg-aipref/drafts",
       "headRefName": "ascii-art",
       "headRefOid": "058e860a1fa585cfcffaa36741bb142d3e40eab8",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2025-05-21T10:50:21Z",
+      "mergedAt": "2025-05-21T10:50:21Z",
+      "mergedBy": "paul2keller",
+      "mergeCommit": {
+        "oid": "f9eeb5ad3d80661c46c7324a68666ed2ff176ecf"
+      },
       "comments": [],
       "reviews": []
     },
@@ -1127,6 +1337,219 @@
           "comments": []
         }
       ]
+    },
+    {
+      "number": 31,
+      "id": "PR_kwDOOWk1-s6W-W_t",
+      "title": "Shorter intro/abstract",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/31",
+      "state": "OPEN",
+      "author": "martinthomson",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "This takes some of the feedback from the list and makes a few changes.\r\n\r\nThe main changes are to cut content...\r\n\r\n...from the abstract, which is either repeated more clearly in the intro\r\nor in the first sentences.\r\n\r\n...from the introduction, with a few small rewordings.\r\n\r\nI've also changed sentence structure of some parts, to break up longer\r\nsentences and make them easier to digest, I hope.",
+      "createdAt": "2025-05-21T01:03:10Z",
+      "updatedAt": "2025-05-21T16:51:36Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "22128704272e00eba847c3bab293629d72c888a9",
+      "headRepository": "ietf-wg-aipref/drafts",
+      "headRefName": "intro-tweaks",
+      "headRefOid": "43bfb1b86ee2902a3931a61b08e7094fa791163f",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWk1-s6qOk4o",
+          "commit": {
+            "abbreviatedOid": "43bfb1b"
+          },
+          "author": "mprorock",
+          "authorAssociation": "NONE",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-05-21T01:11:59Z",
+          "updatedAt": "2025-05-21T01:11:59Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWk1-s6qTjxC",
+          "commit": {
+            "abbreviatedOid": "43bfb1b"
+          },
+          "author": "paul2keller",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "CHANGES_REQUESTED",
+          "body": "I agree that most edits improve the text, but I think the edits to the last para do not work. I have a number of issues with the new language, but the most important is that where the old language implied that this is intended to work in both contexts the new language says that it is \"**intended to work** in contexts where such preferences result in legal obligations\" and then continues that \"The vocabulary **can be used** in contexts where there is no specific legal protections\". To me this somehow implies a hierarchy and I do not think that is correct.\r\n\r\nfor now I would suggest reverting to the previous language here (I also do not think that we need to purge the document of all mentions of Text and Data Mining. This is an established legal concept in a number of different jurisdictions that applies to the types of uses for which we develop this vocabulary and we cannot make it go away by simply not mentioning TDM.",
+          "createdAt": "2025-05-21T10:59:07Z",
+          "updatedAt": "2025-05-21T10:59:39Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWk1-s6qYTTj",
+          "commit": {
+            "abbreviatedOid": "43bfb1b"
+          },
+          "author": "TimidRobot",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-05-21T16:51:36Z",
+          "updatedAt": "2025-05-21T16:51:36Z",
+          "comments": [
+            {
+              "originalPosition": 52,
+              "body": "I find this paragraph a little difficult to parse. It _feels_ like the first sentence contradicts the third.\r\n\r\nMaybe something more like:\r\n\r\nThe vocabulary is intended to work both in contexts where such preferences result in legal obligations and in contexts where there are no specific legal protections. In contexts with resulting legal obligations, this might include rights reservations made by rightholders in jurisdictions with conditional exceptions on copyright. In contexts where there are no specific legal protections, preferences can be made without prejudice to applicable laws and the applicability of exceptions and limitations to copyright.",
+              "createdAt": "2025-05-21T16:51:36Z",
+              "updatedAt": "2025-05-21T16:51:37Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 32,
+      "id": "PR_kwDOOWk1-s6XCuHT",
+      "title": "Removed reference to origin of TDM definition",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/32",
+      "state": "OPEN",
+      "author": "paul2keller",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [
+        "vocabulary"
+      ],
+      "body": "This pull request proposes to leave the definition of TDM unchanged, but removes the explicit reference that this is based on EU law. This is part based on a review of existing legal definitions of TDM in other jurisdictions that have TDM exceptions in ether copyright law: \r\n\r\nThe UK does not have a proper definition in the law itself, but the UK government provides on as part of its Guidance on Exceptions to copyright which is very similar to the EU definition: \r\n\r\n\"Text and data mining is the use of automated analytical techniques to analyse text and data for patterns, trends and other useful information.\"\r\n\r\nThe other two jurisdictions with TDM exceptions that I am aware of (Singapore and Japan) do not use the term TDM. Instead they anchor the exceptions on \u201ccomputational data analysis\u201d (SG) or \u201cdata analysis (JP). \r\n\r\nGiven this it seems sensible to keep the definition of TDM as unchanged.",
+      "createdAt": "2025-05-21T11:15:34Z",
+      "updatedAt": "2025-05-22T01:04:04Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "f9eeb5ad3d80661c46c7324a68666ed2ff176ecf",
+      "headRepository": "ietf-wg-aipref/drafts",
+      "headRefName": "define-TDM",
+      "headRefOid": "aa0cb86a6b8a0ee3e3fe6f5ca738eb31cc49d12c",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [
+        {
+          "author": "paul2keller",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Background and links to the relevant passages the copyright legislation of the above mentioned jurisdictions: \r\n\r\n### \ud83c\uddea\ud83c\uddfa\u00a0European Union:\r\n\r\nIn the EU the definition is laid down [in Article 2(2) of the Copyright in the Digital Single Market Directive](https://eur-lex.europa.eu/eli/dir/2019/790/oj/eng#art_2):\r\n\r\n> \u2018text and data mining\u2019 means any automated analytical technique aimed at analysing text and data in digital form in order to generate information which includes but is not limited to patterns, trends and correlations.\r\n> \r\n\r\n### \ud83c\uddec\ud83c\udde7\u00a0United Kingdom\r\n\r\nThe UK does not have a proper defintion in the law, but the UK government provides on as part of its [Guidance on Exceptions to copyright](https://www.gov.uk/guidance/exceptions-to-copyright):\r\n\r\n> Text and data mining is the use of automated analytical techniques to analyse text and data for patterns, trends and other useful information.\r\n> \r\n\r\nThe [actual TDM exception in UK law](https://www.legislation.gov.uk/ukpga/1988/48/section/29A) specifies that it is not an infringement of copyright to \"carry out a computational analysis of anything recorded in the work\u201d\r\n\r\n### \ud83c\uddf8\ud83c\uddec Singapore (computational data analysis)\r\n\r\nSingapore does not have a definition of TDM instead it defines the equivalent term \u201cComputational data analysis\u201d [in section 244 of its copyright code](https://sso.agc.gov.sg/Act/P15-P28-):\r\n\r\n> \u201ccomputational data analysis\u201d, in relation to a work or a recording of a protected performance, includes \r\n(a)\tusing a computer program to identify, extract and analyse information or data from the work or recording; and\r\n(b)\tusing the work or recording as an example of a type of information or data to improve the functioning of a computer program in relation to that type of information or data.\r\n> \r\n\r\n### \ud83c\uddef\ud83c\uddf5\u00a0Japan (data analysis)\r\n\r\nJapan does not have an explicit definition. [Here is the relevant text in Article 30-4](https://www.cric.or.jp/english/clj/cl2.html) is referred to as the Japanese TDM exception (emphasis mine):\r\n\r\n> It is permissible to exploit a work, in any way and to the extent considered necessary, in any of the following cases, or in any other case in which it is not a person's purpose to personally enjoy or cause another person to enjoy the thoughts or sentiments expressed in that work; provided, however, that this does not apply if the action would unreasonably prejudice the interests of the copyright owner in light of the nature or purpose of the work or the circumstances of its exploitation:\r\n> \r\n> \r\n> (i)\u3000if it is done for use in testing to develop or put into practical use technology that is connected with the recording of sounds or visuals of a work or other such exploitation;\r\n> \r\n> (ii)\u3000**if it is done for use in data analysis (meaning the extraction, comparison, classification, or other statistical analysis of the constituent language, sounds, images, or other elemental data from a large number of works or a large volume of other such data**; the same applies in Article 47-5, paragraph (1), item (ii));",
+          "createdAt": "2025-05-21T11:17:53Z",
+          "updatedAt": "2025-05-21T11:19:19Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWk1-s6qcFFn",
+          "commit": {
+            "abbreviatedOid": "aa0cb86"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "This looks fine, though I think you also need to cut the informative reference itself.  That's on lines 40-45, which I can't comment on.",
+          "createdAt": "2025-05-22T01:03:11Z",
+          "updatedAt": "2025-05-22T01:04:04Z",
+          "comments": [
+            {
+              "originalPosition": 5,
+              "body": "```suggestion\r\nThe use of assets for TDM is encompasses all the subsequent categories.\r\n```",
+              "createdAt": "2025-05-22T01:03:11Z",
+              "updatedAt": "2025-05-22T01:04:04Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 33,
+      "id": "PR_kwDOOWk1-s6XC44v",
+      "title": "Add inference category",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/33",
+      "state": "OPEN",
+      "author": "paul2keller",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [
+        "vocabulary"
+      ],
+      "body": "This is a first attempt at a definition of the inference category in line with #2. \r\n\r\nThe proposed wording is taken from the the C2PA's do not train assertion https://opensource.contentauthenticity.org/docs/manifest/assertions-actions#do-not-train-assertion and is based on their definition of `c2pa.ai_inference`. \r\n\r\nI would consider this to be a staring point for discussion and I do not have a strong attachment to the proposed language.",
+      "createdAt": "2025-05-21T11:33:53Z",
+      "updatedAt": "2025-05-22T01:08:06Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "f9eeb5ad3d80661c46c7324a68666ed2ff176ecf",
+      "headRepository": "ietf-wg-aipref/drafts",
+      "headRefName": "inference",
+      "headRefOid": "19d6dc61dd9bac8ee7182ea1165ce4e3f55ec837",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWk1-s6qcGT4",
+          "commit": {
+            "abbreviatedOid": "19d6dc6"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-05-22T01:07:16Z",
+          "updatedAt": "2025-05-22T01:08:06Z",
+          "comments": [
+            {
+              "originalPosition": 6,
+              "body": "I think that the \"inferring a result\" is a bit of a strange turn of phrase.\r\n\r\n```suggestion\r\nThe act of using one or more assets as input to a trained AI/ML model\r\nas part of the operation of that model\r\n(as opposed to the training of the model).\r\n```",
+              "createdAt": "2025-05-22T01:07:16Z",
+              "updatedAt": "2025-05-22T01:08:06Z"
+            },
+            {
+              "originalPosition": 4,
+              "body": "```suggestion\r\n## AI Inference Category {#inference}\r\n```\r\n\r\nI think that we need to include AI in the title.  The anchor is just for my benefit later, for #26.",
+              "createdAt": "2025-05-22T01:07:52Z",
+              "updatedAt": "2025-05-22T01:08:06Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 34,
+      "id": "PR_kwDOOWk1-s6XC_8w",
+      "title": "Add Search Category",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/34",
+      "state": "OPEN",
+      "author": "paul2keller",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [
+        "vocabulary"
+      ],
+      "body": "Very preliminary attempt of defining a search category in line with #1, that combines the use for building a search engine and the use of assets as input for AI search engines. \r\n\r\nI have relatively low confidence in this approach, so this is really meant as a starting point for a discussion and nothing more",
+      "createdAt": "2025-05-21T11:45:53Z",
+      "updatedAt": "2025-05-21T11:46:36Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "f9eeb5ad3d80661c46c7324a68666ed2ff176ecf",
+      "headRepository": "ietf-wg-aipref/drafts",
+      "headRefName": "search",
+      "headRefOid": "612db1757d5ac5a14964cba7ac05723057cb12c4",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
     }
   ]
 }
