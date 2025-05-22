@@ -5,8 +5,8 @@
 AI Preferences                                                 P. Keller
 Internet-Draft                                               Open Future
 Intended status: Standards Track                         M. Thomson, Ed.
-Expires: 16 November 2025                                        Mozilla
-                                                             15 May 2025
+Expires: 23 November 2025                                        Mozilla
+                                                             22 May 2025
 
 
                    Proposal for an Opt-Out Vocabulary
@@ -55,7 +55,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 16 November 2025.
+   This Internet-Draft will expire on 23 November 2025.
 
 Copyright Notice
 
@@ -84,7 +84,7 @@ Table of Contents
    6.  Usage
      6.1.  More Specific Instructions
      6.2.  Vocabulary Extensions
-   7.  Serialization Format
+   7.  Exemplary Serialization Format
      7.1.  Usage Category Labels
      7.2.  Preference Labels
      7.3.  Text Encoding
@@ -278,7 +278,7 @@ Table of Contents
    categories that include existing categories defined in the vocabulary
    or otherwise include additional hierarchical relationships.
 
-7.  Serialization Format
+7.  Exemplary Serialization Format
 
    This section defines an exemplary serialization format for
    preferences.  The format describes how the abstract model could be
@@ -320,8 +320,7 @@ Table of Contents
 
    The abstract model used has two options for preferences associated
    with each category: allow and disallow.  These are mapped to single
-   byte Tokens (Section 3.3.4 of [FIELDS]) of "y" and "n", respectively
-   (without the quotes).
+   byte Tokens (Section 3.3.4 of [FIELDS]) of y and n, respectively.
 
 7.3.  Text Encoding
 
@@ -375,13 +374,11 @@ Table of Contents
    collection, disregarding any parameters.  A preference is assigned as
    follows:
 
-   *  If the value is a Token with a value of "y" (not including
-      quotes), the associated preference is to allow that category of
-      use.
+   *  If the value is a Token with a value of y, the associated
+      preference is to allow that category of use.
 
-   *  If the value is a Token with a value of "n" (not including
-      quotes), the associated preference is to disallow that category of
-      use.
+   *  If the value is a Token with a value of n, the associated
+      preference is to disallow that category of use.
 
    *  Otherwise, a preference is not expressed for that category of use.
 
@@ -403,7 +400,7 @@ Table of Contents
 
 7.6.  Alternative Formats
 
-   This format is only a recommended way to represent preferences.  The
+   This format is only a exemplary way to represent preferences.  The
    model described in Section 4, can be used without this serialization.
 
 8.  Security Considerations
