@@ -160,7 +160,9 @@ The use of assets for Generative AI Training is a proper subset of AI Training u
 
 ## Search Category {#search}
 
-The act of using one or more assets to build a serach index or as input to a trained AI/ML model that has has the has the purpose of provining serach results that include direct links to the location from where the asset was optained.
+The act of using one or more assets to build a search index
+or as input to a trained AI/ML model that has the purpose of providing search results
+that include direct links to the location from where the asset was obtained.
 
 # Usage
 
