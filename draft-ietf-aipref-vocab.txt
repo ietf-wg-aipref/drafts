@@ -211,8 +211,7 @@ Table of Contents
    in order to generate information which includes but is not limited to
    patterns, trends and correlations.
 
-   The use of assets for TDM is encompasses all the subsequent
-   categories.
+   The use of assets for TDM encompasses all the subsequent categories.
 
 4.2.  AI Training Category
 
