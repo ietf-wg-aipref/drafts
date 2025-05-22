@@ -400,7 +400,7 @@ Table of Contents
 
 6.6.  Alternative Formats
 
-   This format is only a exemplary way to represent preferences.  The
+   This format is only an exemplary way to represent preferences.  The
    model described in Section 3, can be used without this serialization.
 
 7.  Security Considerations
