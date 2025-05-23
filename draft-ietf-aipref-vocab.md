@@ -204,3 +204,4 @@ The following individuals have been involved in the drafting of the proposal:
 * Sebastian Posth, Liccium
 * Leonard Rosenthol, Adobe
 * Laurent Le Meur, EDRLab
+* Timid Robot Zehta, Creative Commons
