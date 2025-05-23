@@ -75,9 +75,8 @@ That is, preferences can be expressed to invoke specific protections,
 or they can be made without any presumption of specific legal consequences.
 Potential legal obligations include rights reservations made by rightholders
 in jurisdictions with conditional exceptions on copyright protections.
-Expressing preferences is not intended to affect other rights over content,
-such as copyright or privacy protections,
-except as specifically mandated by applicable laws.
+Expressing preferences is without prejudice to applicable laws,
+including the applicability of exceptions and limitations to copyright.
 
 
 # Conventions and Definitions
