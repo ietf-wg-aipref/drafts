@@ -5,8 +5,8 @@
 AI Preferences                                                 P. Keller
 Internet-Draft                                               Open Future
 Intended status: Standards Track                         M. Thomson, Ed.
-Expires: 23 November 2025                                        Mozilla
-                                                             22 May 2025
+Expires: 24 November 2025                                        Mozilla
+                                                             23 May 2025
 
 
             A Vocabulary For Expressing AI Usage Preferences
@@ -55,7 +55,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 23 November 2025.
+   This Internet-Draft will expire on 24 November 2025.
 
 Copyright Notice
 
@@ -125,9 +125,9 @@ Table of Contents
    presumption of specific legal consequences.  Potential legal
    obligations include rights reservations made by rightholders in
    jurisdictions with conditional exceptions on copyright protections.
-   Expressing preferences is not intended to affect other rights over
-   content, such as copyright or privacy protections, except as
-   specifically mandated by applicable laws.
+   Expressing preferences is without prejudice to applicable laws,
+   including the applicability of exceptions and limitations to
+   copyright.
 
 2.  Conventions and Definitions
 
