@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-05-22T01:59:17.423881+00:00",
+  "timestamp": "2025-05-25T02:08:14.323711+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -962,13 +962,13 @@
       "labels": [],
       "body": "As discussed, we want to define a recommended format.  This executes on that.  It uses Structured Fields, which will ensure that we have a very easy translation to HTTP fields.  It also fits neatly into the other formats we are considering.\r\n\r\nThere are some interesting implications that are worth highlighting. The text I've added goes into some of that in more detail, but just to list them for visibility:\r\n\r\n* This is a sequence of bytes, not a string.  That has implications for how it is included in some formats, but as RFC 9651 limits its syntax to a pretty small subset of the ASCII range, this is mostly just a theoretical consideration, not a practical one.\r\n\r\n* Parsing errors in RFC 9651 means that you lose everything.  No preference survives.  That means that authoring errors have consequences.  This is an artifact of the format being more of a computer-to-computer language, rather than being tolerant of human error.  I'm not thrilled with this, but recognize the trade-off involved.\r\n\r\n* Repeated keys mean that only the last one is taken.  Again, not thrilled with this, but think that the trade is tolerable.\r\n\r\n* Labels are lowercase only.  A lot of the list traffic has started to use \"AI=whatever\"; RFC 9651 doesn't let us shout.  I think that this is fine, but it's another minor ding.\r\n\r\n* Some patterns of use that might be natural are invalid.  For instance, spaces around the \"=\" is invalid, so \"ai = n\" would result in a parsing error and no preference being registered.\r\n\r\nCloses #8.",
       "createdAt": "2025-05-15T02:26:24Z",
-      "updatedAt": "2025-05-22T01:35:15Z",
+      "updatedAt": "2025-05-22T05:57:05Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
-      "baseRefOid": "8ccacc0c07f17ece73b47e4016173fa1bfa9bc23",
+      "baseRefOid": "f9eeb5ad3d80661c46c7324a68666ed2ff176ecf",
       "headRepository": "ietf-wg-aipref/drafts",
       "headRefName": "format",
-      "headRefOid": "f68ec62c2ab3101e84d81d9abc12cf47abecabfe",
+      "headRefOid": "50a22f28fe1f089ec52009460f21ad2f3b6346af",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
@@ -1181,6 +1181,66 @@
               "updatedAt": "2025-05-22T01:34:37Z"
             }
           ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s6qdOnB",
+          "commit": {
+            "abbreviatedOid": "e6d8871"
+          },
+          "author": "lrosenthol",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-05-22T05:08:37Z",
+          "updatedAt": "2025-05-22T05:08:38Z",
+          "comments": [
+            {
+              "originalPosition": 74,
+              "body": "Technically no, but it's reads strange to me - which is why I added the comment.",
+              "createdAt": "2025-05-22T05:08:38Z",
+              "updatedAt": "2025-05-22T05:08:38Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s6qdO4S",
+          "commit": {
+            "abbreviatedOid": "e6d8871"
+          },
+          "author": "lrosenthol",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-05-22T05:09:22Z",
+          "updatedAt": "2025-05-22T05:09:23Z",
+          "comments": [
+            {
+              "originalPosition": 73,
+              "body": "I'll re-read 9651 and see if there are any issues with subsetting.",
+              "createdAt": "2025-05-22T05:09:22Z",
+              "updatedAt": "2025-05-22T05:09:23Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s6qdPwq",
+          "commit": {
+            "abbreviatedOid": "66e1365"
+          },
+          "author": "lrosenthol",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-05-22T05:11:29Z",
+          "updatedAt": "2025-05-22T05:11:29Z",
+          "comments": [
+            {
+              "originalPosition": 68,
+              "body": "```suggestion\r\nThis format is only an exemplary way to represent preferences.\r\n```",
+              "createdAt": "2025-05-22T05:11:29Z",
+              "updatedAt": "2025-05-22T05:11:29Z"
+            }
+          ]
         }
       ]
     },
@@ -1350,18 +1410,26 @@
       "labels": [],
       "body": "This takes some of the feedback from the list and makes a few changes.\r\n\r\nThe main changes are to cut content...\r\n\r\n...from the abstract, which is either repeated more clearly in the intro\r\nor in the first sentences.\r\n\r\n...from the introduction, with a few small rewordings.\r\n\r\nI've also changed sentence structure of some parts, to break up longer\r\nsentences and make them easier to digest, I hope.",
       "createdAt": "2025-05-21T01:03:10Z",
-      "updatedAt": "2025-05-21T16:51:36Z",
+      "updatedAt": "2025-05-22T04:29:48Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "22128704272e00eba847c3bab293629d72c888a9",
       "headRepository": "ietf-wg-aipref/drafts",
       "headRefName": "intro-tweaks",
-      "headRefOid": "43bfb1b86ee2902a3931a61b08e7094fa791163f",
+      "headRefOid": "80141226af3ff78a7893ceab28c805f2c27ce8f9",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
       "mergeCommit": null,
-      "comments": [],
+      "comments": [
+        {
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "That's fair.  I'll open a separate pull request for that paragraph.  @TimidRobot struggled with my alternative - also fair - so it's clearly not there yet.  I do think that the last paragraph is the hardest to read, with very long sentences, but we can work on that separately.",
+          "createdAt": "2025-05-22T04:28:25Z",
+          "updatedAt": "2025-05-22T04:28:25Z"
+        }
+      ],
       "reviews": [
         {
           "id": "PRR_kwDOOWk1-s6qOk4o",
@@ -1416,7 +1484,7 @@
       "id": "PR_kwDOOWk1-s6XCuHT",
       "title": "Removed reference to origin of TDM definition",
       "url": "https://github.com/ietf-wg-aipref/drafts/pull/32",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "paul2keller",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
@@ -1425,17 +1493,19 @@
       ],
       "body": "This pull request proposes to leave the definition of TDM unchanged, but removes the explicit reference that this is based on EU law. This is part based on a review of existing legal definitions of TDM in other jurisdictions that have TDM exceptions in ether copyright law: \r\n\r\nThe UK does not have a proper definition in the law itself, but the UK government provides on as part of its Guidance on Exceptions to copyright which is very similar to the EU definition: \r\n\r\n\"Text and data mining is the use of automated analytical techniques to analyse text and data for patterns, trends and other useful information.\"\r\n\r\nThe other two jurisdictions with TDM exceptions that I am aware of (Singapore and Japan) do not use the term TDM. Instead they anchor the exceptions on \u201ccomputational data analysis\u201d (SG) or \u201cdata analysis (JP). \r\n\r\nGiven this it seems sensible to keep the definition of TDM as unchanged.",
       "createdAt": "2025-05-21T11:15:34Z",
-      "updatedAt": "2025-05-22T01:04:04Z",
+      "updatedAt": "2025-05-22T10:00:22Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "f9eeb5ad3d80661c46c7324a68666ed2ff176ecf",
       "headRepository": "ietf-wg-aipref/drafts",
       "headRefName": "define-TDM",
-      "headRefOid": "aa0cb86a6b8a0ee3e3fe6f5ca738eb31cc49d12c",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "headRefOid": "1c979a196bdcae955f137e73cf1470fa753372d3",
+      "closedAt": "2025-05-22T10:00:20Z",
+      "mergedAt": "2025-05-22T10:00:20Z",
+      "mergedBy": "martinthomson",
+      "mergeCommit": {
+        "oid": "9728c927dedfee6993e0bb67bb0a8e25289a43a0"
+      },
       "comments": [
         {
           "author": "paul2keller",
@@ -1443,6 +1513,13 @@
           "body": "Background and links to the relevant passages the copyright legislation of the above mentioned jurisdictions: \r\n\r\n### \ud83c\uddea\ud83c\uddfa\u00a0European Union:\r\n\r\nIn the EU the definition is laid down [in Article 2(2) of the Copyright in the Digital Single Market Directive](https://eur-lex.europa.eu/eli/dir/2019/790/oj/eng#art_2):\r\n\r\n> \u2018text and data mining\u2019 means any automated analytical technique aimed at analysing text and data in digital form in order to generate information which includes but is not limited to patterns, trends and correlations.\r\n> \r\n\r\n### \ud83c\uddec\ud83c\udde7\u00a0United Kingdom\r\n\r\nThe UK does not have a proper defintion in the law, but the UK government provides on as part of its [Guidance on Exceptions to copyright](https://www.gov.uk/guidance/exceptions-to-copyright):\r\n\r\n> Text and data mining is the use of automated analytical techniques to analyse text and data for patterns, trends and other useful information.\r\n> \r\n\r\nThe [actual TDM exception in UK law](https://www.legislation.gov.uk/ukpga/1988/48/section/29A) specifies that it is not an infringement of copyright to \"carry out a computational analysis of anything recorded in the work\u201d\r\n\r\n### \ud83c\uddf8\ud83c\uddec Singapore (computational data analysis)\r\n\r\nSingapore does not have a definition of TDM instead it defines the equivalent term \u201cComputational data analysis\u201d [in section 244 of its copyright code](https://sso.agc.gov.sg/Act/P15-P28-):\r\n\r\n> \u201ccomputational data analysis\u201d, in relation to a work or a recording of a protected performance, includes \r\n(a)\tusing a computer program to identify, extract and analyse information or data from the work or recording; and\r\n(b)\tusing the work or recording as an example of a type of information or data to improve the functioning of a computer program in relation to that type of information or data.\r\n> \r\n\r\n### \ud83c\uddef\ud83c\uddf5\u00a0Japan (data analysis)\r\n\r\nJapan does not have an explicit definition. [Here is the relevant text in Article 30-4](https://www.cric.or.jp/english/clj/cl2.html) is referred to as the Japanese TDM exception (emphasis mine):\r\n\r\n> It is permissible to exploit a work, in any way and to the extent considered necessary, in any of the following cases, or in any other case in which it is not a person's purpose to personally enjoy or cause another person to enjoy the thoughts or sentiments expressed in that work; provided, however, that this does not apply if the action would unreasonably prejudice the interests of the copyright owner in light of the nature or purpose of the work or the circumstances of its exploitation:\r\n> \r\n> \r\n> (i)\u3000if it is done for use in testing to develop or put into practical use technology that is connected with the recording of sounds or visuals of a work or other such exploitation;\r\n> \r\n> (ii)\u3000**if it is done for use in data analysis (meaning the extraction, comparison, classification, or other statistical analysis of the constituent language, sounds, images, or other elemental data from a large number of works or a large volume of other such data**; the same applies in Article 47-5, paragraph (1), item (ii));",
           "createdAt": "2025-05-21T11:17:53Z",
           "updatedAt": "2025-05-21T11:19:19Z"
+        },
+        {
+          "author": "paul2keller",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Re cutting the informative reference (I see this as a todo one we have resolved the substantive question)",
+          "createdAt": "2025-05-22T08:11:20Z",
+          "updatedAt": "2025-05-22T08:11:20Z"
         }
       ],
       "reviews": [
@@ -1465,13 +1542,26 @@
               "updatedAt": "2025-05-22T01:04:04Z"
             }
           ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s6qgS9L",
+          "commit": {
+            "abbreviatedOid": "1c979a1"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "Fair enough, let's make progress then.",
+          "createdAt": "2025-05-22T10:00:15Z",
+          "updatedAt": "2025-05-22T10:00:15Z",
+          "comments": []
         }
       ]
     },
     {
       "number": 33,
       "id": "PR_kwDOOWk1-s6XC44v",
-      "title": "Add inference category",
+      "title": "Add Inference category",
       "url": "https://github.com/ietf-wg-aipref/drafts/pull/33",
       "state": "OPEN",
       "author": "paul2keller",
@@ -1482,13 +1572,13 @@
       ],
       "body": "This is a first attempt at a definition of the inference category in line with #2. \r\n\r\nThe proposed wording is taken from the the C2PA's do not train assertion https://opensource.contentauthenticity.org/docs/manifest/assertions-actions#do-not-train-assertion and is based on their definition of `c2pa.ai_inference`. \r\n\r\nI would consider this to be a staring point for discussion and I do not have a strong attachment to the proposed language.",
       "createdAt": "2025-05-21T11:33:53Z",
-      "updatedAt": "2025-05-22T01:08:06Z",
+      "updatedAt": "2025-05-22T09:59:38Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "f9eeb5ad3d80661c46c7324a68666ed2ff176ecf",
       "headRepository": "ietf-wg-aipref/drafts",
       "headRefName": "inference",
-      "headRefOid": "19d6dc61dd9bac8ee7182ea1165ce4e3f55ec837",
+      "headRefOid": "a0af902f4c515dbbc3ebb44cb56ee9a413214500",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
@@ -1520,6 +1610,46 @@
               "updatedAt": "2025-05-22T01:08:06Z"
             }
           ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s6qe43H",
+          "commit": {
+            "abbreviatedOid": "19d6dc6"
+          },
+          "author": "paul2keller",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-05-22T08:09:11Z",
+          "updatedAt": "2025-05-22T08:09:12Z",
+          "comments": [
+            {
+              "originalPosition": 6,
+              "body": "This makes sense to me (in terms of substantive change) I just wanted to start any discussion from some existing definition, so i wonder if it makes sense to include your edit now or after we have shared this with the list (here I would apply the same timing as in the Search case, wait until some of the other discussions have died down)",
+              "createdAt": "2025-05-22T08:09:11Z",
+              "updatedAt": "2025-05-22T08:09:12Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s6qgSK9",
+          "commit": {
+            "abbreviatedOid": "19d6dc6"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-05-22T09:59:38Z",
+          "updatedAt": "2025-05-22T09:59:38Z",
+          "comments": [
+            {
+              "originalPosition": 6,
+              "body": "I trust your judgment on this one.  Put whatever you think is the best alternative forward.",
+              "createdAt": "2025-05-22T09:59:38Z",
+              "updatedAt": "2025-05-22T09:59:38Z"
+            }
+          ]
         }
       ]
     },
@@ -1537,13 +1667,126 @@
       ],
       "body": "Very preliminary attempt of defining a search category in line with #1, that combines the use for building a search engine and the use of assets as input for AI search engines. \r\n\r\nI have relatively low confidence in this approach, so this is really meant as a starting point for a discussion and nothing more",
       "createdAt": "2025-05-21T11:45:53Z",
-      "updatedAt": "2025-05-21T11:46:36Z",
+      "updatedAt": "2025-05-22T08:05:48Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "f9eeb5ad3d80661c46c7324a68666ed2ff176ecf",
       "headRepository": "ietf-wg-aipref/drafts",
       "headRefName": "search",
-      "headRefOid": "612db1757d5ac5a14964cba7ac05723057cb12c4",
+      "headRefOid": "41e833fa74e4b1d210a5b5621cd0769a53f7c09d",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [
+        {
+          "author": "paul2keller",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Thanks for the suggestions, which I have approved. I agree with the comment about posting this to the list (which I was planning to do after you had a look and after the current discussions have dried down). ",
+          "createdAt": "2025-05-22T08:05:47Z",
+          "updatedAt": "2025-05-22T08:05:47Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWk1-s6qcGok",
+          "commit": {
+            "abbreviatedOid": "612db17"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "Some suggestions; let's start a thread on the mailing list.  Perhaps after some of the current discussion settles a little.",
+          "createdAt": "2025-05-22T01:08:37Z",
+          "updatedAt": "2025-05-22T05:37:41Z",
+          "comments": [
+            {
+              "originalPosition": 4,
+              "body": "```suggestion\r\n## Search Category {#search}\r\n```",
+              "createdAt": "2025-05-22T01:08:37Z",
+              "updatedAt": "2025-05-22T05:37:41Z"
+            },
+            {
+              "originalPosition": 6,
+              "body": "```suggestion\r\nThe act of using one or more assets to build a search index\r\nor as input to a trained AI/ML model that has the purpose of providing search results\r\nthat include direct links to the location from where the asset was obtained.\r\n```\r\nAdding line wrapping, fixing typos, and removing an extra \"has has the\".",
+              "createdAt": "2025-05-22T01:09:42Z",
+              "updatedAt": "2025-05-22T05:37:41Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 35,
+      "id": "PR_kwDOOWk1-s6XJkjB",
+      "title": "Add a description of how the model is interrogated",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/35",
+      "state": "OPEN",
+      "author": "martinthomson",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "This is stacked on top of #26.  It just shows the incremental change.  (If it is accepted and #26 is not, we'll lose it.  Be careful.)\r\n\r\nRather than describe how defaults apply as part of the processing algorithm, I've made that part of how the model is consulted.  This doesn't have any functional impact in this case; the result is the same either way.\r\n\r\nThe main decision this makes is about the order in which things apply:\r\n\r\n1. within a single statement, the most-specific statement applies (i.e., `genai` overrides `ai`)\r\n2. across multiple statements, the least-permissive statement of preference applies (i.e., `n` overrides `y`)\r\n\r\nWe'll need to discuss which model we want to follow and be deliberate about it.\r\n\r\nAn example should help.  Consider two statements of preference that include no preference for nested categories: `ai=n` and `genai=y`.\r\n\r\nIn the proposed approach, the more general answer from the first statement fills in an answer for the `genai` category.  That's the model that this change adopts.  The final, combined answer for `genai` is determined by the `ai=n` preference because the value from that statement is taken first and a disallow preference overrides an allow preference (absent other information; see the text).\r\n\r\nIn an alternative model, preferences could be combined before resolving any inherited preferences.  That is, items 1 and 2 above are swapped to:\r\n\r\n1. across multiple statements, the least permissive statement of preference for each category is selected\r\n2. then any category without an assigned preference inherits the preference of any less-specific category\r\n\r\nIn that case, we'd be saying that `ai=n` leaves `genai` unspecified deliberately to allow another preference to set `genai=y` if they prefer.  Only if no other entity expresses a preference, does the implied `genai=n` apply.  In that model, we'd be assuming that the entity that sets `ai=n` knows about `genai` and chooses to defer to others on what the preference is.\r\n\r\nI personally dislike the alternative.  It makes any vocabulary extension fraught with issues.  Consider that an extension we define later might carve out space for a new specialized usage (like `inference`, if we were to define that in three years time, or `commercial` or anything else we might defer).  That would put an unexpected hole in any established preference.  Anyone who previously said no to a class of usage could have that preference overridden for that specialized usage.\r\n\r\nStructuring the document this way allows us to make a decision between these a little more easily than if the \"processing\" in #26 filled in values for `genai` from the value of `ai`.\r\n\r\nFinally, the last decision in the change is that attachment mechanisms can define that one statement can override another.\r\n\r\nThat opens the possibility of us choosing to have the HTTP header override robots.txt or even having content metadata override any other preferences.  If we find that this isn't needed, that's fine, but I understand that this is still on the table.  Including it cost me little effort; removing it would be equally easy.",
+      "createdAt": "2025-05-22T02:48:55Z",
+      "updatedAt": "2025-05-22T02:48:55Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "format",
+      "baseRefOid": "66e13651c2c1181cc01b620ea0696dc09dff7e4a",
+      "headRepository": "ietf-wg-aipref/drafts",
+      "headRefName": "combining",
+      "headRefOid": "8e951edec7fa7d0ef51a5b241cdc594016a19ce8",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 36,
+      "id": "PR_kwDOOWk1-s6XKESF",
+      "title": "Revise intent statement",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/36",
+      "state": "OPEN",
+      "author": "martinthomson",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "This was the hardest part of #31 and I think we could make this text clearer.  It is a bit too dense, even with what I'm proposing, but I hope that it's an improvement.\r\n\r\nThis is a version of the text provided by Timid Robot in https://github.com/ietf-wg-aipref/drafts/pull/31#discussion_r2100758813 with some additional edits, particularly the last sentence, where I think we need to be clear that:\r\n\r\n1. This shouldn't prejudice decisions about other rights outside of the meaning of the preference itself.\r\n2. The no prejudice piece applies even if the preferencing has legal effect, outside of the direct and obvious legal effect itself.\r\n3. This isn't necessarily exclusively about copyright.  People have privacy rights over content that still apply, even if the preferences admit the possibility of use.\r\n\r\nI think that this maintains the intent of the original, but I will admit that the original is dense enough that I might have lost some of the intent.",
+      "createdAt": "2025-05-22T04:47:21Z",
+      "updatedAt": "2025-05-23T07:13:30Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "f9eeb5ad3d80661c46c7324a68666ed2ff176ecf",
+      "headRepository": "ietf-wg-aipref/drafts",
+      "headRefName": "intent-reword",
+      "headRefOid": "eae5dfc1b567feab5526c7a47f3dba6660d27e30",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 37,
+      "id": "PR_kwDOOWk1-s6XVoxV",
+      "title": "Acknowledge significant contributions",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/37",
+      "state": "OPEN",
+      "author": "martinthomson",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2025-05-23T07:14:48Z",
+      "updatedAt": "2025-05-23T07:14:48Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "c0b59221a3eaced5fa5a35f87bb5f0aaca9d4c74",
+      "headRepository": "ietf-wg-aipref/drafts",
+      "headRefName": "timit-robot-ack",
+      "headRefOid": "e9bf27ee0f02107fe9ef1e571bc86ba1f4534a76",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
