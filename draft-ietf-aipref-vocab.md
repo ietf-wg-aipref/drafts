@@ -44,6 +44,8 @@ informative:
      org: European Union
     date: 2019-05-17
 
+...
+
 --- abstract
 
 This document proposes a standardized vocabulary for expressing preferences related to how digital assets are used by automated processing systems.
