@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-05-25T02:08:14.323711+00:00",
+  "timestamp": "2025-05-29T02:00:02.395097+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -553,6 +553,39 @@
           "body": ">Was the term \"artifact\" ever suggested? That doesn't carry the strong implication of being owned. It might carry an implication of age, but not as strongly.\n\nArtifact is problematic because it has the connotation of being \"secondary\" or at least not the primary thing.",
           "createdAt": "2025-05-16T13:29:36Z",
           "updatedAt": "2025-05-16T13:29:36Z"
+        }
+      ]
+    },
+    {
+      "number": 38,
+      "id": "I_kwDOOWk1-s64U4Ks",
+      "title": "Extensibility",
+      "url": "https://github.com/ietf-wg-aipref/drafts/issues/38",
+      "state": "OPEN",
+      "author": "mnot",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [
+        "vocabulary"
+      ],
+      "body": "The vocabulary should be able to evolve.",
+      "createdAt": "2025-05-27T03:47:58Z",
+      "updatedAt": "2025-05-28T16:42:59Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "This includes the question of how - if needed - we extend the vocabulary.  There is some of what is necessary in #26 about this, but that isn't complete.  For instance, on-list discussion seems to be moving toward the idea of having an IANA registry for the vocabulary.  If that holds, we'll need to add something for that.\n\nThen there are extensions that are not limited to the vocabulary.  If we go with #26, that might be non-vocabulary dictionary keys or parameters on those keys (which might be specific to different vocabulary terms).\n\nMy proposal is to define clearly how to extend the vocabulary and define an IANA registry for that.  But leave other forms of extension open in a way that would require a fresh RFC to define.\n\nI would suggest that the vocabulary registry operate on a fairly strict regime, not because of a scarcity of space, but to signal that we think that new categories should be discouraged generally.  We can't completely cut that off: experience with registries shows that if you are too strict, people don't bother with registration, instead they just use whatever codepoints they like without any coordination.  Such things lead to interoperability failure and can make things very unhealthy.  I'd probably suggest that we pick one of the [RFC 8126](https://datatracker.ietf.org/doc/html/rfc8126#section-4) options that looks permissive, but add instructions that strongly discourage registration in practice.  I like [Specification Required](https://datatracker.ietf.org/doc/html/rfc8126#section-4.6) for that sort of thing.",
+          "createdAt": "2025-05-27T04:10:44Z",
+          "updatedAt": "2025-05-27T04:10:44Z"
+        },
+        {
+          "author": "lrosenthol",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "+1 to @martinthomson - sounds like a good direction",
+          "createdAt": "2025-05-28T16:42:58Z",
+          "updatedAt": "2025-05-28T16:42:58Z"
         }
       ]
     }
