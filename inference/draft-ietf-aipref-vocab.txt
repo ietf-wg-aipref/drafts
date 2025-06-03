@@ -5,8 +5,8 @@
 AI Preferences                                                 P. Keller
 Internet-Draft                                               Open Future
 Intended status: Standards Track                         M. Thomson, Ed.
-Expires: 23 November 2025                                        Mozilla
-                                                             22 May 2025
+Expires: 5 December 2025                                         Mozilla
+                                                             3 June 2025
 
 
             A Vocabulary For Expressing AI Usage Preferences
@@ -55,7 +55,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 23 November 2025.
+   This Internet-Draft will expire on 5 December 2025.
 
 Copyright Notice
 
@@ -234,8 +234,9 @@ Table of Contents
 
 4.4.  AI Inference Category
 
-   To act of using one or more assets as input to a trained AI/ML model
-   for the purposes of inferring a result.
+   The act of using one or more assets as input to a trained AI/ML model
+   as part of the operation of that model (as opposed to the training of
+   the model).
 
 5.  Usage
 
