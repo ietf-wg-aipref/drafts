@@ -160,6 +160,10 @@ The act of training General Purpose AI models that have the capacity to generate
 
 The use of assets for Generative AI Training is a proper subset of AI Training usage.
 
+## AI Inference Category {#inference}
+
+The act of using one or more assets as input to a trained AI/ML model as part of the operation of that model (as opposed to the training of the model).
+
 # Usage
 
 The vocabulary is used by referencing the terms defined in the {{vocab}} section above, directly or via mappings, in accordance with how they are defined in this document.
