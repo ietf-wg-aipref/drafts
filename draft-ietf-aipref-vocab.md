@@ -136,6 +136,15 @@ This section defines the categories of use in the vocabulary.
 |  |               |                          |  |  |
 |  |                '------------------------'   |  |
 |   '-------------------------------------------'   |
+|                                                   |
+|   .----------------.                              |
+|  |                  |                             |
+|  |                  |                             |
+|  |   AI Inference   |                             |
+|  |                  |                             |
+|  |                  |                             |
+|   '----------------'                              |
+|                                                   |
  '-------------------------------------------------'
 ~~~
 {: #f-categories title="Relationship Between Categories of Use"}
@@ -163,6 +172,8 @@ The use of assets for Generative AI Training is a proper subset of AI Training u
 ## AI Inference Category
 
 The act of using one or more assets as input to a trained AI/ML model as part of the operation of that model (as opposed to the training of the model).
+
+The use of assets for AI Training is a proper subset of TDM usage.
 
 # Usage
 
