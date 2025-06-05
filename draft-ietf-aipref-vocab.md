@@ -44,6 +44,8 @@ informative:
      org: European Union
     date: 2019-05-17
 
+...
+
 --- abstract
 
 This document proposes a standardized vocabulary for expressing preferences related to how digital assets are used by automated processing systems.
@@ -144,7 +146,7 @@ This list of specific use cases may be expanded in the future, should a consensu
 
 The act of using one or more assets in the context of any automated analytical technique aimed at analyzing text and data in digital form in order to generate information which includes but is not limited to patterns, trends and correlations.
 
-The overarching TDM category is based on the definition of Text and Data Mining in Article 2(2) of {{EUCD2019}}.
+The use of assets for TDM encompasses all the subsequent categories.
 
 ## AI Training Category {#ai}
 
@@ -158,6 +160,9 @@ The act of training General Purpose AI models that have the capacity to generate
 
 The use of assets for Generative AI Training is a proper subset of AI Training usage.
 
+## AI Inference Category
+
+The act of using one or more assets as input to a trained AI/ML model as part of the operation of that model (as opposed to the training of the model).
 
 # Usage
 
