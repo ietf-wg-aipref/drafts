@@ -191,7 +191,11 @@ Systems referencing the vocabulary must not introduce additional categories that
 
 # Security Considerations
 
-TODO Security
+This document does not authenticate preferences.
+As such, the ability to express a preference is based not on any established authority
+only on access to the asset or its method of delivery.
+Methods of attaching preferences to assets
+therefore need to document the properties that can be assumed of preferences.
 
 
 # IANA Considerations
