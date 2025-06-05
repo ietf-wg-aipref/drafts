@@ -189,6 +189,46 @@ The vocabulary does not preclude the use of other specific categories. Any state
 Systems referencing the vocabulary must not introduce additional categories that include existing categories defined in the vocabulary or otherwise include additional hierarchical relationships.
 
 
+# Applicability and Legal Effect
+
+This document provides a set of definitions for different categories of use,
+plus a system for associating simple preferences to each
+(allow, disallow, or no preference).
+
+The categories of use that are defined as part of the vocabulary
+are not always clearly applicable or inapplicable to a particular system or application.
+The universe of possible systems is far more complex
+than any simple vocabulary is capable of describing.
+That means that some discretion could be involved
+in deciding whether a preference applies.
+
+The expression of preferences might activate regulatory or legal strictures,
+which has implications for entities that consume those preferences.
+Their interpretation of the meaning of different terms
+could have legal ramifications.
+Different jurisdictions could reach subtly different conclusions
+about the precise scope of each category of use
+that affects the applicability of each.
+
+It is the responsibility of those that process affected assets to understand
+the legal implications of their use of digital assets.
+
+This includes understanding:
+
+* obligations regarding how preferences are obtained
+  (in particular, which methods of associating preferences with content
+  are expected to be understood),
+
+* the specific uses to which assets are put,
+
+* how preferences apply to the those uses, and
+
+* how relevant jurisdictions might interpret those preferences.
+
+These considerations will depend on jurisdiction
+and the details of the system.
+
+
 # Security Considerations
 
 TODO Security
