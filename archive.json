@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-06-05T02:00:52.503332+00:00",
+  "timestamp": "2025-06-08T02:10:50.727111+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -109,9 +109,24 @@
       ],
       "body": "The draft is currently written in a Europe-specific way.",
       "createdAt": "2025-04-10T13:49:27Z",
-      "updatedAt": "2025-05-06T06:28:52Z",
+      "updatedAt": "2025-06-05T09:20:35Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "I believe that the present text is better.  We only have a hanging reference to the EU TDM legislation, that we might need to remove.",
+          "createdAt": "2025-06-05T06:32:24Z",
+          "updatedAt": "2025-06-05T06:32:24Z"
+        },
+        {
+          "author": "paul2keller",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "I agree and I think we can remove that reference, seems like the proposal for keeping the TDM language largely as is was well received on the mailing list (that is my positive way of interpreting the lack of responses).",
+          "createdAt": "2025-06-05T09:20:33Z",
+          "updatedAt": "2025-06-05T09:20:33Z"
+        }
+      ]
     },
     {
       "number": 5,
@@ -588,6 +603,39 @@
           "updatedAt": "2025-05-28T16:42:58Z"
         }
       ]
+    },
+    {
+      "number": 42,
+      "id": "I_kwDOOWk1-s66AMYK",
+      "title": "Is inference a sub-category of TDM?",
+      "url": "https://github.com/ietf-wg-aipref/drafts/issues/42",
+      "state": "OPEN",
+      "author": "martinthomson",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [
+        "vocabulary"
+      ],
+      "body": "I had assumed that TDM would be very broad, @paul2keller [did not](https://github.com/ietf-wg-aipref/drafts/pull/39#issuecomment-2943398120):\n\n> I am not so sure we should treat the inference category as a proper subset of the TDM category. This is something I am somewhat skeptical of, i think there are probably inference type uses that are not necessarily TDM.\n\nThis is an interesting question that we should resolve.  If nothing else, we say that TDM is a broad category that encompasses all the other categories, so if it doesn't encompass inference, we need to fix the document one way or other (#39 for encompassing, something else if not).",
+      "createdAt": "2025-06-05T10:06:22Z",
+      "updatedAt": "2025-06-06T17:52:39Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "lrosenthol",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Agreed we need to resolve this.\n\nI, for one, would favor it being part of TDM",
+          "createdAt": "2025-06-06T17:25:34Z",
+          "updatedAt": "2025-06-06T17:25:34Z"
+        },
+        {
+          "author": "paul2keller",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "@lrosenthol I don't think our decision should come down to our preferences. I think if we want to include it in TDM we would need to be certain that all forms of inference meet the definition of TDM. And I have doubts (mainly because if feel that many situations where individual users feed an asset to an AI system may have more to do with concepts like making private copies or touch on issues like freedom of expression). I do not see these types of conflicts when it comes to training mostly because training is something that will usually not be done by private individuals\n",
+          "createdAt": "2025-06-06T17:52:38Z",
+          "updatedAt": "2025-06-06T17:52:38Z"
+        }
+      ]
     }
   ],
   "pulls": [
@@ -995,13 +1043,13 @@
       "labels": [],
       "body": "As discussed, we want to define a recommended format.  This executes on that.  It uses Structured Fields, which will ensure that we have a very easy translation to HTTP fields.  It also fits neatly into the other formats we are considering.\r\n\r\nThere are some interesting implications that are worth highlighting. The text I've added goes into some of that in more detail, but just to list them for visibility:\r\n\r\n* This is a sequence of bytes, not a string.  That has implications for how it is included in some formats, but as RFC 9651 limits its syntax to a pretty small subset of the ASCII range, this is mostly just a theoretical consideration, not a practical one.\r\n\r\n* Parsing errors in RFC 9651 means that you lose everything.  No preference survives.  That means that authoring errors have consequences.  This is an artifact of the format being more of a computer-to-computer language, rather than being tolerant of human error.  I'm not thrilled with this, but recognize the trade-off involved.\r\n\r\n* Repeated keys mean that only the last one is taken.  Again, not thrilled with this, but think that the trade is tolerable.\r\n\r\n* Labels are lowercase only.  A lot of the list traffic has started to use \"AI=whatever\"; RFC 9651 doesn't let us shout.  I think that this is fine, but it's another minor ding.\r\n\r\n* Some patterns of use that might be natural are invalid.  For instance, spaces around the \"=\" is invalid, so \"ai = n\" would result in a parsing error and no preference being registered.\r\n\r\nCloses #8.",
       "createdAt": "2025-05-15T02:26:24Z",
-      "updatedAt": "2025-05-22T05:57:05Z",
+      "updatedAt": "2025-06-05T06:49:26Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
-      "baseRefOid": "f9eeb5ad3d80661c46c7324a68666ed2ff176ecf",
+      "baseRefOid": "e87bb71d210eb4bc0d37f569036642a09e39b51e",
       "headRepository": "ietf-wg-aipref/drafts",
       "headRefName": "format",
-      "headRefOid": "50a22f28fe1f089ec52009460f21ad2f3b6346af",
+      "headRefOid": "56d9725bda9f479ce5a8f8e0067f22596cedd277",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
@@ -1827,6 +1875,107 @@
       "mergedBy": null,
       "mergeCommit": null,
       "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 39,
+      "id": "PR_kwDOOWk1-s6ZIihf",
+      "title": "Followup for inference additions",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/39",
+      "state": "OPEN",
+      "author": "martinthomson",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2025-06-05T05:29:16Z",
+      "updatedAt": "2025-06-05T10:03:58Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "e87bb71d210eb4bc0d37f569036642a09e39b51e",
+      "headRepository": "ietf-wg-aipref/drafts",
+      "headRefName": "inference-followup",
+      "headRefOid": "618f14306d95aa0e2591ab191e3da08c18dd3724",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [
+        {
+          "author": "paul2keller",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "so I am not so sure we should treat the inference category as a proper subset of the TDM category. This is something I am somewhat skeptical of, i think there are probably inference type uses that are not necessarily TDM. @martinthomson Are you sure that we can really assume that all inference is included in TDM? \r\n\r\nI also interpreted some of the statements by people on the list (\"this is a wholly separate category from TDM\") as leaning towards us positioning inference outside of the TDM box. \r\n\r\nI think this is a tricky question with many pro's and con's and I feel that this requires additional (in person) discussion ideally at a meeting.",
+          "createdAt": "2025-06-05T09:16:55Z",
+          "updatedAt": "2025-06-05T09:17:19Z"
+        },
+        {
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "I guess I have a very broad interpretation of what TDM is, let's open an issue for that and leave this unresolved until we have that discussion.",
+          "createdAt": "2025-06-05T10:03:57Z",
+          "updatedAt": "2025-06-05T10:03:57Z"
+        }
+      ],
+      "reviews": []
+    },
+    {
+      "number": 40,
+      "id": "PR_kwDOOWk1-s6ZI3cV",
+      "title": "A very short applicability section",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/40",
+      "state": "OPEN",
+      "author": "martinthomson",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "I'm putting this further down in the document as I want to make sure that we get the basics out of the way before getting into the heavy stuff.\r\n\r\nLooking for thoughts about whether this fits with the general thinking that we have so far.  Especially looking for thoughts on whether this is pitched at the right level as well.  Is there too much detail or too little?\r\n\r\nFor #15, but not intended to close it.",
+      "createdAt": "2025-06-05T06:17:56Z",
+      "updatedAt": "2025-06-05T06:20:45Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "e87bb71d210eb4bc0d37f569036642a09e39b51e",
+      "headRepository": "ietf-wg-aipref/drafts",
+      "headRefName": "applicability",
+      "headRefOid": "402572d6b390f928d84028ceec15385a91fefe47",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 41,
+      "id": "PR_kwDOOWk1-s6ZJVBy",
+      "title": "IANA registry",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/41",
+      "state": "OPEN",
+      "author": "martinthomson",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "(Again, this is based on #26; merge this and nothing happens unless you also merge #26.)\r\n\r\nThis enacts the suggested approach for vocabulary extensions I described in #38.\r\n\r\nStill, this was particularly tricky to get the wording even remotely in the space I wanted and I'm not sure whether I got there.  Input on this would be appreciated.\r\n\r\nBasically, I'm conflicted on this.  Using Specification Required gives some flexibility for the process to recognize emerging labels without a lot of procedural overhead, but it seems like this is angling toward IETF Review as the operative policy.  Should we face facts and just go straight for IETF Review?  That would allow the advice to be a little more streamlined, because we'd be able to rely on the standards process to iron out the kinks.\r\n\r\nThere's also the option to pair IETF Review with IESG Approval, which means \"get an RFC\" or \"convince an IETF AD\".  That almost amounts to the same thing in practice (if you can convince an AD of something, one of those things is publishing an RFC.  Though the RFC still requires IETF consensus, so it's a somewhat higher bar, but only \"somewhat\" given how careful most ADs are).\r\n\r\nIn any case, this seemed like a reasonable starting point for a discussion, which is always easier when there is something concrete to discuss.",
+      "createdAt": "2025-06-05T07:21:44Z",
+      "updatedAt": "2025-06-05T09:24:38Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "format",
+      "baseRefOid": "56d9725bda9f479ce5a8f8e0067f22596cedd277",
+      "headRepository": "ietf-wg-aipref/drafts",
+      "headRefName": "iana",
+      "headRefOid": "db880bde3c4564778735f63e240cf52ebfccf25a",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [
+        {
+          "author": "paul2keller",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "I have read through it and this looks reasonable and pragmatic to me, I am no expert on how such things are handled in other cases but I trust your judgement that this is a suitable approach. ",
+          "createdAt": "2025-06-05T09:24:37Z",
+          "updatedAt": "2025-06-05T09:24:37Z"
+        }
+      ],
       "reviews": []
     }
   ]
