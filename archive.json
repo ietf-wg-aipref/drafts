@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-06-08T02:10:50.727111+00:00",
+  "timestamp": "2025-06-10T02:04:04.406215+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -1043,7 +1043,7 @@
       "labels": [],
       "body": "As discussed, we want to define a recommended format.  This executes on that.  It uses Structured Fields, which will ensure that we have a very easy translation to HTTP fields.  It also fits neatly into the other formats we are considering.\r\n\r\nThere are some interesting implications that are worth highlighting. The text I've added goes into some of that in more detail, but just to list them for visibility:\r\n\r\n* This is a sequence of bytes, not a string.  That has implications for how it is included in some formats, but as RFC 9651 limits its syntax to a pretty small subset of the ASCII range, this is mostly just a theoretical consideration, not a practical one.\r\n\r\n* Parsing errors in RFC 9651 means that you lose everything.  No preference survives.  That means that authoring errors have consequences.  This is an artifact of the format being more of a computer-to-computer language, rather than being tolerant of human error.  I'm not thrilled with this, but recognize the trade-off involved.\r\n\r\n* Repeated keys mean that only the last one is taken.  Again, not thrilled with this, but think that the trade is tolerable.\r\n\r\n* Labels are lowercase only.  A lot of the list traffic has started to use \"AI=whatever\"; RFC 9651 doesn't let us shout.  I think that this is fine, but it's another minor ding.\r\n\r\n* Some patterns of use that might be natural are invalid.  For instance, spaces around the \"=\" is invalid, so \"ai = n\" would result in a parsing error and no preference being registered.\r\n\r\nCloses #8.",
       "createdAt": "2025-05-15T02:26:24Z",
-      "updatedAt": "2025-06-05T06:49:26Z",
+      "updatedAt": "2025-06-09T10:51:41Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "e87bb71d210eb4bc0d37f569036642a09e39b51e",
@@ -1320,6 +1320,26 @@
               "body": "```suggestion\r\nThis format is only an exemplary way to represent preferences.\r\n```",
               "createdAt": "2025-05-22T05:11:29Z",
               "updatedAt": "2025-05-22T05:11:29Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s6tbo_W",
+          "commit": {
+            "abbreviatedOid": "e6d8871"
+          },
+          "author": "TimidRobot",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-06-09T10:51:41Z",
+          "updatedAt": "2025-06-09T10:51:41Z",
+          "comments": [
+            {
+              "originalPosition": 117,
+              "body": "For ease of reference: [RFC 9651: Structured Field Values for HTTP](https://www.rfc-editor.org/rfc/rfc9651.html)\r\n\r\n> Imagine a case where you had `search=y`. You might use parameters to communicate things that search engines respect, like how large a snippet can be taken of content: `search=y;max-snippet=100` (In whatever unit we agree.) I think that the general view is that this might be a good way to make the HTTP header version of this fit better with existing robots.txt extensions.\r\n\r\nThis is not the only concrete example of the first point. Creative Commons is currently working on an extension of aipref that will use parameters to empower reciprocity.",
+              "createdAt": "2025-06-09T10:51:41Z",
+              "updatedAt": "2025-06-09T10:51:41Z"
             }
           ]
         }
