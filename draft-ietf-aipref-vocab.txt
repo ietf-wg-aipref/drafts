@@ -5,8 +5,8 @@
 AI Preferences                                                 P. Keller
 Internet-Draft                                               Open Future
 Intended status: Standards Track                         M. Thomson, Ed.
-Expires: 5 December 2025                                         Mozilla
-                                                             3 June 2025
+Expires: 12 December 2025                                        Mozilla
+                                                            10 June 2025
 
 
             A Vocabulary For Expressing AI Usage Preferences
@@ -55,7 +55,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 5 December 2025.
+   This Internet-Draft will expire on 12 December 2025.
 
 Copyright Notice
 
@@ -80,7 +80,8 @@ Table of Contents
      4.1.  Text and Data Mining (TDM) Category
      4.2.  AI Training Category
      4.3.  Generative AI Training Category
-     4.4.  AI Inference Category
+     4.4.  Search Category
+     4.5.  AI Inference Category
    5.  Usage
      5.1.  More Specific Instructions
      5.2.  Vocabulary Extensions
@@ -231,7 +232,14 @@ Table of Contents
    The use of assets for Generative AI Training is a proper subset of AI
    Training usage.
 
-4.4.  AI Inference Category
+4.4.  Search Category
+
+   The act of using one or more assets to build a search index or as
+   input to a trained AI/ML model that has the purpose of providing
+   search results that include direct links to the location from where
+   the asset was obtained.
+
+4.5.  AI Inference Category
 
    The act of using one or more assets as input to a trained AI/ML model
    as part of the operation of that model (as opposed to the training of
