@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-06-10T02:04:04.406215+00:00",
+  "timestamp": "2025-06-12T02:01:23.317357+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -1761,7 +1761,7 @@
       "id": "PR_kwDOOWk1-s6XC_8w",
       "title": "Add Search Category",
       "url": "https://github.com/ietf-wg-aipref/drafts/pull/34",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "paul2keller",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
@@ -1770,17 +1770,19 @@
       ],
       "body": "Very preliminary attempt of defining a search category in line with #1, that combines the use for building a search engine and the use of assets as input for AI search engines. \r\n\r\nI have relatively low confidence in this approach, so this is really meant as a starting point for a discussion and nothing more",
       "createdAt": "2025-05-21T11:45:53Z",
-      "updatedAt": "2025-05-22T08:05:48Z",
+      "updatedAt": "2025-06-10T06:52:24Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
-      "baseRefOid": "f9eeb5ad3d80661c46c7324a68666ed2ff176ecf",
+      "baseRefOid": "e87bb71d210eb4bc0d37f569036642a09e39b51e",
       "headRepository": "ietf-wg-aipref/drafts",
       "headRefName": "search",
-      "headRefOid": "41e833fa74e4b1d210a5b5621cd0769a53f7c09d",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "headRefOid": "d814ccb3c54f9ec5bc73e71edf53bcd87b899d93",
+      "closedAt": "2025-06-10T06:52:23Z",
+      "mergedAt": "2025-06-10T06:52:23Z",
+      "mergedBy": "paul2keller",
+      "mergeCommit": {
+        "oid": "ef4b509cf973c45aaca0f1b61a3db13377e4a2bb"
+      },
       "comments": [
         {
           "author": "paul2keller",
