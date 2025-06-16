@@ -4,12 +4,12 @@
 
 AI Preferences                                                 P. Keller
 Internet-Draft                                               Open Future
-Intended status: Informational                           M. Thomson, Ed.
-Expires: 13 November 2025                                        Mozilla
-                                                             12 May 2025
+Intended status: Standards Track                         M. Thomson, Ed.
+Expires: 18 December 2025                                        Mozilla
+                                                            16 June 2025
 
 
-                   Proposal for an Opt-Out Vocabulary
+            A Vocabulary For Expressing AI Usage Preferences
                      draft-ietf-aipref-vocab-latest
 
 Abstract
@@ -27,9 +27,9 @@ About This Document
 
    This note is to be removed before publishing as an RFC.
 
-   The latest revision of this draft can be found at
-   https://paul2keller.github.io/opt-out-vocab-id/draft-keller-aipref-
-   vocab.html.  Status information for this document may be found at
+   The latest revision of this draft can be found at https://ietf-wg-
+   aipref.github.io/drafts/draft-ietf-aipref-vocab.html.  Status
+   information for this document may be found at
    https://datatracker.ietf.org/doc/draft-ietf-aipref-vocab/.
 
    Discussion of this document takes place on the AI Preferences Working
@@ -38,7 +38,7 @@ About This Document
    https://www.ietf.org/mailman/listinfo/ai-control/.
 
    Source for this draft and an issue tracker can be found at
-   https://github.com/paul2keller/opt-out-vocab-id.
+   https://github.com/ietf-wg-aipref/drafts.
 
 Status of This Memo
 
@@ -55,7 +55,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 13 November 2025.
+   This Internet-Draft will expire on 18 December 2025.
 
 Copyright Notice
 
@@ -75,20 +75,21 @@ Table of Contents
 
    1.  Introduction
    2.  Conventions and Definitions
-   3.  Definitions
-   4.  Statements of Preference
-   5.  Vocabulary Definition
-     5.1.  Text and Data Mining (TDM) Category
-     5.2.  AI Training Category
-     5.3.  Generative AI Training Category
-   6.  Usage
-     6.1.  More Specific Instructions
-     6.2.  Vocabulary Extensions
-   7.  Security Considerations
-   8.  IANA Considerations
-   9.  References
-     9.1.  Normative References
-     9.2.  Informative References
+   3.  Statements of Preference
+   4.  Vocabulary Definition
+     4.1.  Text and Data Mining (TDM) Category
+     4.2.  AI Training Category
+     4.3.  Generative AI Training Category
+     4.4.  Search Category
+     4.5.  AI Inference Category
+   5.  Usage
+     5.1.  More Specific Instructions
+     5.2.  Vocabulary Extensions
+   6.  Security Considerations
+   7.  IANA Considerations
+   8.  References
+     8.1.  Normative References
+     8.2.  Informative References
    Acknowledgments
    Authors' Addresses
 
@@ -134,18 +135,18 @@ Table of Contents
    BCP 14 [RFC2119] [RFC8174] when, and only when, they appear in all
    capitals, as shown here.
 
-3.  Definitions
+   This document uses the following terms:
 
-   *  *Asset:* A digital file or stream of data, usually with associated
+   Asset:
+      A digital file or stream of data, usually with associated
       metadata.
+   Declaring party:
+      The entity that expresses a preference with regards to an Asset.
 
-   *  *Declaring party:* The entity that expresses a preference with
-      regards to an Asset.
-
-4.  Statements of Preference
+3.  Statements of Preference
 
    The vocabulary is a set of categories, each of which is defined to
-   cover a class of usage for assets.  Section 5 defines these
+   cover a class of usage for assets.  Section 4 defines these
    categories in more detail.
 
    A statement of preference is made about an asset.  Statements of
@@ -175,29 +176,28 @@ Table of Contents
    that each category of use has a preference in one of three states:
    "allowed", "disallowed", or "unknown".
 
-5.  Vocabulary Definition
+4.  Vocabulary Definition
 
    This section defines the categories of use in the vocabulary.
 
-   The figure below shows the relationship between these categories:
+   Figure 1 shows the relationship between these categories:
 
-+--------------------------------------------------------------------------+
-|                                                                          |
-|                          Text and Data Mining (TDM)                      |
-|                                                                          |
-| +--------------------------------------------+  +- - - - - - - - - - -+  |
-| |  +--------------------------+              |  |                     |  |
-| |  |                          |              |                           |
-| |  |                          |              |  |    [possibly]:      |  |
-| |  | Generative AI Training   |  AI Training |                           |
-| |  |                          |              |  |  Other use cases    |  |
-| |  |                          |              |                           |
-| |  +--------------------------+              |  |                     |  |
-| +--------------------------------------------+  +- - - - - - - - - - -+  |
-|                                                                          |
-+--------------------------------------------------------------------------+
+    .-------------------------------------------------.
+   |                                                   |
+   |               Text and Data Mining                |
+   |                                                   |
+   |   .-------------------------------------------.   |
+   |  |                .------------------------.   |  |
+   |  |               |                          |  |  |
+   |  |               |                          |  |  |
+   |  |  AI Training  |  Generative AI Training  |  |  |
+   |  |               |                          |  |  |
+   |  |               |                          |  |  |
+   |  |                '------------------------'   |  |
+   |   '-------------------------------------------'   |
+    '-------------------------------------------------'
 
-                  Figure 1: NMS View of Device State
+              Figure 1: Relationship Between Categories of Use
 
    This list of specific use cases may be expanded in the future, should
    a consensus emerge between stakeholders, to include categories that
@@ -206,24 +206,23 @@ Table of Contents
    systems implementing this vocabulary may extend this list with
    additional categories for their particular needs.
 
-5.1.  Text and Data Mining (TDM) Category
+4.1.  Text and Data Mining (TDM) Category
 
    The act of using one or more assets in the context of any automated
    analytical technique aimed at analyzing text and data in digital form
    in order to generate information which includes but is not limited to
    patterns, trends and correlations.
 
-   The overarching TDM category is based on the definition of Text and
-   Data Mining in Article 2(2) of [EUCD2019].
+   The use of assets for TDM encompasses all the subsequent categories.
 
-5.2.  AI Training Category
+4.2.  AI Training Category
 
    The act of training machine learning models or artificial
    intelligence (AI).
 
    The use of assets for AI Training is a proper subset of TDM usage.
 
-5.3.  Generative AI Training Category
+4.3.  Generative AI Training Category
 
    The act of training General Purpose AI models that have the capacity
    to generate text, images or other forms of synthetic content, or the
@@ -233,13 +232,26 @@ Table of Contents
    The use of assets for Generative AI Training is a proper subset of AI
    Training usage.
 
-6.  Usage
+4.4.  Search Category
+
+   The act of using one or more assets to build a search index or as
+   input to a trained AI/ML model that has the purpose of providing
+   search results that include direct links to the location from where
+   the asset was obtained.
+
+4.5.  AI Inference Category
+
+   The act of using one or more assets as input to a trained AI/ML model
+   as part of the operation of that model (as opposed to the training of
+   the model).
+
+5.  Usage
 
    The vocabulary is used by referencing the terms defined in the
-   Section 5 section above, directly or via mappings, in accordance with
+   Section 4 section above, directly or via mappings, in accordance with
    how they are defined in this document.
 
-6.1.  More Specific Instructions
+5.1.  More Specific Instructions
 
    A recipient of a statement of preferences that follows this model
    might receive more specific instructions in two ways:
@@ -265,23 +277,23 @@ Table of Contents
    restriction is declared through search-specific means such as
    [RFC9309].
 
-6.2.  Vocabulary Extensions
+5.2.  Vocabulary Extensions
 
    Systems referencing the vocabulary must not introduce additional
    categories that include existing categories defined in the vocabulary
    or otherwise include additional hierarchical relationships.
 
-7.  Security Considerations
+6.  Security Considerations
 
    TODO Security
 
-8.  IANA Considerations
+7.  IANA Considerations
 
    This document has no IANA actions.
 
-9.  References
+8.  References
 
-9.1.  Normative References
+8.1.  Normative References
 
    [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
               Requirement Levels", BCP 14, RFC 2119,
@@ -297,7 +309,7 @@ Table of Contents
               DOI 10.17487/RFC9309, September 2022,
               <https://www.rfc-editor.org/rfc/rfc9309>.
 
-9.2.  Informative References
+8.2.  Informative References
 
    [EUCD2019] European Union, "Directive (EU) 2019/790 of the European
               Parliament and of the Council of 17 April 2019 on

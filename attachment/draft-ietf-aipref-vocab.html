@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta content="Common,Latin" name="scripts">
 <meta content="initial-scale=1.0" name="viewport">
-<title>Proposal for an Opt-Out Vocabulary</title>
+<title>A Vocabulary For Expressing AI Usage Preferences</title>
 <meta content="Paul Keller" name="author">
 <meta content="Martin Thomson" name="author">
 <meta content="
@@ -20,17 +20,17 @@ The definitions in the vocabulary facilitate a shared understanding between enti
 <meta content="draft-ietf-aipref-vocab-latest" name="ietf.draft">
 <!-- Generator version information:
   xml2rfc 3.28.1
-    Python 3.12.10
+    Python 3.12.11
     ConfigArgParse 1.7
     google-i18n-address 3.1.1
     intervaltree 3.1.0
     Jinja2 3.1.6
-    lxml 5.3.0
-    platformdirs 4.3.7
+    lxml 5.3.1
+    platformdirs 4.3.8
     pycountry 24.6.1
     PyYAML 6.0.2
-    requests 2.32.3
-    setuptools 70.3.0
+    requests 2.32.4
+    setuptools 80.9.0
     wcwidth 0.2.13
 -->
 <link href="draft-ietf-aipref-vocab.xml" rel="alternate" type="application/rfc+xml">
@@ -1049,12 +1049,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <table class="ears">
 <thead><tr>
 <td class="left">Internet-Draft</td>
-<td class="center">Opt-Out Vocab</td>
-<td class="right">May 2025</td>
+<td class="center">AI Preferences</td>
+<td class="right">June 2025</td>
 </tr></thead>
 <tfoot><tr>
 <td class="left">Keller &amp; Thomson</td>
-<td class="center">Expires 16 November 2025</td>
+<td class="center">Expires 18 December 2025</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1067,12 +1067,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <dd class="internet-draft">draft-ietf-aipref-vocab-latest</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2025-05-15" class="published">15 May 2025</time>
+<time datetime="2025-06-16" class="published">16 June 2025</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Standards Track</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2025-11-16">16 November 2025</time></dd>
+<dd class="expires"><time datetime="2025-12-18">18 December 2025</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1087,7 +1087,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 </dd>
 </dl>
 </div>
-<h1 id="title">Proposal for an Opt-Out Vocabulary</h1>
+<h1 id="title">A Vocabulary For Expressing AI Usage Preferences</h1>
 <section id="section-abstract">
       <h2 id="abstract"><a href="#abstract" class="selfRef">Abstract</a></h2>
 <p id="section-abstract-1">This document proposes a standardized vocabulary for expressing preferences related to how digital assets are used by automated processing systems.
@@ -1101,7 +1101,7 @@ The definitions in the vocabulary facilitate a shared understanding between enti
       </h2>
 <p id="section-note.1-1">This note is to be removed before publishing as an RFC.<a href="#section-note.1-1" class="pilcrow">¶</a></p>
 <p id="section-note.1-2">
-        The latest revision of this draft can be found at <span><a href="https://paul2keller.github.io/opt-out-vocab-id/draft-keller-aipref-vocab.html">https://paul2keller.github.io/opt-out-vocab-id/draft-keller-aipref-vocab.html</a></span>.
+        The latest revision of this draft can be found at <span><a href="https://ietf-wg-aipref.github.io/drafts/draft-ietf-aipref-vocab.html">https://ietf-wg-aipref.github.io/drafts/draft-ietf-aipref-vocab.html</a></span>.
         Status information for this document may be found at <span><a href="https://datatracker.ietf.org/doc/draft-ietf-aipref-vocab/">https://datatracker.ietf.org/doc/draft-ietf-aipref-vocab/</a></span>.<a href="#section-note.1-2" class="pilcrow">¶</a></p>
 <p id="section-note.1-3">
         Discussion of this document takes place on the
@@ -1109,7 +1109,7 @@ The definitions in the vocabulary facilitate a shared understanding between enti
         which is archived at <span><a href="https://mailarchive.ietf.org/arch/browse/ai-control/">https://mailarchive.ietf.org/arch/browse/ai-control/</a></span>.
         Subscribe at <span><a href="https://www.ietf.org/mailman/listinfo/ai-control/">https://www.ietf.org/mailman/listinfo/ai-control/</a></span>.<a href="#section-note.1-3" class="pilcrow">¶</a></p>
 <p id="section-note.1-4">Source for this draft and an issue tracker can be found at
-        <span><a href="https://github.com/paul2keller/opt-out-vocab-id">https://github.com/paul2keller/opt-out-vocab-id</a></span>.<a href="#section-note.1-4" class="pilcrow">¶</a></p>
+        <span><a href="https://github.com/ietf-wg-aipref/drafts">https://github.com/ietf-wg-aipref/drafts</a></span>.<a href="#section-note.1-4" class="pilcrow">¶</a></p>
 </section>
 <div id="status-of-memo">
 <section id="section-boilerplate.1">
@@ -1130,7 +1130,7 @@ The definitions in the vocabulary facilitate a shared understanding between enti
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 16 November 2025.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 18 December 2025.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1179,6 +1179,12 @@ The definitions in the vocabulary facilitate a shared understanding between enti
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4.2.3">
                 <p id="section-toc.1-1.4.2.3.1"><a href="#section-4.3" class="auto internal xref">4.3</a>.  <a href="#name-generative-ai-training-cate" class="internal xref">Generative AI Training Category</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4.2.4">
+                <p id="section-toc.1-1.4.2.4.1"><a href="#section-4.4" class="auto internal xref">4.4</a>.  <a href="#name-search-category" class="internal xref">Search Category</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4.2.5">
+                <p id="section-toc.1-1.4.2.5.1"><a href="#section-4.5" class="auto internal xref">4.5</a>.  <a href="#name-ai-inference-category" class="internal xref">AI Inference Category</a></p>
 </li>
             </ul>
 </li>
@@ -1296,35 +1302,54 @@ in one of three states: "allowed", "disallowed", or "unknown".<a href="#section-
 <a href="#section-4" class="section-number selfRef">4. </a><a href="#name-vocabulary-definition" class="section-name selfRef">Vocabulary Definition</a>
       </h2>
 <p id="section-4-1">This section defines the categories of use in the vocabulary.<a href="#section-4-1" class="pilcrow">¶</a></p>
-<p id="section-4-2">The figure below shows the relationship between these categories:<a href="#section-4-2" class="pilcrow">¶</a></p>
-<span id="name-nms-view-of-device-state"></span><figure id="figure-1">
+<p id="section-4-2"><a href="#f-categories" class="auto internal xref">Figure 1</a> shows the relationship between these categories:<a href="#section-4-2" class="pilcrow">¶</a></p>
+<span id="name-relationship-between-catego"></span><div id="f-categories">
+<figure id="figure-1">
         <div id="section-4-3.1">
           <div class="alignLeft art-svg artwork" id="section-4-3.1.1">
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="750" height="300" viewBox="0 0 750 300" text-anchor="middle" stroke-width="2" font-size="14" font-family="sans-serif">
-              <title>Opt-out vocabulary overview</title>
-              <!-- Outer Box -->
-
-          <rect x="50" y="50" width="630" height="220" rx="15" ry="15" fill="white" stroke="black"></rect>
-              <text x="365" y="80">Text and Data Mining</text>
-              <!-- AI Training Box -->
-
-          <rect x="80" y="100" width="380" height="130" rx="10" ry="10" fill="white" stroke="black"></rect>
-              <text x="380" y="170">AI Training</text>
-              <!-- Generative AI Training Box -->
-
-          <rect x="110" y="130" width="200" height="70" rx="5" ry="5" fill="white" stroke="black"></rect>
-              <text x="210" y="170">Generative AI Training</text>
-              <!-- Additional Use Cases Box -->
-
-          <rect x="500" y="100" width="150" height="130" class="dotted" rx="5" ry="5" fill="white" stroke="black" stroke-dasharray="5,5"></rect>
-              <text x="575" y="160">[possibly]:</text>
-              <text x="575" y="180">additional use cases</text>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="256" width="432" viewBox="0 0 432 256" class="diagram" text-anchor="middle" font-family="monospace" font-size="13px" stroke-linecap="round">
+              <path d="M 8,48 L 8,224" fill="none" stroke="black"></path>
+              <path d="M 32,112 L 32,208" fill="none" stroke="black"></path>
+              <path d="M 160,128 L 160,192" fill="none" stroke="black"></path>
+              <path d="M 376,128 L 376,192" fill="none" stroke="black"></path>
+              <path d="M 400,112 L 400,208" fill="none" stroke="black"></path>
+              <path d="M 424,48 L 424,224" fill="none" stroke="black"></path>
+              <path d="M 24,32 L 408,32" fill="none" stroke="black"></path>
+              <path d="M 48,96 L 384,96" fill="none" stroke="black"></path>
+              <path d="M 176,112 L 360,112" fill="none" stroke="black"></path>
+              <path d="M 176,208 L 360,208" fill="none" stroke="black"></path>
+              <path d="M 48,224 L 384,224" fill="none" stroke="black"></path>
+              <path d="M 24,240 L 408,240" fill="none" stroke="black"></path>
+              <path d="M 24,32 C 15.16936,32 8,39.16936 8,48" fill="none" stroke="black"></path>
+              <path d="M 408,32 C 416.83064,32 424,39.16936 424,48" fill="none" stroke="black"></path>
+              <path d="M 48,96 C 39.16936,96 32,103.16936 32,112" fill="none" stroke="black"></path>
+              <path d="M 384,96 C 392.83064,96 400,103.16936 400,112" fill="none" stroke="black"></path>
+              <path d="M 176,112 C 167.16936,112 160,119.16936 160,128" fill="none" stroke="black"></path>
+              <path d="M 360,112 C 368.83064,112 376,119.16936 376,128" fill="none" stroke="black"></path>
+              <path d="M 176,208 C 167.16936,208 160,200.83064 160,192" fill="none" stroke="black"></path>
+              <path d="M 360,208 C 368.83064,208 376,200.83064 376,192" fill="none" stroke="black"></path>
+              <path d="M 48,224 C 39.16936,224 32,216.83064 32,208" fill="none" stroke="black"></path>
+              <path d="M 384,224 C 392.83064,224 400,216.83064 400,208" fill="none" stroke="black"></path>
+              <path d="M 24,240 C 15.16936,240 8,232.83064 8,224" fill="none" stroke="black"></path>
+              <path d="M 408,240 C 416.83064,240 424,232.83064 424,224" fill="none" stroke="black"></path>
+              <g class="text">
+                <text x="148" y="68">Text</text>
+                <text x="184" y="68">and</text>
+                <text x="220" y="68">Data</text>
+                <text x="268" y="68">Mining</text>
+                <text x="60" y="164">AI</text>
+                <text x="108" y="164">Training</text>
+                <text x="220" y="164">Generative</text>
+                <text x="276" y="164">AI</text>
+                <text x="324" y="164">Training</text>
+              </g>
             </svg><a href="#section-4-3.1.1" class="pilcrow">¶</a>
 </div>
 </div>
 <figcaption><a href="#figure-1" class="selfRef">Figure 1</a>:
-<a href="#name-nms-view-of-device-state" class="selfRef">NMS View of Device State</a>
+<a href="#name-relationship-between-catego" class="selfRef">Relationship Between Categories of Use</a>
         </figcaption></figure>
+</div>
 <p id="section-4-4">This list of specific use cases may be expanded in the future, should a consensus emerge between stakeholders, to include categories that address additional use cases as they emerge. In addition to these categories defined in the vocabulary, it is also expected that some systems implementing this vocabulary may extend this list with additional categories for their particular needs.<a href="#section-4-4" class="pilcrow">¶</a></p>
 <div id="text-and-data-mining-tdm-category">
 <section id="section-4.1">
@@ -1332,7 +1357,7 @@ in one of three states: "allowed", "disallowed", or "unknown".<a href="#section-
 <a href="#section-4.1" class="section-number selfRef">4.1. </a><a href="#name-text-and-data-mining-tdm-ca" class="section-name selfRef">Text and Data Mining (TDM) Category</a>
         </h3>
 <p id="section-4.1-1">The act of using one or more assets in the context of any automated analytical technique aimed at analyzing text and data in digital form in order to generate information which includes but is not limited to patterns, trends and correlations.<a href="#section-4.1-1" class="pilcrow">¶</a></p>
-<p id="section-4.1-2">The overarching TDM category is based on the definition of Text and Data Mining in Article 2(2) of <span>[<a href="#EUCD2019" class="cite xref">EUCD2019</a>]</span>.<a href="#section-4.1-2" class="pilcrow">¶</a></p>
+<p id="section-4.1-2">The use of assets for TDM encompasses all the subsequent categories.<a href="#section-4.1-2" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="ai-training-category">
@@ -1351,6 +1376,23 @@ in one of three states: "allowed", "disallowed", or "unknown".<a href="#section-
         </h3>
 <p id="section-4.3-1">The act of training General Purpose AI models that have the capacity to generate text, images or other forms of synthetic content, or the act of training other types of AI models that have the purpose of generating text, images or other forms of synthetic content.<a href="#section-4.3-1" class="pilcrow">¶</a></p>
 <p id="section-4.3-2">The use of assets for Generative AI Training is a proper subset of AI Training usage.<a href="#section-4.3-2" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="search-category">
+<section id="section-4.4">
+        <h3 id="name-search-category">
+<a href="#section-4.4" class="section-number selfRef">4.4. </a><a href="#name-search-category" class="section-name selfRef">Search Category</a>
+        </h3>
+<p id="section-4.4-1">The act of using one or more assets to build a search index or as input to a trained AI/ML model that has the purpose of providing search results
+that include direct links to the location from where the asset was obtained.<a href="#section-4.4-1" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="ai-inference-category">
+<section id="section-4.5">
+        <h3 id="name-ai-inference-category">
+<a href="#section-4.5" class="section-number selfRef">4.5. </a><a href="#name-ai-inference-category" class="section-name selfRef">AI Inference Category</a>
+        </h3>
+<p id="section-4.5-1">The act of using one or more assets as input to a trained AI/ML model as part of the operation of that model (as opposed to the training of the model).<a href="#section-4.5-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 </section>
