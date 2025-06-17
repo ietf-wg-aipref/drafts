@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-06-12T02:01:23.317357+00:00",
+  "timestamp": "2025-06-17T02:03:12.258266+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -1999,6 +1999,63 @@
         }
       ],
       "reviews": []
+    },
+    {
+      "number": 43,
+      "id": "PR_kwDOOWk1-s6aoJGZ",
+      "title": "Add attachment draft",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/43",
+      "state": "MERGED",
+      "author": "martinthomson",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "This is a direct copy, with just a name change and the necessary metadata updates.",
+      "createdAt": "2025-06-16T01:42:22Z",
+      "updatedAt": "2025-06-16T02:50:37Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "ef4b509cf973c45aaca0f1b61a3db13377e4a2bb",
+      "headRepository": "ietf-wg-aipref/drafts",
+      "headRefName": "attachment",
+      "headRefOid": "27db69a789354a1da95ac4e6f735ea2227d0d8ed",
+      "closedAt": "2025-06-16T02:50:36Z",
+      "mergedAt": "2025-06-16T02:50:36Z",
+      "mergedBy": "martinthomson",
+      "mergeCommit": {
+        "oid": "535d8c5542e6de75b5213e30dc3a9f2fa5a8c832"
+      },
+      "comments": [
+        {
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "@mnot @sureshkrishnan you should add @garyillyes to the repo, if you haven't already.",
+          "createdAt": "2025-06-16T01:43:08Z",
+          "updatedAt": "2025-06-16T01:43:08Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Invited.",
+          "createdAt": "2025-06-16T01:46:55Z",
+          "updatedAt": "2025-06-16T01:46:55Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWk1-s6uqyhy",
+          "commit": {
+            "abbreviatedOid": "27db69a"
+          },
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-06-16T01:46:05Z",
+          "updatedAt": "2025-06-16T01:46:05Z",
+          "comments": []
+        }
+      ]
     }
   ]
 }
