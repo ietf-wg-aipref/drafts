@@ -36,9 +36,11 @@ normative:
   FIELDS: RFC9651
   HTTP: RFC9110
   ROBOTS: RFC9309
+  URI: RFC3986
   VOCAB: I-D.ietf-aipref-vocab
 
 informative:
+  HTTP-CACHE: RFC9111
 
 
 --- abstract
@@ -189,102 +191,140 @@ will not comply with this requirement.
 The Content-Usage field does not have any special effect on caching.
 
 
-# Robots Exclusion Protocol Content-Usage Directive {#robots}
+# Robots Exclusion Protocol Content-Usage Rule {#robots}
 
-A Content-Usage directive is added to the Group definition
-in the Robots Exclusion Protocol format {{ROBOTS}}.
+A Content-Usage rule is added to the set of potential rules
+that can be included in a Group
+for the Robots Exclusion Protocol format {{ROBOTS}}.
 
-That is, the ABNF is extended as follows:
+The `rule` ABNF pattern from {{Section 2.2 of ROBOTS}}
+is extended as shown in {{f-abnf}}.
 
 ~~~abnf
-group = startgroupline *(startgroupline / emptyline)
-        [content-usage] ; <-- NEW
-        *(rule / emptyline)
+rule =/ content-usage
 
-content-usage = *WS "content-usage" *WS ":" *WS usage-pref
-usage-pref    = <usage preference vocabulary; see [VOCAB]>
+content-usage = *WS "content-usage" *WS ":" *WS
+                [ path-pattern 1*WS ] usage-pref EOL
+usage-pref    = <usage preference vocabulary from [VOCAB]>
 ~~~
+{: #f-abnf title="Extended robots.txt ABNF"}
 
-This directive updates the definition of a group to be more expansive.
-Where a group was previously a set of user-agents
-(either "*" or a set of one or more identifiers),
-a Group is updated to include zero or one Content-Usage preferences.
+Each group contains zero or more Content-Usage rules.
+Each Content-Usage rule consists of a path
+and a usage preference.
+The path might be absent or empty;
+if a path present,
+a SP or HTAB separates it from the usage preference.
 
-## Processing Multiple Groups
+Note that the usage preference expression encoding
+does not use an ABNF definition,
+relying instead on the definitions in {{FIELDS}}.
 
-The effect of this change is that
-a crawler might need to consider multiple groups.
-A crawler needs to consider this both to decide
-whether content can be requested
-and to determine what preferences apply to content.
 
-Rather than looking for a group based on a specific User-Agent identifier,
-such as "ExampleBot",
-then falling back to the wildcard group ("*"),
-a crawler might have multiple groups,
-each with a different set of preferences.
+## Content-Rule Semantics
 
-Where there are multiple groups,
-a crawler first looks for groups with a matching User-Agent identifer.
-If any groups match the crawler identity
-(as defined in {{Section 2.2.1 of ROBOTS}}),
-all matching groups are considered.
-If there are no matching groups,
-all groups that include a User-Agent of "*" are considered.
+Each group in the file applies to a set of crawlers,
+identified by product token as defined in {{Section 2.2.1 of ROBOTS}}.
+The Allow and Disallow rules determine what resources can be crawled,
+using the rule that has the longest matching path prefix,
+as defined in {{Section 2.2.2 of ROBOTS}}.
 
-In determining which group applies for a given resource,
-the crawler evaluates each group in turn.
-Any group for which the resource is disallowed
-(as defined in {{Section 2.2.2 of ROBOTS}})
-is excluded.
-If all groups are excluded in this way,
-the resource is not crawled.
+Any Content-Usage rules determine the usage preferences for resources
+using the same path prefix matching rules as defined for Allow and Disallow.
+That is, the path prefix length is determined by counting the number of bytes
+in the encoded path.
 
-If any group allows the crawling of the resource,
-content can be retrieved.
-If multiple groups allow crawling,
-the usage preference from the group
-with the longest Allow rule match
-applies to that content.
+Usage preferences apply only to those resources that can be crawled
+according to Allow/Disallow rules;
+no preferences are implied for resources that are disallowed.
 
-For example, given the following "robots.txt" document:
+Paths specified for Content-Usage rules use the same percent-encoding rules
+as used for Allow/Disallow rules,
+as defined in {{Section 2.1 of URI}}.
+In particular, SP (U+20) and HTAB (U+09) characters need to be replaced
+with "%20" and "%09" respectively.
+
+The ordering of rules in a group carries no semantics.
+Thus, Content-Usage rules can be interleaved
+with Allow and Disallow rules.
+
+If there are Content-Usage rules that have identical paths
+and conflicting usage preferences,
+these preferences apply separately
+according to the process defined in {{Section 7.1 of VOCAB}}.
+
+A crawlers can cache a "robots.txt" file for up to 24 hours,
+following HTTP Cache-Control semantics defined in {{HTTP-CACHE}};
+see {{Section 2.4 of ROBOTS}} for details.
+Updates to preferences within the period that a file is cached
+might not be visible.
+
+
+## Processing Content-Usage Rules
+
+To process a Content-Usage rule,
+a parser identifies lines with the "Content-Usage" label.
+This requires that SP and HTAB characters are ignored,
+before and after the label,
+in addition to before and after the COLON (":", U+3A) separator.
+
+The remainder of the line -
+up to either the first CR (U+0D), LF (U+0A), or octothorpe ("#", U+23) -
+is the rule value.
+
+The first character of the rule value will be "/" (U+2F)
+if a non-empty path is specified.
+Paths always start with a "/" character,
+so a rule value that starts with any other character
+indicates that the path is absent.
+
+If a path is specified,
+the path ends immediately before the first SP (U+20) or HTAB ("U+09") character.
+The remainder of the rule value is the usage preference expression.
+If a path is absent,
+the entire rule value is the usage preference expression.
+
+The usage preference is encoded using the exemplary format
+defined in {{Section 6 of VOCAB}}.
+The parsing and processing rules from {{Sections 6 and 7 of VOCAB}} apply.
+
+Note that a usage preference expression is processed as a sequence of bytes,
+rather than Unicode text; see {{Section 6.3 of VOCAB}}.
+
+
+## Example
+
+{{f-ex-robots}} shows a simple "robots.txt" document.
 
 ~~~
 User-Agent: *
 Content-Usage: ai=n
+Content-Usage: /ai-ok/ ai=y
 Allow: /
 Disallow: /never/
-
-User-Agent: *
-Content-Usage: ai=y
-Allow: /ai-ok/
-Disallow: /
 
 User-Agent: ExampleBot
 Content-Usage: ai=y
 Allow: /
 ~~~
+{: #f-ex-robots title="Example robots.txt file"}
 
-A crawler that identifies as "ExampleBot"
-would be able to obtain all content
-and apply preferences of "ai=y"
-(processed as defined in {{VOCAB}}).
+A crawler that identifies as "ExampleBot" uses the second group.
+That crawler would be able to obtain all content
+and apply usage preferences of "ai=y" as defined in {{VOCAB}}.
 
-All other crawlers would use the same two groups.
-The first group allows the retrieval of most resources,
-excluding resources starting with "/never/",
-and applies a usage preference of "ai=n" across those resources.
-The second group creates a specific rule
-for resources under "/ai-ok",
-where the usage preference is "ai=y".
-This might result in the following outcome after crawling:
+All other crawlers use the first group.
+This allows crawling of all content other than resources under "/never/".
+Of those resources,
+those under "/ai-ok/" have an associated usage preference of "ai=y"
+and all other resources have a usage preference of "ai=n".
 
-
-| Path           | Allowed | Saved Preference |
+| Path           | Crawl   | Usage Preference |
 |:---------------|:-------:|:-----------------|
 | /test          |  yes    | ai=n             |
-| /never/test    |  no     | n/a              |
+| /never/test    |  no     | N/A              |
 | /ai-ok/test    |  yes    | ai=y             |
+{: #t-example title="Sample of usage preferences for different paths"}
 
 
 # Security Considerations
