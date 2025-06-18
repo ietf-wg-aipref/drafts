@@ -1,0 +1,344 @@
+
+
+
+
+AI Preferences                                                 G. Illyes
+Internet-Draft                                                    Google
+Updates: 9309 (if approved)                                   M. Thomson
+Intended status: Standards Track                                 Mozilla
+Expires: 20 December 2025                                   18 June 2025
+
+
+             Indicating Preferences Regarding Content Usage
+                    draft-ietf-aipref-attach-latest
+
+Abstract
+
+   Content creators and other stakeholders might wish to signal their
+   preferences about how their content might be consumed by automated
+   systems.  This document defines how preferences can be signaled as
+   part of the acquisition of content in HTTP.
+
+   This document updates RFC 9309 to allow for the inclusion of usage
+   preferences.
+
+About This Document
+
+   This note is to be removed before publishing as an RFC.
+
+   The latest revision of this draft can be found at https://ietf-wg-
+   aipref.github.io/drafts/draft-ietf-aipref-attach.html.  Status
+   information for this document may be found at
+   https://datatracker.ietf.org/doc/draft-ietf-aipref-attach/.
+
+   Discussion of this document takes place on the AI Preferences Working
+   Group mailing list (mailto:ai-control@ietf.org), which is archived at
+   https://mailarchive.ietf.org/arch/browse/ai-control/.  Subscribe at
+   https://www.ietf.org/mailman/listinfo/ai-control/.
+
+   Source for this draft and an issue tracker can be found at
+   https://github.com/ietf-wg-aipref/drafts.
+
+Status of This Memo
+
+   This Internet-Draft is submitted in full conformance with the
+   provisions of BCP 78 and BCP 79.
+
+   Internet-Drafts are working documents of the Internet Engineering
+   Task Force (IETF).  Note that other groups may also distribute
+   working documents as Internet-Drafts.  The list of current Internet-
+   Drafts is at https://datatracker.ietf.org/drafts/current/.
+
+   Internet-Drafts are draft documents valid for a maximum of six months
+   and may be updated, replaced, or obsoleted by other documents at any
+   time.  It is inappropriate to use Internet-Drafts as reference
+   material or to cite them other than as "work in progress."
+
+   This Internet-Draft will expire on 20 December 2025.
+
+Copyright Notice
+
+   Copyright (c) 2025 IETF Trust and the persons identified as the
+   document authors.  All rights reserved.
+
+   This document is subject to BCP 78 and the IETF Trust's Legal
+   Provisions Relating to IETF Documents (https://trustee.ietf.org/
+   license-info) in effect on the date of publication of this document.
+   Please review these documents carefully, as they describe your rights
+   and restrictions with respect to this document.  Code Components
+   extracted from this document must include Revised BSD License text as
+   described in Section 4.e of the Trust Legal Provisions and are
+   provided without warranty as described in the Revised BSD License.
+
+Table of Contents
+
+   1.  Introduction
+     1.1.  Preference Expressions
+     1.2.  Examples
+     1.3.  Embedded Preferences
+     1.4.  Conventions and Definitions
+   2.  HTTP Content-Usage Header Field
+   3.  Robots Exclusion Protocol Content-Usage Directive
+     3.1.  Processing Multiple Groups
+   4.  Security Considerations
+   5.  IANA Considerations
+   6.  Normative References
+   Acknowledgments
+   Authors' Addresses
+
+1.  Introduction
+
+   The automated consumption of content by crawlers and other machines
+   has increased significantly in recent years.  This is partly due to
+   the training of machine-learning models.
+
+   Content creators and other stakeholders, such as distributors, might
+   wish to express a preference regarding the types of usage they
+   consider acceptable.  Entities that might use that content need those
+   preferences to be expressed in a way that is easily consumed by an
+   automated system.
+
+   This document describes two mechanisms for associating preferences
+   with content:
+
+   *  A Content-Usage header field for HTTP [HTTP]; see Section 2.
+
+   *  A Content-Usage directive for the Robots Exclusion Protocol
+      (colloquially known as "robots.txt") [ROBOTS]; see Section 3.
+
+   For automated systems that use HTTP to gather content, these allow
+   for the automated gathering of preferences in the same way that
+   content is obtained.
+
+1.1.  Preference Expressions
+
+   The format of preference expressions is defined in the preference
+   vocabulary [VOCAB].  The preference vocabulary defines:
+
+   *  what preferences can be expressed,
+
+   *  how multiple expressions of preference are combined, and
+
+   *  how those preferences are turned into strings or byte sequences
+      for use in a protocol.
+
+   This document only defines how the strings or byte sequences are
+   conveyed so that the preferences can be associated with content.
+
+1.2.  Examples
+
+   A server that provides content using HTTP could signal preferences
+   about how that content is used with the Content-Usage header field as
+   follows:
+
+   200 OK
+   Date: Wed, 23 Apr 2025 04:48:02 GMT
+   Content-Type: text/plain
+   Content-Usage: ai=n
+
+   This is some content.
+
+   Alternatively, or additionally, a server might include the same
+   directive in its "robots.txt" file:
+
+   User-Agent: *
+   Content-Usage: ai=n
+   Allow: /
+
+1.3.  Embedded Preferences
+
+   This document does not define a means of embedding preferences in
+   content.  Embedding preferences is expected to be an effective means
+   of associating preferences with content, because it ensures that
+   metadata is always associated with content.
+
+   The main challenge with embedding is that a different method is
+   needed for each content type.  That is, a different means of
+   conveying preferences needs to be defined for each audio, documents,
+   images, video, or other content format.  Furthermore, some content
+   types, such as plain text (text/plain), offer no universal means of
+   carrying metadata.  Though preferences might still be embedded in
+   content with these formats, those preferences would not be reliably
+   accessible to an automated system.
+
+   The mechanisms in this document are therefore universal, in the sense
+   that they apply to any content type.  They are not universal in that
+   they rely on the content being obtained using HTTP (and maybe FTP).
+
+   Future work might define how preferences might be indicated for
+   alternative content distribution or acquisition methods, such as
+   email.
+
+1.4.  Conventions and Definitions
+
+   The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
+   "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and
+   "OPTIONAL" in this document are to be interpreted as described in
+   BCP 14 [RFC2119] [RFC8174] when, and only when, they appear in all
+   capitals, as shown here.
+
+2.  HTTP Content-Usage Header Field
+
+   The Content-Usage field is a structured field dictionary, as defined
+   in Section 3.2 of [FIELDS].  This field follows the vocabulary and
+   processing rules in [VOCAB].
+
+   This field indicates usage preferences regarding the content of the
+   HTTP message.  That is, the representation data, as defined in
+   Section 8.1 of [HTTP], not the resource.
+
+   Servers MUST retain any preferences associated with a request if the
+   content of that request is used to answer later requests.  For
+   example, the content of a PUT request that is used to answer
+   subsequent GET requests.  Note that servers that have not been
+   updated to understand this field will not comply with this
+   requirement.
+
+   The Content-Usage field does not have any special effect on caching.
+
+3.  Robots Exclusion Protocol Content-Usage Directive
+
+   A Content-Usage directive is added to the Group definition in the
+   Robots Exclusion Protocol format [ROBOTS].
+
+   That is, the ABNF is extended as follows:
+
+   group = startgroupline *(startgroupline / emptyline)
+           [content-usage] ; <-- NEW
+           *(rule / emptyline)
+
+   content-usage = *WS "content-usage" *WS ":" *WS usage-pref
+   usage-pref    = <usage preference vocabulary; see [VOCAB]>
+
+   This directive updates the definition of a group to be more
+   expansive.  Where a group was previously a set of user-agents (either
+   "*" or a set of one or more identifiers), a Group is updated to
+   include zero or one Content-Usage preferences.
+
+3.1.  Processing Multiple Groups
+
+   The effect of this change is that a crawler might need to consider
+   multiple groups.  A crawler needs to consider this both to decide
+   whether content can be requested and to determine what preferences
+   apply to content.
+
+   Rather than looking for a group based on a specific User-Agent
+   identifier, such as "ExampleBot", then falling back to the wildcard
+   group ("*"), a crawler might have multiple groups, each with a
+   different set of preferences.
+
+   Where there are multiple groups, a crawler first looks for groups
+   with a matching User-Agent identifer.  If any groups match the
+   crawler identity (as defined in Section 2.2.1 of [ROBOTS]), all
+   matching groups are considered.  If there are no matching groups, all
+   groups that include a User-Agent of "*" are considered.
+
+   In determining which group applies for a given resource, the crawler
+   evaluates each group in turn.  Any group for which the resource is
+   disallowed (as defined in Section 2.2.2 of [ROBOTS]) is excluded.  If
+   all groups are excluded in this way, the resource is not crawled.
+
+   If any group allows the crawling of the resource, content can be
+   retrieved.  If multiple groups allow crawling, the usage preference
+   from the group with the longest Allow rule match applies to that
+   content.
+
+   For example, given the following "robots.txt" document:
+
+   User-Agent: *
+   Content-Usage: ai=n
+   Allow: /
+   Disallow: /never/
+
+   User-Agent: *
+   Content-Usage: ai=y
+   Allow: /ai-ok/
+   Disallow: /
+
+   User-Agent: ExampleBot
+   Content-Usage: ai=y
+   Allow: /
+
+   A crawler that identifies as "ExampleBot" would be able to obtain all
+   content and apply preferences of "ai=y" (processed as defined in
+   [VOCAB]).
+
+   All other crawlers would use the same two groups.  The first group
+   allows the retrieval of most resources, excluding resources starting
+   with "/never/", and applies a usage preference of "ai=n" across those
+   resources.  The second group creates a specific rule for resources
+   under "/ai-ok", where the usage preference is "ai=y".  This might
+   result in the following outcome after crawling:
+
+               +=============+=========+==================+
+               | Path        | Allowed | Saved Preference |
+               +=============+=========+==================+
+               | /test       |   yes   | ai=n             |
+               +-------------+---------+------------------+
+               | /never/test |    no   | n/a              |
+               +-------------+---------+------------------+
+               | /ai-ok/test |   yes   | ai=y             |
+               +-------------+---------+------------------+
+
+                                 Table 1
+
+4.  Security Considerations
+
+   Processing usage preferences involves the parsing of text that is
+   produced by potential adversaries.  Different guidelines for robust
+   parsing can be found in Section 6 of [FIELDS] and Section 17 of
+   [HTTP].
+
+   Section 3 of [ROBOTS] describes security considerations for
+   "robots.txt".  A "robots.txt" file can be up to 500KiB of text.  This
+   specification does not increase this limit.
+
+5.  IANA Considerations
+
+   TODO request registration of field
+
+6.  Normative References
+
+   [FIELDS]   Nottingham, M. and P. Kamp, "Structured Field Values for
+              HTTP", RFC 9651, DOI 10.17487/RFC9651, September 2024,
+              <https://www.rfc-editor.org/rfc/rfc9651>.
+
+   [HTTP]     Fielding, R., Ed., Nottingham, M., Ed., and J. Reschke,
+              Ed., "HTTP Semantics", STD 97, RFC 9110,
+              DOI 10.17487/RFC9110, June 2022,
+              <https://www.rfc-editor.org/rfc/rfc9110>.
+
+   [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
+              Requirement Levels", BCP 14, RFC 2119,
+              DOI 10.17487/RFC2119, March 1997,
+              <https://www.rfc-editor.org/rfc/rfc2119>.
+
+   [RFC8174]  Leiba, B., "Ambiguity of Uppercase vs Lowercase in RFC
+              2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
+              May 2017, <https://www.rfc-editor.org/rfc/rfc8174>.
+
+   [ROBOTS]   Koster, M., Illyes, G., Zeller, H., and L. Sassman,
+              "Robots Exclusion Protocol", RFC 9309,
+              DOI 10.17487/RFC9309, September 2022,
+              <https://www.rfc-editor.org/rfc/rfc9309>.
+
+   [VOCAB]    Keller, P. and M. Thomson, "Proposal for an Opt-Out
+              Vocabulary", Work in Progress, Internet-Draft, draft-ietf-
+              aipref-vocab-00, 30 April 2025,
+              <https://datatracker.ietf.org/doc/html/draft-ietf-aipref-
+              vocab-00>.
+
+Acknowledgments
+
+   TODO acknowledge.
+
+Authors' Addresses
+
+   Gary Illyes
+   Google
+   Email: garyillyes@google.com
+
+
+   Martin Thomson
+   Mozilla
+   Email: mt@lowentropy.net
