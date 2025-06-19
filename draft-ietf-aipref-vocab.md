@@ -48,26 +48,33 @@ informative:
 
 --- abstract
 
-This document proposes a standardized vocabulary for expressing preferences related to how digital assets are used by automated processing systems.
-This vocabulary allows for the creation of structured declarations about restrictions or permissions for use of digital assets by such systems.
-The vocabulary is agnostic to the means by which it is conveyed.
-The definitions in the vocabulary facilitate a shared understanding between entities that express such preferences and those that use the associated digital assets.
+This document proposes a standardized vocabulary for expressing preferences
+related to how digital assets are used by automated processing systems.
+This vocabulary allows for the creation of structured declarations
+about restrictions or permissions for use of digital assets by such systems.
+
 
 --- middle
 
 # Introduction
 
-This document defines a common vocabulary of terms for automated systems that process digital assets. The primary purpose of this vocabulary is to enable machine-readable expressions of preferences about how digital assets are used by automated processing systems, in the context of training AI models and other forms of text and data mining (TDM).
+This document defines a common vocabulary of terms for automated systems that process digital assets.
+The primary purpose of this vocabulary is to enable machine-readable expressions of preferences
+about how digital assets are used by automated processing systems
+in the context of training AI models and other forms of automated processing.
 
-The terms defined by the vocabulary can be used to describe, in a standardized way, the types of uses that a declaring party may wish to explicitly restrict or allow.
-Preferences are then expressed as a grant or denial of permission concerning each of the types of use defined in the vocabulary.
+The terms defined by the vocabulary can be used to describe,
+in a standardized way,
+the types of uses that a declaring party may wish to explicitly restrict or allow.
+Preferences are then expressed as a grant or denial of permission
+concerning each of the types of use defined in the vocabulary.
 This ensures that preferences can be communicated, processed, and stored in a consistent and interoperable manner.
 
-The vocabulary is neutral to the technical details of how systems act on preferences.
-It is designed to ensure that preference information can be exchanged between different systems and consistently understood.
-
-The vocabulary is intended to govern the use of digital assets for the training of AI models and other forms of automated processing.
-It does not concern itself with the mechanisms involved in obtaining digital assets (i.e., crawling).
+The vocabulary or the preferences that might be expressed
+do not proscribe how automated processing systems obtain or act on preferences.
+Separate documents will describe how preferences might be associated with assets.
+It is designed to ensure that preference information can be exchanged between different systems
+and consistently understood.
 
 The vocabulary is intended to work in contexts where such preferences result in legal obligations (such as rights reservations made by rightholders in jurisdictions with conditional TDM exceptions), and in contexts where this is not the case. It is without prejudice to applicable laws and the applicability of exceptions and limitations to copyright.
 
@@ -160,6 +167,11 @@ The act of training General Purpose AI models that have the capacity to generate
 
 The use of assets for Generative AI Training is a proper subset of AI Training usage.
 
+## Search Category {#search}
+
+The act of using one or more assets to build a search index or as input to a trained AI/ML model that has the purpose of providing search results
+that include direct links to the location from where the asset was obtained.
+
 ## AI Inference Category {#inference}
 
 The act of using one or more assets as input to a trained AI/ML model as part of the operation of that model (as opposed to the training of the model).
@@ -218,6 +230,7 @@ Each usage category in the vocabulary ({{vocab}}) is mapped to a short textual l
 | Text and Data Mining   | tdm       | {{tdm}}       |
 | AI Training            | ai        | {{ai}}        |
 | Generative AI Training | genai     | {{genai}}     |
+| Search                 | search    | {{search}}    |
 | AI Inference           | inference | {{inference}} |
 {: #t-category-labels title="Mappings for Categories"}
 
@@ -318,11 +331,85 @@ This includes where keys include uppercase characters,
 as this format is case sensitive
 (more correctly, it operates on bytes, not strings).
 
+This process produces an abstract data structure
+that assigns a preference to each usage category
+as described in {{model}}.
+
 
 ## Alternative Formats
 
 This format is only an exemplary way to represent preferences.
 The model described in {{model}}, can be used without this serialization.
+
+Any alternative format needs to define how that model is represented
+and how to generate the same model
+from any alternative representation.
+
+
+# Consulting a Preference Expression {#consulting}
+
+After processing a preference expression ({{processing}}),
+an application can request the status of a specific usage category.
+
+A single preference expression can be evaluated for a usage category
+as follows:
+
+1. If the expression contains an explicit preference
+   (either to allow or disallow),
+   that is the result.
+
+2. Otherwise, if the usage category is a proper subset
+   of another usage category,
+   recursively apply this process to that category
+   and use the result of that process.
+
+3. Otherwise, no preference is expressed.
+
+This process results in three potential answers:
+allow, disallow, and no preference.
+Applications can use the answer to guide their behavior.
+
+One approach for dealing with a "no preference" answer
+is to assign a default.
+This document takes no position on what default might be chosen
+as that will depend on policy constraints
+beyond the scope of this specification.
+
+
+## Combining Preferences {#combining}
+
+The application might have multiple preference expressions,
+obtained using different methods.
+
+If multiple preference expressions are active,
+all preference expressions are consulted ({{consulting}}),
+unless some can be discarded ({{overriding}}).
+This might result in conflicting answers.
+
+Absent some other means of resolving conflicts,
+the following process applies to each usage category:
+
+* If any preference expression indicates that the usage is disallowed,
+  the result is that the usage is disallowed.
+
+* Otherwise, if any preference preference allows the usage,
+  the result is that the usage is allowed.
+
+* Otherwise, no preference is expressed.
+
+This process ensures that the most restrictive preference applies.
+
+
+## Overriding Preferences {#overriding}
+
+Any method of attaching preference expressions to assets
+can specify conditions
+where the preferences obtained using one method
+override those of another method.
+
+If an application has two preference expressions
+where one is defined as overriding the other,
+the overridden preference can be discarded.
 
 
 # Security Considerations
@@ -374,6 +461,7 @@ The registry is seeded with the values in {{t-registry-seed}}.
 | tdm       | Text and Data Mining   | (none)    | {{tdm}}       |
 | ai        | AI Training            | tdm       | {{ai}}        |
 | genai     | Generative AI Training | ai        | {{genai}}     |
+| search    | Search                 | tdm       | {{search}}    |
 | inference | AI Inference           | tdm       | {{inference}} |
 {: #t-registry-seed title="Initial Registry Contents"}
 
@@ -423,3 +511,4 @@ The following individuals have been involved in the drafting of the proposal:
 * Sebastian Posth, Liccium
 * Leonard Rosenthol, Adobe
 * Laurent Le Meur, EDRLab
+* Timid Robot Zehta, Creative Commons
