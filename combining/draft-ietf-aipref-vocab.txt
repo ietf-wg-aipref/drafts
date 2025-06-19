@@ -5,8 +5,8 @@
 AI Preferences                                                 P. Keller
 Internet-Draft                                               Open Future
 Intended status: Standards Track                         M. Thomson, Ed.
-Expires: 23 November 2025                                        Mozilla
-                                                             22 May 2025
+Expires: 21 December 2025                                        Mozilla
+                                                            19 June 2025
 
 
             A Vocabulary For Expressing AI Usage Preferences
@@ -55,7 +55,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 23 November 2025.
+   This Internet-Draft will expire on 21 December 2025.
 
 Copyright Notice
 
@@ -80,6 +80,7 @@ Table of Contents
      4.1.  Text and Data Mining (TDM) Category
      4.2.  AI Training Category
      4.3.  Generative AI Training Category
+     4.4.  AI Inference Category
    5.  Usage
      5.1.  More Specific Instructions
      5.2.  Vocabulary Extensions
@@ -221,8 +222,7 @@ Table of Contents
    in order to generate information which includes but is not limited to
    patterns, trends and correlations.
 
-   The overarching TDM category is based on the definition of Text and
-   Data Mining in Article 2(2) of [EUCD2019].
+   The use of assets for TDM encompasses all the subsequent categories.
 
 4.2.  AI Training Category
 
@@ -240,6 +240,12 @@ Table of Contents
 
    The use of assets for Generative AI Training is a proper subset of AI
    Training usage.
+
+4.4.  AI Inference Category
+
+   The act of using one or more assets as input to a trained AI/ML model
+   as part of the operation of that model (as opposed to the training of
+   the model).
 
 5.  Usage
 
@@ -406,8 +412,9 @@ Table of Contents
 
 6.6.  Alternative Formats
 
-   This format is only a exemplary way to represent preferences.  The
-   model described in Section 3 can be used without this serialization.
+   This format is only an exemplary way to represent preferences.  The
+   model described in Section 3, can be used without this serialization.
+
    Any alternative format needs to define how that model is represented
    and how to generate the same model from any alternative
    representation.
