@@ -294,7 +294,26 @@ TODO Security
 
 # IANA Considerations
 
-TODO request registration of field
+The Content-Usage HTTP header field defined in {{header}}
+is added to the "HTTP Field Name" registry
+established in {{Section 18.4 of HTTP}}:
+
+Field Name:
+: Content-Usage
+
+Status:
+: permanent
+
+Structured Type:
+: Dictionary
+
+Reference:
+: {{header}}
+
+Comments:
+: None
+{: spacing="compact"}
+
 
 --- back
 
