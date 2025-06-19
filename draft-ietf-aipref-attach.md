@@ -37,7 +37,19 @@ normative:
   HTTP: RFC9110
   ROBOTS: RFC9309
   URI: RFC3986
-  VOCAB: I-D.ietf-aipref-vocab
+  VOCAB:
+    title: "A Vocabulary For Expressing AI Usage Preferences"
+    date: draft-ietf-aipref-vocab-date
+    seriesinfo:
+      Internet-Draft: draft-ietf-aipref-vocab-latest
+    author:
+      -
+        fullname: Paul Keller
+        organization: Open Future
+      -
+        fullname: Martin Thomson
+        role: editor
+        organization: Mozilla
 
 informative:
   HTTP-CACHE: RFC9111
