@@ -19,7 +19,10 @@ The work includes a vocabulary of terms and their meanings.  We define how someo
 
 ## Protocol Elements
 
-Coming soon.
+* [Editor's Copy](https://ietf-wg-aipref.github.io/drafts/#go.draft-ietf-aipref-attach.html)
+* [Datatracker Page](https://datatracker.ietf.org/doc/draft-ietf-aipref-attach)
+* [Working Group Draft](https://datatracker.ietf.org/doc/html/draft-ietf-aipref-attach)
+* [Compare Editor's Copy to Working Group Draft](https://ietf-wg-aipref.github.io/drafts/#go.draft-ietf-aipref-attach.diff)
 
 
 ## Contributing
@@ -41,4 +44,3 @@ $ make
 
 Command line usage requires that you have the necessary software installed.  See
 [the instructions](https://github.com/martinthomson/i-d-template/blob/main/doc/SETUP.md).
-
