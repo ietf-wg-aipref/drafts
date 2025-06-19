@@ -76,7 +76,17 @@ Separate documents will describe how preferences might be associated with assets
 It is designed to ensure that preference information can be exchanged between different systems
 and consistently understood.
 
-The vocabulary is intended to work in contexts where such preferences result in legal obligations (such as rights reservations made by rightholders in jurisdictions with conditional TDM exceptions), and in contexts where this is not the case. It is without prejudice to applicable laws and the applicability of exceptions and limitations to copyright.
+
+The vocabulary is intended to be usable
+both where expressing preferences results in legal obligations
+and where there are no associated legal protections.
+That is, preferences can be expressed to invoke specific protections,
+or they can be made without any presumption of specific legal consequences.
+Potential legal obligations include rights reservations made by rightholders
+in jurisdictions with conditional exceptions on copyright protections.
+Expressing preferences is without prejudice to applicable laws,
+including the applicability of exceptions and limitations to copyright.
+
 
 # Conventions and Definitions
 
