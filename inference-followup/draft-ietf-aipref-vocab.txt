@@ -255,7 +255,7 @@ Table of Contents
    the asset was obtained.
 
    The use of assets for AI Training is a proper subset of TDM usage.
-   [[Open issue: https://github.com/ietf-wg-aipref/drafts/issues/49]]
+   [[Open issue (https://github.com/ietf-wg-aipref/drafts/issues/49)]]
 
 4.5.  AI Inference Category
 
@@ -264,7 +264,7 @@ Table of Contents
    the model).
 
    The use of assets for AI Training is a proper subset of TDM usage.
-   [[Open issue: https://github.com/ietf-wg-aipref/drafts/issues/42]]
+   [[Open issue (https://github.com/ietf-wg-aipref/drafts/issues/42)]]
 
 5.  Usage
 
