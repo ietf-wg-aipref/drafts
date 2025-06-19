@@ -537,6 +537,8 @@ Acknowledgments
 
    *  Laurent Le Meur, EDRLab
 
+   *  Timid Robot Zehta, Creative Commons
+
 Authors' Addresses
 
    Paul Keller
