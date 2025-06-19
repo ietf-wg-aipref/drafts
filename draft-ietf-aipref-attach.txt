@@ -378,11 +378,11 @@ Table of Contents
               RFC 3986, DOI 10.17487/RFC3986, January 2005,
               <https://www.rfc-editor.org/rfc/rfc3986>.
 
-   [VOCAB]    Keller, P. and M. Thomson, "Proposal for an Opt-Out
-              Vocabulary", Work in Progress, Internet-Draft, draft-ietf-
-              aipref-vocab-00, 30 April 2025,
+   [VOCAB]    Keller, P. and M. Thomson, Ed., "A Vocabulary For
+              Expressing AI Usage Preferences", Work in Progress,
+              Internet-Draft, draft-ietf-aipref-vocab, June 2025,
               <https://datatracker.ietf.org/doc/html/draft-ietf-aipref-
-              vocab-00>.
+              vocab>.
 
 6.2.  Informative References
 
