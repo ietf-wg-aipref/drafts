@@ -182,14 +182,14 @@ The act of using one or more assets to build a search index or as input to a tra
 that include direct links to the location from where the asset was obtained.
 
 The use of assets for AI Training is a proper subset of TDM usage.
-\[\[Open issue: https://github.com/ietf-wg-aipref/drafts/issues/49\]\]
+\[\[[Open issue](https://github.com/ietf-wg-aipref/drafts/issues/49)\]\]
 
 ## AI Inference Category {#inference}
 
 The act of using one or more assets as input to a trained AI/ML model as part of the operation of that model (as opposed to the training of the model).
 
 The use of assets for AI Training is a proper subset of TDM usage.
-\[\[Open issue: https://github.com/ietf-wg-aipref/drafts/issues/42\]\]
+\[\[[Open issue](https://github.com/ietf-wg-aipref/drafts/issues/42)\]\]
 
 # Usage
 
