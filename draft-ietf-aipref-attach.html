@@ -1186,10 +1186,16 @@ to allow for the inclusion of usage preferences.<a href="#section-abstract-2" cl
             <p id="section-toc.1-1.2.1"><a href="#section-2" class="auto internal xref">2</a>.  <a href="#name-http-content-usage-header-f" class="internal xref">HTTP Content-Usage Header Field</a></p>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.3">
-            <p id="section-toc.1-1.3.1"><a href="#section-3" class="auto internal xref">3</a>.  <a href="#name-robots-exclusion-protocol-c" class="internal xref">Robots Exclusion Protocol Content-Usage Directive</a></p>
+            <p id="section-toc.1-1.3.1"><a href="#section-3" class="auto internal xref">3</a>.  <a href="#name-robots-exclusion-protocol-c" class="internal xref">Robots Exclusion Protocol Content-Usage Rule</a></p>
 <ul class="compact toc ulBare ulEmpty">
 <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.3.2.1">
-                <p id="section-toc.1-1.3.2.1.1"><a href="#section-3.1" class="auto internal xref">3.1</a>.  <a href="#name-processing-multiple-groups" class="internal xref">Processing Multiple Groups</a></p>
+                <p id="section-toc.1-1.3.2.1.1"><a href="#section-3.1" class="auto internal xref">3.1</a>.  <a href="#name-content-rule-semantics" class="internal xref">Content-Rule Semantics</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.3.2.2">
+                <p id="section-toc.1-1.3.2.2.1"><a href="#section-3.2" class="auto internal xref">3.2</a>.  <a href="#name-processing-content-usage-ru" class="internal xref">Processing Content-Usage Rules</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.3.2.3">
+                <p id="section-toc.1-1.3.2.3.1"><a href="#section-3.3" class="auto internal xref">3.3</a>.  <a href="#name-example" class="internal xref">Example</a></p>
 </li>
             </ul>
 </li>
@@ -1200,7 +1206,15 @@ to allow for the inclusion of usage preferences.<a href="#section-abstract-2" cl
             <p id="section-toc.1-1.5.1"><a href="#section-5" class="auto internal xref">5</a>.  <a href="#name-iana-considerations" class="internal xref">IANA Considerations</a></p>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6">
-            <p id="section-toc.1-1.6.1"><a href="#section-6" class="auto internal xref">6</a>.  <a href="#name-normative-references" class="internal xref">Normative References</a></p>
+            <p id="section-toc.1-1.6.1"><a href="#section-6" class="auto internal xref">6</a>.  <a href="#name-references" class="internal xref">References</a></p>
+<ul class="compact toc ulBare ulEmpty">
+<li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.1">
+                <p id="section-toc.1-1.6.2.1.1"><a href="#section-6.1" class="auto internal xref">6.1</a>.  <a href="#name-normative-references" class="internal xref">Normative References</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.6.2.2">
+                <p id="section-toc.1-1.6.2.2.1"><a href="#section-6.2" class="auto internal xref">6.2</a>.  <a href="#name-informative-references" class="internal xref">Informative References</a></p>
+</li>
+            </ul>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.7">
             <p id="section-toc.1-1.7.1"><a href="#appendix-A" class="auto internal xref"></a><a href="#name-acknowledgments" class="internal xref">Acknowledgments</a></p>
@@ -1371,97 +1385,147 @@ will not comply with this requirement.<a href="#section-2-3" class="pilcrow">¶<
 <div id="robots">
 <section id="section-3">
       <h2 id="name-robots-exclusion-protocol-c">
-<a href="#section-3" class="section-number selfRef">3. </a><a href="#name-robots-exclusion-protocol-c" class="section-name selfRef">Robots Exclusion Protocol Content-Usage Directive</a>
+<a href="#section-3" class="section-number selfRef">3. </a><a href="#name-robots-exclusion-protocol-c" class="section-name selfRef">Robots Exclusion Protocol Content-Usage Rule</a>
       </h2>
-<p id="section-3-1">A Content-Usage directive is added to the Group definition
-in the Robots Exclusion Protocol format <span>[<a href="#ROBOTS" class="cite xref">ROBOTS</a>]</span>.<a href="#section-3-1" class="pilcrow">¶</a></p>
-<p id="section-3-2">That is, the ABNF is extended as follows:<a href="#section-3-2" class="pilcrow">¶</a></p>
-<div class="lang-abnf sourcecode" id="section-3-3">
+<p id="section-3-1">A Content-Usage rule is added to the set of potential rules
+that can be included in a Group
+for the Robots Exclusion Protocol format <span>[<a href="#ROBOTS" class="cite xref">ROBOTS</a>]</span>.<a href="#section-3-1" class="pilcrow">¶</a></p>
+<p id="section-3-2">The <code>rule</code> ABNF pattern from <span><a href="https://rfc-editor.org/rfc/rfc9309#section-2.2" class="relref">Section 2.2</a> of [<a href="#ROBOTS" class="cite xref">ROBOTS</a>]</span>
+is extended as shown in <a href="#f-abnf" class="auto internal xref">Figure 1</a>.<a href="#section-3-2" class="pilcrow">¶</a></p>
+<span id="name-extended-robotstxt-abnf"></span><div id="f-abnf">
+<figure id="figure-1">
+        <div class="lang-abnf sourcecode" id="section-3-3.1">
 <pre>
-group = startgroupline *(startgroupline / emptyline)
-        [content-usage] ; &lt;-- NEW
-        *(rule / emptyline)
+rule =/ content-usage
 
-content-usage = *WS "content-usage" *WS ":" *WS usage-pref
-usage-pref    = &lt;usage preference vocabulary; see [VOCAB]&gt;
-</pre><a href="#section-3-3" class="pilcrow">¶</a>
+content-usage = *WS "content-usage" *WS ":" *WS
+                [ path-pattern 1*WS ] usage-pref EOL
+usage-pref    = &lt;usage preference vocabulary from [VOCAB]&gt;
+</pre>
 </div>
-<p id="section-3-4">This directive updates the definition of a group to be more expansive.
-Where a group was previously a set of user-agents
-(either "*" or a set of one or more identifiers),
-a Group is updated to include zero or one Content-Usage preferences.<a href="#section-3-4" class="pilcrow">¶</a></p>
-<div id="processing-multiple-groups">
+<figcaption><a href="#figure-1" class="selfRef">Figure 1</a>:
+<a href="#name-extended-robotstxt-abnf" class="selfRef">Extended robots.txt ABNF</a>
+        </figcaption></figure>
+</div>
+<p id="section-3-4">Each group contains zero or more Content-Usage rules.
+Each Content-Usage rule consists of a path
+and a usage preference.
+The path might be absent or empty;
+if a path present,
+a SP or HTAB separates it from the usage preference.<a href="#section-3-4" class="pilcrow">¶</a></p>
+<p id="section-3-5">Note that the usage preference expression encoding
+does not use an ABNF definition,
+relying instead on the definitions in <span>[<a href="#FIELDS" class="cite xref">FIELDS</a>]</span>.<a href="#section-3-5" class="pilcrow">¶</a></p>
+<div id="content-rule-semantics">
 <section id="section-3.1">
-        <h3 id="name-processing-multiple-groups">
-<a href="#section-3.1" class="section-number selfRef">3.1. </a><a href="#name-processing-multiple-groups" class="section-name selfRef">Processing Multiple Groups</a>
+        <h3 id="name-content-rule-semantics">
+<a href="#section-3.1" class="section-number selfRef">3.1. </a><a href="#name-content-rule-semantics" class="section-name selfRef">Content-Rule Semantics</a>
         </h3>
-<p id="section-3.1-1">The effect of this change is that
-a crawler might need to consider multiple groups.
-A crawler needs to consider this both to decide
-whether content can be requested
-and to determine what preferences apply to content.<a href="#section-3.1-1" class="pilcrow">¶</a></p>
-<p id="section-3.1-2">Rather than looking for a group based on a specific User-Agent identifier,
-such as "ExampleBot",
-then falling back to the wildcard group ("*"),
-a crawler might have multiple groups,
-each with a different set of preferences.<a href="#section-3.1-2" class="pilcrow">¶</a></p>
-<p id="section-3.1-3">Where there are multiple groups,
-a crawler first looks for groups with a matching User-Agent identifer.
-If any groups match the crawler identity
-(as defined in <span><a href="https://rfc-editor.org/rfc/rfc9309#section-2.2.1" class="relref">Section 2.2.1</a> of [<a href="#ROBOTS" class="cite xref">ROBOTS</a>]</span>),
-all matching groups are considered.
-If there are no matching groups,
-all groups that include a User-Agent of "*" are considered.<a href="#section-3.1-3" class="pilcrow">¶</a></p>
-<p id="section-3.1-4">In determining which group applies for a given resource,
-the crawler evaluates each group in turn.
-Any group for which the resource is disallowed
-(as defined in <span><a href="https://rfc-editor.org/rfc/rfc9309#section-2.2.2" class="relref">Section 2.2.2</a> of [<a href="#ROBOTS" class="cite xref">ROBOTS</a>]</span>)
-is excluded.
-If all groups are excluded in this way,
-the resource is not crawled.<a href="#section-3.1-4" class="pilcrow">¶</a></p>
-<p id="section-3.1-5">If any group allows the crawling of the resource,
-content can be retrieved.
-If multiple groups allow crawling,
-the usage preference from the group
-with the longest Allow rule match
-applies to that content.<a href="#section-3.1-5" class="pilcrow">¶</a></p>
-<p id="section-3.1-6">For example, given the following "robots.txt" document:<a href="#section-3.1-6" class="pilcrow">¶</a></p>
-<div class="alignLeft art-text artwork" id="section-3.1-7">
+<p id="section-3.1-1">Each group in the file applies to a set of crawlers,
+identified by product token as defined in <span><a href="https://rfc-editor.org/rfc/rfc9309#section-2.2.1" class="relref">Section 2.2.1</a> of [<a href="#ROBOTS" class="cite xref">ROBOTS</a>]</span>.
+The Allow and Disallow rules determine what resources can be crawled,
+using the rule that has the longest matching path prefix,
+as defined in <span><a href="https://rfc-editor.org/rfc/rfc9309#section-2.2.2" class="relref">Section 2.2.2</a> of [<a href="#ROBOTS" class="cite xref">ROBOTS</a>]</span>.<a href="#section-3.1-1" class="pilcrow">¶</a></p>
+<p id="section-3.1-2">Any Content-Usage rules determine the usage preferences for resources
+using the same path prefix matching rules as defined for Allow and Disallow.
+That is, the path prefix length is determined by counting the number of bytes
+in the encoded path.<a href="#section-3.1-2" class="pilcrow">¶</a></p>
+<p id="section-3.1-3">Usage preferences apply only to those resources that can be crawled
+according to Allow/Disallow rules;
+no preferences are implied for resources that are disallowed.<a href="#section-3.1-3" class="pilcrow">¶</a></p>
+<p id="section-3.1-4">Paths specified for Content-Usage rules use the same percent-encoding rules
+as used for Allow/Disallow rules,
+as defined in <span><a href="https://rfc-editor.org/rfc/rfc3986#section-2.1" class="relref">Section 2.1</a> of [<a href="#URI" class="cite xref">URI</a>]</span>.
+In particular, SP (U+20) and HTAB (U+09) characters need to be replaced
+with "%20" and "%09" respectively.<a href="#section-3.1-4" class="pilcrow">¶</a></p>
+<p id="section-3.1-5">The ordering of rules in a group carries no semantics.
+Thus, Content-Usage rules can be interleaved
+with Allow and Disallow rules.<a href="#section-3.1-5" class="pilcrow">¶</a></p>
+<p id="section-3.1-6">If there are Content-Usage rules that have identical paths
+and conflicting usage preferences,
+these preferences apply separately
+according to the process defined in <span><a href="https://datatracker.ietf.org/doc/html/draft-ietf-aipref-vocab-00#section-7.1" class="relref">Section 7.1</a> of [<a href="#VOCAB" class="cite xref">VOCAB</a>]</span>.<a href="#section-3.1-6" class="pilcrow">¶</a></p>
+<p id="section-3.1-7">A crawlers can cache a "robots.txt" file for up to 24 hours,
+following HTTP Cache-Control semantics defined in <span>[<a href="#HTTP-CACHE" class="cite xref">HTTP-CACHE</a>]</span>;
+see <span><a href="https://rfc-editor.org/rfc/rfc9309#section-2.4" class="relref">Section 2.4</a> of [<a href="#ROBOTS" class="cite xref">ROBOTS</a>]</span> for details.
+Updates to preferences within the period that a file is cached
+might not be visible.<a href="#section-3.1-7" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="processing-content-usage-rules">
+<section id="section-3.2">
+        <h3 id="name-processing-content-usage-ru">
+<a href="#section-3.2" class="section-number selfRef">3.2. </a><a href="#name-processing-content-usage-ru" class="section-name selfRef">Processing Content-Usage Rules</a>
+        </h3>
+<p id="section-3.2-1">To process a Content-Usage rule,
+a parser identifies lines with the "Content-Usage" label.
+This requires that SP and HTAB characters are ignored,
+before and after the label,
+in addition to before and after the COLON (":", U+3A) separator.<a href="#section-3.2-1" class="pilcrow">¶</a></p>
+<p id="section-3.2-2">The remainder of the line -
+up to either the first CR (U+0D), LF (U+0A), or octothorpe ("#", U+23) -
+is the rule value.<a href="#section-3.2-2" class="pilcrow">¶</a></p>
+<p id="section-3.2-3">The first character of the rule value will be "/" (U+2F)
+if a non-empty path is specified.
+Paths always start with a "/" character,
+so a rule value that starts with any other character
+indicates that the path is absent.<a href="#section-3.2-3" class="pilcrow">¶</a></p>
+<p id="section-3.2-4">If a path is specified,
+the path ends immediately before the first SP (U+20) or HTAB ("U+09") character.
+The remainder of the rule value is the usage preference expression.
+If a path is absent,
+the entire rule value is the usage preference expression.<a href="#section-3.2-4" class="pilcrow">¶</a></p>
+<p id="section-3.2-5">The usage preference is encoded using the exemplary format
+defined in <span><a href="https://datatracker.ietf.org/doc/html/draft-ietf-aipref-vocab-00#section-6" class="relref">Section 6</a> of [<a href="#VOCAB" class="cite xref">VOCAB</a>]</span>.
+The parsing and processing rules from Sections <a href="https://datatracker.ietf.org/doc/html/draft-ietf-aipref-vocab-00#section-6" class="relref">6</a> and <a href="https://datatracker.ietf.org/doc/html/draft-ietf-aipref-vocab-00#section-7" class="relref">7</a> of <span>[<a href="#VOCAB" class="cite xref">VOCAB</a>]</span> apply.<a href="#section-3.2-5" class="pilcrow">¶</a></p>
+<p id="section-3.2-6">Note that a usage preference expression is processed as a sequence of bytes,
+rather than Unicode text; see <span><a href="https://datatracker.ietf.org/doc/html/draft-ietf-aipref-vocab-00#section-6.3" class="relref">Section 6.3</a> of [<a href="#VOCAB" class="cite xref">VOCAB</a>]</span>.<a href="#section-3.2-6" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="example">
+<section id="section-3.3">
+        <h3 id="name-example">
+<a href="#section-3.3" class="section-number selfRef">3.3. </a><a href="#name-example" class="section-name selfRef">Example</a>
+        </h3>
+<p id="section-3.3-1"><a href="#f-ex-robots" class="auto internal xref">Figure 2</a> shows a simple "robots.txt" document.<a href="#section-3.3-1" class="pilcrow">¶</a></p>
+<span id="name-example-robotstxt-file"></span><div id="f-ex-robots">
+<figure id="figure-2">
+          <div class="alignLeft art-text artwork" id="section-3.3-2.1">
 <pre>
 User-Agent: *
 Content-Usage: ai=n
+Content-Usage: /ai-ok/ ai=y
 Allow: /
 Disallow: /never/
-
-User-Agent: *
-Content-Usage: ai=y
-Allow: /ai-ok/
-Disallow: /
 
 User-Agent: ExampleBot
 Content-Usage: ai=y
 Allow: /
-</pre><a href="#section-3.1-7" class="pilcrow">¶</a>
+</pre>
 </div>
-<p id="section-3.1-8">A crawler that identifies as "ExampleBot"
-would be able to obtain all content
-and apply preferences of "ai=y"
-(processed as defined in <span>[<a href="#VOCAB" class="cite xref">VOCAB</a>]</span>).<a href="#section-3.1-8" class="pilcrow">¶</a></p>
-<p id="section-3.1-9">All other crawlers would use the same two groups.
-The first group allows the retrieval of most resources,
-excluding resources starting with "/never/",
-and applies a usage preference of "ai=n" across those resources.
-The second group creates a specific rule
-for resources under "/ai-ok",
-where the usage preference is "ai=y".
-This might result in the following outcome after crawling:<a href="#section-3.1-9" class="pilcrow">¶</a></p>
+<figcaption><a href="#figure-2" class="selfRef">Figure 2</a>:
+<a href="#name-example-robotstxt-file" class="selfRef">Example robots.txt file</a>
+          </figcaption></figure>
+</div>
+<p id="section-3.3-3">A crawler that identifies as "ExampleBot" uses the second group.
+That crawler would be able to obtain all content
+and apply usage preferences of "ai=y" as defined in <span>[<a href="#VOCAB" class="cite xref">VOCAB</a>]</span>.<a href="#section-3.3-3" class="pilcrow">¶</a></p>
+<p id="section-3.3-4">All other crawlers use the first group.
+This allows crawling of all content other than resources under "/never/".
+Of those resources,
+those under "/ai-ok/" have an associated usage preference of "ai=y"
+and all other resources have a usage preference of "ai=n".<a href="#section-3.3-4" class="pilcrow">¶</a></p>
+<span id="name-sample-of-usage-preferences"></span><div id="t-example">
 <table class="center" id="table-1">
-          <caption><a href="#table-1" class="selfRef">Table 1</a></caption>
+          <caption>
+<a href="#table-1" class="selfRef">Table 1</a>:
+<a href="#name-sample-of-usage-preferences" class="selfRef">Sample of usage preferences for different paths</a>
+          </caption>
 <thead>
             <tr>
               <th class="text-left" rowspan="1" colspan="1">Path</th>
-              <th class="text-center" rowspan="1" colspan="1">Allowed</th>
-              <th class="text-left" rowspan="1" colspan="1">Saved Preference</th>
+              <th class="text-center" rowspan="1" colspan="1">Crawl</th>
+              <th class="text-left" rowspan="1" colspan="1">Usage Preference</th>
             </tr>
           </thead>
           <tbody>
@@ -1473,7 +1537,7 @@ This might result in the following outcome after crawling:<a href="#section-3.1-
             <tr>
               <td class="text-left" rowspan="1" colspan="1">/never/test</td>
               <td class="text-center" rowspan="1" colspan="1">no</td>
-              <td class="text-left" rowspan="1" colspan="1">n/a</td>
+              <td class="text-left" rowspan="1" colspan="1">N/A</td>
             </tr>
             <tr>
               <td class="text-left" rowspan="1" colspan="1">/ai-ok/test</td>
@@ -1482,6 +1546,7 @@ This might result in the following outcome after crawling:<a href="#section-3.1-
             </tr>
           </tbody>
         </table>
+</div>
 </section>
 </div>
 </section>
@@ -1537,37 +1602,61 @@ established in <span><a href="https://rfc-editor.org/rfc/rfc9110#section-18.4" c
 </dl>
 </section>
 </div>
-<div id="sec-normative-references">
+<div id="sec-combined-references">
 <section id="section-6">
-      <h2 id="name-normative-references">
-<a href="#section-6" class="section-number selfRef">6. </a><a href="#name-normative-references" class="section-name selfRef">Normative References</a>
+      <h2 id="name-references">
+<a href="#section-6" class="section-number selfRef">6. </a><a href="#name-references" class="section-name selfRef">References</a>
       </h2>
+<div id="sec-normative-references">
+<section id="section-6.1">
+        <h3 id="name-normative-references">
+<a href="#section-6.1" class="section-number selfRef">6.1. </a><a href="#name-normative-references" class="section-name selfRef">Normative References</a>
+        </h3>
 <dl class="references">
 <dt id="FIELDS">[FIELDS]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Nottingham, M.</span> and <span class="refAuthor">P. Kamp</span>, <span class="refTitle">"Structured Field Values for HTTP"</span>, <span class="seriesInfo">RFC 9651</span>, <span class="seriesInfo">DOI 10.17487/RFC9651</span>, <time datetime="2024-09" class="refDate">September 2024</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc9651">https://www.rfc-editor.org/rfc/rfc9651</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="HTTP">[HTTP]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Fielding, R., Ed.</span>, <span class="refAuthor">Nottingham, M., Ed.</span>, and <span class="refAuthor">J. Reschke, Ed.</span>, <span class="refTitle">"HTTP Semantics"</span>, <span class="seriesInfo">STD 97</span>, <span class="seriesInfo">RFC 9110</span>, <span class="seriesInfo">DOI 10.17487/RFC9110</span>, <time datetime="2022-06" class="refDate">June 2022</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc9110">https://www.rfc-editor.org/rfc/rfc9110</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC2119">[RFC2119]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Bradner, S.</span>, <span class="refTitle">"Key words for use in RFCs to Indicate Requirement Levels"</span>, <span class="seriesInfo">BCP 14</span>, <span class="seriesInfo">RFC 2119</span>, <span class="seriesInfo">DOI 10.17487/RFC2119</span>, <time datetime="1997-03" class="refDate">March 1997</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc2119">https://www.rfc-editor.org/rfc/rfc2119</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC8174">[RFC8174]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Leiba, B.</span>, <span class="refTitle">"Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words"</span>, <span class="seriesInfo">BCP 14</span>, <span class="seriesInfo">RFC 8174</span>, <span class="seriesInfo">DOI 10.17487/RFC8174</span>, <time datetime="2017-05" class="refDate">May 2017</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8174">https://www.rfc-editor.org/rfc/rfc8174</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="ROBOTS">[ROBOTS]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Koster, M.</span>, <span class="refAuthor">Illyes, G.</span>, <span class="refAuthor">Zeller, H.</span>, and <span class="refAuthor">L. Sassman</span>, <span class="refTitle">"Robots Exclusion Protocol"</span>, <span class="seriesInfo">RFC 9309</span>, <span class="seriesInfo">DOI 10.17487/RFC9309</span>, <time datetime="2022-09" class="refDate">September 2022</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc9309">https://www.rfc-editor.org/rfc/rfc9309</a>&gt;</span>. </dd>
 <dd class="break"></dd>
+<dt id="URI">[URI]</dt>
+        <dd>
+<span class="refAuthor">Berners-Lee, T.</span>, <span class="refAuthor">Fielding, R.</span>, and <span class="refAuthor">L. Masinter</span>, <span class="refTitle">"Uniform Resource Identifier (URI): Generic Syntax"</span>, <span class="seriesInfo">STD 66</span>, <span class="seriesInfo">RFC 3986</span>, <span class="seriesInfo">DOI 10.17487/RFC3986</span>, <time datetime="2005-01" class="refDate">January 2005</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc3986">https://www.rfc-editor.org/rfc/rfc3986</a>&gt;</span>. </dd>
+<dd class="break"></dd>
 <dt id="VOCAB">[VOCAB]</dt>
-    <dd>
+      <dd>
 <span class="refAuthor">Keller, P.</span> and <span class="refAuthor">M. Thomson</span>, <span class="refTitle">"Proposal for an Opt-Out Vocabulary"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-aipref-vocab-00</span>, <time datetime="2025-04-30" class="refDate">30 April 2025</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-aipref-vocab-00">https://datatracker.ietf.org/doc/html/draft-ietf-aipref-vocab-00</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 </dl>
+</section>
+</div>
+<div id="sec-informative-references">
+<section id="section-6.2">
+        <h3 id="name-informative-references">
+<a href="#section-6.2" class="section-number selfRef">6.2. </a><a href="#name-informative-references" class="section-name selfRef">Informative References</a>
+        </h3>
+<dl class="references">
+<dt id="HTTP-CACHE">[HTTP-CACHE]</dt>
+      <dd>
+<span class="refAuthor">Fielding, R., Ed.</span>, <span class="refAuthor">Nottingham, M., Ed.</span>, and <span class="refAuthor">J. Reschke, Ed.</span>, <span class="refTitle">"HTTP Caching"</span>, <span class="seriesInfo">STD 98</span>, <span class="seriesInfo">RFC 9111</span>, <span class="seriesInfo">DOI 10.17487/RFC9111</span>, <time datetime="2022-06" class="refDate">June 2022</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc9111">https://www.rfc-editor.org/rfc/rfc9111</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+</dl>
+</section>
+</div>
 </section>
 </div>
 <div id="acknowledgments">
