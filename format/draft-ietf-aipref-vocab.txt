@@ -5,8 +5,8 @@
 AI Preferences                                                 P. Keller
 Internet-Draft                                               Open Future
 Intended status: Standards Track                         M. Thomson, Ed.
-Expires: 7 December 2025                                         Mozilla
-                                                             5 June 2025
+Expires: 21 December 2025                                        Mozilla
+                                                            19 June 2025
 
 
             A Vocabulary For Expressing AI Usage Preferences
@@ -55,7 +55,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 7 December 2025.
+   This Internet-Draft will expire on 21 December 2025.
 
 Copyright Notice
 
@@ -91,11 +91,14 @@ Table of Contents
      6.4.  Syntax Extensions
      6.5.  Processing Algorithm
      6.6.  Alternative Formats
-   7.  Security Considerations
-   8.  IANA Considerations
-   9.  References
-     9.1.  Normative References
-     9.2.  Informative References
+   7.  Consulting a Preference Expression
+     7.1.  Combining Preferences
+     7.2.  Overriding Preferences
+   8.  Security Considerations
+   9.  IANA Considerations
+   10. References
+     10.1.  Normative References
+     10.2.  Informative References
    Acknowledgments
    Authors' Addresses
 
@@ -404,22 +407,86 @@ Table of Contents
    is case sensitive (more correctly, it operates on bytes, not
    strings).
 
+   This process produces an abstract data structure that assigns a
+   preference to each usage category as described in Section 3.
+
 6.6.  Alternative Formats
 
    This format is only an exemplary way to represent preferences.  The
    model described in Section 3, can be used without this serialization.
 
-7.  Security Considerations
+   Any alternative format needs to define how that model is represented
+   and how to generate the same model from any alternative
+   representation.
+
+7.  Consulting a Preference Expression
+
+   After processing a preference expression (Section 6.5), an
+   application can request the status of a specific usage category.
+
+   A single preference expression can be evaluated for a usage category
+   as follows:
+
+   1.  If the expression contains an explicit preference (either to
+       allow or disallow), that is the result.
+
+   2.  Otherwise, if the usage category is a proper subset of another
+       usage category, recursively apply this process to that category
+       and use the result of that process.
+
+   3.  Otherwise, no preference is expressed.
+
+   This process results in three potential answers: allow, disallow, and
+   no preference.  Applications can use the answer to guide their
+   behavior.
+
+   One approach for dealing with a "no preference" answer is to assign a
+   default.  This document takes no position on what default might be
+   chosen as that will depend on policy constraints beyond the scope of
+   this specification.
+
+7.1.  Combining Preferences
+
+   The application might have multiple preference expressions, obtained
+   using different methods.
+
+   If multiple preference expressions are active, all preference
+   expressions are consulted (Section 7), unless some can be discarded
+   (Section 7.2).  This might result in conflicting answers.
+
+   Absent some other means of resolving conflicts, the following process
+   applies to each usage category:
+
+   *  If any preference expression indicates that the usage is
+      disallowed, the result is that the usage is disallowed.
+
+   *  Otherwise, if any preference preference allows the usage, the
+      result is that the usage is allowed.
+
+   *  Otherwise, no preference is expressed.
+
+   This process ensures that the most restrictive preference applies.
+
+7.2.  Overriding Preferences
+
+   Any method of attaching preference expressions to assets can specify
+   conditions where the preferences obtained using one method override
+   those of another method.
+
+   If an application has two preference expressions where one is defined
+   as overriding the other, the overridden preference can be discarded.
+
+8.  Security Considerations
 
    TODO Security
 
-8.  IANA Considerations
+9.  IANA Considerations
 
    This document has no IANA actions.
 
-9.  References
+10.  References
 
-9.1.  Normative References
+10.1.  Normative References
 
    [ASCII]    Cerf, V., "ASCII format for network interchange", STD 80,
               RFC 20, DOI 10.17487/RFC0020, October 1969,
@@ -443,7 +510,7 @@ Table of Contents
               DOI 10.17487/RFC9309, September 2022,
               <https://www.rfc-editor.org/rfc/rfc9309>.
 
-9.2.  Informative References
+10.2.  Informative References
 
    [EUCD2019] European Union, "Directive (EU) 2019/790 of the European
               Parliament and of the Council of 17 April 2019 on
