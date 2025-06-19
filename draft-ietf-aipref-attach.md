@@ -289,7 +289,14 @@ This might result in the following outcome after crawling:
 
 # Security Considerations
 
-TODO Security
+Processing usage preferences involves the parsing of text
+that is produced by potential adversaries.
+Different guidelines for robust parsing can be found in
+{{Section 6 of FIELDS}} and {{Section 17 of HTTP}}.
+
+{{Section 3 of ROBOTS}} describes security considerations for "robots.txt".
+A "robots.txt" file can be up to 500KiB of text.
+This specification does not increase this limit.
 
 
 # IANA Considerations
