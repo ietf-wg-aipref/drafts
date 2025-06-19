@@ -48,26 +48,33 @@ informative:
 
 --- abstract
 
-This document proposes a standardized vocabulary for expressing preferences related to how digital assets are used by automated processing systems.
-This vocabulary allows for the creation of structured declarations about restrictions or permissions for use of digital assets by such systems.
-The vocabulary is agnostic to the means by which it is conveyed.
-The definitions in the vocabulary facilitate a shared understanding between entities that express such preferences and those that use the associated digital assets.
+This document proposes a standardized vocabulary for expressing preferences
+related to how digital assets are used by automated processing systems.
+This vocabulary allows for the creation of structured declarations
+about restrictions or permissions for use of digital assets by such systems.
+
 
 --- middle
 
 # Introduction
 
-This document defines a common vocabulary of terms for automated systems that process digital assets. The primary purpose of this vocabulary is to enable machine-readable expressions of preferences about how digital assets are used by automated processing systems, in the context of training AI models and other forms of text and data mining (TDM).
+This document defines a common vocabulary of terms for automated systems that process digital assets.
+The primary purpose of this vocabulary is to enable machine-readable expressions of preferences
+about how digital assets are used by automated processing systems
+in the context of training AI models and other forms of automated processing.
 
-The terms defined by the vocabulary can be used to describe, in a standardized way, the types of uses that a declaring party may wish to explicitly restrict or allow.
-Preferences are then expressed as a grant or denial of permission concerning each of the types of use defined in the vocabulary.
+The terms defined by the vocabulary can be used to describe,
+in a standardized way,
+the types of uses that a declaring party may wish to explicitly restrict or allow.
+Preferences are then expressed as a grant or denial of permission
+concerning each of the types of use defined in the vocabulary.
 This ensures that preferences can be communicated, processed, and stored in a consistent and interoperable manner.
 
-The vocabulary is neutral to the technical details of how systems act on preferences.
-It is designed to ensure that preference information can be exchanged between different systems and consistently understood.
-
-The vocabulary is intended to govern the use of digital assets for the training of AI models and other forms of automated processing.
-It does not concern itself with the mechanisms involved in obtaining digital assets (i.e., crawling).
+The vocabulary or the preferences that might be expressed
+do not proscribe how automated processing systems obtain or act on preferences.
+Separate documents will describe how preferences might be associated with assets.
+It is designed to ensure that preference information can be exchanged between different systems
+and consistently understood.
 
 The vocabulary is intended to work in contexts where such preferences result in legal obligations (such as rights reservations made by rightholders in jurisdictions with conditional TDM exceptions), and in contexts where this is not the case. It is without prejudice to applicable laws and the applicability of exceptions and limitations to copyright.
 
