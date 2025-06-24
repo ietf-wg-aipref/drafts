@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-06-22T02:11:56.884157+00:00",
+  "timestamp": "2025-06-24T02:03:57.162451+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -62,7 +62,7 @@
       ],
       "body": "Discussed in the Brussels meeting -- there was broad support for also defining at least one vocabulary term for inference-time use of content by models. More than one term may be necessary, but the sense of the room was that we should keep this as simple as possible at the first instance.",
       "createdAt": "2025-04-10T13:47:22Z",
-      "updatedAt": "2025-05-07T16:30:32Z",
+      "updatedAt": "2025-06-23T14:52:17Z",
       "closedAt": null,
       "comments": [
         {
@@ -71,6 +71,41 @@
           "body": "Are there inference-time uses beyond RAG that others think we should include?  As was expressed in Brussels, the scraping of content for use in summarizing/synthesizing responses to user queries (i.e. at inference time) was a core concern for publishers - which is what we would currently refer to as accomplished via RAG.  I believe this should be the focus.   ",
           "createdAt": "2025-05-07T16:30:31Z",
           "updatedAt": "2025-05-07T16:30:31Z"
+        },
+        {
+          "author": "bquinn",
+          "authorAssociation": "NONE",
+          "body": "> Are there inference-time uses beyond RAG that others think we should include? As was expressed in Brussels, the scraping of content for use in summarizing/synthesizing responses to user queries (i.e. at inference time) was a core concern for publishers - which is what we would currently refer to as accomplished via RAG. I believe this should be the focus.\n\nIf we go with an embedded metadata use case for our work, then the \"upload an image at inference time\" use case applies. Someone may embed metadata into a media object that says \"this media should not be used for inference without my permission\" etc.",
+          "createdAt": "2025-06-23T13:27:19Z",
+          "updatedAt": "2025-06-23T13:27:19Z"
+        },
+        {
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Something that came up during discussion was that training sometimes involves inference.  We might want to define (generative) AI inference as specifically excluding use as a part of AI training, because the AI training category would subsume the inference part.\n\nEdit: We might already have that with our parenthetical in the definition: \"(as opposed to the training of the model)\".  Thanks @bquinn for pointing that out.",
+          "createdAt": "2025-06-23T13:32:35Z",
+          "updatedAt": "2025-06-23T13:34:29Z"
+        },
+        {
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Another thing that came up is that people might offer inputs to a model and expect to override the preferences that are attached to those inputs.  We should explicitly acknowledge that use case and note that people can (and will) provide inputs and override stated preferences.",
+          "createdAt": "2025-06-23T13:35:53Z",
+          "updatedAt": "2025-06-23T13:35:53Z"
+        },
+        {
+          "author": "lrosenthol",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "As I noted in the meeting, the original use case for inference comes from the ability for users to add a \"sample\" to a prompt where the user can then say \"like that\".   This is especially important for situations like the [Studio Ghibli concerns](https://apnews.com/article/studio-ghibli-chatgpt-images-hayao-miyazaki-openai-0f4cb487ec3042dd5b43ad47879b91f4) that came up recently.",
+          "createdAt": "2025-06-23T13:39:58Z",
+          "updatedAt": "2025-06-23T13:39:58Z"
+        },
+        {
+          "author": "bquinn",
+          "authorAssociation": "NONE",
+          "body": "> As I noted in the meeting, the original use case for inference comes from the ability for users to add a \"sample\" to a prompt where the user can then say \"like that\". This is especially important for situations like the [Studio Ghibli concerns](https://apnews.com/article/studio-ghibli-chatgpt-images-hayao-miyazaki-openai-0f4cb487ec3042dd5b43ad47879b91f4) that came up recently.\n\nThere are many similar use cases. Another is that someone may \"AI-launder\" copyrighted content: they could upload a copyrighted image to a gen-AI engine and give a prompt to make a very minor change, and then distribute the resulting image, claiming \"it's an AI-generated image, so it's uncopyrightable\".",
+          "createdAt": "2025-06-23T14:52:17Z",
+          "updatedAt": "2025-06-23T14:52:17Z"
         }
       ]
     },
@@ -289,15 +324,22 @@
       ],
       "body": "The architecture we're developing accommodates attachment mechanisms that we define in our \"core\" documents, as well as future extensions -- including those defined by us and by third parties.\n\nContent providers need to know which attachment mechanisms will be paid attention to, and consumers of preferences need to know which ones they're supposed to check. \n\nThere might be:\n\n* one canonical list (e.g., in our specification or an IANA registry)\n* more than one list (e.g., defined per-use-case, such as for crawling-to-train vs inference-time)\n* undefined list (e.g., defined by legal authority)",
       "createdAt": "2025-04-11T16:00:54Z",
-      "updatedAt": "2025-05-02T11:31:36Z",
+      "updatedAt": "2025-06-23T14:17:31Z",
       "closedAt": null,
       "comments": [
         {
           "author": "lrosenthol",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "body": "I would also think that there are two primary categories of attachment - location-based & unit/asset-based - and how that aspect is expressed",
           "createdAt": "2025-05-02T11:31:35Z",
           "updatedAt": "2025-05-02T11:31:35Z"
+        },
+        {
+          "author": "lrosenthol",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "But I agree that for this particular document, we need only address a specific set of attachments.  REP and HTTP headers seem like the right set.\n\nThat said, we should have some text in the document that mentions the existence of other methods (but we need not include specific links)",
+          "createdAt": "2025-06-23T14:17:31Z",
+          "updatedAt": "2025-06-23T14:17:31Z"
         }
       ]
     },
@@ -538,7 +580,7 @@
       ],
       "body": "In looking at this, the term \"asset\" might be assumed to imply ownership, such that preferences can only be expressed by entities that \"own\" the affected content.\n\nCan we instead use the more neutral term \"content\"?  Or, minimally, something that is less prejudicial about the arrangement between the entity that expresses a preference and the subject that is covered.",
       "createdAt": "2025-05-12T06:12:48Z",
-      "updatedAt": "2025-05-16T13:29:37Z",
+      "updatedAt": "2025-06-23T13:12:00Z",
       "closedAt": null,
       "comments": [
         {
@@ -568,6 +610,41 @@
           "body": ">Was the term \"artifact\" ever suggested? That doesn't carry the strong implication of being owned. It might carry an implication of age, but not as strongly.\n\nArtifact is problematic because it has the connotation of being \"secondary\" or at least not the primary thing.",
           "createdAt": "2025-05-16T13:29:36Z",
           "updatedAt": "2025-05-16T13:29:36Z"
+        },
+        {
+          "author": "bnewbold",
+          "authorAssociation": "NONE",
+          "body": "\"Asset\" also reads to me as implying property or formal legal ownership, especially pertaining to exclusion and monetary value, and does not seem like the best terminology to use in these documents covering any form of transferred data.\n\n@lrosenthol I don't agree that \"asset\" is more inclusive of metadata (in addition to a primary work) compared to \"content\" or \"artifact\". And I would agree that \"artifact\" might imply a specific representation as opposed to an abstract work, but I think that is potentially a more correct connotation in the case of digital objects (which are always representations).\n\nPulling the current VOCAB abstract in-line as context:\n\n> This document proposes a standardized vocabulary for expressing preferences related to how digital assets are used by automated processing systems. This vocabulary allows for the creation of structured declarations about restrictions or permissions for use of digital assets by such systems.\n\n\"Content\" does like a straight-forward term to use here. HTTP already uses the term in places like the `Content-Type` header, and the ATTACH draft already uses it in the title (\"Indicating Preferences Regarding *Content* Usage\").\n\nAnother common term in the web context is \"Resource\".",
+          "createdAt": "2025-06-23T02:50:26Z",
+          "updatedAt": "2025-06-23T02:50:26Z"
+        },
+        {
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "> And I would agree that \"artifact\" might imply a specific representation as opposed to an abstract work, but I think that is potentially a more correct connotation in the case of digital objects (which are always representations).\n\nFor digital *things*, though there might be a platonic ideal or original, this doesn't have any bearing on what we're saying here.  A *thing* that is reproduced from an original (a digital scan of the Mona Lisa, say) is no different from an image that was wholly digital at its inception.  The subject of the preference is the sequence of bits, maybe with its metadata.\n\nI don't agree with Leonard that \"artifact\" implies secondary.  From my visits to museums, the use of the word in that context seems pretty clearly applicable to primary instances.  But then, perhaps all digital things being secondary is something we can embrace, rather than consider to be a failing of sorts.  That there can be no \"primary\" instance is a delightful idea to me.\n\n> the ATTACH draft already uses it in the title\n\nI would not consider that as a reason to use \"Content\".  Though I do regard it positively, despite the negative connotations.  To Paul's point, In my industry \"user\" has negative connotations as it can have a dehumanizing impact; it's still a term of art though.  You might say the same for \"consumer\" in economics or \"patient\" in a medical setting.",
+          "createdAt": "2025-06-23T03:01:30Z",
+          "updatedAt": "2025-06-23T03:01:30Z"
+        },
+        {
+          "author": "felixreda",
+          "authorAssociation": "NONE",
+          "body": "I think \"resource\" is a good suggestion. It doesn't seem to suffer from any of the pitfalls that have been identified in this thread.",
+          "createdAt": "2025-06-23T10:39:28Z",
+          "updatedAt": "2025-06-23T10:39:28Z"
+        },
+        {
+          "author": "paul2keller",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "\"ressource\" also works for me although I still prefer \"asset\" because it implies that we are talking about things that are valued. ",
+          "createdAt": "2025-06-23T10:52:37Z",
+          "updatedAt": "2025-06-23T10:52:37Z"
+        },
+        {
+          "author": "lrosenthol",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Given the context of the web/http and its use of resource, I have no objection to that term either.   And then in related docs (e.g., CAWG) we can map resource->asset.\n\n",
+          "createdAt": "2025-06-23T13:12:00Z",
+          "updatedAt": "2025-06-23T13:12:00Z"
         }
       ]
     },
@@ -618,7 +695,7 @@
       ],
       "body": "I had assumed that TDM would be very broad, @paul2keller [did not](https://github.com/ietf-wg-aipref/drafts/pull/39#issuecomment-2943398120):\n\n> I am not so sure we should treat the inference category as a proper subset of the TDM category. This is something I am somewhat skeptical of, i think there are probably inference type uses that are not necessarily TDM.\n\nThis is an interesting question that we should resolve.  If nothing else, we say that TDM is a broad category that encompasses all the other categories, so if it doesn't encompass inference, we need to fix the document one way or other (#39 for encompassing, something else if not).",
       "createdAt": "2025-06-05T10:06:22Z",
-      "updatedAt": "2025-06-06T17:52:39Z",
+      "updatedAt": "2025-06-23T14:12:46Z",
       "closedAt": null,
       "comments": [
         {
@@ -634,6 +711,20 @@
           "body": "@lrosenthol I don't think our decision should come down to our preferences. I think if we want to include it in TDM we would need to be certain that all forms of inference meet the definition of TDM. And I have doubts (mainly because if feel that many situations where individual users feed an asset to an AI system may have more to do with concepts like making private copies or touch on issues like freedom of expression). I do not see these types of conflicts when it comes to training mostly because training is something that will usually not be done by private individuals\n",
           "createdAt": "2025-06-06T17:52:38Z",
           "updatedAt": "2025-06-06T17:52:38Z"
+        },
+        {
+          "author": "lrosenthol",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "The 'M' in TDM is \"mining\" - in that a system is \"deriving information from machine-read material\".\n\nSince the use cases that we currently define as part of \"inference\" - e.g., style reference, RAG, etc. - all do exactly that, I don't see how it would not fit under TDM.",
+          "createdAt": "2025-06-23T13:14:53Z",
+          "updatedAt": "2025-06-23T13:14:53Z"
+        },
+        {
+          "author": "IJustWantAJob",
+          "authorAssociation": "NONE",
+          "body": "I don't think inference is a sub-section of TDM.\n\nThis is a definition of TDM I found online:\n\"Text and Data Mining (TDM) is the process of deriving information from machine-read material. It works by copying large quantities of material, extracting the data, and recombining it to identify patterns.\"\n\nBy contrast inference (including style reference and RAG) just applies the pretrained model to new (typically user sourced) inputs. Since inference does not scan the data to extract patterns/insights, it should not be a sub-section of TDM or under the same umbrella",
+          "createdAt": "2025-06-23T14:12:46Z",
+          "updatedAt": "2025-06-23T14:12:46Z"
         }
       ]
     },
@@ -651,9 +742,24 @@
       ],
       "body": "And how does it relate to the other usage categories?",
       "createdAt": "2025-06-19T05:20:47Z",
-      "updatedAt": "2025-06-19T05:20:47Z",
+      "updatedAt": "2025-06-23T12:43:07Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "felixreda",
+          "authorAssociation": "NONE",
+          "body": "It is worth pointing out an inconsistency regarding the relationship between categories. As they are currently defined in the latest draft, the search and inference categories overlap. Yet, in the overview of categories at the top of the vocabulary definition section, they are shown as mutually exclusive. \n\nSearch:\n> The act of using one or more assets to build a search index **or as input to a trained AI/ML model that has the purpose of providing search results** that include direct links to the location from where the asset was obtained.\n\nInference:\n> The act of using one or more assets **as input to a trained AI/ML model as part of the operation of that model** (as opposed to the training of the model).",
+          "createdAt": "2025-06-23T12:29:31Z",
+          "updatedAt": "2025-06-23T12:29:31Z"
+        },
+        {
+          "author": "paul2keller",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "yes we are aware of this and I agree that this needs to be addressed (my preference would be by narrowing down the search category)\n",
+          "createdAt": "2025-06-23T12:43:06Z",
+          "updatedAt": "2025-06-23T12:43:06Z"
+        }
+      ]
     },
     {
       "number": 51,
@@ -670,6 +776,40 @@
       "body": "There's a discussion on-list about how to spell the inclusion of preferences in robots.txt.  Several considerations are in play:\n\n* How do preferences and crawling interact?  Do preferences apply separate from crawling or do they only apply to resources where crawling is permitted?\n* How do we manage backwards compatibility?  In particular, what changes in parsers that do not understand any newly-added stuff?\n* What syntax do we align with?  The HTTP field definition or the Allow/Disallow pattern that robots.txt already uses?\n* What, if any, extensibility is needed?\n\nThe current draft includes one proposal.  That presupposes one set of answers to these questions, but we need to discuss whether these answers are the best ones.",
       "createdAt": "2025-06-19T05:52:04Z",
       "updatedAt": "2025-06-19T05:52:14Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 54,
+      "id": "I_kwDOOWk1-s682Dub",
+      "title": "People deliberately overriding/ignoring preferences",
+      "url": "https://github.com/ietf-wg-aipref/drafts/issues/54",
+      "state": "OPEN",
+      "author": "martinthomson",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "In discussion, we've had a number of points where people raised concerns about (for example) inference where a person provides content to a model that has inference=n attached to it.  In that case, it distinguishes itself from RAG because the person is taking responsibility for overriding the preference; whereas a model that goes off and fetches content for grounding (or whatever you call it) might be obligated to respect preferences.\n\nWe need to acknowledge that there are cases where people can take responsibility for ignoring preferences, but other settings in which systems might respect them.",
+      "createdAt": "2025-06-23T13:50:35Z",
+      "updatedAt": "2025-06-23T13:50:35Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 55,
+      "id": "I_kwDOOWk1-s682eeD",
+      "title": "Make clear the distinction between acquisition and use",
+      "url": "https://github.com/ietf-wg-aipref/drafts/issues/55",
+      "state": "OPEN",
+      "author": "martinthomson",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [
+        "location attachment"
+      ],
+      "body": "We don't say anything about this distinction, but it is an important one.\n\nrobots.txt `Allow` and `Disallow` rules define what can and cannot be obtained by a crawler.\n\nThe rules that we are adding will define what preferences attach to content/assets that are obtained.\n\nThat is, content that can be crawled will gain preferences according to the newly-added rules.  This does not change what can (or cannot) be acquired.",
+      "createdAt": "2025-06-23T14:23:59Z",
+      "updatedAt": "2025-06-23T14:23:59Z",
       "closedAt": null,
       "comments": []
     }
@@ -2264,6 +2404,58 @@
       "headRepository": "ietf-wg-aipref/drafts",
       "headRefName": "ack-no-affiliation",
       "headRefOid": "22a740afa5d949f33affc6f6786f754802d728d5",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 52,
+      "id": "PR_kwDOOWk1-s6bk_xj",
+      "title": "A reframing of search",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/52",
+      "state": "OPEN",
+      "author": "martinthomson",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "As discussed on the list recently.\r\n\r\nThis does not include Brad's suggestion of \"for the exclusive purpose of\".  That is an important clarification, but I think we need to address that separately.  That is, we need to recognize that what we conceive of as \"search\" applications are more complicated than a simple index that is used to locate stuff.  We need commentary that explains that a single application can embody multiple usage categories and that use of assets for each of those aspects can have separate rules.  This isn't necessarily how those applications are built today[^1], but that's not necessarily a constraint on what we do.\r\n\r\n[^1]: I am reminded of the concept of a \"data lake\", which has no distinction about where data has come from, the purpose for which it was obtained, or anything along those lines, making compliance with data protection regulation impossible.  The analogy here is with respect to use of assets for multiple purposes, without distinction.  For data lakes, the introduction of things like GDPR helped application developers build discipline about how they obtain and label personal information; perhaps this requires a similar shift, albeit one that affects a smaller set of people.",
+      "createdAt": "2025-06-23T01:51:25Z",
+      "updatedAt": "2025-06-23T01:51:25Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "33a61a8ef295de6ceaf2b7ac0782fe43695e9e46",
+      "headRepository": "ietf-wg-aipref/drafts",
+      "headRefName": "search-location",
+      "headRefOid": "be3b7bc9e391a78b0684b8b6391feac6aca914b0",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 53,
+      "id": "PR_kwDOOWk1-s6blx2H",
+      "title": "Rework abbreviations",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/53",
+      "state": "OPEN",
+      "author": "martinthomson",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "This makes them consistent with how we've been talking about them.",
+      "createdAt": "2025-06-23T04:31:08Z",
+      "updatedAt": "2025-06-23T04:31:08Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "33a61a8ef295de6ceaf2b7ac0782fe43695e9e46",
+      "headRepository": "ietf-wg-aipref/drafts",
+      "headRefName": "abbrevs",
+      "headRefOid": "21cab8ee72b3ce14c739f5d0a6f7cfa6e9a61c2b",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
