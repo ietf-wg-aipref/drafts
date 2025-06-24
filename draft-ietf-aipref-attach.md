@@ -233,7 +233,7 @@ does not use an ABNF definition,
 relying instead on the definitions in {{FIELDS}}.
 
 
-## Content-Rule Semantics
+## Content-Usage Rule Semantics
 
 Each group in the file applies to a set of crawlers,
 identified by product token as defined in {{Section 2.2.1 of ROBOTS}}.
