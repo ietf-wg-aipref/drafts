@@ -149,24 +149,20 @@ Embedding preferences is expected to be an effective means
 of associating preferences with content,
 because it ensures that metadata is always associated with content.
 
-The main challenge with embedding is that
-a different method is needed for each content type.
-That is,
-a different means of conveying preferences
-needs to be defined for each audio, documents, images, video,
-or other content format.
+Each content type - whether audio, documents, images, video, or other - 
+embeds metadata in different ways, however, in most cases it is possible to 
+embed the same metadata, just in different places. This is, for example, how XMP (ISO 16684) 
+is able to be used in many different content types. 
+
 Furthermore,
 some content types,
 such as plain text (`text/plain`),
 offer no universal means of carrying metadata.
-Though preferences might still be embedded in content with these formats,
-those preferences would not be reliably accessible to an automated system.
 
 The mechanisms in this document are therefore universal,
 in the sense that they apply to any content type.
 They are not universal
-in that they rely on the content being obtained using HTTP
-(and maybe FTP).
+in that they rely on the content being obtained using HTTP.
 
 Future work might define how preferences might be indicated
 for alternative content distribution or acquisition methods,
