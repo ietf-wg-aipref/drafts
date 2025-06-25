@@ -5,8 +5,8 @@
 AI Preferences                                                 P. Keller
 Internet-Draft                                               Open Future
 Intended status: Standards Track                         M. Thomson, Ed.
-Expires: 21 December 2025                                        Mozilla
-                                                            19 June 2025
+Expires: 27 December 2025                                        Mozilla
+                                                            25 June 2025
 
 
             A Vocabulary For Expressing AI Usage Preferences
@@ -52,7 +52,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 21 December 2025.
+   This Internet-Draft will expire on 27 December 2025.
 
 Copyright Notice
 
@@ -249,13 +249,11 @@ Table of Contents
 
 4.4.  Search Category
 
-   The act of using one or more assets to build a search index or as
-   input to a trained AI/ML model that has the purpose of providing
-   search results that include direct links to the location from where
-   the asset was obtained.
+   Using one or more assets in a search application that directs users
+   to the location from which the assets were retrieved.
 
-   The use of assets for AI Training is a proper subset of TDM usage.
-   [[Open issue (https://github.com/ietf-wg-aipref/drafts/issues/49)]]
+   The use of assets for Search is a proper subset of TDM usage.  [[Open
+   issue (https://github.com/ietf-wg-aipref/drafts/issues/49)]]
 
 4.5.  AI Inference Category
 
