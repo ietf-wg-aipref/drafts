@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-06-24T02:03:57.162451+00:00",
+  "timestamp": "2025-06-26T02:03:02.381417+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -62,7 +62,7 @@
       ],
       "body": "Discussed in the Brussels meeting -- there was broad support for also defining at least one vocabulary term for inference-time use of content by models. More than one term may be necessary, but the sense of the room was that we should keep this as simple as possible at the first instance.",
       "createdAt": "2025-04-10T13:47:22Z",
-      "updatedAt": "2025-06-23T14:52:17Z",
+      "updatedAt": "2025-06-25T17:46:52Z",
       "closedAt": null,
       "comments": [
         {
@@ -106,6 +106,34 @@
           "body": "> As I noted in the meeting, the original use case for inference comes from the ability for users to add a \"sample\" to a prompt where the user can then say \"like that\". This is especially important for situations like the [Studio Ghibli concerns](https://apnews.com/article/studio-ghibli-chatgpt-images-hayao-miyazaki-openai-0f4cb487ec3042dd5b43ad47879b91f4) that came up recently.\n\nThere are many similar use cases. Another is that someone may \"AI-launder\" copyrighted content: they could upload a copyrighted image to a gen-AI engine and give a prompt to make a very minor change, and then distribute the resulting image, claiming \"it's an AI-generated image, so it's uncopyrightable\".",
           "createdAt": "2025-06-23T14:52:17Z",
           "updatedAt": "2025-06-23T14:52:17Z"
+        },
+        {
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "This is something that is most acute with inference as it is the area in which people are most likely to want to do that sort of referencing/grounding/input.  For instance, taking written text and asking for a summary.\n\nSomething @lrosenthol said during the meeting seemed right to me.  We can have the definition include prohibitions (or reservations, or the opposite) for inferences of all those types, but then leave the question as to whether different parts of the system respect that to the people who are building those elements.  And their lawyers.\n\nOne possible response is to respect opt-outs and refuse to process inputs.  For instance, it could be that copying of style is not something that a particular product wants to be associated with.\n\nAnother approach is to ask the user of the system to accept the responsibility for contravening expressed preferences.  That might manifest in a number of ways from implicit/invisible (terms of service that make users responsible for respecting preferences for the content they source) to very prominent (an active prompt when using content that has preferences not to allow inference that forces users to accept that).\n\nRAG systems where automated systems seek out and ingest content probably have a different set of constraints on what they can or cannot do.  Still, the suite of options available for people building those products are still roughly along the same lines.\n\nEither way, this is not necessarily something that we have to decide here.  It's worth understanding, for sure, so that we are sure that the set of possibilities we enable are acceptable.  I am personally comfortable with that.",
+          "createdAt": "2025-06-24T04:54:55Z",
+          "updatedAt": "2025-06-24T04:54:55Z"
+        },
+        {
+          "author": "paul2keller",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "To me, it is pretty clear that at this stage, we have two lines of argument related to the question of how we can prevent preferences about inference from impacting individual users\u2019 rights, that we will need to resolve at some point (in London, I assume).\n\n1) The first one goes for a broad definition of inference (use of an asset as input for a trained model) and assumes that the protection of users\u2019 rights can best be left to implementers / the market (if a tool interprets preference signals very restrictively, then just use another tool that does not). This also leans on the understanding that preferences are just preferences and can be deliberately ignored by developers/deployers of tools/systems.\n\n2) The second one goes for a more narrow definition (probably more accurately described as RAG) where the preference only applies to assets that are autonomously retrieved by an AI system as input for its operation. This would exclude uses that are initiated by the user and thus have a more limited impact on users\u2019 rights.\n\nDoes this distinction make sense?",
+          "createdAt": "2025-06-25T10:23:21Z",
+          "updatedAt": "2025-06-25T10:23:55Z"
+        },
+        {
+          "author": "felixreda",
+          "authorAssociation": "NONE",
+          "body": "Hi Paul,\r\n\r\nThis distinction makes sense and it is indeed a good topic for discussion on the vocabulary in London.\r\n\r\nI am convinced that the market won\u2019t be able to solve the user rights issue, because secondary legislation is already pointing towards technical standards as an enforcement mechanism for copyright enforcement. Under the EU AI Act, AI model developers will mostly demonstrate compliance by signing up to a Code of Practice, which is currently being finalized. The latest draft version of the Code of Practice requires AI developers to: \r\n\r\n\"(a) employ web-crawlers that read and follow instructions expressed in accordance with the\r\nRobot Exclusion Protocol (robots.txt), as specified in the Internet Engineering Task Force\r\n(IETF) Request for Comments No. 9309, and any subsequent version of this IETF standard,\r\nand\r\n(b) make best efforts to identify and comply with other appropriate machine-readable protocols\r\nto express rights reservations pursuant to Article 4(3) of Directive (EU) 2019/790, for\r\nexample through asset-based or location-based metadata\u201c\r\n\r\nIn other words, while the preference signals are voluntary, they may very well end up having a quasi-mandatory effect on AI developers through the AI Act Code of Practice. Users won\u2019t have the option to simply switch to another provider if the vocabulary requires AI companies that want to \u201eread and follow\u201c or \u201eidentify and comply with\" the preference signals to restrict actions of their users that are perfectly legal under copyright law.\r\n\r\nThat\u2019s why it is very important, if we don\u2019t want the preference signals to inadvertently become a mechanism for technologically depriving end users of their rights under copyright law (such as the right to private copying, parody etc.), the vocabulary has to define the actions of end users interacting with AI tools as out of scope.\r\n\r\nBest,\r\nFelix\r\n\r\n> Am 25.06.2025 um 12:23 schrieb Paul Keller ***@***.***>:\r\n> \r\n> To me, it is pretty clear that at this stage, we have two lines of argument related to the question of how we can prevent preferences about inference from impacting individual users\u2019 rights, that we will need to resolve at some point (in London, I assume).\r\n> \r\n> The first one goes for a broad definition of inference (use of an asset as input for a trained model) and assumes that the protection of users\u2019 rights can best be left to implementers / the market (if a tool interprets preference signals very restrictively, then just use another tool that does not). This also leans on the understanding that preferences are just preferences and can be deliberately ignored by developers/deployers of tools/systems.\r\n> \r\n> The second one goes for a more narrow definition (probably more accurately described as RAG) where the preference online applies to assets that are autonomously retrieved by an AI system as input for its operation. This would exclude uses that are initiated by the user and thus have a more limited impact on users\u2019 rights.\r\n> \r\n> Does this distinction make sense?\r\n> \r\n> \u2014\r\n> Reply to this email directly, view it on GitHub <https://github.com/ietf-wg-aipref/drafts/issues/2#issuecomment-3004245382> or unsubscribe <https://github.com/notifications/unsubscribe-auth/BGNSI7RKG67VLW5HNNUQA733FJ2C7BFKMF2HI4TJMJ2XIZLTSSBKK5TBNR2WLJDUOJ2WLJDOMFWWLO3UNBZGKYLEL5YGC4TUNFRWS4DBNZ2F6YLDORUXM2LUPGBKK5TBNR2WLJDUOJ2WLJDOMFWWLLTXMF2GG2C7MFRXI2LWNF2HTAVFOZQWY5LFUVUXG43VMWSG4YLNMWVXI2DSMVQWIX3UPFYGLAVFOZQWY5LFVI4DIMRYGI2TIMZSGWSG4YLNMWUWQYLTL5WGCYTFNSWHG5LCNJSWG5C7OR4XAZNMJFZXG5LFINXW23LFNZ2KM5DPOBUWG44TQKSHI6LQMWVHEZLQN5ZWS5DPOJ42K5TBNR2WLKJZGYZTCOJWGQYTBAVEOR4XAZNFNFZXG5LFUV3GC3DVMWVDEOJYGU3TMNRSHA2YFJDUPFYGLJLMMFRGK3FFOZQWY5LFVI4DIMRYGI2TIMZSGWTXI4TJM5TWK4VGMNZGKYLUMU>.\r\n> You are receiving this email because you are subscribed to this thread.\r\n> \r\n> Triage notifications on the go with GitHub Mobile for iOS <https://apps.apple.com/app/apple-store/id1477376905?ct=notification-email&mt=8&pt=524675> or Android <https://play.google.com/store/apps/details?id=com.github.android&referrer=utm_campaign%3Dnotification-email%26utm_medium%3Demail%26utm_source%3Dgithub>.\r\n> \r\n\r\n",
+          "createdAt": "2025-06-25T10:44:26Z",
+          "updatedAt": "2025-06-25T10:44:26Z"
+        },
+        {
+          "author": "lrosenthol",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Looking forward to discussing this further @felixreda as while I understand where you are coming from, you also need to understand where the Creative community is coming from and their desires - which are just as valid.",
+          "createdAt": "2025-06-25T17:46:52Z",
+          "updatedAt": "2025-06-25T17:46:52Z"
         }
       ]
     },
@@ -324,7 +352,7 @@
       ],
       "body": "The architecture we're developing accommodates attachment mechanisms that we define in our \"core\" documents, as well as future extensions -- including those defined by us and by third parties.\n\nContent providers need to know which attachment mechanisms will be paid attention to, and consumers of preferences need to know which ones they're supposed to check. \n\nThere might be:\n\n* one canonical list (e.g., in our specification or an IANA registry)\n* more than one list (e.g., defined per-use-case, such as for crawling-to-train vs inference-time)\n* undefined list (e.g., defined by legal authority)",
       "createdAt": "2025-04-11T16:00:54Z",
-      "updatedAt": "2025-06-23T14:17:31Z",
+      "updatedAt": "2025-06-25T01:08:37Z",
       "closedAt": null,
       "comments": [
         {
@@ -340,6 +368,20 @@
           "body": "But I agree that for this particular document, we need only address a specific set of attachments.  REP and HTTP headers seem like the right set.\n\nThat said, we should have some text in the document that mentions the existence of other methods (but we need not include specific links)",
           "createdAt": "2025-06-23T14:17:31Z",
           "updatedAt": "2025-06-23T14:17:31Z"
+        },
+        {
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "What we currently have [here](https://ietf-wg-aipref.github.io/drafts/draft-ietf-aipref-attach.html#section-1.3):\n\n> This document does not define a means of embedding preferences in content. Embedding preferences is expected to be an effective means of associating preferences with content, because it ensures that metadata is always associated with content.\n>\n> The main challenge with embedding is that a different method is needed for each content type. That is, a different means of conveying preferences needs to be defined for each audio, documents, images, video, or other content format. Furthermore, some content types, such as plain text (text/plain), offer no universal means of carrying metadata. Though preferences might still be embedded in content with these formats, those preferences would not be reliably accessible to an automated system.",
+          "createdAt": "2025-06-24T04:44:59Z",
+          "updatedAt": "2025-06-24T04:44:59Z"
+        },
+        {
+          "author": "lrosenthol",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Submitted #57 to improve that paragraph",
+          "createdAt": "2025-06-25T01:08:37Z",
+          "updatedAt": "2025-06-25T01:08:37Z"
         }
       ]
     },
@@ -580,7 +622,7 @@
       ],
       "body": "In looking at this, the term \"asset\" might be assumed to imply ownership, such that preferences can only be expressed by entities that \"own\" the affected content.\n\nCan we instead use the more neutral term \"content\"?  Or, minimally, something that is less prejudicial about the arrangement between the entity that expresses a preference and the subject that is covered.",
       "createdAt": "2025-05-12T06:12:48Z",
-      "updatedAt": "2025-06-23T13:12:00Z",
+      "updatedAt": "2025-06-25T10:15:22Z",
       "closedAt": null,
       "comments": [
         {
@@ -645,6 +687,20 @@
           "body": "Given the context of the web/http and its use of resource, I have no objection to that term either.   And then in related docs (e.g., CAWG) we can map resource->asset.\n\n",
           "createdAt": "2025-06-23T13:12:00Z",
           "updatedAt": "2025-06-23T13:12:00Z"
+        },
+        {
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Given use in HTTP, this has some potential for confusion.  In HTTP, a \"resource\" refers to the thing at the other end of a URL.  A \"representation\" is the bits that might be exchanged when interacting with a resource.\n\nNot saying that this is a deal-breaker, but it will be confusing.",
+          "createdAt": "2025-06-24T04:42:50Z",
+          "updatedAt": "2025-06-24T04:42:50Z"
+        },
+        {
+          "author": "paul2keller",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "it just shows that \"asset\" makes more sense \ud83d\ude04 (representation raises the question of \"representation of what?\")",
+          "createdAt": "2025-06-25T10:15:22Z",
+          "updatedAt": "2025-06-25T10:15:22Z"
         }
       ]
     },
@@ -2462,6 +2518,244 @@
       "mergeCommit": null,
       "comments": [],
       "reviews": []
+    },
+    {
+      "number": 56,
+      "id": "PR_kwDOOWk1-s6b81rJ",
+      "title": "Correct section title",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/56",
+      "state": "OPEN",
+      "author": "martinthomson",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2025-06-24T23:16:55Z",
+      "updatedAt": "2025-06-24T23:16:55Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "33a61a8ef295de6ceaf2b7ac0782fe43695e9e46",
+      "headRepository": "ietf-wg-aipref/drafts",
+      "headRefName": "content-rule",
+      "headRefOid": "bf4a661a07c51ee03c8c91123fc40d846a75e854",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 57,
+      "id": "PR_kwDOOWk1-s6b9V14",
+      "title": "Rewote the language on embedded preferences and removed FTP",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/57",
+      "state": "OPEN",
+      "author": "lrosenthol",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "I rewrote the section on embedded preferences to make it clear that the issue is the content type and not the actual payload, and gave XMP as an example.\r\n\r\nAlso removed the reference to FTP, since we're pretty sure it won't work.",
+      "createdAt": "2025-06-25T01:05:55Z",
+      "updatedAt": "2025-06-25T12:14:10Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "33a61a8ef295de6ceaf2b7ac0782fe43695e9e46",
+      "headRepository": "lrosenthol/drafts",
+      "headRefName": "lrosenthol/embedding",
+      "headRefOid": "6f3349751b5ec9f74462c1048a5054982d4059f1",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [
+        {
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "RFC 9309 does mention FTP, but that's probably not worth belaboring.",
+          "createdAt": "2025-06-25T01:19:59Z",
+          "updatedAt": "2025-06-25T01:19:59Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWk1-s6wLy2z",
+          "commit": {
+            "abbreviatedOid": "6f33497"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-06-25T01:20:55Z",
+          "updatedAt": "2025-06-25T01:20:59Z",
+          "comments": [
+            {
+              "originalPosition": 12,
+              "body": "We'll need a citation for XMP, even if it is just normative.  Do you have a link?",
+              "createdAt": "2025-06-25T01:20:55Z",
+              "updatedAt": "2025-06-25T01:21:40Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s6wL76U",
+          "commit": {
+            "abbreviatedOid": "6f33497"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-06-25T01:41:03Z",
+          "updatedAt": "2025-06-25T01:41:04Z",
+          "comments": [
+            {
+              "originalPosition": 12,
+              "body": "Separately, it occurs that maybe we want to acknowledge the potential for the encoding to differ between formats.",
+              "createdAt": "2025-06-25T01:41:03Z",
+              "updatedAt": "2025-06-25T01:41:04Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s6wTiNx",
+          "commit": {
+            "abbreviatedOid": "6f33497"
+          },
+          "author": "lrosenthol",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-06-25T12:12:47Z",
+          "updatedAt": "2025-06-25T12:12:48Z",
+          "comments": [
+            {
+              "originalPosition": 12,
+              "body": "The official ISO version is at https://www.iso.org/standard/75163.html.  The Adobe version is at https://github.com/adobe/XMP-Toolkit-SDK/blob/main/docs/XMPSpecificationPart1.pdf",
+              "createdAt": "2025-06-25T12:12:48Z",
+              "updatedAt": "2025-06-25T12:12:48Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s6wTjTc",
+          "commit": {
+            "abbreviatedOid": "6f33497"
+          },
+          "author": "lrosenthol",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-06-25T12:14:10Z",
+          "updatedAt": "2025-06-25T12:14:10Z",
+          "comments": [
+            {
+              "originalPosition": 12,
+              "body": "But it doesn't.  Having added support for C2PA to dozens of different formats (https://c2pa.org/specifications/specifications/2.2/specs/C2PA_Specification.html#_supported_formats), I can speak authoritatively that no such changes are required.",
+              "createdAt": "2025-06-25T12:14:10Z",
+              "updatedAt": "2025-06-25T12:14:10Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 58,
+      "id": "PR_kwDOOWk1-s6cFaWV",
+      "title": "Update search category",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/58",
+      "state": "MERGED",
+      "author": "paul2keller",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Narrowed down the scope of the proposed search category, which better reflects the status of the discussion on the mailing list",
+      "createdAt": "2025-06-25T15:50:39Z",
+      "updatedAt": "2025-06-25T21:45:11Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "33a61a8ef295de6ceaf2b7ac0782fe43695e9e46",
+      "headRepository": "ietf-wg-aipref/drafts",
+      "headRefName": "search-more-narrow",
+      "headRefOid": "5eaedeed8d66cab8cb12666a22a12275f13b474d",
+      "closedAt": "2025-06-25T21:45:09Z",
+      "mergedAt": "2025-06-25T21:45:09Z",
+      "mergedBy": "martinthomson",
+      "mergeCommit": {
+        "oid": "dd1207d3d3ba873f44ecd6408bd99b0b6929cb7a"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWk1-s6walAU",
+          "commit": {
+            "abbreviatedOid": "5eaedee"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-06-25T21:45:04Z",
+          "updatedAt": "2025-06-25T21:45:04Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 59,
+      "id": "PR_kwDOOWk1-s6cFlDI",
+      "title": "Tighten TDM language",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/59",
+      "state": "MERGED",
+      "author": "paul2keller",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Minor adjustments to the definition of TDM using more generic language, which further differentiates it from the definition provided in the EU Directive. (I have left the name of the category unchanged as changing that breaks lots of internal references, but I assume we will likely change the name as well)",
+      "createdAt": "2025-06-25T16:07:38Z",
+      "updatedAt": "2025-06-25T21:45:24Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "33a61a8ef295de6ceaf2b7ac0782fe43695e9e46",
+      "headRepository": "ietf-wg-aipref/drafts",
+      "headRefName": "tdm-more-generic",
+      "headRefOid": "ce950d6e14850426345a892416d31a99b671be78",
+      "closedAt": "2025-06-25T21:45:22Z",
+      "mergedAt": "2025-06-25T21:45:22Z",
+      "mergedBy": "martinthomson",
+      "mergeCommit": {
+        "oid": "7dccd207c57d727c40feac4aa5c9ce6884d22d9d"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWk1-s6wYGIr",
+          "commit": {
+            "abbreviatedOid": "ce950d6"
+          },
+          "author": "lrosenthol",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-06-25T17:42:28Z",
+          "updatedAt": "2025-06-25T17:42:28Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWk1-s6waeBp",
+          "commit": {
+            "abbreviatedOid": "ce950d6"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-06-25T21:33:34Z",
+          "updatedAt": "2025-06-25T21:33:34Z",
+          "comments": []
+        }
+      ]
     }
   ]
 }
