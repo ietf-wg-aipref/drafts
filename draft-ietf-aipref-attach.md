@@ -1,6 +1,6 @@
 ---
 title: "Indicating Preferences Regarding Content Usage"
-abbrev: "Content Usage Preferences"
+abbrev: "AI Preference Attachment"
 category: std
 
 docname: draft-ietf-aipref-attach-latest

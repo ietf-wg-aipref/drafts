@@ -1,6 +1,6 @@
 ---
 title: "A Vocabulary For Expressing AI Usage Preferences"
-abbrev: "AI Preferences"
+abbrev: "AI Preference Vocabulary"
 category: std
 
 docname: draft-ietf-aipref-vocab-latest
