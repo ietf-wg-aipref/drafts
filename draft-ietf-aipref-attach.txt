@@ -79,7 +79,7 @@ Table of Contents
      1.4.  Conventions and Definitions
    2.  HTTP Content-Usage Header Field
    3.  Robots Exclusion Protocol Content-Usage Rule
-     3.1.  Content-Rule Semantics
+     3.1.  Content-Usage Rule Semantics
      3.2.  Processing Content-Usage Rules
      3.3.  Example
    4.  Security Considerations
@@ -225,7 +225,7 @@ Table of Contents
    Note that the usage preference expression encoding does not use an
    ABNF definition, relying instead on the definitions in [FIELDS].
 
-3.1.  Content-Rule Semantics
+3.1.  Content-Usage Rule Semantics
 
    Each group in the file applies to a set of crawlers, identified by
    product token as defined in Section 2.2.1 of [ROBOTS].  The Allow and
