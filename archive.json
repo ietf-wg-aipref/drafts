@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-06-29T02:20:19.694648+00:00",
+  "timestamp": "2025-07-01T02:21:17.960546+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -62,7 +62,7 @@
       ],
       "body": "Discussed in the Brussels meeting -- there was broad support for also defining at least one vocabulary term for inference-time use of content by models. More than one term may be necessary, but the sense of the room was that we should keep this as simple as possible at the first instance.",
       "createdAt": "2025-04-10T13:47:22Z",
-      "updatedAt": "2025-06-25T17:46:52Z",
+      "updatedAt": "2025-06-30T17:24:35Z",
       "closedAt": null,
       "comments": [
         {
@@ -134,6 +134,13 @@
           "body": "Looking forward to discussing this further @felixreda as while I understand where you are coming from, you also need to understand where the Creative community is coming from and their desires - which are just as valid.",
           "createdAt": "2025-06-25T17:46:52Z",
           "updatedAt": "2025-06-25T17:46:52Z"
+        },
+        {
+          "author": "BradSilver99",
+          "authorAssociation": "NONE",
+          "body": "@felixreda I know you use the word \"quasi\" to qualify \"mandatory\" here, but since the Code of Practice is voluntary (and we are still awaiting its final form) I am not sure the word mandatory could apply here, even in a \"quasi\" form.    I do think the argument for not trying to solve for this its purest form is that we are enabling preferences.  The example about the Code of Practice indicates that governments (not this group) can and will do whatever they want to shape rules which govern the use of content - and I think it is in those forums that these discussions should happen to address concerns about how far those rules go.  I don't think we should curtail preferences because of what governments might do in the future.   ",
+          "createdAt": "2025-06-30T17:24:35Z",
+          "updatedAt": "2025-06-30T17:24:35Z"
         }
       ]
     },
@@ -847,9 +854,17 @@
       "labels": [],
       "body": "In discussion, we've had a number of points where people raised concerns about (for example) inference where a person provides content to a model that has inference=n attached to it.  In that case, it distinguishes itself from RAG because the person is taking responsibility for overriding the preference; whereas a model that goes off and fetches content for grounding (or whatever you call it) might be obligated to respect preferences.\n\nWe need to acknowledge that there are cases where people can take responsibility for ignoring preferences, but other settings in which systems might respect them.",
       "createdAt": "2025-06-23T13:50:35Z",
-      "updatedAt": "2025-06-23T13:50:35Z",
+      "updatedAt": "2025-06-30T07:06:56Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "The bulk of this discussion is continuing on #2.",
+          "createdAt": "2025-06-30T07:06:56Z",
+          "updatedAt": "2025-06-30T07:06:56Z"
+        }
+      ]
     },
     {
       "number": 55,
