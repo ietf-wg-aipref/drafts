@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-07-01T02:21:17.960546+00:00",
+  "timestamp": "2025-07-03T02:03:57.825018+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -62,7 +62,7 @@
       ],
       "body": "Discussed in the Brussels meeting -- there was broad support for also defining at least one vocabulary term for inference-time use of content by models. More than one term may be necessary, but the sense of the room was that we should keep this as simple as possible at the first instance.",
       "createdAt": "2025-04-10T13:47:22Z",
-      "updatedAt": "2025-06-30T17:24:35Z",
+      "updatedAt": "2025-07-01T17:08:43Z",
       "closedAt": null,
       "comments": [
         {
@@ -141,6 +141,13 @@
           "body": "@felixreda I know you use the word \"quasi\" to qualify \"mandatory\" here, but since the Code of Practice is voluntary (and we are still awaiting its final form) I am not sure the word mandatory could apply here, even in a \"quasi\" form.    I do think the argument for not trying to solve for this its purest form is that we are enabling preferences.  The example about the Code of Practice indicates that governments (not this group) can and will do whatever they want to shape rules which govern the use of content - and I think it is in those forums that these discussions should happen to address concerns about how far those rules go.  I don't think we should curtail preferences because of what governments might do in the future.   ",
           "createdAt": "2025-06-30T17:24:35Z",
           "updatedAt": "2025-06-30T17:24:35Z"
+        },
+        {
+          "author": "llemeurfr",
+          "authorAssociation": "NONE",
+          "body": "In this discussion, there are clearly two variants of \"inference\". \n\nIn the first variant, the content that may be flagged with an opt-out is provided by a user as part of a REQUEST to an AI system. As already mentioned in this thread, preventing users from feeding an AI system with this content may violate their rights, particularly in relation to accessibility needs. I'll take as examples the request for an image description or the simplification of a complex paragraph for somebody with an intellectual disability. \n\nIt is true that in this first variant, a user providing a document to an AI system and prompting \"copy it with a few differences\" is going against the will of the content owner. However, I imagine that anti-parasitism and anti-counterfeit laws would apply if he publicly releases the results of this process. \n\nI'm therefore not comfortable with an AI preference that can easily clash with accessibility requirements (especially if some system developers poorly understand the nuance). \n\nIn the second variant, the content possibly flagged with an opt-out is provided by the system as part of the RESPONSE offered by the AI system. This is typically the RAG case, where fresh content is combined with a trained model to improve the response. The AI system is responsible for the content it selects, there is no clash with pro-accessibility laws, and the AI preferences are therefore easy to apply. \n\nNobody knows how long the term RAG will survive before a new method appears. But isn't there a term sitting conceptually between \"inference\" and \"RAG\" that we could adopt for this vocabulary? \n\n ",
+          "createdAt": "2025-07-01T17:08:43Z",
+          "updatedAt": "2025-07-01T17:08:43Z"
         }
       ]
     },
