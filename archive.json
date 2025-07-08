@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-07-03T02:03:57.825018+00:00",
+  "timestamp": "2025-07-08T02:04:35.151560+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -636,7 +636,7 @@
       ],
       "body": "In looking at this, the term \"asset\" might be assumed to imply ownership, such that preferences can only be expressed by entities that \"own\" the affected content.\n\nCan we instead use the more neutral term \"content\"?  Or, minimally, something that is less prejudicial about the arrangement between the entity that expresses a preference and the subject that is covered.",
       "createdAt": "2025-05-12T06:12:48Z",
-      "updatedAt": "2025-06-25T10:15:22Z",
+      "updatedAt": "2025-07-07T19:09:49Z",
       "closedAt": null,
       "comments": [
         {
@@ -715,6 +715,13 @@
           "body": "it just shows that \"asset\" makes more sense \ud83d\ude04 (representation raises the question of \"representation of what?\")",
           "createdAt": "2025-06-25T10:15:22Z",
           "updatedAt": "2025-06-25T10:15:22Z"
+        },
+        {
+          "author": "chrisn",
+          "authorAssociation": "NONE",
+          "body": "I agree that asset makes more sense. I think we should the potential for confusion with HTTP (and indeed not tie the vocabulary to HTTP semantics).",
+          "createdAt": "2025-07-07T19:09:49Z",
+          "updatedAt": "2025-07-07T19:09:49Z"
         }
       ]
     },
