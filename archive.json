@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-07-10T02:06:21.399258+00:00",
+  "timestamp": "2025-07-13T02:23:37.473613+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -772,7 +772,7 @@
       ],
       "body": "I had assumed that TDM would be very broad, @paul2keller [did not](https://github.com/ietf-wg-aipref/drafts/pull/39#issuecomment-2943398120):\n\n> I am not so sure we should treat the inference category as a proper subset of the TDM category. This is something I am somewhat skeptical of, i think there are probably inference type uses that are not necessarily TDM.\n\nThis is an interesting question that we should resolve.  If nothing else, we say that TDM is a broad category that encompasses all the other categories, so if it doesn't encompass inference, we need to fix the document one way or other (#39 for encompassing, something else if not).",
       "createdAt": "2025-06-05T10:06:22Z",
-      "updatedAt": "2025-06-23T14:12:46Z",
+      "updatedAt": "2025-07-11T22:00:03Z",
       "closedAt": null,
       "comments": [
         {
@@ -802,6 +802,13 @@
           "body": "I don't think inference is a sub-section of TDM.\n\nThis is a definition of TDM I found online:\n\"Text and Data Mining (TDM) is the process of deriving information from machine-read material. It works by copying large quantities of material, extracting the data, and recombining it to identify patterns.\"\n\nBy contrast inference (including style reference and RAG) just applies the pretrained model to new (typically user sourced) inputs. Since inference does not scan the data to extract patterns/insights, it should not be a sub-section of TDM or under the same umbrella",
           "createdAt": "2025-06-23T14:12:46Z",
           "updatedAt": "2025-06-23T14:12:46Z"
+        },
+        {
+          "author": "saiful148",
+          "authorAssociation": "NONE",
+          "body": "> I had assumed that TDM would be very broad, [@paul2keller](https://github.com/paul2keller) [did not](https://github.com/ietf-wg-aipref/drafts/pull/39#issuecomment-2943398120):\n> \n> > I am not so sure we should treat the inference category as a proper subset of the TDM category. This is something I am somewhat skeptical of, i think there are probably inference type uses that are not necessarily TDM.\n> \n> This is an interesting question that we should resolve. If nothing else, we say that TDM is a broad category that encompasses all the other categories, so if it doesn't encompass inference, we need to fix the document one way or other ([#39](https://github.com/ietf-wg-aipref/drafts/pull/39) for encompassing, something else if not).\n\n",
+          "createdAt": "2025-07-11T22:00:03Z",
+          "updatedAt": "2025-07-11T22:00:03Z"
         }
       ]
     },
