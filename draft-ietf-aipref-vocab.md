@@ -35,6 +35,7 @@ author:
     email: mt@lowentropy.net
 
 normative:
+  FIELDS: RFC9651
 
 informative:
  EUCD2019:
@@ -220,7 +221,7 @@ Systems referencing the vocabulary must not introduce additional categories that
 This section defines an exemplary serialization format for preferences.
 The format describes how the abstract model could be turned into Unicode text or sequence of bytes.
 
-The format relies on the Dictionary type defined in {{Section 3.2 of !FIELDS=RFC9651}}.
+The format relies on the Dictionary type defined in {{Section 3.2 of FIELDS}}.
 The dictionary keys correspond to usage categories
 and the dictionary values correspond to explicit preferences,
 which can be either `y` or `n`; see {{y-or-n}}.
@@ -257,13 +258,13 @@ These are encoded using the mappings in {{!ASCII=RFC0020}}.
 
 The abstract model used has two options for preferences associated with each category:
 allow and disallow.
-These are mapped to single byte Tokens ({{Section 3.3.4 of !FIELDS}})
+These are mapped to single byte Tokens ({{Section 3.3.4 of FIELDS}})
 of `y` and `n`, respectively.
 
 
 ## Text Encoding
 
-Structured Fields {{!FIELDS=RFC9651}} describes a byte-level encoding of information,
+Structured Fields {{FIELDS}} describes a byte-level encoding of information,
 not a text encoding.
 This makes this format suitable for inclusion in any protocol or format that carries bytes.
 
@@ -290,7 +291,7 @@ that do not assign a preference to a usage category.
 In either case, when processing a parsed Dictionary to obtain preferences,
 any unknown labels MUST be ignored.
 
-The Dictionary syntax ({{Section 3.2 of !FIELDS}}) can associate parameters
+The Dictionary syntax ({{Section 3.2 of FIELDS}}) can associate parameters
 with each key-value pair.
 This document does not define any semantics for any parameters that might be included.
 When processing a parsed Dictionary to obtain preferences,
@@ -300,7 +301,7 @@ any unknown parameters MUST be ignored.
 ## Processing Algorithm {#processing}
 
 To process a series of bytes to recover the expressed preferences,
-those bytes are parsed into a Dictionary ({{Section 4.2.2 of !FIELDS}}),
+those bytes are parsed into a Dictionary ({{Section 4.2.2 of FIELDS}}),
 then preferences are assigned to each usage category in the vocabulary.
 
 The parsing algorithm for a Dictionary
