@@ -261,6 +261,24 @@ These are mapped to single byte Tokens ({{Section 3.3.4 of !FIELDS}})
 of `y` and `n`, respectively.
 
 
+## Exceptions {Exceptions}
+
+The abstract model allows exceptions to be associated with each preference. The
+parameter defined in ({{Section 3.1.2 of !FIELDS}}) is used. The `exceptions`
+parameter is only valid following a disallow (`n`) preference.
+
+The `exceptions` value contains a URI-reference ({{Section 4.1 of
+!URI=RFC3986}}). If its value is not a valid URI-reference, the exception MUST
+be ignored. If its value is a relative reference ({{Section 4.2 of !URI}}), it
+MUST be resolved ({{Section 5 of !URI}}) before being used.
+
+For example:
+
+~~~
+ay=y, genai=n;exceptions="https://example.com/usage-conditions.html"
+~~~
+
+
 ## Text Encoding
 
 Structured Fields {{!FIELDS=RFC9651}} describes a byte-level encoding of information,
@@ -292,7 +310,6 @@ any unknown labels MUST be ignored.
 
 The Dictionary syntax ({{Section 3.2 of !FIELDS}}) can associate parameters
 with each key-value pair.
-This document does not define any semantics for any parameters that might be included.
 When processing a parsed Dictionary to obtain preferences,
 any unknown parameters MUST be ignored.
 
