@@ -35,6 +35,7 @@ author:
     email: mt@lowentropy.net
 
 normative:
+  URI: RFC3986
 
 informative:
  EUCD2019:
@@ -267,10 +268,10 @@ The abstract model allows exceptions to be associated with each preference. The
 parameter defined in ({{Section 3.1.2 of !FIELDS}}) is used. The `exceptions`
 parameter is only valid following a disallow (`n`) preference.
 
-The `exceptions` value contains a URI-reference ({{Section 4.1 of
-!URI=RFC3986}}). If its value is not a valid URI-reference, the exception MUST
-be ignored. If its value is a relative reference ({{Section 4.2 of !URI}}), it
-MUST be resolved ({{Section 5 of !URI}}) before being used.
+The `exceptions` value contains a URI-reference ({{Section 4.1 of URI}}). If
+its value is not a valid URI-reference, the exception MUST be ignored. If its
+value is a relative reference ({{Section 4.2 of URI}}), it MUST be resolved
+({{Section 5 of URI}}) before being used.
 
 For example:
 
