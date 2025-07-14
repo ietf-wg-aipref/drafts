@@ -264,14 +264,16 @@ of `y` and `n`, respectively.
 
 ## Exceptions {Exceptions}
 
-The abstract model allows exceptions to be associated with each preference. The
-parameter defined in ({{Section 3.1.2 of !FIELDS}}) is used. The `exceptions`
-parameter is only valid following a disallow (`n`) preference.
+The abstract model allows an exceptions document to be associated with a
+preference. The parameter syntax defined in ({{Section 3.1.2 of !FIELDS}}) is
+used.  The exceptions document may describe conditions which must be met to
+allow usage.
 
-The `exceptions` value contains a URI-reference ({{Section 4.1 of URI}}). If
-its value is not a valid URI-reference, the exception MUST be ignored. If its
-value is a relative reference ({{Section 4.2 of URI}}), it MUST be resolved
-({{Section 5 of URI}}) before being used.
+The `exceptions` parameter is only valid following a disallow (`n`) usage
+preference.  The `exceptions` value contains a URI-reference ({{Section 4.1 of
+URI}}). If its value is not a valid URI-reference, the exception MUST be
+ignored. If its value is a relative reference ({{Section 4.2 of URI}}), it MUST
+be resolved ({{Section 5 of URI}}) before being used.
 
 For example:
 
