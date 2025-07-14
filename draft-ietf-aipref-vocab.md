@@ -35,6 +35,7 @@ author:
     email: mt@lowentropy.net
 
 normative:
+  ASCII: RFC0020
   FIELDS: RFC9651
 
 informative:
@@ -42,8 +43,9 @@ informative:
     title: "Directive (EU) 2019/790 of the European Parliament and of the Council of 17 April 2019 on copyright and related rights in the Digital Single Market"
     target: https://eur-lex.europa.eu/eli/dir/2019/790/oj
     author:
-     org: European Union
+    org: European Union
     date: 2019-05-17
+  UTF8: RFC3629
 
 ...
 
@@ -251,7 +253,7 @@ Each usage category in the vocabulary ({{vocab}}) is mapped to a short textual l
 
 Any mapping for a new usage category can only use
 lowercase latin characters (a-z), digits (0-9), "_", "-", ".", or "*".
-These are encoded using the mappings in {{!ASCII=RFC0020}}.
+These are encoded using the mappings in {{ASCII}}.
 
 
 ## Preference Labels {#y-or-n}
@@ -270,8 +272,8 @@ This makes this format suitable for inclusion in any protocol or format that car
 
 Some formats are defined in terms of strings rather than bytes.
 These formats might need to decode the bytes of this format to obtain a string.
-As the syntax is limited to ASCII {{?ASCII=RFC0020}},
-an ASCII decoder or UTF-8 decoder {{?UTF8=RFC3629}} can be used.
+As the syntax is limited to ASCII {{ASCII}},
+an ASCII decoder or UTF-8 decoder {{UTF8}} can be used.
 This results in the strings that this document uses.
 
 Processing (see {{processing}}) requires a sequence of bytes,
@@ -464,7 +466,7 @@ across all items in the registry.
 {:aside}
 > Note that Labels are sequences of bytes in practice,
 > but the registry lists Labels as strings,
-> which are encoded into bytes using {{?ASCII=RFC0020}}.
+> which are encoded into bytes using {{ASCII}}.
 
 
 ## Initial Registry Contents
