@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-07-13T02:23:37.473613+00:00",
+  "timestamp": "2025-07-15T02:18:52.507175+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -917,6 +917,48 @@
           "body": "> I struggle to see which content provider would allow access to their content BUT explicitly opt-out from conventional search\n\nAt this stage, I don't think that we need to make assumptions about what people might or might not choose to do.  Certainly, it seems like \"search\" is the most benign and beneficial of potential TDM categories, but there are two things I generally hold to be true: your imagination is rarely good enough to anticipate future developments and people are weird.  If we don't need to constrain things in a particular way -- that is, the constraint doesn't deliver some benefit -- then why would we.\n\n> The Search category, in the current vocabulary draft, does not make any difference between conventional search and \"AI Search\" / \"AI Overview\".\n\nThat's probably best directed to the discussion on the list and #1.  I think that this is entirely deliberate: we decided to look at the outcome of the application, not so much how it is implemented.  As our friends in search are happy to remind us: search _is_ an AI application, so attempting to distinguish between \"search\" and \"AI search\" is essentially meaningless.  By keeping focus on the effect of the application, and by asking \"is the link to the content the focus?\", we avoid having to engage with the minutiae of how the application is built.",
           "createdAt": "2025-07-09T23:54:28Z",
           "updatedAt": "2025-07-10T01:50:43Z"
+        }
+      ]
+    },
+    {
+      "number": 60,
+      "id": "I_kwDOOWk1-s7AUZzm",
+      "title": "Explain what no preference means",
+      "url": "https://github.com/ietf-wg-aipref/drafts/issues/60",
+      "state": "OPEN",
+      "author": "martinthomson",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [
+        "location attachment"
+      ],
+      "body": "This is the situation today: no preferences are attached[^1].  So, when there is no explicit preference signal, explain that it means just that: no preference signal .\n\n[^1]: There are some existing preference signaling systems, but they don't use our vocabulary.  Yet.",
+      "createdAt": "2025-07-13T15:07:24Z",
+      "updatedAt": "2025-07-13T15:07:39Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 61,
+      "id": "I_kwDOOWk1-s7AZ3jc",
+      "title": "Is ASCII normative or informative?",
+      "url": "https://github.com/ietf-wg-aipref/drafts/issues/61",
+      "state": "OPEN",
+      "author": "TimidRobot",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "# Issue\n\nThe `ASCII` reference is defined inline multiple conflicting times:\n1. Normative:\n   https://github.com/ietf-wg-aipref/drafts/blob/a0f9979749a89c548bbee1ef5ebc742556baf19f/draft-ietf-aipref-vocab.md?plain=1#L253\n2. Informative:\n   https://github.com/ietf-wg-aipref/drafts/blob/a0f9979749a89c548bbee1ef5ebc742556baf19f/draft-ietf-aipref-vocab.md?plain=1#L272\n   https://github.com/ietf-wg-aipref/drafts/blob/a0f9979749a89c548bbee1ef5ebc742556baf19f/draft-ietf-aipref-vocab.md?plain=1#L466\n\n\n# Proposed solution\n\n1. Move `ASCII` reference to the header\n   - This will remove the need to define it inline, with each occurrence risking conflict with the others\n3. Make it normative\n   - As there is a normative reference, it must be listed as normative\n\n\n# Related\n- [IESG Statement: Normative and Informative References](https://datatracker.ietf.org/doc/statement-iesg-iesg-statement-normative-and-informative-references-20060419/)\n- [kramdown-rfc README.md](https://github.com/cabo/kramdown-rfc/blob/92337e5af1371d482f1a1fe2b1fcea109c873658/README.md):\n  > By indicating a normative reference as in `{{!RFC2119}}` or an informative one as in `{{?RFC1925}}`, you can\ncompletely automate the referencing, without the need to write anything in the header.",
+      "createdAt": "2025-07-14T09:14:27Z",
+      "updatedAt": "2025-07-14T15:44:42Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Having normative and informative references inline is a feature that I'm exploiting, not a bug.\n\nIf you look at the examples, there are both normative and informative uses.  The kramdown-rfc tool looks at this and upgrades the reference to be normative if there are normative uses.  That's what happens here.\n\nThe reason to have both is that -- should the normative usage be removed in the course of editing -- you don't need to do anything to have the citation moved to the informative section.  If you move it to the header, then that is extra work to do.  (We do that work anyway in the final review of the document, but it's easier to handle if the setup is correct from the outset.)",
+          "createdAt": "2025-07-14T15:44:42Z",
+          "updatedAt": "2025-07-14T15:44:42Z"
         }
       ]
     }
@@ -2817,6 +2859,79 @@
           "createdAt": "2025-06-25T21:33:34Z",
           "updatedAt": "2025-06-25T21:33:34Z",
           "comments": []
+        }
+      ]
+    },
+    {
+      "number": 62,
+      "id": "PR_kwDOOWk1-s6ew3nx",
+      "title": "Add an Exceptions parameter to the Vocabulary draft",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/62",
+      "state": "OPEN",
+      "author": "TimidRobot",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "Add an `exceptions` parameter to the Vocabulary draft.\r\n",
+      "createdAt": "2025-07-14T09:22:49Z",
+      "updatedAt": "2025-07-14T09:28:30Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "a0f9979749a89c548bbee1ef5ebc742556baf19f",
+      "headRepository": "TimidRobot/aipref-drafts",
+      "headRefName": "exceptions",
+      "headRefOid": "a9928793a21b35933e4a9af49a00be79a704a112",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 63,
+      "id": "PR_kwDOOWk1-s6exKqi",
+      "title": "Move named references to header",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/63",
+      "state": "OPEN",
+      "author": "TimidRobot",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "Move named references to header in AI Preference Vocabulary:\r\n- Improves clarity by defining reference before first use\r\n- Removes duplicate definitions\r\n- Removes conflicting definitions\r\n  - Fixes #61",
+      "createdAt": "2025-07-14T09:48:42Z",
+      "updatedAt": "2025-07-14T15:46:33Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "a0f9979749a89c548bbee1ef5ebc742556baf19f",
+      "headRepository": "TimidRobot/aipref-drafts",
+      "headRefName": "vocab-ref",
+      "headRefOid": "a93527202701131186168293ac72d2e596b0bafa",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWk1-s6z0bXz",
+          "commit": {
+            "abbreviatedOid": "a935272"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-07-14T15:46:10Z",
+          "updatedAt": "2025-07-14T15:46:33Z",
+          "comments": [
+            {
+              "originalPosition": 13,
+              "body": "This is not quite right.  This probably should be:\r\n\r\n```suggestion\r\n      - org: European Union\r\n```\r\n\r\nBecause \"author\" is an array.\r\n\r\nEither way, we aren't using this item, so it's probably moot.",
+              "createdAt": "2025-07-14T15:46:10Z",
+              "updatedAt": "2025-07-14T15:46:33Z"
+            }
+          ]
         }
       ]
     }
