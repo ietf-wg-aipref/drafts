@@ -43,7 +43,7 @@ informative:
     title: "Directive (EU) 2019/790 of the European Parliament and of the Council of 17 April 2019 on copyright and related rights in the Digital Single Market"
     target: https://eur-lex.europa.eu/eli/dir/2019/790/oj
     author:
-    org: European Union
+      - org: European Union
     date: 2019-05-17
   UTF8: RFC3629
 
