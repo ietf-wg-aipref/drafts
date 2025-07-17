@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-07-15T02:18:52.507175+00:00",
+  "timestamp": "2025-07-17T02:09:56.682297+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -2900,13 +2900,13 @@
       "labels": [],
       "body": "Move named references to header in AI Preference Vocabulary:\r\n- Improves clarity by defining reference before first use\r\n- Removes duplicate definitions\r\n- Removes conflicting definitions\r\n  - Fixes #61",
       "createdAt": "2025-07-14T09:48:42Z",
-      "updatedAt": "2025-07-14T15:46:33Z",
+      "updatedAt": "2025-07-15T07:10:56Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "a0f9979749a89c548bbee1ef5ebc742556baf19f",
       "headRepository": "TimidRobot/aipref-drafts",
       "headRefName": "vocab-ref",
-      "headRefOid": "a93527202701131186168293ac72d2e596b0bafa",
+      "headRefOid": "53f04046f38df28cd7d0d1fbef4556255451f038",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
@@ -2930,6 +2930,26 @@
               "body": "This is not quite right.  This probably should be:\r\n\r\n```suggestion\r\n      - org: European Union\r\n```\r\n\r\nBecause \"author\" is an array.\r\n\r\nEither way, we aren't using this item, so it's probably moot.",
               "createdAt": "2025-07-14T15:46:10Z",
               "updatedAt": "2025-07-14T15:46:33Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s6z8i-Q",
+          "commit": {
+            "abbreviatedOid": "a935272"
+          },
+          "author": "TimidRobot",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-07-15T07:10:37Z",
+          "updatedAt": "2025-07-15T07:10:37Z",
+          "comments": [
+            {
+              "originalPosition": 13,
+              "body": "corrected in https://github.com/ietf-wg-aipref/drafts/pull/63/commits/53f04046f38df28cd7d0d1fbef4556255451f038",
+              "createdAt": "2025-07-15T07:10:37Z",
+              "updatedAt": "2025-07-15T07:10:37Z"
             }
           ]
         }
