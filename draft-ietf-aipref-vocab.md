@@ -206,7 +206,7 @@ in two ways:
   that cannot override contractual agreements or more specific statements.
 
 For instance, a statement of preferences might indicate that the use of an asset is disallowed for AI Training.
-If arrangements, such as contracts exist that explicitly permit the use of that asset, those arrangements likely apply, unless the terms of the arrangement explicitly say otherwise.
+If arrangements, such as contracts, exist that explicitly permit the use of that asset, those arrangements likely apply, unless the terms of the arrangement explicitly say otherwise.
 
 The vocabulary does not preclude the use of other specific categories. Any statement of preference based on this vocabulary shall not be interpreted as restricting the use of the work(s) strictly for the purpose of search and discovery as long as no restriction is declared through search-specific means such as {{!RFC9309}}.
 
@@ -396,8 +396,7 @@ The application might have multiple preference expressions,
 obtained using different methods.
 
 If multiple preference expressions are active,
-all preference expressions are consulted ({{consulting}}),
-unless some can be discarded ({{overriding}}).
+all preference expressions are consulted ({{consulting}}).
 This might result in conflicting answers.
 
 Absent some other means of resolving conflicts,
@@ -412,18 +411,6 @@ the following process applies to each usage category:
 * Otherwise, no preference is expressed.
 
 This process ensures that the most restrictive preference applies.
-
-
-## Overriding Preferences {#overriding}
-
-Any method of attaching preference expressions to assets
-can specify conditions
-where the preferences obtained using one method
-override those of another method.
-
-If an application has two preference expressions
-where one is defined as overriding the other,
-the overridden preference can be discarded.
 
 
 # Security Considerations
