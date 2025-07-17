@@ -12,9 +12,9 @@ v: 3
 area: "Web and Internet Transport"
 workgroup: "AI Preferences"
 keyword:
- - AI Preferences
- - Opt-Out
- - Vocabulary
+  - AI Preferences
+  - Opt-Out
+  - Vocabulary
 venue:
   group: "AI Preferences"
   type: "Working Group"
