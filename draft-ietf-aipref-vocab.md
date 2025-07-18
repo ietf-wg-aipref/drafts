@@ -193,6 +193,12 @@ The use of assets for Generative AI Training is a proper subset of AI Training u
 
 Using one or more assets in a search application that directs users to the location from which the assets were retrieved.
 
+The purpose of defining a distinct Search
+category is to allow preferences to be expressed about search applications,
+independent of other categories of use.
+A distinct Search category allows for preferences specific to search applications,
+even if the use of AI is involved in their implementation.
+
 The use of assets for Search is a proper subset of TDM usage.
 \[\[[Open issue](https://github.com/ietf-wg-aipref/drafts/issues/49)\]\]
 
