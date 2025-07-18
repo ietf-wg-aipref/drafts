@@ -124,12 +124,12 @@ Some categories describe a proper subset of the usages of other categories.
 A preference that is expressed for the more general category applies
 if no preference is expressed for the more specific category.
 
-For example, the TDM category might be assigned a preference that allows the associated usage.
+For example, the Automated Processing category might be assigned a preference that allows the associated usage.
 In the absence of any statement of preference regarding the AI Training category,
 that usage would be also be allowed,
-as AI Training is a subset of the TDM category.
+as AI Training is a subset of the Automated Processing category.
 In comparison, an explicit preference regarding AI Training might disallow that usage,
-while permitting other usage within the TDM category.
+while permitting other usage within the Automated Processing category.
 
 After processing a statement of preferences
 the recipient can assume that each category of use has a preference
@@ -145,7 +145,7 @@ This section defines the categories of use in the vocabulary.
 ~~~ aasvg
  .-------------------------------------------------.
 |                                                   |
-|               Text and Data Mining                |
+|               Automated Processing                |
 |                                                   |
 |   .-------------------------------------------.   |
 |  |                .------------------------.   |  |
@@ -171,19 +171,19 @@ This section defines the categories of use in the vocabulary.
 
 This list of specific use cases may be expanded in the future, should a consensus emerge between stakeholders, to include categories that address additional use cases as they emerge. In addition to these categories defined in the vocabulary, it is also expected that some systems implementing this vocabulary may extend this list with additional categories for their particular needs.
 
-## Text and Data Mining (TDM) Category {#tdm}
+## Automated Processing Category {#all}
 
 The act of using one or more assets in the context of automated processing aimed at analyzing text and data in order to generate information which includes but is not limited to patterns, trends and correlations.
 
-The use of assets for TDM encompasses all the subsequent categories.
+The use of assets for automated processing encompasses all the subsequent categories.
 
-## AI Training Category {#ai}
+## AI Training Category {#train-ai}
 
 The act of training machine learning models or artificial intelligence (AI).
 
-The use of assets for AI Training is a proper subset of TDM usage.
+The use of assets for AI Training is a proper subset of Automated Processing usage.
 
-## Generative AI Training Category {#genai}
+## Generative AI Training Category {#train-genai}
 
 The act of training general purpose AI models that have the capacity to generate text, images or other forms of synthetic content, or the act of training more specialized AI models that have the purpose of generating text, images or other forms of synthetic content.
 
@@ -199,15 +199,13 @@ independent of other categories of use.
 A distinct Search category allows for preferences specific to search applications,
 even if the use of AI is involved in their implementation.
 
-The use of assets for Search is a proper subset of TDM usage.
-\[\[[Open issue](https://github.com/ietf-wg-aipref/drafts/issues/49)\]\]
+The use of assets for Search is a proper subset of Automated Processing usage.
 
-## AI Inference Category {#inference}
+## AI Use Category {#ai-use}
 
 The act of using one or more assets as input to a trained AI/ML model as part of the operation of that model (as opposed to the training of the model).
 
-The use of assets for AI Training is a proper subset of TDM usage.
-\[\[[Open issue](https://github.com/ietf-wg-aipref/drafts/issues/42)\]\]
+The use of assets for AI Training is a proper subset of Automated Processing usage.
 
 # Usage
 
@@ -246,12 +244,12 @@ The dictionary keys correspond to usage categories
 and the dictionary values correspond to explicit preferences,
 which can be either `y` or `n`; see {{y-or-n}}.
 
-For example, the following is a preference to allow AI training ({{ai}}),
-disallow generative AI training ({{genai}}), and
+For example, the following is a preference to allow AI training ({{train-ai}}),
+disallow generative AI training ({{train-genai}}), and
 and state no preference for other categories other than subsets of these categories:
 
 ~~~
-ai=y, genai=n
+train-ai=y, train-genai=n
 ~~~
 
 
@@ -260,13 +258,13 @@ ai=y, genai=n
 Each usage category in the vocabulary ({{vocab}}) is mapped to a short textual label.
 {{t-category-labels}} tabulates this mapping.
 
-| Category               | Label     | Reference     |
-|:-----------------------|:----------|:--------------|
-| Text and Data Mining   | tdm       | {{tdm}}       |
-| AI Training            | ai        | {{ai}}        |
-| Generative AI Training | genai     | {{genai}}     |
-| Search                 | search    | {{search}}    |
-| AI Inference           | inference | {{inference}} |
+| Category               | Label       | Reference       |
+|:-----------------------|:------------|:----------------|
+| Automated Processing   | all         | {{all}}         |
+| AI Training            | train-ai    | {{train-ai}}    |
+| Generative AI Training | train-genai | {{train-genai}} |
+| Search                 | search      | {{search}}      |
+| AI Inference           | ai-use      | {{ai-use}}      |
 {: #t-category-labels title="Mappings for Categories"}
 
 Any mapping for a new usage category can only use
@@ -358,7 +356,7 @@ This means that duplicating the same key could result in unexpected outcomes.
 For example, the following expresses no preferences:
 
 ~~~
-ai=y, ai="n", genai=n, genai, tdm=n, tdm=()
+train-ai=y, train-ai="n", train-genai=n, train-genai, all=n, all=()
 ~~~
 
 If the parsing of the Dictionary fails, no preferences are expressed.
