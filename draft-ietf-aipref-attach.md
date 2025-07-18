@@ -150,10 +150,11 @@ This document, however, does not define any specific means of embedding preferen
 in content.
 
 The main challenge with embedding preferences is that
-a different method may be needed for each content type.
+a different method might be needed for each content type.
 That is,
 a different storage or serialization model of conveying the preferences
-may need to be defined for each format whether it represent audio, documents, images, video,
+might need to be defined for each format
+whether it represent audio, documents, images, video,
 or other types of content.
 Furthermore,
 some content types,
