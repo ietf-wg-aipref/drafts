@@ -12,9 +12,9 @@ v: 3
 area: "Web and Internet Transport"
 workgroup: "AI Preferences"
 keyword:
- - AI Preferences
- - Opt-Out
- - Vocabulary
+  - AI Preferences
+  - Opt-Out
+  - Vocabulary
 venue:
   group: "AI Preferences"
   type: "Working Group"
@@ -35,14 +35,17 @@ author:
     email: mt@lowentropy.net
 
 normative:
+  ASCII: RFC0020
+  FIELDS: RFC9651
 
 informative:
- EUCD2019:
+  EUCD2019:
     title: "Directive (EU) 2019/790 of the European Parliament and of the Council of 17 April 2019 on copyright and related rights in the Digital Single Market"
     target: https://eur-lex.europa.eu/eli/dir/2019/790/oj
     author:
-     org: European Union
+      - org: European Union
     date: 2019-05-17
+  UTF8: RFC3629
 
 ...
 
@@ -230,7 +233,7 @@ Systems referencing the vocabulary must not introduce additional categories that
 This section defines an exemplary serialization format for preferences.
 The format describes how the abstract model could be turned into Unicode text or sequence of bytes.
 
-The format relies on the Dictionary type defined in {{Section 3.2 of !FIELDS=RFC9651}}.
+The format relies on the Dictionary type defined in {{Section 3.2 of FIELDS}}.
 The dictionary keys correspond to usage categories
 and the dictionary values correspond to explicit preferences,
 which can be either `y` or `n`; see {{y-or-n}}.
@@ -260,27 +263,27 @@ Each usage category in the vocabulary ({{vocab}}) is mapped to a short textual l
 
 Any mapping for a new usage category can only use
 lowercase latin characters (a-z), digits (0-9), "_", "-", ".", or "*".
-These are encoded using the mappings in {{!ASCII=RFC0020}}.
+These are encoded using the mappings in {{ASCII}}.
 
 
 ## Preference Labels {#y-or-n}
 
 The abstract model used has two options for preferences associated with each category:
 allow and disallow.
-These are mapped to single byte Tokens ({{Section 3.3.4 of !FIELDS}})
+These are mapped to single byte Tokens ({{Section 3.3.4 of FIELDS}})
 of `y` and `n`, respectively.
 
 
 ## Text Encoding
 
-Structured Fields {{!FIELDS=RFC9651}} describes a byte-level encoding of information,
+Structured Fields {{FIELDS}} describes a byte-level encoding of information,
 not a text encoding.
 This makes this format suitable for inclusion in any protocol or format that carries bytes.
 
 Some formats are defined in terms of strings rather than bytes.
 These formats might need to decode the bytes of this format to obtain a string.
-As the syntax is limited to ASCII {{?ASCII=RFC0020}},
-an ASCII decoder or UTF-8 decoder {{?UTF8=RFC3629}} can be used.
+As the syntax is limited to ASCII {{ASCII}},
+an ASCII decoder or UTF-8 decoder {{UTF8}} can be used.
 This results in the strings that this document uses.
 
 Processing (see {{processing}}) requires a sequence of bytes,
@@ -300,7 +303,7 @@ that do not assign a preference to a usage category.
 In either case, when processing a parsed Dictionary to obtain preferences,
 any unknown labels MUST be ignored.
 
-The Dictionary syntax ({{Section 3.2 of !FIELDS}}) can associate parameters
+The Dictionary syntax ({{Section 3.2 of FIELDS}}) can associate parameters
 with each key-value pair.
 This document does not define any semantics for any parameters that might be included.
 When processing a parsed Dictionary to obtain preferences,
@@ -310,7 +313,7 @@ any unknown parameters MUST be ignored.
 ## Processing Algorithm {#processing}
 
 To process a series of bytes to recover the expressed preferences,
-those bytes are parsed into a Dictionary ({{Section 4.2.2 of !FIELDS}}),
+those bytes are parsed into a Dictionary ({{Section 4.2.2 of FIELDS}}),
 then preferences are assigned to each usage category in the vocabulary.
 
 The parsing algorithm for a Dictionary
@@ -473,7 +476,7 @@ across all items in the registry.
 {:aside}
 > Note that Labels are sequences of bytes in practice,
 > but the registry lists Labels as strings,
-> which are encoded into bytes using {{?ASCII=RFC0020}}.
+> which are encoded into bytes using {{ASCII}}.
 
 
 ## Initial Registry Contents
