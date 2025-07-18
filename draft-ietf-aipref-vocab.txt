@@ -444,9 +444,18 @@ Table of Contents
    This format is only an exemplary way to represent preferences.  The
    model described in Section 3, can be used without this serialization.
 
-   Any alternative format needs to define how that model is represented
-   and how to generate the same model from any alternative
-   representation.
+   Any alternative format needs to define the mapping both from that
+   format to the model used in this document and from the model to the
+   alternative format.  This includes any potential for extensions
+   (Section 6.4).
+
+   The mapping between the model and the alternative format does not
+   need to be complete, it only needs to be clear and unambiguous.
+
+   For example, an alternative format might only provide the ability to
+   convey preferences for a subset of the categories of use.  A mapping
+   might then define that no preference is associated with other
+   categories.
 
 7.  Consulting a Preference Expression
 
