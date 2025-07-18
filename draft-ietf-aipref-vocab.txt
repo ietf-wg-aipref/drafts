@@ -92,13 +92,14 @@ Table of Contents
    7.  Consulting a Preference Expression
      7.1.  Combining Preferences
      7.2.  Overriding Preferences
-   8.  Security Considerations
-   9.  IANA Considerations
-     9.1.  Initial Registry Contents
-     9.2.  Registration Guidance
-   10. References
-     10.1.  Normative References
-     10.2.  Informative References
+   8.  Applicability and Legal Effect
+   9.  Security Considerations
+   10. IANA Considerations
+     10.1.  Initial Registry Contents
+     10.2.  Registration Guidance
+   11. References
+     11.1.  Normative References
+     11.2.  Informative References
    Acknowledgments
    Authors' Addresses
 
@@ -501,11 +502,49 @@ Table of Contents
    If an application has two preference expressions where one is defined
    as overriding the other, the overridden preference can be discarded.
 
-8.  Security Considerations
+8.  Applicability and Legal Effect
+
+   This document provides a set of definitions for different categories
+   of use, plus a system for associating simple preferences to each
+   (allow, disallow, or no preference).
+
+   The categories of use that are defined as part of the vocabulary are
+   not always clearly applicable or inapplicable to a particular system
+   or application.  The universe of possible systems is far more complex
+   than any simple vocabulary is capable of describing.  That means that
+   some discretion could be involved in deciding whether a preference
+   applies.
+
+   The expression of preferences might activate regulatory or legal
+   consequences, which has implications for entities that consume those
+   preferences.  Their interpretation of the meaning of different terms
+   could have legal ramifications.  Different jurisdictions could reach
+   subtly different conclusions about the precise scope of each category
+   of use that affects the applicability of each.
+
+   It is the responsibility of those that process affected assets to
+   understand the legal implications of their use of digital assets.
+
+   This includes understanding:
+
+   *  obligations regarding how preferences are obtained (in particular,
+      which methods of associating preferences with content are expected
+      to be understood),
+
+   *  the specific uses to which assets are put,
+
+   *  how preferences apply to the those uses, and
+
+   *  how relevant jurisdictions might interpret those preferences.
+
+   These considerations will depend on jurisdiction and the details of
+   the system.
+
+9.  Security Considerations
 
    TODO Security
 
-9.  IANA Considerations
+10.  IANA Considerations
 
    This document establishes a new standalone IANA registry entitled
    "Automated Processing Categories of Use".
@@ -530,7 +569,7 @@ Table of Contents
       |  registry lists Labels as strings, which are encoded into bytes
       |  using [ASCII].
 
-9.1.  Initial Registry Contents
+10.1.  Initial Registry Contents
 
    The registry is seeded with the values in Table 2.
 
@@ -550,7 +589,7 @@ Table of Contents
 
                     Table 2: Initial Registry Contents
 
-9.2.  Registration Guidance
+10.2.  Registration Guidance
 
    Assigned experts are responsible for ensuring that new items meet the
    technical requirements for the protocol.  This minimally includes the
@@ -585,9 +624,9 @@ Table of Contents
    of discussion before a decision is made.  Experts are expected to use
    input from that list to inform their decision.
 
-10.  References
+11.  References
 
-10.1.  Normative References
+11.1.  Normative References
 
    [ASCII]    Cerf, V., "ASCII format for network interchange", STD 80,
               RFC 20, DOI 10.17487/RFC0020, October 1969,
@@ -616,7 +655,7 @@ Table of Contents
               DOI 10.17487/RFC9309, September 2022,
               <https://www.rfc-editor.org/rfc/rfc9309>.
 
-10.2.  Informative References
+11.2.  Informative References
 
    [EUCD2019] European Union, "Directive (EU) 2019/790 of the European
               Parliament and of the Council of 17 April 2019 on
