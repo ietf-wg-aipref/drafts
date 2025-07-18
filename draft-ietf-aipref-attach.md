@@ -126,7 +126,7 @@ as follows:
 200 OK
 Date: Wed, 23 Apr 2025 04:48:02 GMT
 Content-Type: text/plain
-Content-Usage: ai=n
+Content-Usage: train-ai=n
 
 This is some content.
 ~~~
@@ -137,7 +137,7 @@ a server might include the same directive in its "robots.txt" file:
 ~~~
 User-Agent: *
 Allow: /
-Content-Usage: ai=n
+Content-Usage: train-ai=n
 ~~~
 
 
@@ -306,12 +306,12 @@ rather than Unicode text; see {{Section 6.3 of VOCAB}}.
 User-Agent: *
 Allow: /
 Disallow: /never/
-Content-Usage: ai=n
-Content-Usage: /ai-ok/ ai=y
+Content-Usage: train-ai=n
+Content-Usage: /ai-ok/ train-ai=y
 
 User-Agent: ExampleBot
 Allow: /
-Content-Usage: ai=y
+Content-Usage: train-ai=y
 ~~~
 {: #f-ex-robots title="Example robots.txt file"}
 
@@ -322,14 +322,14 @@ and apply usage preferences of "ai=y" as defined in {{VOCAB}}.
 All other crawlers use the first group.
 This allows crawling of all content other than resources under "/never/".
 Of those resources,
-those under "/ai-ok/" have an associated usage preference of "ai=y"
-and all other resources have a usage preference of "ai=n".
+those under "/ai-ok/" have an associated usage preference of "train-ai=y"
+and all other resources have a usage preference of "train-ai=n".
 
 | Path           | Crawl   | Usage Preference |
 |:---------------|:-------:|:-----------------|
-| /test          |  yes    | ai=n             |
+| /test          |  yes    | train-ai=n       |
 | /never/test    |  no     | N/A              |
-| /ai-ok/test    |  yes    | ai=y             |
+| /ai-ok/test    |  yes    | train-ai=y       |
 {: #t-example title="Sample of usage preferences for different paths"}
 
 
