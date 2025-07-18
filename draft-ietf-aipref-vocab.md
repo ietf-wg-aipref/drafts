@@ -299,7 +299,7 @@ so any format that uses strings needs to encode strings first.
 Again, this process can use ASCII or UTF-8.
 
 
-## Syntax Extensions
+## Syntax Extensions {#extension}
 
 There are two ways by which this syntax might be extended:
 the addition of new labels and the addition of parameters.
@@ -376,9 +376,19 @@ as described in {{model}}.
 This format is only an exemplary way to represent preferences.
 The model described in {{model}}, can be used without this serialization.
 
-Any alternative format needs to define how that model is represented
-and how to generate the same model
-from any alternative representation.
+Any alternative format needs to define the mapping
+both from that format to the model used in this document
+and from the model to the alternative format.
+This includes any potential for extensions ({{extension}}).
+
+The mapping between the model and the alternative format
+does not need to be complete,
+it only needs to be clear and unambiguous.
+
+For example, an alternative format
+might only provide the ability to convey preferences
+for a subset of the categories of use.
+A mapping might then define that no preference is associated with other categories.
 
 
 # Consulting a Preference Expression {#consulting}
