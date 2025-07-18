@@ -191,7 +191,7 @@ The use of assets for AI Inference is a proper subset of TDM usage.
 
 ## Generative AI Inference Category {#genai-inference}
 
-The act of using one or more assets as input to a trained AI/ML model as part of the operation of that model (as opposed to the training of the model) when generating synthetic content, such as text, images, or other media.  
+The act of using one or more assets as input to a trained AI/ML model as part of the operation of that model (as opposed to the training of the model) when generating text, images or other forms of synthetic content.  
 
 The use of assets for Generative Inference is a proper subset of TDM usage.
 
