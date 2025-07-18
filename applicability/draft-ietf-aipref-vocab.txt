@@ -5,8 +5,8 @@
 AI Preferences                                                 P. Keller
 Internet-Draft                                               Open Future
 Intended status: Standards Track                         M. Thomson, Ed.
-Expires: 21 December 2025                                        Mozilla
-                                                            19 June 2025
+Expires: 19 January 2026                                         Mozilla
+                                                            18 July 2025
 
 
             A Vocabulary For Expressing AI Usage Preferences
@@ -52,7 +52,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 21 December 2025.
+   This Internet-Draft will expire on 19 January 2026.
 
 Copyright Notice
 
@@ -493,7 +493,7 @@ Table of Contents
    applies.
 
    The expression of preferences might activate regulatory or legal
-   strictures, which has implications for entities that consume those
+   consequences, which has implications for entities that consume those
    preferences.  Their interpretation of the meaning of different terms
    could have legal ramifications.  Different jurisdictions could reach
    subtly different conclusions about the precise scope of each category
