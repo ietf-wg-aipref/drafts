@@ -205,7 +205,7 @@ The use of assets for Search is a proper subset of Automated Processing usage.
 
 The act of using one or more assets as input to a trained AI/ML model as part of the operation of that model (as opposed to the training of the model).
 
-The use of assets for AI Training is a proper subset of Automated Processing usage.
+The use of assets for AI Use is a proper subset of Automated Processing usage.
 
 # Usage
 
