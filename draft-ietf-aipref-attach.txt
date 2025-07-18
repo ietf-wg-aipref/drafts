@@ -6,7 +6,7 @@ AI Preferences                                                 G. Illyes
 Internet-Draft                                                    Google
 Updates: 9309 (if approved)                                   M. Thomson
 Intended status: Standards Track                                 Mozilla
-Expires: 28 December 2025                                   26 June 2025
+Expires: 19 January 2026                                    18 July 2025
 
 
              Indicating Preferences Regarding Content Usage
@@ -54,7 +54,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 28 December 2025.
+   This Internet-Draft will expire on 19 January 2026.
 
 Copyright Notice
 
@@ -380,7 +380,7 @@ Table of Contents
 
    [VOCAB]    Keller, P. and M. Thomson, Ed., "A Vocabulary For
               Expressing AI Usage Preferences", Work in Progress,
-              Internet-Draft, draft-ietf-aipref-vocab, June 2025,
+              Internet-Draft, draft-ietf-aipref-vocab, July 2025,
               <https://datatracker.ietf.org/doc/html/draft-ietf-aipref-
               vocab>.
 
