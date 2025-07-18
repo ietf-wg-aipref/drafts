@@ -91,7 +91,6 @@ Table of Contents
      6.6.  Alternative Formats
    7.  Consulting a Preference Expression
      7.1.  Combining Preferences
-     7.2.  Overriding Preferences
    8.  Applicability and Legal Effect
    9.  Security Considerations
    10. IANA Considerations
@@ -288,8 +287,8 @@ Table of Contents
 
    For instance, a statement of preferences might indicate that the use
    of an asset is disallowed for AI Training.  If arrangements, such as
-   contracts exist that explicitly permit the use of that asset, those
-   arrangements likely apply, unless the terms of the arrangement
+   legal agreements, exist that explicitly permit the use of that asset,
+   those arrangements likely apply, unless the terms of the arrangement
    explicitly say otherwise.
 
    The vocabulary does not preclude the use of other specific
@@ -475,8 +474,8 @@ Table of Contents
    using different methods.
 
    If multiple preference expressions are active, all preference
-   expressions are consulted (Section 7), unless some can be discarded
-   (Section 7.2).  This might result in conflicting answers.
+   expressions are consulted (Section 7).  This might result in
+   conflicting answers.
 
    Absent some other means of resolving conflicts, the following process
    applies to each usage category:
@@ -490,15 +489,6 @@ Table of Contents
    *  Otherwise, no preference is expressed.
 
    This process ensures that the most restrictive preference applies.
-
-7.2.  Overriding Preferences
-
-   Any method of attaching preference expressions to assets can specify
-   conditions where the preferences obtained using one method override
-   those of another method.
-
-   If an application has two preference expressions where one is defined
-   as overriding the other, the overridden preference can be discarded.
 
 8.  Applicability and Legal Effect
 
