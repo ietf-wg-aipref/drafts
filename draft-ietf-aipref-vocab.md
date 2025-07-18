@@ -12,9 +12,9 @@ v: 3
 area: "Web and Internet Transport"
 workgroup: "AI Preferences"
 keyword:
- - AI Preferences
- - Opt-Out
- - Vocabulary
+  - AI Preferences
+  - Opt-Out
+  - Vocabulary
 venue:
   group: "AI Preferences"
   type: "Working Group"
@@ -35,14 +35,17 @@ author:
     email: mt@lowentropy.net
 
 normative:
+  ASCII: RFC0020
+  FIELDS: RFC9651
 
 informative:
- EUCD2019:
+  EUCD2019:
     title: "Directive (EU) 2019/790 of the European Parliament and of the Council of 17 April 2019 on copyright and related rights in the Digital Single Market"
     target: https://eur-lex.europa.eu/eli/dir/2019/790/oj
     author:
-     org: European Union
+      - org: European Union
     date: 2019-05-17
+  UTF8: RFC3629
 
 ...
 
@@ -76,7 +79,17 @@ Separate documents will describe how preferences might be associated with assets
 It is designed to ensure that preference information can be exchanged between different systems
 and consistently understood.
 
-The vocabulary is intended to work in contexts where such preferences result in legal obligations (such as rights reservations made by rightholders in jurisdictions with conditional TDM exceptions), and in contexts where this is not the case. It is without prejudice to applicable laws and the applicability of exceptions and limitations to copyright.
+
+The vocabulary is intended to be usable
+both where expressing preferences results in legal obligations
+and where there are no associated legal protections.
+That is, preferences can be expressed to invoke specific protections,
+or they can be made without any presumption of specific legal consequences.
+Potential legal obligations include rights reservations made by rightholders
+in jurisdictions with conditional exceptions on copyright protections.
+Expressing preferences is without prejudice to applicable laws,
+including the applicability of exceptions and limitations to copyright.
+
 
 # Conventions and Definitions
 
@@ -172,7 +185,7 @@ The use of assets for AI Training is a proper subset of TDM usage.
 
 ## Generative AI Training Category {#genai}
 
-The act of training General Purpose AI models that have the capacity to generate text, images or other forms of synthetic content, or the act of training other types of AI models that have the purpose of generating text, images or other forms of synthetic content.
+The act of training general purpose AI models that have the capacity to generate text, images or other forms of synthetic content, or the act of training more specialized AI models that have the purpose of generating text, images or other forms of synthetic content.
 
 The use of assets for Generative AI Training is a proper subset of AI Training usage.
 
@@ -220,7 +233,7 @@ Systems referencing the vocabulary must not introduce additional categories that
 This section defines an exemplary serialization format for preferences.
 The format describes how the abstract model could be turned into Unicode text or sequence of bytes.
 
-The format relies on the Dictionary type defined in {{Section 3.2 of !FIELDS=RFC9651}}.
+The format relies on the Dictionary type defined in {{Section 3.2 of FIELDS}}.
 The dictionary keys correspond to usage categories
 and the dictionary values correspond to explicit preferences,
 which can be either `y` or `n`; see {{y-or-n}}.
@@ -250,27 +263,27 @@ Each usage category in the vocabulary ({{vocab}}) is mapped to a short textual l
 
 Any mapping for a new usage category can only use
 lowercase latin characters (a-z), digits (0-9), "_", "-", ".", or "*".
-These are encoded using the mappings in {{!ASCII=RFC0020}}.
+These are encoded using the mappings in {{ASCII}}.
 
 
 ## Preference Labels {#y-or-n}
 
 The abstract model used has two options for preferences associated with each category:
 allow and disallow.
-These are mapped to single byte Tokens ({{Section 3.3.4 of !FIELDS}})
+These are mapped to single byte Tokens ({{Section 3.3.4 of FIELDS}})
 of `y` and `n`, respectively.
 
 
 ## Text Encoding
 
-Structured Fields {{!FIELDS=RFC9651}} describes a byte-level encoding of information,
+Structured Fields {{FIELDS}} describes a byte-level encoding of information,
 not a text encoding.
 This makes this format suitable for inclusion in any protocol or format that carries bytes.
 
 Some formats are defined in terms of strings rather than bytes.
 These formats might need to decode the bytes of this format to obtain a string.
-As the syntax is limited to ASCII {{?ASCII=RFC0020}},
-an ASCII decoder or UTF-8 decoder {{?UTF8=RFC3629}} can be used.
+As the syntax is limited to ASCII {{ASCII}},
+an ASCII decoder or UTF-8 decoder {{UTF8}} can be used.
 This results in the strings that this document uses.
 
 Processing (see {{processing}}) requires a sequence of bytes,
@@ -290,7 +303,7 @@ that do not assign a preference to a usage category.
 In either case, when processing a parsed Dictionary to obtain preferences,
 any unknown labels MUST be ignored.
 
-The Dictionary syntax ({{Section 3.2 of !FIELDS}}) can associate parameters
+The Dictionary syntax ({{Section 3.2 of FIELDS}}) can associate parameters
 with each key-value pair.
 This document does not define any semantics for any parameters that might be included.
 When processing a parsed Dictionary to obtain preferences,
@@ -300,7 +313,7 @@ any unknown parameters MUST be ignored.
 ## Processing Algorithm {#processing}
 
 To process a series of bytes to recover the expressed preferences,
-those bytes are parsed into a Dictionary ({{Section 4.2.2 of !FIELDS}}),
+those bytes are parsed into a Dictionary ({{Section 4.2.2 of FIELDS}}),
 then preferences are assigned to each usage category in the vocabulary.
 
 The parsing algorithm for a Dictionary
@@ -413,6 +426,46 @@ the following process applies to each usage category:
 This process ensures that the most restrictive preference applies.
 
 
+# Applicability and Legal Effect
+
+This document provides a set of definitions for different categories of use,
+plus a system for associating simple preferences to each
+(allow, disallow, or no preference).
+
+The categories of use that are defined as part of the vocabulary
+are not always clearly applicable or inapplicable to a particular system or application.
+The universe of possible systems is far more complex
+than any simple vocabulary is capable of describing.
+That means that some discretion could be involved
+in deciding whether a preference applies.
+
+The expression of preferences might activate regulatory or legal consequences,
+which has implications for entities that consume those preferences.
+Their interpretation of the meaning of different terms
+could have legal ramifications.
+Different jurisdictions could reach subtly different conclusions
+about the precise scope of each category of use
+that affects the applicability of each.
+
+It is the responsibility of those that process affected assets to understand
+the legal implications of their use of digital assets.
+
+This includes understanding:
+
+* obligations regarding how preferences are obtained
+  (in particular, which methods of associating preferences with content
+  are expected to be understood),
+
+* the specific uses to which assets are put,
+
+* how preferences apply to the those uses, and
+
+* how relevant jurisdictions might interpret those preferences.
+
+These considerations will depend on jurisdiction
+and the details of the system.
+
+
 # Security Considerations
 
 TODO Security
@@ -420,85 +473,7 @@ TODO Security
 
 # IANA Considerations
 
-This document establishes a new standalone IANA registry
-entitled "Automated Processing Categories of Use".
-
-This registry operates under the "Specification Required" policy;
-see {{Section 4.6 of !RFC8126}}.
-
-New entries in this registry require the following information:
-
-Label:
-: A short label that meets the constraints in {{labels}}.
-
-Title:
-: A short title
-
-Subset Of:
-: The category of use that this category is a proper subset of.
-  This needs to refer to another entry in the registry by its label,
-  or be the string "(none)".
-
-Reference:
-: A link to a document that contains a precise definition
-  for the category of use.
-{: spacing="compact"}
-
-The Title and Label fields need to be separately unique
-across all items in the registry.
-
-{:aside}
-> Note that Labels are sequences of bytes in practice,
-> but the registry lists Labels as strings,
-> which are encoded into bytes using {{?ASCII=RFC0020}}.
-
-
-## Initial Registry Contents
-
-The registry is seeded with the values in {{t-registry-seed}}.
-
-| Label     | Title                  | Subset Of | Reference     |
-|:----------|:-----------------------|:----------|:--------------|
-| tdm       | Text and Data Mining   | (none)    | {{tdm}}       |
-| ai        | AI Training            | tdm       | {{ai}}        |
-| genai     | Generative AI Training | ai        | {{genai}}     |
-| search    | Search                 | tdm       | {{search}}    |
-| inference | AI Inference           | tdm       | {{inference}} |
-{: #t-registry-seed title="Initial Registry Contents"}
-
-
-## Registration Guidance
-
-Assigned experts are responsible for ensuring that new items
-meet the technical requirements for the protocol.
-This minimally includes the syntax restrictions on labels ({{labels}})
-and the potential for impossible reference loops in the Subset Of field.
-However, there are further special considerations for this registry
-that involve some exercise of discretion on the part of assigned experts.
-
-Expressions of preference are most effective when they have a shared understanding.
-Keeping the limited number of items in the vocabulary limited
-is one of the best ways to ensure that there is wide understanding.
-That means that experts are instructed to reject registrations
-if there is any doubt regarding:
-
-* the scope of the proposed category of use,
-* the relationship between the proposed category of use
-  and existing categories of use,
-  or
-* the importance of being able to express preferences regarding
-  the uses covered by the proposed category.
-
-This involves a degree of judgment not ordinarily asked of assigned experts.
-Rather than expect an assigned expert to be able to resolve difficult cases,
-any case where there is doubt MUST be referred to the IETF to resolve.
-In effect, this ensures that contested registration requests
-are elevated to require "IETF Review"; see {{Section 4.8 of !RFC8126}}.
-
-To aid in the decision-making process,
-new registration requests MUST be copied to the "aicontrol@ietf.org" list
-for at least three weeks of discussion before a decision is made.
-Experts are expected to use input from that list to inform their decision.
+This document has no IANA actions.
 
 
 --- back
@@ -506,10 +481,11 @@ Experts are expected to use input from that list to inform their decision.
 # Acknowledgments
 {:numbered="false"}
 
-The following individuals have been involved in the drafting of the proposal:
+The following individuals made significant contributions to this document:
 
-* Cullen Miller, Spawing.ai
-* Sebastian Posth, Liccium
-* Leonard Rosenthol, Adobe
-* Laurent Le Meur, EDRLab
-* Timid Robot Zehta, Creative Commons
+* {{{Cullen Miller}}}
+* {{{Laurent Le Meur}}}
+* {{{Leonard Rosenthol}}}
+* {{{Sebastian Posth}}}
+* {{{Timid Robot Zehta}}}
+{: spacing="compact"}
