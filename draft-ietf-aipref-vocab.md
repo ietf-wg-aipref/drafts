@@ -423,7 +423,7 @@ than any simple vocabulary is capable of describing.
 That means that some discretion could be involved
 in deciding whether a preference applies.
 
-The expression of preferences might activate regulatory or legal strictures,
+The expression of preferences might activate regulatory or legal consequences,
 which has implications for entities that consume those preferences.
 Their interpretation of the meaning of different terms
 could have legal ramifications.
