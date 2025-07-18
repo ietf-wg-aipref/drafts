@@ -146,8 +146,8 @@ Table of Contents
    directive in its "robots.txt" file:
 
    User-Agent: *
-   Content-Usage: ai=n
    Allow: /
+   Content-Usage: ai=n
 
 1.3.  Embedded Preferences
 
@@ -291,14 +291,14 @@ Table of Contents
    Figure 2 shows a simple "robots.txt" document.
 
    User-Agent: *
-   Content-Usage: ai=n
-   Content-Usage: /ai-ok/ ai=y
    Allow: /
    Disallow: /never/
+   Content-Usage: ai=n
+   Content-Usage: /ai-ok/ ai=y
 
    User-Agent: ExampleBot
-   Content-Usage: ai=y
    Allow: /
+   Content-Usage: ai=y
 
                      Figure 2: Example robots.txt file
 
