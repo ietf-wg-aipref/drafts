@@ -5,8 +5,8 @@
 AI Preferences                                                 P. Keller
 Internet-Draft                                               Open Future
 Intended status: Standards Track                         M. Thomson, Ed.
-Expires: 18 January 2026                                         Mozilla
-                                                            17 July 2025
+Expires: 19 January 2026                                         Mozilla
+                                                            18 July 2025
 
 
             A Vocabulary For Expressing AI Usage Preferences
@@ -52,7 +52,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 18 January 2026.
+   This Internet-Draft will expire on 19 January 2026.
 
 Copyright Notice
 
@@ -284,8 +284,8 @@ Table of Contents
 
    For instance, a statement of preferences might indicate that the use
    of an asset is disallowed for AI Training.  If arrangements, such as
-   contracts, exist that explicitly permit the use of that asset, those
-   arrangements likely apply, unless the terms of the arrangement
+   legal agreements, exist that explicitly permit the use of that asset,
+   those arrangements likely apply, unless the terms of the arrangement
    explicitly say otherwise.
 
    The vocabulary does not preclude the use of other specific
