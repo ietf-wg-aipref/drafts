@@ -183,9 +183,8 @@ Using one or more assets in a search application that directs users to the locat
 The purpose of defining a distinct Search
 category is to allow preferences to be expressed about search applications,
 independent of other categories of use.
-Even though search applications might use AI or machine learning internally,
-a distinct Search category allows for preferences specific to search applications,
-even if the use of AI is involved.
+A distinct Search category allows for preferences specific to search applications,
+even if the use of AI is involved in their implementation.
 
 The use of assets for Search is a proper subset of TDM usage.
 \[\[[Open issue](https://github.com/ietf-wg-aipref/drafts/issues/49)\]\]
