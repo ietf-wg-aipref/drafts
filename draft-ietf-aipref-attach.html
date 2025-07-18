@@ -1297,7 +1297,7 @@ as follows:<a href="#section-1.2-1" class="pilcrow">¶</a></p>
 200 OK
 Date: Wed, 23 Apr 2025 04:48:02 GMT
 Content-Type: text/plain
-Content-Usage: ai=n
+Content-Usage: train-ai=n
 
 This is some content.
 </pre><a href="#section-1.2-2" class="pilcrow">¶</a>
@@ -1308,7 +1308,7 @@ a server might include the same directive in its "robots.txt" file:<a href="#sec
 <pre>
 User-Agent: *
 Allow: /
-Content-Usage: ai=n
+Content-Usage: train-ai=n
 </pre><a href="#section-1.2-4" class="pilcrow">¶</a>
 </div>
 </section>
@@ -1490,12 +1490,12 @@ rather than Unicode text; see <span><a href="https://datatracker.ietf.org/doc/ht
 User-Agent: *
 Allow: /
 Disallow: /never/
-Content-Usage: ai=n
-Content-Usage: /ai-ok/ ai=y
+Content-Usage: train-ai=n
+Content-Usage: /ai-ok/ train-ai=y
 
 User-Agent: ExampleBot
 Allow: /
-Content-Usage: ai=y
+Content-Usage: train-ai=y
 </pre>
 </div>
 <figcaption><a href="#figure-2" class="selfRef">Figure 2</a>:
@@ -1508,8 +1508,8 @@ and apply usage preferences of "ai=y" as defined in <span>[<a href="#VOCAB" clas
 <p id="section-3.3-4">All other crawlers use the first group.
 This allows crawling of all content other than resources under "/never/".
 Of those resources,
-those under "/ai-ok/" have an associated usage preference of "ai=y"
-and all other resources have a usage preference of "ai=n".<a href="#section-3.3-4" class="pilcrow">¶</a></p>
+those under "/ai-ok/" have an associated usage preference of "train-ai=y"
+and all other resources have a usage preference of "train-ai=n".<a href="#section-3.3-4" class="pilcrow">¶</a></p>
 <span id="name-sample-of-usage-preferences"></span><div id="t-example">
 <table class="center" id="table-1">
           <caption>
@@ -1527,7 +1527,7 @@ and all other resources have a usage preference of "ai=n".<a href="#section-3.3-
             <tr>
               <td class="text-left" rowspan="1" colspan="1">/test</td>
               <td class="text-center" rowspan="1" colspan="1">yes</td>
-              <td class="text-left" rowspan="1" colspan="1">ai=n</td>
+              <td class="text-left" rowspan="1" colspan="1">train-ai=n</td>
             </tr>
             <tr>
               <td class="text-left" rowspan="1" colspan="1">/never/test</td>
@@ -1537,7 +1537,7 @@ and all other resources have a usage preference of "ai=n".<a href="#section-3.3-
             <tr>
               <td class="text-left" rowspan="1" colspan="1">/ai-ok/test</td>
               <td class="text-center" rowspan="1" colspan="1">yes</td>
-              <td class="text-left" rowspan="1" colspan="1">ai=y</td>
+              <td class="text-left" rowspan="1" colspan="1">train-ai=y</td>
             </tr>
           </tbody>
         </table>
