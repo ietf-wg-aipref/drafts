@@ -529,10 +529,11 @@ Experts are expected to use input from that list to inform their decision.
 # Acknowledgments
 {:numbered="false"}
 
-The following individuals have been involved in the drafting of the proposal:
+The following individuals made significant contributions to this document:
 
-* Cullen Miller, Spawing.ai
-* Sebastian Posth, Liccium
-* Leonard Rosenthol, Adobe
-* Laurent Le Meur, EDRLab
-* Timid Robot Zehta, Creative Commons
+* {{{Cullen Miller}}}
+* {{{Laurent Le Meur}}}
+* {{{Leonard Rosenthol}}}
+* {{{Sebastian Posth}}}
+* {{{Timid Robot Zehta}}}
+{: spacing="compact"}
