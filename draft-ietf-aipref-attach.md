@@ -172,6 +172,10 @@ Future work might define how preferences might be indicated
 for alternative content distribution or acquisition methods,
 such as email.
 
+## Registry-Based Preferences
+
+This document does not define a means of using unique identifiers and a registry for associating preferences. Registry-based approaches might be applicable in certain contexts, particularly where embedding is impractical or unavailable. Additionally, a registry might enable persistent association of preferences across distribution channels.
+
 
 ## Conventions and Definitions
 
