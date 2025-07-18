@@ -205,7 +205,9 @@ The use of assets for AI Training is a proper subset of TDM usage.
 
 # Usage
 
-The vocabulary is used by referencing the terms defined in the {{vocab}} section above, directly or via mappings, in accordance with how they are defined in this document.
+The vocabulary is used by referencing the terms defined in {{vocab}},
+directly or via mappings,
+in accordance with how they are defined in this document.
 
 ## More Specific Instructions
 
