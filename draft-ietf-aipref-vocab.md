@@ -12,9 +12,9 @@ v: 3
 area: "Web and Internet Transport"
 workgroup: "AI Preferences"
 keyword:
- - AI Preferences
- - Opt-Out
- - Vocabulary
+  - AI Preferences
+  - Opt-Out
+  - Vocabulary
 venue:
   group: "AI Preferences"
   type: "Working Group"
@@ -35,14 +35,17 @@ author:
     email: mt@lowentropy.net
 
 normative:
+  ASCII: RFC0020
+  FIELDS: RFC9651
 
 informative:
- EUCD2019:
+  EUCD2019:
     title: "Directive (EU) 2019/790 of the European Parliament and of the Council of 17 April 2019 on copyright and related rights in the Digital Single Market"
     target: https://eur-lex.europa.eu/eli/dir/2019/790/oj
     author:
-     org: European Union
+      - org: European Union
     date: 2019-05-17
+  UTF8: RFC3629
 
 ...
 
@@ -76,7 +79,17 @@ Separate documents will describe how preferences might be associated with assets
 It is designed to ensure that preference information can be exchanged between different systems
 and consistently understood.
 
-The vocabulary is intended to work in contexts where such preferences result in legal obligations (such as rights reservations made by rightholders in jurisdictions with conditional TDM exceptions), and in contexts where this is not the case. It is without prejudice to applicable laws and the applicability of exceptions and limitations to copyright.
+
+The vocabulary is intended to be usable
+both where expressing preferences results in legal obligations
+and where there are no associated legal protections.
+That is, preferences can be expressed to invoke specific protections,
+or they can be made without any presumption of specific legal consequences.
+Potential legal obligations include rights reservations made by rightholders
+in jurisdictions with conditional exceptions on copyright protections.
+Expressing preferences is without prejudice to applicable laws,
+including the applicability of exceptions and limitations to copyright.
+
 
 # Conventions and Definitions
 
@@ -172,7 +185,7 @@ The use of assets for AI Training is a proper subset of TDM usage.
 
 ## Generative AI Training Category {#genai}
 
-The act of training General Purpose AI models that have the capacity to generate text, images or other forms of synthetic content, or the act of training other types of AI models that have the purpose of generating text, images or other forms of synthetic content.
+The act of training general purpose AI models that have the capacity to generate text, images or other forms of synthetic content, or the act of training more specialized AI models that have the purpose of generating text, images or other forms of synthetic content.
 
 The use of assets for Generative AI Training is a proper subset of AI Training usage.
 
@@ -220,7 +233,7 @@ Systems referencing the vocabulary must not introduce additional categories that
 This section defines an exemplary serialization format for preferences.
 The format describes how the abstract model could be turned into Unicode text or sequence of bytes.
 
-The format relies on the Dictionary type defined in {{Section 3.2 of !FIELDS=RFC9651}}.
+The format relies on the Dictionary type defined in {{Section 3.2 of FIELDS}}.
 The dictionary keys correspond to usage categories
 and the dictionary values correspond to explicit preferences,
 which can be either `y` or `n`; see {{y-or-n}}.
@@ -250,27 +263,27 @@ Each usage category in the vocabulary ({{vocab}}) is mapped to a short textual l
 
 Any mapping for a new usage category can only use
 lowercase latin characters (a-z), digits (0-9), "_", "-", ".", or "*".
-These are encoded using the mappings in {{!ASCII=RFC0020}}.
+These are encoded using the mappings in {{ASCII}}.
 
 
 ## Preference Labels {#y-or-n}
 
 The abstract model used has two options for preferences associated with each category:
 allow and disallow.
-These are mapped to single byte Tokens ({{Section 3.3.4 of !FIELDS}})
+These are mapped to single byte Tokens ({{Section 3.3.4 of FIELDS}})
 of `y` and `n`, respectively.
 
 
 ## Text Encoding
 
-Structured Fields {{!FIELDS=RFC9651}} describes a byte-level encoding of information,
+Structured Fields {{FIELDS}} describes a byte-level encoding of information,
 not a text encoding.
 This makes this format suitable for inclusion in any protocol or format that carries bytes.
 
 Some formats are defined in terms of strings rather than bytes.
 These formats might need to decode the bytes of this format to obtain a string.
-As the syntax is limited to ASCII {{?ASCII=RFC0020}},
-an ASCII decoder or UTF-8 decoder {{?UTF8=RFC3629}} can be used.
+As the syntax is limited to ASCII {{ASCII}},
+an ASCII decoder or UTF-8 decoder {{UTF8}} can be used.
 This results in the strings that this document uses.
 
 Processing (see {{processing}}) requires a sequence of bytes,
@@ -290,7 +303,7 @@ that do not assign a preference to a usage category.
 In either case, when processing a parsed Dictionary to obtain preferences,
 any unknown labels MUST be ignored.
 
-The Dictionary syntax ({{Section 3.2 of !FIELDS}}) can associate parameters
+The Dictionary syntax ({{Section 3.2 of FIELDS}}) can associate parameters
 with each key-value pair.
 This document does not define any semantics for any parameters that might be included.
 When processing a parsed Dictionary to obtain preferences,
@@ -300,7 +313,7 @@ any unknown parameters MUST be ignored.
 ## Processing Algorithm {#processing}
 
 To process a series of bytes to recover the expressed preferences,
-those bytes are parsed into a Dictionary ({{Section 4.2.2 of !FIELDS}}),
+those bytes are parsed into a Dictionary ({{Section 4.2.2 of FIELDS}}),
 then preferences are assigned to each usage category in the vocabulary.
 
 The parsing algorithm for a Dictionary
@@ -426,6 +439,46 @@ where one is defined as overriding the other,
 the overridden preference can be discarded.
 
 
+# Applicability and Legal Effect
+
+This document provides a set of definitions for different categories of use,
+plus a system for associating simple preferences to each
+(allow, disallow, or no preference).
+
+The categories of use that are defined as part of the vocabulary
+are not always clearly applicable or inapplicable to a particular system or application.
+The universe of possible systems is far more complex
+than any simple vocabulary is capable of describing.
+That means that some discretion could be involved
+in deciding whether a preference applies.
+
+The expression of preferences might activate regulatory or legal consequences,
+which has implications for entities that consume those preferences.
+Their interpretation of the meaning of different terms
+could have legal ramifications.
+Different jurisdictions could reach subtly different conclusions
+about the precise scope of each category of use
+that affects the applicability of each.
+
+It is the responsibility of those that process affected assets to understand
+the legal implications of their use of digital assets.
+
+This includes understanding:
+
+* obligations regarding how preferences are obtained
+  (in particular, which methods of associating preferences with content
+  are expected to be understood),
+
+* the specific uses to which assets are put,
+
+* how preferences apply to the those uses, and
+
+* how relevant jurisdictions might interpret those preferences.
+
+These considerations will depend on jurisdiction
+and the details of the system.
+
+
 # Security Considerations
 
 TODO Security
@@ -435,15 +488,17 @@ TODO Security
 
 This document has no IANA actions.
 
+
 --- back
 
 # Acknowledgments
 {:numbered="false"}
 
-The following individuals have been involved in the drafting of the proposal:
+The following individuals made significant contributions to this document:
 
-* Cullen Miller, Spawing.ai
-* Sebastian Posth, Liccium
-* Leonard Rosenthol, Adobe
-* Laurent Le Meur, EDRLab
-* Timid Robot Zehta, Creative Commons
+* {{{Cullen Miller}}}
+* {{{Laurent Le Meur}}}
+* {{{Leonard Rosenthol}}}
+* {{{Sebastian Posth}}}
+* {{{Timid Robot Zehta}}}
+{: spacing="compact"}
