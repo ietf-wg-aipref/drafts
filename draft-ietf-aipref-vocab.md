@@ -185,7 +185,7 @@ The use of assets for AI Training is a proper subset of TDM usage.
 
 ## Generative AI Training Category {#genai}
 
-The act of training General Purpose AI models that have the capacity to generate text, images or other forms of synthetic content, or the act of training other types of AI models that have the purpose of generating text, images or other forms of synthetic content.
+The act of training general purpose AI models that have the capacity to generate text, images or other forms of synthetic content, or the act of training more specialized AI models that have the purpose of generating text, images or other forms of synthetic content.
 
 The use of assets for Generative AI Training is a proper subset of AI Training usage.
 
