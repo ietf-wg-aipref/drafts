@@ -143,32 +143,26 @@ Content-Usage: ai=n
 
 ## Embedded Preferences
 
-This document does not define a means of embedding preferences
-in content.
 Embedding preferences is expected to be an effective means
 of associating preferences with content,
 because it ensures that metadata is always associated with content.
+This document, however, does not define any specific means of embedding preferences
+in content.
 
-The main challenge with embedding is that
-a different method is needed for each content type.
+The main challenge with embedding preferences is that
+a different method might be needed for each content type.
 That is,
-a different means of conveying preferences
-needs to be defined for each audio, documents, images, video,
-or other content format.
+a different storage or serialization model of conveying the preferences
+might need to be defined for each format
+whether it represent audio, documents, images, video,
+or other types of content.
 Furthermore,
 some content types,
 such as plain text (`text/plain`),
-offer no universal means of carrying metadata.
-Though preferences might still be embedded in content with these formats,
-those preferences would not be reliably accessible to an automated system.
+offer no standardized means of embedding preferences.
 
-The mechanisms in this document are therefore universal,
-in the sense that they apply to any content type.
-They are not universal
-in that they rely on the content being obtained using HTTP
-(and maybe FTP).
-
-Future work might define how preferences might be indicated
+The mechanisms in this document can be applied to any content type, provided that the content is obtained using HTTP
+(and maybe FTP). Future work might define how preferences might be indicated
 for alternative content distribution or acquisition methods,
 such as email.
 
