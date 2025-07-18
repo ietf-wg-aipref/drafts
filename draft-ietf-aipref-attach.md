@@ -136,8 +136,8 @@ a server might include the same directive in its "robots.txt" file:
 
 ~~~
 User-Agent: *
-Content-Usage: ai=n
 Allow: /
+Content-Usage: ai=n
 ~~~
 
 
@@ -310,14 +310,14 @@ rather than Unicode text; see {{Section 6.3 of VOCAB}}.
 
 ~~~
 User-Agent: *
-Content-Usage: ai=n
-Content-Usage: /ai-ok/ ai=y
 Allow: /
 Disallow: /never/
+Content-Usage: ai=n
+Content-Usage: /ai-ok/ ai=y
 
 User-Agent: ExampleBot
-Content-Usage: ai=y
 Allow: /
+Content-Usage: ai=y
 ~~~
 {: #f-ex-robots title="Example robots.txt file"}
 
