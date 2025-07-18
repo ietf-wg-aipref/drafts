@@ -187,8 +187,13 @@ The use of assets for Search is a proper subset of TDM usage.
 
 The act of using one or more assets as input to a trained AI/ML model as part of the operation of that model (as opposed to the training of the model).
 
-The use of assets for AI Training is a proper subset of TDM usage.
-\[\[[Open issue](https://github.com/ietf-wg-aipref/drafts/issues/42)\]\]
+The use of assets for AI Inference is a proper subset of TDM usage.
+
+## Generative AI Inference Category {#genai-inference}
+
+The act of using one or more assets as input to a trained AI/ML model as part of the operation of that model (as opposed to the training of the model) when generating synthetic content, such as text, images, or other media.  
+
+The use of assets for Generative Inference is a proper subset of TDM usage.
 
 # Usage
 
