@@ -5,8 +5,8 @@
 AI Preferences                                                 P. Keller
 Internet-Draft                                               Open Future
 Intended status: Standards Track                         M. Thomson, Ed.
-Expires: 19 January 2026                                         Mozilla
-                                                            18 July 2025
+Expires: 20 January 2026                                         Mozilla
+                                                            19 July 2025
 
 
             A Vocabulary For Expressing AI Usage Preferences
@@ -52,7 +52,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 19 January 2026.
+   This Internet-Draft will expire on 20 January 2026.
 
 Copyright Notice
 
@@ -77,8 +77,8 @@ Table of Contents
      4.1.  Automated Processing Category
      4.2.  AI Training Category
      4.3.  Generative AI Training Category
-     4.4.  Search Category
-     4.5.  AI Use Category
+     4.4.  AI Use Category
+     4.5.  Search Category
    5.  Usage
      5.1.  More Specific Instructions
      5.2.  Vocabulary Extensions
@@ -207,7 +207,7 @@ Table of Contents
    |    .----------------.       .----------------.    |
    |   |                  |     |                  |   |
    |   |                  |     |                  |   |
-   |   |   AI Inference   |     |      Search      |   |
+   |   |      AI Use      |     |      Search      |   |
    |   |                  |     |                  |   |
    |   |                  |     |                  |   |
    |    '----------------'       '----------------'    |
@@ -251,7 +251,16 @@ Table of Contents
    The use of assets for Generative AI Training is a proper subset of AI
    Training usage.
 
-4.4.  Search Category
+4.4.  AI Use Category
+
+   The act of using one or more assets as input to a trained AI/ML model
+   as part of the operation of that model (as opposed to the training of
+   the model).
+
+   The use of assets for AI Training is a proper subset of Automated
+   Processing usage.
+
+4.5.  Search Category
 
    Using one or more assets in a search application that directs users
    to the location from which the assets were retrieved.
@@ -263,15 +272,6 @@ Table of Contents
    involved in their implementation.
 
    The use of assets for Search is a proper subset of Automated
-   Processing usage.
-
-4.5.  AI Use Category
-
-   The act of using one or more assets as input to a trained AI/ML model
-   as part of the operation of that model (as opposed to the training of
-   the model).
-
-   The use of assets for AI Training is a proper subset of Automated
    Processing usage.
 
 5.  Usage
@@ -344,9 +344,9 @@ Table of Contents
           +------------------------+-------------+-------------+
           | Generative AI Training | train-genai | Section 4.3 |
           +------------------------+-------------+-------------+
-          | Search                 | search      | Section 4.4 |
+          | AI Inference           | ai-use      | Section 4.4 |
           +------------------------+-------------+-------------+
-          | AI Inference           | ai-use      | Section 4.5 |
+          | Search                 | search      | Section 4.5 |
           +------------------------+-------------+-------------+
 
                      Table 1: Mappings for Categories
