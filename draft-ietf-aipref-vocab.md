@@ -160,7 +160,7 @@ This section defines the categories of use in the vocabulary.
 |    .----------------.       .----------------.    |
 |   |                  |     |                  |   |
 |   |                  |     |                  |   |
-|   |   AI Inference   |     |      Search      |   |
+|   |      AI Use      |     |      Search      |   |
 |   |                  |     |                  |   |
 |   |                  |     |                  |   |
 |    '----------------'       '----------------'    |
@@ -189,6 +189,14 @@ The act of training general purpose AI models that have the capacity to generate
 
 The use of assets for Generative AI Training is a proper subset of AI Training usage.
 
+
+## AI Use Category {#ai-use}
+
+The act of using one or more assets as input to a trained AI/ML model as part of the operation of that model (as opposed to the training of the model).
+
+The use of assets for AI Training is a proper subset of Automated Processing usage.
+
+
 ## Search Category {#search}
 
 Using one or more assets in a search application that directs users to the location from which the assets were retrieved.
@@ -201,11 +209,6 @@ even if the use of AI is involved in their implementation.
 
 The use of assets for Search is a proper subset of Automated Processing usage.
 
-## AI Use Category {#ai-use}
-
-The act of using one or more assets as input to a trained AI/ML model as part of the operation of that model (as opposed to the training of the model).
-
-The use of assets for AI Training is a proper subset of Automated Processing usage.
 
 # Usage
 
@@ -263,8 +266,8 @@ Each usage category in the vocabulary ({{vocab}}) is mapped to a short textual l
 | Automated Processing   | all         | {{all}}         |
 | AI Training            | train-ai    | {{train-ai}}    |
 | Generative AI Training | train-genai | {{train-genai}} |
-| Search                 | search      | {{search}}      |
 | AI Inference           | ai-use      | {{ai-use}}      |
+| Search                 | search      | {{search}}      |
 {: #t-category-labels title="Mappings for Categories"}
 
 Any mapping for a new usage category can only use
