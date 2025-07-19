@@ -169,7 +169,6 @@ This section defines the categories of use in the vocabulary.
 ~~~
 {: #f-categories title="Relationship Between Categories of Use"}
 
-This list of specific use cases may be expanded in the future, should a consensus emerge between stakeholders, to include categories that address additional use cases as they emerge. In addition to these categories defined in the vocabulary, it is also expected that some systems implementing this vocabulary may extend this list with additional categories for their particular needs.
 
 ## Automated Processing Category {#all}
 
@@ -216,6 +215,7 @@ The vocabulary is used by referencing the terms defined in {{vocab}},
 directly or via mappings,
 in accordance with how they are defined in this document.
 
+
 ## More Specific Instructions
 
 A recipient of a statement of preferences that follows this model might receive more specific instructions
@@ -232,9 +232,10 @@ If arrangements, such as legal agreements, exist that explicitly permit the use 
 
 The vocabulary does not preclude the use of other specific categories. Any statement of preference based on this vocabulary shall not be interpreted as restricting the use of the work(s) strictly for the purpose of search and discovery as long as no restriction is declared through search-specific means such as {{!RFC9309}}.
 
+
 ## Vocabulary Extensions {#vocab-extension}
 
-Systems referencing the vocabulary must not introduce additional categories that include existing categories defined in the vocabulary or otherwise include additional hierarchical relationships.
+Systems referencing the vocabulary MUST NOT introduce additional categories that include existing categories defined in the vocabulary or otherwise include additional hierarchical relationships.
 
 
 # Exemplary Serialization Format {#format}
@@ -317,6 +318,8 @@ with each key-value pair.
 This document does not define any semantics for any parameters that might be included.
 When processing a parsed Dictionary to obtain preferences,
 any unknown parameters MUST be ignored.
+
+In either case, new extensions need to be defined in an RFC that updates this document.
 
 
 ## Processing Algorithm {#processing}
