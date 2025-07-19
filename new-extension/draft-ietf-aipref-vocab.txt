@@ -292,13 +292,6 @@ Table of Contents
    those arrangements likely apply, unless the terms of the arrangement
    explicitly say otherwise.
 
-   The vocabulary does not preclude the use of other specific
-   categories.  Any statement of preference based on this vocabulary
-   shall not be interpreted as restricting the use of the work(s)
-   strictly for the purpose of search and discovery as long as no
-   restriction is declared through search-specific means such as
-   [RFC9309].
-
 5.2.  Vocabulary Extensions
 
    Systems referencing the vocabulary MUST NOT introduce additional
@@ -569,11 +562,6 @@ Table of Contents
    [RFC8174]  Leiba, B., "Ambiguity of Uppercase vs Lowercase in RFC
               2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
               May 2017, <https://www.rfc-editor.org/rfc/rfc8174>.
-
-   [RFC9309]  Koster, M., Illyes, G., Zeller, H., and L. Sassman,
-              "Robots Exclusion Protocol", RFC 9309,
-              DOI 10.17487/RFC9309, September 2022,
-              <https://www.rfc-editor.org/rfc/rfc9309>.
 
 11.2.  Informative References
 
