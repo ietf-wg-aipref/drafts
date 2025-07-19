@@ -266,7 +266,7 @@ Each usage category in the vocabulary ({{vocab}}) is mapped to a short textual l
 | Automated Processing   | all         | {{all}}         |
 | AI Training            | train-ai    | {{train-ai}}    |
 | Generative AI Training | train-genai | {{train-genai}} |
-| AI Inference           | ai-use      | {{ai-use}}      |
+| AI Use                 | ai-use      | {{ai-use}}      |
 | Search                 | search      | {{search}}      |
 {: #t-category-labels title="Mappings for Categories"}
 
