@@ -40,6 +40,19 @@ normative:
 
 informative:
   UTF8: RFC3629
+  ATTACH:
+    title: "A Vocabulary For Expressing AI Usage Preferences"
+    date: draft-ietf-aipref-attach-date
+    seriesinfo:
+      Internet-Draft: draft-ietf-aipref-attach-latest
+    author:
+      -
+        fullname: Gary Illyes
+        organization: Google
+      -
+        fullname: Martin Thomson
+        role: editor
+        organization: Mozilla
 
 ...
 
@@ -128,6 +141,47 @@ while permitting other usage within the Automated Processing category.
 After processing a statement of preferences
 the recipient can assume that each category of use has a preference
 in one of three states: "allowed", "disallowed", or "unknown".
+
+
+## Conformance
+
+This document --
+and those documents that define concrete uses of this vocabulary --
+describe how usage preferences are associated with assets.
+Conformance to the specification means following the normative language
+that defines the construction and interpretation of usage preferences.
+The process of obtaining preferences has very limited scope
+for variation between implementations.
+
+Variation in what usage preferences might be obtained are limited to:
+
+* the choice of which methods for expressing preferences --
+  such as those defined in {{ATTACH}} --
+  are implemented and used, and
+
+* the terms that are in the vocabulary,
+  as might be added by updates to this document; see {{extension}}.
+
+There is considerably more discretion involved in respecting preferences.
+An entity MAY choose to respect these preferences when processing assets.
+This is done according to both:
+
+* an understanding of the nature of that processing
+  and how it corresponds to the usage categories
+  where preferences have been expressed, and
+
+* the legal context that applies; see {{legal}}.
+
+Usage preferences can be overridden through express agreements
+between relevant parties.
+There are also many situations where other priorities could override
+any usage preferences.
+For example, people with accessibility needs
+might override a preference to disallow AI Use ({{ai-use}})
+so that they might access automated captions or summaries.
+Another case might involve the use of assets for research.
+Such overrides might be explicitly permitted in law,
+or could be based on the judgment of individual system users.
 
 
 # Vocabulary Definition {#vocab}
@@ -410,7 +464,7 @@ This process results in three potential answers:
 allow, disallow, and no preference.
 Applications can use the answer to guide their behavior.
 
-One approach for dealing with a "no preference" answer
+One approach for dealing with an "unknown" or "no preference" answer
 is to assign a default.
 This document takes no position on what default might be chosen
 as that will depend on policy constraints
@@ -440,11 +494,11 @@ the following process applies to each usage category:
 This process ensures that the most restrictive preference applies.
 
 
-# Applicability and Legal Effect
+# Applicability and Legal Effect {#legal}
 
 This document provides a set of definitions for different categories of use,
 plus a system for associating simple preferences to each
-(allow, disallow, or no preference).
+(allow, disallow, or no preference; see {{model}}).
 
 The categories of use that are defined as part of the vocabulary
 are not always clearly applicable or inapplicable to a particular system or application.
@@ -458,8 +512,8 @@ which has implications for entities that consume those preferences.
 Their interpretation of the meaning of different terms
 could have legal ramifications.
 Different jurisdictions could reach subtly different conclusions
-about the precise scope of each category of use
-that affects the applicability of each.
+about the applicability of each category of use
+to specific applications.
 
 It is the responsibility of those that process affected assets to understand
 the legal implications of their use of digital assets.
