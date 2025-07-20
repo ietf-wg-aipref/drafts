@@ -5,8 +5,8 @@
 AI Preferences                                                 P. Keller
 Internet-Draft                                               Open Future
 Intended status: Standards Track                         M. Thomson, Ed.
-Expires: 20 January 2026                                         Mozilla
-                                                            19 July 2025
+Expires: 21 January 2026                                         Mozilla
+                                                            20 July 2025
 
 
             A Vocabulary For Expressing AI Usage Preferences
@@ -52,7 +52,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 20 January 2026.
+   This Internet-Draft will expire on 21 January 2026.
 
 Copyright Notice
 
@@ -564,12 +564,6 @@ Table of Contents
               May 2017, <https://www.rfc-editor.org/rfc/rfc8174>.
 
 11.2.  Informative References
-
-   [EUCD2019] European Union, "Directive (EU) 2019/790 of the European
-              Parliament and of the Council of 17 April 2019 on
-              copyright and related rights in the Digital Single
-              Market", 17 May 2019,
-              <https://eur-lex.europa.eu/eli/dir/2019/790/oj>.
 
    [UTF8]     Yergeau, F., "UTF-8, a transformation format of ISO
               10646", STD 63, RFC 3629, DOI 10.17487/RFC3629, November
