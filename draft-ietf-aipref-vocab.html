@@ -1166,7 +1166,12 @@ about restrictions or permissions for use of digital assets by such systems.<a h
             <p id="section-toc.1-1.2.1" class="keepWithNext"><a href="#section-2" class="auto internal xref">2</a>.  <a href="#name-conventions-and-definitions" class="internal xref">Conventions and Definitions</a></p>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.3">
-            <p id="section-toc.1-1.3.1" class="keepWithNext"><a href="#section-3" class="auto internal xref">3</a>.  <a href="#name-statements-of-preference" class="internal xref">Statements of Preference</a></p>
+            <p id="section-toc.1-1.3.1"><a href="#section-3" class="auto internal xref">3</a>.  <a href="#name-statements-of-preference" class="internal xref">Statements of Preference</a></p>
+<ul class="compact toc ulBare ulEmpty">
+<li class="compact toc ulBare ulEmpty" id="section-toc.1-1.3.2.1">
+                <p id="section-toc.1-1.3.2.1.1" class="keepWithNext"><a href="#section-3.1" class="auto internal xref">3.1</a>.  <a href="#name-conformance" class="internal xref">Conformance</a></p>
+</li>
+            </ul>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4">
             <p id="section-toc.1-1.4.1"><a href="#section-4" class="auto internal xref">4</a>.  <a href="#name-vocabulary-definition" class="internal xref">Vocabulary Definition</a></p>
@@ -1343,6 +1348,55 @@ while permitting other usage within the Automated Processing category.<a href="#
 <p id="section-3-6">After processing a statement of preferences
 the recipient can assume that each category of use has a preference
 in one of three states: "allowed", "disallowed", or "unknown".<a href="#section-3-6" class="pilcrow">¶</a></p>
+<div id="conformance">
+<section id="section-3.1">
+        <h3 id="name-conformance">
+<a href="#section-3.1" class="section-number selfRef">3.1. </a><a href="#name-conformance" class="section-name selfRef">Conformance</a>
+        </h3>
+<p id="section-3.1-1">This document --
+and those documents that define concrete uses of this vocabulary --
+describe how usage preferences are associated with assets.
+Conformance to the specification means following the normative language
+that defines the construction and interpretation of usage preferences.
+The process of obtaining preferences has very limited scope
+for variation between implementations.<a href="#section-3.1-1" class="pilcrow">¶</a></p>
+<p id="section-3.1-2">Variation in what usage preferences might be obtained are limited to:<a href="#section-3.1-2" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-3.1-3.1">
+            <p id="section-3.1-3.1.1">the choice of which methods for expressing preferences --
+such as those defined in <span>[<a href="#ATTACH" class="cite xref">ATTACH</a>]</span> --
+are implemented and used, and<a href="#section-3.1-3.1.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-3.1-3.2">
+            <p id="section-3.1-3.2.1">the terms that are in the vocabulary,
+as might be added by updates to this document; see <a href="#extension" class="auto internal xref">Section 6.4</a>.<a href="#section-3.1-3.2.1" class="pilcrow">¶</a></p>
+</li>
+        </ul>
+<p id="section-3.1-4">There is considerably more discretion involved in respecting preferences.
+An entity <span class="bcp14">MAY</span> choose to respect these preferences when processing assets.
+This is done according to both:<a href="#section-3.1-4" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-3.1-5.1">
+            <p id="section-3.1-5.1.1">an understanding of the nature of that processing
+and how it corresponds to the usage categories
+where preferences have been expressed, and<a href="#section-3.1-5.1.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-3.1-5.2">
+            <p id="section-3.1-5.2.1">the legal context that applies; see <a href="#legal" class="auto internal xref">Section 8</a>.<a href="#section-3.1-5.2.1" class="pilcrow">¶</a></p>
+</li>
+        </ul>
+<p id="section-3.1-6">Usage preferences can be overridden through express agreements
+between relevant parties.
+There are also many situations where other priorities could override
+any usage preferences.
+For example, people with accessibility needs
+might override a preference to disallow AI Use (<a href="#ai-use" class="auto internal xref">Section 4.4</a>)
+so that they might access automated captions or summaries.
+Another case might involve the use of assets for research.
+Such overrides might be explicitly permitted in law,
+or could be based on the judgment of individual system users.<a href="#section-3.1-6" class="pilcrow">¶</a></p>
+</section>
+</div>
 </section>
 </div>
 <div id="vocab">
@@ -1746,7 +1800,7 @@ and use the result of that process.<a href="#section-7-3.2.1" class="pilcrow">¶
 <p id="section-7-4">This process results in three potential answers:
 allow, disallow, and no preference.
 Applications can use the answer to guide their behavior.<a href="#section-7-4" class="pilcrow">¶</a></p>
-<p id="section-7-5">One approach for dealing with a "no preference" answer
+<p id="section-7-5">One approach for dealing with an "unknown" or "no preference" answer
 is to assign a default.
 This document takes no position on what default might be chosen
 as that will depend on policy constraints
@@ -1781,14 +1835,14 @@ the result is that the usage is allowed.<a href="#section-7.1-4.2.1" class="pilc
 </div>
 </section>
 </div>
-<div id="applicability-and-legal-effect">
+<div id="legal">
 <section id="section-8">
       <h2 id="name-applicability-and-legal-eff">
 <a href="#section-8" class="section-number selfRef">8. </a><a href="#name-applicability-and-legal-eff" class="section-name selfRef">Applicability and Legal Effect</a>
       </h2>
 <p id="section-8-1">This document provides a set of definitions for different categories of use,
 plus a system for associating simple preferences to each
-(allow, disallow, or no preference).<a href="#section-8-1" class="pilcrow">¶</a></p>
+(allow, disallow, or no preference; see <a href="#model" class="auto internal xref">Section 3</a>).<a href="#section-8-1" class="pilcrow">¶</a></p>
 <p id="section-8-2">The categories of use that are defined as part of the vocabulary
 are not always clearly applicable or inapplicable to a particular system or application.
 The universe of possible systems is far more complex
@@ -1800,8 +1854,8 @@ which has implications for entities that consume those preferences.
 Their interpretation of the meaning of different terms
 could have legal ramifications.
 Different jurisdictions could reach subtly different conclusions
-about the precise scope of each category of use
-that affects the applicability of each.<a href="#section-8-3" class="pilcrow">¶</a></p>
+about the applicability of each category of use
+to specific applications.<a href="#section-8-3" class="pilcrow">¶</a></p>
 <p id="section-8-4">It is the responsibility of those that process affected assets to understand
 the legal implications of their use of digital assets.<a href="#section-8-4" class="pilcrow">¶</a></p>
 <p id="section-8-5">This includes understanding:<a href="#section-8-5" class="pilcrow">¶</a></p>
@@ -1877,6 +1931,10 @@ and the details of the system.<a href="#section-8-7" class="pilcrow">¶</a></p>
 <a href="#section-11.2" class="section-number selfRef">11.2. </a><a href="#name-informative-references" class="section-name selfRef">Informative References</a>
         </h3>
 <dl class="references">
+<dt id="ATTACH">[ATTACH]</dt>
+        <dd>
+<span class="refAuthor">Illyes, G.</span> and <span class="refAuthor">M. Thomson, Ed.</span>, <span class="refTitle">"A Vocabulary For Expressing AI Usage Preferences"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-aipref-attach</span>, <time datetime="2025-07" class="refDate">July 2025</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-aipref-attach">https://datatracker.ietf.org/doc/html/draft-ietf-aipref-attach</a>&gt;</span>. </dd>
+<dd class="break"></dd>
 <dt id="UTF8">[UTF8]</dt>
       <dd>
 <span class="refAuthor">Yergeau, F.</span>, <span class="refTitle">"UTF-8, a transformation format of ISO 10646"</span>, <span class="seriesInfo">STD 63</span>, <span class="seriesInfo">RFC 3629</span>, <span class="seriesInfo">DOI 10.17487/RFC3629</span>, <time datetime="2003-11" class="refDate">November 2003</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc3629">https://www.rfc-editor.org/rfc/rfc3629</a>&gt;</span>. </dd>

@@ -73,6 +73,7 @@ Table of Contents
    1.  Introduction
    2.  Conventions and Definitions
    3.  Statements of Preference
+     3.1.  Conformance
    4.  Vocabulary Definition
      4.1.  Automated Processing Category
      4.2.  AI Training Category
@@ -183,6 +184,42 @@ Table of Contents
    After processing a statement of preferences the recipient can assume
    that each category of use has a preference in one of three states:
    "allowed", "disallowed", or "unknown".
+
+3.1.  Conformance
+
+   This document -- and those documents that define concrete uses of
+   this vocabulary -- describe how usage preferences are associated with
+   assets.  Conformance to the specification means following the
+   normative language that defines the construction and interpretation
+   of usage preferences.  The process of obtaining preferences has very
+   limited scope for variation between implementations.
+
+   Variation in what usage preferences might be obtained are limited to:
+
+   *  the choice of which methods for expressing preferences -- such as
+      those defined in [ATTACH] -- are implemented and used, and
+
+   *  the terms that are in the vocabulary, as might be added by updates
+      to this document; see Section 6.4.
+
+   There is considerably more discretion involved in respecting
+   preferences.  An entity MAY choose to respect these preferences when
+   processing assets.  This is done according to both:
+
+   *  an understanding of the nature of that processing and how it
+      corresponds to the usage categories where preferences have been
+      expressed, and
+
+   *  the legal context that applies; see Section 8.
+
+   Usage preferences can be overridden through express agreements
+   between relevant parties.  There are also many situations where other
+   priorities could override any usage preferences.  For example, people
+   with accessibility needs might override a preference to disallow AI
+   Use (Section 4.4) so that they might access automated captions or
+   summaries.  Another case might involve the use of assets for
+   research.  Such overrides might be explicitly permitted in law, or
+   could be based on the judgment of individual system users.
 
 4.  Vocabulary Definition
 
@@ -469,10 +506,10 @@ Table of Contents
    no preference.  Applications can use the answer to guide their
    behavior.
 
-   One approach for dealing with a "no preference" answer is to assign a
-   default.  This document takes no position on what default might be
-   chosen as that will depend on policy constraints beyond the scope of
-   this specification.
+   One approach for dealing with an "unknown" or "no preference" answer
+   is to assign a default.  This document takes no position on what
+   default might be chosen as that will depend on policy constraints
+   beyond the scope of this specification.
 
 7.1.  Combining Preferences
 
@@ -500,7 +537,7 @@ Table of Contents
 
    This document provides a set of definitions for different categories
    of use, plus a system for associating simple preferences to each
-   (allow, disallow, or no preference).
+   (allow, disallow, or no preference; see Section 3).
 
    The categories of use that are defined as part of the vocabulary are
    not always clearly applicable or inapplicable to a particular system
@@ -513,8 +550,8 @@ Table of Contents
    consequences, which has implications for entities that consume those
    preferences.  Their interpretation of the meaning of different terms
    could have legal ramifications.  Different jurisdictions could reach
-   subtly different conclusions about the precise scope of each category
-   of use that affects the applicability of each.
+   subtly different conclusions about the applicability of each category
+   of use to specific applications.
 
    It is the responsibility of those that process affected assets to
    understand the legal implications of their use of digital assets.
@@ -564,6 +601,12 @@ Table of Contents
               May 2017, <https://www.rfc-editor.org/rfc/rfc8174>.
 
 11.2.  Informative References
+
+   [ATTACH]   Illyes, G. and M. Thomson, Ed., "A Vocabulary For
+              Expressing AI Usage Preferences", Work in Progress,
+              Internet-Draft, draft-ietf-aipref-attach, July 2025,
+              <https://datatracker.ietf.org/doc/html/draft-ietf-aipref-
+              attach>.
 
    [UTF8]     Yergeau, F., "UTF-8, a transformation format of ISO
               10646", STD 63, RFC 3629, DOI 10.17487/RFC3629, November
