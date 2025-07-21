@@ -186,7 +186,6 @@ across distribution channels.
 The Content-Usage field is a structured field dictionary,
 as defined in {{Section 3.2 of FIELDS}}.
 This field follows the vocabulary and processing rules in {{VOCAB}}.
-<!-- TODO: confirm with VOCAB -->
 
 This field indicates usage preferences
 regarding the content of the HTTP message.
@@ -322,6 +321,21 @@ The parsing and processing rules from {{Sections 6 and 7 of VOCAB}} apply.
 
 Note that a usage preference expression is processed as a sequence of bytes,
 rather than Unicode text; see {{Section 6.3 of VOCAB}}.
+
+
+## When Preferences Apply
+
+A crawler that fetches resources uses the copy of "robots.txt"
+that is current at the time of the fetch
+to determine which usage preferences apply to those resources.
+{{Section 2.4 of ROBOTS}} defines how a "robots.txt" file can be cached.
+
+This means that updates to "robots.txt" do not retroactively apply
+to resources.
+Changes to "robots.txt" that affect usage preferences
+therefore only apply
+after a crawler has retrieved the updated "robots.txt"
+and subsequently retrieved the affected resource again.
 
 
 ## Example
