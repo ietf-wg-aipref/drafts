@@ -1,5 +1,5 @@
 ---
-title: "Indicating Preferences Regarding Content Usage"
+title: "Associating AI Usage Preferences With Content"
 abbrev: "AI Preference Attachment"
 category: std
 
@@ -166,6 +166,15 @@ The mechanisms in this document can be applied to any content type, provided tha
 for alternative content distribution or acquisition methods,
 such as email.
 
+## Registry-Based Preferences
+
+This document does not define a means of using unique identifiers and a registry
+for associating preferences.
+Registry-based approaches might be applicable in certain contexts,
+particularly where embedding is impractical or unavailable.
+Additionally, a registry might enable persistent association of preferences
+across distribution channels.
+
 
 ## Conventions and Definitions
 
@@ -199,9 +208,18 @@ The Content-Usage field does not have any special effect on caching.
 
 # Robots Exclusion Protocol Content-Usage Rule {#robots}
 
+The core function of Robots Exclusion Protocol format {{ROBOTS}}
+(or the "robots.txt" file)
+is to describe the expectations of the server operator
+about which paths can be crawled.
+This document adds a new rule that associates usage preferences
+with different paths.
+This new rule applies to any paths that can be crawled;
+paths that cannot be crawled have no associated usage preferences.
+
 A Content-Usage rule is added to the set of potential rules
 that can be included in a Group
-for the Robots Exclusion Protocol format {{ROBOTS}}.
+for "robots.txt".
 
 The `rule` ABNF pattern from {{Section 2.2 of ROBOTS}}
 is extended as shown in {{f-abnf}}.
@@ -235,6 +253,11 @@ The Allow and Disallow rules determine what resources can be crawled,
 using the rule that has the longest matching path prefix,
 as defined in {{Section 2.2.2 of ROBOTS}}.
 
+This creates a two-stage arrangement
+that distinguishes acquisition and usage.
+Acquisition relies on Allow/Disallow rules;
+usage preference relies on Content-Usage rules.
+
 Any Content-Usage rules determine the usage preferences for resources
 using the same path prefix matching rules as defined for Allow and Disallow.
 That is, the path prefix length is determined by counting the number of bytes
@@ -258,6 +281,9 @@ If there are Content-Usage rules that have identical paths
 and conflicting usage preferences,
 these preferences apply separately
 according to the process defined in {{Section 7.1 of VOCAB}}.
+Note that this differs from the Allow/Disallow rules,
+where a conflict leads to the more permissive option,
+allowing crawling.
 
 A crawlers can cache a "robots.txt" file for up to 24 hours,
 following HTTP Cache-Control semantics defined in {{HTTP-CACHE}};

@@ -39,12 +39,6 @@ normative:
   FIELDS: RFC9651
 
 informative:
-  EUCD2019:
-    title: "Directive (EU) 2019/790 of the European Parliament and of the Council of 17 April 2019 on copyright and related rights in the Digital Single Market"
-    target: https://eur-lex.europa.eu/eli/dir/2019/790/oj
-    author:
-      - org: European Union
-    date: 2019-05-17
   UTF8: RFC3629
 
 ...
@@ -160,7 +154,7 @@ This section defines the categories of use in the vocabulary.
 |    .----------------.       .----------------.    |
 |   |                  |     |                  |   |
 |   |                  |     |                  |   |
-|   |   AI Inference   |     |      Search      |   |
+|   |      AI Use      |     |      Search      |   |
 |   |                  |     |                  |   |
 |   |                  |     |                  |   |
 |    '----------------'       '----------------'    |
@@ -169,7 +163,6 @@ This section defines the categories of use in the vocabulary.
 ~~~
 {: #f-categories title="Relationship Between Categories of Use"}
 
-This list of specific use cases may be expanded in the future, should a consensus emerge between stakeholders, to include categories that address additional use cases as they emerge. In addition to these categories defined in the vocabulary, it is also expected that some systems implementing this vocabulary may extend this list with additional categories for their particular needs.
 
 ## Automated Processing Category {#all}
 
@@ -189,6 +182,14 @@ The act of training general purpose AI models that have the capacity to generate
 
 The use of assets for Generative AI Training is a proper subset of AI Training usage.
 
+
+## AI Use Category {#ai-use}
+
+The act of using one or more assets as input to a trained AI/ML model as part of the operation of that model (as opposed to the training of the model).
+
+The use of assets for AI Use is a proper subset of Automated Processing usage.
+
+
 ## Search Category {#search}
 
 Using one or more assets in a search application that directs users to the location from which the assets were retrieved.
@@ -201,17 +202,13 @@ even if the use of AI is involved in their implementation.
 
 The use of assets for Search is a proper subset of Automated Processing usage.
 
-## AI Use Category {#ai-use}
-
-The act of using one or more assets as input to a trained AI/ML model as part of the operation of that model (as opposed to the training of the model).
-
-The use of assets for AI Use is a proper subset of Automated Processing usage.
 
 # Usage
 
 The vocabulary is used by referencing the terms defined in {{vocab}},
 directly or via mappings,
 in accordance with how they are defined in this document.
+
 
 ## More Specific Instructions
 
@@ -227,11 +224,10 @@ in two ways:
 For instance, a statement of preferences might indicate that the use of an asset is disallowed for AI Training.
 If arrangements, such as legal agreements, exist that explicitly permit the use of that asset, those arrangements likely apply, unless the terms of the arrangement explicitly say otherwise.
 
-The vocabulary does not preclude the use of other specific categories. Any statement of preference based on this vocabulary shall not be interpreted as restricting the use of the work(s) strictly for the purpose of search and discovery as long as no restriction is declared through search-specific means such as {{!RFC9309}}.
 
 ## Vocabulary Extensions {#vocab-extension}
 
-Systems referencing the vocabulary must not introduce additional categories that include existing categories defined in the vocabulary or otherwise include additional hierarchical relationships.
+Systems referencing the vocabulary MUST NOT introduce additional categories that include existing categories defined in the vocabulary or otherwise include additional hierarchical relationships.
 
 
 # Exemplary Serialization Format {#format}
@@ -263,8 +259,8 @@ Each usage category in the vocabulary ({{vocab}}) is mapped to a short textual l
 | Automated Processing   | all         | {{all}}         |
 | AI Training            | train-ai    | {{train-ai}}    |
 | Generative AI Training | train-genai | {{train-genai}} |
+| AI Use                 | ai-use      | {{ai-use}}      |
 | Search                 | search      | {{search}}      |
-| AI Inference           | ai-use      | {{ai-use}}      |
 {: #t-category-labels title="Mappings for Categories"}
 
 Any mapping for a new usage category can only use
@@ -314,6 +310,8 @@ with each key-value pair.
 This document does not define any semantics for any parameters that might be included.
 When processing a parsed Dictionary to obtain preferences,
 any unknown parameters MUST be ignored.
+
+In either case, new extensions need to be defined in an RFC that updates this document.
 
 
 ## Processing Algorithm {#processing}
