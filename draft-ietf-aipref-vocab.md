@@ -150,8 +150,11 @@ In comparison, an explicit preference regarding AI Training might disallow that 
 while permitting other usage within the Automated Processing category.
 
 After processing a statement of preferences
-the recipient can assume that each category of use has a preference
-in one of three states: "allowed", "disallowed", or "unknown".
+the recipient assigns each category of use
+one of three preference values: "allowed", "disallowed", or "unknown".
+
+In the absence of a statement of preference,
+all usage categories are assigned a preference value of "unknown".
 
 
 ## Conformance
@@ -305,9 +308,10 @@ The dictionary keys correspond to usage categories
 and the dictionary values correspond to explicit preferences,
 which can be either `y` or `n`; see {{y-or-n}}.
 
-For example, the following is a preference to allow AI training ({{train-ai}}),
+For example, the following expresses a preference to allow AI training ({{train-ai}}),
 disallow generative AI training ({{train-genai}}), and
-and state no preference for other categories other than subsets of these categories:
+and expresses no preference for other categories
+other than subsets of these categories:
 
 ~~~
 train-ai=y, train-genai=n
