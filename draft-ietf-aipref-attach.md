@@ -258,6 +258,9 @@ If there are Content-Usage rules that have identical paths
 and conflicting usage preferences,
 these preferences apply separately
 according to the process defined in {{Section 7.1 of VOCAB}}.
+Note that this differs from the Allow/Disallow rules,
+where a conflict leads to the more permissive option,
+allowing crawling.
 
 A crawlers can cache a "robots.txt" file for up to 24 hours,
 following HTTP Cache-Control semantics defined in {{HTTP-CACHE}};
