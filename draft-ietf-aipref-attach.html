@@ -1198,7 +1198,10 @@ to allow for the inclusion of usage preferences.<a href="#section-abstract-2" cl
                 <p id="section-toc.1-1.3.2.2.1"><a href="#section-3.2" class="auto internal xref">3.2</a>.  <a href="#name-processing-content-usage-ru" class="internal xref">Processing Content-Usage Rules</a></p>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.3.2.3">
-                <p id="section-toc.1-1.3.2.3.1"><a href="#section-3.3" class="auto internal xref">3.3</a>.  <a href="#name-example" class="internal xref">Example</a></p>
+                <p id="section-toc.1-1.3.2.3.1"><a href="#section-3.3" class="auto internal xref">3.3</a>.  <a href="#name-when-preferences-apply" class="internal xref">When Preferences Apply</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.3.2.4">
+                <p id="section-toc.1-1.3.2.4.1"><a href="#section-3.4" class="auto internal xref">3.4</a>.  <a href="#name-example" class="internal xref">Example</a></p>
 </li>
             </ul>
 </li>
@@ -1508,15 +1511,32 @@ The parsing and processing rules from Sections <a href="https://datatracker.ietf
 rather than Unicode text; see <span><a href="https://datatracker.ietf.org/doc/html/draft-ietf-aipref-vocab#section-6.3" class="relref">Section 6.3</a> of [<a href="#VOCAB" class="cite xref">VOCAB</a>]</span>.<a href="#section-3.2-6" class="pilcrow">¶</a></p>
 </section>
 </div>
-<div id="example">
+<div id="when-preferences-apply">
 <section id="section-3.3">
-        <h3 id="name-example">
-<a href="#section-3.3" class="section-number selfRef">3.3. </a><a href="#name-example" class="section-name selfRef">Example</a>
+        <h3 id="name-when-preferences-apply">
+<a href="#section-3.3" class="section-number selfRef">3.3. </a><a href="#name-when-preferences-apply" class="section-name selfRef">When Preferences Apply</a>
         </h3>
-<p id="section-3.3-1"><a href="#f-ex-robots" class="auto internal xref">Figure 2</a> shows a simple "robots.txt" document.<a href="#section-3.3-1" class="pilcrow">¶</a></p>
+<p id="section-3.3-1">A crawler that fetches resources uses the copy of "robots.txt"
+that is current at the time of the fetch
+to determine which usage preferences apply to those resources.
+<span><a href="https://rfc-editor.org/rfc/rfc9309#section-2.4" class="relref">Section 2.4</a> of [<a href="#ROBOTS" class="cite xref">ROBOTS</a>]</span> defines how a "robots.txt" file can be cached.<a href="#section-3.3-1" class="pilcrow">¶</a></p>
+<p id="section-3.3-2">This means that updates to "robots.txt" do not retroactively apply
+to resources.
+Changes to "robots.txt" that affect usage preferences
+therefore only apply
+after a crawler has retrieved the updated "robots.txt"
+and subsequently retrieved the affected resource again.<a href="#section-3.3-2" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="example">
+<section id="section-3.4">
+        <h3 id="name-example">
+<a href="#section-3.4" class="section-number selfRef">3.4. </a><a href="#name-example" class="section-name selfRef">Example</a>
+        </h3>
+<p id="section-3.4-1"><a href="#f-ex-robots" class="auto internal xref">Figure 2</a> shows a simple "robots.txt" document.<a href="#section-3.4-1" class="pilcrow">¶</a></p>
 <span id="name-example-robotstxt-file"></span><div id="f-ex-robots">
 <figure id="figure-2">
-          <div class="alignLeft art-text artwork" id="section-3.3-2.1">
+          <div class="alignLeft art-text artwork" id="section-3.4-2.1">
 <pre>
 User-Agent: *
 Allow: /
@@ -1533,14 +1553,14 @@ Content-Usage: train-ai=y
 <a href="#name-example-robotstxt-file" class="selfRef">Example robots.txt file</a>
           </figcaption></figure>
 </div>
-<p id="section-3.3-3">A crawler that identifies as "ExampleBot" uses the second group.
+<p id="section-3.4-3">A crawler that identifies as "ExampleBot" uses the second group.
 That crawler would be able to obtain all content
-and apply usage preferences of "ai=y" as defined in <span>[<a href="#VOCAB" class="cite xref">VOCAB</a>]</span>.<a href="#section-3.3-3" class="pilcrow">¶</a></p>
-<p id="section-3.3-4">All other crawlers use the first group.
+and apply usage preferences of "ai=y" as defined in <span>[<a href="#VOCAB" class="cite xref">VOCAB</a>]</span>.<a href="#section-3.4-3" class="pilcrow">¶</a></p>
+<p id="section-3.4-4">All other crawlers use the first group.
 This allows crawling of all content other than resources under "/never/".
 Of those resources,
 those under "/ai-ok/" have an associated usage preference of "train-ai=y"
-and all other resources have a usage preference of "train-ai=n".<a href="#section-3.3-4" class="pilcrow">¶</a></p>
+and all other resources have a usage preference of "train-ai=n".<a href="#section-3.4-4" class="pilcrow">¶</a></p>
 <span id="name-sample-of-usage-preferences"></span><div id="t-example">
 <table class="center" id="table-1">
           <caption>
