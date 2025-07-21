@@ -1398,14 +1398,22 @@ will not comply with this requirement.<a href="#section-2-3" class="pilcrow">¶<
       <h2 id="name-robots-exclusion-protocol-c">
 <a href="#section-3" class="section-number selfRef">3. </a><a href="#name-robots-exclusion-protocol-c" class="section-name selfRef">Robots Exclusion Protocol Content-Usage Rule</a>
       </h2>
-<p id="section-3-1">A Content-Usage rule is added to the set of potential rules
+<p id="section-3-1">The core function of Robots Exclusion Protocol format <span>[<a href="#ROBOTS" class="cite xref">ROBOTS</a>]</span>
+(or the "robots.txt" file)
+is to describe the expectations of the server operator
+about which paths can be crawled.
+This document adds a new rule that associates usage preferences
+with different paths.
+This new rule applies to any paths that can be crawled;
+paths that cannot be crawled have no associated usage preferences.<a href="#section-3-1" class="pilcrow">¶</a></p>
+<p id="section-3-2">A Content-Usage rule is added to the set of potential rules
 that can be included in a Group
-for the Robots Exclusion Protocol format <span>[<a href="#ROBOTS" class="cite xref">ROBOTS</a>]</span>.<a href="#section-3-1" class="pilcrow">¶</a></p>
-<p id="section-3-2">The <code>rule</code> ABNF pattern from <span><a href="https://rfc-editor.org/rfc/rfc9309#section-2.2" class="relref">Section 2.2</a> of [<a href="#ROBOTS" class="cite xref">ROBOTS</a>]</span>
-is extended as shown in <a href="#f-abnf" class="auto internal xref">Figure 1</a>.<a href="#section-3-2" class="pilcrow">¶</a></p>
+for "robots.txt".<a href="#section-3-2" class="pilcrow">¶</a></p>
+<p id="section-3-3">The <code>rule</code> ABNF pattern from <span><a href="https://rfc-editor.org/rfc/rfc9309#section-2.2" class="relref">Section 2.2</a> of [<a href="#ROBOTS" class="cite xref">ROBOTS</a>]</span>
+is extended as shown in <a href="#f-abnf" class="auto internal xref">Figure 1</a>.<a href="#section-3-3" class="pilcrow">¶</a></p>
 <span id="name-extended-robotstxt-abnf"></span><div id="f-abnf">
 <figure id="figure-1">
-        <div class="lang-abnf sourcecode" id="section-3-3.1">
+        <div class="lang-abnf sourcecode" id="section-3-4.1">
 <pre>
 rule =/ content-usage
 
@@ -1418,15 +1426,15 @@ usage-pref    = &lt;usage preference vocabulary from [VOCAB]&gt;
 <a href="#name-extended-robotstxt-abnf" class="selfRef">Extended robots.txt ABNF</a>
         </figcaption></figure>
 </div>
-<p id="section-3-4">Each group contains zero or more Content-Usage rules.
+<p id="section-3-5">Each group contains zero or more Content-Usage rules.
 Each Content-Usage rule consists of a path
 and a usage preference.
 The path might be absent or empty;
 if a path present,
-a SP or HTAB separates it from the usage preference.<a href="#section-3-4" class="pilcrow">¶</a></p>
-<p id="section-3-5">Note that the usage preference expression encoding
+a SP or HTAB separates it from the usage preference.<a href="#section-3-5" class="pilcrow">¶</a></p>
+<p id="section-3-6">Note that the usage preference expression encoding
 does not use an ABNF definition,
-relying instead on the definitions in <span>[<a href="#FIELDS" class="cite xref">FIELDS</a>]</span>.<a href="#section-3-5" class="pilcrow">¶</a></p>
+relying instead on the definitions in <span>[<a href="#FIELDS" class="cite xref">FIELDS</a>]</span>.<a href="#section-3-6" class="pilcrow">¶</a></p>
 <div id="content-usage-rule-semantics">
 <section id="section-3.1">
         <h3 id="name-content-usage-rule-semantic">
@@ -1437,33 +1445,37 @@ identified by product token as defined in <span><a href="https://rfc-editor.org/
 The Allow and Disallow rules determine what resources can be crawled,
 using the rule that has the longest matching path prefix,
 as defined in <span><a href="https://rfc-editor.org/rfc/rfc9309#section-2.2.2" class="relref">Section 2.2.2</a> of [<a href="#ROBOTS" class="cite xref">ROBOTS</a>]</span>.<a href="#section-3.1-1" class="pilcrow">¶</a></p>
-<p id="section-3.1-2">Any Content-Usage rules determine the usage preferences for resources
+<p id="section-3.1-2">This creates a two-stage arrangement
+that distinguishes acquisition and usage.
+Acquisition relies on Allow/Disallow rules;
+usage preference relies on Content-Usage rules.<a href="#section-3.1-2" class="pilcrow">¶</a></p>
+<p id="section-3.1-3">Any Content-Usage rules determine the usage preferences for resources
 using the same path prefix matching rules as defined for Allow and Disallow.
 That is, the path prefix length is determined by counting the number of bytes
-in the encoded path.<a href="#section-3.1-2" class="pilcrow">¶</a></p>
-<p id="section-3.1-3">Usage preferences apply only to those resources that can be crawled
+in the encoded path.<a href="#section-3.1-3" class="pilcrow">¶</a></p>
+<p id="section-3.1-4">Usage preferences apply only to those resources that can be crawled
 according to Allow/Disallow rules;
-no preferences are implied for resources that are disallowed.<a href="#section-3.1-3" class="pilcrow">¶</a></p>
-<p id="section-3.1-4">Paths specified for Content-Usage rules use the same percent-encoding rules
+no preferences are implied for resources that are disallowed.<a href="#section-3.1-4" class="pilcrow">¶</a></p>
+<p id="section-3.1-5">Paths specified for Content-Usage rules use the same percent-encoding rules
 as used for Allow/Disallow rules,
 as defined in <span><a href="https://rfc-editor.org/rfc/rfc3986#section-2.1" class="relref">Section 2.1</a> of [<a href="#URI" class="cite xref">URI</a>]</span>.
 In particular, SP (U+20) and HTAB (U+09) characters need to be replaced
-with "%20" and "%09" respectively.<a href="#section-3.1-4" class="pilcrow">¶</a></p>
-<p id="section-3.1-5">The ordering of rules in a group carries no semantics.
+with "%20" and "%09" respectively.<a href="#section-3.1-5" class="pilcrow">¶</a></p>
+<p id="section-3.1-6">The ordering of rules in a group carries no semantics.
 Thus, Content-Usage rules can be interleaved
-with Allow and Disallow rules.<a href="#section-3.1-5" class="pilcrow">¶</a></p>
-<p id="section-3.1-6">If there are Content-Usage rules that have identical paths
+with Allow and Disallow rules.<a href="#section-3.1-6" class="pilcrow">¶</a></p>
+<p id="section-3.1-7">If there are Content-Usage rules that have identical paths
 and conflicting usage preferences,
 these preferences apply separately
 according to the process defined in <span><a href="https://datatracker.ietf.org/doc/html/draft-ietf-aipref-vocab#section-7.1" class="relref">Section 7.1</a> of [<a href="#VOCAB" class="cite xref">VOCAB</a>]</span>.
 Note that this differs from the Allow/Disallow rules,
 where a conflict leads to the more permissive option,
-allowing crawling.<a href="#section-3.1-6" class="pilcrow">¶</a></p>
-<p id="section-3.1-7">A crawlers can cache a "robots.txt" file for up to 24 hours,
+allowing crawling.<a href="#section-3.1-7" class="pilcrow">¶</a></p>
+<p id="section-3.1-8">A crawlers can cache a "robots.txt" file for up to 24 hours,
 following HTTP Cache-Control semantics defined in <span>[<a href="#HTTP-CACHE" class="cite xref">HTTP-CACHE</a>]</span>;
 see <span><a href="https://rfc-editor.org/rfc/rfc9309#section-2.4" class="relref">Section 2.4</a> of [<a href="#ROBOTS" class="cite xref">ROBOTS</a>]</span> for details.
 Updates to preferences within the period that a file is cached
-might not be visible.<a href="#section-3.1-7" class="pilcrow">¶</a></p>
+might not be visible.<a href="#section-3.1-8" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="processing-content-usage-rules">
