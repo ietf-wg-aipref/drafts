@@ -5,8 +5,8 @@
 AI Preferences                                                 P. Keller
 Internet-Draft                                               Open Future
 Intended status: Standards Track                         M. Thomson, Ed.
-Expires: 19 January 2026                                         Mozilla
-                                                            18 July 2025
+Expires: 22 January 2026                                         Mozilla
+                                                            21 July 2025
 
 
             A Vocabulary For Expressing AI Usage Preferences
@@ -52,7 +52,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 19 January 2026.
+   This Internet-Draft will expire on 22 January 2026.
 
 Copyright Notice
 
@@ -77,8 +77,8 @@ Table of Contents
      4.1.  Automated Processing Category
      4.2.  AI Training Category
      4.3.  Generative AI Training Category
-     4.4.  Search Category
-     4.5.  AI Use Category
+     4.4.  AI Use Category
+     4.5.  Search Category
    5.  Usage
      5.1.  More Specific Instructions
      5.2.  Vocabulary Extensions
@@ -207,7 +207,7 @@ Table of Contents
    |    .----------------.       .----------------.    |
    |   |                  |     |                  |   |
    |   |                  |     |                  |   |
-   |   |   AI Inference   |     |      Search      |   |
+   |   |      AI Use      |     |      Search      |   |
    |   |                  |     |                  |   |
    |   |                  |     |                  |   |
    |    '----------------'       '----------------'    |
@@ -215,13 +215,6 @@ Table of Contents
     '-------------------------------------------------'
 
               Figure 1: Relationship Between Categories of Use
-
-   This list of specific use cases may be expanded in the future, should
-   a consensus emerge between stakeholders, to include categories that
-   address additional use cases as they emerge.  In addition to these
-   categories defined in the vocabulary, it is also expected that some
-   systems implementing this vocabulary may extend this list with
-   additional categories for their particular needs.
 
 4.1.  Automated Processing Category
 
@@ -251,7 +244,16 @@ Table of Contents
    The use of assets for Generative AI Training is a proper subset of AI
    Training usage.
 
-4.4.  Search Category
+4.4.  AI Use Category
+
+   The act of using one or more assets as input to a trained AI/ML model
+   as part of the operation of that model (as opposed to the training of
+   the model).
+
+   The use of assets for AI Use is a proper subset of Automated
+   Processing usage.
+
+4.5.  Search Category
 
    Using one or more assets in a search application that directs users
    to the location from which the assets were retrieved.
@@ -263,15 +265,6 @@ Table of Contents
    involved in their implementation.
 
    The use of assets for Search is a proper subset of Automated
-   Processing usage.
-
-4.5.  AI Use Category
-
-   The act of using one or more assets as input to a trained AI/ML model
-   as part of the operation of that model (as opposed to the training of
-   the model).
-
-   The use of assets for AI Use is a proper subset of Automated
    Processing usage.
 
 5.  Usage
@@ -299,16 +292,9 @@ Table of Contents
    those arrangements likely apply, unless the terms of the arrangement
    explicitly say otherwise.
 
-   The vocabulary does not preclude the use of other specific
-   categories.  Any statement of preference based on this vocabulary
-   shall not be interpreted as restricting the use of the work(s)
-   strictly for the purpose of search and discovery as long as no
-   restriction is declared through search-specific means such as
-   [RFC9309].
-
 5.2.  Vocabulary Extensions
 
-   Systems referencing the vocabulary must not introduce additional
+   Systems referencing the vocabulary MUST NOT introduce additional
    categories that include existing categories defined in the vocabulary
    or otherwise include additional hierarchical relationships.
 
@@ -344,9 +330,9 @@ Table of Contents
           +------------------------+-------------+-------------+
           | Generative AI Training | train-genai | Section 4.3 |
           +------------------------+-------------+-------------+
-          | Search                 | search      | Section 4.4 |
+          | AI Use                 | ai-use      | Section 4.4 |
           +------------------------+-------------+-------------+
-          | AI Inference           | ai-use      | Section 4.5 |
+          | Search                 | search      | Section 4.5 |
           +------------------------+-------------+-------------+
 
                      Table 1: Mappings for Categories
@@ -394,6 +380,9 @@ Table of Contents
    any semantics for any parameters that might be included.  When
    processing a parsed Dictionary to obtain preferences, any unknown
    parameters MUST be ignored.
+
+   In either case, new extensions need to be defined in an RFC that
+   updates this document.
 
 6.5.  Processing Algorithm
 
@@ -574,18 +563,7 @@ Table of Contents
               2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
               May 2017, <https://www.rfc-editor.org/rfc/rfc8174>.
 
-   [RFC9309]  Koster, M., Illyes, G., Zeller, H., and L. Sassman,
-              "Robots Exclusion Protocol", RFC 9309,
-              DOI 10.17487/RFC9309, September 2022,
-              <https://www.rfc-editor.org/rfc/rfc9309>.
-
 11.2.  Informative References
-
-   [EUCD2019] European Union, "Directive (EU) 2019/790 of the European
-              Parliament and of the Council of 17 April 2019 on
-              copyright and related rights in the Digital Single
-              Market", 17 May 2019,
-              <https://eur-lex.europa.eu/eli/dir/2019/790/oj>.
 
    [UTF8]     Yergeau, F., "UTF-8, a transformation format of ISO
               10646", STD 63, RFC 3629, DOI 10.17487/RFC3629, November
