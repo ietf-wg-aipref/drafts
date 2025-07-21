@@ -1360,8 +1360,10 @@ as AI Training is a subset of the Automated Processing category.
 In comparison, an explicit preference regarding AI Training might disallow that usage,
 while permitting other usage within the Automated Processing category.<a href="#section-3-5" class="pilcrow">¶</a></p>
 <p id="section-3-6">After processing a statement of preferences
-the recipient can assume that each category of use has a preference
-in one of three states: "allowed", "disallowed", or "unknown".<a href="#section-3-6" class="pilcrow">¶</a></p>
+the recipient assigns each category of use
+one of three preference values: "allowed", "disallowed", or "unknown".<a href="#section-3-6" class="pilcrow">¶</a></p>
+<p id="section-3-7">In the absence of a statement of preference,
+all usage categories are assigned a preference value of "unknown".<a href="#section-3-7" class="pilcrow">¶</a></p>
 <div id="conformance">
 <section id="section-3.1">
         <h3 id="name-conformance">
@@ -1586,9 +1588,10 @@ The format describes how the abstract model could be turned into Unicode text or
 The dictionary keys correspond to usage categories
 and the dictionary values correspond to explicit preferences,
 which can be either <code>y</code> or <code>n</code>; see <a href="#y-or-n" class="auto internal xref">Section 6.2</a>.<a href="#section-6-2" class="pilcrow">¶</a></p>
-<p id="section-6-3">For example, the following is a preference to allow AI training (<a href="#train-ai" class="auto internal xref">Section 4.2</a>),
+<p id="section-6-3">For example, the following expresses a preference to allow AI training (<a href="#train-ai" class="auto internal xref">Section 4.2</a>),
 disallow generative AI training (<a href="#train-genai" class="auto internal xref">Section 4.3</a>), and
-and state no preference for other categories other than subsets of these categories:<a href="#section-6-3" class="pilcrow">¶</a></p>
+and expresses no preference for other categories
+other than subsets of these categories:<a href="#section-6-3" class="pilcrow">¶</a></p>
 <div class="alignLeft art-text artwork" id="section-6-4">
 <pre>
 train-ai=y, train-genai=n

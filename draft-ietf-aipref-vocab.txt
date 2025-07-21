@@ -188,9 +188,12 @@ Table of Contents
    regarding AI Training might disallow that usage, while permitting
    other usage within the Automated Processing category.
 
-   After processing a statement of preferences the recipient can assume
-   that each category of use has a preference in one of three states:
-   "allowed", "disallowed", or "unknown".
+   After processing a statement of preferences the recipient assigns
+   each category of use one of three preference values: "allowed",
+   "disallowed", or "unknown".
+
+   In the absence of a statement of preference, all usage categories are
+   assigned a preference value of "unknown".
 
 3.1.  Conformance
 
@@ -353,10 +356,10 @@ Table of Contents
    dictionary values correspond to explicit preferences, which can be
    either y or n; see Section 6.2.
 
-   For example, the following is a preference to allow AI training
-   (Section 4.2), disallow generative AI training (Section 4.3), and and
-   state no preference for other categories other than subsets of these
-   categories:
+   For example, the following expresses a preference to allow AI
+   training (Section 4.2), disallow generative AI training
+   (Section 4.3), and and expresses no preference for other categories
+   other than subsets of these categories:
 
    train-ai=y, train-genai=n
 
