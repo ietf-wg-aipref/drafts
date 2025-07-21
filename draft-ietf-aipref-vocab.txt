@@ -250,7 +250,7 @@ Table of Contents
    as part of the operation of that model (as opposed to the training of
    the model).
 
-   The use of assets for AI Training is a proper subset of Automated
+   The use of assets for AI Use is a proper subset of Automated
    Processing usage.
 
 4.5.  Search Category
