@@ -208,9 +208,18 @@ The Content-Usage field does not have any special effect on caching.
 
 # Robots Exclusion Protocol Content-Usage Rule {#robots}
 
+The core function of Robots Exclusion Protocol format {{ROBOTS}}
+(or the "robots.txt" file)
+is to describe the expectations of the server operator
+about which paths can be crawled.
+This document adds a new rule that associates usage preferences
+with different paths.
+This new rule applies to any paths that can be crawled;
+paths that cannot be crawled have no associated usage preferences.
+
 A Content-Usage rule is added to the set of potential rules
 that can be included in a Group
-for the Robots Exclusion Protocol format {{ROBOTS}}.
+for "robots.txt".
 
 The `rule` ABNF pattern from {{Section 2.2 of ROBOTS}}
 is extended as shown in {{f-abnf}}.
@@ -243,6 +252,11 @@ identified by product token as defined in {{Section 2.2.1 of ROBOTS}}.
 The Allow and Disallow rules determine what resources can be crawled,
 using the rule that has the longest matching path prefix,
 as defined in {{Section 2.2.2 of ROBOTS}}.
+
+This creates a two-stage arrangement
+that distinguishes acquisition and usage.
+Acquisition relies on Allow/Disallow rules;
+usage preference relies on Content-Usage rules.
 
 Any Content-Usage rules determine the usage preferences for resources
 using the same path prefix matching rules as defined for Allow and Disallow.
