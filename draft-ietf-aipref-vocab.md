@@ -92,11 +92,22 @@ including the applicability of exceptions and limitations to copyright.
 This document uses the following terms:
 
 {: newline="true" spacing="compact"}
+AI:
+: Artificial intelligence or machine learning,
+  which are used interchangeably in this document,
+  refer to computer systems or algorithms
+  that are trained to accomplish a task.
+
+AI Training:
+: Processing input data to identify statistical trends
+  in order to produce an AI system.
+
 Asset:
 : A digital file or stream of data, usually with associated metadata.
 
 Declaring party:
 : The entity that expresses a preference with regards to an Asset.
+
 
 # Statements of Preference {#model}
 
