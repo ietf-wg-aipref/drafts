@@ -6,7 +6,7 @@ AI Preferences                                                 G. Illyes
 Internet-Draft                                                    Google
 Updates: 9309 (if approved)                                   M. Thomson
 Intended status: Standards Track                                 Mozilla
-Expires: 21 January 2026                                    20 July 2025
+Expires: 22 January 2026                                    21 July 2025
 
 
              Indicating Preferences Regarding Content Usage
@@ -54,7 +54,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 21 January 2026.
+   This Internet-Draft will expire on 22 January 2026.
 
 Copyright Notice
 
@@ -250,7 +250,9 @@ Table of Contents
 
    If there are Content-Usage rules that have identical paths and
    conflicting usage preferences, these preferences apply separately
-   according to the process defined in Section 7.1 of [VOCAB].
+   according to the process defined in Section 7.1 of [VOCAB].  Note
+   that this differs from the Allow/Disallow rules, where a conflict
+   leads to the more permissive option, allowing crawling.
 
    A crawlers can cache a "robots.txt" file for up to 24 hours,
    following HTTP Cache-Control semantics defined in [HTTP-CACHE]; see
