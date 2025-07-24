@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-07-22T02:10:59.525133+00:00",
+  "timestamp": "2025-07-24T02:10:59.952277+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -1463,7 +1463,7 @@
       "labels": [],
       "body": "\"AI\" has fallen all all SDOs like a Tsunami with the risk of creating coordination issues. Some mechanisms exists such as the ITU-T [Joint Coordination Activity on AI and ML (JCA-AI/ML) ](https://www.itu.int/en/ITU-T/jca/ml/Pages/default.aspx). This group compiled a significant vocabulary that could be helpful for this group if there is desire to collaborate.",
       "createdAt": "2025-07-21T13:34:44Z",
-      "updatedAt": "2025-07-21T13:48:40Z",
+      "updatedAt": "2025-07-22T09:43:11Z",
       "closedAt": null,
       "comments": [
         {
@@ -1486,6 +1486,13 @@
           "body": "@taddhar, can you be a little more concrete in your suggestion here?  What specifically do you think we should be picking up?",
           "createdAt": "2025-07-21T13:48:40Z",
           "updatedAt": "2025-07-21T13:48:40Z"
+        },
+        {
+          "author": "taddhar",
+          "authorAssociation": "NONE",
+          "body": "Yes, JCA-AIML has a deliverable number 121 that has a glossary where a large number of terms including AI are defined with their full references. The ask is that you have a look at that file, understand if you like or not what you have, open the discussion if you need to make a diverged definition of AI (all definitions are about context) and make a conscious act, and reference in bibliography the document.\n\nAdditionally you could look at the glossary and see if there are other terms that are interested for you.\n\nMy point is simply to HELP so that you don't need to do this research and can select what you need. and if you need to redefine something then good but please in this case inform JCA-AIML that you redefine it for a good reason so it is a conscious act and not a random decision, acknowledging the work that is being done in other fora by a gazillion of other colleagues who are all committed on standardisation.\n\nhope it clarifies. \n\nWill anyway subscribe to the mailing list and check if/how I can share the glossary file to respect the IETF normal process.\n\nHope it helps",
+          "createdAt": "2025-07-22T09:43:11Z",
+          "updatedAt": "2025-07-22T09:43:11Z"
         }
       ]
     },
@@ -3562,7 +3569,7 @@
       "labels": [],
       "body": "Move named references to header in AI Preference Vocabulary:\r\n- Improves clarity by defining reference before first use\r\n- Removes duplicate definitions\r\n- Removes conflicting definitions\r\n  - Fixes #61",
       "createdAt": "2025-07-14T09:48:42Z",
-      "updatedAt": "2025-07-18T08:14:19Z",
+      "updatedAt": "2025-07-22T05:53:55Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "a0f9979749a89c548bbee1ef5ebc742556baf19f",
