@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-07-24T02:10:59.952277+00:00",
+  "timestamp": "2025-07-29T02:28:50.466840+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -1463,7 +1463,7 @@
       "labels": [],
       "body": "\"AI\" has fallen all all SDOs like a Tsunami with the risk of creating coordination issues. Some mechanisms exists such as the ITU-T [Joint Coordination Activity on AI and ML (JCA-AI/ML) ](https://www.itu.int/en/ITU-T/jca/ml/Pages/default.aspx). This group compiled a significant vocabulary that could be helpful for this group if there is desire to collaborate.",
       "createdAt": "2025-07-21T13:34:44Z",
-      "updatedAt": "2025-07-22T09:43:11Z",
+      "updatedAt": "2025-07-28T09:21:55Z",
       "closedAt": null,
       "comments": [
         {
@@ -1493,6 +1493,20 @@
           "body": "Yes, JCA-AIML has a deliverable number 121 that has a glossary where a large number of terms including AI are defined with their full references. The ask is that you have a look at that file, understand if you like or not what you have, open the discussion if you need to make a diverged definition of AI (all definitions are about context) and make a conscious act, and reference in bibliography the document.\n\nAdditionally you could look at the glossary and see if there are other terms that are interested for you.\n\nMy point is simply to HELP so that you don't need to do this research and can select what you need. and if you need to redefine something then good but please in this case inform JCA-AIML that you redefine it for a good reason so it is a conscious act and not a random decision, acknowledging the work that is being done in other fora by a gazillion of other colleagues who are all committed on standardisation.\n\nhope it clarifies. \n\nWill anyway subscribe to the mailing list and check if/how I can share the glossary file to respect the IETF normal process.\n\nHope it helps",
           "createdAt": "2025-07-22T09:43:11Z",
           "updatedAt": "2025-07-22T09:43:11Z"
+        },
+        {
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "@taddhar Does that document have a URL?\n\nI was unable to create an account to access the document list on the site (I was unable to debug the signup form; it refused to accept any country I gave it).",
+          "createdAt": "2025-07-28T06:11:11Z",
+          "updatedAt": "2025-07-28T06:11:11Z"
+        },
+        {
+          "author": "taddhar",
+          "authorAssociation": "NONE",
+          "body": "@martinthomson yes there is a URL but you need a so-called TIES account to access it. I am about to go for 3 weeks off with too much before Wednesday so I sent you the file directly by email. \n\nAt my return after 20th of August, I will look to help you access, but as well the JCA-AIML could probably send AIPREF a Liaison Statement with the document. ITU cannot work via email as we are under strict Member States rules but apart from the procedure, many things are possible.\n\nI hope this helps you, my goal is simply so that you do not need to reinvent the wheel on any terms you need to get (+ you have the official reference). Any comments welcome.\n\n",
+          "createdAt": "2025-07-28T09:21:55Z",
+          "updatedAt": "2025-07-28T09:21:55Z"
         }
       ]
     },
