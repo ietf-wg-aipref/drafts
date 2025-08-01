@@ -268,12 +268,12 @@ Search applications can be complex applications
 that serve multiple purposes.
 Only those parts of applications that direct users to the location of an asset
 are covered by preferences for this category of use.
-Preferences for the Search category apply to those parts of applications
-that provide search capabilities,
-regardless of what other preferences are expressed.
 This includes the use of titles or excerpts from assets
 that are used to help users select between multiple candidate options.
 
+Preferences for the Search category apply to those parts of applications
+that provide search capabilities,
+regardless of what other preferences are expressed.
 Though search applications often employ AI
 and so might otherwise be governed by AI Use preferences,
 preferences regarding AI Use are overridden by preferences for the Search category.
