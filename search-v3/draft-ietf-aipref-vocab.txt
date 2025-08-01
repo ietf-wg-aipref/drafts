@@ -319,7 +319,7 @@ Table of Contents
    overridden by preferences for the Search category.
 
    Parts of applications that do not direct users to the location of
-   asserts, such as summaries, are not covered by this category of use.
+   assets, such as summaries, are not covered by this category of use.
 
    The use of assets for Search is a proper subset of Automated
    Processing usage.
