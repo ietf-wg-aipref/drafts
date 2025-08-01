@@ -68,7 +68,10 @@ of restrictions or permissions for use of digital assets by such systems.
 
 # Introduction
 
-This document defines a vocabulary of preferences regarding how automated systems process digital assets -- in particular, the training and use of AI models. This vocabulary can be used to describe
+This document defines a vocabulary of preferences
+regarding how automated systems process digital assets --
+in particular, the training and use of AI models.
+This vocabulary can be used to describe
 the types of uses that a declaring party may wish to explicitly restrict or allow.
 
 The vocabulary is intended to be used
