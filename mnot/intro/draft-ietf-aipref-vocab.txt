@@ -118,7 +118,7 @@ Table of Contents
    Section 3 defines the data model for AI Preferences.  Section 4
    defines the terms of the vocabulary.  Section 5 explains how to use
    AI Preferences in a data processing application, and Section 6
-   describes a way to serialise preferences into a string.  Section 7
+   describes a way to serialize preferences into a string.  Section 7
    describes an algorithm for determining the value of a specific
    preference.
 
