@@ -68,34 +68,16 @@ about restrictions or permissions for use of digital assets by such systems.
 
 # Introduction
 
-This document defines a common vocabulary of terms for automated systems that process digital assets.
-The primary purpose of this vocabulary is to enable machine-readable expressions of preferences
-about how digital assets are used by automated processing systems
-in the context of training AI models and other forms of automated processing.
-
-The terms defined by the vocabulary can be used to describe,
-in a standardized way,
+This document defines a vocabulary of preferences regarding how automated systems process digital assets -- in particular, the training and use of AI models. This vocabulary can be used to describe
 the types of uses that a declaring party may wish to explicitly restrict or allow.
-Preferences are then expressed as a grant or denial of permission
-concerning each of the types of use defined in the vocabulary.
-This ensures that preferences can be communicated, processed, and stored in a consistent and interoperable manner.
 
-The vocabulary or the preferences that might be expressed
-do not proscribe how automated processing systems obtain or act on preferences.
-Separate documents will describe how preferences might be associated with assets.
-It is designed to ensure that preference information can be exchanged between different systems
-and consistently understood.
-
-
-The vocabulary is intended to be usable
-both where expressing preferences results in legal obligations
-and where there are no associated legal protections.
-That is, preferences can be expressed to invoke specific protections,
-or they can be made without any presumption of specific legal consequences.
-Potential legal obligations include rights reservations made by rightholders
-in jurisdictions with conditional exceptions on copyright protections.
-Expressing preferences is without prejudice to applicable laws,
+The vocabulary is intended to be used
+in jurisdictions where expressing preferences results in legal obligations,
+as well as where there are no associated legal obligations.
+In either case, expressing preferences is without prejudice to applicable laws,
 including the applicability of exceptions and limitations to copyright.
+
+{{ATTACH}} defines mechanisms to associate preferences with assets. Other means of association might be defined separately in the future.
 
 
 # Conventions and Definitions
