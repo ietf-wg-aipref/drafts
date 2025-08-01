@@ -80,7 +80,11 @@ as well as where there are no associated legal obligations.
 In either case, expressing preferences is without prejudice to applicable laws,
 including the applicability of exceptions and limitations to copyright.
 
-{{model}} defines the data model for AI Preferences. {{vocab}} defines the terms of the vocabulary. {{usage}} explains how to use AI Preferences in a data processing application, and {{format}} describes a way to serialise preferences into a string. {{consulting}} describes an algorithm for determining the value of a specific preference.
+{{model}} defines the data model for AI Preferences.
+{{vocab}} defines the terms of the vocabulary.
+{{usage}} explains how to use AI Preferences in a data processing application,
+and {{format}} describes a way to serialize preferences into a string.
+{{consulting}} describes an algorithm for determining the value of a specific preference.
 
 {{ATTACH}} defines mechanisms to associate preferences with assets. Other means of association might be defined separately in the future.
 
