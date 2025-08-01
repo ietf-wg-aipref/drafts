@@ -159,35 +159,22 @@ all usage categories are assigned a preference value of "unknown".
 
 ## Conformance
 
-This document --
-and those documents that define concrete uses of this vocabulary --
+This document and {{ATTACH}}
 describe how usage preferences are associated with assets.
-Conformance to the specification means following the normative language
-that defines the construction and interpretation of usage preferences.
-The process of obtaining preferences has very limited scope
-for variation between implementations.
+An implementation is conformant to these specifications if it correctly follows all normative requirements that apply to it.
 
-Variation in what usage preferences might be obtained are limited to:
-
-* the choice of which methods for expressing preferences --
-  such as those defined in {{ATTACH}} --
-  are implemented and used, and
-
-* the terms that are in the vocabulary,
-  as might be added by updates to this document; see {{extension}}.
-
-There is considerably more discretion involved in respecting preferences.
-An entity MAY choose to respect these preferences when processing assets.
-This is done according to both:
+Specification conformance does not encompass whether preferences are actually respected during
+data processing. A data processor MAY choose to respect preferences that is has discovered, according to:
 
 * an understanding of the nature of that processing
   and how it corresponds to the usage categories
   where preferences have been expressed, and
 
-* the legal context that applies; see {{legal}}.
+* the applicable legal context; see {{legal}}.
 
 Usage preferences can be overridden through express agreements
 between relevant parties.
+
 There are also many situations where other priorities could override
 any usage preferences.
 For example, people with accessibility needs
