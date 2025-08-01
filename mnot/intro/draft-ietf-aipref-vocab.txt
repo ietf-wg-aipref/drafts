@@ -116,6 +116,13 @@ Table of Contents
    including the applicability of exceptions and limitations to
    copyright.
 
+   Section 3 defines the data model for AI Preferences.  Section 4
+   defines the terms of the vocabulary.  Section 5 explains how to use
+   AI Preferences in a data processing application, and Section 6
+   describes a way to serialise preferences into a string.  Section 7
+   describes an algorithm for determining the value of a specific
+   preference.
+
    [ATTACH] defines mechanisms to associate preferences with assets.
    Other means of association might be defined separately in the future.
 
