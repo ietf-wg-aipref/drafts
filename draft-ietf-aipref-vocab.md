@@ -86,7 +86,8 @@ including the applicability of exceptions and limitations to copyright.
 and {{format}} describes a way to serialize preferences into a string.
 {{consulting}} describes an algorithm for determining the value of a specific preference.
 
-{{ATTACH}} defines mechanisms to associate preferences with assets. Other means of association might be defined separately in the future.
+{{ATTACH}} defines mechanisms to associate preferences with assets.
+Other means of association might be defined separately in the future.
 
 
 # Conventions and Definitions
