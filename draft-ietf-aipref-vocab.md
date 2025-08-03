@@ -264,7 +264,7 @@ Using one or more assets in a search application
 that directs users to the location
 from which the assets were retrieved.
 
-Search applications can be complex 
+Search applications can be complex
 and may serve multiple purposes.
 Only those parts of applications that direct users to the location of an asset
 are included in this category of use.
