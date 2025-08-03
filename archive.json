@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-07-29T02:28:50.466840+00:00",
+  "timestamp": "2025-08-03T02:29:12.124814+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -347,7 +347,7 @@
       "id": "I_kwDOOWk1-s6yKWAe",
       "title": "\"Good\" uses",
       "url": "https://github.com/ietf-wg-aipref/drafts/issues/10",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "mnot",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
@@ -356,9 +356,17 @@
       ],
       "body": "E.g., spam filtering, identifying offensive language\n\nSense in Brussels was that this would be covered by the legal regime, not vocabulary.",
       "createdAt": "2025-04-11T15:53:29Z",
-      "updatedAt": "2025-04-11T15:53:29Z",
-      "closedAt": null,
-      "comments": []
+      "updatedAt": "2025-08-01T03:18:02Z",
+      "closedAt": "2025-08-01T03:18:02Z",
+      "comments": [
+        {
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Discussed in London/Madrid; closing absent more input.",
+          "createdAt": "2025-08-01T03:18:02Z",
+          "updatedAt": "2025-08-01T03:18:02Z"
+        }
+      ]
     },
     {
       "number": 11,
@@ -1572,6 +1580,44 @@
       "body": "Currently the path part of `Content-Usage` is separate from the rest of the value, and thus requires MULTIPLE parsers to handle the value of content usage - one to split the string between path (if present), one to process the path (if present) according to an *undefined methodology* and then a structured fields parser for the prefs part.\n\nI would suggest that the entire value of `Content-Usage` be a proper structured field value enabling a single parser.  Doing so would mean a few extra bytes, such as `path=` or if we were trying to reduce byte count, then `p=`.\n",
       "createdAt": "2025-07-21T18:43:57Z",
       "updatedAt": "2025-07-21T18:43:57Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 106,
+      "id": "I_kwDOOWk1-s7DpKcH",
+      "title": "Scope of 'statement of preference'",
+      "url": "https://github.com/ietf-wg-aipref/drafts/issues/106",
+      "state": "OPEN",
+      "author": "mnot",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [
+        "editorial"
+      ],
+      "body": "Is \"statement of preference\" post-combination, or pre-combination?\n\nAlso, since we're using its as a term of art, we might want to include it in terminology.",
+      "createdAt": "2025-08-01T02:56:58Z",
+      "updatedAt": "2025-08-01T02:56:58Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 107,
+      "id": "I_kwDOOWk1-s7DpTpF",
+      "title": "\"Usage\" and \"Consulting a Preference Expression\"",
+      "url": "https://github.com/ietf-wg-aipref/drafts/issues/107",
+      "state": "OPEN",
+      "author": "mnot",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [
+        "martinthomson"
+      ],
+      "labels": [
+        "editorial"
+      ],
+      "body": "The distinction between these sections is unclear - I suspect 7 could be a subsection of 5?",
+      "createdAt": "2025-08-01T03:15:34Z",
+      "updatedAt": "2025-08-01T03:15:34Z",
       "closedAt": null,
       "comments": []
     }
@@ -4647,6 +4693,196 @@
           "createdAt": "2025-07-21T12:39:24Z",
           "updatedAt": "2025-07-21T12:39:24Z",
           "comments": []
+        }
+      ]
+    },
+    {
+      "number": 104,
+      "id": "PR_kwDOOWk1-s6hohY7",
+      "title": "simplify intro",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/104",
+      "state": "OPEN",
+      "author": "mnot",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [
+        "editorial"
+      ],
+      "body": "",
+      "createdAt": "2025-08-01T02:31:21Z",
+      "updatedAt": "2025-08-01T08:24:21Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "ff9fbb7b4e55178b094e996fb3ee544233ac7ab9",
+      "headRepository": "ietf-wg-aipref/drafts",
+      "headRefName": "mnot/intro",
+      "headRefOid": "9fb34cd9178471cc860b5a7166d9b280afa99a09",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWk1-s63b99X",
+          "commit": {
+            "abbreviatedOid": "3344383"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-08-01T03:45:03Z",
+          "updatedAt": "2025-08-01T03:46:28Z",
+          "comments": [
+            {
+              "originalPosition": 25,
+              "body": "```suggestion\r\nThis document defines a vocabulary of preferences\r\nregarding how automated systems process digital assets --\r\nin particular, the training and use of AI models.\r\nThis vocabulary can be used to describe\r\n```",
+              "createdAt": "2025-08-01T03:45:04Z",
+              "updatedAt": "2025-08-01T03:46:28Z"
+            },
+            {
+              "originalPosition": 53,
+              "body": "```suggestion\r\n{{model}} defines the data model for AI Preferences.\r\n{{vocab}} defines the terms of the vocabulary.\r\n{{usage}} explains how to use AI Preferences in a data processing application,\r\nand {{format}} describes a way to serialize preferences into a string.\r\n{{consulting}} describes an algorithm for determining the value of a specific preference.\r\n```\r\nJust wrapping, so that future changes are easier to manage.",
+              "createdAt": "2025-08-01T03:46:08Z",
+              "updatedAt": "2025-08-01T03:46:28Z"
+            },
+            {
+              "originalPosition": 55,
+              "body": "```suggestion\r\n{{ATTACH}} defines mechanisms to associate preferences with assets.\r\nOther means of association might be defined separately in the future.\r\n```",
+              "createdAt": "2025-08-01T03:46:20Z",
+              "updatedAt": "2025-08-01T03:46:28Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 105,
+      "id": "PR_kwDOOWk1-s6hoqn4",
+      "title": "Tweak conformance",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/105",
+      "state": "OPEN",
+      "author": "mnot",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [
+        "editorial"
+      ],
+      "body": "",
+      "createdAt": "2025-08-01T02:49:35Z",
+      "updatedAt": "2025-08-01T03:43:44Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "ff9fbb7b4e55178b094e996fb3ee544233ac7ab9",
+      "headRepository": "ietf-wg-aipref/drafts",
+      "headRefName": "mnot/conformance",
+      "headRefOid": "6b28cfed9e31c9eb871c94fe47b0eada08d1082b",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWk1-s63b9lg",
+          "commit": {
+            "abbreviatedOid": "6b28cfe"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-08-01T03:43:44Z",
+          "updatedAt": "2025-08-01T03:43:44Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 108,
+      "id": "PR_kwDOOWk1-s6hqYLb",
+      "title": "A more verbose search definition",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/108",
+      "state": "OPEN",
+      "author": "martinthomson",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "This keeps the short definition, but it expands it considerably to cover what seems to be the emerging perspective on the list.\r\n\r\nThis aims to do three things:\r\n\r\n1. Narrow the definition to cover those cases that drive traffic to the original location of assets.\r\n\r\n2. Ensure that this allows the use of AI in search applications, so that search preferences override AI use preferences.\r\n\r\n3. To ensure that AI overviews, which act as a substitute for visiting the site, are excluded.\r\n\r\nObviously, there will continue to be things on the line.  The draft has text addressing the question of ambiguity.  As has been noted, the law has far better tools for managing that than technical specifications... if there is a dispute, that is.",
+      "createdAt": "2025-08-01T07:02:21Z",
+      "updatedAt": "2025-08-03T00:22:52Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "ff9fbb7b4e55178b094e996fb3ee544233ac7ab9",
+      "headRepository": "ietf-wg-aipref/drafts",
+      "headRefName": "search-v3",
+      "headRefOid": "ff4d3d696c4de117756b838d6b20c9c136752db7",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWk1-s63dxE2",
+          "commit": {
+            "abbreviatedOid": "457dbf0"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-08-01T07:12:13Z",
+          "updatedAt": "2025-08-01T07:12:14Z",
+          "comments": [
+            {
+              "originalPosition": 24,
+              "body": "```suggestion\r\nThis includes the use of titles or excerpts from assets\r\nthat are used to help users select between multiple candidate options.\r\n\r\nPreferences for the Search category apply to those parts of applications\r\nthat provide search capabilities,\r\nregardless of what other preferences are expressed.\r\n```",
+              "createdAt": "2025-08-01T07:12:14Z",
+              "updatedAt": "2025-08-01T07:12:14Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s63rUSt",
+          "commit": {
+            "abbreviatedOid": "d39a810"
+          },
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-08-02T23:56:36Z",
+          "updatedAt": "2025-08-02T23:56:36Z",
+          "comments": [
+            {
+              "originalPosition": 16,
+              "body": "```suggestion\r\nSearch applications can be complex \r\nand may serve multiple purposes.\r\n```",
+              "createdAt": "2025-08-02T23:56:36Z",
+              "updatedAt": "2025-08-02T23:57:00Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s63rUWd",
+          "commit": {
+            "abbreviatedOid": "d39a810"
+          },
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-08-02T23:58:19Z",
+          "updatedAt": "2025-08-02T23:58:19Z",
+          "comments": [
+            {
+              "originalPosition": 18,
+              "body": "```suggestion\r\nOnly those parts of applications that direct users to the location of an asset\r\nare included in this category of use.\r\n```",
+              "createdAt": "2025-08-02T23:58:19Z",
+              "updatedAt": "2025-08-02T23:58:19Z"
+            }
+          ]
         }
       ]
     }
