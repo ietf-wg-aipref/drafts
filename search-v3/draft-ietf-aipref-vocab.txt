@@ -5,8 +5,8 @@
 AI Preferences                                                 P. Keller
 Internet-Draft                                               Open Future
 Intended status: Standards Track                         M. Thomson, Ed.
-Expires: 2 February 2026                                         Mozilla
-                                                           1 August 2025
+Expires: 4 February 2026                                         Mozilla
+                                                           3 August 2025
 
 
             A Vocabulary For Expressing AI Usage Preferences
@@ -52,7 +52,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 2 February 2026.
+   This Internet-Draft will expire on 4 February 2026.
 
 Copyright Notice
 
@@ -305,11 +305,11 @@ Table of Contents
    Using one or more assets in a search application that directs users
    to the location from which the assets were retrieved.
 
-   Search applications can be complex applications that serve multiple
-   purposes.  Only those parts of applications that direct users to the
-   location of an asset are covered by preferences for this category of
-   use.  This includes the use of titles or excerpts from assets that
-   are used to help users select between multiple candidate options.
+   Search applications can be complex and may serve multiple purposes.
+   Only those parts of applications that direct users to the location of
+   an asset are included in this category of use.  This includes the use
+   of titles or excerpts from assets that are used to help users select
+   between multiple candidate options.
 
    Preferences for the Search category apply to those parts of
    applications that provide search capabilities, regardless of what
