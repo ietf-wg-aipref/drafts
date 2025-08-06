@@ -244,21 +244,21 @@ Table of Contents
    override specific preferences:
 
    *  People with accessibility needs, or organizations working on their
-      behalf, might override a preference to disallow AI Use
-      (Section 4.4) in order to access automated captions or generate
-      accessible formats.
+      behalf, might ignore a preference to disallow AI Use (Section 4.4)
+      in order to access automated captions or generate accessible
+      formats.
 
-   *  A cultural heritage organization could override a preference to
+   *  A cultural heritage organization could ignore a preference to
       disallow Automated Processing (Section 4.1) or AI Use
       (Section 4.4) in order to provide more useful, reliable, or
       discoverable access to historical web collections.
 
-   *  An educational institution could override a preference to disallow
+   *  An educational institution could ignore a preference to disallow
       AI Training (Section 4.2) or AI Use (Section 4.4) in order to
       enable scholars to develop or use tools to facilitate scientific
       or other types of research.
 
-   *  A website that permits user uploads could override a preference to
+   *  A website that permits user uploads could ignore a preference to
       disallow Automated Processing (Section 4.1) or AI Use
       (Section 4.4) in order to develop or use tools that detect harmful
       content according to established terms of use.
