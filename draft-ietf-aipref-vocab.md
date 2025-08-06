@@ -209,21 +209,21 @@ where other priorities could override specific preferences:
 
 * People with accessibility needs,
   or organizations working on their behalf,
-  might override a preference to disallow AI Use ({{ai-use}})
+  might ignore a preference to disallow AI Use ({{ai-use}})
   in order to access automated captions
   or generate accessible formats.
 
-* A cultural heritage organization could override a preference
+* A cultural heritage organization could ignore a preference
   to disallow Automated Processing ({{all}}) or AI Use ({{ai-use}})
   in order to provide more useful, reliable, or discoverable access
   to historical web collections.
 
-* An educational institution could override a preference
+* An educational institution could ignore a preference
   to disallow AI Training ({{train-ai}}) or AI Use ({{ai-use}})
   in order to enable scholars to develop or use tools
   to facilitate scientific or other types of research.
 
-* A website that permits user uploads could override a preference
+* A website that permits user uploads could ignore a preference
   to disallow Automated Processing ({{all}}) or AI Use ({{ai-use}})
   in order to develop or use tools that detect harmful content
   according to established terms of use.
