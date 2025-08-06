@@ -164,8 +164,6 @@ and those documents that define concrete uses of this vocabulary --
 describe how usage preferences are associated with assets.
 Conformance to the specification means following the normative language
 that defines the construction and interpretation of usage preferences.
-The process of obtaining preferences has very limited scope
-for variation between implementations.
 
 Variation in what usage preferences might be obtained are limited to:
 
@@ -176,11 +174,17 @@ Variation in what usage preferences might be obtained are limited to:
 * the terms that are in the vocabulary,
   as might be added by updates to this document; see {{extension}}.
 
+The process of obtaining preferences has very limited scope
+for variation between implementations.
+
+
+## Respecting Preferences
+
 There is considerably more discretion involved in respecting preferences.
 An entity MAY choose to respect these preferences when processing assets.
 This is done according to both:
 
-* an understanding of the nature of that processing
+* an understanding of the nature of the processing being performed
   and how it corresponds to the usage categories
   where preferences have been expressed, and
 
@@ -188,14 +192,41 @@ This is done according to both:
 
 Usage preferences can be overridden through express agreements
 between relevant parties.
+
 There are also many situations where other priorities could override
 any usage preferences.
-For example, people with accessibility needs
-might override a preference to disallow AI Use ({{ai-use}})
-so that they might access automated captions or summaries.
-Another case might involve the use of assets for research.
-Such overrides might be explicitly permitted in law,
-or could be based on the judgment of individual system users.
+Priorities that could justify overriding preferences include --
+but are not limited to --
+free expression, safety, education, scholarship, research,
+preservation, interoperability, and accessibility.
+
+A choice to override a preference could be
+explicitly permitted in law
+or be based on the judgement of particular individuals or organizations.
+
+The following lists examples of cases
+where other priorities could override specific preferences:
+
+* People with accessibility needs,
+  or organizations working on their behalf,
+  might override a preference to disallow AI Use ({{ai-use}})
+  in order to access automated captions
+  or generate accessible formats.
+
+* A cultural heritage organization could override a preference
+  to disallow Automated Processing ({{all}}) or AI Use ({{ai-use}})
+  in order to provide more useful, reliable, or discoverable access
+  to historical web collections.
+
+* An educational institution could override a preference
+  to disallow AI Training ({{train-ai}}) or AI Use ({{ai-use}})
+  in order to enable scholars to develop or use tools
+  to facilitate scientific or other types of research.
+
+* A website that permits user uploads could override a preference
+  to disallow Automated Processing ({{all}}) or AI Use ({{ai-use}})
+  in order to develop or use tools that detect harmful content
+  according to established terms of use.
 
 
 # Vocabulary Definition {#vocab}
@@ -566,6 +597,7 @@ This document has no IANA actions.
 
 The following individuals made significant contributions to this document:
 
+* {{{Lila Bailey}}
 * {{{Cullen Miller}}}
 * {{{Laurent Le Meur}}}
 * {{{Leonard Rosenthol}}}
