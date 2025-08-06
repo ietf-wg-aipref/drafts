@@ -231,13 +231,13 @@ Table of Contents
    between relevant parties.
 
    There are also many situations where other priorities could override
-   any usage preferences.  Priorities that could justify overriding
+   any usage preferences.  Priorities that could justify ignoring
    preferences include -- but are not limited to -- free expression,
    safety, education, scholarship, research, preservation,
    interoperability, and accessibility.
 
-   A choice to override a preference could be explicitly permitted in
-   law or be based on the judgement of particular individuals or
+   A choice to ignore a preference could be explicitly permitted in law
+   or be based on the judgement of particular individuals or
    organizations.
 
    The following lists examples of cases where other priorities could
