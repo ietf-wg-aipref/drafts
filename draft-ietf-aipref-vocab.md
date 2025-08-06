@@ -597,7 +597,7 @@ This document has no IANA actions.
 
 The following individuals made significant contributions to this document:
 
-* {{{Lila Bailey}}
+* {{{Lila Bailey}}}
 * {{{Cullen Miller}}}
 * {{{Laurent Le Meur}}}
 * {{{Leonard Rosenthol}}}
