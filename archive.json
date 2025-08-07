@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-08-03T02:29:12.124814+00:00",
+  "timestamp": "2025-08-07T02:21:09.702037+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -1530,7 +1530,7 @@
       "labels": [],
       "body": "This is related to #98 but I think it warrants a separate discussion beyond refining the definition, since having a carve-out for one category may be problematic. It's possible this was discussed at the meetings and I'm missing some context, but it seems like carving out \"Search\" will have an inevitable effect of applications contorting themselves to be Search-oriented for the likely outcome of more permissive preferences.\n\nFor example, suppose a content owner does not want to be de-listed from all modern search the utilizes AI for the \"core search\" technology. They do not however want to consent to say, a chatbot-like application which is going to perform a \"deep research\" style feature that produces an extended report with a citation to the source. The existing definition carve out simply says:\n\n> Using one or more assets in a search application that directs users to the location from which the assets were retrieved.\n\nIt is pretty easy to suggest any linking to the original content \"directs the user to the location\". This can go beyond text too, for example, suppose a hypothetical product which produces a short form video or podcast based on a research topic. As part of the media output, it produces URLs linking to the source material. The application can claim this is \"directing the user to that location\".\n\nI'm not sure there's any viable way around this beyond getting more specific about the particular application experiences, or, alternatively, not having carve-outs at all. If the former, there likely needs to be more specific taxonomy for application use cases, that likely evolve over time.",
       "createdAt": "2025-07-21T13:47:39Z",
-      "updatedAt": "2025-07-21T14:05:52Z",
+      "updatedAt": "2025-08-06T04:08:39Z",
       "closedAt": null,
       "comments": [
         {
@@ -1546,6 +1546,13 @@
           "body": "@martinthomson do you agree that this leads to a natural incentive of \"compliance\" contortions into \"Search\"? If the definition is sufficiently easy to meet from an application experience point of view (providing URLs), all applications will do the bare minimum to meet the definition.",
           "createdAt": "2025-07-21T14:05:52Z",
           "updatedAt": "2025-07-21T14:05:52Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "@mjoras please raise issues on the list, not here.",
+          "createdAt": "2025-08-06T04:08:38Z",
+          "updatedAt": "2025-08-06T04:08:38Z"
         }
       ]
     },
@@ -4881,6 +4888,93 @@
               "body": "```suggestion\r\nOnly those parts of applications that direct users to the location of an asset\r\nare included in this category of use.\r\n```",
               "createdAt": "2025-08-02T23:58:19Z",
               "updatedAt": "2025-08-02T23:58:19Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 109,
+      "id": "PR_kwDOOWk1-s6iSgNC",
+      "title": "Expand on the preference overriding text",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/109",
+      "state": "OPEN",
+      "author": "martinthomson",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "This is a light reworking of a proposal from Lila Bailey on the list.\r\n\r\nThe value of this is that it is far more comprehensive than the previous text, which was directionally helpful, but not thorough enough to give the right impression.  Having more text is often something to avoid, but in this case it seems like it is adding a lot of value in terms of making the *preferences* thing far clearer.\r\n\r\nMy only concern here -- which is a very minor one -- is that this looks almost exclusively at the overriding of preferences to disallow.  I couldn't come up with a convincing example of a decision to ignore express permission.\r\n\r\nCloses #99.",
+      "createdAt": "2025-08-06T01:04:32Z",
+      "updatedAt": "2025-08-06T06:59:24Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "ff9fbb7b4e55178b094e996fb3ee544233ac7ab9",
+      "headRepository": "ietf-wg-aipref/drafts",
+      "headRefName": "more-exclusions",
+      "headRefOid": "fab274d68aefec8e941cfc43688ac3b8a3d0f7bc",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWk1-s64MyWA",
+          "commit": {
+            "abbreviatedOid": "5afb595"
+          },
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-08-06T04:16:36Z",
+          "updatedAt": "2025-08-06T04:16:36Z",
+          "comments": [
+            {
+              "originalPosition": 55,
+              "body": "I suspect 'ignore' would work better than 'override' here and elsewhere.",
+              "createdAt": "2025-08-06T04:16:36Z",
+              "updatedAt": "2025-08-06T04:16:36Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s64Ntsm",
+          "commit": {
+            "abbreviatedOid": "00b36ab"
+          },
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-08-06T06:38:04Z",
+          "updatedAt": "2025-08-06T06:38:04Z",
+          "comments": [
+            {
+              "originalPosition": 46,
+              "body": "```suggestion\r\nA choice to ignore a preference could be\r\n```",
+              "createdAt": "2025-08-06T06:38:04Z",
+              "updatedAt": "2025-08-06T06:38:04Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s64Nt2O",
+          "commit": {
+            "abbreviatedOid": "00b36ab"
+          },
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-08-06T06:38:19Z",
+          "updatedAt": "2025-08-06T06:38:19Z",
+          "comments": [
+            {
+              "originalPosition": 41,
+              "body": "```suggestion\r\nPriorities that could justify ignoring preferences include --\r\n```",
+              "createdAt": "2025-08-06T06:38:19Z",
+              "updatedAt": "2025-08-06T06:38:19Z"
             }
           ]
         }
