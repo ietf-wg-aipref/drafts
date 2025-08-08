@@ -5,8 +5,8 @@
 AI Preferences                                                 P. Keller
 Internet-Draft                                               Open Future
 Intended status: Standards Track                         M. Thomson, Ed.
-Expires: 22 January 2026                                         Mozilla
-                                                            21 July 2025
+Expires: 9 February 2026                                         Mozilla
+                                                           8 August 2025
 
 
             A Vocabulary For Expressing AI Usage Preferences
@@ -52,7 +52,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 22 January 2026.
+   This Internet-Draft will expire on 9 February 2026.
 
 Copyright Notice
 
@@ -197,39 +197,31 @@ Table of Contents
 
 3.1.  Conformance
 
-   This document -- and those documents that define concrete uses of
-   this vocabulary -- describe how usage preferences are associated with
-   assets.  Conformance to the specification means following the
-   normative language that defines the construction and interpretation
-   of usage preferences.  The process of obtaining preferences has very
-   limited scope for variation between implementations.
+   This document and [ATTACH] describe how usage preferences are
+   associated with assets.  An implementation is conformant to these
+   specifications if it correctly follows all normative requirements
+   that apply to it.
 
-   Variation in what usage preferences might be obtained are limited to:
-
-   *  the choice of which methods for expressing preferences -- such as
-      those defined in [ATTACH] -- are implemented and used, and
-
-   *  the terms that are in the vocabulary, as might be added by updates
-      to this document; see Section 6.4.
-
-   There is considerably more discretion involved in respecting
-   preferences.  An entity MAY choose to respect these preferences when
-   processing assets.  This is done according to both:
+   Specification conformance does not encompass whether preferences are
+   actually respected during data processing.  A data processor MAY
+   choose to respect preferences that is has discovered, according to:
 
    *  an understanding of the nature of that processing and how it
       corresponds to the usage categories where preferences have been
       expressed, and
 
-   *  the legal context that applies; see Section 8.
+   *  the applicable legal context; see Section 8.
 
    Usage preferences can be overridden through express agreements
-   between relevant parties.  There are also many situations where other
-   priorities could override any usage preferences.  For example, people
-   with accessibility needs might override a preference to disallow AI
-   Use (Section 4.4) so that they might access automated captions or
-   summaries.  Another case might involve the use of assets for
-   research.  Such overrides might be explicitly permitted in law, or
-   could be based on the judgment of individual system users.
+   between relevant parties.
+
+   There are also many situations where other priorities could override
+   any usage preferences.  For example, people with accessibility needs
+   might override a preference to disallow AI Use (Section 4.4) so that
+   they might access automated captions or summaries.  Another case
+   might involve the use of assets for research.  Such overrides might
+   be explicitly permitted in law, or could be based on the judgment of
+   individual system users.
 
 4.  Vocabulary Definition
 
@@ -614,7 +606,7 @@ Table of Contents
 
    [ATTACH]   Illyes, G. and M. Thomson, Ed., "A Vocabulary For
               Expressing AI Usage Preferences", Work in Progress,
-              Internet-Draft, draft-ietf-aipref-attach, July 2025,
+              Internet-Draft, draft-ietf-aipref-attach, August 2025,
               <https://datatracker.ietf.org/doc/html/draft-ietf-aipref-
               attach>.
 
