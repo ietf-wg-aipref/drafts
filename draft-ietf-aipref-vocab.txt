@@ -73,6 +73,7 @@ Table of Contents
    2.  Conventions and Definitions
    3.  Statements of Preference
      3.1.  Conformance
+     3.2.  Respecting Preferences
    4.  Vocabulary Definition
      4.1.  Automated Processing Category
      4.2.  AI Training Category
@@ -191,13 +192,18 @@ Table of Contents
    specifications if it correctly follows all normative requirements
    that apply to it.
 
+   The process of obtaining preferences has very limited scope for
+   variation between implementations.
+
+3.2.  Respecting Preferences
+
    Specification conformance does not encompass whether preferences are
    actually respected during data processing.  A data processor MAY
    choose to respect preferences that is has discovered, according to:
 
-   *  an understanding of the nature of that processing and how it
-      corresponds to the usage categories where preferences have been
-      expressed, and
+   *  an understanding of the nature of the processing being performed
+      and how it corresponds to the usage categories where preferences
+      have been expressed, and
 
    *  the applicable legal context; see Section 8.
 
@@ -205,12 +211,37 @@ Table of Contents
    between relevant parties.
 
    There are also many situations where other priorities could override
-   any usage preferences.  For example, people with accessibility needs
-   might override a preference to disallow AI Use (Section 4.4) so that
-   they might access automated captions or summaries.  Another case
-   might involve the use of assets for research.  Such overrides might
-   be explicitly permitted in law, or could be based on the judgment of
-   individual system users.
+   any usage preferences.  Priorities that could justify ignoring
+   preferences include -- but are not limited to -- free expression,
+   safety, education, scholarship, research, preservation,
+   interoperability, and accessibility.
+
+   A choice to ignore a preference could be explicitly permitted in law
+   or be based on the judgement of particular individuals or
+   organizations.
+
+   The following lists examples of cases where other priorities could
+   override specific preferences:
+
+   *  People with accessibility needs, or organizations working on their
+      behalf, might ignore a preference to disallow AI Use (Section 4.4)
+      in order to access automated captions or generate accessible
+      formats.
+
+   *  A cultural heritage organization could ignore a preference to
+      disallow Automated Processing (Section 4.1) or AI Use
+      (Section 4.4) in order to provide more useful, reliable, or
+      discoverable access to historical web collections.
+
+   *  An educational institution could ignore a preference to disallow
+      AI Training (Section 4.2) or AI Use (Section 4.4) in order to
+      enable scholars to develop or use tools to facilitate scientific
+      or other types of research.
+
+   *  A website that permits user uploads could ignore a preference to
+      disallow Automated Processing (Section 4.1) or AI Use
+      (Section 4.4) in order to develop or use tools that detect harmful
+      content according to established terms of use.
 
 4.  Vocabulary Definition
 
@@ -608,6 +639,7 @@ Acknowledgments
    The following individuals made significant contributions to this
    document:
 
+   *  Lila Bailey
    *  Cullen Miller
    *  Laurent Le Meur
    *  Leonard Rosenthol
