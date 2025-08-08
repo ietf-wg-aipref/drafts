@@ -78,8 +78,7 @@ Table of Contents
      4.1.  Automated Processing Category
      4.2.  AI Training Category
      4.3.  Generative AI Training Category
-     4.4.  AI Use Category
-     4.5.  Search Category
+     4.4.  Search Category
    5.  Usage
      5.1.  More Specific Instructions
      5.2.  Vocabulary Extensions
@@ -224,24 +223,23 @@ Table of Contents
    override specific preferences:
 
    *  People with accessibility needs, or organizations working on their
-      behalf, might ignore a preference to disallow AI Use (Section 4.4)
-      in order to access automated captions or generate accessible
-      formats.
+      behalf, might ignore a preference to disallow Automated Processing
+      (Section 4.1) in order to access automated captions or generate
+      accessible formats.
 
    *  A cultural heritage organization could ignore a preference to
-      disallow Automated Processing (Section 4.1) or AI Use
-      (Section 4.4) in order to provide more useful, reliable, or
-      discoverable access to historical web collections.
+      disallow Automated Processing (Section 4.1) in order to provide
+      more useful, reliable, or discoverable access to historical web
+      collections.
 
    *  An educational institution could ignore a preference to disallow
-      AI Training (Section 4.2) or AI Use (Section 4.4) in order to
-      enable scholars to develop or use tools to facilitate scientific
-      or other types of research.
+      AI Training (Section 4.2) in order to enable scholars to develop
+      or use tools to facilitate scientific or other types of research.
 
    *  A website that permits user uploads could ignore a preference to
-      disallow Automated Processing (Section 4.1) or AI Use
-      (Section 4.4) in order to develop or use tools that detect harmful
-      content according to established terms of use.
+      disallow Automated Processing (Section 4.1) in order to develop or
+      use tools that detect harmful content according to established
+      terms of use.
 
 4.  Vocabulary Definition
 
@@ -249,29 +247,27 @@ Table of Contents
 
    Figure 1 shows the relationship between these categories:
 
-    .-------------------------------------------------.
-   |                                                   |
-   |               Automated Processing                |
-   |                                                   |
-   |   .-------------------------------------------.   |
-   |  |                .------------------------.   |  |
-   |  |               |                          |  |  |
-   |  |               |                          |  |  |
-   |  |  AI Training  |  Generative AI Training  |  |  |
-   |  |               |                          |  |  |
-   |  |               |                          |  |  |
-   |  |                '------------------------'   |  |
-   |   '-------------------------------------------'   |
-   |                                                   |
-   |    .----------------.       .----------------.    |
-   |   |                  |     |                  |   |
-   |   |                  |     |                  |   |
-   |   |      AI Use      |     |      Search      |   |
-   |   |                  |     |                  |   |
-   |   |                  |     |                  |   |
-   |    '----------------'       '----------------'    |
-   |                                                   |
-    '-------------------------------------------------'
+    .---------------------------------------------.
+   |                                               |
+   |             Automated Processing              |
+   |                                               |
+   |                                               |
+   |    .-----------------.      .------------.    |
+   |   |                   |    |              |   |
+   |   |                   |    |              |   |
+   |   |    AI Training    |    |    Search    |   |
+   |   |                   |    |              |   |
+   |   |                   |    |              |   |
+   |   |  .-------------.  |     '------------'    |
+   |   | |               | |                       |
+   |   | |  Generative   | |                       |
+   |   | |  AI Training  | |                       |
+   |   | |               | |                       |
+   |   |  '-------------'  |                       |
+   |   |                   |                       |
+   |    '-----------------'                        |
+   |                                               |
+    '---------------------------------------------'
 
               Figure 1: Relationship Between Categories of Use
 
@@ -303,16 +299,7 @@ Table of Contents
    The use of assets for Generative AI Training is a proper subset of AI
    Training usage.
 
-4.4.  AI Use Category
-
-   The act of using one or more assets as input to a trained AI/ML model
-   as part of the operation of that model (as opposed to the training of
-   the model).
-
-   The use of assets for AI Use is a proper subset of Automated
-   Processing usage.
-
-4.5.  Search Category
+4.4.  Search Category
 
    Using one or more assets in a search application that directs users
    to the location from which the assets were retrieved.
@@ -389,9 +376,7 @@ Table of Contents
           +------------------------+-------------+-------------+
           | Generative AI Training | train-genai | Section 4.3 |
           +------------------------+-------------+-------------+
-          | AI Use                 | ai-use      | Section 4.4 |
-          +------------------------+-------------+-------------+
-          | Search                 | search      | Section 4.5 |
+          | Search                 | search      | Section 4.4 |
           +------------------------+-------------+-------------+
 
                      Table 1: Mappings for Categories
