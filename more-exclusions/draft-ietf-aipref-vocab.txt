@@ -5,8 +5,8 @@
 AI Preferences                                                 P. Keller
 Internet-Draft                                               Open Future
 Intended status: Standards Track                         M. Thomson, Ed.
-Expires: 7 February 2026                                         Mozilla
-                                                           6 August 2025
+Expires: 9 February 2026                                         Mozilla
+                                                           8 August 2025
 
 
             A Vocabulary For Expressing AI Usage Preferences
@@ -14,11 +14,10 @@ Expires: 7 February 2026                                         Mozilla
 
 Abstract
 
-   This document proposes a standardized vocabulary for expressing
-   preferences related to how digital assets are used by automated
-   processing systems.  This vocabulary allows for the creation of
-   structured declarations about restrictions or permissions for use of
-   digital assets by such systems.
+   This document defines a vocabulary for expressing preferences
+   regarding how digital assets are used by automated processing
+   systems.  This vocabulary allows for the declaration of restrictions
+   or permissions for use of digital assets by such systems.
 
 About This Document
 
@@ -52,7 +51,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 7 February 2026.
+   This Internet-Draft will expire on 9 February 2026.
 
 Copyright Notice
 
@@ -104,38 +103,28 @@ Table of Contents
 
 1.  Introduction
 
-   This document defines a common vocabulary of terms for automated
-   systems that process digital assets.  The primary purpose of this
-   vocabulary is to enable machine-readable expressions of preferences
-   about how digital assets are used by automated processing systems in
-   the context of training AI models and other forms of automated
-   processing.
+   This document defines a vocabulary of preferences regarding how
+   automated systems process digital assets -- in particular, the
+   training and use of AI models.  This vocabulary can be used to
+   describe the types of uses that a declaring party may wish to
+   explicitly restrict or allow.
 
-   The terms defined by the vocabulary can be used to describe, in a
-   standardized way, the types of uses that a declaring party may wish
-   to explicitly restrict or allow.  Preferences are then expressed as a
-   grant or denial of permission concerning each of the types of use
-   defined in the vocabulary.  This ensures that preferences can be
-   communicated, processed, and stored in a consistent and interoperable
-   manner.
-
-   The vocabulary or the preferences that might be expressed do not
-   proscribe how automated processing systems obtain or act on
-   preferences.  Separate documents will describe how preferences might
-   be associated with assets.  It is designed to ensure that preference
-   information can be exchanged between different systems and
-   consistently understood.
-
-   The vocabulary is intended to be usable both where expressing
-   preferences results in legal obligations and where there are no
-   associated legal protections.  That is, preferences can be expressed
-   to invoke specific protections, or they can be made without any
-   presumption of specific legal consequences.  Potential legal
-   obligations include rights reservations made by rightholders in
-   jurisdictions with conditional exceptions on copyright protections.
-   Expressing preferences is without prejudice to applicable laws,
+   The vocabulary is intended to be used in jurisdictions where
+   expressing preferences results in legal obligations, as well as where
+   there are no associated legal obligations.  In either case,
+   expressing preferences is without prejudice to applicable laws,
    including the applicability of exceptions and limitations to
    copyright.
+
+   Section 3 defines the data model for AI Preferences.  Section 4
+   defines the terms of the vocabulary.  Section 5 explains how to use
+   AI Preferences in a data processing application, and Section 6
+   describes a way to serialize preferences into a string.  Section 7
+   describes an algorithm for determining the value of a specific
+   preference.
+
+   [ATTACH] defines mechanisms to associate preferences with assets.
+   Other means of association might be defined separately in the future.
 
 2.  Conventions and Definitions
 
@@ -198,34 +187,25 @@ Table of Contents
 
 3.1.  Conformance
 
-   This document -- and those documents that define concrete uses of
-   this vocabulary -- describe how usage preferences are associated with
-   assets.  Conformance to the specification means following the
-   normative language that defines the construction and interpretation
-   of usage preferences.
-
-   Variation in what usage preferences might be obtained are limited to:
-
-   *  the choice of which methods for expressing preferences -- such as
-      those defined in [ATTACH] -- are implemented and used, and
-
-   *  the terms that are in the vocabulary, as might be added by updates
-      to this document; see Section 6.4.
+   This document and [ATTACH] describe how usage preferences are
+   associated with assets.  An implementation is conformant to these
+   specifications if it correctly follows all normative requirements
+   that apply to it.
 
    The process of obtaining preferences has very limited scope for
    variation between implementations.
 
 3.2.  Respecting Preferences
 
-   There is considerably more discretion involved in respecting
-   preferences.  An entity MAY choose to respect these preferences when
-   processing assets.  This is done according to both:
+   Specification conformance does not encompass whether preferences are
+   actually respected during data processing.  A data processor MAY
+   choose to respect preferences that is has discovered, according to:
 
    *  an understanding of the nature of the processing being performed
       and how it corresponds to the usage categories where preferences
       have been expressed, and
 
-   *  the legal context that applies; see Section 8.
+   *  the applicable legal context; see Section 8.
 
    Usage preferences can be overridden through express agreements
    between relevant parties.

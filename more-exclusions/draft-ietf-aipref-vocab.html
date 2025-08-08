@@ -8,10 +8,10 @@
 <meta content="Paul Keller" name="author">
 <meta content="Martin Thomson" name="author">
 <meta content="
-       This document proposes a standardized vocabulary for expressing preferences
-related to how digital assets are used by automated processing systems.
-This vocabulary allows for the creation of structured declarations
-about restrictions or permissions for use of digital assets by such systems. 
+       This document defines a vocabulary for expressing preferences
+regarding how digital assets are used by automated processing systems.
+This vocabulary allows for the declaration
+of restrictions or permissions for use of digital assets by such systems. 
     " name="description">
 <meta content="xml2rfc 3.30.0" name="generator">
 <meta content="AI Preferences" name="keyword">
@@ -1054,7 +1054,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 </tr></thead>
 <tfoot><tr>
 <td class="left">Keller &amp; Thomson</td>
-<td class="center">Expires 7 February 2026</td>
+<td class="center">Expires 9 February 2026</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1067,12 +1067,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <dd class="internet-draft">draft-ietf-aipref-vocab-latest</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2025-08-06" class="published">6 August 2025</time>
+<time datetime="2025-08-08" class="published">8 August 2025</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Standards Track</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2026-02-07">7 February 2026</time></dd>
+<dd class="expires"><time datetime="2026-02-09">9 February 2026</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1090,10 +1090,10 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <h1 id="title">A Vocabulary For Expressing AI Usage Preferences</h1>
 <section id="section-abstract">
       <h2 id="abstract"><a href="#abstract" class="selfRef">Abstract</a></h2>
-<p id="section-abstract-1">This document proposes a standardized vocabulary for expressing preferences
-related to how digital assets are used by automated processing systems.
-This vocabulary allows for the creation of structured declarations
-about restrictions or permissions for use of digital assets by such systems.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
+<p id="section-abstract-1">This document defines a vocabulary for expressing preferences
+regarding how digital assets are used by automated processing systems.
+This vocabulary allows for the declaration
+of restrictions or permissions for use of digital assets by such systems.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
 </section>
 <section class="note rfcEditorRemove" id="section-note.1">
       <h2 id="name-about-this-document">
@@ -1130,7 +1130,7 @@ about restrictions or permissions for use of digital assets by such systems.<a h
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 7 February 2026.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 9 February 2026.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1273,30 +1273,23 @@ about restrictions or permissions for use of digital assets by such systems.<a h
       <h2 id="name-introduction">
 <a href="#section-1" class="section-number selfRef">1. </a><a href="#name-introduction" class="section-name selfRef">Introduction</a>
       </h2>
-<p id="section-1-1">This document defines a common vocabulary of terms for automated systems that process digital assets.
-The primary purpose of this vocabulary is to enable machine-readable expressions of preferences
-about how digital assets are used by automated processing systems
-in the context of training AI models and other forms of automated processing.<a href="#section-1-1" class="pilcrow">¶</a></p>
-<p id="section-1-2">The terms defined by the vocabulary can be used to describe,
-in a standardized way,
-the types of uses that a declaring party may wish to explicitly restrict or allow.
-Preferences are then expressed as a grant or denial of permission
-concerning each of the types of use defined in the vocabulary.
-This ensures that preferences can be communicated, processed, and stored in a consistent and interoperable manner.<a href="#section-1-2" class="pilcrow">¶</a></p>
-<p id="section-1-3">The vocabulary or the preferences that might be expressed
-do not proscribe how automated processing systems obtain or act on preferences.
-Separate documents will describe how preferences might be associated with assets.
-It is designed to ensure that preference information can be exchanged between different systems
-and consistently understood.<a href="#section-1-3" class="pilcrow">¶</a></p>
-<p id="section-1-4">The vocabulary is intended to be usable
-both where expressing preferences results in legal obligations
-and where there are no associated legal protections.
-That is, preferences can be expressed to invoke specific protections,
-or they can be made without any presumption of specific legal consequences.
-Potential legal obligations include rights reservations made by rightholders
-in jurisdictions with conditional exceptions on copyright protections.
-Expressing preferences is without prejudice to applicable laws,
-including the applicability of exceptions and limitations to copyright.<a href="#section-1-4" class="pilcrow">¶</a></p>
+<p id="section-1-1">This document defines a vocabulary of preferences
+regarding how automated systems process digital assets --
+in particular, the training and use of AI models.
+This vocabulary can be used to describe
+the types of uses that a declaring party may wish to explicitly restrict or allow.<a href="#section-1-1" class="pilcrow">¶</a></p>
+<p id="section-1-2">The vocabulary is intended to be used
+in jurisdictions where expressing preferences results in legal obligations,
+as well as where there are no associated legal obligations.
+In either case, expressing preferences is without prejudice to applicable laws,
+including the applicability of exceptions and limitations to copyright.<a href="#section-1-2" class="pilcrow">¶</a></p>
+<p id="section-1-3"><a href="#model" class="auto internal xref">Section 3</a> defines the data model for AI Preferences.
+<a href="#vocab" class="auto internal xref">Section 4</a> defines the terms of the vocabulary.
+<a href="#usage" class="auto internal xref">Section 5</a> explains how to use AI Preferences in a data processing application,
+and <a href="#format" class="auto internal xref">Section 6</a> describes a way to serialize preferences into a string.
+<a href="#consulting" class="auto internal xref">Section 7</a> describes an algorithm for determining the value of a specific preference.<a href="#section-1-3" class="pilcrow">¶</a></p>
+<p id="section-1-4"><span>[<a href="#ATTACH" class="cite xref">ATTACH</a>]</span> defines mechanisms to associate preferences with assets.
+Other means of association might be defined separately in the future.<a href="#section-1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="conventions-and-definitions">
@@ -1372,25 +1365,12 @@ all usage categories are assigned a preference value of "unknown".<a href="#sect
         <h3 id="name-conformance">
 <a href="#section-3.1" class="section-number selfRef">3.1. </a><a href="#name-conformance" class="section-name selfRef">Conformance</a>
         </h3>
-<p id="section-3.1-1">This document --
-and those documents that define concrete uses of this vocabulary --
+<p id="section-3.1-1">This document and <span>[<a href="#ATTACH" class="cite xref">ATTACH</a>]</span>
 describe how usage preferences are associated with assets.
-Conformance to the specification means following the normative language
-that defines the construction and interpretation of usage preferences.<a href="#section-3.1-1" class="pilcrow">¶</a></p>
-<p id="section-3.1-2">Variation in what usage preferences might be obtained are limited to:<a href="#section-3.1-2" class="pilcrow">¶</a></p>
-<ul class="normal">
-<li class="normal" id="section-3.1-3.1">
-            <p id="section-3.1-3.1.1">the choice of which methods for expressing preferences --
-such as those defined in <span>[<a href="#ATTACH" class="cite xref">ATTACH</a>]</span> --
-are implemented and used, and<a href="#section-3.1-3.1.1" class="pilcrow">¶</a></p>
-</li>
-          <li class="normal" id="section-3.1-3.2">
-            <p id="section-3.1-3.2.1">the terms that are in the vocabulary,
-as might be added by updates to this document; see <a href="#extension" class="auto internal xref">Section 6.4</a>.<a href="#section-3.1-3.2.1" class="pilcrow">¶</a></p>
-</li>
-        </ul>
-<p id="section-3.1-4">The process of obtaining preferences has very limited scope
-for variation between implementations.<a href="#section-3.1-4" class="pilcrow">¶</a></p>
+An implementation is conformant to these specifications
+if it correctly follows all normative requirements that apply to it.<a href="#section-3.1-1" class="pilcrow">¶</a></p>
+<p id="section-3.1-2">The process of obtaining preferences has very limited scope
+for variation between implementations.<a href="#section-3.1-2" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="respecting-preferences">
@@ -1398,9 +1378,10 @@ for variation between implementations.<a href="#section-3.1-4" class="pilcrow">�
         <h3 id="name-respecting-preferences">
 <a href="#section-3.2" class="section-number selfRef">3.2. </a><a href="#name-respecting-preferences" class="section-name selfRef">Respecting Preferences</a>
         </h3>
-<p id="section-3.2-1">There is considerably more discretion involved in respecting preferences.
-An entity <span class="bcp14">MAY</span> choose to respect these preferences when processing assets.
-This is done according to both:<a href="#section-3.2-1" class="pilcrow">¶</a></p>
+<p id="section-3.2-1">Specification conformance does not encompass whether preferences are actually respected
+during data processing.
+A data processor <span class="bcp14">MAY</span> choose to respect preferences that is has discovered,
+according to:<a href="#section-3.2-1" class="pilcrow">¶</a></p>
 <ul class="normal">
 <li class="normal" id="section-3.2-2.1">
             <p id="section-3.2-2.1.1">an understanding of the nature of the processing being performed
@@ -1408,7 +1389,7 @@ and how it corresponds to the usage categories
 where preferences have been expressed, and<a href="#section-3.2-2.1.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-3.2-2.2">
-            <p id="section-3.2-2.2.1">the legal context that applies; see <a href="#legal" class="auto internal xref">Section 8</a>.<a href="#section-3.2-2.2.1" class="pilcrow">¶</a></p>
+            <p id="section-3.2-2.2.1">the applicable legal context; see <a href="#legal" class="auto internal xref">Section 8</a>.<a href="#section-3.2-2.2.1" class="pilcrow">¶</a></p>
 </li>
         </ul>
 <p id="section-3.2-3">Usage preferences can be overridden through express agreements
