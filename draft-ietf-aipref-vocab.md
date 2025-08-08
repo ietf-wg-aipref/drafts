@@ -192,22 +192,22 @@ where other priorities could override specific preferences:
 
 * People with accessibility needs,
   or organizations working on their behalf,
-  might ignore a preference to disallow AI Use ({{ai-use}})
+  might ignore a preference to disallow Automated Processing ({{all}})
   in order to access automated captions
   or generate accessible formats.
 
 * A cultural heritage organization could ignore a preference
-  to disallow Automated Processing ({{all}}) or AI Use ({{ai-use}})
+  to disallow Automated Processing ({{all}})
   in order to provide more useful, reliable, or discoverable access
   to historical web collections.
 
 * An educational institution could ignore a preference
-  to disallow AI Training ({{train-ai}}) or AI Use ({{ai-use}})
+  to disallow AI Training ({{train-ai}})
   in order to enable scholars to develop or use tools
   to facilitate scientific or other types of research.
 
 * A website that permits user uploads could ignore a preference
-  to disallow Automated Processing ({{all}}) or AI Use ({{ai-use}})
+  to disallow Automated Processing ({{all}})
   in order to develop or use tools that detect harmful content
   according to established terms of use.
 
@@ -219,29 +219,27 @@ This section defines the categories of use in the vocabulary.
 {{f-categories}} shows the relationship between these categories:
 
 ~~~ aasvg
- .-------------------------------------------------.
-|                                                   |
-|               Automated Processing                |
-|                                                   |
-|   .-------------------------------------------.   |
-|  |                .------------------------.   |  |
-|  |               |                          |  |  |
-|  |               |                          |  |  |
-|  |  AI Training  |  Generative AI Training  |  |  |
-|  |               |                          |  |  |
-|  |               |                          |  |  |
-|  |                '------------------------'   |  |
-|   '-------------------------------------------'   |
-|                                                   |
-|    .----------------.       .----------------.    |
-|   |                  |     |                  |   |
-|   |                  |     |                  |   |
-|   |      AI Use      |     |      Search      |   |
-|   |                  |     |                  |   |
-|   |                  |     |                  |   |
-|    '----------------'       '----------------'    |
-|                                                   |
- '-------------------------------------------------'
+ .---------------------------------------------.
+|                                               |
+|             Automated Processing              |
+|                                               |
+|                                               |
+|    .-----------------.      .------------.    |
+|   |                   |    |              |   |
+|   |                   |    |              |   |
+|   |    AI Training    |    |    Search    |   |
+|   |                   |    |              |   |
+|   |                   |    |              |   |
+|   |  .-------------.  |     '------------'    |
+|   | |               | |                       |
+|   | |  Generative   | |                       |
+|   | |  AI Training  | |                       |
+|   | |               | |                       |
+|   |  '-------------'  |                       |
+|   |                   |                       |
+|    '-----------------'                        |
+|                                               |
+ '---------------------------------------------'
 ~~~
 {: #f-categories title="Relationship Between Categories of Use"}
 
@@ -263,13 +261,6 @@ The use of assets for AI Training is a proper subset of Automated Processing usa
 The act of training general purpose AI models that have the capacity to generate text, images or other forms of synthetic content, or the act of training more specialized AI models that have the purpose of generating text, images or other forms of synthetic content.
 
 The use of assets for Generative AI Training is a proper subset of AI Training usage.
-
-
-## AI Use Category {#ai-use}
-
-The act of using one or more assets as input to a trained AI/ML model as part of the operation of that model (as opposed to the training of the model).
-
-The use of assets for AI Use is a proper subset of Automated Processing usage.
 
 
 ## Search Category {#search}
@@ -342,7 +333,6 @@ Each usage category in the vocabulary ({{vocab}}) is mapped to a short textual l
 | Automated Processing   | all         | {{all}}         |
 | AI Training            | train-ai    | {{train-ai}}    |
 | Generative AI Training | train-genai | {{train-genai}} |
-| AI Use                 | ai-use      | {{ai-use}}      |
 | Search                 | search      | {{search}}      |
 {: #t-category-labels title="Mappings for Categories"}
 
