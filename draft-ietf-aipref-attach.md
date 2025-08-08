@@ -137,7 +137,7 @@ a server might include the same directive in its "robots.txt" file:
 ~~~
 User-Agent: *
 Allow: /
-Content-Usage: train-ai=n
+Content-Usage: / train-ai=n
 ~~~
 
 
@@ -227,17 +227,14 @@ is extended as shown in {{f-abnf}}.
 rule =/ content-usage
 
 content-usage = *WS "content-usage" *WS ":" *WS
-                [ path-pattern 1*WS ] usage-pref EOL
+                path-pattern 1*WS usage-pref EOL
 usage-pref    = <usage preference vocabulary from [VOCAB]>
 ~~~
 {: #f-abnf title="Extended robots.txt ABNF"}
 
 Each group contains zero or more Content-Usage rules.
 Each Content-Usage rule consists of a path
-and a usage preference.
-The path might be absent or empty;
-if a path present,
-a SP or HTAB separates it from the usage preference.
+and a usage preference, separated by whitespace (SP or HTAB).
 
 Note that the usage preference expression encoding
 does not use an ABNF definition,
@@ -303,17 +300,8 @@ The remainder of the line -
 up to either the first CR (U+0D), LF (U+0A), or octothorpe ("#", U+23) -
 is the rule value.
 
-The first character of the rule value will be "/" (U+2F)
-if a non-empty path is specified.
-Paths always start with a "/" character,
-so a rule value that starts with any other character
-indicates that the path is absent.
-
-If a path is specified,
-the path ends immediately before the first SP (U+20) or HTAB ("U+09") character.
-The remainder of the rule value is the usage preference expression.
-If a path is absent,
-the entire rule value is the usage preference expression.
+The first part of the rule value is the path. It always starts with "/" (U+2F),
+and ends immediately before the first SP (U+20) or HTAB ("U+09") character.
 
 The usage preference is encoded using the exemplary format
 defined in {{Section 6 of VOCAB}}.
@@ -346,12 +334,12 @@ and subsequently retrieved the affected resource again.
 User-Agent: *
 Allow: /
 Disallow: /never/
-Content-Usage: train-ai=n
+Content-Usage: / train-ai=n
 Content-Usage: /ai-ok/ train-ai=y
 
 User-Agent: ExampleBot
 Allow: /
-Content-Usage: train-ai=y
+Content-Usage: / train-ai=y
 ~~~
 {: #f-ex-robots title="Example robots.txt file"}
 
