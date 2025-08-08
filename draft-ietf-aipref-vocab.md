@@ -265,13 +265,27 @@ The use of assets for Generative AI Training is a proper subset of AI Training u
 
 ## Search Category {#search}
 
-Using one or more assets in a search application that directs users to the location from which the assets were retrieved.
+Using one or more assets in a search application
+that directs users to the location
+from which the assets were retrieved.
 
-The purpose of defining a distinct Search
-category is to allow preferences to be expressed about search applications,
-independent of other categories of use.
-A distinct Search category allows for preferences specific to search applications,
-even if the use of AI is involved in their implementation.
+Search applications can be complex
+and may serve multiple purposes.
+Only those parts of applications that direct users to the location of an asset
+are included in this category of use.
+This includes the use of titles or excerpts from assets
+that are used to help users select between multiple candidate options.
+
+Preferences for the Search category apply to those parts of applications
+that provide search capabilities,
+regardless of what other preferences are expressed.
+Though search applications often employ AI
+and so might otherwise be governed by AI Use preferences,
+preferences regarding AI Use are overridden by preferences for the Search category.
+
+Parts of applications that do not direct users to the location of assets,
+such as summaries,
+are not covered by this category of use.
 
 The use of assets for Search is a proper subset of Automated Processing usage.
 
