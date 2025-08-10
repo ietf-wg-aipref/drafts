@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-08-07T02:21:09.702037+00:00",
+  "timestamp": "2025-08-10T02:24:34.447504+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -1438,7 +1438,7 @@
       "id": "I_kwDOOWk1-s7BoeWs",
       "title": "Add a more complete list of preference override reasons",
       "url": "https://github.com/ietf-wg-aipref/drafts/issues/99",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "martinthomson",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
@@ -1447,8 +1447,8 @@
       ],
       "body": "Let's collect a list of reasons here and provide them, even if that is not exhaustive.",
       "createdAt": "2025-07-21T13:10:16Z",
-      "updatedAt": "2025-07-21T15:13:29Z",
-      "closedAt": null,
+      "updatedAt": "2025-08-08T04:36:55Z",
+      "closedAt": "2025-08-08T04:36:55Z",
       "comments": [
         {
           "author": "coopdanger",
@@ -4708,7 +4708,7 @@
       "id": "PR_kwDOOWk1-s6hohY7",
       "title": "simplify intro",
       "url": "https://github.com/ietf-wg-aipref/drafts/pull/104",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "mnot",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
@@ -4717,17 +4717,19 @@
       ],
       "body": "",
       "createdAt": "2025-08-01T02:31:21Z",
-      "updatedAt": "2025-08-01T08:24:21Z",
+      "updatedAt": "2025-08-08T00:59:14Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "ff9fbb7b4e55178b094e996fb3ee544233ac7ab9",
       "headRepository": "ietf-wg-aipref/drafts",
       "headRefName": "mnot/intro",
       "headRefOid": "9fb34cd9178471cc860b5a7166d9b280afa99a09",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2025-08-08T00:59:12Z",
+      "mergedAt": "2025-08-08T00:59:12Z",
+      "mergedBy": "martinthomson",
+      "mergeCommit": {
+        "oid": "1c0f76404be83a6b69daa241d8c923a39a5a5b04"
+      },
       "comments": [],
       "reviews": [
         {
@@ -4769,7 +4771,7 @@
       "id": "PR_kwDOOWk1-s6hoqn4",
       "title": "Tweak conformance",
       "url": "https://github.com/ietf-wg-aipref/drafts/pull/105",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "mnot",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
@@ -4778,17 +4780,19 @@
       ],
       "body": "",
       "createdAt": "2025-08-01T02:49:35Z",
-      "updatedAt": "2025-08-01T03:43:44Z",
+      "updatedAt": "2025-08-08T00:58:43Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "ff9fbb7b4e55178b094e996fb3ee544233ac7ab9",
       "headRepository": "ietf-wg-aipref/drafts",
       "headRefName": "mnot/conformance",
       "headRefOid": "6b28cfed9e31c9eb871c94fe47b0eada08d1082b",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2025-08-08T00:58:42Z",
+      "mergedAt": "2025-08-08T00:58:42Z",
+      "mergedBy": "martinthomson",
+      "mergeCommit": {
+        "oid": "841426f79e4580250ffc5d2b7fc0bd06ade6276b"
+      },
       "comments": [],
       "reviews": [
         {
@@ -4898,25 +4902,35 @@
       "id": "PR_kwDOOWk1-s6iSgNC",
       "title": "Expand on the preference overriding text",
       "url": "https://github.com/ietf-wg-aipref/drafts/pull/109",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "martinthomson",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "This is a light reworking of a proposal from Lila Bailey on the list.\r\n\r\nThe value of this is that it is far more comprehensive than the previous text, which was directionally helpful, but not thorough enough to give the right impression.  Having more text is often something to avoid, but in this case it seems like it is adding a lot of value in terms of making the *preferences* thing far clearer.\r\n\r\nMy only concern here -- which is a very minor one -- is that this looks almost exclusively at the overriding of preferences to disallow.  I couldn't come up with a convincing example of a decision to ignore express permission.\r\n\r\nCloses #99.",
       "createdAt": "2025-08-06T01:04:32Z",
-      "updatedAt": "2025-08-06T06:59:24Z",
+      "updatedAt": "2025-08-08T04:36:55Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
-      "baseRefOid": "ff9fbb7b4e55178b094e996fb3ee544233ac7ab9",
+      "baseRefOid": "1c0f76404be83a6b69daa241d8c923a39a5a5b04",
       "headRepository": "ietf-wg-aipref/drafts",
       "headRefName": "more-exclusions",
-      "headRefOid": "fab274d68aefec8e941cfc43688ac3b8a3d0f7bc",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
-      "comments": [],
+      "headRefOid": "8ac6f672b813aac7aa6b29147323dded0c1fad5e",
+      "closedAt": "2025-08-08T04:36:54Z",
+      "mergedAt": "2025-08-08T04:36:54Z",
+      "mergedBy": "martinthomson",
+      "mergeCommit": {
+        "oid": "72868c68b2ba9cbd1354f26818f2fbd21033045b"
+      },
+      "comments": [
+        {
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "The arrow of time is ever forward; feedback suggests that this is an improvement, even if this isn't necessarily a final state for this text.",
+          "createdAt": "2025-08-08T04:36:51Z",
+          "updatedAt": "2025-08-08T04:36:51Z"
+        }
+      ],
       "reviews": [
         {
           "id": "PRR_kwDOOWk1-s64MyWA",
@@ -4979,6 +4993,34 @@
           ]
         }
       ]
+    },
+    {
+      "number": 110,
+      "id": "PR_kwDOOWk1-s6ishuQ",
+      "title": "Remove ai-use/Inference category",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/110",
+      "state": "MERGED",
+      "author": "martinthomson",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Following clear lack of consensus over its inclusion: see https://mailarchive.ietf.org/arch/msg/ai-control/J9EUiDQS_bpdetMsZwxN8otqXkw",
+      "createdAt": "2025-08-08T04:48:39Z",
+      "updatedAt": "2025-08-08T04:51:25Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "72868c68b2ba9cbd1354f26818f2fbd21033045b",
+      "headRepository": "ietf-wg-aipref/drafts",
+      "headRefName": "remove-ai-use",
+      "headRefOid": "6a6d38a4536c6d20cf0fdc6d24c49ff4d3bec2b2",
+      "closedAt": "2025-08-08T04:51:24Z",
+      "mergedAt": "2025-08-08T04:51:24Z",
+      "mergedBy": "martinthomson",
+      "mergeCommit": {
+        "oid": "6a6d38a4536c6d20cf0fdc6d24c49ff4d3bec2b2"
+      },
+      "comments": [],
+      "reviews": []
     }
   ]
 }
