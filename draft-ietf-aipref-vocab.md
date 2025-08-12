@@ -97,21 +97,30 @@ Other means of association might be defined separately in the future.
 This document uses the following terms:
 
 {: newline="true" spacing="compact"}
-AI:
-: Artificial intelligence or machine learning,
-  which are used interchangeably in this document,
-  refer to computer systems or algorithms
-  that are trained to accomplish a task.
+Artificial Intelligence (AI):
+: Artificial Intelligence refers to an engineered system
+  that can, for a given set of human-defined objectives,
+  learn from data and generate outputs
+  such as content, predictions, recommendations, or decisions.
 
 AI Training:
-: Processing input data to identify statistical trends
-  in order to produce an AI system.
+: Applying machine learning to data
+  to produce or improve a model for an artificial intelligence system.
 
 Asset:
 : A digital file or stream of data, usually with associated metadata.
 
 Declaring party:
 : The entity that expresses a preference with regards to an Asset.
+
+Machine Learning (ML):
+: Machine Learning refers to process of processing data
+  to produce or improve a model that encodes the relationship
+  between the data and human-defined objectives.
+  Objectives can take many forms, including
+  labeled data (supervised learning),
+  the data itself (unsupervised learning), and
+  external feedback (reinforcement learning).
 
 
 # Statements of Preference {#model}
