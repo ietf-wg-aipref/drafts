@@ -113,6 +113,10 @@ Asset:
 Declaring party:
 : The entity that expresses a preference with regards to an Asset.
 
+Search Application:
+: A search application is a system designed to help users
+  locate items on the internet or in a specific data store.
+
 
 # Statements of Preference {#model}
 
