@@ -114,7 +114,7 @@ Declaring party:
 : The entity that expresses a preference with regards to an Asset.
 
 Machine Learning (ML):
-: Machine Learning refers to process of processing data
+: Machine Learning refers to processing data
   to produce or improve a model that encodes the relationship
   between the data and human-defined objectives.
 
