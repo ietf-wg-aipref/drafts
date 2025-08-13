@@ -117,10 +117,6 @@ Machine Learning (ML):
 : Machine Learning refers to process of processing data
   to produce or improve a model that encodes the relationship
   between the data and human-defined objectives.
-  Objectives can take many forms, including
-  labeled data (supervised learning),
-  the data itself (unsupervised learning), and
-  external feedback (reinforcement learning).
 
 
 # Statements of Preference {#model}
