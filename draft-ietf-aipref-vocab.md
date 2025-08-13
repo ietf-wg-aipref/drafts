@@ -119,7 +119,7 @@ Machine Learning (ML):
   between the data and human-defined objectives.
 
 Search Application:
-: A search application is a system designed to help users
+: A search application is a system that enables users
   locate items on the internet or in a specific data store.
 
 
