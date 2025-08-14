@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-08-10T02:24:34.447504+00:00",
+  "timestamp": "2025-08-14T02:04:54.738798+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -61,7 +61,7 @@
       "id": "I_kwDOOWk1-s6x9y2N",
       "title": "Inference-time preferences",
       "url": "https://github.com/ietf-wg-aipref/drafts/issues/2",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "mnot",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
@@ -70,8 +70,8 @@
       ],
       "body": "Discussed in the Brussels meeting -- there was broad support for also defining at least one vocabulary term for inference-time use of content by models. More than one term may be necessary, but the sense of the room was that we should keep this as simple as possible at the first instance.",
       "createdAt": "2025-04-10T13:47:22Z",
-      "updatedAt": "2025-07-01T17:08:43Z",
-      "closedAt": null,
+      "updatedAt": "2025-08-13T06:39:58Z",
+      "closedAt": "2025-08-13T06:39:58Z",
       "comments": [
         {
           "author": "BradSilver99",
@@ -1403,16 +1403,24 @@
       ],
       "body": "\"all\" is probably a bit *too* expansive.  Let's find a better one.",
       "createdAt": "2025-07-21T12:34:39Z",
-      "updatedAt": "2025-07-21T12:34:39Z",
+      "updatedAt": "2025-08-13T06:46:41Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "cap - Computational Analysis and Processing ?",
+          "createdAt": "2025-08-13T06:46:41Z",
+          "updatedAt": "2025-08-13T06:46:41Z"
+        }
+      ]
     },
     {
       "number": 98,
       "id": "I_kwDOOWk1-s7BodFZ",
       "title": "Define search",
       "url": "https://github.com/ietf-wg-aipref/drafts/issues/98",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "martinthomson",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
@@ -1421,8 +1429,8 @@
       ],
       "body": "We could use some more definitions for things like search.",
       "createdAt": "2025-07-21T13:08:33Z",
-      "updatedAt": "2025-07-21T13:26:03Z",
-      "closedAt": null,
+      "updatedAt": "2025-08-13T06:33:47Z",
+      "closedAt": "2025-08-13T06:33:47Z",
       "comments": [
         {
           "author": "coopdanger",
@@ -1464,15 +1472,15 @@
       "id": "I_kwDOOWk1-s7Boz4Y",
       "title": "Consider AI coordination work in other SDOs as a source of input for vocabulary",
       "url": "https://github.com/ietf-wg-aipref/drafts/issues/100",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "taddhar",
       "authorAssociation": "NONE",
       "assignees": [],
       "labels": [],
       "body": "\"AI\" has fallen all all SDOs like a Tsunami with the risk of creating coordination issues. Some mechanisms exists such as the ITU-T [Joint Coordination Activity on AI and ML (JCA-AI/ML) ](https://www.itu.int/en/ITU-T/jca/ml/Pages/default.aspx). This group compiled a significant vocabulary that could be helpful for this group if there is desire to collaborate.",
       "createdAt": "2025-07-21T13:34:44Z",
-      "updatedAt": "2025-07-28T09:21:55Z",
-      "closedAt": null,
+      "updatedAt": "2025-08-13T06:34:11Z",
+      "closedAt": "2025-08-13T06:34:11Z",
       "comments": [
         {
           "author": "lrosenthol",
@@ -1523,15 +1531,15 @@
       "id": "I_kwDOOWk1-s7Bo-jy",
       "title": "The Search carve-out -> all applications defining themselves as \"Search\"",
       "url": "https://github.com/ietf-wg-aipref/drafts/issues/101",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "mjoras",
       "authorAssociation": "NONE",
       "assignees": [],
       "labels": [],
       "body": "This is related to #98 but I think it warrants a separate discussion beyond refining the definition, since having a carve-out for one category may be problematic. It's possible this was discussed at the meetings and I'm missing some context, but it seems like carving out \"Search\" will have an inevitable effect of applications contorting themselves to be Search-oriented for the likely outcome of more permissive preferences.\n\nFor example, suppose a content owner does not want to be de-listed from all modern search the utilizes AI for the \"core search\" technology. They do not however want to consent to say, a chatbot-like application which is going to perform a \"deep research\" style feature that produces an extended report with a citation to the source. The existing definition carve out simply says:\n\n> Using one or more assets in a search application that directs users to the location from which the assets were retrieved.\n\nIt is pretty easy to suggest any linking to the original content \"directs the user to the location\". This can go beyond text too, for example, suppose a hypothetical product which produces a short form video or podcast based on a research topic. As part of the media output, it produces URLs linking to the source material. The application can claim this is \"directing the user to that location\".\n\nI'm not sure there's any viable way around this beyond getting more specific about the particular application experiences, or, alternatively, not having carve-outs at all. If the former, there likely needs to be more specific taxonomy for application use cases, that likely evolve over time.",
       "createdAt": "2025-07-21T13:47:39Z",
-      "updatedAt": "2025-08-06T04:08:39Z",
-      "closedAt": null,
+      "updatedAt": "2025-08-13T06:42:56Z",
+      "closedAt": "2025-08-13T06:42:56Z",
       "comments": [
         {
           "author": "martinthomson",
@@ -1561,7 +1569,7 @@
       "id": "I_kwDOOWk1-s7BpBIz",
       "title": "Are AI overviews \"search\"?",
       "url": "https://github.com/ietf-wg-aipref/drafts/issues/102",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "martinthomson",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
@@ -1570,9 +1578,17 @@
       ],
       "body": "This turned out to be unclear.  We could decide to leave it that way.",
       "createdAt": "2025-07-21T13:50:21Z",
-      "updatedAt": "2025-07-21T13:50:21Z",
-      "closedAt": null,
-      "comments": []
+      "updatedAt": "2025-08-13T06:40:28Z",
+      "closedAt": "2025-08-13T06:40:28Z",
+      "comments": [
+        {
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "This was resolved in #108.",
+          "createdAt": "2025-08-13T06:40:28Z",
+          "updatedAt": "2025-08-13T06:40:28Z"
+        }
+      ]
     },
     {
       "number": 103,
@@ -1583,10 +1599,12 @@
       "author": "lrosenthol",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
-      "labels": [],
+      "labels": [
+        "location attachment"
+      ],
       "body": "Currently the path part of `Content-Usage` is separate from the rest of the value, and thus requires MULTIPLE parsers to handle the value of content usage - one to split the string between path (if present), one to process the path (if present) according to an *undefined methodology* and then a structured fields parser for the prefs part.\n\nI would suggest that the entire value of `Content-Usage` be a proper structured field value enabling a single parser.  Doing so would mean a few extra bytes, such as `path=` or if we were trying to reduce byte count, then `p=`.\n",
       "createdAt": "2025-07-21T18:43:57Z",
-      "updatedAt": "2025-07-21T18:43:57Z",
+      "updatedAt": "2025-08-13T06:43:24Z",
       "closedAt": null,
       "comments": []
     },
@@ -1604,9 +1622,17 @@
       ],
       "body": "Is \"statement of preference\" post-combination, or pre-combination?\n\nAlso, since we're using its as a term of art, we might want to include it in terminology.",
       "createdAt": "2025-08-01T02:56:58Z",
-      "updatedAt": "2025-08-01T02:56:58Z",
+      "updatedAt": "2025-08-13T06:48:17Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "@paul2keller and I discussed and we agree that this is about each discrete statement made (in robots.txt).  I would say that post-combination it is a \"combined set of statements of preference\" as necessary.",
+          "createdAt": "2025-08-13T06:48:17Z",
+          "updatedAt": "2025-08-13T06:48:17Z"
+        }
+      ]
     },
     {
       "number": 107,
@@ -4815,24 +4841,26 @@
       "id": "PR_kwDOOWk1-s6hqYLb",
       "title": "A more verbose search definition",
       "url": "https://github.com/ietf-wg-aipref/drafts/pull/108",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "martinthomson",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "This keeps the short definition, but it expands it considerably to cover what seems to be the emerging perspective on the list.\r\n\r\nThis aims to do three things:\r\n\r\n1. Narrow the definition to cover those cases that drive traffic to the original location of assets.\r\n\r\n2. Ensure that this allows the use of AI in search applications, so that search preferences override AI use preferences.\r\n\r\n3. To ensure that AI overviews, which act as a substitute for visiting the site, are excluded.\r\n\r\nObviously, there will continue to be things on the line.  The draft has text addressing the question of ambiguity.  As has been noted, the law has far better tools for managing that than technical specifications... if there is a dispute, that is.",
       "createdAt": "2025-08-01T07:02:21Z",
-      "updatedAt": "2025-08-03T00:22:52Z",
+      "updatedAt": "2025-08-13T06:33:48Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "ff9fbb7b4e55178b094e996fb3ee544233ac7ab9",
       "headRepository": "ietf-wg-aipref/drafts",
       "headRefName": "search-v3",
       "headRefOid": "ff4d3d696c4de117756b838d6b20c9c136752db7",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2025-08-13T06:33:46Z",
+      "mergedAt": "2025-08-13T06:33:46Z",
+      "mergedBy": "martinthomson",
+      "mergeCommit": {
+        "oid": "04842f6006c08e021f0e5c02c4fab8db6a0c39fc"
+      },
       "comments": [],
       "reviews": [
         {
@@ -5019,6 +5047,210 @@
       "mergeCommit": {
         "oid": "6a6d38a4536c6d20cf0fdc6d24c49ff4d3bec2b2"
       },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 111,
+      "id": "PR_kwDOOWk1-s6jLq_R",
+      "title": "Define AI and AI Training",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/111",
+      "state": "MERGED",
+      "author": "martinthomson",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "This is a less hurried version of what I threw together during the sessions on Monday morning of the IETF meeting.\r\n\r\nThis draws on many definitions, primarily the one from Luciano Floridi in his commentary about the discussions between the EU and US: https://doi.org/10.1007/s13347-023-00690-z\r\n\r\nThat document includes a number of citations to legal definitions and other definitional work, including by the OECD, that were influential in coming to a definition.  I found a number of other sources, including the ITU definition mentioned in #100 (thanks to @taddhar for sharing that).\r\n\r\nThe definitions of AI Training and Machine Learning are a synthesis of much longer definitions by c3.ai and IBM, primarily. https://c3.ai/glossary/data-science/model-training/ https://www.ibm.com/think/topics/machine-learning\r\n\r\nCloses #100.",
+      "createdAt": "2025-08-12T05:44:22Z",
+      "updatedAt": "2025-08-13T06:34:12Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "6a6d38a4536c6d20cf0fdc6d24c49ff4d3bec2b2",
+      "headRepository": "ietf-wg-aipref/drafts",
+      "headRefName": "define-ai",
+      "headRefOid": "1e879677900bda1b6093c4ce0d0866b953b8391b",
+      "closedAt": "2025-08-13T06:34:10Z",
+      "mergedAt": "2025-08-13T06:34:10Z",
+      "mergedBy": "martinthomson",
+      "mergeCommit": {
+        "oid": "6c4e685191a992476182e7d28089a2cbb6facbfb"
+      },
+      "comments": [
+        {
+          "author": "paul2keller",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "In general this looks like a substantial improvement to me. I made one suggested in the last part (alternatively we could also consider to remove the final sentence with the examples, that would probably be cleaner and i do not really see the need for going into this level of detail for a second order definition.",
+          "createdAt": "2025-08-12T07:19:11Z",
+          "updatedAt": "2025-08-12T07:19:11Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWk1-s65UJUj",
+          "commit": {
+            "abbreviatedOid": "42cf4b0"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-08-12T07:45:29Z",
+          "updatedAt": "2025-08-12T07:45:30Z",
+          "comments": [
+            {
+              "originalPosition": 34,
+              "body": "Paul's suggestion is to make this much shorter (which I find myself agreeing with the more I stare at it).\r\n\r\n```suggestion\r\n```",
+              "createdAt": "2025-08-12T07:45:29Z",
+              "updatedAt": "2025-08-12T07:45:30Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s65nHNu",
+          "commit": {
+            "abbreviatedOid": "42cf4b0"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-08-13T05:53:52Z",
+          "updatedAt": "2025-08-13T05:53:52Z",
+          "comments": [
+            {
+              "originalPosition": 13,
+              "body": "```suggestion\r\n  that, for a given set of human-defined objectives,\r\n  learns from data to generate outputs\r\n  such as content, predictions, recommendations, or decisions.\r\n```\r\n\r\nThis is a variation of a suggestion from Jo Levy.  It drops the \"new\" that was proposed (\"new content\") because I can't see how that qualification helps and it potentially excludes rewriting, translation, summarization, and other generation tasks.",
+              "createdAt": "2025-08-13T05:53:52Z",
+              "updatedAt": "2025-08-13T05:53:53Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s65nJRk",
+          "commit": {
+            "abbreviatedOid": "80f3a62"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-08-13T05:58:08Z",
+          "updatedAt": "2025-08-13T05:58:09Z",
+          "comments": [
+            {
+              "originalPosition": 28,
+              "body": "```suggestion\n: Machine Learning refers to processing data\n```\n\n\"refers to process of\" is missing a \"the\", but it could be even shorter.",
+              "createdAt": "2025-08-13T05:58:08Z",
+              "updatedAt": "2025-08-13T05:58:09Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 112,
+      "id": "PR_kwDOOWk1-s6jaiRl",
+      "title": "Define search",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/112",
+      "state": "OPEN",
+      "author": "martinthomson",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2025-08-13T06:36:18Z",
+      "updatedAt": "2025-08-13T06:38:55Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "6c4e685191a992476182e7d28089a2cbb6facbfb",
+      "headRepository": "ietf-wg-aipref/drafts",
+      "headRefName": "define-search",
+      "headRefOid": "6bb027d2232dfdd594e22a80caa573fa6f4df124",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [
+        {
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "@garyillyes how far off the mark am I here?  I'm sure this can be arbitrarily more complicated, but this seemed like enough to Paul and I.",
+          "createdAt": "2025-08-13T06:38:55Z",
+          "updatedAt": "2025-08-13T06:38:55Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWk1-s65ndbp",
+          "commit": {
+            "abbreviatedOid": "229e59c"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-08-13T06:37:20Z",
+          "updatedAt": "2025-08-13T06:37:20Z",
+          "comments": [
+            {
+              "originalPosition": 5,
+              "body": "```suggestion\r\n: A search application is a system that enables users\r\n```",
+              "createdAt": "2025-08-13T06:37:20Z",
+              "updatedAt": "2025-08-13T06:38:03Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 113,
+      "id": "PR_kwDOOWk1-s6ja3si",
+      "title": "Combine usage sections",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/113",
+      "state": "OPEN",
+      "author": "martinthomson",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "And do some work on #106 to refine what it means to have a statement of preference, singular, or statements of preference, multiple.\r\n\r\nMore could be done, I'm sure.\r\n\r\nCloses #107.",
+      "createdAt": "2025-08-13T07:15:03Z",
+      "updatedAt": "2025-08-13T07:15:03Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "6c4e685191a992476182e7d28089a2cbb6facbfb",
+      "headRepository": "ietf-wg-aipref/drafts",
+      "headRefName": "combine-usage-sections",
+      "headRefOid": "6c866d703f6fd7cf1b898b0f45c7e94679156ff2",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 114,
+      "id": "PR_kwDOOWk1-s6jbI1i",
+      "title": "Remove AI Use text from Search",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/114",
+      "state": "OPEN",
+      "author": "martinthomson",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "With the removal of that category, having the extra text makes no sense any more.\r\nAnd it isn't really needed, either.",
+      "createdAt": "2025-08-13T07:40:32Z",
+      "updatedAt": "2025-08-13T07:40:32Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "6c4e685191a992476182e7d28089a2cbb6facbfb",
+      "headRepository": "ietf-wg-aipref/drafts",
+      "headRefName": "trim-ai-use-search",
+      "headRefOid": "20d5738ce7ff2b6dd0bf555cf9d1aa30130ece10",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
       "comments": [],
       "reviews": []
     }
