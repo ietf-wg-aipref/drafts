@@ -5,8 +5,8 @@
 AI Preferences                                                 P. Keller
 Internet-Draft                                               Open Future
 Intended status: Standards Track                         M. Thomson, Ed.
-Expires: 14 February 2026                                        Mozilla
-                                                          13 August 2025
+Expires: 15 February 2026                                        Mozilla
+                                                          14 August 2025
 
 
             A Vocabulary For Expressing AI Usage Preferences
@@ -51,7 +51,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 14 February 2026.
+   This Internet-Draft will expire on 15 February 2026.
 
 Copyright Notice
 
@@ -317,10 +317,7 @@ Table of Contents
 
    Preferences for the Search category apply to those parts of
    applications that provide search capabilities, regardless of what
-   other preferences are expressed.  Though search applications often
-   employ AI and so might otherwise be governed by AI Use preferences,
-   preferences regarding AI Use are overridden by preferences for the
-   Search category.
+   other preferences are expressed.
 
    Parts of applications that do not direct users to the location of
    assets, such as summaries, are not covered by this category of use.
