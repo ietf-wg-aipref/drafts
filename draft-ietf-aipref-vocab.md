@@ -284,9 +284,6 @@ that are used to help users select between multiple candidate options.
 Preferences for the Search category apply to those parts of applications
 that provide search capabilities,
 regardless of what other preferences are expressed.
-Though search applications often employ AI
-and so might otherwise be governed by AI Use preferences,
-preferences regarding AI Use are overridden by preferences for the Search category.
 
 Parts of applications that do not direct users to the location of assets,
 such as summaries,
