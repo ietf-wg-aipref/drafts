@@ -98,13 +98,13 @@ This document uses the following terms:
 
 {: newline="true" spacing="compact"}
 Artificial Intelligence (AI):
-: Artificial Intelligence refers to an engineered system
-  that, for a given set of human-defined objectives,
+: An engineered system that,
+  for a given set of human-defined objectives,
   learns from data to generate outputs
   such as content, predictions, recommendations, or decisions.
 
 AI Training:
-: Applying machine learning to data
+: The application of machine learning to data
   to produce or improve a model for an artificial intelligence system.
 
 Asset:
@@ -114,7 +114,7 @@ Declaring party:
 : The entity that expresses a preference with regards to an Asset.
 
 Machine Learning (ML):
-: Machine Learning refers to processing data
+: The processing of data
   to produce or improve a model that encodes the relationship
   between the data and human-defined objectives.
 
