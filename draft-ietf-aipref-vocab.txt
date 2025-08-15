@@ -5,8 +5,8 @@
 AI Preferences                                                 P. Keller
 Internet-Draft                                               Open Future
 Intended status: Standards Track                         M. Thomson, Ed.
-Expires: 15 February 2026                                        Mozilla
-                                                          14 August 2025
+Expires: 16 February 2026                                        Mozilla
+                                                          15 August 2025
 
 
             A Vocabulary For Expressing AI Usage Preferences
@@ -51,7 +51,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 15 February 2026.
+   This Internet-Draft will expire on 16 February 2026.
 
 Copyright Notice
 
@@ -136,22 +136,20 @@ Table of Contents
    This document uses the following terms:
 
    Artificial Intelligence (AI):
-      Artificial Intelligence refers to an engineered system that, for a
-      given set of human-defined objectives, learns from data to
-      generate outputs such as content, predictions, recommendations, or
-      decisions.
+      An engineered system that, for a given set of human-defined
+      objectives, learns from data to generate outputs such as content,
+      predictions, recommendations, or decisions.
    AI Training:
-      Applying machine learning to data to produce or improve a model
-      for an artificial intelligence system.
+      The application of machine learning to data to produce or improve
+      a model for an artificial intelligence system.
    Asset:
       A digital file or stream of data, usually with associated
       metadata.
    Declaring party:
       The entity that expresses a preference with regards to an Asset.
    Machine Learning (ML):
-      Machine Learning refers to processing data to produce or improve a
-      model that encodes the relationship between the data and human-
-      defined objectives.
+      The processing of data to produce or improve a model that encodes
+      the relationship between the data and human-defined objectives.
 
 3.  Statements of Preference
 
