@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-08-14T02:04:54.738798+00:00",
+  "timestamp": "2025-08-17T02:11:29.362588+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -5233,26 +5233,70 @@
       "id": "PR_kwDOOWk1-s6jbI1i",
       "title": "Remove AI Use text from Search",
       "url": "https://github.com/ietf-wg-aipref/drafts/pull/114",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "martinthomson",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "With the removal of that category, having the extra text makes no sense any more.\r\nAnd it isn't really needed, either.",
       "createdAt": "2025-08-13T07:40:32Z",
-      "updatedAt": "2025-08-13T07:40:32Z",
+      "updatedAt": "2025-08-14T08:53:47Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "6c4e685191a992476182e7d28089a2cbb6facbfb",
       "headRepository": "ietf-wg-aipref/drafts",
       "headRefName": "trim-ai-use-search",
       "headRefOid": "20d5738ce7ff2b6dd0bf555cf9d1aa30130ece10",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2025-08-14T08:53:45Z",
+      "mergedAt": "2025-08-14T08:53:45Z",
+      "mergedBy": "paul2keller",
+      "mergeCommit": {
+        "oid": "8e45d85e240df0881f81518c7d11393f1e66c6f3"
+      },
       "comments": [],
       "reviews": []
+    },
+    {
+      "number": 115,
+      "id": "PR_kwDOOWk1-s6jtSld",
+      "title": "Use consistent phrasing in Definitions section",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/115",
+      "state": "MERGED",
+      "author": "chrisn",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "I didn't have chance to comment on the PR before it was merged, sorry. I think it would be good if the definitions followed a more consistent phrasing.",
+      "createdAt": "2025-08-14T15:39:30Z",
+      "updatedAt": "2025-08-15T08:04:52Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "8e45d85e240df0881f81518c7d11393f1e66c6f3",
+      "headRepository": "chrisn/ietf-wg-aipref-drafts",
+      "headRefName": "definition-phrasing",
+      "headRefOid": "c175087402f71a320ce3e379e66d04767e507e87",
+      "closedAt": "2025-08-15T07:05:56Z",
+      "mergedAt": "2025-08-15T07:05:56Z",
+      "mergedBy": "martinthomson",
+      "mergeCommit": {
+        "oid": "9835d9fdee4f52d43194f857cc732acf051bfa67"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWk1-s66Jw8H",
+          "commit": {
+            "abbreviatedOid": "c175087"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "Thanks for catching my error Chris.",
+          "createdAt": "2025-08-15T07:05:35Z",
+          "updatedAt": "2025-08-15T07:05:35Z",
+          "comments": []
+        }
+      ]
     }
   ]
 }
