@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-08-17T02:11:29.362588+00:00",
+  "timestamp": "2025-08-21T01:55:16.770366+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -5294,6 +5294,46 @@
           "body": "Thanks for catching my error Chris.",
           "createdAt": "2025-08-15T07:05:35Z",
           "updatedAt": "2025-08-15T07:05:35Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 116,
+      "id": "PR_kwDOOWk1-s6kckTy",
+      "title": "Update definition of AI to better differentiate it from non-AI",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/116",
+      "state": "OPEN",
+      "author": "TimidRobot",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Update definition of AI to better differentiate it from systems that are arguably not AI\r\n\r\nAlso see the related mailing list thread and pull request (PR):\r\n- [[ai-control] Defining AI](https://mailarchive.ietf.org/arch/msg/ai-control/1u0lpcxPsZZ2CDCMP0zJW0LTrdU/)\r\n- #100 ",
+      "createdAt": "2025-08-20T08:53:25Z",
+      "updatedAt": "2025-08-20T21:42:44Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "9835d9fdee4f52d43194f857cc732acf051bfa67",
+      "headRepository": "TimidRobot/aipref-drafts",
+      "headRefName": "ai-definition-ish",
+      "headRefOid": "8297ddb9726980d2bfb8e6ae3d063c3ac77da1fc",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWk1-s67D3iR",
+          "commit": {
+            "abbreviatedOid": "8297ddb"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-08-20T21:42:44Z",
+          "updatedAt": "2025-08-20T21:42:44Z",
           "comments": []
         }
       ]
