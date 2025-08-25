@@ -5,8 +5,8 @@
 AI Preferences                                                 P. Keller
 Internet-Draft                                               Open Future
 Intended status: Standards Track                         M. Thomson, Ed.
-Expires: 18 January 2026                                         Mozilla
-                                                            17 July 2025
+Expires: 26 February 2026                                        Mozilla
+                                                          25 August 2025
 
 
             A Vocabulary For Expressing AI Usage Preferences
@@ -14,11 +14,10 @@ Expires: 18 January 2026                                         Mozilla
 
 Abstract
 
-   This document proposes a standardized vocabulary for expressing
-   preferences related to how digital assets are used by automated
-   processing systems.  This vocabulary allows for the creation of
-   structured declarations about restrictions or permissions for use of
-   digital assets by such systems.
+   This document defines a vocabulary for expressing preferences
+   regarding how digital assets are used by automated processing
+   systems.  This vocabulary allows for the declaration of restrictions
+   or permissions for use of digital assets by such systems.
 
 About This Document
 
@@ -52,7 +51,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 18 January 2026.
+   This Internet-Draft will expire on 26 February 2026.
 
 Copyright Notice
 
@@ -73,12 +72,13 @@ Table of Contents
    1.  Introduction
    2.  Conventions and Definitions
    3.  Statements of Preference
+     3.1.  Conformance
+     3.2.  Enforcement
    4.  Vocabulary Definition
-     4.1.  Text and Data Mining (TDM) Category
+     4.1.  Automated Processing Category
      4.2.  AI Training Category
      4.3.  Generative AI Training Category
      4.4.  Search Category
-     4.5.  AI Inference Category
    5.  Usage
      5.1.  More Specific Instructions
      5.2.  Vocabulary Extensions
@@ -91,47 +91,39 @@ Table of Contents
      6.6.  Alternative Formats
    7.  Consulting a Preference Expression
      7.1.  Combining Preferences
-     7.2.  Overriding Preferences
-   8.  Security Considerations
-   9.  IANA Considerations
-     9.1.  Initial Registry Contents
-     9.2.  Registration Guidance
-   10. References
-     10.1.  Normative References
-     10.2.  Informative References
+   8.  Applicability and Legal Effect
+   9.  Security Considerations
+   10. IANA Considerations
+   11. References
+     11.1.  Normative References
+     11.2.  Informative References
    Acknowledgments
    Authors' Addresses
 
 1.  Introduction
 
-   This document defines a common vocabulary of terms for automated
-   systems that process digital assets.  The primary purpose of this
-   vocabulary is to enable machine-readable expressions of preferences
-   about how digital assets are used by automated processing systems in
-   the context of training AI models and other forms of automated
-   processing.
+   This document defines a vocabulary of preferences regarding how
+   automated systems process digital assets -- in particular, the
+   training and use of AI models.  This vocabulary can be used to
+   describe the types of uses that a declaring party may wish to
+   explicitly restrict or allow.
 
-   The terms defined by the vocabulary can be used to describe, in a
-   standardized way, the types of uses that a declaring party may wish
-   to explicitly restrict or allow.  Preferences are then expressed as a
-   grant or denial of permission concerning each of the types of use
-   defined in the vocabulary.  This ensures that preferences can be
-   communicated, processed, and stored in a consistent and interoperable
-   manner.
+   The vocabulary is intended to be used in jurisdictions where
+   expressing preferences results in legal obligations, as well as where
+   there are no associated legal obligations.  In either case,
+   expressing preferences is without prejudice to applicable laws,
+   including the applicability of exceptions and limitations to
+   copyright.
 
-   The vocabulary or the preferences that might be expressed do not
-   proscribe how automated processing systems obtain or act on
-   preferences.  Separate documents will describe how preferences might
-   be associated with assets.  It is designed to ensure that preference
-   information can be exchanged between different systems and
-   consistently understood.
+   Section 3 defines the data model for AI Preferences.  Section 4
+   defines the terms of the vocabulary.  Section 5 explains how to use
+   AI Preferences in a data processing application, and Section 6
+   describes a way to serialize preferences into a string.  Section 7
+   describes an algorithm for determining the value of a specific
+   preference.
 
-   The vocabulary is intended to work in contexts where such preferences
-   result in legal obligations (such as rights reservations made by
-   rightholders in jurisdictions with conditional TDM exceptions), and
-   in contexts where this is not the case.  It is without prejudice to
-   applicable laws and the applicability of exceptions and limitations
-   to copyright.
+   [ATTACH] defines mechanisms to associate preferences with assets.
+   Other means of association might be defined separately in the future.
 
 2.  Conventions and Definitions
 
@@ -143,11 +135,21 @@ Table of Contents
 
    This document uses the following terms:
 
+   Artificial Intelligence (AI):
+      An engineered system that, for a given set of human-defined
+      objectives, learns from data to generate outputs such as content,
+      predictions, recommendations, or decisions.
+   AI Training:
+      The application of machine learning to data to produce or improve
+      a model for an artificial intelligence system.
    Asset:
       A digital file or stream of data, usually with associated
       metadata.
    Declaring party:
       The entity that expresses a preference with regards to an Asset.
+   Machine Learning (ML):
+      The processing of data to produce or improve a model that encodes
+      the relationship between the data and human-defined objectives.
 
 3.  Statements of Preference
 
@@ -170,17 +172,45 @@ Table of Contents
    category applies if no preference is expressed for the more specific
    category.
 
-   For example, the TDM category might be assigned a preference that
-   allows the associated usage.  In the absence of any statement of
-   preference regarding the AI Training category, that usage would be
-   also be allowed, as AI Training is a subset of the TDM category.  In
-   comparison, an explicit preference regarding AI Training might
-   disallow that usage, while permitting other usage within the TDM
-   category.
+   For example, the Automated Processing category might be assigned a
+   preference that allows the associated usage.  In the absence of any
+   statement of preference regarding the AI Training category, that
+   usage would be also be allowed, as AI Training is a subset of the
+   Automated Processing category.  In comparison, an explicit preference
+   regarding AI Training might disallow that usage, while permitting
+   other usage within the Automated Processing category.
 
-   After processing a statement of preferences the recipient can assume
-   that each category of use has a preference in one of three states:
-   "allowed", "disallowed", or "unknown".
+   After processing a statement of preferences the recipient assigns
+   each category of use one of three preference values: "allowed",
+   "disallowed", or "unknown".
+
+   In the absence of a statement of preference, all usage categories are
+   assigned a preference value of "unknown".
+
+3.1.  Conformance
+
+   This document and [ATTACH] describe how usage preferences are
+   associated with assets.  An implementation is conformant to these
+   specifications if it correctly follows all normative requirements
+   that apply to it.
+
+   The process of obtaining preferences has very limited scope for
+   variation between implementations.
+
+3.2.  Enforcement
+
+   This specification does not provide any enforcement mechanism, and
+   conformance to it does not encompass whether preferences are actually
+   respected during data processing.
+
+   Other mechanisms -- technical, legal, or otherwise -- might enforce
+   stated preferences.  As such they will determine the consequences for
+   ignoring a stated preference.  Preferences do not imply control,
+   either in the positive or negative.  For example, a stated preference
+   allowing a use does not (on its own) imply an unconditional right to
+   use it for that purpose; likewise, a stated preference disallowing a
+   use does not (on its own) mean that the content can never be used for
+   that purpose.
 
 4.  Vocabulary Definition
 
@@ -188,54 +218,47 @@ Table of Contents
 
    Figure 1 shows the relationship between these categories:
 
-    .-------------------------------------------------.
-   |                                                   |
-   |               Text and Data Mining                |
-   |                                                   |
-   |   .-------------------------------------------.   |
-   |  |                .------------------------.   |  |
-   |  |               |                          |  |  |
-   |  |               |                          |  |  |
-   |  |  AI Training  |  Generative AI Training  |  |  |
-   |  |               |                          |  |  |
-   |  |               |                          |  |  |
-   |  |                '------------------------'   |  |
-   |   '-------------------------------------------'   |
-   |                                                   |
-   |    .----------------.       .----------------.    |
-   |   |                  |     |                  |   |
-   |   |                  |     |                  |   |
-   |   |   AI Inference   |     |      Search      |   |
-   |   |                  |     |                  |   |
-   |   |                  |     |                  |   |
-   |    '----------------'       '----------------'    |
-   |                                                   |
-    '-------------------------------------------------'
+    .---------------------------------------------.
+   |                                               |
+   |             Automated Processing              |
+   |                                               |
+   |                                               |
+   |    .-----------------.      .------------.    |
+   |   |                   |    |              |   |
+   |   |                   |    |              |   |
+   |   |    AI Training    |    |    Search    |   |
+   |   |                   |    |              |   |
+   |   |                   |    |              |   |
+   |   |  .-------------.  |     '------------'    |
+   |   | |               | |                       |
+   |   | |  Generative   | |                       |
+   |   | |  AI Training  | |                       |
+   |   | |               | |                       |
+   |   |  '-------------'  |                       |
+   |   |                   |                       |
+   |    '-----------------'                        |
+   |                                               |
+    '---------------------------------------------'
 
               Figure 1: Relationship Between Categories of Use
 
-   This list of specific use cases may be expanded in the future, should
-   a consensus emerge between stakeholders, to include categories that
-   address additional use cases as they emerge.  In addition to these
-   categories defined in the vocabulary, it is also expected that some
-   systems implementing this vocabulary may extend this list with
-   additional categories for their particular needs.
-
-4.1.  Text and Data Mining (TDM) Category
+4.1.  Automated Processing Category
 
    The act of using one or more assets in the context of automated
    processing aimed at analyzing text and data in order to generate
    information which includes but is not limited to patterns, trends and
    correlations.
 
-   The use of assets for TDM encompasses all the subsequent categories.
+   The use of assets for automated processing encompasses all the
+   subsequent categories.
 
 4.2.  AI Training Category
 
    The act of training machine learning models or artificial
    intelligence (AI).
 
-   The use of assets for AI Training is a proper subset of TDM usage.
+   The use of assets for AI Training is a proper subset of Automated
+   Processing usage.
 
 4.3.  Generative AI Training Category
 
@@ -252,23 +275,27 @@ Table of Contents
    Using one or more assets in a search application that directs users
    to the location from which the assets were retrieved.
 
-   The use of assets for Search is a proper subset of TDM usage.  [[Open
-   issue (https://github.com/ietf-wg-aipref/drafts/issues/49)]]
+   Search applications can be complex and may serve multiple purposes.
+   Only those parts of applications that direct users to the location of
+   an asset are included in this category of use.  This includes the use
+   of titles or excerpts from assets that are used to help users select
+   between multiple candidate options.
 
-4.5.  AI Inference Category
+   Preferences for the Search category apply to those parts of
+   applications that provide search capabilities, regardless of what
+   other preferences are expressed.
 
-   The act of using one or more assets as input to a trained AI/ML model
-   as part of the operation of that model (as opposed to the training of
-   the model).
+   Parts of applications that do not direct users to the location of
+   assets, such as summaries, are not covered by this category of use.
 
-   The use of assets for AI Training is a proper subset of TDM usage.
-   [[Open issue (https://github.com/ietf-wg-aipref/drafts/issues/42)]]
+   The use of assets for Search is a proper subset of Automated
+   Processing usage.
 
 5.  Usage
 
-   The vocabulary is used by referencing the terms defined in the
-   Section 4 section above, directly or via mappings, in accordance with
-   how they are defined in this document.
+   The vocabulary is used by referencing the terms defined in Section 4,
+   directly or via mappings, in accordance with how they are defined in
+   this document.
 
 5.1.  More Specific Instructions
 
@@ -285,20 +312,13 @@ Table of Contents
 
    For instance, a statement of preferences might indicate that the use
    of an asset is disallowed for AI Training.  If arrangements, such as
-   contracts exist that explicitly permit the use of that asset, those
-   arrangements likely apply, unless the terms of the arrangement
+   legal agreements, exist that explicitly permit the use of that asset,
+   those arrangements likely apply, unless the terms of the arrangement
    explicitly say otherwise.
-
-   The vocabulary does not preclude the use of other specific
-   categories.  Any statement of preference based on this vocabulary
-   shall not be interpreted as restricting the use of the work(s)
-   strictly for the purpose of search and discovery as long as no
-   restriction is declared through search-specific means such as
-   [RFC9309].
 
 5.2.  Vocabulary Extensions
 
-   Systems referencing the vocabulary must not introduce additional
+   Systems referencing the vocabulary MUST NOT introduce additional
    categories that include existing categories defined in the vocabulary
    or otherwise include additional hierarchical relationships.
 
@@ -313,31 +333,29 @@ Table of Contents
    dictionary values correspond to explicit preferences, which can be
    either y or n; see Section 6.2.
 
-   For example, the following is a preference to allow AI training
-   (Section 4.2), disallow generative AI training (Section 4.3), and and
-   state no preference for other categories other than subsets of these
-   categories:
+   For example, the following expresses a preference to allow AI
+   training (Section 4.2), disallow generative AI training
+   (Section 4.3), and and expresses no preference for other categories
+   other than subsets of these categories:
 
-   ai=y, genai=n
+   train-ai=y, train-genai=n
 
 6.1.  Usage Category Labels
 
    Each usage category in the vocabulary (Section 4) is mapped to a
    short textual label.  Table 1 tabulates this mapping.
 
-           +========================+===========+=============+
-           | Category               | Label     | Reference   |
-           +========================+===========+=============+
-           | Text and Data Mining   | tdm       | Section 4.1 |
-           +------------------------+-----------+-------------+
-           | AI Training            | ai        | Section 4.2 |
-           +------------------------+-----------+-------------+
-           | Generative AI Training | genai     | Section 4.3 |
-           +------------------------+-----------+-------------+
-           | Search                 | search    | Section 4.4 |
-           +------------------------+-----------+-------------+
-           | AI Inference           | inference | Section 4.5 |
-           +------------------------+-----------+-------------+
+          +========================+=============+=============+
+          | Category               | Label       | Reference   |
+          +========================+=============+=============+
+          | Automated Processing   | all         | Section 4.1 |
+          +------------------------+-------------+-------------+
+          | AI Training            | train-ai    | Section 4.2 |
+          +------------------------+-------------+-------------+
+          | Generative AI Training | train-genai | Section 4.3 |
+          +------------------------+-------------+-------------+
+          | Search                 | search      | Section 4.4 |
+          +------------------------+-------------+-------------+
 
                      Table 1: Mappings for Categories
 
@@ -385,6 +403,9 @@ Table of Contents
    processing a parsed Dictionary to obtain preferences, any unknown
    parameters MUST be ignored.
 
+   In either case, new extensions need to be defined in an RFC that
+   updates this document.
+
 6.5.  Processing Algorithm
 
    To process a series of bytes to recover the expressed preferences,
@@ -421,7 +442,7 @@ Table of Contents
    that duplicating the same key could result in unexpected outcomes.
    For example, the following expresses no preferences:
 
-   ai=y, ai="n", genai=n, genai, tdm=n, tdm=()
+   train-ai=y, train-ai="n", train-genai=n, train-genai, all=n, all=()
 
    If the parsing of the Dictionary fails, no preferences are expressed.
    This includes where keys include uppercase characters, as this format
@@ -436,9 +457,18 @@ Table of Contents
    This format is only an exemplary way to represent preferences.  The
    model described in Section 3, can be used without this serialization.
 
-   Any alternative format needs to define how that model is represented
-   and how to generate the same model from any alternative
-   representation.
+   Any alternative format needs to define the mapping both from that
+   format to the model used in this document and from the model to the
+   alternative format.  This includes any potential for extensions
+   (Section 6.4).
+
+   The mapping between the model and the alternative format does not
+   need to be complete, it only needs to be clear and unambiguous.
+
+   For example, an alternative format might only provide the ability to
+   convey preferences for a subset of the categories of use.  A mapping
+   might then define that no preference is associated with other
+   categories.
 
 7.  Consulting a Preference Expression
 
@@ -461,10 +491,10 @@ Table of Contents
    no preference.  Applications can use the answer to guide their
    behavior.
 
-   One approach for dealing with a "no preference" answer is to assign a
-   default.  This document takes no position on what default might be
-   chosen as that will depend on policy constraints beyond the scope of
-   this specification.
+   One approach for dealing with an "unknown" or "no preference" answer
+   is to assign a default.  This document takes no position on what
+   default might be chosen as that will depend on policy constraints
+   beyond the scope of this specification.
 
 7.1.  Combining Preferences
 
@@ -472,8 +502,8 @@ Table of Contents
    using different methods.
 
    If multiple preference expressions are active, all preference
-   expressions are consulted (Section 7), unless some can be discarded
-   (Section 7.2).  This might result in conflicting answers.
+   expressions are consulted (Section 7).  This might result in
+   conflicting answers.
 
    Absent some other means of resolving conflicts, the following process
    applies to each usage category:
@@ -488,102 +518,55 @@ Table of Contents
 
    This process ensures that the most restrictive preference applies.
 
-7.2.  Overriding Preferences
+8.  Applicability and Legal Effect
 
-   Any method of attaching preference expressions to assets can specify
-   conditions where the preferences obtained using one method override
-   those of another method.
+   This document provides a set of definitions for different categories
+   of use, plus a system for associating simple preferences to each
+   (allow, disallow, or no preference; see Section 3).
 
-   If an application has two preference expressions where one is defined
-   as overriding the other, the overridden preference can be discarded.
+   The categories of use that are defined as part of the vocabulary are
+   not always clearly applicable or inapplicable to a particular system
+   or application.  The universe of possible systems is far more complex
+   than any simple vocabulary is capable of describing.  That means that
+   some discretion could be involved in deciding whether a preference
+   applies.
 
-8.  Security Considerations
+   The expression of preferences might activate regulatory or legal
+   consequences, which has implications for entities that consume those
+   preferences.  Their interpretation of the meaning of different terms
+   could have legal ramifications.  Different jurisdictions could reach
+   subtly different conclusions about the applicability of each category
+   of use to specific applications.
+
+   It is the responsibility of those that process affected assets to
+   understand the legal implications of their use of digital assets.
+
+   This includes understanding:
+
+   *  obligations regarding how preferences are obtained (in particular,
+      which methods of associating preferences with content are expected
+      to be understood),
+
+   *  the specific uses to which assets are put,
+
+   *  how preferences apply to the those uses, and
+
+   *  how relevant jurisdictions might interpret those preferences.
+
+   These considerations will depend on jurisdiction and the details of
+   the system.
+
+9.  Security Considerations
 
    TODO Security
 
-9.  IANA Considerations
+10.  IANA Considerations
 
-   This document establishes a new standalone IANA registry entitled
-   "Automated Processing Categories of Use".
+   This document has no IANA actions.
 
-   This registry operates under the "Specification Required" policy; see
-   Section 4.6 of [RFC8126].
+11.  References
 
-   New entries in this registry require the following information:
-
-   Label:  A short label that meets the constraints in Section 6.1.
-   Title:  A short title
-   Subset Of:  The category of use that this category is a proper subset
-      of.  This needs to refer to another entry in the registry by its
-      label, or be the string "(none)".
-   Reference:  A link to a document that contains a precise definition
-      for the category of use.
-
-   The Title and Label fields need to be separately unique across all
-   items in the registry.
-
-      |  Note that Labels are sequences of bytes in practice, but the
-      |  registry lists Labels as strings, which are encoded into bytes
-      |  using [ASCII].
-
-9.1.  Initial Registry Contents
-
-   The registry is seeded with the values in Table 2.
-
-     +===========+========================+===========+=============+
-     | Label     | Title                  | Subset Of | Reference   |
-     +===========+========================+===========+=============+
-     | tdm       | Text and Data Mining   | (none)    | Section 4.1 |
-     +-----------+------------------------+-----------+-------------+
-     | ai        | AI Training            | tdm       | Section 4.2 |
-     +-----------+------------------------+-----------+-------------+
-     | genai     | Generative AI Training | ai        | Section 4.3 |
-     +-----------+------------------------+-----------+-------------+
-     | search    | Search                 | tdm       | Section 4.4 |
-     +-----------+------------------------+-----------+-------------+
-     | inference | AI Inference           | tdm       | Section 4.5 |
-     +-----------+------------------------+-----------+-------------+
-
-                    Table 2: Initial Registry Contents
-
-9.2.  Registration Guidance
-
-   Assigned experts are responsible for ensuring that new items meet the
-   technical requirements for the protocol.  This minimally includes the
-   syntax restrictions on labels (Section 6.1) and the potential for
-   impossible reference loops in the Subset Of field.  However, there
-   are further special considerations for this registry that involve
-   some exercise of discretion on the part of assigned experts.
-
-   Expressions of preference are most effective when they have a shared
-   understanding.  Keeping the limited number of items in the vocabulary
-   limited is one of the best ways to ensure that there is wide
-   understanding.  That means that experts are instructed to reject
-   registrations if there is any doubt regarding:
-
-   *  the scope of the proposed category of use,
-
-   *  the relationship between the proposed category of use and existing
-      categories of use, or
-
-   *  the importance of being able to express preferences regarding the
-      uses covered by the proposed category.
-
-   This involves a degree of judgment not ordinarily asked of assigned
-   experts.  Rather than expect an assigned expert to be able to resolve
-   difficult cases, any case where there is doubt MUST be referred to
-   the IETF to resolve.  In effect, this ensures that contested
-   registration requests are elevated to require "IETF Review"; see
-   Section 4.8 of [RFC8126].
-
-   To aid in the decision-making process, new registration requests MUST
-   be copied to the "aicontrol@ietf.org" list for at least three weeks
-   of discussion before a decision is made.  Experts are expected to use
-   input from that list to inform their decision.
-
-10.  References
-
-10.1.  Normative References
+11.1.  Normative References
 
    [ASCII]    Cerf, V., "ASCII format for network interchange", STD 80,
               RFC 20, DOI 10.17487/RFC0020, October 1969,
@@ -598,27 +581,17 @@ Table of Contents
               DOI 10.17487/RFC2119, March 1997,
               <https://www.rfc-editor.org/rfc/rfc2119>.
 
-   [RFC8126]  Cotton, M., Leiba, B., and T. Narten, "Guidelines for
-              Writing an IANA Considerations Section in RFCs", BCP 26,
-              RFC 8126, DOI 10.17487/RFC8126, June 2017,
-              <https://www.rfc-editor.org/rfc/rfc8126>.
-
    [RFC8174]  Leiba, B., "Ambiguity of Uppercase vs Lowercase in RFC
               2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
               May 2017, <https://www.rfc-editor.org/rfc/rfc8174>.
 
-   [RFC9309]  Koster, M., Illyes, G., Zeller, H., and L. Sassman,
-              "Robots Exclusion Protocol", RFC 9309,
-              DOI 10.17487/RFC9309, September 2022,
-              <https://www.rfc-editor.org/rfc/rfc9309>.
+11.2.  Informative References
 
-10.2.  Informative References
-
-   [EUCD2019] European Union, "Directive (EU) 2019/790 of the European
-              Parliament and of the Council of 17 April 2019 on
-              copyright and related rights in the Digital Single
-              Market", 17 May 2019,
-              <https://eur-lex.europa.eu/eli/dir/2019/790/oj>.
+   [ATTACH]   Illyes, G. and M. Thomson, Ed., "A Vocabulary For
+              Expressing AI Usage Preferences", Work in Progress,
+              Internet-Draft, draft-ietf-aipref-attach, August 2025,
+              <https://datatracker.ietf.org/doc/html/draft-ietf-aipref-
+              attach>.
 
    [UTF8]     Yergeau, F., "UTF-8, a transformation format of ISO
               10646", STD 63, RFC 3629, DOI 10.17487/RFC3629, November
@@ -626,18 +599,15 @@ Table of Contents
 
 Acknowledgments
 
-   The following individuals have been involved in the drafting of the
-   proposal:
+   The following individuals made significant contributions to this
+   document:
 
-   *  Cullen Miller, Spawing.ai
-
-   *  Sebastian Posth, Liccium
-
-   *  Leonard Rosenthol, Adobe
-
-   *  Laurent Le Meur, EDRLab
-
-   *  Timid Robot Zehta, Creative Commons
+   *  Lila Bailey
+   *  Cullen Miller
+   *  Laurent Le Meur
+   *  Leonard Rosenthol
+   *  Sebastian Posth
+   *  Timid Robot Zehta
 
 Authors' Addresses
 

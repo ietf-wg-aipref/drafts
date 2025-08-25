@@ -6,7 +6,7 @@ AI Preferences                                                 G. Illyes
 Internet-Draft                                                    Google
 Updates: 9309 (if approved)                                   M. Thomson
 Intended status: Standards Track                                 Mozilla
-Expires: 22 January 2026                                    21 July 2025
+Expires: 26 February 2026                                 25 August 2025
 
 
              Associating AI Usage Preferences With Content
@@ -54,7 +54,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 22 January 2026.
+   This Internet-Draft will expire on 26 February 2026.
 
 Copyright Notice
 
@@ -82,7 +82,8 @@ Table of Contents
    3.  Robots Exclusion Protocol Content-Usage Rule
      3.1.  Content-Usage Rule Semantics
      3.2.  Processing Content-Usage Rules
-     3.3.  Example
+     3.3.  When Preferences Apply
+     3.4.  Example
    4.  Security Considerations
    5.  IANA Considerations
    6.  References
@@ -305,7 +306,19 @@ Table of Contents
    Note that a usage preference expression is processed as a sequence of
    bytes, rather than Unicode text; see Section 6.3 of [VOCAB].
 
-3.3.  Example
+3.3.  When Preferences Apply
+
+   A crawler that fetches resources uses the copy of "robots.txt" that
+   is current at the time of the fetch to determine which usage
+   preferences apply to those resources.  Section 2.4 of [ROBOTS]
+   defines how a "robots.txt" file can be cached.
+
+   This means that updates to "robots.txt" do not retroactively apply to
+   resources.  Changes to "robots.txt" that affect usage preferences
+   therefore only apply after a crawler has retrieved the updated
+   "robots.txt" and subsequently retrieved the affected resource again.
+
+3.4.  Example
 
    Figure 2 shows a simple "robots.txt" document.
 
@@ -400,7 +413,7 @@ Table of Contents
 
    [VOCAB]    Keller, P. and M. Thomson, Ed., "A Vocabulary For
               Expressing AI Usage Preferences", Work in Progress,
-              Internet-Draft, draft-ietf-aipref-vocab, July 2025,
+              Internet-Draft, draft-ietf-aipref-vocab, August 2025,
               <https://datatracker.ietf.org/doc/html/draft-ietf-aipref-
               vocab>.
 
