@@ -169,14 +169,14 @@ for variation between implementations.
 
 This specification does not provide any enforcement mechanism,
 and conformance to it does not encompass whether
-preferences are actually respected during data processing. 
+preferences are actually respected during data processing.
 
 Other mechanisms
 -- technical, legal, or otherwise --
 might enforce stated preferences.
 As such they will determine the consequences for ignoring a stated preference.
 Preferences do not imply control, either in the positive or negative.
-For example, a stated preference allowing a use does not 
+For example, a stated preference allowing a use does not
 (on its own) imply an unconditional right to use it for that purpose;
 likewise, a stated preference disallowing a use does not
 (on its own) mean that the content can never be used for that purpose.
