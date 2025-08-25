@@ -165,57 +165,21 @@ The process of obtaining preferences has very limited scope
 for variation between implementations.
 
 
-## Respecting Preferences
+## Enforcement
 
-Specification conformance does not encompass whether preferences are actually respected
-during data processing.
-A data processor MAY choose to respect preferences that is has discovered,
-according to:
+This specification does not provide any enforcement mechanism,
+and conformance to it does not encompass whether
+preferences are actually respected during data processing. 
 
-* an understanding of the nature of the processing being performed
-  and how it corresponds to the usage categories
-  where preferences have been expressed, and
-
-* the applicable legal context; see {{legal}}.
-
-Usage preferences can be overridden through express agreements
-between relevant parties.
-
-There are also many situations where other priorities could override
-any usage preferences.
-Priorities that could justify ignoring preferences include --
-but are not limited to --
-free expression, safety, education, scholarship, research,
-preservation, interoperability, and accessibility.
-
-A choice to ignore a preference could be
-explicitly permitted in law
-or be based on the judgement of particular individuals or organizations.
-
-The following lists examples of cases
-where other priorities could override specific preferences:
-
-* People with accessibility needs,
-  or organizations working on their behalf,
-  might ignore a preference to disallow Automated Processing ({{all}})
-  in order to access automated captions
-  or generate accessible formats.
-
-* A cultural heritage organization could ignore a preference
-  to disallow Automated Processing ({{all}})
-  in order to provide more useful, reliable, or discoverable access
-  to historical web collections.
-
-* An educational institution could ignore a preference
-  to disallow AI Training ({{train-ai}})
-  in order to enable scholars to develop or use tools
-  to facilitate scientific or other types of research.
-
-* A website that permits user uploads could ignore a preference
-  to disallow Automated Processing ({{all}})
-  in order to develop or use tools that detect harmful content
-  according to established terms of use.
-
+Other mechanisms
+-- technical, legal, or otherwise --
+might enforce stated preferences.
+As such they will determine the consequences for ignoring a stated preference.
+Preferences do not imply control, either in the positive or negative.
+For example, a stated preference allowing a use does not 
+(on its own) imply an unconditional right to use it for that purpose;
+likewise, a stated preference disallowing a use does not
+(on its own) mean that the content can never be used for that purpose.
 
 # Vocabulary Definition {#vocab}
 
