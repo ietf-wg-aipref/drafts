@@ -189,11 +189,38 @@ likewise, a stated preference disallowing a use does not
 (on its own) mean that the content cannot be used for that purpose.
 
 For example, a legal system might require adherence to stated preferences,
-but allow them to be ignored for purposes such as
+but allow them to be ignored for specified purposes, such as:
+
+* People with accessibility needs,
+  or organizations working on their behalf,
+  might be allowed by a legal system to ignore a preference
+  to disallow Automated Processing ({{all}})
+  in order to access automated captions
+  or generate accessible formats.
+
+* A cultural heritage organization
+  might be allowed by a legal system to ignore a preference
+  to disallow Automated Processing ({{all}})
+  in order to provide more useful, reliable, or discoverable access
+  to historical web collections.
+
+* An educational institution
+  might be allowed by a legal system to ignore a preference
+  to disallow AI Training ({{train-ai}})
+  in order to enable scholars to develop or use tools
+  to facilitate scientific or other types of research.
+
+Addtional such purposes might be
 free expression, safety, education, scholarship, research,
-preservation, interoperability, or accessibility. Additionally, it
+preservation, interoperability, or accessibility.
+
+Additionally, a legal system
 might allow preferences to be ignored due to express agreements
 between relevant parties.
+
+In the absence of a legal system that requires adherence to stated preferences,
+a choice to ignore a preference could be
+based on the judgement of particular individuals or organizations.
 
 Because enforcement is not provided by this specification,
 the consequences of ignoring preferences may vary depending upon
