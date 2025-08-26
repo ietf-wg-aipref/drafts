@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-08-21T01:55:16.770366+00:00",
+  "timestamp": "2025-08-26T01:57:02.360071+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -5335,6 +5335,140 @@
           "createdAt": "2025-08-20T21:42:44Z",
           "updatedAt": "2025-08-20T21:42:44Z",
           "comments": []
+        }
+      ]
+    },
+    {
+      "number": 117,
+      "id": "PR_kwDOOWk1-s6lKXoS",
+      "title": "A suggestion for 3.2",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/117",
+      "state": "OPEN",
+      "author": "mnot",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2025-08-25T08:04:43Z",
+      "updatedAt": "2025-08-26T01:35:36Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "9835d9fdee4f52d43194f857cc732acf051bfa67",
+      "headRepository": "ietf-wg-aipref/drafts",
+      "headRefName": "mnot/enforcement",
+      "headRefOid": "a2533ea27f34e1cfe82025b5ec620d5fc75877bd",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [
+        {
+          "author": "paul2keller",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "I think we are at risk of loosing substantial safeguards here.We need to have explicit language that there will be situations in which legal regimes override any preferences (the most concrete example, although not the best because Eurocentrism concerns) is the TDM exception for scientific research in Article 3 the EU copyright directive. \r\n\r\nI think the approach to combine (or at least move closer to each other) the legal section and this one makes a lot of sense. And as a reminder there is one other section in the doc that also deals with this issue, that is the 2nd para of the `#introduction` section:\r\n\r\n> The vocabulary is intended to be used in jurisdictions where expressing preferences results in legal obligations, as well as where there are no associated legal obligations. In either case, expressing preferences is without prejudice to applicable laws, including the applicability of exceptions and limitations to copyright.  ",
+          "createdAt": "2025-08-25T09:16:07Z",
+          "updatedAt": "2025-08-25T09:16:07Z"
+        },
+        {
+          "author": "Jo-Levy",
+          "authorAssociation": "NONE",
+          "body": "Some of the new language --and some of the old language-- are normatively charged.  I propose that, to the extent these changes are incorporated, \"an unconditional right\" be revised to \"a right\"  and \"never\" be changed to \"not\".  For the same reason,  I suggest, throughout the text of the spec and document, to change the words \"respect\" and \"ignored\" to \"followed\" and \"not followed.\"  Plus, as the tech spec and documents are directed at technology, not people,  \"respect\" and \"ignored\" are anthropomorphic.  ",
+          "createdAt": "2025-08-25T16:48:38Z",
+          "updatedAt": "2025-08-25T16:48:38Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "I've moved applicability/legal effect up; it likely needs some editorial adjustment.",
+          "createdAt": "2025-08-26T01:27:04Z",
+          "updatedAt": "2025-08-26T01:27:04Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWk1-s67xvMh",
+          "commit": {
+            "abbreviatedOid": "42dbceb"
+          },
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-08-25T08:14:09Z",
+          "updatedAt": "2025-08-25T08:14:09Z",
+          "comments": [
+            {
+              "originalPosition": 69,
+              "body": "```suggestion\r\n## Enforcement\r\n\r\nThis specification does not provide any enforcement mechanism,\r\nand conformance to it does not encompass whether\r\npreferences are actually respected during data processing.\r\n\r\nOther mechanisms\r\n-- technical, legal, or otherwise --\r\nmight enforce stated preferences.\r\nAs such they will determine the consequences for ignoring a stated preference.\r\nPreferences do not imply control, either in the positive or negative.\r\nFor example, a stated preference allowing a use does not\r\n(on its own) imply an unconditional right to use it for that purpose;\r\nlikewise, a stated preference disallowing a use does not\r\n(on its own) mean that the content can never be used for that purpose.\r\n```",
+              "createdAt": "2025-08-25T08:14:09Z",
+              "updatedAt": "2025-08-25T08:14:09Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s67yMj-",
+          "commit": {
+            "abbreviatedOid": "41fe0f9"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "This is reasonable.  There's a fair bit of overlap between this and the `#legal` section much lower down.  We probably need to think about reconciling those.  Is there anything in there that would make sense to move up here?",
+          "createdAt": "2025-08-25T08:53:39Z",
+          "updatedAt": "2025-08-25T08:53:39Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWk1-s679VdO",
+          "commit": {
+            "abbreviatedOid": "41fe0f9"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "Jo Levy mentioned some tweaks that alter the language here.  I'm merely relaying that.  Paul's concerns are more substantive here.",
+          "createdAt": "2025-08-26T00:33:08Z",
+          "updatedAt": "2025-08-26T00:36:30Z",
+          "comments": [
+            {
+              "originalPosition": 67,
+              "body": "```suggestion\n(on its own) imply a right to use it for that purpose;\n```",
+              "createdAt": "2025-08-26T00:33:08Z",
+              "updatedAt": "2025-08-26T00:36:30Z"
+            },
+            {
+              "originalPosition": 69,
+              "body": "```suggestion\n(on its own) mean that the content cannot be used for that purpose.\n```",
+              "createdAt": "2025-08-26T00:33:18Z",
+              "updatedAt": "2025-08-26T00:36:30Z"
+            },
+            {
+              "originalPosition": 64,
+              "body": "```suggestion\nAs such they will determine the consequences for following or not following a stated preference.\n```",
+              "createdAt": "2025-08-26T00:34:17Z",
+              "updatedAt": "2025-08-26T00:36:30Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s679wHr",
+          "commit": {
+            "abbreviatedOid": "a2533ea"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "So there is definitely some overlap here with these two sections.\n\nI think that this could be one section.  Though there are a few things being said here:\n\n1. These are just preferences.\n2. However, a statement of preferences can activate laws depending on context.\n3. The categories are simple, broad, and therefore will have ambiguities as they are applied to real applications.\n4. People who use assets need to take responsibility for that use.\n5. (what you removed) There are cases where preferences might not be followed.\n\nThe text you added only really covers points 1 and 2.",
+          "createdAt": "2025-08-26T01:32:14Z",
+          "updatedAt": "2025-08-26T01:35:36Z",
+          "comments": [
+            {
+              "originalPosition": 62,
+              "body": "This is probably most redundant, but there is still a useful point: how a category applies to a given application could be a judgment call and that might vary between jurisdictions (if there is a legal effect).",
+              "createdAt": "2025-08-26T01:32:14Z",
+              "updatedAt": "2025-08-26T01:35:36Z"
+            }
+          ]
         }
       ]
     }
