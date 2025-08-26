@@ -174,7 +174,7 @@ preferences are actually respected during data processing.
 Other mechanisms
 -- technical, legal, or otherwise --
 might enforce stated preferences.
-As such they will determine the consequences for ignoring a stated preference.
+As such they will determine the consequences for following or not following a stated preference.
 Preferences do not imply control, either in the positive or negative.
 For example, a stated preference allowing a use does not
 (on its own) imply a right to use it for that purpose;
