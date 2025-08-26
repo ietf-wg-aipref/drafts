@@ -191,7 +191,7 @@ likewise, a stated preference disallowing a use does not
 For example, a legal system might require adherence to stated prefernces,
 but allow them to be ignored for purposes such as
 free expression, safety, education, scholarship, research,
-preservation, interoperability, or accessibility. Additionally, it 
+preservation, interoperability, or accessibility. Additionally, it
 might allow preferences to be ignored due to express agreements
 between relevant parties.
 
