@@ -165,56 +165,42 @@ The process of obtaining preferences has very limited scope
 for variation between implementations.
 
 
-## Respecting Preferences
+## Enforcement
 
-Specification conformance does not encompass whether preferences are actually respected
-during data processing.
-A data processor MAY choose to respect preferences that is has discovered,
-according to:
+This specification provides a set of definitions for different categories of use,
+plus a system for associating simple preferences to each
+(allow, disallow, or no preference; see {{model}}).
 
-* an understanding of the nature of the processing being performed
-  and how it corresponds to the usage categories
-  where preferences have been expressed, and
+This specification does not provide
+any enforcement mechanism for those preferences,
+and conformance to it does not encompass whether
+preferences are actually respected during data processing.
 
-* the applicable legal context; see {{legal}}.
+Preferences do not imply control, either in the positive or negative.
+However, other mechanisms
+-- technical, legal, or otherwise --
+might enforce stated preferences.
+As such they will determine the consequences
+for following or not following a stated preference.
 
-Usage preferences can be overridden through express agreements
+Therefore, a stated preference allowing a use does not
+(on its own) imply a right to use it for that purpose;
+likewise, a stated preference disallowing a use does not
+(on its own) mean that the content cannot be used for that purpose.
+
+For example, a legal system might require adherence to stated prefernces,
+but allow them to be ignored for purposes such as
+free expression, safety, education, scholarship, research,
+preservation, interoperability, or accessibility. Additionally, it 
+might allow preferences to be ignored due to express agreements
 between relevant parties.
 
-There are also many situations where other priorities could override
-any usage preferences.
-Priorities that could justify ignoring preferences include --
-but are not limited to --
-free expression, safety, education, scholarship, research,
-preservation, interoperability, and accessibility.
-
-A choice to ignore a preference could be
-explicitly permitted in law
-or be based on the judgement of particular individuals or organizations.
-
-The following lists examples of cases
-where other priorities could override specific preferences:
-
-* People with accessibility needs,
-  or organizations working on their behalf,
-  might ignore a preference to disallow Automated Processing ({{all}})
-  in order to access automated captions
-  or generate accessible formats.
-
-* A cultural heritage organization could ignore a preference
-  to disallow Automated Processing ({{all}})
-  in order to provide more useful, reliable, or discoverable access
-  to historical web collections.
-
-* An educational institution could ignore a preference
-  to disallow AI Training ({{train-ai}})
-  in order to enable scholars to develop or use tools
-  to facilitate scientific or other types of research.
-
-* A website that permits user uploads could ignore a preference
-  to disallow Automated Processing ({{all}})
-  in order to develop or use tools that detect harmful content
-  according to established terms of use.
+Because enforcement is not provided by this specification,
+the consequences of ignoring preferences may vary depending upon
+whether and how it is imposed.
+In particular, it can vary depending upon how a given legal jurisdiction
+utilises preferences, including how it maps categories of use
+to specific applications.
 
 
 # Vocabulary Definition {#vocab}
@@ -527,46 +513,6 @@ the following process applies to each usage category:
 * Otherwise, no preference is expressed.
 
 This process ensures that the most restrictive preference applies.
-
-
-# Applicability and Legal Effect {#legal}
-
-This document provides a set of definitions for different categories of use,
-plus a system for associating simple preferences to each
-(allow, disallow, or no preference; see {{model}}).
-
-The categories of use that are defined as part of the vocabulary
-are not always clearly applicable or inapplicable to a particular system or application.
-The universe of possible systems is far more complex
-than any simple vocabulary is capable of describing.
-That means that some discretion could be involved
-in deciding whether a preference applies.
-
-The expression of preferences might activate regulatory or legal consequences,
-which has implications for entities that consume those preferences.
-Their interpretation of the meaning of different terms
-could have legal ramifications.
-Different jurisdictions could reach subtly different conclusions
-about the applicability of each category of use
-to specific applications.
-
-It is the responsibility of those that process affected assets to understand
-the legal implications of their use of digital assets.
-
-This includes understanding:
-
-* obligations regarding how preferences are obtained
-  (in particular, which methods of associating preferences with content
-  are expected to be understood),
-
-* the specific uses to which assets are put,
-
-* how preferences apply to the those uses, and
-
-* how relevant jurisdictions might interpret those preferences.
-
-These considerations will depend on jurisdiction
-and the details of the system.
 
 
 # Security Considerations
