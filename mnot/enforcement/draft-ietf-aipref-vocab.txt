@@ -74,6 +74,7 @@ Table of Contents
    3.  Statements of Preference
      3.1.  Conformance
      3.2.  Enforcement
+     3.3.  Applicability and Legal Effect
    4.  Vocabulary Definition
      4.1.  Automated Processing Category
      4.2.  AI Training Category
@@ -91,12 +92,11 @@ Table of Contents
      6.6.  Alternative Formats
    7.  Consulting a Preference Expression
      7.1.  Combining Preferences
-   8.  Applicability and Legal Effect
-   9.  Security Considerations
-   10. IANA Considerations
-   11. References
-     11.1.  Normative References
-     11.2.  Informative References
+   8.  Security Considerations
+   9.  IANA Considerations
+   10. References
+     10.1.  Normative References
+     10.2.  Informative References
    Acknowledgments
    Authors' Addresses
 
@@ -211,6 +211,44 @@ Table of Contents
    to use it for that purpose; likewise, a stated preference disallowing
    a use does not (on its own) mean that the content cannot be used for
    that purpose.
+
+3.3.  Applicability and Legal Effect
+
+   This document provides a set of definitions for different categories
+   of use, plus a system for associating simple preferences to each
+   (allow, disallow, or no preference; see Section 3).
+
+   The categories of use that are defined as part of the vocabulary are
+   not always clearly applicable or inapplicable to a particular system
+   or application.  The universe of possible systems is far more complex
+   than any simple vocabulary is capable of describing.  That means that
+   some discretion could be involved in deciding whether a preference
+   applies.
+
+   The expression of preferences might activate regulatory or legal
+   consequences, which has implications for entities that consume those
+   preferences.  Their interpretation of the meaning of different terms
+   could have legal ramifications.  Different jurisdictions could reach
+   subtly different conclusions about the applicability of each category
+   of use to specific applications.
+
+   It is the responsibility of those that process affected assets to
+   understand the legal implications of their use of digital assets.
+
+   This includes understanding:
+
+   *  obligations regarding how preferences are obtained (in particular,
+      which methods of associating preferences with content are expected
+      to be understood),
+
+   *  the specific uses to which assets are put,
+
+   *  how preferences apply to the those uses, and
+
+   *  how relevant jurisdictions might interpret those preferences.
+
+   These considerations will depend on jurisdiction and the details of
+   the system.
 
 4.  Vocabulary Definition
 
@@ -518,55 +556,17 @@ Table of Contents
 
    This process ensures that the most restrictive preference applies.
 
-8.  Applicability and Legal Effect
-
-   This document provides a set of definitions for different categories
-   of use, plus a system for associating simple preferences to each
-   (allow, disallow, or no preference; see Section 3).
-
-   The categories of use that are defined as part of the vocabulary are
-   not always clearly applicable or inapplicable to a particular system
-   or application.  The universe of possible systems is far more complex
-   than any simple vocabulary is capable of describing.  That means that
-   some discretion could be involved in deciding whether a preference
-   applies.
-
-   The expression of preferences might activate regulatory or legal
-   consequences, which has implications for entities that consume those
-   preferences.  Their interpretation of the meaning of different terms
-   could have legal ramifications.  Different jurisdictions could reach
-   subtly different conclusions about the applicability of each category
-   of use to specific applications.
-
-   It is the responsibility of those that process affected assets to
-   understand the legal implications of their use of digital assets.
-
-   This includes understanding:
-
-   *  obligations regarding how preferences are obtained (in particular,
-      which methods of associating preferences with content are expected
-      to be understood),
-
-   *  the specific uses to which assets are put,
-
-   *  how preferences apply to the those uses, and
-
-   *  how relevant jurisdictions might interpret those preferences.
-
-   These considerations will depend on jurisdiction and the details of
-   the system.
-
-9.  Security Considerations
+8.  Security Considerations
 
    TODO Security
 
-10.  IANA Considerations
+9.  IANA Considerations
 
    This document has no IANA actions.
 
-11.  References
+10.  References
 
-11.1.  Normative References
+10.1.  Normative References
 
    [ASCII]    Cerf, V., "ASCII format for network interchange", STD 80,
               RFC 20, DOI 10.17487/RFC0020, October 1969,
@@ -585,7 +585,7 @@ Table of Contents
               2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
               May 2017, <https://www.rfc-editor.org/rfc/rfc8174>.
 
-11.2.  Informative References
+10.2.  Informative References
 
    [ATTACH]   Illyes, G. and M. Thomson, Ed., "A Vocabulary For
               Expressing AI Usage Preferences", Work in Progress,
