@@ -235,9 +235,9 @@ Table of Contents
       to enable scholars to develop or use tools to facilitate
       scientific or other types of research.
 
-   Other such purposes might be free expression, safety, education,
-   scholarship, research, preservation, interoperability, or
-   accessibility.
+   Other examples of such purposes might include free expression,
+   safety, education, scholarship, research, preservation,
+   interoperability, or accessibility.
 
    Additionally, a legal system might allow preferences to be ignored
    due to express agreements between relevant parties.
