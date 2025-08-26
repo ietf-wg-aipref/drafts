@@ -188,7 +188,7 @@ Therefore, a stated preference allowing a use does not
 likewise, a stated preference disallowing a use does not
 (on its own) mean that the content cannot be used for that purpose.
 
-For example, a legal system might require adherence to stated prefernces,
+For example, a legal system might require adherence to stated preferences,
 but allow them to be ignored for purposes such as
 free expression, safety, education, scholarship, research,
 preservation, interoperability, or accessibility. Additionally, it
