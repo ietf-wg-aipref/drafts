@@ -181,6 +181,47 @@ For example, a stated preference allowing a use does not
 likewise, a stated preference disallowing a use does not
 (on its own) mean that the content cannot be used for that purpose.
 
+
+## Applicability and Legal Effect {#legal}
+
+This document provides a set of definitions for different categories of use,
+plus a system for associating simple preferences to each
+(allow, disallow, or no preference; see {{model}}).
+
+The categories of use that are defined as part of the vocabulary
+are not always clearly applicable or inapplicable to a particular system or application.
+The universe of possible systems is far more complex
+than any simple vocabulary is capable of describing.
+That means that some discretion could be involved
+in deciding whether a preference applies.
+
+The expression of preferences might activate regulatory or legal consequences,
+which has implications for entities that consume those preferences.
+Their interpretation of the meaning of different terms
+could have legal ramifications.
+Different jurisdictions could reach subtly different conclusions
+about the applicability of each category of use
+to specific applications.
+
+It is the responsibility of those that process affected assets to understand
+the legal implications of their use of digital assets.
+
+This includes understanding:
+
+* obligations regarding how preferences are obtained
+  (in particular, which methods of associating preferences with content
+  are expected to be understood),
+
+* the specific uses to which assets are put,
+
+* how preferences apply to the those uses, and
+
+* how relevant jurisdictions might interpret those preferences.
+
+These considerations will depend on jurisdiction
+and the details of the system.
+
+
 # Vocabulary Definition {#vocab}
 
 This section defines the categories of use in the vocabulary.
@@ -491,46 +532,6 @@ the following process applies to each usage category:
 * Otherwise, no preference is expressed.
 
 This process ensures that the most restrictive preference applies.
-
-
-# Applicability and Legal Effect {#legal}
-
-This document provides a set of definitions for different categories of use,
-plus a system for associating simple preferences to each
-(allow, disallow, or no preference; see {{model}}).
-
-The categories of use that are defined as part of the vocabulary
-are not always clearly applicable or inapplicable to a particular system or application.
-The universe of possible systems is far more complex
-than any simple vocabulary is capable of describing.
-That means that some discretion could be involved
-in deciding whether a preference applies.
-
-The expression of preferences might activate regulatory or legal consequences,
-which has implications for entities that consume those preferences.
-Their interpretation of the meaning of different terms
-could have legal ramifications.
-Different jurisdictions could reach subtly different conclusions
-about the applicability of each category of use
-to specific applications.
-
-It is the responsibility of those that process affected assets to understand
-the legal implications of their use of digital assets.
-
-This includes understanding:
-
-* obligations regarding how preferences are obtained
-  (in particular, which methods of associating preferences with content
-  are expected to be understood),
-
-* the specific uses to which assets are put,
-
-* how preferences apply to the those uses, and
-
-* how relevant jurisdictions might interpret those preferences.
-
-These considerations will depend on jurisdiction
-and the details of the system.
 
 
 # Security Considerations
