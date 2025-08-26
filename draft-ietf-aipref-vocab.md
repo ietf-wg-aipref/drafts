@@ -210,7 +210,7 @@ but allow them to be ignored for specified purposes, such as:
   in order to enable scholars to develop or use tools
   to facilitate scientific or other types of research.
 
-Addtional such purposes might be
+Other such purposes might be
 free expression, safety, education, scholarship, research,
 preservation, interoperability, or accessibility.
 
