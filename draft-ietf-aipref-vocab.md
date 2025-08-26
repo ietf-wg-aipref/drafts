@@ -179,7 +179,7 @@ Preferences do not imply control, either in the positive or negative.
 For example, a stated preference allowing a use does not
 (on its own) imply a right to use it for that purpose;
 likewise, a stated preference disallowing a use does not
-(on its own) mean that the content can never be used for that purpose.
+(on its own) mean that the content cannot be used for that purpose.
 
 # Vocabulary Definition {#vocab}
 
