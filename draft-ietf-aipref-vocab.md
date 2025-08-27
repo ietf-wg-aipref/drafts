@@ -226,7 +226,7 @@ Because enforcement is not provided by this specification,
 the consequences of ignoring preferences may vary depending upon
 whether and how it is imposed.
 In particular, it can vary depending upon how a given legal jurisdiction
-utilises preferences, including how it maps categories of use
+recognizes preferences, including how it maps categories of use
 to specific applications.
 
 
