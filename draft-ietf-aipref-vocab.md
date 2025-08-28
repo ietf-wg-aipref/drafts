@@ -181,12 +181,11 @@ and thereby determine the consequences of following or not following
 a stated preference.
 
 A data processor MAY choose to respect preferences that it has 
-discovered, according to:
-
-*	an understanding of the nature of the processing being performed 
-and how it corresponds to the usage categories where preferences 
-have been expressed, and
-* the applicable legal context.
+discovered, according to
+an understanding of how the asset is used,
+how that usage corresponds to the usage categories
+where preferences have been expressed,
+and the applicable legal context.
 
 Usage preferences can be overridden through express agreements 
 between relevant parties, by explicit provisions of law, or 
