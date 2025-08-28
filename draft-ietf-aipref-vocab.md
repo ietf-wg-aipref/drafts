@@ -220,7 +220,10 @@ where other priorities could override specific preferences:
   in order to develop or use tools that detect harmful content
   according to established terms of use.
 
-Because enforcement is not provided by this specification, the consequences of ignoring preferences may vary depending upon how a given legal jurisdiction recognizes preferences, including how it maps categories of use to specific applications.
+Because enforcement is not provided by this specification,
+the consequences of ignoring preferences may vary
+depending upon how a given legal jurisdiction recognizes preferences;
+see {{applicability}}.
 
 # Vocabulary Definition {#vocab}
 
