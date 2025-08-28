@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-08-26T01:57:02.360071+00:00",
+  "timestamp": "2025-08-28T01:52:43.390759+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -5343,21 +5343,21 @@
       "id": "PR_kwDOOWk1-s6lKXoS",
       "title": "A suggestion for 3.2",
       "url": "https://github.com/ietf-wg-aipref/drafts/pull/117",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "mnot",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "",
       "createdAt": "2025-08-25T08:04:43Z",
-      "updatedAt": "2025-08-26T01:35:36Z",
+      "updatedAt": "2025-08-26T04:06:48Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "9835d9fdee4f52d43194f857cc732acf051bfa67",
       "headRepository": "ietf-wg-aipref/drafts",
       "headRefName": "mnot/enforcement",
       "headRefOid": "a2533ea27f34e1cfe82025b5ec620d5fc75877bd",
-      "closedAt": null,
+      "closedAt": "2025-08-26T04:06:47Z",
       "mergedAt": null,
       "mergedBy": null,
       "mergeCommit": null,
@@ -5382,6 +5382,13 @@
           "body": "I've moved applicability/legal effect up; it likely needs some editorial adjustment.",
           "createdAt": "2025-08-26T01:27:04Z",
           "updatedAt": "2025-08-26T01:27:04Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Closing in favour of #118. ",
+          "createdAt": "2025-08-26T04:06:47Z",
+          "updatedAt": "2025-08-26T04:06:47Z"
         }
       ],
       "reviews": [
@@ -5467,6 +5474,200 @@
               "body": "This is probably most redundant, but there is still a useful point: how a category applies to a given application could be a judgment call and that might vary between jurisdictions (if there is a legal effect).",
               "createdAt": "2025-08-26T01:32:14Z",
               "updatedAt": "2025-08-26T01:35:36Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 118,
+      "id": "PR_kwDOOWk1-s6lU4TG",
+      "title": "Another 3.2 suggestion",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/118",
+      "state": "OPEN",
+      "author": "mnot",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2025-08-26T04:06:36Z",
+      "updatedAt": "2025-08-27T14:17:04Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "9835d9fdee4f52d43194f857cc732acf051bfa67",
+      "headRepository": "ietf-wg-aipref/drafts",
+      "headRefName": "mnot/3.2rev2",
+      "headRefOid": "d6bb9001e9ff8e2b9c03e9edbac4bab4e8c6b688",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [
+        {
+          "author": "paul2keller",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "I have taken a close look at the changes proposed in this PR and I do not think that we should go down this route (other than that still think it is a good idea to consolidate the the two sections into one). The main change i am objecting here is that the new version (especially way the examples are phrased) quite substantially narrows the safeguards to cases explicitly recognized in law. This collapses the wider discretionary space acknowledged in the current draft\u2014where law, established practice, or societal values can justify overriding preferences\u2014into a much narrower one defined only by explicit legal permission.\r\n\r\nI have made another attempt here #119",
+          "createdAt": "2025-08-27T14:17:04Z",
+          "updatedAt": "2025-08-27T14:17:04Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWk1-s67_nsb",
+          "commit": {
+            "abbreviatedOid": "fc0590e"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-08-26T05:43:53Z",
+          "updatedAt": "2025-08-26T05:43:53Z",
+          "comments": [
+            {
+              "originalPosition": 84,
+              "body": "```suggestion\r\nregulates preferences, including how it maps categories of use\r\n```",
+              "createdAt": "2025-08-26T05:43:53Z",
+              "updatedAt": "2025-08-26T05:43:54Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s67_s6A",
+          "commit": {
+            "abbreviatedOid": "fc0590e"
+          },
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-08-26T05:55:08Z",
+          "updatedAt": "2025-08-26T05:55:08Z",
+          "comments": [
+            {
+              "originalPosition": 84,
+              "body": "hmm, they're not regulating preferences, preferences are a potential tool for them to use in regulating _other_ behaviour.",
+              "createdAt": "2025-08-26T05:55:08Z",
+              "updatedAt": "2025-08-26T05:55:08Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s67_tLU",
+          "commit": {
+            "abbreviatedOid": "fc0590e"
+          },
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-08-26T05:55:43Z",
+          "updatedAt": "2025-08-26T05:55:44Z",
+          "comments": [
+            {
+              "originalPosition": 45,
+              "body": "```suggestion\r\nFor example, a legal system might require adherence to stated preferences,\r\n```",
+              "createdAt": "2025-08-26T05:55:43Z",
+              "updatedAt": "2025-08-26T05:55:44Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s68EyrL",
+          "commit": {
+            "abbreviatedOid": "ac781a4"
+          },
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-08-26T12:16:46Z",
+          "updatedAt": "2025-08-26T12:16:47Z",
+          "comments": [
+            {
+              "originalPosition": 80,
+              "body": "```suggestion\r\nOther examples of such purposes might include\r\n```",
+              "createdAt": "2025-08-26T12:16:46Z",
+              "updatedAt": "2025-08-26T12:16:47Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s68N7CP",
+          "commit": {
+            "abbreviatedOid": "acc8e64"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-08-27T00:26:41Z",
+          "updatedAt": "2025-08-27T00:26:41Z",
+          "comments": [
+            {
+              "originalPosition": 84,
+              "body": "```suggestion\r\nrecognizes preferences, including how it maps categories of use\r\n```",
+              "createdAt": "2025-08-27T00:26:41Z",
+              "updatedAt": "2025-08-27T00:26:41Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 119,
+      "id": "PR_kwDOOWk1-s6lnD2O",
+      "title": "Combine Legal and Conformance section",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/119",
+      "state": "OPEN",
+      "author": "paul2keller",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Another attempt to combine the legal effects and conformance sections that stays closer to the language of the existing conformance section than #118",
+      "createdAt": "2025-08-27T14:16:10Z",
+      "updatedAt": "2025-08-27T23:59:12Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "9835d9fdee4f52d43194f857cc732acf051bfa67",
+      "headRepository": "ietf-wg-aipref/drafts",
+      "headRefName": "paul2keller-3.2-alt",
+      "headRefOid": "4b4f866a4aa9401b64ff00e842512151e59dcf87",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWk1-s68fEUu",
+          "commit": {
+            "abbreviatedOid": "4b4f866"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "This is turning out to be a difficult needle to successfully thread.  As with other genuine attempts to improve the text, this is helpful.  I just don't know what razor to apply to decide which is best.",
+          "createdAt": "2025-08-27T23:56:22Z",
+          "updatedAt": "2025-08-27T23:59:12Z",
+          "comments": [
+            {
+              "originalPosition": 69,
+              "body": "```suggestion\r\nBecause enforcement is not provided by this specification,\r\nthe consequences of ignoring preferences may vary\r\ndepending upon how a given legal jurisdiction recognizes preferences;\r\nsee {{applicability}}.\r\n```",
+              "createdAt": "2025-08-27T23:56:22Z",
+              "updatedAt": "2025-08-27T23:59:12Z"
+            },
+            {
+              "originalPosition": 26,
+              "body": "```suggestion\r\n## Applicability and Effect {#applicability}\r\n```",
+              "createdAt": "2025-08-27T23:56:29Z",
+              "updatedAt": "2025-08-27T23:59:12Z"
+            },
+            {
+              "originalPosition": 48,
+              "body": "A list of two might just be better as a sentence:\r\n\r\n```suggestion\r\ndiscovered, according to\r\nan understanding of how the asset is used,\r\nhow that usage corresponds to the usage categories\r\nwhere preferences have been expressed,\r\nand the applicable legal context.\r\n```",
+              "createdAt": "2025-08-27T23:57:59Z",
+              "updatedAt": "2025-08-27T23:59:12Z"
             }
           ]
         }
