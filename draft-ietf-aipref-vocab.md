@@ -164,7 +164,7 @@ if it correctly follows all normative requirements that apply to it.
 The process of obtaining preferences has very limited scope
 for variation between implementations.
 
-## Applicability and Effect 
+## Applicability and Effect {#applicability}
 
 This specification provides a set of definitions for different 
 categories of use, plus a system for associating simple 
