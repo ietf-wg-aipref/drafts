@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-08-28T01:52:43.390759+00:00",
+  "timestamp": "2025-08-31T01:58:20.633012+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -5626,18 +5626,33 @@
       "labels": [],
       "body": "Another attempt to combine the legal effects and conformance sections that stays closer to the language of the existing conformance section than #118",
       "createdAt": "2025-08-27T14:16:10Z",
-      "updatedAt": "2025-08-27T23:59:12Z",
+      "updatedAt": "2025-08-29T15:08:41Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "9835d9fdee4f52d43194f857cc732acf051bfa67",
       "headRepository": "ietf-wg-aipref/drafts",
       "headRefName": "paul2keller-3.2-alt",
-      "headRefOid": "4b4f866a4aa9401b64ff00e842512151e59dcf87",
+      "headRefOid": "5e04bfac5f06bcb9c3ebe13efb7f519577f116af",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
       "mergeCommit": null,
-      "comments": [],
+      "comments": [
+        {
+          "author": "paul2keller",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "> This is turning out to be a difficult needle to successfully thread. As with other genuine attempts to improve the text, this is helpful. I just don't know what razor to apply to decide which is best.\r\n\r\nyes this is tricky. for me there are two aspects where I would consider this to preserve important elements of the original language we had before attempts to merge the two sections: \r\n\r\n1. the very unambiguous `MAY` in \"A data processor MAY choose to respect preferences that is has discovered\" that for me is a very important signal that we are talking about \"preferences\" that in itself do not have legal effect, and \r\n2. the \"could ignore a preference\" wording in the examples, that in #118 in some of the examples has changed into \"might be allowed by a legal system\" which implies that absent an explicit legal authorization such the preference must be followed (at which point is ceases to be a \"mere\" preference). \r\n\r\nbut you are right that these are all subjective choices and there is formal way of establishing which approach is better.",
+          "createdAt": "2025-08-28T06:27:44Z",
+          "updatedAt": "2025-08-28T06:27:44Z"
+        },
+        {
+          "author": "felixreda",
+          "authorAssociation": "NONE",
+          "body": "> 1. the very unambiguous `MAY` in \"A data processor MAY choose to respect preferences that is has discovered\" that for me is a very important signal that we are talking about \"preferences\" that in itself do not have legal effect, and\r\n> 2. the \"could ignore a preference\" wording in the examples, that in [Another 3.2 suggestion\u00a0#118](https://github.com/ietf-wg-aipref/drafts/pull/118) in some of the examples has changed into \"might be allowed by a legal system\" which implies that absent an explicit legal authorization such the preference must be followed (at which point is ceases to be a \"mere\" preference).\r\n\r\nI had exactly the same reactions to reading the other propsal, so I think this is a very valuable rewrite.",
+          "createdAt": "2025-08-29T15:08:41Z",
+          "updatedAt": "2025-08-29T15:08:41Z"
+        }
+      ],
       "reviews": [
         {
           "id": "PRR_kwDOOWk1-s68fEUu",
@@ -5668,6 +5683,86 @@
               "body": "A list of two might just be better as a sentence:\r\n\r\n```suggestion\r\ndiscovered, according to\r\nan understanding of how the asset is used,\r\nhow that usage corresponds to the usage categories\r\nwhere preferences have been expressed,\r\nand the applicable legal context.\r\n```",
               "createdAt": "2025-08-27T23:57:59Z",
               "updatedAt": "2025-08-27T23:59:12Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s68zhCR",
+          "commit": {
+            "abbreviatedOid": "5e04bfa"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-08-29T07:07:25Z",
+          "updatedAt": "2025-08-29T07:07:25Z",
+          "comments": [
+            {
+              "originalPosition": 62,
+              "body": "I think that I prefer Mark's take on this list of things, both the framing and the \"might be allowed by a legal system to ignore a preference\" language.",
+              "createdAt": "2025-08-29T07:07:25Z",
+              "updatedAt": "2025-08-29T07:07:47Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s68zrGJ",
+          "commit": {
+            "abbreviatedOid": "5e04bfa"
+          },
+          "author": "paul2keller",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-08-29T07:22:01Z",
+          "updatedAt": "2025-08-29T07:22:01Z",
+          "comments": [
+            {
+              "originalPosition": 62,
+              "body": "you mean replacing lines 198 and 199 with: \r\n\r\n> For example, a legal system might require adherence to stated preferences,\r\nbut allow them to be ignored for specified purposes, such as:",
+              "createdAt": "2025-08-29T07:22:01Z",
+              "updatedAt": "2025-08-29T07:22:01Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s680LtA",
+          "commit": {
+            "abbreviatedOid": "5e04bfa"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-08-29T08:05:25Z",
+          "updatedAt": "2025-08-29T08:05:26Z",
+          "comments": [
+            {
+              "originalPosition": 62,
+              "body": "And probably the other tweaks made to each of the list items.  I know it's almost redundant, but I've learned that spending the extra words on being extra precise is often necessary.",
+              "createdAt": "2025-08-29T08:05:25Z",
+              "updatedAt": "2025-08-29T08:05:26Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s685Hyh",
+          "commit": {
+            "abbreviatedOid": "5e04bfa"
+          },
+          "author": "felixreda",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-08-29T15:03:17Z",
+          "updatedAt": "2025-08-29T15:03:18Z",
+          "comments": [
+            {
+              "originalPosition": 62,
+              "body": "I prefer @paul2keller s proposed language insofar as it doesn't refer to a legal system that allows ignoring a certain preference. By default, anything that is not expressly prohibited by a legal system is allowed. Therefore, a legal system rarely is explicit in what it allows. Consequently, \"a legal system might ... allow them to be ignored\" could create misunderstandings where people might read this as requiring an explicit legal provision that allows somebody to ignore a stated preference. In reality, unless a legal system explicitly requires somebody to _respect_ a stated preference, ignoring it is allowed.",
+              "createdAt": "2025-08-29T15:03:17Z",
+              "updatedAt": "2025-08-29T15:03:18Z"
             }
           ]
         }
