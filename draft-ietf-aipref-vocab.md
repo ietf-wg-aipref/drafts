@@ -268,7 +268,9 @@ This section defines the categories of use in the vocabulary.
 
 ## Automated Processing Category {#all}
 
-The act of using one or more assets in the context of automated processing aimed at analyzing text and data in order to generate information which includes but is not limited to patterns, trends and correlations.
+The act of using automated processing on one or more assets
+to analyze text and data in order to generate information
+which includes but is not limited to patterns, trends and correlations.
 
 The use of assets for automated processing encompasses all the subsequent categories.
 
