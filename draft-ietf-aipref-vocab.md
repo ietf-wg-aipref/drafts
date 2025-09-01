@@ -118,6 +118,10 @@ Machine Learning (ML):
   to produce or improve a model that encodes the relationship
   between the data and human-defined objectives.
 
+Search Application:
+: A search application is a system that enables users
+  locate items on the internet or in a specific data store.
+
 
 # Statements of Preference {#model}
 
