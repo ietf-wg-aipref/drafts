@@ -98,7 +98,7 @@ This document uses the following terms:
 
 {: newline="true" spacing="compact"}
 Artificial Intelligence (AI):
-: An engineered system that,
+: An engineered system of sufficient complexity that,
   for a given set of human-defined objectives,
   learns from data to generate outputs
   such as content, predictions, recommendations, or decisions.
