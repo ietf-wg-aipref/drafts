@@ -1191,6 +1191,9 @@ of restrictions or permissions for use of digital assets by such systems.<a href
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4.2.4">
                 <p id="section-toc.1-1.4.2.4.1"><a href="#section-4.4" class="auto internal xref">4.4</a>.  <a href="#name-search-category" class="internal xref">Search Category</a></p>
 </li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4.2.5">
+                <p id="section-toc.1-1.4.2.5.1"><a href="#section-4.5" class="auto internal xref">4.5</a>.  <a href="#name-vocabulary-extensions" class="internal xref">Vocabulary Extensions</a></p>
+</li>
             </ul>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5">
@@ -1201,9 +1204,6 @@ of restrictions or permissions for use of digital assets by such systems.<a href
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5.2.2">
                 <p id="section-toc.1-1.5.2.2.1"><a href="#section-5.2" class="auto internal xref">5.2</a>.  <a href="#name-more-specific-instructions" class="internal xref">More Specific Instructions</a></p>
-</li>
-              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5.2.3">
-                <p id="section-toc.1-1.5.2.3.1"><a href="#section-5.3" class="auto internal xref">5.3</a>.  <a href="#name-vocabulary-extensions" class="internal xref">Vocabulary Extensions</a></p>
 </li>
             </ul>
 </li>
@@ -1556,6 +1556,17 @@ are not covered by this category of use.<a href="#section-4.4-4" class="pilcrow"
 <p id="section-4.4-5">The use of assets for Search is a proper subset of Automated Processing usage.<a href="#section-4.4-5" class="pilcrow">¶</a></p>
 </section>
 </div>
+<div id="vocab-extension">
+<section id="section-4.5">
+        <h3 id="name-vocabulary-extensions">
+<a href="#section-4.5" class="section-number selfRef">4.5. </a><a href="#name-vocabulary-extensions" class="section-name selfRef">Vocabulary Extensions</a>
+        </h3>
+<p id="section-4.5-1">Systems referencing the vocabulary <span class="bcp14">MUST NOT</span> introduce additional categories
+that include existing categories defined in the vocabulary.
+That is, new categories of use can be defined as a subset of an existing category,
+but not a superset.<a href="#section-4.5-1" class="pilcrow">¶</a></p>
+</section>
+</div>
 </section>
 </div>
 <div id="usage">
@@ -1640,14 +1651,6 @@ that cannot override contractual agreements or more specific statements.<a href=
         </ul>
 <p id="section-5.2-3">For instance, a statement of preferences might indicate that the use of an asset is disallowed for AI Training.
 If arrangements, such as legal agreements, exist that explicitly permit the use of that asset, those arrangements likely apply, unless the terms of the arrangement explicitly say otherwise.<a href="#section-5.2-3" class="pilcrow">¶</a></p>
-</section>
-</div>
-<div id="vocab-extension">
-<section id="section-5.3">
-        <h3 id="name-vocabulary-extensions">
-<a href="#section-5.3" class="section-number selfRef">5.3. </a><a href="#name-vocabulary-extensions" class="section-name selfRef">Vocabulary Extensions</a>
-        </h3>
-<p id="section-5.3-1">Systems referencing the vocabulary <span class="bcp14">MUST NOT</span> introduce additional categories that include existing categories defined in the vocabulary or otherwise include additional hierarchical relationships.<a href="#section-5.3-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 </section>
@@ -1766,7 +1769,7 @@ Again, this process can use ASCII or UTF-8.<a href="#section-6.3-3" class="pilcr
 <p id="section-6.4-1">There are two ways by which this syntax might be extended:
 the addition of new labels and the addition of parameters.<a href="#section-6.4-1" class="pilcrow">¶</a></p>
 <p id="section-6.4-2">New labels might be defined to correspond to new usage categories.
-<a href="#vocab-extension" class="auto internal xref">Section 5.3</a> addresses the considerations for defining new categories.
+<a href="#vocab-extension" class="auto internal xref">Section 4.5</a> addresses the considerations for defining new categories.
 New labels might also be defined for other types of extension
 that do not assign a preference to a usage category.
 In either case, when processing a parsed Dictionary to obtain preferences,

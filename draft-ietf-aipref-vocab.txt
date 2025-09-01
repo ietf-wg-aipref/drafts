@@ -79,10 +79,10 @@ Table of Contents
      4.2.  AI Training Category
      4.3.  Generative AI Training Category
      4.4.  Search Category
+     4.5.  Vocabulary Extensions
    5.  Applying Statements of Preference
      5.1.  Combining Preferences
      5.2.  More Specific Instructions
-     5.3.  Vocabulary Extensions
    6.  Exemplary Serialization Format
      6.1.  Usage Category Labels
      6.2.  Preference Labels
@@ -343,6 +343,13 @@ Table of Contents
    The use of assets for Search is a proper subset of Automated
    Processing usage.
 
+4.5.  Vocabulary Extensions
+
+   Systems referencing the vocabulary MUST NOT introduce additional
+   categories that include existing categories defined in the
+   vocabulary.  That is, new categories of use can be defined as a
+   subset of an existing category, but not a superset.
+
 5.  Applying Statements of Preference
 
    After acquiring a statement of preference, which might use the
@@ -408,12 +415,6 @@ Table of Contents
    legal agreements, exist that explicitly permit the use of that asset,
    those arrangements likely apply, unless the terms of the arrangement
    explicitly say otherwise.
-
-5.3.  Vocabulary Extensions
-
-   Systems referencing the vocabulary MUST NOT introduce additional
-   categories that include existing categories defined in the vocabulary
-   or otherwise include additional hierarchical relationships.
 
 6.  Exemplary Serialization Format
 
@@ -484,7 +485,7 @@ Table of Contents
    addition of new labels and the addition of parameters.
 
    New labels might be defined to correspond to new usage categories.
-   Section 5.3 addresses the considerations for defining new categories.
+   Section 4.5 addresses the considerations for defining new categories.
    New labels might also be defined for other types of extension that do
    not assign a preference to a usage category.  In either case, when
    processing a parsed Dictionary to obtain preferences, any unknown
