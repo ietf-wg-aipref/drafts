@@ -180,8 +180,8 @@ legal, contractual, or otherwise—might enforce stated preferences
 and thereby determine the consequences of following or not following 
 a stated preference.
 
-A data processor MAY choose to respect preferences that it has 
-discovered, according to
+An entity that receives usage preferences MAY choose to respect
+those preferences it has discovered, according to
 an understanding of how the asset is used,
 how that usage corresponds to the usage categories
 where preferences have been expressed,
