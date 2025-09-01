@@ -166,18 +166,18 @@ for variation between implementations.
 
 ## Applicability and Effect {#applicability}
 
-This specification provides a set of definitions for different 
-categories of use, plus a system for associating simple 
+This specification provides a set of definitions for different
+categories of use, plus a system for associating simple
 preferences to each (allow, disallow, or no preference; see {{model}}).
 
-This specification does not provide any enforcement mechanism 
-for those preferences, and conformance to it does not encompass 
+This specification does not provide any enforcement mechanism
+for those preferences, and conformance to it does not encompass
 whether preferences are actually respected during data processing.
 
-Preferences do not themselves create rights or prohibitions, 
-either in the positive or the negative. Other mechanisms—technical, 
-legal, contractual, or otherwise—might enforce stated preferences 
-and thereby determine the consequences of following or not following 
+Preferences do not themselves create rights or prohibitions,
+either in the positive or the negative. Other mechanisms—technical,
+legal, contractual, or otherwise—might enforce stated preferences
+and thereby determine the consequences of following or not following
 a stated preference.
 
 An entity that receives usage preferences MAY choose to respect
@@ -187,12 +187,12 @@ how that usage corresponds to the usage categories
 where preferences have been expressed,
 and the applicable legal context.
 
-Usage preferences can be overridden through express agreements 
-between relevant parties, by explicit provisions of law, or 
-through the exercise of discretion in situations where other 
-priorities justify doing so. Priorities that could justify 
-ignoring preferences include—but are not limited to—free 
-expression, safety, education, scholarship, research, 
+Usage preferences can be overridden through express agreements
+between relevant parties, by explicit provisions of law, or
+through the exercise of discretion in situations where other
+priorities justify doing so. Priorities that could justify
+ignoring preferences include—but are not limited to—free
+expression, safety, education, scholarship, research,
 preservation, interoperability, and accessibility.
 
 The following lists examples of cases
