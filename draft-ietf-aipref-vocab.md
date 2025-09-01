@@ -309,6 +309,14 @@ are not covered by this category of use.
 The use of assets for Search is a proper subset of Automated Processing usage.
 
 
+## Vocabulary Extensions {#vocab-extension}
+
+Systems referencing the vocabulary MUST NOT introduce additional categories
+that include existing categories defined in the vocabulary.
+That is, new categories of use can be defined as a subset of an existing category,
+but not a superset.
+
+
 # Applying Statements of Preference {#usage}
 
 After acquiring a statement of preference,
@@ -376,11 +384,6 @@ in two ways:
 
 For instance, a statement of preferences might indicate that the use of an asset is disallowed for AI Training.
 If arrangements, such as legal agreements, exist that explicitly permit the use of that asset, those arrangements likely apply, unless the terms of the arrangement explicitly say otherwise.
-
-
-## Vocabulary Extensions {#vocab-extension}
-
-Systems referencing the vocabulary MUST NOT introduce additional categories that include existing categories defined in the vocabulary or otherwise include additional hierarchical relationships.
 
 
 # Exemplary Serialization Format {#format}
