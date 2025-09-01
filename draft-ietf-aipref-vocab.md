@@ -84,7 +84,7 @@ including the applicability of exceptions and limitations to copyright.
 {{vocab}} defines the terms of the vocabulary.
 {{usage}} explains how to use AI Preferences in a data processing application,
 and {{format}} describes a way to serialize preferences into a string.
-{{consulting}} describes an algorithm for determining the value of a specific preference.
+{{usage}} describes a process for determining the preference for a category of use.
 
 {{ATTACH}} defines mechanisms to associate preferences with assets.
 Other means of association might be defined separately in the future.
@@ -127,15 +127,15 @@ Search Application:
 
 The vocabulary is a set of categories,
 each of which is defined to cover a class of usage for assets.
-{{vocab}} defines these categories in more detail.
+{{vocab}} defines the core set of usage categories in detail.
 
-A statement of preference is made about an asset.
-Statements of preferences can assign preferences
+A statement of preference -- or usage preference -- is made about an asset.
+Statements of preferences can assign a preference
 to each of the categories of use in the vocabulary.
 Preferences regarding each category can be expressed
 either to allow or disallow the usage associated with the category.
 
-A statement of preferences can express preferences
+A statement of preference can express a preference
 about some, all, or none of the categories from the vocabulary.
 This can mean that no preference is expressed for a given usage category.
 
@@ -151,21 +151,28 @@ In comparison, an explicit preference regarding AI Training might disallow that 
 while permitting other usage within the Automated Processing category.
 
 After processing a statement of preferences
-the recipient assigns each category of use
+the recipient associates each category of use
 one of three preference values: "allowed", "disallowed", or "unknown".
-
 In the absence of a statement of preference,
 all usage categories are assigned a preference value of "unknown".
+
+The process for consulting a statement of preference is defined in {{usage}}.
+
+Different declaring parties might each make their own statement of preference
+regarding a particular asset.
+The process for managing multiple statements of preference is defined in {{combine}}.
+
+An exemplary syntax for statements of preference is defined in {{format}}.
 
 
 ## Conformance
 
 This document and {{ATTACH}}
-describe how usage preferences are associated with assets.
+describe how statements of preference are associated with assets.
 An implementation is conformant to these specifications
 if it correctly follows all normative requirements that apply to it.
 
-The process of obtaining preferences has very limited scope
+The process of obtaining a statement of preference has very limited scope
 for variation between implementations.
 
 ## Applicability and Effect {#applicability}
@@ -310,11 +317,58 @@ That is, new categories of use can be defined as a subset of an existing categor
 but not a superset.
 
 
-# Usage {#usage}
+# Applying Statements of Preference {#usage}
 
-The vocabulary is used by referencing the terms defined in {{vocab}},
-directly or via mappings,
-in accordance with how they are defined in this document.
+After acquiring a statement of preference,
+which might use the process in {{processing}},
+an application can request the status of a specific usage category.
+
+A statement of preference can be evaluated
+for a single usage category
+as follows:
+
+1. If the expression contains an explicit preference
+   regarding that category of use --
+   either to allow or disallow --
+   that is the result.
+
+2. Otherwise, if the usage category is a proper subset
+   of another usage category,
+   recursively apply this process to that category
+   and use the result of that process.
+
+3. Otherwise, no preference is expressed.
+
+This process results in one of three potential answers:
+allow, disallow, and unknown.
+Applications can use the answer to guide their behavior.
+
+One approach for dealing with an "unknown" outcome
+is to assign a default.
+This document takes no position on what default might be chosen
+as that will depend on policy constraints
+beyond the scope of this specification.
+
+
+## Combining Preferences {#combine}
+
+The application might have multiple statements of preference,
+obtained using different methods
+or from different declaring parties.
+This might result in conflicting answers.
+
+Absent some other means of resolving conflicts,
+the following process applies to each usage category:
+
+* If any preference expression indicates that the usage is disallowed,
+  the result is that the usage is disallowed.
+
+* Otherwise, if any preference preference allows the usage,
+  the result is that the usage is allowed.
+
+* Otherwise, no preference is expressed.
+
+This process ensures that the most restrictive preference applies.
 
 
 ## More Specific Instructions
@@ -488,58 +542,6 @@ might only provide the ability to convey preferences
 for a subset of the categories of use.
 A mapping might then define that no preference is associated with other categories.
 
-
-# Consulting a Preference Expression {#consulting}
-
-After processing a preference expression ({{processing}}),
-an application can request the status of a specific usage category.
-
-A single preference expression can be evaluated for a usage category
-as follows:
-
-1. If the expression contains an explicit preference
-   (either to allow or disallow),
-   that is the result.
-
-2. Otherwise, if the usage category is a proper subset
-   of another usage category,
-   recursively apply this process to that category
-   and use the result of that process.
-
-3. Otherwise, no preference is expressed.
-
-This process results in three potential answers:
-allow, disallow, and no preference.
-Applications can use the answer to guide their behavior.
-
-One approach for dealing with an "unknown" or "no preference" answer
-is to assign a default.
-This document takes no position on what default might be chosen
-as that will depend on policy constraints
-beyond the scope of this specification.
-
-
-## Combining Preferences {#combining}
-
-The application might have multiple preference expressions,
-obtained using different methods.
-
-If multiple preference expressions are active,
-all preference expressions are consulted ({{consulting}}).
-This might result in conflicting answers.
-
-Absent some other means of resolving conflicts,
-the following process applies to each usage category:
-
-* If any preference expression indicates that the usage is disallowed,
-  the result is that the usage is disallowed.
-
-* Otherwise, if any preference preference allows the usage,
-  the result is that the usage is allowed.
-
-* Otherwise, no preference is expressed.
-
-This process ensures that the most restrictive preference applies.
 
 # Security Considerations
 
