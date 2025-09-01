@@ -220,9 +220,8 @@ where other priorities could override specific preferences:
   according to established terms of use.
 
 Because enforcement is not provided by this specification,
-the consequences of ignoring preferences may vary
-depending upon how a given legal jurisdiction recognizes preferences;
-see {{applicability}}.
+the consequences of ignoring preferences could vary
+depending upon how a given legal jurisdiction recognizes preferences.
 
 # Vocabulary Definition {#vocab}
 
