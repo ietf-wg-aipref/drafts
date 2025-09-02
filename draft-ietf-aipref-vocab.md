@@ -323,10 +323,7 @@ but not a superset.
 
 After acquiring a statement of preference,
 which might use the process in {{processing}},
-an application can request the status of a specific usage category.
-
-A statement of preference can be evaluated
-for a single usage category
+an application can determine the status of a specific usage category
 as follows:
 
 1. If the expression contains an explicit preference
