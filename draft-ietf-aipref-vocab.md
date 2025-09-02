@@ -345,10 +345,8 @@ allow, disallow, and unknown.
 Applications can use the answer to guide their behavior.
 
 One approach for dealing with an "unknown" outcome
-is to assign a default.
-This document takes no position on what default might be chosen
-as that will depend on policy constraints
-beyond the scope of this specification.
+is to assign a default value.
+This document takes no position on what default might be assigned.
 
 
 ## Combining Preferences {#combine}
