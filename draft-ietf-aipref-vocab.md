@@ -475,13 +475,10 @@ To process a series of bytes to recover the expressed preferences,
 those bytes are parsed into a Dictionary ({{Section 4.2.2 of FIELDS}}),
 then preferences are assigned to each usage category in the vocabulary.
 
-The parsing algorithm for a Dictionary
-produces a keyed collection of values,
-each with a possibly-empty set of parameters.
-The parsing process guarantees that each key has at most one value and parameters.
+This algorithm produces a keyed collection of values, where each key has at most one value and optional parameters.
 
-To obtain preferences for each of the categories in the vocabulary,
-iterate through the categories.
+To obtain preferences,
+iterate through the defined categories in the vocabulary.
 For the label that corresponds to that category (see {{t-category-labels}}),
 obtain the corresponding value from the collection,
 disregarding any parameters.
@@ -502,10 +499,10 @@ and Token values that are other than `y` or `n`.
 All of these are not errors,
 they only result in no preference being inferred.
 
-An important note about this process and format is that,
+It is important to note that
 if the same key appears multiple times,
 only the last value is taken.
-This means that duplicating the same key could result in unexpected outcomes.
+This means that duplicating a key could result in unexpected outcomes.
 For example, the following expresses no preferences:
 
 ~~~
