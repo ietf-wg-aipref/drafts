@@ -1295,12 +1295,12 @@ so that the preferences can be associated with content.<a href="#section-1.1-3" 
         <h3 id="name-examples">
 <a href="#section-1.2" class="section-number selfRef">1.2. </a><a href="#name-examples" class="section-name selfRef">Examples</a>
         </h3>
-<p id="section-1.2-1">A server that provides content using HTTP could signal preferences
-about how that content is used with the Content-Usage header field
-as follows:<a href="#section-1.2-1" class="pilcrow">¶</a></p>
+<p id="section-1.2-1">A server that provides content could signal preferences
+about how that content is used by the Content-Usage header field
+in the HTTP response:<a href="#section-1.2-1" class="pilcrow">¶</a></p>
 <div class="lang-http-message sourcecode" id="section-1.2-2">
 <pre>
-200 OK
+HTTP/1.1 200 OK
 Date: Wed, 23 Apr 2025 04:48:02 GMT
 Content-Type: text/plain
 Content-Usage: train-ai=n
