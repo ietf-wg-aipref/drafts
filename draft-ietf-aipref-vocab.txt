@@ -372,9 +372,8 @@ Table of Contents
    their behavior.
 
    One approach for dealing with an "unknown" outcome is to assign a
-   default.  This document takes no position on what default might be
-   chosen as that will depend on policy constraints beyond the scope of
-   this specification.
+   default value.  This document takes no position on what default might
+   be assigned.
 
 5.1.  Combining Preferences
 
