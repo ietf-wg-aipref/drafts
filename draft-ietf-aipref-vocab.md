@@ -362,7 +362,7 @@ the following process applies to each usage category:
 * If any preference expression indicates that the usage is disallowed,
   the result is that the usage is disallowed.
 
-* Otherwise, if any preference preference allows the usage,
+* Otherwise, if any preference expression allows the usage,
   the result is that the usage is allowed.
 
 * Otherwise, no preference is expressed.
