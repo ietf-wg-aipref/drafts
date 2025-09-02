@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-08-31T01:58:20.633012+00:00",
+  "timestamp": "2025-09-02T01:54:46.017540+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -1403,7 +1403,7 @@
       ],
       "body": "\"all\" is probably a bit *too* expansive.  Let's find a better one.",
       "createdAt": "2025-07-21T12:34:39Z",
-      "updatedAt": "2025-08-13T06:46:41Z",
+      "updatedAt": "2025-09-02T01:42:14Z",
       "closedAt": null,
       "comments": [
         {
@@ -1412,6 +1412,13 @@
           "body": "cap - Computational Analysis and Processing ?",
           "createdAt": "2025-08-13T06:46:41Z",
           "updatedAt": "2025-08-13T06:46:41Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "`bots`",
+          "createdAt": "2025-09-02T01:42:14Z",
+          "updatedAt": "2025-09-02T01:42:14Z"
         }
       ]
     },
@@ -1639,7 +1646,7 @@
       "id": "I_kwDOOWk1-s7DpTpF",
       "title": "\"Usage\" and \"Consulting a Preference Expression\"",
       "url": "https://github.com/ietf-wg-aipref/drafts/issues/107",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "mnot",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [
@@ -1650,8 +1657,8 @@
       ],
       "body": "The distinction between these sections is unclear - I suspect 7 could be a subsection of 5?",
       "createdAt": "2025-08-01T03:15:34Z",
-      "updatedAt": "2025-08-01T03:15:34Z",
-      "closedAt": null,
+      "updatedAt": "2025-09-01T22:05:03Z",
+      "closedAt": "2025-09-01T22:05:03Z",
       "comments": []
     }
   ],
@@ -5152,24 +5159,26 @@
       "id": "PR_kwDOOWk1-s6jaiRl",
       "title": "Define search",
       "url": "https://github.com/ietf-wg-aipref/drafts/pull/112",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "martinthomson",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "",
       "createdAt": "2025-08-13T06:36:18Z",
-      "updatedAt": "2025-08-13T06:38:55Z",
+      "updatedAt": "2025-09-01T07:33:06Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "6c4e685191a992476182e7d28089a2cbb6facbfb",
       "headRepository": "ietf-wg-aipref/drafts",
       "headRefName": "define-search",
       "headRefOid": "6bb027d2232dfdd594e22a80caa573fa6f4df124",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2025-09-01T07:33:04Z",
+      "mergedAt": "2025-09-01T07:33:04Z",
+      "mergedBy": "paul2keller",
+      "mergeCommit": {
+        "oid": "bdc9fbf8faf8e416def3da1a00a0ba018ef91eb4"
+      },
       "comments": [
         {
           "author": "martinthomson",
@@ -5207,26 +5216,70 @@
       "id": "PR_kwDOOWk1-s6ja3si",
       "title": "Combine usage sections",
       "url": "https://github.com/ietf-wg-aipref/drafts/pull/113",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "martinthomson",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "And do some work on #106 to refine what it means to have a statement of preference, singular, or statements of preference, multiple.\r\n\r\nMore could be done, I'm sure.\r\n\r\nCloses #107.",
       "createdAt": "2025-08-13T07:15:03Z",
-      "updatedAt": "2025-08-13T07:15:03Z",
+      "updatedAt": "2025-09-01T23:03:31Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
-      "baseRefOid": "6c4e685191a992476182e7d28089a2cbb6facbfb",
+      "baseRefOid": "7e5a2601f1f4045ba87a24775b9ec7a693c998b6",
       "headRepository": "ietf-wg-aipref/drafts",
       "headRefName": "combine-usage-sections",
-      "headRefOid": "6c866d703f6fd7cf1b898b0f45c7e94679156ff2",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
-      "comments": [],
-      "reviews": []
+      "headRefOid": "adeba0a8c729bb1a1f90da0de5c21e18f4e2c98b",
+      "closedAt": "2025-09-01T22:05:02Z",
+      "mergedAt": "2025-09-01T22:05:02Z",
+      "mergedBy": "martinthomson",
+      "mergeCommit": {
+        "oid": "11f021138ebbb5b21081f136ff1b00a259dec10b"
+      },
+      "comments": [
+        {
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "@paul2keller can you sanity check me?",
+          "createdAt": "2025-09-01T07:28:16Z",
+          "updatedAt": "2025-09-01T07:28:16Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWk1-s69I3qF",
+          "commit": {
+            "abbreviatedOid": "6c866d7"
+          },
+          "author": "paul2keller",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "LGTM",
+          "createdAt": "2025-09-01T11:05:50Z",
+          "updatedAt": "2025-09-01T11:05:50Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWk1-s69N9MB",
+          "commit": {
+            "abbreviatedOid": "adeba0a"
+          },
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-09-01T23:03:30Z",
+          "updatedAt": "2025-09-01T23:03:31Z",
+          "comments": [
+            {
+              "originalPosition": 14,
+              "body": "Does 'core' imply differentiation? Perhaps 'initial'?",
+              "createdAt": "2025-09-01T23:03:30Z",
+              "updatedAt": "2025-09-01T23:03:31Z"
+            }
+          ]
+        }
+      ]
     },
     {
       "number": 114,
@@ -5303,24 +5356,26 @@
       "id": "PR_kwDOOWk1-s6kckTy",
       "title": "Update definition of AI to better differentiate it from non-AI",
       "url": "https://github.com/ietf-wg-aipref/drafts/pull/116",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "TimidRobot",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "Update definition of AI to better differentiate it from systems that are arguably not AI\r\n\r\nAlso see the related mailing list thread and pull request (PR):\r\n- [[ai-control] Defining AI](https://mailarchive.ietf.org/arch/msg/ai-control/1u0lpcxPsZZ2CDCMP0zJW0LTrdU/)\r\n- #100 ",
       "createdAt": "2025-08-20T08:53:25Z",
-      "updatedAt": "2025-08-20T21:42:44Z",
+      "updatedAt": "2025-09-01T07:27:29Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "9835d9fdee4f52d43194f857cc732acf051bfa67",
       "headRepository": "TimidRobot/aipref-drafts",
       "headRefName": "ai-definition-ish",
       "headRefOid": "8297ddb9726980d2bfb8e6ae3d063c3ac77da1fc",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2025-09-01T07:27:29Z",
+      "mergedAt": "2025-09-01T07:27:29Z",
+      "mergedBy": "martinthomson",
+      "mergeCommit": {
+        "oid": "3c9d99575791eabf669e310a6956cc8d4ca75a72"
+      },
       "comments": [],
       "reviews": [
         {
@@ -5484,21 +5539,21 @@
       "id": "PR_kwDOOWk1-s6lU4TG",
       "title": "Another 3.2 suggestion",
       "url": "https://github.com/ietf-wg-aipref/drafts/pull/118",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "mnot",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "",
       "createdAt": "2025-08-26T04:06:36Z",
-      "updatedAt": "2025-08-27T14:17:04Z",
+      "updatedAt": "2025-09-01T07:37:48Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "9835d9fdee4f52d43194f857cc732acf051bfa67",
       "headRepository": "ietf-wg-aipref/drafts",
       "headRefName": "mnot/3.2rev2",
       "headRefOid": "d6bb9001e9ff8e2b9c03e9edbac4bab4e8c6b688",
-      "closedAt": null,
+      "closedAt": "2025-09-01T07:37:18Z",
       "mergedAt": null,
       "mergedBy": null,
       "mergeCommit": null,
@@ -5509,6 +5564,13 @@
           "body": "I have taken a close look at the changes proposed in this PR and I do not think that we should go down this route (other than that still think it is a good idea to consolidate the the two sections into one). The main change i am objecting here is that the new version (especially way the examples are phrased) quite substantially narrows the safeguards to cases explicitly recognized in law. This collapses the wider discretionary space acknowledged in the current draft\u2014where law, established practice, or societal values can justify overriding preferences\u2014into a much narrower one defined only by explicit legal permission.\r\n\r\nI have made another attempt here #119",
           "createdAt": "2025-08-27T14:17:04Z",
           "updatedAt": "2025-08-27T14:17:04Z"
+        },
+        {
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Taking #119 for now.  This discussion clearly isn't over, but I think we have made some progress here.",
+          "createdAt": "2025-09-01T07:37:16Z",
+          "updatedAt": "2025-09-01T07:37:48Z"
         }
       ],
       "reviews": [
@@ -5619,24 +5681,26 @@
       "id": "PR_kwDOOWk1-s6lnD2O",
       "title": "Combine Legal and Conformance section",
       "url": "https://github.com/ietf-wg-aipref/drafts/pull/119",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "paul2keller",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "Another attempt to combine the legal effects and conformance sections that stays closer to the language of the existing conformance section than #118",
       "createdAt": "2025-08-27T14:16:10Z",
-      "updatedAt": "2025-08-29T15:08:41Z",
+      "updatedAt": "2025-09-01T07:36:46Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "9835d9fdee4f52d43194f857cc732acf051bfa67",
       "headRepository": "ietf-wg-aipref/drafts",
       "headRefName": "paul2keller-3.2-alt",
-      "headRefOid": "5e04bfac5f06bcb9c3ebe13efb7f519577f116af",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "headRefOid": "7df99ecc2493fa343756a0b7cdf3868d27acac8e",
+      "closedAt": "2025-09-01T07:36:44Z",
+      "mergedAt": "2025-09-01T07:36:44Z",
+      "mergedBy": "martinthomson",
+      "mergeCommit": {
+        "oid": "7e5a2601f1f4045ba87a24775b9ec7a693c998b6"
+      },
       "comments": [
         {
           "author": "paul2keller",
@@ -5765,6 +5829,150 @@
               "updatedAt": "2025-08-29T15:03:18Z"
             }
           ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s69FiiN",
+          "commit": {
+            "abbreviatedOid": "5e04bfa"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-09-01T07:09:23Z",
+          "updatedAt": "2025-09-01T07:09:23Z",
+          "comments": [
+            {
+              "originalPosition": 69,
+              "body": "```suggestion\r\nthe consequences of ignoring preferences could vary\r\n```",
+              "createdAt": "2025-09-01T07:09:23Z",
+              "updatedAt": "2025-09-01T07:09:23Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s69FmdX",
+          "commit": {
+            "abbreviatedOid": "5e04bfa"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-09-01T07:14:23Z",
+          "updatedAt": "2025-09-01T07:14:24Z",
+          "comments": [
+            {
+              "originalPosition": 71,
+              "body": "```suggestion\r\ndepending upon how a given legal jurisdiction recognizes preferences.\r\n```",
+              "createdAt": "2025-09-01T07:14:23Z",
+              "updatedAt": "2025-09-01T07:14:24Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s69F2eS",
+          "commit": {
+            "abbreviatedOid": "3e4f59f"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-09-01T07:30:14Z",
+          "updatedAt": "2025-09-01T07:30:14Z",
+          "comments": [
+            {
+              "originalPosition": 43,
+              "body": "```suggestion\r\nAn entity that receives usage preferences MAY choose to respect\r\nthose preferences it has discovered, according to\r\n```",
+              "createdAt": "2025-09-01T07:30:14Z",
+              "updatedAt": "2025-09-01T07:30:14Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 120,
+      "id": "PR_kwDOOWk1-s6mO2qV",
+      "title": "Move vocabulary extensions",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/120",
+      "state": "MERGED",
+      "author": "martinthomson",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Reword the statement; say it twice for clarity.\r\n\r\nI considered adding more text here, even wrote out an example.  The example was convoluted and didn't help.  It even pointed to a way to manage the problem; an ugly way, but a way.  That was even more confusing.  A simple rule is best.",
+      "createdAt": "2025-09-01T08:01:56Z",
+      "updatedAt": "2025-09-01T22:06:16Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "11f021138ebbb5b21081f136ff1b00a259dec10b",
+      "headRepository": "ietf-wg-aipref/drafts",
+      "headRefName": "move-extension-to-vocab",
+      "headRefOid": "fba2e6d776161416ae41edc60209150499f2dfe6",
+      "closedAt": "2025-09-01T22:06:14Z",
+      "mergedAt": "2025-09-01T22:06:14Z",
+      "mergedBy": "martinthomson",
+      "mergeCommit": {
+        "oid": "1ceb098b5564de739c6cbe3f8601acc40e1d6d18"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWk1-s69I4ma",
+          "commit": {
+            "abbreviatedOid": "8dc2bce"
+          },
+          "author": "paul2keller",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "Agree that this is better (and that moving it up in the document makes more sense)",
+          "createdAt": "2025-09-01T11:07:16Z",
+          "updatedAt": "2025-09-01T11:07:16Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 121,
+      "id": "PR_kwDOOWk1-s6mO_ed",
+      "title": "Remove \"in the context of\" from TDM language",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/121",
+      "state": "MERGED",
+      "author": "martinthomson",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "The use of \"in the context of\" might be read to mean \"in the vicinity of\" or similar things that might make use of content by non-automated systems in scope for preferences at this very high level.  That was never the intent.\r\n\r\nRather than try to add words, shuffling them around to avoid the need for glue words between \"automated processing\", \"assets\", and \"analysis\" might be the best path out.  This now says:\r\n\r\n> The act of using automated processing on one or more assets\r\n> to analyze text and data in order to generate information [...]",
+      "createdAt": "2025-09-01T08:14:37Z",
+      "updatedAt": "2025-09-01T22:06:34Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "7e5a2601f1f4045ba87a24775b9ec7a693c998b6",
+      "headRepository": "ietf-wg-aipref/drafts",
+      "headRefName": "tdm-reword",
+      "headRefOid": "77f491de4c48d0d89882ee5d14a2b8a86afae2ba",
+      "closedAt": "2025-09-01T22:06:33Z",
+      "mergedAt": "2025-09-01T22:06:33Z",
+      "mergedBy": "martinthomson",
+      "mergeCommit": {
+        "oid": "fa6c8088968b7fc64c12af830e502f732de627f6"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWk1-s69I52d",
+          "commit": {
+            "abbreviatedOid": "77f491d"
+          },
+          "author": "paul2keller",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "I think this addresses that concern you have identified.",
+          "createdAt": "2025-09-01T11:09:19Z",
+          "updatedAt": "2025-09-01T11:09:19Z",
+          "comments": []
         }
       ]
     }
