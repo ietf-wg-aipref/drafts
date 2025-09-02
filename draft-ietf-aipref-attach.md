@@ -87,7 +87,7 @@ by an automated system.
 This document describes two mechanisms
 for associating preferences with content:
 
-* A Content-Usage header field
+* A Content-Usage response header field
   for HTTP {{HTTP}};
   see {{header}}.
 * A Content-Usage directive
@@ -183,7 +183,7 @@ across distribution channels.
 
 # HTTP Content-Usage Header Field {#header}
 
-The Content-Usage field is a structured field dictionary,
+The Content-Usage response header field is a structured field dictionary,
 as defined in {{Section 3.2 of FIELDS}}.
 This field follows the vocabulary and processing rules in {{VOCAB}}.
 
