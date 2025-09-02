@@ -1790,12 +1790,9 @@ any unknown parameters <span class="bcp14">MUST</span> be ignored.<a href="#sect
 <p id="section-6.5-1">To process a series of bytes to recover the expressed preferences,
 those bytes are parsed into a Dictionary (<span><a href="https://rfc-editor.org/rfc/rfc9651#section-4.2.2" class="relref">Section 4.2.2</a> of [<a href="#FIELDS" class="cite xref">FIELDS</a>]</span>),
 then preferences are assigned to each usage category in the vocabulary.<a href="#section-6.5-1" class="pilcrow">¶</a></p>
-<p id="section-6.5-2">The parsing algorithm for a Dictionary
-produces a keyed collection of values,
-each with a possibly-empty set of parameters.
-The parsing process guarantees that each key has at most one value and parameters.<a href="#section-6.5-2" class="pilcrow">¶</a></p>
-<p id="section-6.5-3">To obtain preferences for each of the categories in the vocabulary,
-iterate through the categories.
+<p id="section-6.5-2">This algorithm produces a keyed collection of values, where each key has at most one value and optional parameters.<a href="#section-6.5-2" class="pilcrow">¶</a></p>
+<p id="section-6.5-3">To obtain preferences,
+iterate through the defined categories in the vocabulary.
 For the label that corresponds to that category (see <a href="#t-category-labels" class="auto internal xref">Table 1</a>),
 obtain the corresponding value from the collection,
 disregarding any parameters.
@@ -1819,10 +1816,10 @@ values that are not Tokens,
 and Token values that are other than <code>y</code> or <code>n</code>.
 All of these are not errors,
 they only result in no preference being inferred.<a href="#section-6.5-5" class="pilcrow">¶</a></p>
-<p id="section-6.5-6">An important note about this process and format is that,
+<p id="section-6.5-6">It is important to note that
 if the same key appears multiple times,
 only the last value is taken.
-This means that duplicating the same key could result in unexpected outcomes.
+This means that duplicating a key could result in unexpected outcomes.
 For example, the following expresses no preferences:<a href="#section-6.5-6" class="pilcrow">¶</a></p>
 <div class="alignLeft art-text artwork" id="section-6.5-7">
 <pre>

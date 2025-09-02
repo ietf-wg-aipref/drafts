@@ -503,16 +503,13 @@ Table of Contents
    then preferences are assigned to each usage category in the
    vocabulary.
 
-   The parsing algorithm for a Dictionary produces a keyed collection of
-   values, each with a possibly-empty set of parameters.  The parsing
-   process guarantees that each key has at most one value and
-   parameters.
+   This algorithm produces a keyed collection of values, where each key
+   has at most one value and optional parameters.
 
-   To obtain preferences for each of the categories in the vocabulary,
-   iterate through the categories.  For the label that corresponds to
-   that category (see Table 1), obtain the corresponding value from the
-   collection, disregarding any parameters.  A preference is assigned as
-   follows:
+   To obtain preferences, iterate through the defined categories in the
+   vocabulary.  For the label that corresponds to that category (see
+   Table 1), obtain the corresponding value from the collection,
+   disregarding any parameters.  A preference is assigned as follows:
 
    *  If the value is a Token with a value of y, the associated
       preference is to allow that category of use.
@@ -527,10 +524,10 @@ Table of Contents
    other than y or n.  All of these are not errors, they only result in
    no preference being inferred.
 
-   An important note about this process and format is that, if the same
-   key appears multiple times, only the last value is taken.  This means
-   that duplicating the same key could result in unexpected outcomes.
-   For example, the following expresses no preferences:
+   It is important to note that if the same key appears multiple times,
+   only the last value is taken.  This means that duplicating a key
+   could result in unexpected outcomes.  For example, the following
+   expresses no preferences:
 
    train-ai=y, train-ai="n", train-genai=n, train-genai, all=n, all=()
 
