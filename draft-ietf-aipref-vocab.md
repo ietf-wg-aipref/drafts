@@ -207,26 +207,28 @@ expression, safety, education, scholarship, research,
 preservation, interoperability, and accessibility.
 
 The following lists examples of cases
-where other priorities could override specific preferences:
+where other priorities could lead someone to ignore expressed preferences
+in a particular situation:
 
 * People with accessibility needs,
   or organizations working on their behalf,
-  might ignore a preference to disallow Automated Processing ({{all}})
+  might decide to ignore a preference
+  disallowing Automated Processing ({{all}})
   in order to access automated captions
   or generate accessible formats.
 
-* A cultural heritage organization could ignore a preference
-  to disallow Automated Processing ({{all}})
+* A cultural heritage organization might decide to ignore a preference
+  disallowing Automated Processing ({{all}})
   in order to provide more useful, reliable, or discoverable access
   to historical web collections.
 
-* An educational institution could ignore a preference
-  to disallow AI Training ({{train-ai}})
+* An educational institution might decide to ignore a preference
+  disallowing AI Training ({{train-ai}})
   in order to enable scholars to develop or use tools
   to facilitate scientific or other types of research.
 
-* A website that permits user uploads could ignore a preference
-  to disallow Automated Processing ({{all}})
+* A website that permits user uploads might decide to ignore a preference
+  disallowing Automated Processing ({{all}})
   in order to develop or use tools that detect harmful content
   according to established terms of use.
 
