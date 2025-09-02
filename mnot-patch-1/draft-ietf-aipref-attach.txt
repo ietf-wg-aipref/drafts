@@ -107,7 +107,8 @@ Table of Contents
    This document describes two mechanisms for associating preferences
    with content:
 
-   *  A Content-Usage header field for HTTP [HTTP]; see Section 2.
+   *  A Content-Usage response header field for HTTP [HTTP]; see
+      Section 2.
 
    *  A Content-Usage directive for the Robots Exclusion Protocol
       (colloquially known as "robots.txt") [ROBOTS]; see Section 3.
@@ -191,9 +192,9 @@ Table of Contents
 
 2.  HTTP Content-Usage Header Field
 
-   The Content-Usage field is a structured field dictionary, as defined
-   in Section 3.2 of [FIELDS].  This field follows the vocabulary and
-   processing rules in [VOCAB].
+   The Content-Usage response header field is a structured field
+   dictionary, as defined in Section 3.2 of [FIELDS].  This field
+   follows the vocabulary and processing rules in [VOCAB].
 
    This field indicates usage preferences regarding the content of the
    HTTP message.  That is, the representation data, as defined in

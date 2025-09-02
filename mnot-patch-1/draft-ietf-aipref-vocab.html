@@ -1410,30 +1410,32 @@ ignoring preferences include—but are not limited to—free
 expression, safety, education, scholarship, research,
 preservation, interoperability, and accessibility.<a href="#section-3.2-5" class="pilcrow">¶</a></p>
 <p id="section-3.2-6">The following lists examples of cases
-where other priorities could override specific preferences:<a href="#section-3.2-6" class="pilcrow">¶</a></p>
+where other priorities could lead someone to ignore expressed preferences
+in a particular situation:<a href="#section-3.2-6" class="pilcrow">¶</a></p>
 <ul class="normal">
 <li class="normal" id="section-3.2-7.1">
             <p id="section-3.2-7.1.1">People with accessibility needs,
 or organizations working on their behalf,
-might ignore a preference to disallow Automated Processing (<a href="#all" class="auto internal xref">Section 4.1</a>)
+might decide to ignore a preference
+disallowing Automated Processing (<a href="#all" class="auto internal xref">Section 4.1</a>)
 in order to access automated captions
 or generate accessible formats.<a href="#section-3.2-7.1.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-3.2-7.2">
-            <p id="section-3.2-7.2.1">A cultural heritage organization could ignore a preference
-to disallow Automated Processing (<a href="#all" class="auto internal xref">Section 4.1</a>)
+            <p id="section-3.2-7.2.1">A cultural heritage organization might decide to ignore a preference
+disallowing Automated Processing (<a href="#all" class="auto internal xref">Section 4.1</a>)
 in order to provide more useful, reliable, or discoverable access
 to historical web collections.<a href="#section-3.2-7.2.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-3.2-7.3">
-            <p id="section-3.2-7.3.1">An educational institution could ignore a preference
-to disallow AI Training (<a href="#train-ai" class="auto internal xref">Section 4.2</a>)
+            <p id="section-3.2-7.3.1">An educational institution might decide to ignore a preference
+disallowing AI Training (<a href="#train-ai" class="auto internal xref">Section 4.2</a>)
 in order to enable scholars to develop or use tools
 to facilitate scientific or other types of research.<a href="#section-3.2-7.3.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-3.2-7.4">
-            <p id="section-3.2-7.4.1">A website that permits user uploads could ignore a preference
-to disallow Automated Processing (<a href="#all" class="auto internal xref">Section 4.1</a>)
+            <p id="section-3.2-7.4.1">A website that permits user uploads might decide to ignore a preference
+disallowing Automated Processing (<a href="#all" class="auto internal xref">Section 4.1</a>)
 in order to develop or use tools that detect harmful content
 according to established terms of use.<a href="#section-3.2-7.4.1" class="pilcrow">¶</a></p>
 </li>
@@ -1601,10 +1603,8 @@ and use the result of that process.<a href="#section-5-2.2.1" class="pilcrow">¶
 allow, disallow, and unknown.
 Applications can use the answer to guide their behavior.<a href="#section-5-3" class="pilcrow">¶</a></p>
 <p id="section-5-4">One approach for dealing with an "unknown" outcome
-is to assign a default.
-This document takes no position on what default might be chosen
-as that will depend on policy constraints
-beyond the scope of this specification.<a href="#section-5-4" class="pilcrow">¶</a></p>
+is to assign a default value.
+This document takes no position on what default might be assigned.<a href="#section-5-4" class="pilcrow">¶</a></p>
 <div id="combine">
 <section id="section-5.1">
         <h3 id="name-combining-preferences">
@@ -1622,7 +1622,7 @@ the following process applies to each usage category:<a href="#section-5.1-2" cl
 the result is that the usage is disallowed.<a href="#section-5.1-3.1.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-5.1-3.2">
-            <p id="section-5.1-3.2.1">Otherwise, if any preference preference allows the usage,
+            <p id="section-5.1-3.2.1">Otherwise, if any preference expression allows the usage,
 the result is that the usage is allowed.<a href="#section-5.1-3.2.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-5.1-3.3">
@@ -1790,12 +1790,9 @@ any unknown parameters <span class="bcp14">MUST</span> be ignored.<a href="#sect
 <p id="section-6.5-1">To process a series of bytes to recover the expressed preferences,
 those bytes are parsed into a Dictionary (<span><a href="https://rfc-editor.org/rfc/rfc9651#section-4.2.2" class="relref">Section 4.2.2</a> of [<a href="#FIELDS" class="cite xref">FIELDS</a>]</span>),
 then preferences are assigned to each usage category in the vocabulary.<a href="#section-6.5-1" class="pilcrow">¶</a></p>
-<p id="section-6.5-2">The parsing algorithm for a Dictionary
-produces a keyed collection of values,
-each with a possibly-empty set of parameters.
-The parsing process guarantees that each key has at most one value and parameters.<a href="#section-6.5-2" class="pilcrow">¶</a></p>
-<p id="section-6.5-3">To obtain preferences for each of the categories in the vocabulary,
-iterate through the categories.
+<p id="section-6.5-2">This algorithm produces a keyed collection of values, where each key has at most one value and optional parameters.<a href="#section-6.5-2" class="pilcrow">¶</a></p>
+<p id="section-6.5-3">To obtain preferences,
+iterate through the defined categories in the vocabulary.
 For the label that corresponds to that category (see <a href="#t-category-labels" class="auto internal xref">Table 1</a>),
 obtain the corresponding value from the collection,
 disregarding any parameters.
@@ -1819,10 +1816,10 @@ values that are not Tokens,
 and Token values that are other than <code>y</code> or <code>n</code>.
 All of these are not errors,
 they only result in no preference being inferred.<a href="#section-6.5-5" class="pilcrow">¶</a></p>
-<p id="section-6.5-6">An important note about this process and format is that,
+<p id="section-6.5-6">It is important to note that
 if the same key appears multiple times,
 only the last value is taken.
-This means that duplicating the same key could result in unexpected outcomes.
+This means that duplicating a key could result in unexpected outcomes.
 For example, the following expresses no preferences:<a href="#section-6.5-6" class="pilcrow">¶</a></p>
 <div class="alignLeft art-text artwork" id="section-6.5-7">
 <pre>

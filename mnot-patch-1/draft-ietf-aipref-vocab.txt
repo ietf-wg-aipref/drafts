@@ -239,26 +239,28 @@ Table of Contents
    accessibility.
 
    The following lists examples of cases where other priorities could
-   override specific preferences:
+   lead someone to ignore expressed preferences in a particular
+   situation:
 
    *  People with accessibility needs, or organizations working on their
-      behalf, might ignore a preference to disallow Automated Processing
-      (Section 4.1) in order to access automated captions or generate
-      accessible formats.
+      behalf, might decide to ignore a preference disallowing Automated
+      Processing (Section 4.1) in order to access automated captions or
+      generate accessible formats.
 
-   *  A cultural heritage organization could ignore a preference to
-      disallow Automated Processing (Section 4.1) in order to provide
-      more useful, reliable, or discoverable access to historical web
-      collections.
+   *  A cultural heritage organization might decide to ignore a
+      preference disallowing Automated Processing (Section 4.1) in order
+      to provide more useful, reliable, or discoverable access to
+      historical web collections.
 
-   *  An educational institution could ignore a preference to disallow
-      AI Training (Section 4.2) in order to enable scholars to develop
-      or use tools to facilitate scientific or other types of research.
+   *  An educational institution might decide to ignore a preference
+      disallowing AI Training (Section 4.2) in order to enable scholars
+      to develop or use tools to facilitate scientific or other types of
+      research.
 
-   *  A website that permits user uploads could ignore a preference to
-      disallow Automated Processing (Section 4.1) in order to develop or
-      use tools that detect harmful content according to established
-      terms of use.
+   *  A website that permits user uploads might decide to ignore a
+      preference disallowing Automated Processing (Section 4.1) in order
+      to develop or use tools that detect harmful content according to
+      established terms of use.
 
    Because enforcement is not provided by this specification, the
    consequences of ignoring preferences could vary depending upon how a
@@ -370,9 +372,8 @@ Table of Contents
    their behavior.
 
    One approach for dealing with an "unknown" outcome is to assign a
-   default.  This document takes no position on what default might be
-   chosen as that will depend on policy constraints beyond the scope of
-   this specification.
+   default value.  This document takes no position on what default might
+   be assigned.
 
 5.1.  Combining Preferences
 
@@ -386,7 +387,7 @@ Table of Contents
    *  If any preference expression indicates that the usage is
       disallowed, the result is that the usage is disallowed.
 
-   *  Otherwise, if any preference preference allows the usage, the
+   *  Otherwise, if any preference expression allows the usage, the
       result is that the usage is allowed.
 
    *  Otherwise, no preference is expressed.
@@ -503,16 +504,13 @@ Table of Contents
    then preferences are assigned to each usage category in the
    vocabulary.
 
-   The parsing algorithm for a Dictionary produces a keyed collection of
-   values, each with a possibly-empty set of parameters.  The parsing
-   process guarantees that each key has at most one value and
-   parameters.
+   This algorithm produces a keyed collection of values, where each key
+   has at most one value and optional parameters.
 
-   To obtain preferences for each of the categories in the vocabulary,
-   iterate through the categories.  For the label that corresponds to
-   that category (see Table 1), obtain the corresponding value from the
-   collection, disregarding any parameters.  A preference is assigned as
-   follows:
+   To obtain preferences, iterate through the defined categories in the
+   vocabulary.  For the label that corresponds to that category (see
+   Table 1), obtain the corresponding value from the collection,
+   disregarding any parameters.  A preference is assigned as follows:
 
    *  If the value is a Token with a value of y, the associated
       preference is to allow that category of use.
@@ -527,10 +525,10 @@ Table of Contents
    other than y or n.  All of these are not errors, they only result in
    no preference being inferred.
 
-   An important note about this process and format is that, if the same
-   key appears multiple times, only the last value is taken.  This means
-   that duplicating the same key could result in unexpected outcomes.
-   For example, the following expresses no preferences:
+   It is important to note that if the same key appears multiple times,
+   only the last value is taken.  This means that duplicating a key
+   could result in unexpected outcomes.  For example, the following
+   expresses no preferences:
 
    train-ai=y, train-ai="n", train-genai=n, train-genai, all=n, all=()
 
