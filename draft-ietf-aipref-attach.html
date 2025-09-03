@@ -1382,8 +1382,9 @@ as defined in <span><a href="https://rfc-editor.org/rfc/rfc9651#section-3.2" cla
 This field follows the vocabulary and processing rules in <span>[<a href="#VOCAB" class="cite xref">VOCAB</a>]</span>.<a href="#section-2-1" class="pilcrow">¶</a></p>
 <p id="section-2-2">This field indicates usage preferences
 regarding the content of the HTTP message.
-That is, the representation data,
-as defined in <span><a href="https://rfc-editor.org/rfc/rfc9110#section-8.1" class="relref">Section 8.1</a> of [<a href="#HTTP" class="cite xref">HTTP</a>]</span>,
+That is, the field is representation metadata (<span><a href="https://rfc-editor.org/rfc/rfc9110#section-8.2" class="relref">Section 8.2</a> of [<a href="#HTTP" class="cite xref">HTTP</a>]</span>)
+that applies the representation data (<span><a href="https://rfc-editor.org/rfc/rfc9110#section-8.1" class="relref">Section 8.1</a> of [<a href="#HTTP" class="cite xref">HTTP</a>]</span>).
+Informally, usage preferences apply to the content of a message,
 not the resource.<a href="#section-2-2" class="pilcrow">¶</a></p>
 <p id="section-2-3">Servers <span class="bcp14">MUST</span> retain any preferences associated with a request
 if the content of that request
