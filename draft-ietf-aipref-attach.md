@@ -1,5 +1,5 @@
 ---
-title: "Associating AI Usage Preferences With Content"
+title: "Associating AI Usage Preferences with Content in HTTP"
 abbrev: "AI Preference Attachment"
 category: std
 
