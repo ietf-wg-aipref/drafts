@@ -213,12 +213,12 @@ in a particular situation:
 * People with accessibility needs,
   or organizations working on their behalf,
   might decide to ignore a preference
-  disallowing Automated Processing ({{all}})
+  disallowing Automated Processing ({{bots}})
   in order to access automated captions
   or generate accessible formats.
 
 * A cultural heritage organization might decide to ignore a preference
-  disallowing Automated Processing ({{all}})
+  disallowing Automated Processing ({{bots}})
   in order to provide more useful, reliable, or discoverable access
   to historical web collections.
 
@@ -228,7 +228,7 @@ in a particular situation:
   to facilitate scientific or other types of research.
 
 * A website that permits user uploads might decide to ignore a preference
-  disallowing Automated Processing ({{all}})
+  disallowing Automated Processing ({{bots}})
   in order to develop or use tools that detect harmful content
   according to established terms of use.
 
@@ -268,7 +268,7 @@ This section defines the categories of use in the vocabulary.
 {: #f-categories title="Relationship Between Categories of Use"}
 
 
-## Automated Processing Category {#all}
+## Automated Processing Category {#bots}
 
 The act of using automated processing on one or more assets
 to analyze text and data in order to generate information
@@ -412,7 +412,7 @@ Each usage category in the vocabulary ({{vocab}}) is mapped to a short textual l
 
 | Category               | Label       | Reference       |
 |:-----------------------|:------------|:----------------|
-| Automated Processing   | all         | {{all}}         |
+| Automated Processing   | bots        | {{bots}}        |
 | AI Training            | train-ai    | {{train-ai}}    |
 | Generative AI Training | train-genai | {{train-genai}} |
 | Search                 | search      | {{search}}      |
@@ -506,7 +506,7 @@ This means that duplicating a key could result in unexpected outcomes.
 For example, the following expresses no preferences:
 
 ~~~
-train-ai=y, train-ai="n", train-genai=n, train-genai, all=n, all=()
+train-ai=y, train-ai="n", train-genai=n, train-genai, bots=n, bots=()
 ~~~
 
 If the parsing of the Dictionary fails, no preferences are expressed.
