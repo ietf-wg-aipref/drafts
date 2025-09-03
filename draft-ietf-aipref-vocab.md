@@ -315,10 +315,18 @@ The use of assets for Search is a proper subset of Automated Processing usage.
 
 ## Vocabulary Extensions {#vocab-extension}
 
-Systems referencing the vocabulary MUST NOT introduce additional categories
+Extensions to this vocabulary need to be defined in an RFC
+that updates this document.
+
+Any future extensions to this vocabulary MUST NOT introduce additional categories
 that include existing categories defined in the vocabulary.
 That is, new categories of use can be defined as a subset of an existing category,
 but not a superset.
+
+Systems that use this vocabulary might define their own extensions
+as part of a larger data model.
+{{mapping}} describes how concepts from an alternative format
+might be mapped to this vocabulary.
 
 
 # Applying Statements of Preference {#usage}
@@ -470,7 +478,8 @@ This document does not define any semantics for any parameters that might be inc
 When processing a parsed Dictionary to obtain preferences,
 any unknown parameters MUST be ignored.
 
-In either case, new extensions need to be defined in an RFC that updates this document.
+In either case,
+new extensions need to be defined in an RFC that updates this document.
 
 
 ## Processing Algorithm {#processing}
@@ -523,7 +532,7 @@ that assigns a preference to each usage category
 as described in {{model}}.
 
 
-## Alternative Formats
+## Alternative Formats {#mapping}
 
 This format is only an exemplary way to represent preferences.
 The model described in {{model}}, can be used without this serialization.
