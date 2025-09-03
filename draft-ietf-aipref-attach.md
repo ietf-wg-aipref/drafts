@@ -188,8 +188,9 @@ This field follows the vocabulary and processing rules in {{VOCAB}}.
 
 This field indicates usage preferences
 regarding the content of the HTTP message.
-That is, the representation data,
-as defined in {{Section 8.1 of HTTP}},
+That is, the field is representation metadata ({{Section 8.2 of HTTP}})
+that applies the representation data ({{Section 8.1 of HTTP}}).
+Informally, usage preferences apply to the content of a message,
 not the resource.
 
 Servers MUST retain any preferences associated with a request
