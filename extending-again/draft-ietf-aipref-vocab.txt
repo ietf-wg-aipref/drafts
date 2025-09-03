@@ -354,8 +354,9 @@ Table of Contents
    vocabulary.  That is, new categories of use can be defined as a
    subset of an existing category, but not a superset.
 
-   Systems that use this vocabulary might define their own extensions,
-   see Section 6.6 for how those are managed.
+   Systems that use this vocabulary might define their own extensions as
+   part of a larger data model.  Section 6.6 describes how concepts from
+   an alternative format might be mapped to this vocabulary.
 
 5.  Applying Statements of Preference
 
