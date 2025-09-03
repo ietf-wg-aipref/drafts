@@ -145,7 +145,15 @@ Content-Usage: train-ai=n
 This document provides two general purpose methods
 for associating statements of preference with assets
 that are transferred using HTTP.
-This is intended to be complementary with other mechanisms.
+
+The mechanisms in this document can be applied to any content type,
+provided that the content is obtained using HTTP (and maybe FTP).
+Future work might define how preferences might be indicated
+for alternative content distribution or acquisition methods,
+such as email.
+
+The attachment mechanism in this document
+are intended to be complementary with other mechanisms.
 
 
 ### Embedded Preferences
@@ -167,11 +175,6 @@ Furthermore,
 some content types,
 such as plain text (`text/plain`),
 offer no standardized means of embedding preferences.
-
-The mechanisms in this document can be applied to any content type, provided that the content is obtained using HTTP
-(and maybe FTP). Future work might define how preferences might be indicated
-for alternative content distribution or acquisition methods,
-such as email.
 
 
 ### Registry-Based Preferences
