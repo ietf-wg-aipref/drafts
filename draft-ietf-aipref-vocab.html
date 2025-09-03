@@ -1341,10 +1341,10 @@ locate items on the internet or in a specific data store.<a href="#section-2-3.1
 each of which is defined to cover a class of usage for assets.
 <a href="#vocab" class="auto internal xref">Section 4</a> defines the core set of usage categories in detail.<a href="#section-3-1" class="pilcrow">¶</a></p>
 <p id="section-3-2">A statement of preference -- or usage preference -- is made about an asset.
-Statements of preferences can assign a preference
-to each of the categories of use in the vocabulary.
-Preferences regarding each category can be expressed
-either to allow or disallow the usage associated with the category.<a href="#section-3-2" class="pilcrow">¶</a></p>
+A statement of preference follows a simple data model where a preference
+is assigned to each of the categories of use in the vocabulary.
+A preference is either to allow or disallow
+the usage associated with the category.<a href="#section-3-2" class="pilcrow">¶</a></p>
 <p id="section-3-3">A statement of preference can indicate preferences
 about some, all, or none of the categories from the vocabulary.
 This can mean that no preference is stated for a given usage category.<a href="#section-3-3" class="pilcrow">¶</a></p>
@@ -1643,8 +1643,9 @@ the result is that the usage is allowed.<a href="#section-5.1-3.2.1" class="pilc
         <h3 id="name-more-specific-instructions">
 <a href="#section-5.2" class="section-number selfRef">5.2. </a><a href="#name-more-specific-instructions" class="section-name selfRef">More Specific Instructions</a>
         </h3>
-<p id="section-5.2-1">A recipient of a statement of preferences that follows this model might receive more specific instructions
-in two ways:<a href="#section-5.2-1" class="pilcrow">¶</a></p>
+<p id="section-5.2-1">A recipient of a statement of preferences
+that follows the model in <a href="#model" class="auto internal xref">Section 3</a>
+might receive more specific instructions in two ways:<a href="#section-5.2-1" class="pilcrow">¶</a></p>
 <ul class="normal">
 <li class="normal" id="section-5.2-2.1">
             <p id="section-5.2-2.1.1">Extensions to the vocabulary might define more specific categories of usage.
@@ -1746,8 +1747,8 @@ These are encoded using the mappings in <span>[<a href="#ASCII" class="cite xref
         <h3 id="name-preference-labels">
 <a href="#section-6.2" class="section-number selfRef">6.2. </a><a href="#name-preference-labels" class="section-name selfRef">Preference Labels</a>
         </h3>
-<p id="section-6.2-1">The abstract model used has two options for preferences associated with each category:
-allow and disallow.
+<p id="section-6.2-1">The data model in <a href="#model" class="auto internal xref">Section 3</a> used has two options for preferences
+associated with each category: allow and disallow.
 These are mapped to single byte Tokens (<span><a href="https://rfc-editor.org/rfc/rfc9651#section-3.3.4" class="relref">Section 3.3.4</a> of [<a href="#FIELDS" class="cite xref">FIELDS</a>]</span>)
 of <code>y</code> and <code>n</code>, respectively.<a href="#section-6.2-1" class="pilcrow">¶</a></p>
 </section>
@@ -1840,7 +1841,7 @@ train-ai=y, train-ai="n", train-genai=n, train-genai, bots=n, bots=()
 This includes where keys include uppercase characters,
 as this format is case sensitive
 (more correctly, it operates on bytes, not strings).<a href="#section-6.5-8" class="pilcrow">¶</a></p>
-<p id="section-6.5-9">This process produces an abstract data structure
+<p id="section-6.5-9">This process produces an abstract data model
 that assigns a preference to each usage category
 as described in <a href="#model" class="auto internal xref">Section 3</a>.<a href="#section-6.5-9" class="pilcrow">¶</a></p>
 </section>
@@ -1851,12 +1852,12 @@ as described in <a href="#model" class="auto internal xref">Section 3</a>.<a hre
 <a href="#section-6.6" class="section-number selfRef">6.6. </a><a href="#name-alternative-formats" class="section-name selfRef">Alternative Formats</a>
         </h3>
 <p id="section-6.6-1">This format is only an exemplary way to represent preferences.
-The model described in <a href="#model" class="auto internal xref">Section 3</a>, can be used without this serialization.<a href="#section-6.6-1" class="pilcrow">¶</a></p>
+The data model described in <a href="#model" class="auto internal xref">Section 3</a>, can be used without this serialization.<a href="#section-6.6-1" class="pilcrow">¶</a></p>
 <p id="section-6.6-2">Any alternative format needs to define the mapping
 both from that format to the model used in this document
 and from the model to the alternative format.
 This includes any potential for extensions (<a href="#extension" class="auto internal xref">Section 6.4</a>).<a href="#section-6.6-2" class="pilcrow">¶</a></p>
-<p id="section-6.6-3">The mapping between the model and the alternative format
+<p id="section-6.6-3">The mapping between the data model and the alternative format
 does not need to be complete,
 it only needs to be clear and unambiguous.<a href="#section-6.6-3" class="pilcrow">¶</a></p>
 <p id="section-6.6-4">For example, an alternative format
