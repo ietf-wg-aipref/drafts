@@ -117,13 +117,12 @@ so that the preferences can be associated with content.
 
 ## Examples
 
-A server that provides content using HTTP could signal preferences
-about how that content is used with the Content-Usage header field
-as follows:
-
+A server that provides content could signal preferences
+about how that content is used by the Content-Usage header field
+in the HTTP response:
 
 ~~~http-message
-200 OK
+HTTP/1.1 200 OK
 Date: Wed, 23 Apr 2025 04:48:02 GMT
 Content-Type: text/plain
 Content-Usage: train-ai=n
