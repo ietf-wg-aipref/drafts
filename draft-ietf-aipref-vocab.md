@@ -130,7 +130,7 @@ each of which is defined to cover a class of usage for assets.
 {{vocab}} defines the core set of usage categories in detail.
 
 A statement of preference -- or usage preference -- is made about an asset.
-Statements of preferences follows a simple data model where a preference
+A statement of preference follows a simple data model where a preference
 is assigned to each of the categories of use in the vocabulary.
 A preference is either to allow or disallow
 the usage associated with the category.
