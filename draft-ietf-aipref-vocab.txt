@@ -345,10 +345,17 @@ Table of Contents
 
 4.5.  Vocabulary Extensions
 
-   Systems referencing the vocabulary MUST NOT introduce additional
-   categories that include existing categories defined in the
+   Extensions to this vocabulary need to be defined in an RFC that
+   updates this document.
+
+   Any future extensions to this vocabulary MUST NOT introduce
+   additional categories that include existing categories defined in the
    vocabulary.  That is, new categories of use can be defined as a
    subset of an existing category, but not a superset.
+
+   Systems that use this vocabulary might define their own extensions as
+   part of a larger data model.  Section 6.6 describes how concepts from
+   an alternative format might be mapped to this vocabulary.
 
 5.  Applying Statements of Preference
 

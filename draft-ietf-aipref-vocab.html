@@ -1565,10 +1565,16 @@ are not covered by this category of use.<a href="#section-4.4-4" class="pilcrow"
         <h3 id="name-vocabulary-extensions">
 <a href="#section-4.5" class="section-number selfRef">4.5. </a><a href="#name-vocabulary-extensions" class="section-name selfRef">Vocabulary Extensions</a>
         </h3>
-<p id="section-4.5-1">Systems referencing the vocabulary <span class="bcp14">MUST NOT</span> introduce additional categories
+<p id="section-4.5-1">Extensions to this vocabulary need to be defined in an RFC
+that updates this document.<a href="#section-4.5-1" class="pilcrow">¶</a></p>
+<p id="section-4.5-2">Any future extensions to this vocabulary <span class="bcp14">MUST NOT</span> introduce additional categories
 that include existing categories defined in the vocabulary.
 That is, new categories of use can be defined as a subset of an existing category,
-but not a superset.<a href="#section-4.5-1" class="pilcrow">¶</a></p>
+but not a superset.<a href="#section-4.5-2" class="pilcrow">¶</a></p>
+<p id="section-4.5-3">Systems that use this vocabulary might define their own extensions
+as part of a larger data model.
+<a href="#mapping" class="auto internal xref">Section 6.6</a> describes how concepts from an alternative format
+might be mapped to this vocabulary.<a href="#section-4.5-3" class="pilcrow">¶</a></p>
 </section>
 </div>
 </section>
@@ -1782,7 +1788,8 @@ with each key-value pair.
 This document does not define any semantics for any parameters that might be included.
 When processing a parsed Dictionary to obtain preferences,
 any unknown parameters <span class="bcp14">MUST</span> be ignored.<a href="#section-6.4-3" class="pilcrow">¶</a></p>
-<p id="section-6.4-4">In either case, new extensions need to be defined in an RFC that updates this document.<a href="#section-6.4-4" class="pilcrow">¶</a></p>
+<p id="section-6.4-4">In either case,
+new extensions need to be defined in an RFC that updates this document.<a href="#section-6.4-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="processing">
@@ -1838,7 +1845,7 @@ that assigns a preference to each usage category
 as described in <a href="#model" class="auto internal xref">Section 3</a>.<a href="#section-6.5-9" class="pilcrow">¶</a></p>
 </section>
 </div>
-<div id="alternative-formats">
+<div id="mapping">
 <section id="section-6.6">
         <h3 id="name-alternative-formats">
 <a href="#section-6.6" class="section-number selfRef">6.6. </a><a href="#name-alternative-formats" class="section-name selfRef">Alternative Formats</a>
