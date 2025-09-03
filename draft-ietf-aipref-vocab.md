@@ -135,13 +135,13 @@ to each of the categories of use in the vocabulary.
 Preferences regarding each category can be expressed
 either to allow or disallow the usage associated with the category.
 
-A statement of preference can express a preference
+A statement of preference can indicate preferences
 about some, all, or none of the categories from the vocabulary.
-This can mean that no preference is expressed for a given usage category.
+This can mean that no preference is stated for a given usage category.
 
 Some categories describe a proper subset of the usages of other categories.
-A preference that is expressed for the more general category applies
-if no preference is expressed for the more specific category.
+A preference that is stated for the more general category applies
+if no preference is stated for the more specific category.
 
 For example, the Automated Processing category might be assigned a preference that allows the associated usage.
 In the absence of any statement of preference regarding the AI Training category,
@@ -195,7 +195,7 @@ An entity that receives usage preferences MAY choose to respect
 those preferences it has discovered, according to
 an understanding of how the asset is used,
 how that usage corresponds to the usage categories
-where preferences have been expressed,
+where preferences have been stated,
 and the applicable legal context.
 
 Usage preferences can be overridden through express agreements
@@ -304,7 +304,7 @@ that are used to help users select between multiple candidate options.
 
 Preferences for the Search category apply to those parts of applications
 that provide search capabilities,
-regardless of what other preferences are expressed.
+regardless of what other preferences are stated.
 
 Parts of applications that do not direct users to the location of assets,
 such as summaries,
@@ -328,7 +328,7 @@ which might use the process in {{processing}},
 an application can determine the status of a specific usage category
 as follows:
 
-1. If the expression contains an explicit preference
+1. If the statement of preference contains an explicit preference
    regarding that category of use --
    either to allow or disallow --
    that is the result.
@@ -338,7 +338,7 @@ as follows:
    recursively apply this process to that category
    and use the result of that process.
 
-3. Otherwise, no preference is expressed.
+3. Otherwise, no preference is stated.
 
 This process results in one of three potential answers:
 allow, disallow, and unknown.
@@ -359,13 +359,13 @@ This might result in conflicting answers.
 Absent some other means of resolving conflicts,
 the following process applies to each usage category:
 
-* If any preference expression indicates that the usage is disallowed,
+* If any statement of preference indicates that the usage is disallowed,
   the result is that the usage is disallowed.
 
-* Otherwise, if any preference expression allows the usage,
+* Otherwise, if any statement of preference allows the usage,
   the result is that the usage is allowed.
 
-* Otherwise, no preference is expressed.
+* Otherwise, no preference is stated.
 
 This process ensures that the most restrictive preference applies.
 
@@ -397,9 +397,9 @@ The dictionary keys correspond to usage categories
 and the dictionary values correspond to explicit preferences,
 which can be either `y` or `n`; see {{y-or-n}}.
 
-For example, the following expresses a preference to allow AI training ({{train-ai}}),
+For example, the following states a preference to allow AI training ({{train-ai}}),
 disallow generative AI training ({{train-genai}}), and
-and expresses no preference for other categories
+and states no preference for other categories
 other than subsets of these categories:
 
 ~~~
@@ -473,7 +473,7 @@ In either case, new extensions need to be defined in an RFC that updates this do
 
 ## Processing Algorithm {#processing}
 
-To process a series of bytes to recover the expressed preferences,
+To process a series of bytes to recover the stated preferences,
 those bytes are parsed into a Dictionary ({{Section 4.2.2 of FIELDS}}),
 then preferences are assigned to each usage category in the vocabulary.
 
@@ -492,7 +492,7 @@ A preference is assigned as follows:
 * If the value is a Token with a value of `n`,
   the associated preference is to disallow that category of use.
 
-* Otherwise, a preference is not expressed for that category of use.
+* Otherwise, no preference is stated for that category of use.
 
 Note that this last alternative includes
 the key being absent from the collection,
@@ -511,7 +511,7 @@ For example, the following expresses no preferences:
 train-ai=y, train-ai="n", train-genai=n, train-genai, all=n, all=()
 ~~~
 
-If the parsing of the Dictionary fails, no preferences are expressed.
+If the parsing of the Dictionary fails, no preferences are stated.
 This includes where keys include uppercase characters,
 as this format is case sensitive
 (more correctly, it operates on bytes, not strings).
