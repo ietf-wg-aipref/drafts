@@ -80,7 +80,7 @@ such as distributors,
 might wish to express a preference
 regarding the types of usage they consider acceptable.
 Entities that might use that content
-need those preferences to be expressed
+need those preferences to be stated
 in a way that is easily consumed
 by an automated system.
 
@@ -100,19 +100,20 @@ these allow for the automated gathering of preferences
 in the same way that content is obtained.
 
 
-## Preference Expressions
+## Statements of Preference
 
-The format of preference expressions
+The format of a statement of preference
 is defined in the preference vocabulary {{VOCAB}}.
 The preference vocabulary defines:
 
-* what preferences can be expressed,
-* how multiple expressions of preference are combined, and
+* a model for associating usage preferences with categories of use,
+* some categories of use,
+* how multiple statements of preference are combined, and
 * how those preferences are turned into strings or byte sequences
   for use in a protocol.
 
 This document only defines how the strings or byte sequences are conveyed
-so that the preferences can be associated with content.
+so that statements of preference can be associated with content.
 
 
 ## Examples
@@ -239,7 +240,7 @@ The path might be absent or empty;
 if a path present,
 a SP or HTAB separates it from the usage preference.
 
-Note that the usage preference expression encoding
+Note that the statement of preference encoding
 does not use an ABNF definition,
 relying instead on the definitions in {{FIELDS}}.
 
@@ -311,15 +312,15 @@ indicates that the path is absent.
 
 If a path is specified,
 the path ends immediately before the first SP (U+20) or HTAB ("U+09") character.
-The remainder of the rule value is the usage preference expression.
+The remainder of the rule value is the statement of preference.
 If a path is absent,
-the entire rule value is the usage preference expression.
+the entire rule value is the statement of preference.
 
 The usage preference is encoded using the exemplary format
 defined in {{Section 6 of VOCAB}}.
 The parsing and processing rules from {{Sections 6 and 7 of VOCAB}} apply.
 
-Note that a usage preference expression is processed as a sequence of bytes,
+Note that a statement of preference is processed as a sequence of bytes,
 rather than Unicode text; see {{Section 6.3 of VOCAB}}.
 
 
