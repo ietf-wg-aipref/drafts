@@ -438,7 +438,7 @@ Table of Contents
           +========================+=============+=============+
           | Category               | Label       | Reference   |
           +========================+=============+=============+
-          | Automated Processing   | all         | Section 4.1 |
+          | Automated Processing   | bots        | Section 4.1 |
           +------------------------+-------------+-------------+
           | AI Training            | train-ai    | Section 4.2 |
           +------------------------+-------------+-------------+
@@ -528,7 +528,7 @@ Table of Contents
    could result in unexpected outcomes.  For example, the following
    expresses no preferences:
 
-   train-ai=y, train-ai="n", train-genai=n, train-genai, all=n, all=()
+   train-ai=y, train-ai="n", train-genai=n, train-genai, bots=n, bots=()
 
    If the parsing of the Dictionary fails, no preferences are stated.
    This includes where keys include uppercase characters, as this format
