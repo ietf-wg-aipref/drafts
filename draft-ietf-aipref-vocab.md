@@ -378,11 +378,13 @@ in two ways:
 * Extensions to the vocabulary might define more specific categories of usage.
   Preferences about more specific categories override those of any more general category.
 
-* Statements of preferences are general purpose, machine-readable statements
-  that cannot override contractual agreements or more specific statements.
+* Contractual agreements or other specific arrangements might override
+  statements of preference.
 
 For instance, a statement of preferences might indicate that the use of an asset is disallowed for AI Training.
-If arrangements, such as legal agreements, exist that explicitly permit the use of that asset, those arrangements likely apply, unless the terms of the arrangement explicitly say otherwise.
+If arrangements, such as legal agreements, exist that explicitly permit the use of that asset,
+those arrangements likely apply despite the existence of machine-readable statements of preference,
+unless the terms of the arrangement explicitly say otherwise.
 
 
 # Exemplary Serialization Format {#format}
