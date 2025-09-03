@@ -9,7 +9,7 @@ Intended status: Standards Track                                 Mozilla
 Expires: 7 March 2026                                   3 September 2025
 
 
-             Associating AI Usage Preferences With Content
+         Associating AI Usage Preferences with Content in HTTP
                     draft-ietf-aipref-attach-latest
 
 Abstract
