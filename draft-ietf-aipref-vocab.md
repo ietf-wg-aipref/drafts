@@ -130,10 +130,10 @@ each of which is defined to cover a class of usage for assets.
 {{vocab}} defines the core set of usage categories in detail.
 
 A statement of preference -- or usage preference -- is made about an asset.
-Statements of preferences can assign a preference
-to each of the categories of use in the vocabulary.
-Preferences regarding each category can be expressed
-either to allow or disallow the usage associated with the category.
+A statement of preference follows a simple data model where a preference
+is assigned to each of the categories of use in the vocabulary.
+A preference is either to allow or disallow
+the usage associated with the category.
 
 A statement of preference can indicate preferences
 about some, all, or none of the categories from the vocabulary.
@@ -380,8 +380,9 @@ This process ensures that the most restrictive preference applies.
 
 ## More Specific Instructions
 
-A recipient of a statement of preferences that follows this model might receive more specific instructions
-in two ways:
+A recipient of a statement of preferences
+that follows the model in {{model}}
+might receive more specific instructions in two ways:
 
 * Extensions to the vocabulary might define more specific categories of usage.
   Preferences about more specific categories override those of any more general category.
@@ -437,8 +438,8 @@ These are encoded using the mappings in {{ASCII}}.
 
 ## Preference Labels {#y-or-n}
 
-The abstract model used has two options for preferences associated with each category:
-allow and disallow.
+The data model in {{model}} used has two options for preferences
+associated with each category: allow and disallow.
 These are mapped to single byte Tokens ({{Section 3.3.4 of FIELDS}})
 of `y` and `n`, respectively.
 
@@ -527,7 +528,7 @@ This includes where keys include uppercase characters,
 as this format is case sensitive
 (more correctly, it operates on bytes, not strings).
 
-This process produces an abstract data structure
+This process produces an abstract data model
 that assigns a preference to each usage category
 as described in {{model}}.
 
@@ -535,14 +536,14 @@ as described in {{model}}.
 ## Alternative Formats {#mapping}
 
 This format is only an exemplary way to represent preferences.
-The model described in {{model}}, can be used without this serialization.
+The data model described in {{model}}, can be used without this serialization.
 
 Any alternative format needs to define the mapping
 both from that format to the model used in this document
 and from the model to the alternative format.
 This includes any potential for extensions ({{extension}}).
 
-The mapping between the model and the alternative format
+The mapping between the data model and the alternative format
 does not need to be complete,
 it only needs to be clear and unambiguous.
 
