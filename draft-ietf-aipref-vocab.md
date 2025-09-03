@@ -323,8 +323,10 @@ that include existing categories defined in the vocabulary.
 That is, new categories of use can be defined as a subset of an existing category,
 but not a superset.
 
-Systems that use this vocabulary might define their own extensions,
-see {{mapping}} for how those are managed.
+Systems that use this vocabulary might define their own extensions
+as part of a larger data model.
+{{mapping}} describes how concepts from an alternative format
+might be mapped to this vocabulary.
 
 
 # Applying Statements of Preference {#usage}
