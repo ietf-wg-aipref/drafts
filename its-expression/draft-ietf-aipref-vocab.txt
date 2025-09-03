@@ -79,9 +79,10 @@ Table of Contents
      4.2.  AI Training Category
      4.3.  Generative AI Training Category
      4.4.  Search Category
-   5.  Usage
-     5.1.  More Specific Instructions
-     5.2.  Vocabulary Extensions
+     4.5.  Vocabulary Extensions
+   5.  Applying Statements of Preference
+     5.1.  Combining Preferences
+     5.2.  More Specific Instructions
    6.  Exemplary Serialization Format
      6.1.  Usage Category Labels
      6.2.  Preference Labels
@@ -89,13 +90,11 @@ Table of Contents
      6.4.  Syntax Extensions
      6.5.  Processing Algorithm
      6.6.  Alternative Formats
-   7.  Consulting a Preference Statement
-     7.1.  Combining Preferences
-   8.  Security Considerations
-   9.  IANA Considerations
-   10. References
-     10.1.  Normative References
-     10.2.  Informative References
+   7.  Security Considerations
+   8.  IANA Considerations
+   9.  References
+     9.1.  Normative References
+     9.2.  Informative References
    Acknowledgments
    Authors' Addresses
 
@@ -117,9 +116,9 @@ Table of Contents
    Section 3 defines the data model for AI Preferences.  Section 4
    defines the terms of the vocabulary.  Section 5 explains how to use
    AI Preferences in a data processing application, and Section 6
-   describes a way to serialize preferences into a string.  Section 7
-   describes an algorithm for determining the value of a specific
-   preference.
+   describes a way to serialize preferences into a string.  Section 5
+   describes a process for determining the preference for a category of
+   use.
 
    [ATTACH] defines mechanisms to associate preferences with assets.
    Other means of association might be defined separately in the future.
@@ -157,16 +156,16 @@ Table of Contents
 3.  Statements of Preference
 
    The vocabulary is a set of categories, each of which is defined to
-   cover a class of usage for assets.  Section 4 defines these
-   categories in more detail.
+   cover a class of usage for assets.  Section 4 defines the core set of
+   usage categories in detail.
 
-   A statement of preference is made about an asset.  Statements of
-   preferences can assign preferences to each of the categories of use
-   in the vocabulary.  Preferences regarding each category can be
-   expressed either to allow or disallow the usage associated with the
-   category.
+   A statement of preference -- or usage preference -- is made about an
+   asset.  Statements of preferences can assign a preference to each of
+   the categories of use in the vocabulary.  Preferences regarding each
+   category can be expressed either to allow or disallow the usage
+   associated with the category.
 
-   A statement of preferences can indicate preferences about some, all,
+   A statement of preference can indicate preferences about some, all,
    or none of the categories from the vocabulary.  This can mean that no
    preference is stated for a given usage category.
 
@@ -183,22 +182,31 @@ Table of Contents
    regarding AI Training might disallow that usage, while permitting
    other usage within the Automated Processing category.
 
-   After processing a statement of preferences the recipient assigns
+   After processing a statement of preferences the recipient associates
    each category of use one of three preference values: "allowed",
-   "disallowed", or "unknown".
+   "disallowed", or "unknown".  In the absence of a statement of
+   preference, all usage categories are assigned a preference value of
+   "unknown".
 
-   In the absence of a statement of preference, all usage categories are
-   assigned a preference value of "unknown".
+   The process for consulting a statement of preference is defined in
+   Section 5.
+
+   Different declaring parties might each make their own statement of
+   preference regarding a particular asset.  The process for managing
+   multiple statements of preference is defined in Section 5.1.
+
+   An exemplary syntax for statements of preference is defined in
+   Section 6.
 
 3.1.  Conformance
 
-   This document and [ATTACH] describe how usage preferences are
+   This document and [ATTACH] describe how statements of preference are
    associated with assets.  An implementation is conformant to these
    specifications if it correctly follows all normative requirements
    that apply to it.
 
-   The process of obtaining preferences has very limited scope for
-   variation between implementations.
+   The process of obtaining a statement of preference has very limited
+   scope for variation between implementations.
 
 3.2.  Applicability and Effect
 
@@ -230,26 +238,28 @@ Table of Contents
    accessibility.
 
    The following lists examples of cases where other priorities could
-   override specific preferences:
+   lead someone to ignore expressed preferences in a particular
+   situation:
 
    *  People with accessibility needs, or organizations working on their
-      behalf, might ignore a preference to disallow Automated Processing
-      (Section 4.1) in order to access automated captions or generate
-      accessible formats.
+      behalf, might decide to ignore a preference disallowing Automated
+      Processing (Section 4.1) in order to access automated captions or
+      generate accessible formats.
 
-   *  A cultural heritage organization could ignore a preference to
-      disallow Automated Processing (Section 4.1) in order to provide
-      more useful, reliable, or discoverable access to historical web
-      collections.
+   *  A cultural heritage organization might decide to ignore a
+      preference disallowing Automated Processing (Section 4.1) in order
+      to provide more useful, reliable, or discoverable access to
+      historical web collections.
 
-   *  An educational institution could ignore a preference to disallow
-      AI Training (Section 4.2) in order to enable scholars to develop
-      or use tools to facilitate scientific or other types of research.
+   *  An educational institution might decide to ignore a preference
+      disallowing AI Training (Section 4.2) in order to enable scholars
+      to develop or use tools to facilitate scientific or other types of
+      research.
 
-   *  A website that permits user uploads could ignore a preference to
-      disallow Automated Processing (Section 4.1) in order to develop or
-      use tools that detect harmful content according to established
-      terms of use.
+   *  A website that permits user uploads might decide to ignore a
+      preference disallowing Automated Processing (Section 4.1) in order
+      to develop or use tools that detect harmful content according to
+      established terms of use.
 
    Because enforcement is not provided by this specification, the
    consequences of ignoring preferences could vary depending upon how a
@@ -287,10 +297,9 @@ Table of Contents
 
 4.1.  Automated Processing Category
 
-   The act of using one or more assets in the context of automated
-   processing aimed at analyzing text and data in order to generate
-   information which includes but is not limited to patterns, trends and
-   correlations.
+   The act of using automated processing on one or more assets to
+   analyze text and data in order to generate information which includes
+   but is not limited to patterns, trends and correlations.
 
    The use of assets for automated processing encompasses all the
    subsequent categories.
@@ -334,13 +343,57 @@ Table of Contents
    The use of assets for Search is a proper subset of Automated
    Processing usage.
 
-5.  Usage
+4.5.  Vocabulary Extensions
 
-   The vocabulary is used by referencing the terms defined in Section 4,
-   directly or via mappings, in accordance with how they are defined in
-   this document.
+   Systems referencing the vocabulary MUST NOT introduce additional
+   categories that include existing categories defined in the
+   vocabulary.  That is, new categories of use can be defined as a
+   subset of an existing category, but not a superset.
 
-5.1.  More Specific Instructions
+5.  Applying Statements of Preference
+
+   After acquiring a statement of preference, which might use the
+   process in Section 6.5, an application can determine the status of a
+   specific usage category as follows:
+
+   1.  If the statement of preference contains an explicit preference
+       regarding that category of use -- either to allow or disallow --
+       that is the result.
+
+   2.  Otherwise, if the usage category is a proper subset of another
+       usage category, recursively apply this process to that category
+       and use the result of that process.
+
+   3.  Otherwise, no preference is stated.
+
+   This process results in one of three potential answers: allow,
+   disallow, and unknown.  Applications can use the answer to guide
+   their behavior.
+
+   One approach for dealing with an "unknown" outcome is to assign a
+   default value.  This document takes no position on what default might
+   be assigned.
+
+5.1.  Combining Preferences
+
+   The application might have multiple statements of preference,
+   obtained using different methods or from different declaring parties.
+   This might result in conflicting answers.
+
+   Absent some other means of resolving conflicts, the following process
+   applies to each usage category:
+
+   *  If any statement of preference indicates that the usage is
+      disallowed, the result is that the usage is disallowed.
+
+   *  Otherwise, if any statement of preference allows the usage, the
+      result is that the usage is allowed.
+
+   *  Otherwise, no preference is stated.
+
+   This process ensures that the most restrictive preference applies.
+
+5.2.  More Specific Instructions
 
    A recipient of a statement of preferences that follows this model
    might receive more specific instructions in two ways:
@@ -349,21 +402,15 @@ Table of Contents
       of usage.  Preferences about more specific categories override
       those of any more general category.
 
-   *  Statements of preferences are general purpose, machine-readable
-      statements that cannot override contractual agreements or more
-      specific statements.
+   *  Contractual agreements or other specific arrangements might
+      override statements of preference.
 
    For instance, a statement of preferences might indicate that the use
    of an asset is disallowed for AI Training.  If arrangements, such as
    legal agreements, exist that explicitly permit the use of that asset,
-   those arrangements likely apply, unless the terms of the arrangement
-   explicitly say otherwise.
-
-5.2.  Vocabulary Extensions
-
-   Systems referencing the vocabulary MUST NOT introduce additional
-   categories that include existing categories defined in the vocabulary
-   or otherwise include additional hierarchical relationships.
+   those arrangements likely apply despite the existence of machine-
+   readable statements of preference, unless the terms of the
+   arrangement explicitly say otherwise.
 
 6.  Exemplary Serialization Format
 
@@ -434,7 +481,7 @@ Table of Contents
    addition of new labels and the addition of parameters.
 
    New labels might be defined to correspond to new usage categories.
-   Section 5.2 addresses the considerations for defining new categories.
+   Section 4.5 addresses the considerations for defining new categories.
    New labels might also be defined for other types of extension that do
    not assign a preference to a usage category.  In either case, when
    processing a parsed Dictionary to obtain preferences, any unknown
@@ -455,16 +502,13 @@ Table of Contents
    bytes are parsed into a Dictionary (Section 4.2.2 of [FIELDS]), then
    preferences are assigned to each usage category in the vocabulary.
 
-   The parsing algorithm for a Dictionary produces a keyed collection of
-   values, each with a possibly-empty set of parameters.  The parsing
-   process guarantees that each key has at most one value and
-   parameters.
+   This algorithm produces a keyed collection of values, where each key
+   has at most one value and optional parameters.
 
-   To obtain preferences for each of the categories in the vocabulary,
-   iterate through the categories.  For the label that corresponds to
-   that category (see Table 1), obtain the corresponding value from the
-   collection, disregarding any parameters.  A preference is assigned as
-   follows:
+   To obtain preferences, iterate through the defined categories in the
+   vocabulary.  For the label that corresponds to that category (see
+   Table 1), obtain the corresponding value from the collection,
+   disregarding any parameters.  A preference is assigned as follows:
 
    *  If the value is a Token with a value of y, the associated
       preference is to allow that category of use.
@@ -479,10 +523,10 @@ Table of Contents
    other than y or n.  All of these are not errors, they only result in
    no preference being inferred.
 
-   An important note about this process and format is that, if the same
-   key appears multiple times, only the last value is taken.  This means
-   that duplicating the same key could result in unexpected outcomes.
-   For example, the following states no preferences:
+   It is important to note that if the same key appears multiple times,
+   only the last value is taken.  This means that duplicating a key
+   could result in unexpected outcomes.  For example, the following
+   expresses no preferences:
 
    train-ai=y, train-ai="n", train-genai=n, train-genai, all=n, all=()
 
@@ -512,64 +556,17 @@ Table of Contents
    might then define that no preference is associated with other
    categories.
 
-7.  Consulting a Preference Statement
-
-   After processing a statement of preference (Section 6.5), an
-   application can request the status of a specific usage category.
-
-   A single statement of preference can be evaluated for a usage
-   category as follows:
-
-   1.  If the statement contains an explicit preference (either to allow
-       or disallow), that is the result.
-
-   2.  Otherwise, if the usage category is a proper subset of another
-       usage category, recursively apply this process to that category
-       and use the result of that process.
-
-   3.  Otherwise, no preference is stated.
-
-   This process results in three potential answers: allow, disallow, and
-   no preference.  Applications can use the answer to guide their
-   behavior.
-
-   One approach for dealing with an "unknown" or "no preference" answer
-   is to assign a default.  This document takes no position on what
-   default might be chosen as that will depend on policy constraints
-   beyond the scope of this specification.
-
-7.1.  Combining Preferences
-
-   The application might have multiple statements of preference,
-   obtained using different methods.
-
-   If multiple statements of preference are active, all statements are
-   consulted (Section 7).  This might result in conflicting answers.
-
-   Absent some other means of resolving conflicts, the following process
-   applies to each usage category:
-
-   *  If any statement of preference indicates that the usage is
-      disallowed, the result is that the usage is disallowed.
-
-   *  Otherwise, if any preference preference allows the usage, the
-      result is that the usage is allowed.
-
-   *  Otherwise, no preference is stated.
-
-   This process ensures that the most restrictive preference applies.
-
-8.  Security Considerations
+7.  Security Considerations
 
    TODO Security
 
-9.  IANA Considerations
+8.  IANA Considerations
 
    This document has no IANA actions.
 
-10.  References
+9.  References
 
-10.1.  Normative References
+9.1.  Normative References
 
    [ASCII]    Cerf, V., "ASCII format for network interchange", STD 80,
               RFC 20, DOI 10.17487/RFC0020, October 1969,
@@ -588,7 +585,7 @@ Table of Contents
               2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
               May 2017, <https://www.rfc-editor.org/rfc/rfc8174>.
 
-10.2.  Informative References
+9.2.  Informative References
 
    [ATTACH]   Illyes, G. and M. Thomson, Ed., "A Vocabulary For
               Expressing AI Usage Preferences", Work in Progress,
