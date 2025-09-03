@@ -84,7 +84,7 @@ including the applicability of exceptions and limitations to copyright.
 {{vocab}} defines the terms of the vocabulary.
 {{usage}} explains how to use AI Preferences in a data processing application,
 and {{format}} describes a way to serialize preferences into a string.
-{{consulting}} describes an algorithm for determining the value of a specific preference.
+{{usage}} describes a process for determining the preference for a category of use.
 
 {{ATTACH}} defines mechanisms to associate preferences with assets.
 Other means of association might be defined separately in the future.
@@ -127,15 +127,15 @@ Search Application:
 
 The vocabulary is a set of categories,
 each of which is defined to cover a class of usage for assets.
-{{vocab}} defines these categories in more detail.
+{{vocab}} defines the core set of usage categories in detail.
 
-A statement of preference is made about an asset.
-Statements of preferences can assign preferences
+A statement of preference -- or usage preference -- is made about an asset.
+Statements of preferences can assign a preference
 to each of the categories of use in the vocabulary.
 Preferences regarding each category can be expressed
 either to allow or disallow the usage associated with the category.
 
-A statement of preferences can indicate preferences
+A statement of preference can indicate preferences
 about some, all, or none of the categories from the vocabulary.
 This can mean that no preference is stated for a given usage category.
 
@@ -151,21 +151,28 @@ In comparison, an explicit preference regarding AI Training might disallow that 
 while permitting other usage within the Automated Processing category.
 
 After processing a statement of preferences
-the recipient assigns each category of use
+the recipient associates each category of use
 one of three preference values: "allowed", "disallowed", or "unknown".
-
 In the absence of a statement of preference,
 all usage categories are assigned a preference value of "unknown".
+
+The process for consulting a statement of preference is defined in {{usage}}.
+
+Different declaring parties might each make their own statement of preference
+regarding a particular asset.
+The process for managing multiple statements of preference is defined in {{combine}}.
+
+An exemplary syntax for statements of preference is defined in {{format}}.
 
 
 ## Conformance
 
 This document and {{ATTACH}}
-describe how usage preferences are associated with assets.
+describe how statements of preference are associated with assets.
 An implementation is conformant to these specifications
 if it correctly follows all normative requirements that apply to it.
 
-The process of obtaining preferences has very limited scope
+The process of obtaining a statement of preference has very limited scope
 for variation between implementations.
 
 ## Applicability and Effect {#applicability}
@@ -200,26 +207,28 @@ expression, safety, education, scholarship, research,
 preservation, interoperability, and accessibility.
 
 The following lists examples of cases
-where other priorities could override specific preferences:
+where other priorities could lead someone to ignore expressed preferences
+in a particular situation:
 
 * People with accessibility needs,
   or organizations working on their behalf,
-  might ignore a preference to disallow Automated Processing ({{all}})
+  might decide to ignore a preference
+  disallowing Automated Processing ({{all}})
   in order to access automated captions
   or generate accessible formats.
 
-* A cultural heritage organization could ignore a preference
-  to disallow Automated Processing ({{all}})
+* A cultural heritage organization might decide to ignore a preference
+  disallowing Automated Processing ({{all}})
   in order to provide more useful, reliable, or discoverable access
   to historical web collections.
 
-* An educational institution could ignore a preference
-  to disallow AI Training ({{train-ai}})
+* An educational institution might decide to ignore a preference
+  disallowing AI Training ({{train-ai}})
   in order to enable scholars to develop or use tools
   to facilitate scientific or other types of research.
 
-* A website that permits user uploads could ignore a preference
-  to disallow Automated Processing ({{all}})
+* A website that permits user uploads might decide to ignore a preference
+  disallowing Automated Processing ({{all}})
   in order to develop or use tools that detect harmful content
   according to established terms of use.
 
@@ -261,7 +270,9 @@ This section defines the categories of use in the vocabulary.
 
 ## Automated Processing Category {#all}
 
-The act of using one or more assets in the context of automated processing aimed at analyzing text and data in order to generate information which includes but is not limited to patterns, trends and correlations.
+The act of using automated processing on one or more assets
+to analyze text and data in order to generate information
+which includes but is not limited to patterns, trends and correlations.
 
 The use of assets for automated processing encompasses all the subsequent categories.
 
@@ -302,11 +313,61 @@ are not covered by this category of use.
 The use of assets for Search is a proper subset of Automated Processing usage.
 
 
-# Usage {#usage}
+## Vocabulary Extensions {#vocab-extension}
 
-The vocabulary is used by referencing the terms defined in {{vocab}},
-directly or via mappings,
-in accordance with how they are defined in this document.
+Systems referencing the vocabulary MUST NOT introduce additional categories
+that include existing categories defined in the vocabulary.
+That is, new categories of use can be defined as a subset of an existing category,
+but not a superset.
+
+
+# Applying Statements of Preference {#usage}
+
+After acquiring a statement of preference,
+which might use the process in {{processing}},
+an application can determine the status of a specific usage category
+as follows:
+
+1. If the statement of preference contains an explicit preference
+   regarding that category of use --
+   either to allow or disallow --
+   that is the result.
+
+2. Otherwise, if the usage category is a proper subset
+   of another usage category,
+   recursively apply this process to that category
+   and use the result of that process.
+
+3. Otherwise, no preference is stated.
+
+This process results in one of three potential answers:
+allow, disallow, and unknown.
+Applications can use the answer to guide their behavior.
+
+One approach for dealing with an "unknown" outcome
+is to assign a default value.
+This document takes no position on what default might be assigned.
+
+
+## Combining Preferences {#combine}
+
+The application might have multiple statements of preference,
+obtained using different methods
+or from different declaring parties.
+This might result in conflicting answers.
+
+Absent some other means of resolving conflicts,
+the following process applies to each usage category:
+
+* If any statement of preference indicates that the usage is disallowed,
+  the result is that the usage is disallowed.
+
+* Otherwise, if any statement of preference allows the usage,
+  the result is that the usage is allowed.
+
+* Otherwise, no preference is stated.
+
+This process ensures that the most restrictive preference applies.
 
 
 ## More Specific Instructions
@@ -317,16 +378,13 @@ in two ways:
 * Extensions to the vocabulary might define more specific categories of usage.
   Preferences about more specific categories override those of any more general category.
 
-* Statements of preferences are general purpose, machine-readable statements
-  that cannot override contractual agreements or more specific statements.
+* Contractual agreements or other specific arrangements might override
+  statements of preference.
 
 For instance, a statement of preferences might indicate that the use of an asset is disallowed for AI Training.
-If arrangements, such as legal agreements, exist that explicitly permit the use of that asset, those arrangements likely apply, unless the terms of the arrangement explicitly say otherwise.
-
-
-## Vocabulary Extensions {#vocab-extension}
-
-Systems referencing the vocabulary MUST NOT introduce additional categories that include existing categories defined in the vocabulary or otherwise include additional hierarchical relationships.
+If arrangements, such as legal agreements, exist that explicitly permit the use of that asset,
+those arrangements likely apply despite the existence of machine-readable statements of preference,
+unless the terms of the arrangement explicitly say otherwise.
 
 
 # Exemplary Serialization Format {#format}
@@ -419,13 +477,10 @@ To process a series of bytes to recover the stated preferences,
 those bytes are parsed into a Dictionary ({{Section 4.2.2 of FIELDS}}),
 then preferences are assigned to each usage category in the vocabulary.
 
-The parsing algorithm for a Dictionary
-produces a keyed collection of values,
-each with a possibly-empty set of parameters.
-The parsing process guarantees that each key has at most one value and parameters.
+This algorithm produces a keyed collection of values, where each key has at most one value and optional parameters.
 
-To obtain preferences for each of the categories in the vocabulary,
-iterate through the categories.
+To obtain preferences,
+iterate through the defined categories in the vocabulary.
 For the label that corresponds to that category (see {{t-category-labels}}),
 obtain the corresponding value from the collection,
 disregarding any parameters.
@@ -446,11 +501,11 @@ and Token values that are other than `y` or `n`.
 All of these are not errors,
 they only result in no preference being inferred.
 
-An important note about this process and format is that,
+It is important to note that
 if the same key appears multiple times,
 only the last value is taken.
-This means that duplicating the same key could result in unexpected outcomes.
-For example, the following states no preferences:
+This means that duplicating a key could result in unexpected outcomes.
+For example, the following expresses no preferences:
 
 ~~~
 train-ai=y, train-ai="n", train-genai=n, train-genai, all=n, all=()
@@ -485,58 +540,6 @@ might only provide the ability to convey preferences
 for a subset of the categories of use.
 A mapping might then define that no preference is associated with other categories.
 
-
-# Consulting a Preference Statement {#consulting}
-
-After processing a statement of preference ({{processing}}),
-an application can request the status of a specific usage category.
-
-A single statement of preference can be evaluated for a usage category
-as follows:
-
-1. If the statement contains an explicit preference
-   (either to allow or disallow),
-   that is the result.
-
-2. Otherwise, if the usage category is a proper subset
-   of another usage category,
-   recursively apply this process to that category
-   and use the result of that process.
-
-3. Otherwise, no preference is stated.
-
-This process results in three potential answers:
-allow, disallow, and no preference.
-Applications can use the answer to guide their behavior.
-
-One approach for dealing with an "unknown" or "no preference" answer
-is to assign a default.
-This document takes no position on what default might be chosen
-as that will depend on policy constraints
-beyond the scope of this specification.
-
-
-## Combining Preferences {#combining}
-
-The application might have multiple statements of preference,
-obtained using different methods.
-
-If multiple statements of preference are active,
-all statements are consulted ({{consulting}}).
-This might result in conflicting answers.
-
-Absent some other means of resolving conflicts,
-the following process applies to each usage category:
-
-* If any statement of preference indicates that the usage is disallowed,
-  the result is that the usage is disallowed.
-
-* Otherwise, if any preference preference allows the usage,
-  the result is that the usage is allowed.
-
-* Otherwise, no preference is stated.
-
-This process ensures that the most restrictive preference applies.
 
 # Security Considerations
 
