@@ -420,7 +420,9 @@ Each usage category in the vocabulary ({{vocab}}) is mapped to a short textual l
 | Search                 | search      | {{search}}      |
 {: #t-category-labels title="Mappings for Categories"}
 
-Any mapping for a new usage category can only use
+These tokens are case sensitive.
+
+Tokens defined for a new usage category can only use
 lowercase latin characters (a-z), digits (0-9), "_", "-", ".", or "*".
 These are encoded using the mappings in {{ASCII}}.
 
