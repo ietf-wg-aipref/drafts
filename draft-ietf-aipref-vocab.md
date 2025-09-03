@@ -386,7 +386,7 @@ in two ways:
 
 For instance, a statement of preferences might indicate that the use of an asset is disallowed for AI Training.
 If arrangements, such as legal agreements, exist that explicitly permit the use of that asset,
-those arrangements likely apply despite the existance of machine-readable statements of preference,
+those arrangements likely apply despite the existence of machine-readable statements of preference,
 unless the terms of the arrangement explicitly say otherwise.
 
 
