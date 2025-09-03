@@ -198,9 +198,9 @@ how that usage corresponds to the usage categories
 where preferences have been stated,
 and the applicable legal context.
 
-Usage preferences can be overridden through express agreements
-between relevant parties, by explicit provisions of law, or
-through the exercise of discretion in situations where other
+Usage preferences can be ignored due to express agreements
+between relevant parties, explicit provisions of law, or
+the exercise of discretion in situations where widely recognized
 priorities justify doing so. Priorities that could justify
 ignoring preferences include—but are not limited to—free
 expression, safety, education, scholarship, research,
