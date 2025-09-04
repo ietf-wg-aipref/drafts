@@ -5,8 +5,8 @@
 AI Preferences                                                 P. Keller
 Internet-Draft                                               Open Future
 Intended status: Standards Track                         M. Thomson, Ed.
-Expires: 7 March 2026                                            Mozilla
-                                                        3 September 2025
+Expires: 8 March 2026                                            Mozilla
+                                                        4 September 2025
 
 
             A Vocabulary For Expressing AI Usage Preferences
@@ -51,7 +51,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 7 March 2026.
+   This Internet-Draft will expire on 8 March 2026.
 
 Copyright Notice
 
@@ -544,6 +544,17 @@ Table of Contents
    This includes where keys include uppercase characters, as this format
    is case sensitive (more correctly, it operates on bytes, not
    strings).
+
+   This document does not define a use for parameters.  Where parameters
+   are used, only those parameters associated with the value that is
+   selected according to Section 4.2.2 of [FIELDS].  Parameters can
+   therefore be carried for any preference value, including where no
+   preference is expressed.
+
+   For example, the following train-ai preference has parameters even
+   though no preference is expressed:
+
+   train-ai;has;parameters="?";
 
    This process produces an abstract data model that assigns a
    preference to each usage category as described in Section 3.
