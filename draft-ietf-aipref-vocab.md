@@ -489,7 +489,8 @@ To process a series of bytes to recover the stated preferences,
 those bytes are parsed into a Dictionary ({{Section 4.2.2 of FIELDS}}),
 then preferences are assigned to each usage category in the vocabulary.
 
-This algorithm produces a keyed collection of values, where each key has at most one value and optional parameters.
+This algorithm produces a keyed collection of values,
+where each key has at most one value and optional parameters.
 
 To obtain preferences,
 iterate through the defined categories in the vocabulary.
@@ -527,6 +528,20 @@ If the parsing of the Dictionary fails, no preferences are stated.
 This includes where keys include uppercase characters,
 as this format is case sensitive
 (more correctly, it operates on bytes, not strings).
+
+This document does not define a use for parameters.
+Where parameters are used,
+only those parameters associated with the value that is selected
+according to {{Section 4.2.2 of FIELDS}}.
+Parameters can therefore be carried for any preference value,
+including where no preference is expressed.
+
+For example, the following `train-ai` preference has parameters
+even though no preference is expressed:
+
+~~~
+train-ai;has;parameters="?";
+~~~
 
 This process produces an abstract data model
 that assigns a preference to each usage category
