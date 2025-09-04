@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-09-02T01:54:46.017540+00:00",
+  "timestamp": "2025-09-04T01:47:19.929162+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -27,6 +27,16 @@
       "name": "applicability statement",
       "description": null,
       "color": "aaaaaa"
+    },
+    {
+      "name": "wglc",
+      "description": "An issue raised during Working Group Last Call",
+      "color": "d242ab"
+    },
+    {
+      "name": "triage",
+      "description": "An issue that needs evaluation to determine what its status is.",
+      "color": "d9182c"
     }
   ],
   "issues": [
@@ -425,7 +435,7 @@
       "id": "I_kwDOOWk1-s6yKa0q",
       "title": "Identifying the set of relevant attachment mechanisms",
       "url": "https://github.com/ietf-wg-aipref/drafts/issues/13",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "mnot",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
@@ -434,8 +444,8 @@
       ],
       "body": "The architecture we're developing accommodates attachment mechanisms that we define in our \"core\" documents, as well as future extensions -- including those defined by us and by third parties.\n\nContent providers need to know which attachment mechanisms will be paid attention to, and consumers of preferences need to know which ones they're supposed to check. \n\nThere might be:\n\n* one canonical list (e.g., in our specification or an IANA registry)\n* more than one list (e.g., defined per-use-case, such as for crawling-to-train vs inference-time)\n* undefined list (e.g., defined by legal authority)",
       "createdAt": "2025-04-11T16:00:54Z",
-      "updatedAt": "2025-07-21T13:35:33Z",
-      "closedAt": null,
+      "updatedAt": "2025-09-04T00:15:23Z",
+      "closedAt": "2025-09-04T00:15:23Z",
       "comments": [
         {
           "author": "lrosenthol",
@@ -464,6 +474,13 @@
           "body": "Submitted #57 to improve that paragraph",
           "createdAt": "2025-06-25T01:08:37Z",
           "updatedAt": "2025-06-25T01:08:37Z"
+        },
+        {
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "We've made some progress on other attachment forms in the current draft, recognizing the possibility of differences as well as directly identifying metadata and registries as potential alternatives that are complementary, not in competition, with what we are defining.  Let's focus efforts on more targeted critique in new issues.",
+          "createdAt": "2025-09-04T00:15:23Z",
+          "updatedAt": "2025-09-04T00:15:23Z"
         }
       ]
     },
@@ -472,7 +489,7 @@
       "id": "I_kwDOOWk1-s6yKcat",
       "title": "Combination",
       "url": "https://github.com/ietf-wg-aipref/drafts/issues/14",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "mnot",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
@@ -482,8 +499,8 @@
       ],
       "body": "In Brussels, a sense emerged that we would only address combination for different preferences for the same content (e.g., robots.txt and HTTP header applied to the same file). We would not address combination of preferences from different sources (e.g., the same image from two different sites).\n\nThis should be documented in the applicability statement. We also need to determine the algorithm, e.g.,\n\n* Most restrictive\n* Most specific attachment\n* Most specific preference",
       "createdAt": "2025-04-11T16:02:56Z",
-      "updatedAt": "2025-05-06T06:44:43Z",
-      "closedAt": null,
+      "updatedAt": "2025-09-04T00:13:35Z",
+      "closedAt": "2025-09-04T00:13:35Z",
       "comments": [
         {
           "author": "martinthomson",
@@ -505,6 +522,13 @@
           "body": "Yep - it's flagged both for that and for the combination bit (which per Brussels discussion is likely to end up in the vocab document).",
           "createdAt": "2025-05-06T06:44:42Z",
           "updatedAt": "2025-05-06T06:44:42Z"
+        },
+        {
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "As discussed, closing this out for now.  We'll have to spelunk the closed issues when putting any sort of applicability statement text together anyway, so I'm not concerned that we'll lose this.",
+          "createdAt": "2025-09-04T00:13:35Z",
+          "updatedAt": "2025-09-04T00:13:35Z"
         }
       ]
     },
@@ -513,7 +537,7 @@
       "id": "I_kwDOOWk1-s6yKc-z",
       "title": "Applicability Statement",
       "url": "https://github.com/ietf-wg-aipref/drafts/issues/15",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "mnot",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
@@ -522,8 +546,8 @@
       ],
       "body": "This issue captures potential items to discuss in an applicability statement intended for regulators and other parties using the framework we define.\n\n",
       "createdAt": "2025-04-11T16:03:46Z",
-      "updatedAt": "2025-04-11T16:03:52Z",
-      "closedAt": null,
+      "updatedAt": "2025-09-03T22:01:21Z",
+      "closedAt": "2025-09-03T22:01:21Z",
       "comments": [
         {
           "author": "mnot",
@@ -531,6 +555,13 @@
           "body": "- opt-in vs opt-out\n- robots time dimension\n- disparate assertions from multiple sources\n- hosted content\n- rightsholder identification\n- accessibility, academic / research / spam filters, impact upon other \"good\" uses\n- data protection / privacy\n- enforcement / audit\n- bot identification / authentication\n- TDM is very broad",
           "createdAt": "2025-04-11T16:03:50Z",
           "updatedAt": "2025-04-11T16:03:50Z"
+        },
+        {
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Setting this aside for the moment (the list here is useful, but the work will likely happen elsewhere).",
+          "createdAt": "2025-09-03T22:01:21Z",
+          "updatedAt": "2025-09-03T22:01:21Z"
         }
       ]
     },
@@ -946,7 +977,7 @@
       "id": "I_kwDOOWk1-s68SzPA",
       "title": "robots.txt syntax",
       "url": "https://github.com/ietf-wg-aipref/drafts/issues/51",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "martinthomson",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
@@ -955,9 +986,17 @@
       ],
       "body": "There's a discussion on-list about how to spell the inclusion of preferences in robots.txt.  Several considerations are in play:\n\n* How do preferences and crawling interact?  Do preferences apply separate from crawling or do they only apply to resources where crawling is permitted?\n* How do we manage backwards compatibility?  In particular, what changes in parsers that do not understand any newly-added stuff?\n* What syntax do we align with?  The HTTP field definition or the Allow/Disallow pattern that robots.txt already uses?\n* What, if any, extensibility is needed?\n\nThe current draft includes one proposal.  That presupposes one set of answers to these questions, but we need to discuss whether these answers are the best ones.",
       "createdAt": "2025-06-19T05:52:04Z",
-      "updatedAt": "2025-06-19T05:52:14Z",
-      "closedAt": null,
-      "comments": []
+      "updatedAt": "2025-09-04T00:14:15Z",
+      "closedAt": "2025-09-04T00:14:15Z",
+      "comments": [
+        {
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "The draft contains a proposal that is robust.  There are lingering concerns, but we'll try to keep issues for those more targeted, less general.",
+          "createdAt": "2025-09-04T00:14:15Z",
+          "updatedAt": "2025-09-04T00:14:15Z"
+        }
+      ]
     },
     {
       "number": 54,
@@ -1394,7 +1433,7 @@
       "id": "I_kwDOOWk1-s7BoAWV",
       "title": "Short name of top-level group",
       "url": "https://github.com/ietf-wg-aipref/drafts/issues/97",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "martinthomson",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
@@ -1403,8 +1442,8 @@
       ],
       "body": "\"all\" is probably a bit *too* expansive.  Let's find a better one.",
       "createdAt": "2025-07-21T12:34:39Z",
-      "updatedAt": "2025-09-02T01:42:14Z",
-      "closedAt": null,
+      "updatedAt": "2025-09-03T05:28:52Z",
+      "closedAt": "2025-09-03T05:28:52Z",
       "comments": [
         {
           "author": "martinthomson",
@@ -1419,6 +1458,13 @@
           "body": "`bots`",
           "createdAt": "2025-09-02T01:42:14Z",
           "updatedAt": "2025-09-02T01:42:14Z"
+        },
+        {
+          "author": "paul2keller",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "I don't think this nails it either. the whole vocabulary is about use of assets and not about crawling. I feel the term `bots` may be to closely associated with crawling and that this will cause confusion about what the vocab governs. that being said `bots` is better than `all` so maybe go with this for now to see how people react. ",
+          "createdAt": "2025-09-03T05:26:25Z",
+          "updatedAt": "2025-09-03T05:26:25Z"
         }
       ]
     },
@@ -1620,17 +1666,18 @@
       "id": "I_kwDOOWk1-s7DpKcH",
       "title": "Scope of 'statement of preference'",
       "url": "https://github.com/ietf-wg-aipref/drafts/issues/106",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "mnot",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [
+        "vocabulary",
         "editorial"
       ],
       "body": "Is \"statement of preference\" post-combination, or pre-combination?\n\nAlso, since we're using its as a term of art, we might want to include it in terminology.",
       "createdAt": "2025-08-01T02:56:58Z",
-      "updatedAt": "2025-08-13T06:48:17Z",
-      "closedAt": null,
+      "updatedAt": "2025-09-03T05:49:05Z",
+      "closedAt": "2025-09-03T05:49:05Z",
       "comments": [
         {
           "author": "martinthomson",
@@ -1660,6 +1707,227 @@
       "updatedAt": "2025-09-01T22:05:03Z",
       "closedAt": "2025-09-01T22:05:03Z",
       "comments": []
+    },
+    {
+      "number": 122,
+      "id": "I_kwDOOWk1-s7JHQsI",
+      "title": "Extending the vocabulary",
+      "url": "https://github.com/ietf-wg-aipref/drafts/issues/122",
+      "state": "CLOSED",
+      "author": "mnot",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [
+        "vocabulary",
+        "editorial"
+      ],
+      "body": "> Systems referencing the vocabulary MUST NOT introduce additional categories that include existing categories defined in the vocabulary. That is, new categories of use can be defined as a subset of an existing category, but not a superset\n\nThe first sentence implies that \"systems referencing the vocabulary\" can introduce additional categories. However, 6.4 says\n\n> New labels might be defined to correspond to new usage categories. [Section 4.5](https://ietf-wg-aipref.github.io/drafts/draft-ietf-aipref-vocab.html#vocab-extension) addresses the considerations for defining new categories. [...] [N]ew extensions need to be defined in an RFC that updates this document.\n\nThese statements are seemingly in conflict. It might be good to more explicitly discuss the conditions under which new categories can be added in 4.5, and adjust the language used there. ",
+      "createdAt": "2025-09-02T02:00:16Z",
+      "updatedAt": "2025-09-03T05:44:31Z",
+      "closedAt": "2025-09-03T05:44:31Z",
+      "comments": [
+        {
+          "author": "paul2keller",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "I think what we want to enable here is that in the case we are not including a category that is already present in some external systems for expressing preferences (like \"ai-inference\" in the C2PA or IPTC systems) that such a category MUST not be defined in a way that it includes existing categories (of our vocabulary) as sub categories. So the initial statement does not refer to our vocabulary but to other (external) systems.",
+          "createdAt": "2025-09-02T06:44:43Z",
+          "updatedAt": "2025-09-02T06:44:43Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Hmm, that's not extension so much as it is compatibility with other systems that it needs to co-exist with. Separate section?",
+          "createdAt": "2025-09-02T06:51:01Z",
+          "updatedAt": "2025-09-02T06:51:01Z"
+        },
+        {
+          "author": "paul2keller",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "are that this is not about extending the vocab as such",
+          "createdAt": "2025-09-02T08:19:41Z",
+          "updatedAt": "2025-09-02T08:19:41Z"
+        },
+        {
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "I'm not seeing a conflict.  This merely notes the constraint that a future RFC might need to consider.  Still, worth a modest tweak.",
+          "createdAt": "2025-09-02T21:55:56Z",
+          "updatedAt": "2025-09-02T21:55:56Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "There are two things happening here:\n\n1. We want to say that to be part of _this_ vocabulary (and identified as such), any future terms need to be in an RFC updating this one.\n2. We also want to say that some applications that use this vocabulary might also have their own terms that they use alongside it. But those terms aren't part of this vocabulary, and so the application is responsible for managing them.\n\nRight now these are blurred together; I'm saying they'd benefit from clear separation.",
+          "createdAt": "2025-09-02T22:08:48Z",
+          "updatedAt": "2025-09-02T22:08:48Z"
+        },
+        {
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Thanks, that was helpful for me in working out how to handle this.  See #145.",
+          "createdAt": "2025-09-03T02:36:44Z",
+          "updatedAt": "2025-09-03T02:36:44Z"
+        }
+      ]
+    },
+    {
+      "number": 128,
+      "id": "I_kwDOOWk1-s7JJDn7",
+      "title": "Note explicitly that Tokens are case sensitive",
+      "url": "https://github.com/ietf-wg-aipref/drafts/issues/128",
+      "state": "CLOSED",
+      "author": "mnot",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [
+        "vocabulary",
+        "editorial"
+      ],
+      "body": "... because you know that somebody will assume the opposite.",
+      "createdAt": "2025-09-02T06:25:05Z",
+      "updatedAt": "2025-09-03T05:37:28Z",
+      "closedAt": "2025-09-03T05:37:28Z",
+      "comments": [
+        {
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Is this not sufficient:\n\n> Any mapping for a new usage category can only use\nlowercase latin characters (a-z), digits (0-9), \"_\", \"-\", \".\", or \"*\".\n\nIt's [right under the table](https://ietf-wg-aipref.github.io/drafts/draft-ietf-aipref-vocab.html#:~:text=lowercase%20latin%20characters).\n\n?",
+          "createdAt": "2025-09-03T02:08:16Z",
+          "updatedAt": "2025-09-03T02:08:16Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Based upon long experience, no. ",
+          "createdAt": "2025-09-03T02:14:51Z",
+          "updatedAt": "2025-09-03T02:14:51Z"
+        },
+        {
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "/me sighs\n\nPR incoming.",
+          "createdAt": "2025-09-03T02:19:17Z",
+          "updatedAt": "2025-09-03T02:19:17Z"
+        }
+      ]
+    },
+    {
+      "number": 129,
+      "id": "I_kwDOOWk1-s7JJEgP",
+      "title": "Parameters",
+      "url": "https://github.com/ietf-wg-aipref/drafts/issues/129",
+      "state": "OPEN",
+      "author": "mnot",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [
+        "vocabulary",
+        "editorial"
+      ],
+      "body": "6.5 says:\n\n>  The parsing process guarantees that each key has at most one value and parameters.\n\nbut then:\n\n> obtain the corresponding value from the collection, disregarding any parameters.\n\nSo are parameters passed through the algorithm or not?",
+      "createdAt": "2025-09-02T06:26:26Z",
+      "updatedAt": "2025-09-02T06:26:26Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 130,
+      "id": "I_kwDOOWk1-s7JJFfA",
+      "title": "\"Model\"",
+      "url": "https://github.com/ietf-wg-aipref/drafts/issues/130",
+      "state": "CLOSED",
+      "author": "mnot",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [
+        "vocabulary",
+        "editorial"
+      ],
+      "body": "A few places in the spec refer to what's created in Section 3 as a \"model\" / \"abstract model\", but Section 3 isn't explicit about this. That's a bit confusing.",
+      "createdAt": "2025-09-02T06:27:53Z",
+      "updatedAt": "2025-09-03T09:55:28Z",
+      "closedAt": "2025-09-03T09:55:28Z",
+      "comments": []
+    },
+    {
+      "number": 132,
+      "id": "I_kwDOOWk1-s7JUr4e",
+      "title": "Document title",
+      "url": "https://github.com/ietf-wg-aipref/drafts/issues/132",
+      "state": "CLOSED",
+      "author": "mnot",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [
+        "location attachment",
+        "editorial"
+      ],
+      "body": "Something more specific would help distinguish it from other potential attachment mechanisms.\n\nPerhaps \"Associating AI Usage Preferences With Content over HTTP\"?",
+      "createdAt": "2025-09-02T22:15:41Z",
+      "updatedAt": "2025-09-03T01:37:00Z",
+      "closedAt": "2025-09-03T01:37:00Z",
+      "comments": []
+    },
+    {
+      "number": 134,
+      "id": "I_kwDOOWk1-s7JUvdi",
+      "title": "Terminology: \"expression\" vs \"statement\"",
+      "url": "https://github.com/ietf-wg-aipref/drafts/issues/134",
+      "state": "CLOSED",
+      "author": "mnot",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [
+        "vocabulary",
+        "location attachment",
+        "editorial"
+      ],
+      "body": "Is there a difference? \n\nNote use of 'expression' in [attach 1.1](https://ietf-wg-aipref.github.io/drafts/draft-ietf-aipref-attach.html#section-1.1) -- is that intentional?",
+      "createdAt": "2025-09-02T22:21:56Z",
+      "updatedAt": "2025-09-03T05:23:07Z",
+      "closedAt": "2025-09-03T05:23:07Z",
+      "comments": []
+    },
+    {
+      "number": 138,
+      "id": "I_kwDOOWk1-s7JVmIx",
+      "title": "Move other, undefined attachment mechanisms into an appendix?",
+      "url": "https://github.com/ietf-wg-aipref/drafts/issues/138",
+      "state": "OPEN",
+      "author": "mnot",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [
+        "location attachment",
+        "editorial"
+      ],
+      "body": "1.3 and 1.4 seem very tangental, and more commentary about what this document _isn't_ doing.\n\nMove them into an appendix, perhaps?",
+      "createdAt": "2025-09-03T00:31:55Z",
+      "updatedAt": "2025-09-03T02:15:33Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "I am of the view that the question of scope is important enough to include these.  If we didn't include them here, I'd ask to have them in the vocabulary document in some form.  But that already has a lot on its plate.",
+          "createdAt": "2025-09-03T02:02:07Z",
+          "updatedAt": "2025-09-03T02:02:07Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Fair.",
+          "createdAt": "2025-09-03T02:15:07Z",
+          "updatedAt": "2025-09-03T02:15:07Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Maybe make them subsections of a new 'other attachment mechanisms' section? Just thinking out loud.",
+          "createdAt": "2025-09-03T02:15:33Z",
+          "updatedAt": "2025-09-03T02:15:33Z"
+        }
+      ]
     }
   ],
   "pulls": [
@@ -5972,6 +6240,925 @@
           "body": "I think this addresses that concern you have identified.",
           "createdAt": "2025-09-01T11:09:19Z",
           "updatedAt": "2025-09-01T11:09:19Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 123,
+      "id": "PR_kwDOOWk1-s6mYPja",
+      "title": "Simplify",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/123",
+      "state": "MERGED",
+      "author": "mnot",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [
+        "vocabulary",
+        "editorial"
+      ],
+      "body": "'request' is odd in this context",
+      "createdAt": "2025-09-02T06:04:21Z",
+      "updatedAt": "2025-09-02T07:57:43Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "fa6c8088968b7fc64c12af830e502f732de627f6",
+      "headRepository": "ietf-wg-aipref/drafts",
+      "headRefName": "mnot-patch-1",
+      "headRefOid": "e88a57aa2c8d1f32d9a61718a48d98d4ef464c0e",
+      "closedAt": "2025-09-02T07:57:41Z",
+      "mergedAt": "2025-09-02T07:57:41Z",
+      "mergedBy": "martinthomson",
+      "mergeCommit": {
+        "oid": "1d24c4a81fcbb07efd7a002bfc38027760a8ef85"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWk1-s69Q5Cm",
+          "commit": {
+            "abbreviatedOid": "e88a57a"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-09-02T07:57:37Z",
+          "updatedAt": "2025-09-02T07:57:37Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 124,
+      "id": "PR_kwDOOWk1-s6mYRSL",
+      "title": "Extraneous phrase",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/124",
+      "state": "MERGED",
+      "author": "mnot",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [
+        "vocabulary",
+        "editorial"
+      ],
+      "body": "Talking about policy here is unnecessary",
+      "createdAt": "2025-09-02T06:06:27Z",
+      "updatedAt": "2025-09-02T21:52:32Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "fa6c8088968b7fc64c12af830e502f732de627f6",
+      "headRepository": "ietf-wg-aipref/drafts",
+      "headRefName": "mnot-patch-2",
+      "headRefOid": "c9135add23a1fc63ed2d58ddb845fa458fd5ae91",
+      "closedAt": "2025-09-02T21:52:31Z",
+      "mergedAt": "2025-09-02T21:52:30Z",
+      "mergedBy": "martinthomson",
+      "mergeCommit": {
+        "oid": "7d9fa7a3907f636cf03c3672fa85e40e8e34f632"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWk1-s69Q5Ru",
+          "commit": {
+            "abbreviatedOid": "c9135ad"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-09-02T07:57:55Z",
+          "updatedAt": "2025-09-02T07:57:55Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWk1-s69ROqK",
+          "commit": {
+            "abbreviatedOid": "c9135ad"
+          },
+          "author": "paul2keller",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "works for me",
+          "createdAt": "2025-09-02T08:21:03Z",
+          "updatedAt": "2025-09-02T08:21:03Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 125,
+      "id": "PR_kwDOOWk1-s6mYS7w",
+      "title": "preference preference",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/125",
+      "state": "MERGED",
+      "author": "mnot",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [
+        "vocabulary",
+        "editorial"
+      ],
+      "body": "",
+      "createdAt": "2025-09-02T06:08:45Z",
+      "updatedAt": "2025-09-02T07:58:27Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "fa6c8088968b7fc64c12af830e502f732de627f6",
+      "headRepository": "ietf-wg-aipref/drafts",
+      "headRefName": "mnot-patch-3",
+      "headRefOid": "1e9e7dfabd7accfbcc0d920c9500cbfdff7be0bb",
+      "closedAt": "2025-09-02T07:58:26Z",
+      "mergedAt": "2025-09-02T07:58:26Z",
+      "mergedBy": "martinthomson",
+      "mergeCommit": {
+        "oid": "bdc4ca74cbc3baf9b4091437c33acd15d228dc55"
+      },
+      "comments": [
+        {
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "...preference preference preference.",
+          "createdAt": "2025-09-02T07:58:23Z",
+          "updatedAt": "2025-09-02T07:58:23Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWk1-s69Q5eM",
+          "commit": {
+            "abbreviatedOid": "1e9e7df"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-09-02T07:58:12Z",
+          "updatedAt": "2025-09-02T07:58:12Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 126,
+      "id": "PR_kwDOOWk1-s6mYWlg",
+      "title": "More specific instructions",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/126",
+      "state": "MERGED",
+      "author": "mnot",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [
+        "vocabulary",
+        "editorial"
+      ],
+      "body": "Second bullet was worded in opposition to the introduction.\r\n\r\nThis is my attempt at harmonising it; there may be other ways.",
+      "createdAt": "2025-09-02T06:14:25Z",
+      "updatedAt": "2025-09-03T01:36:48Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "fa6c8088968b7fc64c12af830e502f732de627f6",
+      "headRepository": "ietf-wg-aipref/drafts",
+      "headRefName": "mnot-patch-4",
+      "headRefOid": "8693210318893c5c9170d0d6d6654d4d1dfd47c0",
+      "closedAt": "2025-09-03T01:36:47Z",
+      "mergedAt": "2025-09-03T01:36:47Z",
+      "mergedBy": "martinthomson",
+      "mergeCommit": {
+        "oid": "55c1ea3c823766d8ca73f3cabde915aa7e2f5f53"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWk1-s69Q6Ds",
+          "commit": {
+            "abbreviatedOid": "db7493c"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-09-02T07:58:58Z",
+          "updatedAt": "2025-09-02T07:58:58Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWk1-s69duHx",
+          "commit": {
+            "abbreviatedOid": "db7493c"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-09-03T01:36:23Z",
+          "updatedAt": "2025-09-03T01:36:24Z",
+          "comments": [
+            {
+              "originalPosition": 12,
+              "body": "```suggestion\r\nthose arrangements likely apply despite the existence of machine-readable statements of preference,\r\n```",
+              "createdAt": "2025-09-03T01:36:23Z",
+              "updatedAt": "2025-09-03T01:36:24Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 127,
+      "id": "PR_kwDOOWk1-s6mYb-O",
+      "title": "Tweak algorithm",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/127",
+      "state": "MERGED",
+      "author": "mnot",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [
+        "vocabulary",
+        "editorial"
+      ],
+      "body": "",
+      "createdAt": "2025-09-02T06:24:17Z",
+      "updatedAt": "2025-09-02T07:59:47Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "fa6c8088968b7fc64c12af830e502f732de627f6",
+      "headRepository": "ietf-wg-aipref/drafts",
+      "headRefName": "mnot-patch-5",
+      "headRefOid": "cf8bfcd1ff22a4ebea7ffa3e076c9da0398c47a3",
+      "closedAt": "2025-09-02T07:59:45Z",
+      "mergedAt": "2025-09-02T07:59:45Z",
+      "mergedBy": "martinthomson",
+      "mergeCommit": {
+        "oid": "b19b255f83fc6dcfae6a3abf77face3b5c1f85ab"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWk1-s69Q6mH",
+          "commit": {
+            "abbreviatedOid": "cf8bfcd"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-09-02T07:59:41Z",
+          "updatedAt": "2025-09-02T07:59:41Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 131,
+      "id": "PR_kwDOOWk1-s6mYj-t",
+      "title": "Tweak 3.2",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/131",
+      "state": "MERGED",
+      "author": "mnot",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [
+        "vocabulary",
+        "editorial"
+      ],
+      "body": "Make it clear this is a decision of the party who the preferences are targeted at, not something this specification has authority to determine.",
+      "createdAt": "2025-09-02T06:36:37Z",
+      "updatedAt": "2025-09-02T08:00:45Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "fa6c8088968b7fc64c12af830e502f732de627f6",
+      "headRepository": "ietf-wg-aipref/drafts",
+      "headRefName": "mnot-patch-6",
+      "headRefOid": "63a3bad1bcf0d061b07dc3a6070f6e304cfc11d4",
+      "closedAt": "2025-09-02T08:00:44Z",
+      "mergedAt": "2025-09-02T08:00:44Z",
+      "mergedBy": "martinthomson",
+      "mergeCommit": {
+        "oid": "cd37e645cdc57ca009d12b8dbbab3bf1dd3f2ad0"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWk1-s69QC_w",
+          "commit": {
+            "abbreviatedOid": "63a3bad"
+          },
+          "author": "paul2keller",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "I think this is a sensible improvement",
+          "createdAt": "2025-09-02T06:46:24Z",
+          "updatedAt": "2025-09-02T06:46:24Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWk1-s69Q7Va",
+          "commit": {
+            "abbreviatedOid": "63a3bad"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-09-02T08:00:39Z",
+          "updatedAt": "2025-09-02T08:00:39Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 133,
+      "id": "PR_kwDOOWk1-s6mim8O",
+      "title": "Response header",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/133",
+      "state": "CLOSED",
+      "author": "mnot",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [
+        "location attachment",
+        "editorial"
+      ],
+      "body": "It's necessary to distinguish it.",
+      "createdAt": "2025-09-02T22:19:00Z",
+      "updatedAt": "2025-09-03T01:34:30Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "7d9fa7a3907f636cf03c3672fa85e40e8e34f632",
+      "headRepository": "ietf-wg-aipref/drafts",
+      "headRefName": "mnot-patch-1",
+      "headRefOid": "3085379a3b58123f9f91b2f2ef23c9230e32de1d",
+      "closedAt": "2025-09-03T01:34:29Z",
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [
+        {
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Fair point. The header should mention that it's representation metadata:\r\n  https://httpwg.org/specs/rfc9110.html#representation.data.and.metadata",
+          "createdAt": "2025-09-03T00:28:25Z",
+          "updatedAt": "2025-09-03T00:28:25Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWk1-s69dJ0v",
+          "commit": {
+            "abbreviatedOid": "3085379"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "CHANGES_REQUESTED",
+          "body": "This does not need to be strictly limited to be a response header field.\r\n\r\nConsider a PUT.  That could use a *request* header field to signal to the resource that it wants to attach specific usage preferences to the resulting resource.  Maybe it's an issue that this doesn't explicitly mention requests, but I didn't imagine that this was needed.",
+          "createdAt": "2025-09-03T00:13:39Z",
+          "updatedAt": "2025-09-03T00:13:39Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 135,
+      "id": "PR_kwDOOWk1-s6mipq2",
+      "title": "Clean up HTTP example",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/135",
+      "state": "MERGED",
+      "author": "mnot",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [
+        "location attachment",
+        "editorial"
+      ],
+      "body": "",
+      "createdAt": "2025-09-02T22:24:26Z",
+      "updatedAt": "2025-09-03T00:24:21Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "7d9fa7a3907f636cf03c3672fa85e40e8e34f632",
+      "headRepository": "ietf-wg-aipref/drafts",
+      "headRefName": "mnot-patch-2",
+      "headRefOid": "718bf2619c74258c4c038f53cb861ff947b0f313",
+      "closedAt": "2025-09-03T00:24:19Z",
+      "mergedAt": "2025-09-03T00:24:19Z",
+      "mergedBy": "martinthomson",
+      "mergeCommit": {
+        "oid": "17a9c46865ff8e6e0a540e362e175c2bc5da169a"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWk1-s69dN6I",
+          "commit": {
+            "abbreviatedOid": "718bf26"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-09-03T00:24:14Z",
+          "updatedAt": "2025-09-03T00:24:14Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 136,
+      "id": "PR_kwDOOWk1-s6mjPI6",
+      "title": "Add \"HTTP\" to the title",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/136",
+      "state": "MERGED",
+      "author": "martinthomson",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Today, I learned that the word \"with\" is not uniformly treated in title case guidance.  According to titlecaseconverter.com (what a world we live in) the Chicago Manual of Style has four letter prepositions presented in lowercase, so that's the one I'm using as I understand this to be the general guidebook for RFCs.  The split is basically 50/50 across different style guides for four-letter prepositions.\r\n\r\nCloses #132.",
+      "createdAt": "2025-09-03T00:11:29Z",
+      "updatedAt": "2025-09-03T01:37:00Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "7d9fa7a3907f636cf03c3672fa85e40e8e34f632",
+      "headRepository": "ietf-wg-aipref/drafts",
+      "headRefName": "attach-title",
+      "headRefOid": "cb555d7edded27bbf876eb0d0777a7cdd60e2d93",
+      "closedAt": "2025-09-03T01:36:59Z",
+      "mergedAt": "2025-09-03T01:36:59Z",
+      "mergedBy": "martinthomson",
+      "mergeCommit": {
+        "oid": "f2a47ac7f3bd706bafc0c9db5046431e2f7ce3a9"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 137,
+      "id": "PR_kwDOOWk1-s6mjTSt",
+      "title": "Move from \"expression\" to \"statement\"",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/137",
+      "state": "MERGED",
+      "author": "martinthomson",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [
+        "editorial"
+      ],
+      "body": "This turned out to be a little fiddly, but consistency in use of language can help avoid confusion about meaning and intent. This affects both documents.\r\n\r\nCloses #134.",
+      "createdAt": "2025-09-03T00:23:44Z",
+      "updatedAt": "2025-09-03T05:23:07Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "f2a47ac7f3bd706bafc0c9db5046431e2f7ce3a9",
+      "headRepository": "ietf-wg-aipref/drafts",
+      "headRefName": "its-expression",
+      "headRefOid": "283fcf8f217b169b36d1a478e99d5b283ac29929",
+      "closedAt": "2025-09-03T05:23:06Z",
+      "mergedAt": "2025-09-03T05:23:06Z",
+      "mergedBy": "paul2keller",
+      "mergeCommit": {
+        "oid": "ff431e20b8ab237c7efa8b2671011baeb786b951"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWk1-s69e3fI",
+          "commit": {
+            "abbreviatedOid": "283fcf8"
+          },
+          "author": "paul2keller",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-09-03T05:22:56Z",
+          "updatedAt": "2025-09-03T05:22:56Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 139,
+      "id": "PR_kwDOOWk1-s6mjZdp",
+      "title": "The field is representation metadata",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/139",
+      "state": "MERGED",
+      "author": "martinthomson",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "I thought that this was clear; it could have been clearer.\r\n\r\nCloses #133.",
+      "createdAt": "2025-09-03T00:47:39Z",
+      "updatedAt": "2025-09-03T01:34:30Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "17a9c46865ff8e6e0a540e362e175c2bc5da169a",
+      "headRepository": "ietf-wg-aipref/drafts",
+      "headRefName": "repr-meta",
+      "headRefOid": "ec4fa8895a6a887e4081a33a38495cfd07c69847",
+      "closedAt": "2025-09-03T01:34:29Z",
+      "mergedAt": "2025-09-03T01:34:29Z",
+      "mergedBy": "martinthomson",
+      "mergeCommit": {
+        "oid": "97cb2792475a84a4a35f6504e0edee971ade39cf"
+      },
+      "comments": [
+        {
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "@mnot, do you think I need to include a PUT example?  It seems like it might be an attractive nuisance to get much deeper into explaining HTTP here.",
+          "createdAt": "2025-09-03T00:48:20Z",
+          "updatedAt": "2025-09-03T00:48:20Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "yeah that's probably buying too much trouble.",
+          "createdAt": "2025-09-03T00:57:08Z",
+          "updatedAt": "2025-09-03T00:57:08Z"
+        }
+      ],
+      "reviews": []
+    },
+    {
+      "number": 140,
+      "id": "PR_kwDOOWk1-s6mjzEc",
+      "title": "Rename 'all' to 'bots'",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/140",
+      "state": "MERGED",
+      "author": "martinthomson",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [
+        "editorial"
+      ],
+      "body": "I was careful to avoid using \"all\" in the attachment draft, so this only affects the one document.\r\n\r\nCloses #97.  At least for now.",
+      "createdAt": "2025-09-03T01:59:12Z",
+      "updatedAt": "2025-09-03T05:28:53Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "f2a47ac7f3bd706bafc0c9db5046431e2f7ce3a9",
+      "headRepository": "ietf-wg-aipref/drafts",
+      "headRefName": "all-bots",
+      "headRefOid": "fe48b8743d4ace38e47dd3dc4a6dc8f894ad7257",
+      "closedAt": "2025-09-03T05:28:51Z",
+      "mergedAt": "2025-09-03T05:28:51Z",
+      "mergedBy": "paul2keller",
+      "mergeCommit": {
+        "oid": "edcaa8b7465ade2353cabb056fafd6509ef605d0"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWk1-s69e6Z_",
+          "commit": {
+            "abbreviatedOid": "fe48b87"
+          },
+          "author": "paul2keller",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "I don't think this really nails it either. the whole vocabulary is about use of assets and not about crawling. I feel the term `bots` may be to closely associated with crawling and that this will cause confusion about what the vocab governs. that being said `bots` is better than `all` so lets go with this for now to see how people react.",
+          "createdAt": "2025-09-03T05:28:40Z",
+          "updatedAt": "2025-09-03T05:28:40Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 141,
+      "id": "PR_kwDOOWk1-s6mj1Lj",
+      "title": "Be a bit clearer about the data model",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/141",
+      "state": "MERGED",
+      "author": "martinthomson",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [
+        "editorial"
+      ],
+      "body": "With strategic uses of the word in the right place and more consistent use of section references.\r\n\r\nCloses #130.",
+      "createdAt": "2025-09-03T02:06:32Z",
+      "updatedAt": "2025-09-03T09:55:29Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "f2a47ac7f3bd706bafc0c9db5046431e2f7ce3a9",
+      "headRepository": "ietf-wg-aipref/drafts",
+      "headRefName": "model",
+      "headRefOid": "251bc0340b431f5390d4767cd82a22919f6753f1",
+      "closedAt": "2025-09-03T09:55:27Z",
+      "mergedAt": "2025-09-03T09:55:27Z",
+      "mergedBy": "martinthomson",
+      "mergeCommit": {
+        "oid": "e6c311e89d4116434d23a13e8ceec4fcc87b4dd8"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWk1-s69e8VZ",
+          "commit": {
+            "abbreviatedOid": "bba00da"
+          },
+          "author": "paul2keller",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-09-03T05:33:37Z",
+          "updatedAt": "2025-09-03T05:34:28Z",
+          "comments": [
+            {
+              "originalPosition": 8,
+              "body": "shouldn't follows be follow (singular) here. Or alternatively \"A statement of preferences\"?",
+              "createdAt": "2025-09-03T05:33:37Z",
+              "updatedAt": "2025-09-03T05:34:28Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s69iSYY",
+          "commit": {
+            "abbreviatedOid": "bba00da"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-09-03T09:55:05Z",
+          "updatedAt": "2025-09-03T09:55:06Z",
+          "comments": [
+            {
+              "originalPosition": 8,
+              "body": "```suggestion\r\nA statement of preference follows a simple data model where a preference\r\n```",
+              "createdAt": "2025-09-03T09:55:06Z",
+              "updatedAt": "2025-09-03T09:55:06Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 142,
+      "id": "PR_kwDOOWk1-s6mj4JV",
+      "title": "Parameters carry through",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/142",
+      "state": "OPEN",
+      "author": "martinthomson",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [
+        "editorial"
+      ],
+      "body": "This is, of course, useless in the current state of the design.  But we do allow for the possibility that parameters will be defined.\r\n\r\nThe only design choice here is whether to respect parameters that are attached to invalid preferences.  The answer is that we do that, because maybe that will turn out to be useful and there is no reason obvious reason not to.\r\n\r\nCloses #129.",
+      "createdAt": "2025-09-03T02:18:26Z",
+      "updatedAt": "2025-09-04T00:38:28Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "e6c311e89d4116434d23a13e8ceec4fcc87b4dd8",
+      "headRepository": "ietf-wg-aipref/drafts",
+      "headRefName": "parameter-algo",
+      "headRefOid": "245bbafc5b6c4e7f78e1d8b9039812d06efb42f1",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [
+        {
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "LGTM. I got slightly tripped up on \r\n\r\n~~~\r\ntrain-ai;has;parameters=\"?\";\r\n~~~\r\n\r\n... because that assigns boolean no to train-ai, but that's ok -- it isn't expressing a preference.",
+          "createdAt": "2025-09-04T00:38:28Z",
+          "updatedAt": "2025-09-04T00:38:28Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWk1-s69e9WS",
+          "commit": {
+            "abbreviatedOid": "9865f80"
+          },
+          "author": "paul2keller",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "I feel this needs to be reviewed by someone with more experience in drafting such specifications. probably @mnot who raised this",
+          "createdAt": "2025-09-03T05:36:11Z",
+          "updatedAt": "2025-09-03T05:36:11Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 143,
+      "id": "PR_kwDOOWk1-s6mj5dK",
+      "title": "Lowercase only people",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/143",
+      "state": "MERGED",
+      "author": "martinthomson",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [
+        "editorial"
+      ],
+      "body": "We mean it.\r\n\r\nThis is already said once.  The token format cannot support uppercase characters.  But it's worth being extra explicit here, because people assume and we all know what they say about that.\r\n\r\nSo, we waste more bytes and time saying this again.\r\n\r\nCloses #128.",
+      "createdAt": "2025-09-03T02:23:44Z",
+      "updatedAt": "2025-09-03T05:37:29Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "f2a47ac7f3bd706bafc0c9db5046431e2f7ce3a9",
+      "headRepository": "ietf-wg-aipref/drafts",
+      "headRefName": "lowercase",
+      "headRefOid": "a1accad095385ce16cf489e58e3a85d0c1320dd8",
+      "closedAt": "2025-09-03T05:37:27Z",
+      "mergedAt": "2025-09-03T05:37:27Z",
+      "mergedBy": "paul2keller",
+      "mergeCommit": {
+        "oid": "a0ce08eb9b4df736ad1d8c52c3a1e486e5250797"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWk1-s69e9yQ",
+          "commit": {
+            "abbreviatedOid": "a1accad"
+          },
+          "author": "paul2keller",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-09-03T05:37:05Z",
+          "updatedAt": "2025-09-03T05:37:05Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 144,
+      "id": "PR_kwDOOWk1-s6mj7XR",
+      "title": "Restructure \"other mechanisms\" section",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/144",
+      "state": "OPEN",
+      "author": "martinthomson",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [
+        "editorial"
+      ],
+      "body": "Another heading level seems worthwhile.  If only so that we can say that this is intended to be complementary to other mechanisms.\r\n\r\nA slight rewording of the registry text was necessary to avoid repetition.\r\n\r\nCloses #138.",
+      "createdAt": "2025-09-03T02:31:05Z",
+      "updatedAt": "2025-09-03T09:59:09Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "f2a47ac7f3bd706bafc0c9db5046431e2f7ce3a9",
+      "headRepository": "ietf-wg-aipref/drafts",
+      "headRefName": "nest-other-attach",
+      "headRefOid": "e3b8fd983ae7e247d913b1b7d3f0b62baa40f444",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWk1-s69fAOg",
+          "commit": {
+            "abbreviatedOid": "2513876"
+          },
+          "author": "paul2keller",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-09-03T05:42:55Z",
+          "updatedAt": "2025-09-03T05:43:02Z",
+          "comments": [
+            {
+              "originalPosition": 18,
+              "body": "(not my draft, but after reading trough this section it feels to me that line 171-174 logically do not belong in the Embedded preferences section, but should be moved after the Registry-based preferences section.",
+              "createdAt": "2025-09-03T05:42:55Z",
+              "updatedAt": "2025-09-03T05:43:02Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s69iUZa",
+          "commit": {
+            "abbreviatedOid": "2513876"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-09-03T09:57:29Z",
+          "updatedAt": "2025-09-03T09:57:29Z",
+          "comments": [
+            {
+              "originalPosition": 18,
+              "body": "You are right, I'll move them out somehow (they don't really belong anywhere, but I'll see what can be done).  The section on embedded preferences was originally about other mechanisms and it has grown a little out of control.",
+              "createdAt": "2025-09-03T09:57:29Z",
+              "updatedAt": "2025-09-03T09:57:29Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 145,
+      "id": "PR_kwDOOWk1-s6mj89R",
+      "title": "More clarity about vocabulary extensions",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/145",
+      "state": "MERGED",
+      "author": "martinthomson",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [
+        "editorial"
+      ],
+      "body": "Be clearer about the need for a RFC-based revision to extend the vocabulary, what the constraints on that will still be.\r\n\r\nThen make clear that alternative formats could extend their own use of this vocabulary and that we have already dealt with that later in the document.\r\n\r\nCloses #122.",
+      "createdAt": "2025-09-03T02:36:25Z",
+      "updatedAt": "2025-09-03T05:44:31Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "f2a47ac7f3bd706bafc0c9db5046431e2f7ce3a9",
+      "headRepository": "ietf-wg-aipref/drafts",
+      "headRefName": "extending-again",
+      "headRefOid": "0219699032b60639e924c9a58c1ebe68bac21a88",
+      "closedAt": "2025-09-03T05:44:30Z",
+      "mergedAt": "2025-09-03T05:44:30Z",
+      "mergedBy": "paul2keller",
+      "mergeCommit": {
+        "oid": "085de9a7ce6ca60f80009959acb7c26190eaa73d"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWk1-s69eJDU",
+          "commit": {
+            "abbreviatedOid": "3f63f18"
+          },
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-09-03T03:07:11Z",
+          "updatedAt": "2025-09-03T03:07:11Z",
+          "comments": [
+            {
+              "originalPosition": 14,
+              "body": "Hmm. That refers to an alternative serialisation, which isn't really what this is about -- it's about an external consumer of the vocabulary that repurposes or augments it outside the scope of this specification. Something can do that without using the alternative serialisation (which is more about attachment than the vocabulary).",
+              "createdAt": "2025-09-03T03:07:11Z",
+              "updatedAt": "2025-09-03T03:07:11Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s69fA5k",
+          "commit": {
+            "abbreviatedOid": "0219699"
+          },
+          "author": "paul2keller",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-09-03T05:44:15Z",
+          "updatedAt": "2025-09-03T05:44:15Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 146,
+      "id": "PR_kwDOOWk1-s6mkih2",
+      "title": "Add more caveats to the ignoring language",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/146",
+      "state": "MERGED",
+      "author": "martinthomson",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "...because there can't ever be enough, apparently.\r\n\r\nThe action taken here is ignoring, not overriding.\r\n\r\nMore importantly, it says that priorities that might be used to justify ignoring preferences need to be \"widely recognized\". Another use of ambiguous or subjective language, for sure, but one where the test is not completely internal.",
+      "createdAt": "2025-09-03T04:38:47Z",
+      "updatedAt": "2025-09-03T05:47:20Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "f2a47ac7f3bd706bafc0c9db5046431e2f7ce3a9",
+      "headRepository": "ietf-wg-aipref/drafts",
+      "headRefName": "weasel-ignore",
+      "headRefOid": "4df87484674a5b96bf747d49ccac37bed4d81294",
+      "closedAt": "2025-09-03T05:47:18Z",
+      "mergedAt": "2025-09-03T05:47:18Z",
+      "mergedBy": "paul2keller",
+      "mergeCommit": {
+        "oid": "a52ab8f0a51f0543843d8be90eaa72efbf0acc05"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWk1-s69fCnY",
+          "commit": {
+            "abbreviatedOid": "4df8748"
+          },
+          "author": "paul2keller",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "not really a fan of the addition of \"widely used\" but agree that it might be helpful ",
+          "createdAt": "2025-09-03T05:47:11Z",
+          "updatedAt": "2025-09-03T05:47:11Z",
           "comments": []
         }
       ]
