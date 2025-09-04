@@ -130,18 +130,18 @@ each of which is defined to cover a class of usage for assets.
 {{vocab}} defines the core set of usage categories in detail.
 
 A statement of preference -- or usage preference -- is made about an asset.
-Statements of preferences can assign a preference
-to each of the categories of use in the vocabulary.
-Preferences regarding each category can be expressed
-either to allow or disallow the usage associated with the category.
+A statement of preference follows a simple data model where a preference
+is assigned to each of the categories of use in the vocabulary.
+A preference is either to allow or disallow
+the usage associated with the category.
 
-A statement of preference can express a preference
+A statement of preference can indicate preferences
 about some, all, or none of the categories from the vocabulary.
-This can mean that no preference is expressed for a given usage category.
+This can mean that no preference is stated for a given usage category.
 
 Some categories describe a proper subset of the usages of other categories.
-A preference that is expressed for the more general category applies
-if no preference is expressed for the more specific category.
+A preference that is stated for the more general category applies
+if no preference is stated for the more specific category.
 
 For example, the Automated Processing category might be assigned a preference that allows the associated usage.
 In the absence of any statement of preference regarding the AI Training category,
@@ -195,12 +195,12 @@ An entity that receives usage preferences MAY choose to respect
 those preferences it has discovered, according to
 an understanding of how the asset is used,
 how that usage corresponds to the usage categories
-where preferences have been expressed,
+where preferences have been stated,
 and the applicable legal context.
 
-Usage preferences can be overridden through express agreements
-between relevant parties, by explicit provisions of law, or
-through the exercise of discretion in situations where other
+Usage preferences can be ignored due to express agreements
+between relevant parties, explicit provisions of law, or
+the exercise of discretion in situations where widely recognized
 priorities justify doing so. Priorities that could justify
 ignoring preferences include—but are not limited to—free
 expression, safety, education, scholarship, research,
@@ -213,12 +213,12 @@ in a particular situation:
 * People with accessibility needs,
   or organizations working on their behalf,
   might decide to ignore a preference
-  disallowing Automated Processing ({{all}})
+  disallowing Automated Processing ({{bots}})
   in order to access automated captions
   or generate accessible formats.
 
 * A cultural heritage organization might decide to ignore a preference
-  disallowing Automated Processing ({{all}})
+  disallowing Automated Processing ({{bots}})
   in order to provide more useful, reliable, or discoverable access
   to historical web collections.
 
@@ -228,7 +228,7 @@ in a particular situation:
   to facilitate scientific or other types of research.
 
 * A website that permits user uploads might decide to ignore a preference
-  disallowing Automated Processing ({{all}})
+  disallowing Automated Processing ({{bots}})
   in order to develop or use tools that detect harmful content
   according to established terms of use.
 
@@ -268,7 +268,7 @@ This section defines the categories of use in the vocabulary.
 {: #f-categories title="Relationship Between Categories of Use"}
 
 
-## Automated Processing Category {#all}
+## Automated Processing Category {#bots}
 
 The act of using automated processing on one or more assets
 to analyze text and data in order to generate information
@@ -304,7 +304,7 @@ that are used to help users select between multiple candidate options.
 
 Preferences for the Search category apply to those parts of applications
 that provide search capabilities,
-regardless of what other preferences are expressed.
+regardless of what other preferences are stated.
 
 Parts of applications that do not direct users to the location of assets,
 such as summaries,
@@ -315,10 +315,18 @@ The use of assets for Search is a proper subset of Automated Processing usage.
 
 ## Vocabulary Extensions {#vocab-extension}
 
-Systems referencing the vocabulary MUST NOT introduce additional categories
+Extensions to this vocabulary need to be defined in an RFC
+that updates this document.
+
+Any future extensions to this vocabulary MUST NOT introduce additional categories
 that include existing categories defined in the vocabulary.
 That is, new categories of use can be defined as a subset of an existing category,
 but not a superset.
+
+Systems that use this vocabulary might define their own extensions
+as part of a larger data model.
+{{mapping}} describes how concepts from an alternative format
+might be mapped to this vocabulary.
 
 
 # Applying Statements of Preference {#usage}
@@ -328,7 +336,7 @@ which might use the process in {{processing}},
 an application can determine the status of a specific usage category
 as follows:
 
-1. If the expression contains an explicit preference
+1. If the statement of preference contains an explicit preference
    regarding that category of use --
    either to allow or disallow --
    that is the result.
@@ -338,7 +346,7 @@ as follows:
    recursively apply this process to that category
    and use the result of that process.
 
-3. Otherwise, no preference is expressed.
+3. Otherwise, no preference is stated.
 
 This process results in one of three potential answers:
 allow, disallow, and unknown.
@@ -359,21 +367,22 @@ This might result in conflicting answers.
 Absent some other means of resolving conflicts,
 the following process applies to each usage category:
 
-* If any preference expression indicates that the usage is disallowed,
+* If any statement of preference indicates that the usage is disallowed,
   the result is that the usage is disallowed.
 
-* Otherwise, if any preference expression allows the usage,
+* Otherwise, if any statement of preference allows the usage,
   the result is that the usage is allowed.
 
-* Otherwise, no preference is expressed.
+* Otherwise, no preference is stated.
 
 This process ensures that the most restrictive preference applies.
 
 
 ## More Specific Instructions
 
-A recipient of a statement of preferences that follows this model might receive more specific instructions
-in two ways:
+A recipient of a statement of preferences
+that follows the model in {{model}}
+might receive more specific instructions in two ways:
 
 * Extensions to the vocabulary might define more specific categories of usage.
   Preferences about more specific categories override those of any more general category.
@@ -397,9 +406,9 @@ The dictionary keys correspond to usage categories
 and the dictionary values correspond to explicit preferences,
 which can be either `y` or `n`; see {{y-or-n}}.
 
-For example, the following expresses a preference to allow AI training ({{train-ai}}),
+For example, the following states a preference to allow AI training ({{train-ai}}),
 disallow generative AI training ({{train-genai}}), and
-and expresses no preference for other categories
+and states no preference for other categories
 other than subsets of these categories:
 
 ~~~
@@ -414,21 +423,23 @@ Each usage category in the vocabulary ({{vocab}}) is mapped to a short textual l
 
 | Category               | Label       | Reference       |
 |:-----------------------|:------------|:----------------|
-| Automated Processing   | all         | {{all}}         |
+| Automated Processing   | bots        | {{bots}}        |
 | AI Training            | train-ai    | {{train-ai}}    |
 | Generative AI Training | train-genai | {{train-genai}} |
 | Search                 | search      | {{search}}      |
 {: #t-category-labels title="Mappings for Categories"}
 
-Any mapping for a new usage category can only use
+These tokens are case sensitive.
+
+Tokens defined for a new usage category can only use
 lowercase latin characters (a-z), digits (0-9), "_", "-", ".", or "*".
 These are encoded using the mappings in {{ASCII}}.
 
 
 ## Preference Labels {#y-or-n}
 
-The abstract model used has two options for preferences associated with each category:
-allow and disallow.
+The data model in {{model}} used has two options for preferences
+associated with each category: allow and disallow.
 These are mapped to single byte Tokens ({{Section 3.3.4 of FIELDS}})
 of `y` and `n`, respectively.
 
@@ -468,12 +479,13 @@ This document does not define any semantics for any parameters that might be inc
 When processing a parsed Dictionary to obtain preferences,
 any unknown parameters MUST be ignored.
 
-In either case, new extensions need to be defined in an RFC that updates this document.
+In either case,
+new extensions need to be defined in an RFC that updates this document.
 
 
 ## Processing Algorithm {#processing}
 
-To process a series of bytes to recover the expressed preferences,
+To process a series of bytes to recover the stated preferences,
 those bytes are parsed into a Dictionary ({{Section 4.2.2 of FIELDS}}),
 then preferences are assigned to each usage category in the vocabulary.
 
@@ -493,7 +505,7 @@ A preference is assigned as follows:
 * If the value is a Token with a value of `n`,
   the associated preference is to disallow that category of use.
 
-* Otherwise, a preference is not expressed for that category of use.
+* Otherwise, no preference is stated for that category of use.
 
 Note that this last alternative includes
 the key being absent from the collection,
@@ -509,17 +521,14 @@ This means that duplicating a key could result in unexpected outcomes.
 For example, the following expresses no preferences:
 
 ~~~
-train-ai=y, train-ai="n", train-genai=n, train-genai, all=n, all=()
+train-ai=y, train-ai="n", train-genai=n, train-genai, bots=n, bots=()
 ~~~
 
-If the parsing of the Dictionary fails, no preferences are expressed.
+If the parsing of the Dictionary fails, no preferences are stated.
 This includes where keys include uppercase characters,
 as this format is case sensitive
 (more correctly, it operates on bytes, not strings).
 
-<<<<<<< Updated upstream
-This process produces an abstract data structure
-=======
 This document does not define a use for parameters.
 Where parameters are used,
 only those parameters associated with the value that is selected
@@ -535,22 +544,21 @@ train-ai;has;parameters="?";
 ~~~
 
 This process produces an abstract data model
->>>>>>> Stashed changes
 that assigns a preference to each usage category
 as described in {{model}}.
 
 
-## Alternative Formats
+## Alternative Formats {#mapping}
 
 This format is only an exemplary way to represent preferences.
-The model described in {{model}}, can be used without this serialization.
+The data model described in {{model}}, can be used without this serialization.
 
 Any alternative format needs to define the mapping
 both from that format to the model used in this document
 and from the model to the alternative format.
 This includes any potential for extensions ({{extension}}).
 
-The mapping between the model and the alternative format
+The mapping between the data model and the alternative format
 does not need to be complete,
 it only needs to be clear and unambiguous.
 
