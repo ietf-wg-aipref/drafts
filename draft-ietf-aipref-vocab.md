@@ -570,7 +570,12 @@ A mapping might then define that no preference is associated with other categori
 
 # Security Considerations
 
-TODO Security
+Preferences are not a security mechanism.
+{{applicability}} addresses what it means to express a preference.
+
+Processing a concrete instantiation
+of the exemplary format described in {{format}}
+is subject to the security considerations in {{Section 6 of FIELDS}}.
 
 
 # IANA Considerations
