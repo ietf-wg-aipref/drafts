@@ -90,7 +90,6 @@ Table of Contents
    6.  References
      6.1.  Normative References
      6.2.  Informative References
-   Acknowledgments
    Authors' Addresses
 
 1.  Introduction
@@ -439,10 +438,6 @@ Table of Contents
               Ed., "HTTP Caching", STD 98, RFC 9111,
               DOI 10.17487/RFC9111, June 2022,
               <https://www.rfc-editor.org/rfc/rfc9111>.
-
-Acknowledgments
-
-   TODO acknowledge.
 
 Authors' Addresses
 
