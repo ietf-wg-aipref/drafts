@@ -423,8 +423,3 @@ Comments:
 
 
 --- back
-
-# Acknowledgments
-{:numbered="false"}
-
-TODO acknowledge.
