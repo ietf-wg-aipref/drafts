@@ -13,13 +13,12 @@ body:
         This is a consensus call on these documents in their whole form, which means that any matter not raised as an issue is presumed to have consensus.
 
         WGLC issues will be triaged and handled as follows:
-        * Issues that are not within the scope of our charter will be closed without discussion.
-        * Issues with the charter itself -- including whether the IETF should be doing this work -- will be closed without discussion.
-        * Issues that are similar will be combined. If you see a similar existing issue and wish to add information, do so there (but note that "+1" responses and similar have little weight).
-        * Issues that are deemed to be editorial will be reassigned to the editors and will be handled without further consideration by the working group.
-        * Issues that have already been discussed have some presumption of consensus, but that will be confirmed as necessary. Genuinely new information is of greatest assistance when evaluating such issues.
-        * Issues that have not yet been discussed will be evaluated on a case-by-case basis. Alternative approaches (e.g., "why didn't you do...") are presumed not to have consensus unless there is strong support for considering them.
-
+        * Issues that are not within the scope of our charter will be closed without further discussion.
+        * Issues with the charter itself -- including whether the IETF should be doing this work -- are not in scope of the WGLC.
+        * Issues that are similar will be combined. If you see a similar existing issue and wish to add information, do so there (but note that simple "+1" responses and similar have little weight).
+        * Issues that are deemed to be editorial will be reassigned to the editors and will be handled by them.
+        * Issues that have already been discussed will have consensus confirmed. Genuinely new information is of greatest assistance when evaluating such issues.
+        * Issues that have not yet been discussed will be evaluated on their merits. Alternative approaches (e.g., "why didn't you do...") are presumed not to have consensus unless there is strong support for considering them.
         If you feel that your issue has been triaged incorrectly, please contact the chairs.
 
   - type: checkboxes
