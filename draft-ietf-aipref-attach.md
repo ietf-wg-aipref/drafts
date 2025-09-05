@@ -141,7 +141,23 @@ Content-Usage: train-ai=n
 ~~~
 
 
-## Embedded Preferences
+## Other Mechanisms
+
+This document provides two general purpose methods
+for associating statements of preference with assets
+that are transferred using HTTP.
+
+The mechanisms in this document can be applied to any content type,
+provided that the content is obtained using HTTP (and maybe FTP).
+Future work might define how preferences might be indicated
+for alternative content distribution or acquisition methods,
+such as email.
+
+The attachment mechanism in this document
+are intended to be complementary with other mechanisms.
+
+
+### Embedded Preferences
 
 Embedding preferences is expected to be an effective means
 of associating preferences with content,
@@ -161,15 +177,12 @@ some content types,
 such as plain text (`text/plain`),
 offer no standardized means of embedding preferences.
 
-The mechanisms in this document can be applied to any content type, provided that the content is obtained using HTTP
-(and maybe FTP). Future work might define how preferences might be indicated
-for alternative content distribution or acquisition methods,
-such as email.
 
-## Registry-Based Preferences
+### Registry-Based Preferences
 
-This document does not define a means of using unique identifiers and a registry
-for associating preferences.
+A preferences registry is a database that stores usage preference statements
+associated with both content identifiers
+and a means of identifying the declaring party.
 Registry-based approaches might be applicable in certain contexts,
 particularly where embedding is impractical or unavailable.
 Additionally, a registry might enable persistent association of preferences
