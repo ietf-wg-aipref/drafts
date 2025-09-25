@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-09-23T01:48:43.520738+00:00",
+  "timestamp": "2025-09-25T01:50:45.186486+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -2247,12 +2247,13 @@
       "authorAssociation": "NONE",
       "assignees": [],
       "labels": [
+        "vocabulary",
         "wglc",
         "triage"
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nSee Jlevy comment from 9/14   re the ambiguity, confusion, and potential  inaccurate overlap with the term \"bots\" in Section 6.1  as used in other IETF WG documents/charters:  \n\n I have searched the entire thread archive, but do not see any discussion regarding the use of the term \u201cbots.\u201d   \n\nThe other terms in 6.1 describe how the data is used, e.g. to \u201ctrain\u201d or \u201csearch.\u201d But the term \u201cbots\u201d suggests it is based on who is using the data, rather than what is being done to the data. For example, in the WebBotAuthN Working Group, the term \u201cbots\u201d is  used to refer to \u201cnon-browser clients.\u201d By using the term \u201cbots\u201d in Section 6.1, it creates an inconsistent approach that will lead to confusion about the meaning of the preference. Some people may incorrectly believe that bots=n is a preference to disallow access by bots. Others may incorrectly believe bots=n is a preference to disallow all use by bots, regardless of whether that use is for or related to AI. \n\nThis is especially important because the Vocab and Attach documents are not intended to be read together all the time.  The Vocab is intended to also be a standalone document. As I understand it, members of this group are liaising with other standards bodies to export the final language from this document to other bodies for their use independently, without the structure of the Attach document or robots.txt.  See, for example, Leonard\u2019s recent email stating: <<This vocab is designed to be used in any scenario - online or offline, web or otherwise - where someone wishes to express a preference about the AI usage of an asset.>>   Earlier drafts also called for the Vocabulary to \u201cstandardize building blocks\u201d that could be used regardless of the manner of attachment. \n\nWhen the categories and descriptions in the Vocab document are considered as standalone expressions, it is even more important that their scope and intent is clear.\n\nProposal: delete the top category and the accompanying \u201cbots\u201d descriptor in 6.1.  This removes the ambiguity and confusion, maintaining the focus on AI and moving the group more toward consensus.\n\n See also PKeller reply 9/14 agreeing that the term \"clearly also problematic\" and suggesting focusing first on the automated processing category (which makes sense).\n\n### Proposed Resolution\n\n_No response_",
       "createdAt": "2025-09-22T06:33:01Z",
-      "updatedAt": "2025-09-22T06:33:01Z",
+      "updatedAt": "2025-09-23T02:07:10Z",
       "closedAt": null,
       "comments": []
     },
@@ -2266,12 +2267,13 @@
       "authorAssociation": "NONE",
       "assignees": [],
       "labels": [
+        "vocabulary",
         "wglc",
         "triage"
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nAs raised in 8/25 Jlevy comment and subsequent discussions, the language and terminology embedded throughouth is normatively charged and inaccurately attributes human intentions/emotions into this vocabulary, which by its nature is directed at computer programs or algorithms.   Throughout the Vocab document, the words \"respect\" and \"ignore\" should be changed to \"follow\" or \"not follow\" preference expresssions or intructions.   \n\n\n### Proposed Resolution\n\nSolution:  In 3.2, \n-change \"whether preferences are actually respected during data processing\"  to \"whether preferencdesare actually followed during data processing.\"\n - change \"An entity that receives usage preferences MAY choose to respect those preferences...\" to \"An entity that receives usage preferences MAY choose to follow those preferences.\n-change \"ignored\" to \"not followed\", \"ignoring\" to \"not following\" and \"ignore\" to \"not follow\" throughout 3.2",
       "createdAt": "2025-09-22T07:03:28Z",
-      "updatedAt": "2025-09-22T07:03:28Z",
+      "updatedAt": "2025-09-23T02:07:11Z",
       "closedAt": null,
       "comments": []
     },
@@ -2285,12 +2287,13 @@
       "authorAssociation": "NONE",
       "assignees": [],
       "labels": [
+        "vocabulary",
         "wglc",
         "triage"
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nThe term \"digital asset\" is used throughout the Vocab document.  It is confusing and misleading.  A \"digital asset\" generally and commonly refers to cryptocurrency. The United States Internal Revenue Service (IRS) defines it as \"any digital representation of value on a cryptographically secured, distributed ledger (blockchain) or similar technology.\"  See https://www.irs.gov/filing/digital-assets#description.  \n It's not a term used in robots.txt or the Attach documet which uses the term \"content\" and \"content-usage.\" A preferable term would be \"Digital Content.\"\n\n### Proposed Resolution\n\nReplace \"digital asset\" or \"digital assets\" with \"digital content.\" Replace \"asset\" with \"digital content.\" Replace \"one or more assets\" with \"digital content.\" There are 23 instances of the term asset or assets throughout the document.  By using \"digital content\" there is also no new for a definition of the term \"Digital Asset.\"",
       "createdAt": "2025-09-22T07:27:50Z",
-      "updatedAt": "2025-09-22T12:25:51Z",
+      "updatedAt": "2025-09-23T02:07:11Z",
       "closedAt": null,
       "comments": [
         {
@@ -2312,12 +2315,13 @@
       "authorAssociation": "NONE",
       "assignees": [],
       "labels": [
+        "vocabulary",
         "wglc",
         "triage"
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nSection 3.1 titled Conformance states that an implentation is conformant to the specifications if it correctly follows all normative requirements that apply to it.  This pertains to enforcement, which is out of scope for the Vocab and Attach document. It adds nothing to the Vocabulary or statement of preference. Solution: Delete 3.1 Conformance.\n\n### Proposed Resolution\n\nDelete Section 3.1 Conformance.",
       "createdAt": "2025-09-22T07:38:58Z",
-      "updatedAt": "2025-09-22T07:38:58Z",
+      "updatedAt": "2025-09-23T02:07:12Z",
       "closedAt": null,
       "comments": []
     },
@@ -2331,12 +2335,13 @@
       "authorAssociation": "NONE",
       "assignees": [],
       "labels": [
+        "location attachment",
         "wglc",
         "triage"
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\n In the abstract,  the phrase \u201cContent creators and other stakeholders might wish to signal their preferences about how their content might be consumed by automated systems\u201d is confusing and does not accurately describe the scope. The preference is not about how  content is consumed from the website.  The preference is about how it is  used after it is accessed or consumed. Also, the phrase \"automated systems\" is overly broad, particularly since here it seems to refer to crawlers but later it seems to refer to AI systems that need to read the preferences after it is collected. This will lead to confusion.\n\nSuggestion:  change to \"about whether website content that is accessed orconsumed by crawlers may later be used to train or develop AI models.\"\n\n\n### Proposed Resolution\n\nSuggestion:  change to \"about whether website content that is accessed orconsumed by crawlers may later be used to train or develop AI mode",
       "createdAt": "2025-09-22T07:48:41Z",
-      "updatedAt": "2025-09-22T07:49:43Z",
+      "updatedAt": "2025-09-23T02:07:24Z",
       "closedAt": null,
       "comments": []
     },
@@ -2350,12 +2355,60 @@
       "authorAssociation": "NONE",
       "assignees": [],
       "labels": [
+        "location attachment",
         "wglc",
         "triage"
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nBoth robots.txt and the Vocab document have language clarifying that the documents do not include enforcement mechanisms.  The Attach document is not. Propose adding  non-enforcement provision similar to Vocab document.\n\n### Proposed Resolution\n\nSuggest adding new Section with non-enforceability language: \n Non-Enforceability.   This specification is not enforceable.  An entity that receives content usage preferences MAY choose whether or not to follow the preferences.  Many factors may be considered in determining whether to follow a preference, including but not limited to  how the usage corresponds to the usage categories where preferences have been expressed, the type of content, the identity and authority of the Declarant to assert a preference over the specified content, the applicable legal context, or other considerations such as free expression, safety, education, scholarship, research, preservation, interoperability, and accessibility.\n",
       "createdAt": "2025-09-22T07:59:17Z",
-      "updatedAt": "2025-09-22T07:59:17Z",
+      "updatedAt": "2025-09-23T02:07:25Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 167,
+      "id": "I_kwDOOWk1-s7NQGbI",
+      "title": "Distinguishing access and use",
+      "url": "https://github.com/ietf-wg-aipref/drafts/issues/167",
+      "state": "OPEN",
+      "author": "martinthomson",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [
+        "vocabulary",
+        "wglc",
+        "triage"
+      ],
+      "body": "### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nI'm going to quote @coopdanger here, because her formulation of the issue is pretty good.  I will follow up with a nit on the details, but that doesn't diminish the value of the feedback:\n\n> This raises the question of whether the vocabulary is only meant to be used to express preferences about usage and not initial access regardless of the attachment mechanism. The very first sentence of the vocab doc uses the ambiguous term \u201cprocessing\u201d while most of the rest of the doc uses \u201cusage.\u201d If the intent is to define a vocabulary that only expresses preferences about an asset after the asset has been obtained (by whatever means), it needs an explicit scoping limitation to that effect. And then every attachment mechanism that gets defined in the IETF or elsewhere needs to reflect that.\n>\n> Making this distinction explicit might be a simple resolution to some of the concerns that have been raised about the automated processing category, because it would make clear that it\u2019s unnecessary to resolve the question of whether crawling/accessing a site is itself considered automated processing. No preferences are being expressed about access, other than insofar as sites would expect crawlers not to crawl their site if the site wishes to disallow all the uses of interest to the crawler. It would not resolve the concerns about behavior habituation and misinterpretation, though.\n>\n> Even with this distinction made explicit, there would still be the possibility of basically nonsensical use cases, e.g.:\n>\n> ```http\n> User-Agent: *\n> Content-Usage: /foo bots=n\n> ```\n> \n> Like what is the point of allowing crawling/access but then disallowing all usage? Maybe there is a use case I\u2019m missing.\n>\n> Note also that it may be entirely unrealistic to say that everywhere an attachment mechanism is specified, it has to preserve this distinction between access and usage. It\u2019s not like we can constrain mechanisms that get defined elsewhere.\n> \n> I\u2019ve never really been convinced of the need for the top-level category, but if we are going to have one we need to be clear about when it applies, and clarifying that it only applies after an asset has been obtained might help mitigate concerns about its breadth.\n\n### Proposed Resolution\n\nThere was some effort to make this distinction in editing, but it's clear that we need to be much clearer about it throughout.",
+      "createdAt": "2025-09-23T03:45:57Z",
+      "updatedAt": "2025-09-24T03:27:36Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "The very pedantic nit...\n\nThe example probably needs an `Allow: /foo` line.  RFC 9309 is not clear when it comes to delineating groups, particularly when it comes to extensions like this one.  That means that a group with no Allow or Disallow lines might be joined to the next group.  That is, this might be one or two groups:\n\n```\nUser-Agent: *\nContent-Usage: /foo bots=n\nUser-Agent: bar\nContent-Usage: /foo bots=y\n```\n\nThe more substantive point is with respect to this:\n\n> Like what is the point of allowing crawling/access but then disallowing all usage? Maybe there is a use case I\u2019m missing.\n\nAs we have discussed at some length, these are preferences and so crawled content that has an associated preference that it not be used for any purpose is still available for use in cases where there is a reason to ignore preferences.\n\n> Note also that it may be entirely unrealistic to say that everywhere an attachment mechanism is specified, it has to preserve this distinction between access and usage. It\u2019s not like we can constrain mechanisms that get defined elsewhere.\n\nI don't think that this is unrealistic.  Getting the bits and using them are distinct actions.  Consider where the preferences are carried in an HTTP header.  It's not like the response isn't delivered and available, even if the preferences indicate that the reason for making the request goes against the stated preferences.  This distinction recognizes that there are still cases where the use motivates (or justifies) ignoring the preference.",
+          "createdAt": "2025-09-23T03:56:48Z",
+          "updatedAt": "2025-09-23T03:56:48Z"
+        }
+      ]
+    },
+    {
+      "number": 168,
+      "id": "I_kwDOOWk1-s7NuMS_",
+      "title": "Attachment: Section 2 preservation of HTTP request header \"MUST\" is too strong",
+      "url": "https://github.com/ietf-wg-aipref/drafts/issues/168",
+      "state": "OPEN",
+      "author": "bnewbold",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [
+        "wglc",
+        "triage"
+      ],
+      "body": "I think this is a couple days late for the formal WGLC, but hope it is helpful to file this here as an issue ahead of the upcoming meeting. I can also take this to the list if prefered.\n\n### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nSection 2 of the Attachment draft has a new section about retaining the `Content-Usage` header from requests, and re-using them on responses for the same content later:\n\n> Servers MUST retain any preferences associated with a request if the content of that request is used to answer later requests. For example, the content of a PUT request that is used to answer subsequent GET requests. Note that servers that have not been updated to understand this field will not comply with this requirement.\n\nI think having the server retain the preference metadata is a great idea, but making it a \"MUST\" for any server which implements usage preferences is too restrictive. I believe servers should be allowed (and encouraged) to include this metadata header even if they don't have the means to implement state persistence based on request headers. Servers might implement alternative or more ergonomic mechanisms for expressing preferences, for instance via an HTML form field, and that is fine.\n\n### Proposed Resolution\n\nMake it \"MAY\".\n\nOverall I think this should be more of a recommendation or best practice. Given that I would defer to the editors in terms of how best to phrase things.",
+      "createdAt": "2025-09-25T01:00:41Z",
+      "updatedAt": "2025-09-25T01:10:17Z",
       "closedAt": null,
       "comments": []
     }
