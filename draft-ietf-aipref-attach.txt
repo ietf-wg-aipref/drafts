@@ -6,7 +6,7 @@ AI Preferences                                                 G. Illyes
 Internet-Draft                                                    Google
 Updates: 9309 (if approved)                                   M. Thomson
 Intended status: Standards Track                                 Mozilla
-Expires: 9 March 2026                                   5 September 2025
+Expires: 1 April 2026                                  28 September 2025
 
 
          Associating AI Usage Preferences with Content in HTTP
@@ -54,7 +54,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 9 March 2026.
+   This Internet-Draft will expire on 1 April 2026.
 
 Copyright Notice
 
