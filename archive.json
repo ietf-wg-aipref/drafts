@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-09-25T01:50:45.186486+00:00",
+  "timestamp": "2025-09-28T01:59:19.206333+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -2409,6 +2409,63 @@
       "body": "I think this is a couple days late for the formal WGLC, but hope it is helpful to file this here as an issue ahead of the upcoming meeting. I can also take this to the list if prefered.\n\n### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nSection 2 of the Attachment draft has a new section about retaining the `Content-Usage` header from requests, and re-using them on responses for the same content later:\n\n> Servers MUST retain any preferences associated with a request if the content of that request is used to answer later requests. For example, the content of a PUT request that is used to answer subsequent GET requests. Note that servers that have not been updated to understand this field will not comply with this requirement.\n\nI think having the server retain the preference metadata is a great idea, but making it a \"MUST\" for any server which implements usage preferences is too restrictive. I believe servers should be allowed (and encouraged) to include this metadata header even if they don't have the means to implement state persistence based on request headers. Servers might implement alternative or more ergonomic mechanisms for expressing preferences, for instance via an HTML form field, and that is fine.\n\n### Proposed Resolution\n\nMake it \"MAY\".\n\nOverall I think this should be more of a recommendation or best practice. Given that I would defer to the editors in terms of how best to phrase things.",
       "createdAt": "2025-09-25T01:00:41Z",
       "updatedAt": "2025-09-25T01:10:17Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 169,
+      "id": "I_kwDOOWk1-s7OLGjz",
+      "title": "Automated Processing category risks jeopardizing a safe and working internet",
+      "url": "https://github.com/ietf-wg-aipref/drafts/issues/169",
+      "state": "OPEN",
+      "author": "kmadhavan-msft",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [
+        "wglc",
+        "triage"
+      ],
+      "body": "### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nThe current definition of \u201cautomated processing\u201d is broad and ambiguous, encompassing routine functions like exporting to PDF, printing, or viewing content in a browser. As noted by Greg in the working group, even basic link extraction could fall under this category, potentially rendering all crawlers\u2014including non-AI ones\u2014inoperable. \n\nWe\u2019re concerned this framing could unintentionally undermine essential Internet functions such as content moderation, spam filtering, and accessibility features. While we recognize these outcomes are not the intent, the risk remains that critical functionality may be impaired, user expectations misaligned, and implementers exposed to complaints\u2014especially in regulated contexts. \n\nIt\u2019s also worth noting that existing mechanisms already allow publishers to signal bot access preferences. If there are concerns about their adoption or effectiveness, that may be a more productive area for discussion\u2014one we haven\u2019t yet seen raised in this group. \n\n### Proposed Resolution\n\nRemove the automated processing category. We believe that the Automated Processing category is too broad and vague and will lead to a less safe and open  and open Internet in the long run.",
+      "createdAt": "2025-09-26T20:24:04Z",
+      "updatedAt": "2025-09-26T20:24:04Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 170,
+      "id": "I_kwDOOWk1-s7OLI0M",
+      "title": "Hierarchical structure is problematic and introduces unnecessary complexity",
+      "url": "https://github.com/ietf-wg-aipref/drafts/issues/170",
+      "state": "OPEN",
+      "author": "kmadhavan-msft",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [
+        "wglc",
+        "triage"
+      ],
+      "body": "### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nThe hierarchical structure in vocab-03 -  placing categories like Automated Processing, Search, and AI Training in parent\u2013child relationships - introduces complexity without real benefit. In practice, preferences can be expressed directly on each activity, so the hierarchy does not add clarity; instead it forces artificial nesting. Real-world processing often overlaps across categories, and the hierarchy has already led to a patchwork of overlapping or conflicting proposals. Because publishers simply want to state \u201callow\u201d or \u201cdisallow\u201d for specific uses or use multiple preferences, the extra layer of hierarchy is unnecessary and risks confusing both implementers and publishers. A flatter, modular vocabulary would make preferences easier to understand, more consistent to apply, and better aligned with real systems. \n\n### Proposed Resolution\n\nRemove the heirarchical structure and replace with a flatter, modular structure that would make the preferences easier to understand, more consistent to apply, and better aligned with real systems. ",
+      "createdAt": "2025-09-26T20:27:17Z",
+      "updatedAt": "2025-09-26T20:27:46Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 171,
+      "id": "I_kwDOOWk1-s7OLKz_",
+      "title": "Search should be removed and replaced with display-based preferences",
+      "url": "https://github.com/ietf-wg-aipref/drafts/issues/171",
+      "state": "OPEN",
+      "author": "kmadhavan-msft",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [
+        "wglc",
+        "triage"
+      ],
+      "body": "### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nThe term \u201cSearch\u201d is well understood by webmasters, but using it without a clear definition may cause confusion rather than helping address publisher concerns about display-based approaches. Yet, many challenges arise when attempting to strike a durable definition: \n\nThe line between search and AI is increasingly blurred, making it hard to separate them meaningfully in policy. \n\nModern search relies on AI for functions like ranking and snippets, so a distinct \u201csearch\u201d opt-out may not be practical. \n\nThe current \u201csearch\u201d category appears to regulate internal system behavior in ways that are hard to define or audit. \n\nExisting mechanisms like robots.txt and noindex already give site owners strong control, so adding a new \u201csearch\u201d category could duplicate or conflict with these mechanisms. \n\n### Proposed Resolution\n\nWe have proposed alternate solution detailed here: [https://datatracker.ietf.org/doc/html/draft-madhavan-aipref-displaybasedpref-01](https://datatracker.ietf.org/doc/html/draft-madhavan-aipref-displaybasedpref-01 )",
+      "createdAt": "2025-09-26T20:30:33Z",
+      "updatedAt": "2025-09-26T20:30:33Z",
       "closedAt": null,
       "comments": []
     }
