@@ -1,32 +1,29 @@
-name: WGLC Issue
-description: Working Group Last Call Issue
-labels: [wglc, triage]
+name: WG Issue
+description: Working Group Issue
+labels: [triage]
 body:
   - type: markdown
     attributes:
       value: |
-        Working Group Last Call (WGLC) is your opportunity to raise issues against the following drafts:
+        Use this form to raise issues against the following drafts:
 
-        * [A Vocabulary For Expressing AI Usage Preferences](https://datatracker.ietf.org/doc/html/draft-ietf-aipref-attach-03)
-        * [Associating AI Usage Preferences With Content](https://datatracker.ietf.org/doc/html/draft-ietf-aipref-attach-03)
+        * [A Vocabulary For Expressing AI Usage Preferences](https://datatracker.ietf.org/doc/html/draft-ietf-aipref-attach)
+        * [Associating AI Usage Preferences With Content](https://datatracker.ietf.org/doc/html/draft-ietf-aipref-attach)
 
-        This is a consensus call on these documents in their whole form, which means that any matter not raised as an issue is presumed to have consensus.
-
-        WGLC issues will be triaged and handled as follows:
+        Issues will be triaged by the chairs as follows:
         * Issues that are not within the scope of our charter will be closed without further discussion.
         * Issues with the charter itself -- including whether the IETF should be doing this work -- are not in scope of the WGLC.
         * Issues that are similar will be combined. If you see a similar existing issue and wish to add information, do so there (but note that simple "+1" responses and similar have little weight).
         * Issues that are deemed to be editorial will be reassigned to the editors and will be handled by them.
-        * Issues that have already been discussed will have consensus confirmed. Genuinely new information is of greatest assistance when evaluating such issues.
-        * Issues that have not yet been discussed will be evaluated on their merits. Alternative approaches (e.g., "why didn't you do...") are presumed not to have consensus unless there is strong support for considering them.
+
         If you feel that your issue has been triaged incorrectly, please contact the chairs.
 
   - type: checkboxes
     attributes:
       label: "Confirmation"
-      description: "Before raising a Working Group Last Call issue, please confirm that:"
+      description: "Before raising a Working Group issue, please confirm that:"
       options:
-        - label: I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.
+        - label: I have reviewed our [existing issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen) and this issue is not present there.
           required: true
         - label: I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).
           required: true
