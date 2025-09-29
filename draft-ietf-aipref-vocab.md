@@ -104,18 +104,11 @@ Artificial Intelligence (AI):
   learns from data to generate outputs
   such as content, predictions, recommendations, or decisions.
 
-AI Training:
-: The use of data to produce or improve an artificial intelligence system.
-
 Asset:
 : A digital file or stream of data, usually with associated metadata.
 
 Declaring party:
 : The entity that expresses a preference with regards to an Asset.
-
-Search Application:
-: A search application is a system that enables users
-  locate items on the internet or in a specific data store.
 
 # Statements of Preference {#model}
 
@@ -236,48 +229,30 @@ This section defines the categories of use in the vocabulary.
 
 ## Automated Processing Category {#bots}
 
-The act of using automated processing on one or more assets
-to analyze text and data in order to generate information
-which includes but is not limited to patterns, trends and correlations.
+The use of assets in the context of automated processing aimed at analyzing text 
+and data in order to generate information which includes but is not limited 
+to patterns, trends and correlations.
 
 The use of assets for automated processing encompasses all the subsequent categories.
 
 ## AI Training Category {#train-ai}
 
-The act of using one or more assets to produce or improve an artificial intelligence
+The use of assets to produce or improve an artificial intelligence.
 model.
 
-The use of assets for AI Training is a proper subset of Automated Processing usage.
+AI Training is a proper subset of Automated Processing usage.
 
 ## Generative AI Training Category {#train-genai}
 
 The act of training general purpose AI models that have the capacity to generate text, images or other forms of synthetic content, or the act of training more specialized AI models that have the purpose of generating text, images or other forms of synthetic content.
 
-The use of assets for Generative AI Training is a proper subset of AI Training usage.
+Generative AI Training is a proper subset of AI Training usage.
 
 ## Search Category {#search}
 
-Using one or more assets in a search application
-that directs users to the location
-from which the assets were retrieved.
+The use of assets to build a search index and providing search results (e.g., returning hyperlinks and short excerpts from a website's contents). Search does not include providing AI-generated search summaries.
 
-Search applications can be complex
-and may serve multiple purposes.
-Only those parts of applications that direct users to the location of an asset
-are included in this category of use.
-This includes the use of titles or excerpts from assets
-that are used to help users select between multiple candidate options.
-
-Preferences for the Search category apply to those parts of applications
-that provide search capabilities,
-regardless of what other preferences are stated.
-
-Parts of applications that do not direct users to the location of assets,
-such as summaries,
-are not covered by this category of use.
-
-The use of assets for Search is a proper subset of Automated Processing usage.
-
+Search is a proper subset of Automated Processing usage.
 
 ## Vocabulary Extensions {#vocab-extension}
 
@@ -336,25 +311,6 @@ the following process applies to each usage category:
 * Otherwise, no preference is stated.
 
 This process ensures that the most restrictive preference applies.
-
-
-## More Specific Instructions
-
-A recipient of a statement of preferences
-that follows the model in {{model}}
-might receive more specific instructions in two ways:
-
-* Extensions to the vocabulary might define more specific categories of usage.
-  Preferences about more specific categories override those of any more general category.
-
-* Contractual agreements or other specific arrangements might override
-  statements of preference.
-
-For instance, a statement of preferences might indicate that the use of an asset is disallowed for AI Training.
-If arrangements, such as legal agreements, exist that explicitly permit the use of that asset,
-those arrangements likely apply despite the existence of machine-readable statements of preference,
-unless the terms of the arrangement explicitly say otherwise.
-
 
 # Exemplary Serialization Format {#format}
 
