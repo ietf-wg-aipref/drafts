@@ -72,13 +72,15 @@ This document defines a vocabulary of preferences
 regarding how automated systems process digital assets --
 in particular, the training and use of AI models.
 This vocabulary can be used to describe
-the types of uses that a declaring party may wish to explicitly restrict or allow.
+the types of uses that a declaring party may wish to 
+explicitly restrict or allow.
 
-The vocabulary is intended to be used
-in jurisdictions where expressing preferences results in legal obligations,
+The vocabulary is intended to be used in jurisdictions where 
+expressing preferences results in legal obligations,
 as well as where there are no associated legal obligations.
-In either case, expressing preferences is without prejudice to applicable laws,
-including the applicability of exceptions and limitations to copyright.
+In either case, expressing preferences is without prejudice 
+to applicable laws, including the applicability of exceptions 
+and limitations to copyright.
 
 {{model}} defines the data model for AI Preferences.
 {{vocab}} defines the terms of the vocabulary.
@@ -88,7 +90,6 @@ and {{format}} describes a way to serialize preferences into a string.
 
 {{ATTACH}} defines mechanisms to associate preferences with assets.
 Other means of association might be defined separately in the future.
-
 
 # Conventions and Definitions
 
@@ -104,8 +105,7 @@ Artificial Intelligence (AI):
   such as content, predictions, recommendations, or decisions.
 
 AI Training:
-: The application of machine learning to data
-  to produce or improve a model for an artificial intelligence system.
+: The use of data to produce or improve an artificial intelligence system.
 
 Asset:
 : A digital file or stream of data, usually with associated metadata.
@@ -113,15 +113,9 @@ Asset:
 Declaring party:
 : The entity that expresses a preference with regards to an Asset.
 
-Machine Learning (ML):
-: The processing of data
-  to produce or improve a model that encodes the relationship
-  between the data and human-defined objectives.
-
 Search Application:
 : A search application is a system that enables users
   locate items on the internet or in a specific data store.
-
 
 # Statements of Preference {#model}
 
@@ -143,10 +137,10 @@ Some categories describe a proper subset of the usages of other categories.
 A preference that is stated for the more general category applies
 if no preference is stated for the more specific category.
 
-For example, the Automated Processing category might be assigned a preference that allows the associated usage.
+For example, the Automated Processing category might be assigned a preference
+that allows the associated usage.
 In the absence of any statement of preference regarding the AI Training category,
-that usage would be also be allowed,
-as AI Training is a subset of the Automated Processing category.
+that usage would be also be allowed, as AI Training is a subset of the Automated Processing category.
 In comparison, an explicit preference regarding AI Training might disallow that usage,
 while permitting other usage within the Automated Processing category.
 
@@ -163,7 +157,6 @@ regarding a particular asset.
 The process for managing multiple statements of preference is defined in {{combine}}.
 
 An exemplary syntax for statements of preference is defined in {{format}}.
-
 
 ## Conformance
 
@@ -183,7 +176,7 @@ preferences to each (allow, disallow, or no preference; see {{model}}).
 
 This specification does not provide any enforcement mechanism
 for those preferences, and conformance to it does not encompass
-whether preferences are actually respected during data processing.
+whether preferences are actually followed during data processing.
 
 Preferences do not themselves create rights or prohibitions,
 either in the positive or the negative. Other mechanisms—technical,
@@ -191,50 +184,23 @@ legal, contractual, or otherwise—might enforce stated preferences
 and thereby determine the consequences of following or not following
 a stated preference.
 
-An entity that receives usage preferences MAY choose to respect
+An entity that receives usage preferences may choose to follow
 those preferences it has discovered, according to
 an understanding of how the asset is used,
 how that usage corresponds to the usage categories
 where preferences have been stated,
 and the applicable legal context.
 
-Usage preferences can be ignored due to express agreements
-between relevant parties, explicit provisions of law, or
-the exercise of discretion in situations where widely recognized
-priorities justify doing so. Priorities that could justify
-ignoring preferences include—but are not limited to—free
-expression, safety, education, scholarship, research,
-preservation, interoperability, and accessibility.
-
-The following lists examples of cases
-where other priorities could lead someone to ignore expressed preferences
-in a particular situation:
-
-* People with accessibility needs,
-  or organizations working on their behalf,
-  might decide to ignore a preference
-  disallowing Automated Processing ({{bots}})
-  in order to access automated captions
-  or generate accessible formats.
-
-* A cultural heritage organization might decide to ignore a preference
-  disallowing Automated Processing ({{bots}})
-  in order to provide more useful, reliable, or discoverable access
-  to historical web collections.
-
-* An educational institution might decide to ignore a preference
-  disallowing AI Training ({{train-ai}})
-  in order to enable scholars to develop or use tools
-  to facilitate scientific or other types of research.
-
-* A website that permits user uploads might decide to ignore a preference
-  disallowing Automated Processing ({{bots}})
-  in order to develop or use tools that detect harmful content
-  according to established terms of use.
-
-Because enforcement is not provided by this specification,
-the consequences of ignoring preferences could vary
-depending upon how a given legal jurisdiction recognizes preferences.
+Parties might choose not to honor preferences they receive 
+on the basis of express agreements they have with other parties, 
+for legal compliance purposes, or for other reasons. 
+Historically, entities engaged in automated processing of digital
+assets in support of safety, education, scholarship, research, 
+preservation, interoperability, accessibility, and other priorities 
+have needed to make such choices in response to existing preference 
+signaling mechanisms, and affected parties have had to grapple with
+the consequences. The preference statements described in this 
+specification are no different.
 
 # Vocabulary Definition {#vocab}
 
@@ -278,7 +244,8 @@ The use of assets for automated processing encompasses all the subsequent catego
 
 ## AI Training Category {#train-ai}
 
-The act of training machine learning models or artificial intelligence (AI).
+The act of using one or more assets to produce or improve an artificial intelligence
+model.
 
 The use of assets for AI Training is a proper subset of Automated Processing usage.
 
@@ -287,7 +254,6 @@ The use of assets for AI Training is a proper subset of Automated Processing usa
 The act of training general purpose AI models that have the capacity to generate text, images or other forms of synthetic content, or the act of training more specialized AI models that have the purpose of generating text, images or other forms of synthetic content.
 
 The use of assets for Generative AI Training is a proper subset of AI Training usage.
-
 
 ## Search Category {#search}
 
@@ -328,7 +294,6 @@ as part of a larger data model.
 {{mapping}} describes how concepts from an alternative format
 might be mapped to this vocabulary.
 
-
 # Applying Statements of Preference {#usage}
 
 After acquiring a statement of preference,
@@ -351,11 +316,6 @@ as follows:
 This process results in one of three potential answers:
 allow, disallow, and unknown.
 Applications can use the answer to guide their behavior.
-
-One approach for dealing with an "unknown" outcome
-is to assign a default value.
-This document takes no position on what default might be assigned.
-
 
 ## Combining Preferences {#combine}
 
