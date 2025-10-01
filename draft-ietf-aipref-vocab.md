@@ -243,27 +243,27 @@ This section defines the categories of use in the vocabulary.
 {{f-categories}} shows the relationship between these categories:
 
 ~~~ aasvg
- .---------------------------------------------.
-|                                               |
-|             Automated Processing              |
-|                                               |
-|                                               |
-|    .-----------------.      .------------.    |
-|   |                   |    |              |   |
-|   |                   |    |              |   |
-|   |    AI Training    |    |    Search    |   |
-|   |                   |    |              |   |
-|   |                   |    |              |   |
-|   |  .-------------.  |     '------------'    |
-|   | |               | |                       |
-|   | |  Generative   | |                       |
-|   | |  AI Training  | |                       |
-|   | |               | |                       |
-|   |  '-------------'  |                       |
-|   |                   |                       |
-|    '-----------------'                        |
-|                                               |
- '---------------------------------------------'
+ .-----------------------------------------------.
+|                                                 |
+|               Automated Processing              |
+|                                                 |
+|                                                 |
+|    .-----------------.      .--------------.    |
+|   |                   |    |                |   |
+|   |                   |    |                |   |
+|   |    AI Training    |    |   AI Output    |   |
+|   |                   |    |                |   |
+|   |                   |    |                |   |
+|   |  .-------------.  |    |  .----------.  |   |
+|   | |               | |    | |            | |   |
+|   | |  Generative   | |    | |   Search   | |   |
+|   | |  AI Training  | |    | |            | |   |
+|   | |               | |    | |            | |   |
+|   |  '-------------'  |    |  '----------'  |   |
+|   |                   |    |                |   |
+|    '-----------------'      '--------------'    |
+|                                                 |
+ '-----------------------------------------------'
 ~~~
 {: #f-categories title="Relationship Between Categories of Use"}
 
@@ -289,28 +289,41 @@ The act of training general purpose AI models that have the capacity to generate
 The use of assets for Generative AI Training is a proper subset of AI Training usage.
 
 
-## Search Category {#search}
+## AI Output {#ai-output}
 
-Using one or more assets in a search application
-that directs users to the location
-from which the assets were retrieved.
+Using an asset in an AI-based system
+in the generation of outputs
+that are presented to clients of that system.
 
-Search applications can be complex
-and may serve multiple purposes.
-Only those parts of applications that direct users to the location of an asset
-are included in this category of use.
-This includes the use of titles or excerpts from assets
-that are used to help users select between multiple candidate options.
+This does not apply to any assets
+that directly provided as inputs
+to the system by clients.
+This does not include the construction of the system, only its use.
 
-Preferences for the Search category apply to those parts of applications
-that provide search capabilities,
-regardless of what other preferences are stated.
+This includes the output of search results.
+This includes outputs that are presented to human users
+and outputs that are presented to automated clients.
 
-Parts of applications that do not direct users to the location of assets,
-such as summaries,
-are not covered by this category of use.
+The use of assets for AI Output is a proper subset of Automated Processing usage.
 
-The use of assets for Search is a proper subset of Automated Processing usage.
+
+## Search {#search}
+
+The Search category of use is a refinement of the AI Output usage,
+with the addition of the following two conditions:
+
+* A reference to the location that the asset was obtained
+  is presented as part of the output.
+
+* Only excerpts of material that is drawn verbatim from the asset
+  can be presented as part of the output.
+
+With both these conditions,
+a preference to allow Search usage
+enables the presentation of links and titles
+in what is considered “traditional” search results.
+
+The use of assets for Search is a proper subset of AI Output usage.
 
 
 ## Vocabulary Extensions {#vocab-extension}
@@ -426,6 +439,7 @@ Each usage category in the vocabulary ({{vocab}}) is mapped to a short textual l
 | Automated Processing   | bots        | {{bots}}        |
 | AI Training            | train-ai    | {{train-ai}}    |
 | Generative AI Training | train-genai | {{train-genai}} |
+| Search                 | ai-output   | {{ai-output}}   |
 | Search                 | search      | {{search}}      |
 {: #t-category-labels title="Mappings for Categories"}
 
@@ -593,7 +607,10 @@ The following individuals made significant contributions to this document:
 * {{{Lila Bailey}}}
 * {{{Cullen Miller}}}
 * {{{Laurent Le Meur}}}
+* {{{Krishna Madhavan}}}
+* {{{Felix Reda}}}
 * {{{Leonard Rosenthol}}}
 * {{{Sebastian Posth}}}
+* {{{Erin Simon}}}
 * {{{Timid Robot Zehta}}}
 {: spacing="compact"}
