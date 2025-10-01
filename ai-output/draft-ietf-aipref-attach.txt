@@ -6,10 +6,10 @@ AI Preferences                                                 G. Illyes
 Internet-Draft                                                    Google
 Updates: 9309 (if approved)                                   M. Thomson
 Intended status: Standards Track                                 Mozilla
-Expires: 5 March 2026                                   1 September 2025
+Expires: 4 April 2026                                     1 October 2025
 
 
-             Associating AI Usage Preferences With Content
+         Associating AI Usage Preferences with Content in HTTP
                     draft-ietf-aipref-attach-latest
 
 Abstract
@@ -54,7 +54,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 5 March 2026.
+   This Internet-Draft will expire on 4 April 2026.
 
 Copyright Notice
 
@@ -73,11 +73,12 @@ Copyright Notice
 Table of Contents
 
    1.  Introduction
-     1.1.  Preference Expressions
+     1.1.  Statements of Preference
      1.2.  Examples
-     1.3.  Embedded Preferences
-     1.4.  Registry-Based Preferences
-     1.5.  Conventions and Definitions
+     1.3.  Other Mechanisms
+       1.3.1.  Embedded Preferences
+       1.3.2.  Registry-Based Preferences
+     1.4.  Conventions and Definitions
    2.  HTTP Content-Usage Header Field
    3.  Robots Exclusion Protocol Content-Usage Rule
      3.1.  Content-Usage Rule Semantics
@@ -89,7 +90,6 @@ Table of Contents
    6.  References
      6.1.  Normative References
      6.2.  Informative References
-   Acknowledgments
    Authors' Addresses
 
 1.  Introduction
@@ -101,7 +101,7 @@ Table of Contents
    Content creators and other stakeholders, such as distributors, might
    wish to express a preference regarding the types of usage they
    consider acceptable.  Entities that might use that content need those
-   preferences to be expressed in a way that is easily consumed by an
+   preferences to be stated in a way that is easily consumed by an
    automated system.
 
    This document describes two mechanisms for associating preferences
@@ -116,28 +116,31 @@ Table of Contents
    for the automated gathering of preferences in the same way that
    content is obtained.
 
-1.1.  Preference Expressions
+1.1.  Statements of Preference
 
-   The format of preference expressions is defined in the preference
+   The format of a statement of preference is defined in the preference
    vocabulary [VOCAB].  The preference vocabulary defines:
 
-   *  what preferences can be expressed,
+   *  a model for associating usage preferences with categories of use,
 
-   *  how multiple expressions of preference are combined, and
+   *  some categories of use,
+
+   *  how multiple statements of preference are combined, and
 
    *  how those preferences are turned into strings or byte sequences
       for use in a protocol.
 
    This document only defines how the strings or byte sequences are
-   conveyed so that the preferences can be associated with content.
+   conveyed so that statements of preference can be associated with
+   content.
 
 1.2.  Examples
 
-   A server that provides content using HTTP could signal preferences
-   about how that content is used with the Content-Usage header field as
-   follows:
+   A server that provides content could signal preferences about how
+   that content is used by the Content-Usage header field in the HTTP
+   response:
 
-   200 OK
+   HTTP/1.1 200 OK
    Date: Wed, 23 Apr 2025 04:48:02 GMT
    Content-Type: text/plain
    Content-Usage: train-ai=n
@@ -151,7 +154,21 @@ Table of Contents
    Allow: /
    Content-Usage: train-ai=n
 
-1.3.  Embedded Preferences
+1.3.  Other Mechanisms
+
+   This document provides two general purpose methods for associating
+   statements of preference with assets that are transferred using HTTP.
+
+   The mechanisms in this document can be applied to any content type,
+   provided that the content is obtained using HTTP (and maybe FTP).
+   Future work might define how preferences might be indicated for
+   alternative content distribution or acquisition methods, such as
+   email.
+
+   The attachment mechanism in this document are intended to be
+   complementary with other mechanisms.
+
+1.3.1.  Embedded Preferences
 
    Embedding preferences is expected to be an effective means of
    associating preferences with content, because it ensures that
@@ -167,21 +184,16 @@ Table of Contents
    some content types, such as plain text (text/plain), offer no
    standardized means of embedding preferences.
 
-   The mechanisms in this document can be applied to any content type,
-   provided that the content is obtained using HTTP (and maybe FTP).
-   Future work might define how preferences might be indicated for
-   alternative content distribution or acquisition methods, such as
-   email.
+1.3.2.  Registry-Based Preferences
 
-1.4.  Registry-Based Preferences
-
-   This document does not define a means of using unique identifiers and
-   a registry for associating preferences.  Registry-based approaches
-   might be applicable in certain contexts, particularly where embedding
-   is impractical or unavailable.  Additionally, a registry might enable
+   A preferences registry is a database that stores usage preference
+   statements associated with both content identifiers and a means of
+   identifying the declaring party.  Registry-based approaches might be
+   applicable in certain contexts, particularly where embedding is
+   impractical or unavailable.  Additionally, a registry might enable
    persistent association of preferences across distribution channels.
 
-1.5.  Conventions and Definitions
+1.4.  Conventions and Definitions
 
    The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
    "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and
@@ -196,8 +208,10 @@ Table of Contents
    processing rules in [VOCAB].
 
    This field indicates usage preferences regarding the content of the
-   HTTP message.  That is, the representation data, as defined in
-   Section 8.1 of [HTTP], not the resource.
+   HTTP message.  That is, the field is representation metadata
+   (Section 8.2 of [HTTP]) that applies the representation data
+   (Section 8.1 of [HTTP]).  Informally, usage preferences apply to the
+   content of a message, not the resource.
 
    Servers MUST retain any preferences associated with a request if the
    content of that request is used to answer later requests.  For
@@ -236,8 +250,8 @@ Table of Contents
    be absent or empty; if a path present, a SP or HTAB separates it from
    the usage preference.
 
-   Note that the usage preference expression encoding does not use an
-   ABNF definition, relying instead on the definitions in [FIELDS].
+   Note that the statement of preference encoding does not use an ABNF
+   definition, relying instead on the definitions in [FIELDS].
 
 3.1.  Content-Usage Rule Semantics
 
@@ -296,14 +310,14 @@ Table of Contents
 
    If a path is specified, the path ends immediately before the first SP
    (U+20) or HTAB ("U+09") character.  The remainder of the rule value
-   is the usage preference expression.  If a path is absent, the entire
-   rule value is the usage preference expression.
+   is the statement of preference.  If a path is absent, the entire rule
+   value is the statement of preference.
 
    The usage preference is encoded using the exemplary format defined in
    Section 6 of [VOCAB].  The parsing and processing rules from Sections
    6 and 7 of [VOCAB] apply.
 
-   Note that a usage preference expression is processed as a sequence of
+   Note that a statement of preference is processed as a sequence of
    bytes, rather than Unicode text; see Section 6.3 of [VOCAB].
 
 3.3.  When Preferences Apply
@@ -413,7 +427,7 @@ Table of Contents
 
    [VOCAB]    Keller, P. and M. Thomson, Ed., "A Vocabulary For
               Expressing AI Usage Preferences", Work in Progress,
-              Internet-Draft, draft-ietf-aipref-vocab, September 2025,
+              Internet-Draft, draft-ietf-aipref-vocab, October 2025,
               <https://datatracker.ietf.org/doc/html/draft-ietf-aipref-
               vocab>.
 
@@ -424,10 +438,6 @@ Table of Contents
               Ed., "HTTP Caching", STD 98, RFC 9111,
               DOI 10.17487/RFC9111, June 2022,
               <https://www.rfc-editor.org/rfc/rfc9111>.
-
-Acknowledgments
-
-   TODO acknowledge.
 
 Authors' Addresses
 
