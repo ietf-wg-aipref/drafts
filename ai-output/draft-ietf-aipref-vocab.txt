@@ -464,7 +464,7 @@ Table of Contents
           +------------------------+-------------+-------------+
           | Generative AI Training | train-genai | Section 4.3 |
           +------------------------+-------------+-------------+
-          | Search                 | ai-output   | Section 4.4 |
+          | AI Output              | ai-output   | Section 4.4 |
           +------------------------+-------------+-------------+
           | Search                 | search      | Section 4.5 |
           +------------------------+-------------+-------------+
