@@ -439,7 +439,7 @@ Each usage category in the vocabulary ({{vocab}}) is mapped to a short textual l
 | Automated Processing   | bots        | {{bots}}        |
 | AI Training            | train-ai    | {{train-ai}}    |
 | Generative AI Training | train-genai | {{train-genai}} |
-| Search                 | ai-output   | {{ai-output}}   |
+| AI Output              | ai-output   | {{ai-output}}   |
 | Search                 | search      | {{search}}      |
 {: #t-category-labels title="Mappings for Categories"}
 
