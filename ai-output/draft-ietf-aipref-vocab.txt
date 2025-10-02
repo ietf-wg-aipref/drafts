@@ -336,6 +336,10 @@ Table of Contents
    that are presented to human users and outputs that are presented to
    automated clients.
 
+   The AI Output category of use includes whatever model training is
+   necessary to produce the models that are used in the generation of
+   these outputs.
+
    The use of assets for AI Output is a proper subset of Automated
    Processing usage.
 
@@ -356,6 +360,10 @@ Table of Contents
    With both these conditions, a preference to allow Search usage
    enables the presentation of links and titles in what is considered
    “traditional” search results.
+
+   Like the AI Output category of use, Search includes whatever model
+   training is necessary to produce the models that are used in the
+   generation of these outputs.
 
    The use of assets for Search is a proper subset of AI Output usage.
 
