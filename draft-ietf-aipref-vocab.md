@@ -296,7 +296,7 @@ in the generation of outputs
 that are presented to clients of that system.
 
 This does not apply to any assets
-that directly provided as inputs
+that are directly provided as inputs
 to the system by clients.
 This does not include the construction of the system, only its use.
 
