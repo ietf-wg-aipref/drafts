@@ -318,6 +318,9 @@ with the addition of the following two conditions:
 * Only excerpts of material that is drawn verbatim from the asset
   can be presented as part of the output.
 
+If these conditions cannot be met,
+the asset then is not included in the output.
+
 With both these conditions,
 a preference to allow Search usage
 enables the presentation of links and titles
