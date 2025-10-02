@@ -5,8 +5,8 @@
 AI Preferences                                                 P. Keller
 Internet-Draft                                               Open Future
 Intended status: Standards Track                         M. Thomson, Ed.
-Expires: 4 April 2026                                            Mozilla
-                                                          1 October 2025
+Expires: 5 April 2026                                            Mozilla
+                                                          2 October 2025
 
 
             A Vocabulary For Expressing AI Usage Preferences
@@ -51,7 +51,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 4 April 2026.
+   This Internet-Draft will expire on 5 April 2026.
 
 Copyright Notice
 
@@ -328,9 +328,9 @@ Table of Contents
    Using an asset in an AI-based system in the generation of outputs
    that are presented to clients of that system.
 
-   This does not apply to any assets that directly provided as inputs to
-   the system by clients.  This does not include the construction of the
-   system, only its use.
+   This does not apply to any assets that are directly provided as
+   inputs to the system by clients.  This does not include the
+   construction of the system, only its use.
 
    This includes the output of search results.  This includes outputs
    that are presented to human users and outputs that are presented to
