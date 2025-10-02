@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-09-30T01:48:09.768578+00:00",
+  "timestamp": "2025-10-02T01:48:24.738022+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -2325,7 +2325,7 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nThe term \"digital asset\" is used throughout the Vocab document.  It is confusing and misleading.  A \"digital asset\" generally and commonly refers to cryptocurrency. The United States Internal Revenue Service (IRS) defines it as \"any digital representation of value on a cryptographically secured, distributed ledger (blockchain) or similar technology.\"  See https://www.irs.gov/filing/digital-assets#description.  \n It's not a term used in robots.txt or the Attach documet which uses the term \"content\" and \"content-usage.\" A preferable term would be \"Digital Content.\"\n\n### Proposed Resolution\n\nReplace \"digital asset\" or \"digital assets\" with \"digital content.\" Replace \"asset\" with \"digital content.\" Replace \"one or more assets\" with \"digital content.\" There are 23 instances of the term asset or assets throughout the document.  By using \"digital content\" there is also no new for a definition of the term \"Digital Asset.\"",
       "createdAt": "2025-09-22T07:27:50Z",
-      "updatedAt": "2025-09-28T07:58:30Z",
+      "updatedAt": "2025-09-30T06:13:56Z",
       "closedAt": null,
       "comments": [
         {
@@ -2334,6 +2334,13 @@
           "body": "On the other hand, @Jo-Levy - standards such as C2PA and JPEG Trust both use the term \"asset\" or \"media asset\" to differentiate the entire entity/file from just the \"content\" - in that there exists other parts (e.g. metadata) of an \"asset\" beyond just the content.\n\nSee https://spec.c2pa.org/specifications/specifications/2.2/specs/C2PA_Specification.html#_assets_and_content and https://ds.jpeg.org/documents/jpegtrust/wg1n100972-105-REQ-Terms_and_definitions_for_JPEG_Trust_v2_0.pdf",
           "createdAt": "2025-09-22T12:25:51Z",
           "updatedAt": "2025-09-22T12:25:51Z"
+        },
+        {
+          "author": "chrisn",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "I agree with @lrosenthol, asset is a recognised term, so I see no need for change here. There's a clear definition in the Conventions and Definitions section of the draft.",
+          "createdAt": "2025-09-30T06:13:56Z",
+          "updatedAt": "2025-09-30T06:13:56Z"
         }
       ]
     },
@@ -2352,9 +2359,17 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nSection 3.1 titled Conformance states that an implentation is conformant to the specifications if it correctly follows all normative requirements that apply to it.  This pertains to enforcement, which is out of scope for the Vocab and Attach document. It adds nothing to the Vocabulary or statement of preference. Solution: Delete 3.1 Conformance.\n\n### Proposed Resolution\n\nDelete Section 3.1 Conformance.",
       "createdAt": "2025-09-22T07:38:58Z",
-      "updatedAt": "2025-09-28T07:58:30Z",
+      "updatedAt": "2025-09-30T06:10:53Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "chrisn",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "I strongly disagree with removing this.",
+          "createdAt": "2025-09-30T06:10:53Z",
+          "updatedAt": "2025-09-30T06:10:53Z"
+        }
+      ]
     },
     {
       "number": 165,
@@ -2516,7 +2531,7 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\n_From @chrisn in [email](https://mailarchive.ietf.org/arch/msg/ai-control/2ZbEx73js_cTQT8mI1Wy6_0ZC_s):_\n\nWithout a category that covers RAG and grounding usage, the vocabulary does not meet publisher needs. This need was raised at the outset of this work, in the IAB workshop in Washington DC in 2024, and included in the WG charter scope.\n\nIn addition to reducing web traffic to original content, such usage introduces the possibility of creating misleading or biased statements, an issue that impacts news publishers in particular, risking undermining their credibility. Research published by the BBC goes into this in more detail, demonstrating that AI-generated answers summarise and present content in a way that can introduce factual inaccuracies and biases that are not present in the original published content.\n\n### Proposed Resolution\n\n_No response_",
       "createdAt": "2025-09-28T08:57:47Z",
-      "updatedAt": "2025-09-28T09:03:41Z",
+      "updatedAt": "2025-09-30T06:08:14Z",
       "closedAt": null,
       "comments": [
         {
@@ -2525,6 +2540,13 @@
           "body": "_From Bradley Silver in [email](https://mailarchive.ietf.org/arch/msg/ai-control/zaXD4Ah5ruMVIr1sbdwMVeYkOIk):_\n\nI strongly believe that a post-training/RAG category can't be left to future work - it needs to be part of the baseline framework which this document is attempting to outline.  The need and the prevalence of this activity is too broad to ignore, as are linkages to search as well as training.  I think it would be good to flesh out the concerns expressed by others about over-breadth and make a good faith attempt to see if this can be addressed in the drafting. ",
           "createdAt": "2025-09-28T09:03:40Z",
           "updatedAt": "2025-09-28T09:03:40Z"
+        },
+        {
+          "author": "chrisn",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "I wonder if a way forward here is to re-introduce a RAG / grounding / post-training / inference time usage category, but then focus on the list of 3.2 of where preferences may reasonably be ignored (e.g., the fourth bullet covers detecting harmful content). Taking this approach could address the concerns raised about the search category in #173.",
+          "createdAt": "2025-09-30T06:08:14Z",
+          "updatedAt": "2025-09-30T06:08:14Z"
         }
       ]
     },
@@ -2572,7 +2594,7 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\n_From @chrisn in [email](https://mailarchive.ietf.org/arch/msg/ai-control/2ZbEx73js_cTQT8mI1Wy6_0ZC_s):_\n\nThe \"no preference\" terminology could be misinterpreted as meaning that a website or content provider does not mind how their content is used (i.e., they don't have a preference either way). This would not be a valid assumption to make. It would be much more accurate to state that the preference is unknown. I recommend that the document aligns on the \"allow\", \"disallow\", and \"unknown\" statuses described in Section 5. This affects various parts of the draft:\n\n* In Section 3, change \"This can mean that no preference is stated for a given usage category\" to \"This can mean that the preference for a given usage category is unknown\".\n\n* In Section 3.2, which says \"allow, disallow, or no preference\"\n\n* In Section 6, I suggest a rephrasing: \"For example, the following states a preference to allow AI training (Section 4.2), disallow generative AI training (Section 4.3). The preference for categories other than subsets of these categories is unknown.\" (This would also fix the repeated \"and\" and \"other\" in the existing text.)\n\n* In Section 6.5, \"Otherwise, no preference is stated for that category of use\" should be \"Otherwise, the preference for that category of use is unknown\".\n\n* In Section 6.6, \"A mapping might then define that no preference is associated with other categories\" should be \"A mapping might then define the preference associated with other categories is unknown.\"\n\n\n### Proposed Resolution\n\n_No response_",
       "createdAt": "2025-09-28T09:02:02Z",
-      "updatedAt": "2025-09-29T20:03:29Z",
+      "updatedAt": "2025-09-30T05:59:56Z",
       "closedAt": null,
       "comments": [
         {
@@ -2588,6 +2610,13 @@
           "body": "I prefer \"no preference indicated\" or no stated preference to unknown. It signals that the content provider has provided no explicit instruction within the AIPref header.  \nIt's Farzaneh ... (I changed my name but it doesn't appear!) ",
           "createdAt": "2025-09-29T20:03:04Z",
           "updatedAt": "2025-09-29T20:03:29Z"
+        },
+        {
+          "author": "chrisn",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "The reason I suggest unknown is that would make the rest of the document consistent with section 5, which describes the three potential answers of allow, disallow, and unknown.",
+          "createdAt": "2025-09-30T05:59:55Z",
+          "updatedAt": "2025-09-30T05:59:55Z"
         }
       ]
     }
@@ -4256,7 +4285,7 @@
       "labels": [],
       "body": "As discussed on the list recently.\r\n\r\nThis does not include Brad's suggestion of \"for the exclusive purpose of\".  That is an important clarification, but I think we need to address that separately.  That is, we need to recognize that what we conceive of as \"search\" applications are more complicated than a simple index that is used to locate stuff.  We need commentary that explains that a single application can embody multiple usage categories and that use of assets for each of those aspects can have separate rules.  This isn't necessarily how those applications are built today[^1], but that's not necessarily a constraint on what we do.\r\n\r\n[^1]: I am reminded of the concept of a \"data lake\", which has no distinction about where data has come from, the purpose for which it was obtained, or anything along those lines, making compliance with data protection regulation impossible.  The analogy here is with respect to use of assets for multiple purposes, without distinction.  For data lakes, the introduction of things like GDPR helped application developers build discipline about how they obtain and label personal information; perhaps this requires a similar shift, albeit one that affects a smaller set of people.",
       "createdAt": "2025-06-23T01:51:25Z",
-      "updatedAt": "2025-06-26T06:16:40Z",
+      "updatedAt": "2025-10-01T18:39:58Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "33a61a8ef295de6ceaf2b7ac0782fe43695e9e46",
@@ -4731,7 +4760,7 @@
       "labels": [],
       "body": "The definition of generative AI training is about the generation of synthetic content.  This removes the distinction between foundational or general purpose models and those that are more specialized, because it focuses on whether the model with have the *capability* to generate content.",
       "createdAt": "2025-07-17T10:38:06Z",
-      "updatedAt": "2025-07-18T14:22:37Z",
+      "updatedAt": "2025-10-01T18:39:55Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "a0f9979749a89c548bbee1ef5ebc742556baf19f",
@@ -6483,7 +6512,7 @@
       "labels": [],
       "body": "",
       "createdAt": "2025-08-26T04:06:36Z",
-      "updatedAt": "2025-09-01T07:37:48Z",
+      "updatedAt": "2025-10-01T18:57:13Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "9835d9fdee4f52d43194f857cc732acf051bfa67",
@@ -7252,7 +7281,7 @@
       ],
       "body": "It's necessary to distinguish it.",
       "createdAt": "2025-09-02T22:19:00Z",
-      "updatedAt": "2025-09-03T01:34:30Z",
+      "updatedAt": "2025-10-01T18:57:10Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "7d9fa7a3907f636cf03c3672fa85e40e8e34f632",
@@ -7898,6 +7927,115 @@
       },
       "comments": [],
       "reviews": []
+    },
+    {
+      "number": 175,
+      "id": "PR_kwDOOWk1-s6rnewq",
+      "title": "Add some text to security",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/175",
+      "state": "CLOSED",
+      "author": "martinthomson",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Right now, this isn't going to be much, because we don't have the format text merged.  When that arrives, we'll need to add some more.\r\n\r\nThis text is almost applicability-statement material, but I thought it worth putting it here, because it will ensure that attachment methods include security considerations of their own that address the question of authentication.",
+      "createdAt": "2025-10-01T18:41:06Z",
+      "updatedAt": "2025-10-01T18:42:33Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "00a71d9b5b207d63f7a1aa6874204af0d414e615",
+      "headRepository": "ietf-wg-aipref/drafts",
+      "headRefName": "security",
+      "headRefOid": "7c6ad1bf42e46d31357e94fd04c2b4ee7dc9e1ef",
+      "closedAt": "2025-10-01T18:42:33Z",
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [
+        {
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "This was an old change, which probably needs to be moved to the attachment draft instead.",
+          "createdAt": "2025-10-01T18:42:33Z",
+          "updatedAt": "2025-10-01T18:42:33Z"
+        }
+      ],
+      "reviews": []
+    },
+    {
+      "number": 176,
+      "id": "PR_kwDOOWk1-s6rnspm",
+      "title": "AI Output and Search categories",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/176",
+      "state": "OPEN",
+      "author": "martinthomson",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "This is the output of the informali, impromptu design team that was formed during the last day of meetings.  This attempts to synthesize ideas from numerous sources, including various email threads on the mailing list, drafts shared (in particular\r\ndraft-madhavan-aipref-displaybasedpref) and some ideas that were floating around.\r\n\r\nThis concentrates on system outputs and aims to primarily address concerns about substitutive use.  That is, the potential for AI to generate content that is different from source material, but which might replace it.\r\n\r\nWe did not include some of the concepts that were in draft-madhavan-aipref-displaybasedpref about limiting output size and so forth, but recognize that those might make good extensions at a later time.  Those will depend on specific formats (text lengths for text, snippet duration for audio or video, etc..) and we concluded that we want to concentrate on the core concept.\r\n\r\nThis is a less flexible version of the thing that was presented.  Rather than having separate conditions of use attached to a permission grant, one for linking back and another for requiring direct quoting rather than paraphrasing or summarizing.  These too might need further refinement in future.  For example, we talked about how certain formats might be able to identify which content (text, time, whatever) is OK to quote and which is not.\r\n\r\nThis does not attempt to address the new problem this raises, which is that indicating that you would like these new categories to be allowed in practice also means that you need to say the same for AI training. That's not a problem this is attempting to solve.  We'll need to do that in some other way.",
+      "createdAt": "2025-10-01T19:01:20Z",
+      "updatedAt": "2025-10-01T19:04:24Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "00a71d9b5b207d63f7a1aa6874204af0d414e615",
+      "headRepository": "ietf-wg-aipref/drafts",
+      "headRefName": "ai-output",
+      "headRefOid": "e18bc32710e3015e07dbb053777c1597d9749558",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [
+        {
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "https://ietf-wg-aipref.github.io/drafts/ai-output/draft-ietf-aipref-vocab.html is a preview.",
+          "createdAt": "2025-10-01T19:03:49Z",
+          "updatedAt": "2025-10-01T19:03:49Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWk1-s7EIzwb",
+          "commit": {
+            "abbreviatedOid": "6f7c176"
+          },
+          "author": "paul2keller",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-10-01T19:03:33Z",
+          "updatedAt": "2025-10-01T19:03:33Z",
+          "comments": [
+            {
+              "originalPosition": 112,
+              "body": "I think this should be AI Output",
+              "createdAt": "2025-10-01T19:03:33Z",
+              "updatedAt": "2025-10-01T19:03:33Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s7EI02-",
+          "commit": {
+            "abbreviatedOid": "6f7c176"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-10-01T19:04:15Z",
+          "updatedAt": "2025-10-01T19:04:16Z",
+          "comments": [
+            {
+              "originalPosition": 112,
+              "body": "```suggestion\r\n| AI Output              | ai-output   | {{ai-output}}   |\r\n```",
+              "createdAt": "2025-10-01T19:04:16Z",
+              "updatedAt": "2025-10-01T19:04:16Z"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
