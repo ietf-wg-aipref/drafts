@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-10-02T01:48:24.738022+00:00",
+  "timestamp": "2025-10-05T01:58:49.706355+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -7974,13 +7974,13 @@
       "labels": [],
       "body": "This is the output of the informali, impromptu design team that was formed during the last day of meetings.  This attempts to synthesize ideas from numerous sources, including various email threads on the mailing list, drafts shared (in particular\r\ndraft-madhavan-aipref-displaybasedpref) and some ideas that were floating around.\r\n\r\nThis concentrates on system outputs and aims to primarily address concerns about substitutive use.  That is, the potential for AI to generate content that is different from source material, but which might replace it.\r\n\r\nWe did not include some of the concepts that were in draft-madhavan-aipref-displaybasedpref about limiting output size and so forth, but recognize that those might make good extensions at a later time.  Those will depend on specific formats (text lengths for text, snippet duration for audio or video, etc..) and we concluded that we want to concentrate on the core concept.\r\n\r\nThis is a less flexible version of the thing that was presented.  Rather than having separate conditions of use attached to a permission grant, one for linking back and another for requiring direct quoting rather than paraphrasing or summarizing.  These too might need further refinement in future.  For example, we talked about how certain formats might be able to identify which content (text, time, whatever) is OK to quote and which is not.\r\n\r\nThis does not attempt to address the new problem this raises, which is that indicating that you would like these new categories to be allowed in practice also means that you need to say the same for AI training. That's not a problem this is attempting to solve.  We'll need to do that in some other way.",
       "createdAt": "2025-10-01T19:01:20Z",
-      "updatedAt": "2025-10-01T19:04:24Z",
+      "updatedAt": "2025-10-02T10:17:06Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "00a71d9b5b207d63f7a1aa6874204af0d414e615",
       "headRepository": "ietf-wg-aipref/drafts",
       "headRefName": "ai-output",
-      "headRefOid": "e18bc32710e3015e07dbb053777c1597d9749558",
+      "headRefOid": "546df6c676f311ce32092ed9d0e9b90d7e467469",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
@@ -8032,6 +8032,66 @@
               "body": "```suggestion\r\n| AI Output              | ai-output   | {{ai-output}}   |\r\n```",
               "createdAt": "2025-10-01T19:04:16Z",
               "updatedAt": "2025-10-01T19:04:16Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s7EOtK7",
+          "commit": {
+            "abbreviatedOid": "e18bc32"
+          },
+          "author": "chrisn",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-10-02T04:28:21Z",
+          "updatedAt": "2025-10-02T04:30:30Z",
+          "comments": [
+            {
+              "originalPosition": 70,
+              "body": "```suggestion\r\nthat are directly provided as inputs\r\n```",
+              "createdAt": "2025-10-02T04:28:21Z",
+              "updatedAt": "2025-10-02T04:30:31Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s7ERGTc",
+          "commit": {
+            "abbreviatedOid": "955a600"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-10-02T06:56:55Z",
+          "updatedAt": "2025-10-02T06:56:55Z",
+          "comments": [
+            {
+              "originalPosition": 98,
+              "body": "```suggestion\r\n\r\nIf these conditions cannot be met,\r\nthe asset then is not included in the output.\r\n\r\n```",
+              "createdAt": "2025-10-02T06:56:55Z",
+              "updatedAt": "2025-10-02T06:56:55Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s7ERJDx",
+          "commit": {
+            "abbreviatedOid": "955a600"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-10-02T06:59:40Z",
+          "updatedAt": "2025-10-02T06:59:41Z",
+          "comments": [
+            {
+              "originalPosition": 88,
+              "body": "There is contention about the choice of name here.  The label was chosen in an attempt to align with expectations, but the name should match the definition.",
+              "createdAt": "2025-10-02T06:59:41Z",
+              "updatedAt": "2025-10-02T06:59:41Z"
             }
           ]
         }
