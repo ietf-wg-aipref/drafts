@@ -5,8 +5,8 @@
 AI Preferences                                                 P. Keller
 Internet-Draft                                               Open Future
 Intended status: Standards Track                         M. Thomson, Ed.
-Expires: 5 April 2026                                            Mozilla
-                                                          2 October 2025
+Expires: 21 April 2026                                           Mozilla
+                                                         18 October 2025
 
 
             A Vocabulary For Expressing AI Usage Preferences
@@ -51,7 +51,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 5 April 2026.
+   This Internet-Draft will expire on 21 April 2026.
 
 Copyright Notice
 
@@ -325,8 +325,8 @@ Table of Contents
 
 4.4.  AI Output
 
-   Using an asset in an AI-based system in the generation of outputs
-   that are presented to clients of that system.
+   Using an asset in an AI-based system to generate outputs that are
+   presented to clients of that system.
 
    This does not apply to any assets that are directly provided as
    inputs to the system by clients.  This does not include the
@@ -351,8 +351,8 @@ Table of Contents
    *  A reference to the location that the asset was obtained is
       presented as part of the output.
 
-   *  Only excerpts of material that is drawn verbatim from the asset
-      can be presented as part of the output.
+   *  The asset can only be represented in the output with excerpts that
+      are drawn verbatim from it.
 
    If these conditions cannot be met, the asset then is not included in
    the output.
