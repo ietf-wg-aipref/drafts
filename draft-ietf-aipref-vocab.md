@@ -292,7 +292,7 @@ The use of assets for Generative AI Training is a proper subset of AI Training u
 ## AI Output {#ai-output}
 
 Using an asset in an AI-based system
-in the generation of outputs
+to generate outputs
 that are presented to clients of that system.
 
 This does not apply to any assets
@@ -319,8 +319,8 @@ with the addition of the following two conditions:
 * A reference to the location that the asset was obtained
   is presented as part of the output.
 
-* Only excerpts of material that is drawn verbatim from the asset
-  can be presented as part of the output.
+* The asset can only be represented in the output
+  with excerpts that are drawn verbatim from it.
 
 If these conditions cannot be met,
 the asset then is not included in the output.
