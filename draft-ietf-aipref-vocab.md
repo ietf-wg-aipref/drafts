@@ -313,7 +313,7 @@ The use of assets for AI Output is a proper subset of Automated Processing usage
 
 ## Search {#search}
 
-The Search category of use is a refinement of the AI Output usage,
+The Search category of use is a refinement of the AI Output category,
 with the addition of the following two conditions:
 
 * A reference to the location that the asset was obtained
