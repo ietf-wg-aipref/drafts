@@ -223,7 +223,7 @@ in a particular situation:
   to historical web collections.
 
 * An educational institution might decide to ignore a preference
-  disallowing AI Training ({{train-ai}})
+  disallowing Foundation Model Production ({{train-ai}})
   in order to enable scholars to develop or use tools
   to facilitate scientific or other types of research.
 
@@ -236,6 +236,7 @@ Because enforcement is not provided by this specification,
 the consequences of ignoring preferences could vary
 depending upon how a given legal jurisdiction recognizes preferences.
 
+
 # Vocabulary Definition {#vocab}
 
 This section defines the categories of use in the vocabulary.
@@ -243,29 +244,29 @@ This section defines the categories of use in the vocabulary.
 {{f-categories}} shows the relationship between these categories:
 
 ~~~ aasvg
- .-----------------------------------------------.
-|                                                 |
-|               Automated Processing              |
-|                                                 |
-|                                                 |
-|    .-----------------.      .--------------.    |
-|   |                   |    |                |   |
-|   |                   |    |                |   |
-|   |    AI Training    |    |   AI Output    |   |
-|   |                   |    |                |   |
-|   |                   |    |                |   |
-|   |  .-------------.  |    |  .----------.  |   |
-|   | |               | |    | |            | |   |
-|   | |  Generative   | |    | |   Search   | |   |
-|   | |  AI Training  | |    | |            | |   |
-|   | |               | |    | |            | |   |
-|   |  '-------------'  |    |  '----------'  |   |
-|   |                   |    |                |   |
-|    '-----------------'      '--------------'    |
-|                                                 |
- '-----------------------------------------------'
-~~~
-{: #f-categories title="Relationship Between Categories of Use"}
+ .------------------------------------------------.
+|                                                  |
+|              Automated Processing                |
+|                                                  |
+|                                                  |
+|    .----------------.      .----------------.    |
+|   |                  |    |                  |   |
+|   |                  |    |                  |   |
+|   |    Foundation    |    |    AI Output     |   |
+|   |      Model       |    |                  |   |
+|   |    Production    |    |                  |   |
+|   |                  |    |  .------------.  |   |
+|   |                  |    | |              | |   |
+|    '----------------'     | |    Search    | |   |
+|                           | |              | |   |
+|                           | |              | |   |
+|                           |  '------------'  |   |
+|                           |                  |   |
+|                            '----------------'    |
+|                                                  |
+ '------------------------------------------------'
+~~~~
+{: #f-categories title="Relationsehip Betweeen Categories of Use"}
 
 
 ## Automated Processing Category {#bots}
@@ -276,22 +277,28 @@ which includes but is not limited to patterns, trends and correlations.
 
 The use of assets for automated processing encompasses all the subsequent categories.
 
-## AI Training Category {#train-ai}
 
-The act of training machine learning models or artificial intelligence (AI).
+## Foundation Model Production Category {#train-ai}
 
-The use of assets for AI Training is a proper subset of Automated Processing usage.
+The act of using an asset to train or fine-tune a foundation model.
 
-## Generative AI Training Category {#train-genai}
+Foundation models are large models that are produced using deep learning
+or other machine learning techniques.
+Foundation models are trained on very large numbers of assets
+so that they can be applied to a wide range of use cases.
+Foundation models typically possess generative capabilities
+in one or more media.
 
-The act of training general purpose AI models that have the capacity to generate text, images or other forms of synthetic content, or the act of training more specialized AI models that have the purpose of generating text, images or other forms of synthetic content.
+Fine-tuning can specialize a general-purpose foundation model
+for a narrower set of use cases.
 
-The use of assets for Generative AI Training is a proper subset of AI Training usage.
+The use of assets for Foundation Model Production
+is a proper subset of Automated Processing usage.
 
 
 ## AI Output {#ai-output}
 
-Using an asset in an AI-based system
+The act of using an asset in an AI-based system
 to generate outputs
 that are presented to clients of that system.
 
@@ -431,13 +438,13 @@ The dictionary keys correspond to usage categories
 and the dictionary values correspond to explicit preferences,
 which can be either `y` or `n`; see {{y-or-n}}.
 
-For example, the following states a preference to allow AI training ({{train-ai}}),
-disallow generative AI training ({{train-genai}}), and
+For example, the following states a preference to allow automated processing ({{bots}}),
+disallow foundation model production ({{train-ai}}), and
 and states no preference for other categories
 other than subsets of these categories:
 
 ~~~
-train-ai=y, train-genai=n
+bots=y, train-ai=n
 ~~~
 
 
@@ -446,13 +453,12 @@ train-ai=y, train-genai=n
 Each usage category in the vocabulary ({{vocab}}) is mapped to a short textual label.
 {{t-category-labels}} tabulates this mapping.
 
-| Category               | Label       | Reference       |
-|:-----------------------|:------------|:----------------|
-| Automated Processing   | bots        | {{bots}}        |
-| AI Training            | train-ai    | {{train-ai}}    |
-| Generative AI Training | train-genai | {{train-genai}} |
-| AI Output              | ai-output   | {{ai-output}}   |
-| Search                 | search      | {{search}}      |
+| Category                    | Label       | Reference       |
+|:----------------------------|:------------|:----------------|
+| Automated Processing        | bots        | {{bots}}        |
+| Foundation Model Production | train-ai    | {{train-ai}}    |
+| AI Output                   | ai-output   | {{ai-output}}   |
+| Search                      | search      | {{search}}      |
 {: #t-category-labels title="Mappings for Categories"}
 
 These tokens are case sensitive.
@@ -547,7 +553,7 @@ This means that duplicating a key could result in unexpected outcomes.
 For example, the following expresses no preferences:
 
 ~~~
-train-ai=y, train-ai="n", train-genai=n, train-genai, bots=n, bots=()
+train-ai=y, train-ai="n", search=n, search, bots=n, bots=()
 ~~~
 
 If the parsing of the Dictionary fails, no preferences are stated.
