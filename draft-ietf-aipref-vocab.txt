@@ -5,8 +5,8 @@
 AI Preferences                                                 P. Keller
 Internet-Draft                                               Open Future
 Intended status: Standards Track                         M. Thomson, Ed.
-Expires: 1 April 2026                                            Mozilla
-                                                       28 September 2025
+Expires: 1 May 2026                                              Mozilla
+                                                         28 October 2025
 
 
             A Vocabulary For Expressing AI Usage Preferences
@@ -51,7 +51,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 1 April 2026.
+   This Internet-Draft will expire on 1 May 2026.
 
 Copyright Notice
 
@@ -76,9 +76,9 @@ Table of Contents
      3.2.  Applicability and Effect
    4.  Vocabulary Definition
      4.1.  Automated Processing Category
-     4.2.  AI Training Category
-     4.3.  Generative AI Training Category
-     4.4.  Search Category
+     4.2.  Foundation Model Production Category
+     4.3.  AI Output
+     4.4.  Search
      4.5.  Vocabulary Extensions
    5.  Applying Statements of Preference
      5.1.  Combining Preferences
@@ -252,9 +252,9 @@ Table of Contents
       historical web collections.
 
    *  An educational institution might decide to ignore a preference
-      disallowing AI Training (Section 4.2) in order to enable scholars
-      to develop or use tools to facilitate scientific or other types of
-      research.
+      disallowing Foundation Model Production (Section 4.2) in order to
+      enable scholars to develop or use tools to facilitate scientific
+      or other types of research.
 
    *  A website that permits user uploads might decide to ignore a
       preference disallowing Automated Processing (Section 4.1) in order
@@ -271,29 +271,29 @@ Table of Contents
 
    Figure 1 shows the relationship between these categories:
 
-    .---------------------------------------------.
-   |                                               |
-   |             Automated Processing              |
-   |                                               |
-   |                                               |
-   |    .-----------------.      .------------.    |
-   |   |                   |    |              |   |
-   |   |                   |    |              |   |
-   |   |    AI Training    |    |    Search    |   |
-   |   |                   |    |              |   |
-   |   |                   |    |              |   |
-   |   |  .-------------.  |     '------------'    |
-   |   | |               | |                       |
-   |   | |  Generative   | |                       |
-   |   | |  AI Training  | |                       |
-   |   | |               | |                       |
-   |   |  '-------------'  |                       |
-   |   |                   |                       |
-   |    '-----------------'                        |
-   |                                               |
-    '---------------------------------------------'
+    .------------------------------------------------.
+   |                                                  |
+   |              Automated Processing                |
+   |                                                  |
+   |                                                  |
+   |    .----------------.      .----------------.    |
+   |   |                  |    |                  |   |
+   |   |                  |    |                  |   |
+   |   |    Foundation    |    |    AI Output     |   |
+   |   |      Model       |    |                  |   |
+   |   |    Production    |    |                  |   |
+   |   |                  |    |  .------------.  |   |
+   |   |                  |    | |              | |   |
+   |    '----------------'     | |    Search    | |   |
+   |                           | |              | |   |
+   |                           | |              | |   |
+   |                           |  '------------'  |   |
+   |                           |                  |   |
+   |                            '----------------'    |
+   |                                                  |
+    '------------------------------------------------'
 
-              Figure 1: Relationship Between Categories of Use
+             Figure 1: Relationsehip Betweeen Categories of Use
 
 4.1.  Automated Processing Category
 
@@ -304,44 +304,65 @@ Table of Contents
    The use of assets for automated processing encompasses all the
    subsequent categories.
 
-4.2.  AI Training Category
+4.2.  Foundation Model Production Category
 
-   The act of training machine learning models or artificial
-   intelligence (AI).
+   The act of using an asset to train or fine-tune a foundation model.
 
-   The use of assets for AI Training is a proper subset of Automated
+   Foundation models are large models that are produced using deep
+   learning or other machine learning techniques.  Foundation models are
+   trained on very large numbers of assets so that they can be applied
+   to a wide range of use cases.  Foundation models typically possess
+   generative capabilities in one or more media.
+
+   Fine-tuning can specialize a general-purpose foundation model for a
+   narrower set of use cases.
+
+   The use of assets for Foundation Model Production is a proper subset
+   of Automated Processing usage.
+
+4.3.  AI Output
+
+   The act of using an asset in an AI-based system to generate outputs
+   that are presented to clients of that system.
+
+   This does not apply to any assets that are directly provided as
+   inputs to the system by clients.  This does not include the
+   construction of the system, only its use.
+
+   This includes the output of search results.  This includes outputs
+   that are presented to human users and outputs that are presented to
+   automated clients.
+
+   The AI Output category of use includes whatever model training is
+   necessary to produce the models that are used in the generation of
+   these outputs.
+
+   The use of assets for AI Output is a proper subset of Automated
    Processing usage.
 
-4.3.  Generative AI Training Category
+4.4.  Search
 
-   The act of training general purpose AI models that have the capacity
-   to generate text, images or other forms of synthetic content, or the
-   act of training more specialized AI models that have the purpose of
-   generating text, images or other forms of synthetic content.
+   The Search category of use is a refinement of the AI Output category,
+   with the addition of the following two conditions:
 
-   The use of assets for Generative AI Training is a proper subset of AI
-   Training usage.
+   *  A reference to the location that the asset was obtained is
+      presented as part of the output.
 
-4.4.  Search Category
+   *  The asset can only be represented in the output with excerpts that
+      are drawn verbatim from it.
 
-   Using one or more assets in a search application that directs users
-   to the location from which the assets were retrieved.
+   If these conditions cannot be met, the asset then is not included in
+   the output.
 
-   Search applications can be complex and may serve multiple purposes.
-   Only those parts of applications that direct users to the location of
-   an asset are included in this category of use.  This includes the use
-   of titles or excerpts from assets that are used to help users select
-   between multiple candidate options.
+   With both these conditions, a preference to allow Search usage
+   enables the presentation of links and titles in what is considered
+   “traditional” search results.
 
-   Preferences for the Search category apply to those parts of
-   applications that provide search capabilities, regardless of what
-   other preferences are stated.
+   Like the AI Output category of use, Search includes whatever model
+   training is necessary to produce the models that are used in the
+   generation of these outputs.
 
-   Parts of applications that do not direct users to the location of
-   assets, such as summaries, are not covered by this category of use.
-
-   The use of assets for Search is a proper subset of Automated
-   Processing usage.
+   The use of assets for Search is a proper subset of AI Output usage.
 
 4.5.  Vocabulary Extensions
 
@@ -430,31 +451,31 @@ Table of Contents
    dictionary values correspond to explicit preferences, which can be
    either y or n; see Section 6.2.
 
-   For example, the following states a preference to allow AI training
-   (Section 4.2), disallow generative AI training (Section 4.3), and and
-   states no preference for other categories other than subsets of these
-   categories:
+   For example, the following states a preference to allow automated
+   processing (Section 4.1), disallow foundation model production
+   (Section 4.2), and and states no preference for other categories
+   other than subsets of these categories:
 
-   train-ai=y, train-genai=n
+   bots=y, train-ai=n
 
 6.1.  Usage Category Labels
 
    Each usage category in the vocabulary (Section 4) is mapped to a
    short textual label.  Table 1 tabulates this mapping.
 
-          +========================+=============+=============+
-          | Category               | Label       | Reference   |
-          +========================+=============+=============+
-          | Automated Processing   | bots        | Section 4.1 |
-          +------------------------+-------------+-------------+
-          | AI Training            | train-ai    | Section 4.2 |
-          +------------------------+-------------+-------------+
-          | Generative AI Training | train-genai | Section 4.3 |
-          +------------------------+-------------+-------------+
-          | Search                 | search      | Section 4.4 |
-          +------------------------+-------------+-------------+
+         +=============================+===========+=============+
+         | Category                    | Label     | Reference   |
+         +=============================+===========+=============+
+         | Automated Processing        | bots      | Section 4.1 |
+         +-----------------------------+-----------+-------------+
+         | Foundation Model Production | train-ai  | Section 4.2 |
+         +-----------------------------+-----------+-------------+
+         | AI Output                   | ai-output | Section 4.3 |
+         +-----------------------------+-----------+-------------+
+         | Search                      | search    | Section 4.4 |
+         +-----------------------------+-----------+-------------+
 
-                     Table 1: Mappings for Categories
+                      Table 1: Mappings for Categories
 
    These tokens are case sensitive.
 
@@ -538,7 +559,7 @@ Table of Contents
    could result in unexpected outcomes.  For example, the following
    expresses no preferences:
 
-   train-ai=y, train-ai="n", train-genai=n, train-genai, bots=n, bots=()
+   train-ai=y, train-ai="n", search=n, search, bots=n, bots=()
 
    If the parsing of the Dictionary fails, no preferences are stated.
    This includes where keys include uppercase characters, as this format
@@ -616,7 +637,7 @@ Table of Contents
 
    [ATTACH]   Illyes, G. and M. Thomson, Ed., "A Vocabulary For
               Expressing AI Usage Preferences", Work in Progress,
-              Internet-Draft, draft-ietf-aipref-attach, September 2025,
+              Internet-Draft, draft-ietf-aipref-attach, October 2025,
               <https://datatracker.ietf.org/doc/html/draft-ietf-aipref-
               attach>.
 
@@ -632,8 +653,11 @@ Acknowledgments
    *  Lila Bailey
    *  Cullen Miller
    *  Laurent Le Meur
+   *  Krishna Madhavan
+   *  Felix Reda
    *  Leonard Rosenthol
    *  Sebastian Posth
+   *  Erin Simon
    *  Timid Robot Zehta
 
 Authors' Addresses
