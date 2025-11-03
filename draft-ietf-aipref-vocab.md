@@ -305,11 +305,11 @@ that are presented to clients of that system.
 This does not apply to any assets
 that are directly provided as inputs
 to the system by clients.
-This does not include the construction of the system, only its use.
+This does not include the construction of the system, only its use. Those are covered in the previous section on model creation.
 
-This includes the output of search results.
-This includes outputs that are presented to human users
-and outputs that are presented to automated clients.
+This includes the output of indexting and search results as specific examples of derivative works.
+This includes outputs that are presented to human users in any format
+and outputs that are presented to other automated agents or clients.
 
 The AI Output category of use includes whatever model training is necessary
 to produce the models that are used
@@ -318,13 +318,29 @@ in the generation of these outputs.
 The use of assets for AI Output is a proper subset of Automated Processing usage.
 
 
-## Search {#search}
+## Derivatives {#derivatives}
 
-The Search category of use is a refinement of the AI Output category,
+An excerpt, a summary, a search entry, a site map-- these are all examples of new content that is generated based on original works.
+
+Like the AI Output category of use,
+Derivatives and subcategories indexing and search include whatever model training is necessary
+to produce the models that are used
+in the generation of these outputs.
+
+
+### Indexing and linking {#indexing}
+
+At minimum an indexed derivative work is inclusive of a reference to the location that the asset was obtained
+  is presented as part of the output.
+
+If this condition isn't met, the asset isn't included in the output.
+
+### Search {#search}
+
+The Search subcategory of use is a refinement of the AI Output category, similar to indexing but
 with the addition of the following two conditions:
 
-* A reference to the location that the asset was obtained
-  is presented as part of the output.
+* Results are based on metadata given by the website author to help search agents understand a website's content with explicit structure and technical performance information.
 
 * The asset can only be represented in the output
   with excerpts that are drawn verbatim from it.
@@ -336,14 +352,6 @@ With both these conditions,
 a preference to allow Search usage
 enables the presentation of links and titles
 in what is considered “traditional” search results.
-
-Like the AI Output category of use,
-Search includes whatever model training is necessary
-to produce the models that are used
-in the generation of these outputs.
-
-The use of assets for Search is a proper subset of AI Output usage.
-
 
 ## Vocabulary Extensions {#vocab-extension}
 
