@@ -59,7 +59,7 @@ informative:
 --- abstract
 
 This document defines a vocabulary for expressing preferences
-regarding how digital assets are used by automated processing systems.
+regarding how digital assets are used by AI processing systems.
 This vocabulary allows for the declaration
 of restrictions or permissions for use of digital assets by such systems.
 
@@ -69,7 +69,7 @@ of restrictions or permissions for use of digital assets by such systems.
 # Introduction
 
 This document defines a vocabulary of preferences
-regarding how automated systems process digital assets --
+regarding how AI systems process digital assets --
 in particular, the training and use of AI models.
 This vocabulary can be used to describe
 the types of uses that a declaring party may wish to 
@@ -137,12 +137,12 @@ Some categories describe a proper subset of the usages of other categories.
 A preference that is stated for the more general category applies
 if no preference is stated for the more specific category.
 
-For example, the Automated Processing category might be assigned a preference
+For example, the AI Processing category might be assigned a preference
 that allows the associated usage.
 In the absence of any statement of preference regarding the AI Training category,
-that usage would be also be allowed, as AI Training is a subset of the Automated Processing category.
+that usage would be also be allowed, as AI Training is a subset of the AI Processing category.
 In comparison, an explicit preference regarding AI Training might disallow that usage,
-while permitting other usage within the Automated Processing category.
+while permitting other usage within the AI Processing category.
 
 After processing a statement of preferences
 the recipient associates each category of use
@@ -194,7 +194,7 @@ and the applicable legal context.
 Parties might choose not to honor preferences they receive 
 on the basis of express agreements they have with other parties, 
 for legal compliance purposes, or for other reasons. 
-Historically, entities engaged in automated processing of digital
+Historically, entities engaged in AI processing of digital
 assets in support of safety, education, scholarship, research, 
 preservation, interoperability, accessibility, and other priorities 
 have needed to make such choices in response to existing preference 
@@ -211,7 +211,7 @@ This section defines the categories of use in the vocabulary.
 ~~~ aasvg
  .---------------------------------------------.
 |                                               |
-|             Automated Processing              |
+|                 AI Processing                 |
 |                                               |
 |                                               |
 |    .-----------------.      .------------.    |
@@ -234,20 +234,20 @@ This section defines the categories of use in the vocabulary.
 {: #f-categories title="Relationship Between Categories of Use"}
 
 
-## Automated Processing Category {#bots}
+## AI Processing Category {#all-ai}
 
 The act of using automated processing on one or more assets
 to analyze text and data in order to generate information
 which includes but is not limited to patterns, trends and correlations.
 
-The use of assets for automated processing encompasses all the subsequent categories.
+The use of assets for AI Processing encompasses all the subsequent categories.
 
 ## AI Training Category {#train-ai}
 
 The act of using one or more assets to produce or improve an artificial intelligence
 model.
 
-The use of assets for AI Training is a proper subset of Automated Processing usage.
+The use of assets for AI Training is a proper subset of AI Processing usage.
 
 ## Generative AI Training Category {#train-genai}
 
@@ -276,7 +276,7 @@ Parts of applications that do not direct users to the location of assets,
 such as summaries,
 are not covered by this category of use.
 
-The use of assets for Search is a proper subset of Automated Processing usage.
+The use of assets for Search is a proper subset of AI Processing usage.
 
 
 ## Vocabulary Extensions {#vocab-extension}
@@ -383,7 +383,7 @@ Each usage category in the vocabulary ({{vocab}}) is mapped to a short textual l
 
 | Category               | Label       | Reference       |
 |:-----------------------|:------------|:----------------|
-| Automated Processing   | bots        | {{bots}}        |
+| AI Processing          | all-ai      | {{all-ai}}      |
 | AI Training            | train-ai    | {{train-ai}}    |
 | Generative AI Training | train-genai | {{train-genai}} |
 | Search                 | search      | {{search}}      |
