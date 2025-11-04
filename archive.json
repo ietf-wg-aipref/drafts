@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-11-02T02:02:58.496725+00:00",
+  "timestamp": "2025-11-04T01:57:14.522691+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -1678,12 +1678,11 @@
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [
-        "location attachment",
-        "triage"
+        "location attachment"
       ],
       "body": "Currently the path part of `Content-Usage` is separate from the rest of the value, and thus requires MULTIPLE parsers to handle the value of content usage - one to split the string between path (if present), one to process the path (if present) according to an *undefined methodology* and then a structured fields parser for the prefs part.\n\nI would suggest that the entire value of `Content-Usage` be a proper structured field value enabling a single parser.  Doing so would mean a few extra bytes, such as `path=` or if we were trying to reduce byte count, then `p=`.\n",
       "createdAt": "2025-07-21T18:43:57Z",
-      "updatedAt": "2025-09-28T07:58:22Z",
+      "updatedAt": "2025-11-03T09:03:06Z",
       "closedAt": null,
       "comments": []
     },
@@ -2033,12 +2032,11 @@
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [
-        "vocabulary",
-        "triage"
+        "vocabulary"
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\n_Raised in [email by EKR](https://mailarchive.ietf.org/arch/msg/ai-control/dxpLCD7R2L-L07fEQCITjXjUcMY)_\n\nS 2.\n\n      Artificial Intelligence (AI):\n      An engineered system of sufficient complexity that, for a given\n      set of human-defined objectives, learns from data to generate\n      outputs such as content, predictions, recommendations, or\n      decisions.\n\nAs I mentioned previously, I think this definition of AI is extremely\nproblematic and would effectively sweep in any statistical\ntechnique. I understand that \"sufficient complexity\" is intended to\nsomehow reduce the scope, but it's a totally subjective standard.\n\n### Proposed Resolution\n\n_No response_",
       "createdAt": "2025-09-10T02:34:49Z",
-      "updatedAt": "2025-09-28T07:58:24Z",
+      "updatedAt": "2025-11-03T09:02:21Z",
       "closedAt": null,
       "comments": []
     },
@@ -2120,12 +2118,11 @@
       "assignees": [],
       "labels": [
         "vocabulary",
-        "triage",
         "pref: top-level"
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\n_Raised in [email by EKR](https://mailarchive.ietf.org/arch/msg/ai-control/dxpLCD7R2L-L07fEQCITjXjUcMY)_\n\nAs I and others have noted, \"automated processing\" essentially\nsweeps in any web crawler. In particular, as noted by Greg Lindahl,\nparsing the document to find links is plainly \"automated\nprocessing\", so you just can't really have a crawler without\n\"automated processing\", which makes this whole category redundant\nwith forbidding crawling in the existing robots.txt framework.\n\n\n### Proposed Resolution\n\n_No response_",
       "createdAt": "2025-09-10T02:42:04Z",
-      "updatedAt": "2025-09-28T08:56:40Z",
+      "updatedAt": "2025-11-04T01:46:24Z",
       "closedAt": null,
       "comments": [
         {
@@ -2155,6 +2152,27 @@
           "body": "_Also from @chrisn in [email](https://mailarchive.ietf.org/arch/msg/ai-control/2ZbEx73js_cTQT8mI1Wy6_0ZC_s):_\n\nThe scope, set out in the Abstract and Introduction, \"a vocabulary of preferences regarding how automated systems process digital assets\" seems overly broad. As a publisher the usage I'm most concerned about is processing in AI systems, and in particular generative AI. Introducing a scope for all automated systems risks unintended consequences for other uses that are unrelated to AI. So I suggest more clearly scoping the document to AI related usage.\n\nFollowing from the above, the Automated Processing Category defined in Section 4.1 should either be revised (the original Text and Data Mining was preferable, because it's more specific) or removed entirely.\n",
           "createdAt": "2025-09-28T08:56:27Z",
           "updatedAt": "2025-09-28T08:56:40Z"
+        },
+        {
+          "author": "paul2keller",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "I think for the time being @TimidRobot proposal to rename the category is the best proposal that we have seen (for renaming the category, and getting away from the badly chosen \"Automated processing\". @martinthomson I would suggest that me merge this into the current draft.  ",
+          "createdAt": "2025-11-03T10:57:26Z",
+          "updatedAt": "2025-11-03T10:57:26Z"
+        },
+        {
+          "author": "coopdanger",
+          "authorAssociation": "NONE",
+          "body": "@TimidRobot how would you define \"the act of using AI processing\"? At present the text is circular, it says AI processing is the act of using AI processing.",
+          "createdAt": "2025-11-03T11:56:49Z",
+          "updatedAt": "2025-11-03T11:58:28Z"
+        },
+        {
+          "author": "Jo-Levy",
+          "authorAssociation": "NONE",
+          "body": "@coopdanger and @TimidRobot as per my email comment, what would it look like if the top level category also started with \"The act of using an asset to\"  or \"The act of using an asset for....\"?  \n\nThe most straigthforward language would be to remove \"AI\" and \"processing\" so it reads:  \"The act of using an asset in an AI-based system or to train or fine-tune an AI-based system.\"\n \nThis would be extremely difficult to comply with short of not using the asset at all and, therefore, may have many unintended consequences, but at least for a logical starting point for discussion,  it is internally consistent.\n",
+          "createdAt": "2025-11-04T01:46:24Z",
+          "updatedAt": "2025-11-04T01:46:24Z"
         }
       ]
     },
@@ -2247,12 +2265,11 @@
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [
-        "vocabulary",
-        "triage"
+        "vocabulary"
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nPer thread on the list, there is still contention about the text in 3.2.\n\n\n### Proposed Resolution\n\n_Sourced from e-mail by [Alissa](https://mailarchive.ietf.org/arch/msg/ai-control/5vUslBkhFk-na7geaO_XFaWqc0c)_\n\n1. Getting rid of the normative MAY. I know this was discussed on the PR thread before the -03 was published. This whole section is in the realm of non-technical considerations and using a normative keyword muddies that.\n\n2.  Significantly paring back the text starting from \u201cUsage preferences can be ignored \u2026\u201d so that it provides less fodder for future debate about what was really intended here. I have a suggestion below that echoes back to Lila\u2019s original note about historic, widespread use of certain tools. I nixed \u201cfree expression\u201d from the list as it felt like the everything category, but I think including the other examples is helpfully illustrative.\n\n> Parties might choose not to honor preferences they receive on the basis of express agreements they have with other parties, for legal compliance purposes, or for other reasons. Historically, entities engaged in automated processing of digital assets in support of safety, education, scholarship, research, preservation, interoperability, accessibility, and other priorities have needed to make such choices in response to existing preference signaling mechanisms, and affected parties have had to grapple with the consequences. The preference statements described in this specification are no different.\n\n",
       "createdAt": "2025-09-13T03:25:53Z",
-      "updatedAt": "2025-09-28T09:00:57Z",
+      "updatedAt": "2025-11-03T08:58:49Z",
       "closedAt": null,
       "comments": [
         {
@@ -2301,12 +2318,11 @@
       "authorAssociation": "NONE",
       "assignees": [],
       "labels": [
-        "vocabulary",
-        "triage"
+        "vocabulary"
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nAs raised in 8/25 Jlevy comment and subsequent discussions, the language and terminology embedded throughouth is normatively charged and inaccurately attributes human intentions/emotions into this vocabulary, which by its nature is directed at computer programs or algorithms.   Throughout the Vocab document, the words \"respect\" and \"ignore\" should be changed to \"follow\" or \"not follow\" preference expresssions or intructions.   \n\n\n### Proposed Resolution\n\nSolution:  In 3.2, \n-change \"whether preferences are actually respected during data processing\"  to \"whether preferencdesare actually followed during data processing.\"\n - change \"An entity that receives usage preferences MAY choose to respect those preferences...\" to \"An entity that receives usage preferences MAY choose to follow those preferences.\n-change \"ignored\" to \"not followed\", \"ignoring\" to \"not following\" and \"ignore\" to \"not follow\" throughout 3.2",
       "createdAt": "2025-09-22T07:03:28Z",
-      "updatedAt": "2025-09-28T07:58:29Z",
+      "updatedAt": "2025-11-03T08:54:34Z",
       "closedAt": null,
       "comments": []
     },
@@ -2320,12 +2336,11 @@
       "authorAssociation": "NONE",
       "assignees": [],
       "labels": [
-        "vocabulary",
-        "triage"
+        "vocabulary"
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nThe term \"digital asset\" is used throughout the Vocab document.  It is confusing and misleading.  A \"digital asset\" generally and commonly refers to cryptocurrency. The United States Internal Revenue Service (IRS) defines it as \"any digital representation of value on a cryptographically secured, distributed ledger (blockchain) or similar technology.\"  See https://www.irs.gov/filing/digital-assets#description.  \n It's not a term used in robots.txt or the Attach documet which uses the term \"content\" and \"content-usage.\" A preferable term would be \"Digital Content.\"\n\n### Proposed Resolution\n\nReplace \"digital asset\" or \"digital assets\" with \"digital content.\" Replace \"asset\" with \"digital content.\" Replace \"one or more assets\" with \"digital content.\" There are 23 instances of the term asset or assets throughout the document.  By using \"digital content\" there is also no new for a definition of the term \"Digital Asset.\"",
       "createdAt": "2025-09-22T07:27:50Z",
-      "updatedAt": "2025-09-30T06:13:56Z",
+      "updatedAt": "2025-11-03T09:03:41Z",
       "closedAt": null,
       "comments": [
         {
@@ -2354,12 +2369,11 @@
       "authorAssociation": "NONE",
       "assignees": [],
       "labels": [
-        "vocabulary",
-        "triage"
+        "vocabulary"
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nSection 3.1 titled Conformance states that an implentation is conformant to the specifications if it correctly follows all normative requirements that apply to it.  This pertains to enforcement, which is out of scope for the Vocab and Attach document. It adds nothing to the Vocabulary or statement of preference. Solution: Delete 3.1 Conformance.\n\n### Proposed Resolution\n\nDelete Section 3.1 Conformance.",
       "createdAt": "2025-09-22T07:38:58Z",
-      "updatedAt": "2025-09-30T06:10:53Z",
+      "updatedAt": "2025-11-03T08:53:51Z",
       "closedAt": null,
       "comments": [
         {
@@ -2381,12 +2395,11 @@
       "authorAssociation": "NONE",
       "assignees": [],
       "labels": [
-        "location attachment",
-        "triage"
+        "location attachment"
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\n In the abstract,  the phrase \u201cContent creators and other stakeholders might wish to signal their preferences about how their content might be consumed by automated systems\u201d is confusing and does not accurately describe the scope. The preference is not about how  content is consumed from the website.  The preference is about how it is  used after it is accessed or consumed. Also, the phrase \"automated systems\" is overly broad, particularly since here it seems to refer to crawlers but later it seems to refer to AI systems that need to read the preferences after it is collected. This will lead to confusion.\n\nSuggestion:  change to \"about whether website content that is accessed orconsumed by crawlers may later be used to train or develop AI models.\"\n\n\n### Proposed Resolution\n\nSuggestion:  change to \"about whether website content that is accessed orconsumed by crawlers may later be used to train or develop AI mode",
       "createdAt": "2025-09-22T07:48:41Z",
-      "updatedAt": "2025-09-28T07:58:31Z",
+      "updatedAt": "2025-11-03T08:53:21Z",
       "closedAt": null,
       "comments": []
     },
@@ -2400,12 +2413,11 @@
       "authorAssociation": "NONE",
       "assignees": [],
       "labels": [
-        "location attachment",
-        "triage"
+        "location attachment"
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nBoth robots.txt and the Vocab document have language clarifying that the documents do not include enforcement mechanisms.  The Attach document is not. Propose adding  non-enforcement provision similar to Vocab document.\n\n### Proposed Resolution\n\nSuggest adding new Section with non-enforceability language: \n Non-Enforceability.   This specification is not enforceable.  An entity that receives content usage preferences MAY choose whether or not to follow the preferences.  Many factors may be considered in determining whether to follow a preference, including but not limited to  how the usage corresponds to the usage categories where preferences have been expressed, the type of content, the identity and authority of the Declarant to assert a preference over the specified content, the applicable legal context, or other considerations such as free expression, safety, education, scholarship, research, preservation, interoperability, and accessibility.\n",
       "createdAt": "2025-09-22T07:59:17Z",
-      "updatedAt": "2025-09-28T07:58:31Z",
+      "updatedAt": "2025-11-03T08:52:59Z",
       "closedAt": null,
       "comments": []
     },
@@ -2419,12 +2431,11 @@
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [
-        "vocabulary",
-        "triage"
+        "vocabulary"
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nI'm going to quote @coopdanger here, because her formulation of the issue is pretty good.  I will follow up with a nit on the details, but that doesn't diminish the value of the feedback:\n\n> This raises the question of whether the vocabulary is only meant to be used to express preferences about usage and not initial access regardless of the attachment mechanism. The very first sentence of the vocab doc uses the ambiguous term \u201cprocessing\u201d while most of the rest of the doc uses \u201cusage.\u201d If the intent is to define a vocabulary that only expresses preferences about an asset after the asset has been obtained (by whatever means), it needs an explicit scoping limitation to that effect. And then every attachment mechanism that gets defined in the IETF or elsewhere needs to reflect that.\n>\n> Making this distinction explicit might be a simple resolution to some of the concerns that have been raised about the automated processing category, because it would make clear that it\u2019s unnecessary to resolve the question of whether crawling/accessing a site is itself considered automated processing. No preferences are being expressed about access, other than insofar as sites would expect crawlers not to crawl their site if the site wishes to disallow all the uses of interest to the crawler. It would not resolve the concerns about behavior habituation and misinterpretation, though.\n>\n> Even with this distinction made explicit, there would still be the possibility of basically nonsensical use cases, e.g.:\n>\n> ```http\n> User-Agent: *\n> Content-Usage: /foo bots=n\n> ```\n> \n> Like what is the point of allowing crawling/access but then disallowing all usage? Maybe there is a use case I\u2019m missing.\n>\n> Note also that it may be entirely unrealistic to say that everywhere an attachment mechanism is specified, it has to preserve this distinction between access and usage. It\u2019s not like we can constrain mechanisms that get defined elsewhere.\n> \n> I\u2019ve never really been convinced of the need for the top-level category, but if we are going to have one we need to be clear about when it applies, and clarifying that it only applies after an asset has been obtained might help mitigate concerns about its breadth.\n\n### Proposed Resolution\n\nThere was some effort to make this distinction in editing, but it's clear that we need to be much clearer about it throughout.",
       "createdAt": "2025-09-23T03:45:57Z",
-      "updatedAt": "2025-09-28T07:58:31Z",
+      "updatedAt": "2025-11-03T08:51:51Z",
       "closedAt": null,
       "comments": [
         {
@@ -2589,12 +2600,11 @@
       "assignees": [],
       "labels": [
         "vocabulary",
-        "triage",
         "vocab: model"
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\n_From @chrisn in [email](https://mailarchive.ietf.org/arch/msg/ai-control/2ZbEx73js_cTQT8mI1Wy6_0ZC_s):_\n\nThe \"no preference\" terminology could be misinterpreted as meaning that a website or content provider does not mind how their content is used (i.e., they don't have a preference either way). This would not be a valid assumption to make. It would be much more accurate to state that the preference is unknown. I recommend that the document aligns on the \"allow\", \"disallow\", and \"unknown\" statuses described in Section 5. This affects various parts of the draft:\n\n* In Section 3, change \"This can mean that no preference is stated for a given usage category\" to \"This can mean that the preference for a given usage category is unknown\".\n\n* In Section 3.2, which says \"allow, disallow, or no preference\"\n\n* In Section 6, I suggest a rephrasing: \"For example, the following states a preference to allow AI training (Section 4.2), disallow generative AI training (Section 4.3). The preference for categories other than subsets of these categories is unknown.\" (This would also fix the repeated \"and\" and \"other\" in the existing text.)\n\n* In Section 6.5, \"Otherwise, no preference is stated for that category of use\" should be \"Otherwise, the preference for that category of use is unknown\".\n\n* In Section 6.6, \"A mapping might then define that no preference is associated with other categories\" should be \"A mapping might then define the preference associated with other categories is unknown.\"\n\n\n### Proposed Resolution\n\n_No response_",
       "createdAt": "2025-09-28T09:02:02Z",
-      "updatedAt": "2025-09-30T05:59:56Z",
+      "updatedAt": "2025-11-03T08:49:38Z",
       "closedAt": null,
       "comments": [
         {
@@ -2630,11 +2640,12 @@
       "authorAssociation": "NONE",
       "assignees": [],
       "labels": [
-        "triage"
+        "vocabulary",
+        "pref: top-level"
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nThis issue builds on concerns we raised earlier about the breadth and ambiguity of the automated processing category that we have previously [raised here](https://github.com/ietf-wg-aipref/drafts/issues/169). Despite prior feedback, the latest draft still retains language that conflates unrelated behaviors and lacks enforceable semantics. To summarize our prior concern: \n\nThe term \u201cAutomated Processing\u201d in the current draft is too broad and ambiguous, risking unintended inclusion of ordinary, essential web operations. This overreach could jeopardize legitimate and safe internet functions by restricting non-AI crawlers and foundational automation that keeps the web usable. One critical point to consider here is that existing mechanisms provided under [RFC 9309](https://www.rfc-editor.org/rfc/rfc9309.html) already provide a well understood and viable mechanism to address the scenarios for which this category is intended in the first place. \n\nOne additional observation to add is that we think that this term is not required and seems to have little support. The introduction of categories regarding training and outputs speaks to the crux of the concerns we hear from members of the working group and larger community. This begs the relevance of this \u201cuber\u201d category that may, as we indicate above, impact structural internet operations in ways that some do not anticipate.\n\n### Proposed Resolution\n\nRemove this high-level category completely. Given the edits already present in this draft, this category is largely unnecessary.",
       "createdAt": "2025-10-30T23:09:22Z",
-      "updatedAt": "2025-10-30T23:09:34Z",
+      "updatedAt": "2025-11-03T08:49:05Z",
       "closedAt": null,
       "comments": []
     },
@@ -2648,11 +2659,12 @@
       "authorAssociation": "NONE",
       "assignees": [],
       "labels": [
-        "triage"
+        "vocabulary",
+        "pref: training"
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nThe inclusion of \u201cfine-tune\u201d in the Foundation AI Model Production category (section 4.2 of draft version 4) is unnecessary and scientifically imprecise. Fine-tuning has a overly broad meaning dependent on context and is very hard to define. The term is ambiguous and context-dependent: in modern ML practice, fine-tuning can describe a wide range of techniques, from full parameter re-optimization to lightweight adapter or prompt-based adjustments, varying substantially by architecture and application. Treating it as a discrete category risks conflating routine adaptation with foundational training, creating ambiguity for implementers and misalignment with publisher intent.  \n\nImportantly, this terminology was never raised or discussed in prior WG deliberations, and its late unnecessary introduction expands scope without clear consensus or definitional precision. This is also apparent in the fact that fine-tuning is never defined in the document. \n\n### Proposed Resolution\n\nRemove the term fully and avoid confusion and ambiguity. Potentially rename the category as \u201cFoundational AI Model Training and models refined from them\u201d as \u201cThe act of using content to train large-scale, general-purpose generative AI models intended to enable broad capabilities, including the generation of text, images, and other synthetic content across diverse domains.\u201d",
       "createdAt": "2025-10-30T23:12:13Z",
-      "updatedAt": "2025-10-30T23:12:13Z",
+      "updatedAt": "2025-11-03T08:48:43Z",
       "closedAt": null,
       "comments": []
     },
@@ -2666,11 +2678,12 @@
       "authorAssociation": "NONE",
       "assignees": [],
       "labels": [
-        "triage"
+        "vocabulary",
+        "pref: search"
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nThe current nesting of the \u201cSearch\u201d category under \u201cAI Output\u201d introduces both conceptual and practical confusion. The argument we have repeatedly heard across the entire community seems to be that Search is a foundational web function that should remain clearly distinct from AI-generated outputs such as summaries, answers, or synthesized responses. The purpose of calling out \u201cSearch\u201d explicitly seems to be aimed at preserving this distinction. If there must be a separate Search category based on rough consensus (still under debate) \u2013 it should not be nested under AI Output. \n\nMore importantly, nesting Search under AI Output risks conflating these fundamentally different activities and could lead to user misunderstanding, where a publisher disables \u201cAI Output\u201d to restrict generative use but inadvertently also disables Search visibility. To maintain semantic clarity and prevent unintended consequences, \u201cSearch\u201d should be elevated as its own category, separate from AI Output. \n\n### Proposed Resolution\n\nSeparate Search into its own category independent of AI output.",
       "createdAt": "2025-10-30T23:14:44Z",
-      "updatedAt": "2025-10-30T23:14:44Z",
+      "updatedAt": "2025-11-03T08:48:21Z",
       "closedAt": null,
       "comments": []
     },
@@ -2684,11 +2697,12 @@
       "authorAssociation": "NONE",
       "assignees": [],
       "labels": [
-        "triage"
+        "vocabulary",
+        "pref: search"
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nThe current definition of the \u201cSearch\u201d category attempts to require that \u201cthe asset can only be represented in the output with excerpts that are drawn verbatim from it\u201d, but this conflicts with the well-established operational behavior of modern retrieval systems. Search results often feature generated or reworded snippets to give users relevant context, highlights, or support user intent.  Moreover, the definition appears to conflate \u201cSearch\u201d with the \u201cExact Text Match\u201d or \u201cmatch-text\u201d category defined in [A Vocabulary for Controlling Usage of Content Collected by Search and AI Crawlers](https://datatracker.ietf.org/doc/html/draft-madhavan-aipref-displaybasedpref-01) rather than treating search as a distinct paradigm of retrieval. This conflation risks imposing display constraints on indexing and retrieval workflows that are not aligned with real-world practice. The vocabulary should reflect the intent to allow retrieval and access (for search) without prescribing how snippets or excerpts must be generated or displayed.\n\n### Proposed Resolution\n\nRemove the text regarding verbatim match completely and add the exact output match category as a sub-category to search. Additionally, we strongly recommend further work to iron out the definition for the search category itself given that existing options such as \u201cnoindex\u201d exist and are widely adopted to completely opt out of search.",
       "createdAt": "2025-10-30T23:16:53Z",
-      "updatedAt": "2025-10-30T23:16:53Z",
+      "updatedAt": "2025-11-03T08:47:10Z",
       "closedAt": null,
       "comments": []
     },
@@ -2702,11 +2716,29 @@
       "authorAssociation": "NONE",
       "assignees": [],
       "labels": [
-        "triage"
+        "vocabulary"
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nThe draft repeatedly uses the term \u201cclient\u201d in describing how content access and preference signaling occur. However, the term is ambiguous in this context. In standard web architecture, \u201cclient\u201d can mean a wide range of entities \u2013 browsers, intermediaries, SDKs, or even subcomponents of larger systems. Within this specification, the word could inadvertently be interpreted as referring to the internal workings of AI systems or proprietary business secrets, rather than the end user. \n\nThis ambiguity creates two key risks: \n\n1. **Interpretive confusion** \u2013 implementers may misread \u201cclient\u201d as implying insight into internal system design rather than describing an external access actor. \n2. **Unintended disclosure ris**k \u2013 references to \u201cclients\u201d could be construed as exposing or requiring disclosure of proprietary AI or service internals that are outside the scope of the draft. \n\nIn addition, the usage of the term \u201cclient\u201d is inconsistent with the working group\u2019s pivot toward output-based preferences, which focus on the representation and use of content in outputs rather than on the mechanisms or actors that perform access. Retaining \u201cclient\u201d therefore risks re-anchoring the draft in the previous model that the group has intentionally evolved beyond. \n\n### Proposed Resolution\n\nReplace \u201cclient\u201d with a more neutral term such as \u201cuser\u201d, which accurately captures the entity initiating access without implying any internal architecture.",
       "createdAt": "2025-10-30T23:19:10Z",
-      "updatedAt": "2025-10-30T23:19:10Z",
+      "updatedAt": "2025-11-03T08:47:53Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 183,
+      "id": "I_kwDOOWk1-s7Vff9Z",
+      "title": "Quantified thresholds in definition of Foundation Model Production are ambiguous",
+      "url": "https://github.com/ietf-wg-aipref/drafts/issues/183",
+      "state": "OPEN",
+      "author": "coopdanger",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [
+        "triage"
+      ],
+      "body": "### Confirmation\n\n- [x] I have reviewed our [existing issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nThe new definition of Foundation Model Production says:\n\n> Foundation models are large models that are produced using deep learning or other machine learning techniques. Foundation models are trained on very large numbers of assets so that they can be applied to a wide range of use cases. Foundation models typically possess generative capabilities in one or more media.\n\nHow large is \"large\"? How large is \"very large numbers of assets\"?\n\n### Proposed Resolution\n\n_No response_",
+      "createdAt": "2025-11-03T12:14:55Z",
+      "updatedAt": "2025-11-03T12:14:55Z",
       "closedAt": null,
       "comments": []
     }
@@ -8234,6 +8266,32 @@
       "mergeCommit": {
         "oid": "8a75b7389d5cc9cc06bac968ed63dd26d1b9e9e9"
       },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 184,
+      "id": "PR_kwDOOWk1-s6xTBkO",
+      "title": "indexing and derivative works",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/184",
+      "state": "OPEN",
+      "author": "mallory",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "Updated sections on AI Output and Search categories to clarify derivative works and indexing requirements as per my comments on the mic today.",
+      "createdAt": "2025-11-03T23:57:05Z",
+      "updatedAt": "2025-11-03T23:57:06Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "8a75b7389d5cc9cc06bac968ed63dd26d1b9e9e9",
+      "headRepository": "mallory/drafts",
+      "headRefName": "patch-1",
+      "headRefOid": "097b6331d3a73915e85018cc6cc653e1c39027e9",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
       "comments": [],
       "reviews": []
     }
