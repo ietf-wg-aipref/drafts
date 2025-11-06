@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-11-04T01:57:14.522691+00:00",
+  "timestamp": "2025-11-06T01:58:37.689715+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -2122,7 +2122,7 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\n_Raised in [email by EKR](https://mailarchive.ietf.org/arch/msg/ai-control/dxpLCD7R2L-L07fEQCITjXjUcMY)_\n\nAs I and others have noted, \"automated processing\" essentially\nsweeps in any web crawler. In particular, as noted by Greg Lindahl,\nparsing the document to find links is plainly \"automated\nprocessing\", so you just can't really have a crawler without\n\"automated processing\", which makes this whole category redundant\nwith forbidding crawling in the existing robots.txt framework.\n\n\n### Proposed Resolution\n\n_No response_",
       "createdAt": "2025-09-10T02:42:04Z",
-      "updatedAt": "2025-11-04T01:46:24Z",
+      "updatedAt": "2025-11-04T14:54:04Z",
       "closedAt": null,
       "comments": [
         {
@@ -2173,6 +2173,20 @@
           "body": "@coopdanger and @TimidRobot as per my email comment, what would it look like if the top level category also started with \"The act of using an asset to\"  or \"The act of using an asset for....\"?  \n\nThe most straigthforward language would be to remove \"AI\" and \"processing\" so it reads:  \"The act of using an asset in an AI-based system or to train or fine-tune an AI-based system.\"\n \nThis would be extremely difficult to comply with short of not using the asset at all and, therefore, may have many unintended consequences, but at least for a logical starting point for discussion,  it is internally consistent.\n",
           "createdAt": "2025-11-04T01:46:24Z",
           "updatedAt": "2025-11-04T01:46:24Z"
+        },
+        {
+          "author": "TimidRobot",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "> [@TimidRobot](https://github.com/TimidRobot) how would you define \"the act of using AI processing\"? At present the text is circular, it says AI processing is the act of using AI processing.\n\n@coopdange\n\n\"AI\" is defined in [section 2](https://www.ietf.org/archive/id/draft-ietf-aipref-vocab-04.html#section-2). I believe the use of \"processing\" is standard. Additionally, I think the rest of the sentence adds some clarity. Also see:\n- #151\n\nAlso, while the proposed definition might benefit from improvement, in this regard it is no worse than the original text.",
+          "createdAt": "2025-11-04T14:40:04Z",
+          "updatedAt": "2025-11-04T14:41:36Z"
+        },
+        {
+          "author": "coopdanger",
+          "authorAssociation": "NONE",
+          "body": "@Jo-Levy wrote:\n\n> The most straigthforward language would be to remove \"AI\" and \"processing\" so it reads: \"The act of using an asset in an AI-based system or to train or fine-tune an AI-based system.\"\n> \n> This would be extremely difficult to comply with short of not using the asset at all and, therefore, may have many unintended consequences, but at least for a logical starting point for discussion, it is internally consistent.\n\nI would make this even simpler and broader. I think the intent of this category is not meant to be limited to training and fine-tuning. Plus fine-tuning is not a defined term in the spec and is likely to be hard to define. Suggestion:\n\n\"The act of using an asset in an AI system.\"",
+          "createdAt": "2025-11-04T14:54:04Z",
+          "updatedAt": "2025-11-04T14:54:04Z"
         }
       ]
     },
@@ -2720,9 +2734,17 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nThe draft repeatedly uses the term \u201cclient\u201d in describing how content access and preference signaling occur. However, the term is ambiguous in this context. In standard web architecture, \u201cclient\u201d can mean a wide range of entities \u2013 browsers, intermediaries, SDKs, or even subcomponents of larger systems. Within this specification, the word could inadvertently be interpreted as referring to the internal workings of AI systems or proprietary business secrets, rather than the end user. \n\nThis ambiguity creates two key risks: \n\n1. **Interpretive confusion** \u2013 implementers may misread \u201cclient\u201d as implying insight into internal system design rather than describing an external access actor. \n2. **Unintended disclosure ris**k \u2013 references to \u201cclients\u201d could be construed as exposing or requiring disclosure of proprietary AI or service internals that are outside the scope of the draft. \n\nIn addition, the usage of the term \u201cclient\u201d is inconsistent with the working group\u2019s pivot toward output-based preferences, which focus on the representation and use of content in outputs rather than on the mechanisms or actors that perform access. Retaining \u201cclient\u201d therefore risks re-anchoring the draft in the previous model that the group has intentionally evolved beyond. \n\n### Proposed Resolution\n\nReplace \u201cclient\u201d with a more neutral term such as \u201cuser\u201d, which accurately captures the entity initiating access without implying any internal architecture.",
       "createdAt": "2025-10-30T23:19:10Z",
-      "updatedAt": "2025-11-03T08:47:53Z",
+      "updatedAt": "2025-11-05T20:37:37Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "erinsimon",
+          "authorAssociation": "NONE",
+          "body": "Agreed with this issue.  Extending the \"output\" category to clients of a system brings internal and intermediate processes back in scope of something that was intended to scope them out.  \n\nI understand from in-person conversations that the concern is that intermediate steps in a multistep process might be operated by different organizations, and there is a desire not to allow preferences to get lost along the chain of operations on its way to an end-user.  I think there's a simpler way to do that, like for example to have a single sentence that these preferences apply at the user-facing step, and prior steps must ensure that the preference is communicated through the entire chain.",
+          "createdAt": "2025-11-05T20:37:37Z",
+          "updatedAt": "2025-11-05T20:37:37Z"
+        }
+      ]
     },
     {
       "number": 183,
@@ -2738,9 +2760,17 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nThe new definition of Foundation Model Production says:\n\n> Foundation models are large models that are produced using deep learning or other machine learning techniques. Foundation models are trained on very large numbers of assets so that they can be applied to a wide range of use cases. Foundation models typically possess generative capabilities in one or more media.\n\nHow large is \"large\"? How large is \"very large numbers of assets\"?\n\n### Proposed Resolution\n\n_No response_",
       "createdAt": "2025-11-03T12:14:55Z",
-      "updatedAt": "2025-11-03T12:14:55Z",
+      "updatedAt": "2025-11-04T16:30:37Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "In [the pull request where this was added](https://github.com/ietf-wg-aipref/drafts/pull/177), I said this:\n\n> Some definitions make a point of including a measure of model size. US legislation says \"tens of billions of parameters\"; others suggest a firmer one billion parameter threshold. Here, most definitions don't bother, except to note that the model is \"large\" and trained on lots of data. Not being concrete seems like it will be safest.",
+          "createdAt": "2025-11-04T16:30:37Z",
+          "updatedAt": "2025-11-04T16:30:37Z"
+        }
+      ]
     }
   ],
   "pulls": [
