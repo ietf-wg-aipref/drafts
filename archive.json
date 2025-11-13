@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-11-06T01:58:37.689715+00:00",
+  "timestamp": "2025-11-13T02:00:29.332058+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -2122,7 +2122,7 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\n_Raised in [email by EKR](https://mailarchive.ietf.org/arch/msg/ai-control/dxpLCD7R2L-L07fEQCITjXjUcMY)_\n\nAs I and others have noted, \"automated processing\" essentially\nsweeps in any web crawler. In particular, as noted by Greg Lindahl,\nparsing the document to find links is plainly \"automated\nprocessing\", so you just can't really have a crawler without\n\"automated processing\", which makes this whole category redundant\nwith forbidding crawling in the existing robots.txt framework.\n\n\n### Proposed Resolution\n\n_No response_",
       "createdAt": "2025-09-10T02:42:04Z",
-      "updatedAt": "2025-11-04T14:54:04Z",
+      "updatedAt": "2025-11-12T10:52:13Z",
       "closedAt": null,
       "comments": [
         {
@@ -2187,6 +2187,13 @@
           "body": "@Jo-Levy wrote:\n\n> The most straigthforward language would be to remove \"AI\" and \"processing\" so it reads: \"The act of using an asset in an AI-based system or to train or fine-tune an AI-based system.\"\n> \n> This would be extremely difficult to comply with short of not using the asset at all and, therefore, may have many unintended consequences, but at least for a logical starting point for discussion, it is internally consistent.\n\nI would make this even simpler and broader. I think the intent of this category is not meant to be limited to training and fine-tuning. Plus fine-tuning is not a defined term in the spec and is likely to be hard to define. Suggestion:\n\n\"The act of using an asset in an AI system.\"",
           "createdAt": "2025-11-04T14:54:04Z",
           "updatedAt": "2025-11-04T14:54:04Z"
+        },
+        {
+          "author": "TimidRobot",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "## Mistakes are my own\n\nI have paraphrased @martinthomson a couple of times below. Please assume any fault is my own.\n\n## Pros and cons of a top level category\n\nThe following table is from a a whiteboard (Zurich meeting?). I think it is prudent to reproduce it here in this issue:\n\n| For top-level | Against top-level |\n| --- | --- |\n| <ul><li>Valid to express demand</li><li>Known / unknown / rapid change</li><li>Complete vocabulary</li><li>Alignment w/ regulation</li><li>Suits opt-in / optional</li><li>Promotes market</li><li>Ease of use</li><li>Vocabulary portability</li></ul> | <ul><li>Unintended consequences</li><li>Inhibits innovation</li><li>Misalignment w/ regulation</li><li>Bleed into non-A.I.</li><li>Inconsistent understanding</li><li>Charter impact</li><li>Definitional impossibility</li><li>Learning sharp tools</li></ul> |\n\n## Robots: Automated crawling\n\nFirst, I think it's worth noting the scope of [1. Introduction - RFC 9309: Robots Exclusion Protocol](https://www.rfc-editor.org/rfc/rfc9309.html#name-introduction):\n> Crawlers are automated clients. Search engines, for instance, have crawlers to recursively traverse links for indexing as defined in [[RFC8288](https://www.rfc-editor.org/rfc/rfc9309.html#RFC8288)].\n\nIf we were going to keep this category, more or less as-is, it might be better to replace \"Automated processing\" with Automated clients\".\n\n## \"Automated\" is important, but insufficient\n\n@martinthomson clarified during IETF 124 Montreal, that the \"Automated\" in \"Automated processing\" was, perhaps, misunderstood. (I know that I was laboring under a misunderstanding.) \"Automated\" already excludes many of the concerns that have been raised by this category (negatively impacting pro-social behavior such as browser accessibility, translation, etc.). However, additional concerns remain (negatively impacting pro-social behavior such as archiving, research, etc.). This clarification does not resolve the concerns listed above or in:\n- #169\n- #178\n\n## Blocking on thresholds\n\nDuring  IETF 124 Montreal @martinthomson also put forward the idea of further limiting the top level category by describing its relationship with humans. I think this idea holds promise, but it also raises the issue of quantified thresholds in defining that relationship and the tension between \"automation\" and \"inference\". Until we better define how the entire vocabulary will (or won't) handle inference, we can't (we mustn't) define a top level category.\n\n## Support current removal of category\n\n@mnot wrote in [[ai-control] Status of the Vocabulary Terms](https://mailarchive.ietf.org/arch/msg/ai-control/AM7lHX2TqoWGS_E0ieP_jh1t6Ic/):\n> However, based upon discussion both in the room and on the mailing list, it's become clear that the AI Output and Automated Processing categories are still very contentious. The language for defining them is unlikely to be suitable for a call for consensus without a complete overhaul.\n>\n> As a result, the chairs believe that their presence in the editors' drafts has become a distraction from discussions that might lead us in more fruitful directions. So, we will be instructing the editors to remove them from the next set of drafts. This is not a declaration that there is consensus to omit them from the documents. We encourage participants to make proposals for language in these areas that they believe will be able to achieve consensus.\n\nI think this is a prudent decision because:\n1. I don't think the top level category currently passes a cost/benefit analysis due to the costs defined above (and the linked issues)\n2. I think the top level category has already been in conflict with categories previously in the draft and will continue to be problematic until we resolve how the entire vocabulary will (or won't) handle inference\n\n## Worthwhile utility\n\nI hope that continued work will allow us to define a top level category in the future that has mitigated the most significant concerns while preserving its utility.\n ",
+          "createdAt": "2025-11-12T10:52:13Z",
+          "updatedAt": "2025-11-12T10:52:13Z"
         }
       ]
     },
@@ -2496,9 +2503,17 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nThe current definition of \u201cautomated processing\u201d is broad and ambiguous, encompassing routine functions like exporting to PDF, printing, or viewing content in a browser. As noted by Greg in the working group, even basic link extraction could fall under this category, potentially rendering all crawlers\u2014including non-AI ones\u2014inoperable. \n\nWe\u2019re concerned this framing could unintentionally undermine essential Internet functions such as content moderation, spam filtering, and accessibility features. While we recognize these outcomes are not the intent, the risk remains that critical functionality may be impaired, user expectations misaligned, and implementers exposed to complaints\u2014especially in regulated contexts. \n\nIt\u2019s also worth noting that existing mechanisms already allow publishers to signal bot access preferences. If there are concerns about their adoption or effectiveness, that may be a more productive area for discussion\u2014one we haven\u2019t yet seen raised in this group. \n\n### Proposed Resolution\n\nRemove the automated processing category. We believe that the Automated Processing category is too broad and vague and will lead to a less safe and open  and open Internet in the long run.",
       "createdAt": "2025-09-26T20:24:04Z",
-      "updatedAt": "2025-09-28T08:08:32Z",
+      "updatedAt": "2025-11-12T10:29:03Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "TimidRobot",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "This appears to be a duplicate of:\n- #155\n\n",
+          "createdAt": "2025-11-12T10:29:03Z",
+          "updatedAt": "2025-11-12T10:29:03Z"
+        }
+      ]
     },
     {
       "number": 170,
@@ -2659,9 +2674,17 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nThis issue builds on concerns we raised earlier about the breadth and ambiguity of the automated processing category that we have previously [raised here](https://github.com/ietf-wg-aipref/drafts/issues/169). Despite prior feedback, the latest draft still retains language that conflates unrelated behaviors and lacks enforceable semantics. To summarize our prior concern: \n\nThe term \u201cAutomated Processing\u201d in the current draft is too broad and ambiguous, risking unintended inclusion of ordinary, essential web operations. This overreach could jeopardize legitimate and safe internet functions by restricting non-AI crawlers and foundational automation that keeps the web usable. One critical point to consider here is that existing mechanisms provided under [RFC 9309](https://www.rfc-editor.org/rfc/rfc9309.html) already provide a well understood and viable mechanism to address the scenarios for which this category is intended in the first place. \n\nOne additional observation to add is that we think that this term is not required and seems to have little support. The introduction of categories regarding training and outputs speaks to the crux of the concerns we hear from members of the working group and larger community. This begs the relevance of this \u201cuber\u201d category that may, as we indicate above, impact structural internet operations in ways that some do not anticipate.\n\n### Proposed Resolution\n\nRemove this high-level category completely. Given the edits already present in this draft, this category is largely unnecessary.",
       "createdAt": "2025-10-30T23:09:22Z",
-      "updatedAt": "2025-11-03T08:49:05Z",
+      "updatedAt": "2025-11-12T10:29:08Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "TimidRobot",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "This appears to be a duplicate of:\n- #155",
+          "createdAt": "2025-11-12T10:29:08Z",
+          "updatedAt": "2025-11-12T10:29:08Z"
+        }
+      ]
     },
     {
       "number": 179,
