@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-11-13T02:00:29.332058+00:00",
+  "timestamp": "2025-11-16T02:05:02.190158+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -2794,6 +2794,24 @@
           "updatedAt": "2025-11-04T16:30:37Z"
         }
       ]
+    },
+    {
+      "number": 185,
+      "id": "I_kwDOOWk1-s7YNJma",
+      "title": "Search Category references AI Output category, which we agree so far does not have consensus",
+      "url": "https://github.com/ietf-wg-aipref/drafts/issues/185",
+      "state": "OPEN",
+      "author": "joncaldon",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [
+        "triage"
+      ],
+      "body": "### Confirmation\n\n- [x] I have reviewed our [existing issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nIf we're not going to have an AI Output category, then the Search category (which may need other work, of course) should be purged of references to AI Output, and should be crafted to stand on its own.\n\nSee:\n\u201cThe Search category of use is a refinement of the AI Output category, with the addition of the following two conditions\u2026\u201d\n\u201cLike the AI Output category of use, Search includes whatever model training is necessary to produce the models that are used in the   generation of these outputs.\u201d\n\u201cThe use of assets for Search is a proper subset of AI Output usage.\u201d\n\nAcknowledge this is still pending alternative proposals for language for the AI Output category. \n\n\n### Proposed Resolution\n\n_No response_",
+      "createdAt": "2025-11-14T22:03:01Z",
+      "updatedAt": "2025-11-14T22:03:01Z",
+      "closedAt": null,
+      "comments": []
     }
   ],
   "pulls": [
