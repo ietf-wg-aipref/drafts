@@ -143,12 +143,15 @@ Some categories describe a proper subset of the usages of other categories.
 A preference that is stated for the more general category applies
 if no preference is stated for the more specific category.
 
-For example, the Automated Processing category might be assigned a preference that allows the associated usage.
-In the absence of any statement of preference regarding the AI Training category,
-that usage would be also be allowed,
-as AI Training is a subset of the Automated Processing category.
-In comparison, an explicit preference regarding AI Training might disallow that usage,
-while permitting other usage within the Automated Processing category.
+For example, a more general category might be assigned a preference
+that allows the associated usage.
+In the absence of any statement of preference
+regarding categories that are more specific subsets of that usage category,
+usage within those categories would be also be allowed.
+An explicit preference regarding the more specific usage category
+can be used to disallow the more specific usage,
+while indicating that other usage within the more general category
+is permissible.
 
 After processing a statement of preferences
 the recipient associates each category of use
@@ -213,22 +216,18 @@ in a particular situation:
 * People with accessibility needs,
   or organizations working on their behalf,
   might decide to ignore a preference
-  disallowing Automated Processing ({{bots}})
   in order to access automated captions
   or generate accessible formats.
 
 * A cultural heritage organization might decide to ignore a preference
-  disallowing Automated Processing ({{bots}})
   in order to provide more useful, reliable, or discoverable access
   to historical web collections.
 
 * An educational institution might decide to ignore a preference
-  disallowing Foundation Model Production ({{train-ai}})
   in order to enable scholars to develop or use tools
   to facilitate scientific or other types of research.
 
 * A website that permits user uploads might decide to ignore a preference
-  disallowing Automated Processing ({{bots}})
   in order to develop or use tools that detect harmful content
   according to established terms of use.
 
@@ -240,42 +239,6 @@ depending upon how a given legal jurisdiction recognizes preferences.
 # Vocabulary Definition {#vocab}
 
 This section defines the categories of use in the vocabulary.
-
-{{f-categories}} shows the relationship between these categories:
-
-~~~ aasvg
- .------------------------------------------------.
-|                                                  |
-|              Automated Processing                |
-|                                                  |
-|                                                  |
-|    .----------------.      .----------------.    |
-|   |                  |    |                  |   |
-|   |                  |    |                  |   |
-|   |    Foundation    |    |    AI Output     |   |
-|   |      Model       |    |                  |   |
-|   |    Production    |    |                  |   |
-|   |                  |    |  .------------.  |   |
-|   |                  |    | |              | |   |
-|    '----------------'     | |    Search    | |   |
-|                           | |              | |   |
-|                           | |              | |   |
-|                           |  '------------'  |   |
-|                           |                  |   |
-|                            '----------------'    |
-|                                                  |
- '------------------------------------------------'
-~~~~
-{: #f-categories title="Relationsehip Betweeen Categories of Use"}
-
-
-## Automated Processing Category {#bots}
-
-The act of using automated processing on one or more assets
-to analyze text and data in order to generate information
-which includes but is not limited to patterns, trends and correlations.
-
-The use of assets for automated processing encompasses all the subsequent categories.
 
 
 ## Foundation Model Production Category {#train-ai}
@@ -292,36 +255,15 @@ in one or more media.
 Fine-tuning can specialize a general-purpose foundation model
 for a narrower set of use cases.
 
-The use of assets for Foundation Model Production
-is a proper subset of Automated Processing usage.
-
-
-## AI Output {#ai-output}
-
-The act of using an asset in an AI-based system
-to generate outputs
-that are presented to clients of that system.
-
-This does not apply to any assets
-that are directly provided as inputs
-to the system by clients.
-This does not include the construction of the system, only its use.
-
-This includes the output of search results.
-This includes outputs that are presented to human users
-and outputs that are presented to automated clients.
-
-The AI Output category of use includes whatever model training is necessary
-to produce the models that are used
-in the generation of these outputs.
-
-The use of assets for AI Output is a proper subset of Automated Processing usage.
-
 
 ## Search {#search}
 
-The Search category of use is a refinement of the AI Output category,
-with the addition of the following two conditions:
+Using one or more assets in a search application
+that directs users to the location from which the assets were retrieved.
+
+The presentation of any asset
+that is included in search output
+includes the following conditions:
 
 * A reference to the location that the asset was obtained
   is presented as part of the output.
@@ -329,20 +271,19 @@ with the addition of the following two conditions:
 * The asset can only be represented in the output
   with excerpts that are drawn verbatim from it.
 
-If these conditions cannot be met,
-the asset then is not included in the output.
+An asset can be used in ranking,
+but not present in output.
+
+Internal processing of assets
+to perform ranking and presentation
+can include the use and training of AI models.
+This only includes any training that is necessary
+to produce models used in the search application.
 
 With both these conditions,
 a preference to allow Search usage
 enables the presentation of links and titles
-in what is considered “traditional” search results.
-
-Like the AI Output category of use,
-Search includes whatever model training is necessary
-to produce the models that are used
-in the generation of these outputs.
-
-The use of assets for Search is a proper subset of AI Output usage.
+in what is considered "traditional" search results.
 
 
 ## Vocabulary Extensions {#vocab-extension}
@@ -422,7 +363,8 @@ might receive more specific instructions in two ways:
 * Contractual agreements or other specific arrangements might override
   statements of preference.
 
-For instance, a statement of preferences might indicate that the use of an asset is disallowed for AI Training.
+For instance, a statement of preferences might indicate a preference
+to disallow a category of use for an asset.
 If arrangements, such as legal agreements, exist that explicitly permit the use of that asset,
 those arrangements likely apply despite the existence of machine-readable statements of preference,
 unless the terms of the arrangement explicitly say otherwise.
@@ -438,13 +380,14 @@ The dictionary keys correspond to usage categories
 and the dictionary values correspond to explicit preferences,
 which can be either `y` or `n`; see {{y-or-n}}.
 
-For example, the following states a preference to allow automated processing ({{bots}}),
-disallow foundation model production ({{train-ai}}), and
+For example, the following states a preference
+to allow foundation model production ({{train-ai}}),
+disallow search ({{search}}), and
 and states no preference for other categories
 other than subsets of these categories:
 
 ~~~
-bots=y, train-ai=n
+train-ai=y, search=n
 ~~~
 
 
@@ -455,9 +398,7 @@ Each usage category in the vocabulary ({{vocab}}) is mapped to a short textual l
 
 | Category                    | Label       | Reference       |
 |:----------------------------|:------------|:----------------|
-| Automated Processing        | bots        | {{bots}}        |
 | Foundation Model Production | train-ai    | {{train-ai}}    |
-| AI Output                   | ai-output   | {{ai-output}}   |
 | Search                      | search      | {{search}}      |
 {: #t-category-labels title="Mappings for Categories"}
 
