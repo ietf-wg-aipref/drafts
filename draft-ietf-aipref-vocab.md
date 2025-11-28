@@ -494,7 +494,7 @@ This means that duplicating a key could result in unexpected outcomes.
 For example, the following expresses no preferences:
 
 ~~~
-train-ai=y, train-ai="n", search=n, search, bots=n, bots=()
+train-ai=y, train-ai="n", search=n, search
 ~~~
 
 If the parsing of the Dictionary fails, no preferences are stated.
