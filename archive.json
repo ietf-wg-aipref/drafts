@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-11-25T01:59:46.470027+00:00",
+  "timestamp": "2025-11-30T02:11:34.166243+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -8412,19 +8412,33 @@
       "labels": [],
       "body": "This is about as small a change as I could manage.  With the removal of any concrete examples regarding subsets and supersets, some of the text had to be updated to be more generic.\r\n\r\nIf we commit to something that doesn't have groupings like this, we'll want to do that.  Because the state of things is still in flux, and because it is less disruptive, I'm going to recommend that we stick with the remnants of nesting for now.",
       "createdAt": "2025-11-18T07:05:08Z",
-      "updatedAt": "2025-11-18T07:05:08Z",
+      "updatedAt": "2025-11-28T00:51:16Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "28e38796f3254410337198c99aebd578a68a4155",
       "headRepository": "ietf-wg-aipref/drafts",
       "headRefName": "remove-bots-output",
-      "headRefOid": "acbc9b7c9334114e378d292b8bfacfa39523ebe4",
+      "headRefOid": "75443383587639ced080883e6f29349241657ad3",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
       "mergeCommit": null,
       "comments": [],
-      "reviews": []
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWk1-s7RdZZw",
+          "commit": {
+            "abbreviatedOid": "acbc9b7"
+          },
+          "author": "paul2keller",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "@martinthomson there is still a reference to the old automated processing category in line 556/497:\r\n\r\ntrain-ai=y, train-ai=\"n\", search=n, search, bots=n, bots=()\r\n\r\n",
+          "createdAt": "2025-11-27T09:01:46Z",
+          "updatedAt": "2025-11-27T09:01:46Z",
+          "comments": []
+        }
+      ]
     }
   ]
 }
