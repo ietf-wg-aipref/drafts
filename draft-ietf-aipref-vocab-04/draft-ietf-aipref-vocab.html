@@ -1179,13 +1179,19 @@ of restrictions or permissions for use of digital assets by such systems.<a href
             <p id="section-toc.1-1.4.1"><a href="#section-4" class="auto internal xref">4</a>.  <a href="#name-vocabulary-definition" class="internal xref">Vocabulary Definition</a></p>
 <ul class="compact toc ulBare ulEmpty">
 <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4.2.1">
-                <p id="section-toc.1-1.4.2.1.1"><a href="#section-4.1" class="auto internal xref">4.1</a>.  <a href="#name-foundation-model-production" class="internal xref">Foundation Model Production Category</a></p>
+                <p id="section-toc.1-1.4.2.1.1"><a href="#section-4.1" class="auto internal xref">4.1</a>.  <a href="#name-automated-processing-catego" class="internal xref">Automated Processing Category</a></p>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4.2.2">
-                <p id="section-toc.1-1.4.2.2.1"><a href="#section-4.2" class="auto internal xref">4.2</a>.  <a href="#name-search" class="internal xref">Search</a></p>
+                <p id="section-toc.1-1.4.2.2.1"><a href="#section-4.2" class="auto internal xref">4.2</a>.  <a href="#name-foundation-model-production" class="internal xref">Foundation Model Production Category</a></p>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4.2.3">
-                <p id="section-toc.1-1.4.2.3.1"><a href="#section-4.3" class="auto internal xref">4.3</a>.  <a href="#name-vocabulary-extensions" class="internal xref">Vocabulary Extensions</a></p>
+                <p id="section-toc.1-1.4.2.3.1"><a href="#section-4.3" class="auto internal xref">4.3</a>.  <a href="#name-ai-output" class="internal xref">AI Output</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4.2.4">
+                <p id="section-toc.1-1.4.2.4.1"><a href="#section-4.4" class="auto internal xref">4.4</a>.  <a href="#name-search" class="internal xref">Search</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4.2.5">
+                <p id="section-toc.1-1.4.2.5.1"><a href="#section-4.5" class="auto internal xref">4.5</a>.  <a href="#name-vocabulary-extensions" class="internal xref">Vocabulary Extensions</a></p>
 </li>
             </ul>
 </li>
@@ -1344,15 +1350,12 @@ This can mean that no preference is stated for a given usage category.<a href="#
 <p id="section-3-4">Some categories describe a proper subset of the usages of other categories.
 A preference that is stated for the more general category applies
 if no preference is stated for the more specific category.<a href="#section-3-4" class="pilcrow">¶</a></p>
-<p id="section-3-5">For example, a more general category might be assigned a preference
-that allows the associated usage.
-In the absence of any statement of preference
-regarding categories that are more specific subsets of that usage category,
-usage within those categories would be also be allowed.
-An explicit preference regarding the more specific usage category
-can be used to disallow the more specific usage,
-while indicating that other usage within the more general category
-is permissible.<a href="#section-3-5" class="pilcrow">¶</a></p>
+<p id="section-3-5">For example, the Automated Processing category might be assigned a preference that allows the associated usage.
+In the absence of any statement of preference regarding the AI Training category,
+that usage would be also be allowed,
+as AI Training is a subset of the Automated Processing category.
+In comparison, an explicit preference regarding AI Training might disallow that usage,
+while permitting other usage within the Automated Processing category.<a href="#section-3-5" class="pilcrow">¶</a></p>
 <p id="section-3-6">After processing a statement of preferences
 the recipient associates each category of use
 one of three preference values: "allowed", "disallowed", or "unknown".
@@ -1413,21 +1416,25 @@ in a particular situation:<a href="#section-3.2-6" class="pilcrow">¶</a></p>
             <p id="section-3.2-7.1.1">People with accessibility needs,
 or organizations working on their behalf,
 might decide to ignore a preference
+disallowing Automated Processing (<a href="#bots" class="auto internal xref">Section 4.1</a>)
 in order to access automated captions
 or generate accessible formats.<a href="#section-3.2-7.1.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-3.2-7.2">
             <p id="section-3.2-7.2.1">A cultural heritage organization might decide to ignore a preference
+disallowing Automated Processing (<a href="#bots" class="auto internal xref">Section 4.1</a>)
 in order to provide more useful, reliable, or discoverable access
 to historical web collections.<a href="#section-3.2-7.2.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-3.2-7.3">
             <p id="section-3.2-7.3.1">An educational institution might decide to ignore a preference
+disallowing Foundation Model Production (<a href="#train-ai" class="auto internal xref">Section 4.2</a>)
 in order to enable scholars to develop or use tools
 to facilitate scientific or other types of research.<a href="#section-3.2-7.3.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-3.2-7.4">
             <p id="section-3.2-7.4.1">A website that permits user uploads might decide to ignore a preference
+disallowing Automated Processing (<a href="#bots" class="auto internal xref">Section 4.1</a>)
 in order to develop or use tools that detect harmful content
 according to established terms of use.<a href="#section-3.2-7.4.1" class="pilcrow">¶</a></p>
 </li>
@@ -1445,70 +1452,156 @@ depending upon how a given legal jurisdiction recognizes preferences.<a href="#s
 <a href="#section-4" class="section-number selfRef">4. </a><a href="#name-vocabulary-definition" class="section-name selfRef">Vocabulary Definition</a>
       </h2>
 <p id="section-4-1">This section defines the categories of use in the vocabulary.<a href="#section-4-1" class="pilcrow">¶</a></p>
-<div id="train-ai">
+<p id="section-4-2"><a href="#f-categories" class="auto internal xref">Figure 1</a> shows the relationship between these categories:<a href="#section-4-2" class="pilcrow">¶</a></p>
+<span id="name-relationsehip-betweeen-cate"></span><div id="f-categories">
+<figure id="figure-1">
+        <div id="section-4-3.1">
+          <div class="alignLeft art-svg artwork" id="section-4-3.1.1">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="368" width="424" viewBox="0 0 424 368" class="diagram" text-anchor="middle" font-family="monospace" font-size="13px" stroke-linecap="round">
+              <path d="M 8,48 L 8,336" fill="none" stroke="black"></path>
+              <path d="M 40,128 L 40,224" fill="none" stroke="black"></path>
+              <path d="M 192,128 L 192,224" fill="none" stroke="black"></path>
+              <path d="M 232,128 L 232,304" fill="none" stroke="black"></path>
+              <path d="M 248,224 L 248,272" fill="none" stroke="black"></path>
+              <path d="M 368,224 L 368,272" fill="none" stroke="black"></path>
+              <path d="M 384,128 L 384,304" fill="none" stroke="black"></path>
+              <path d="M 416,48 L 416,336" fill="none" stroke="black"></path>
+              <path d="M 24,32 L 400,32" fill="none" stroke="black"></path>
+              <path d="M 56,112 L 176,112" fill="none" stroke="black"></path>
+              <path d="M 248,112 L 368,112" fill="none" stroke="black"></path>
+              <path d="M 264,208 L 352,208" fill="none" stroke="black"></path>
+              <path d="M 56,240 L 176,240" fill="none" stroke="black"></path>
+              <path d="M 264,288 L 352,288" fill="none" stroke="black"></path>
+              <path d="M 248,320 L 368,320" fill="none" stroke="black"></path>
+              <path d="M 24,352 L 400,352" fill="none" stroke="black"></path>
+              <path d="M 24,32 C 15.16936,32 8,39.16936 8,48" fill="none" stroke="black"></path>
+              <path d="M 400,32 C 408.83064,32 416,39.16936 416,48" fill="none" stroke="black"></path>
+              <path d="M 56,112 C 47.16936,112 40,119.16936 40,128" fill="none" stroke="black"></path>
+              <path d="M 176,112 C 184.83064,112 192,119.16936 192,128" fill="none" stroke="black"></path>
+              <path d="M 248,112 C 239.16936,112 232,119.16936 232,128" fill="none" stroke="black"></path>
+              <path d="M 368,112 C 376.83064,112 384,119.16936 384,128" fill="none" stroke="black"></path>
+              <path d="M 264,208 C 255.16936,208 248,215.16936 248,224" fill="none" stroke="black"></path>
+              <path d="M 352,208 C 360.83064,208 368,215.16936 368,224" fill="none" stroke="black"></path>
+              <path d="M 56,240 C 47.16936,240 40,232.83064 40,224" fill="none" stroke="black"></path>
+              <path d="M 176,240 C 184.83064,240 192,232.83064 192,224" fill="none" stroke="black"></path>
+              <path d="M 264,288 C 255.16936,288 248,280.83064 248,272" fill="none" stroke="black"></path>
+              <path d="M 352,288 C 360.83064,288 368,280.83064 368,272" fill="none" stroke="black"></path>
+              <path d="M 248,320 C 239.16936,320 232,312.83064 232,304" fill="none" stroke="black"></path>
+              <path d="M 368,320 C 376.83064,320 384,312.83064 384,304" fill="none" stroke="black"></path>
+              <path d="M 24,352 C 15.16936,352 8,344.83064 8,336" fill="none" stroke="black"></path>
+              <path d="M 400,352 C 408.83064,352 416,344.83064 416,336" fill="none" stroke="black"></path>
+              <g class="text">
+                <text x="160" y="68">Automated</text>
+                <text x="244" y="68">Processing</text>
+                <text x="116" y="164">Foundation</text>
+                <text x="276" y="164">AI</text>
+                <text x="316" y="164">Output</text>
+                <text x="112" y="180">Model</text>
+                <text x="116" y="196">Production</text>
+                <text x="308" y="244">Search</text>
+              </g>
+            </svg><a href="#section-4-3.1.1" class="pilcrow">¶</a>
+</div>
+</div>
+<figcaption><a href="#figure-1" class="selfRef">Figure 1</a>:
+<a href="#name-relationsehip-betweeen-cate" class="selfRef">Relationsehip Betweeen Categories of Use</a>
+        </figcaption></figure>
+</div>
+<div id="bots">
 <section id="section-4.1">
-        <h3 id="name-foundation-model-production">
-<a href="#section-4.1" class="section-number selfRef">4.1. </a><a href="#name-foundation-model-production" class="section-name selfRef">Foundation Model Production Category</a>
+        <h3 id="name-automated-processing-catego">
+<a href="#section-4.1" class="section-number selfRef">4.1. </a><a href="#name-automated-processing-catego" class="section-name selfRef">Automated Processing Category</a>
         </h3>
-<p id="section-4.1-1">The act of using an asset to train or fine-tune a foundation model.<a href="#section-4.1-1" class="pilcrow">¶</a></p>
-<p id="section-4.1-2">Foundation models are large models that are produced using deep learning
+<p id="section-4.1-1">The act of using automated processing on one or more assets
+to analyze text and data in order to generate information
+which includes but is not limited to patterns, trends and correlations.<a href="#section-4.1-1" class="pilcrow">¶</a></p>
+<p id="section-4.1-2">The use of assets for automated processing encompasses all the subsequent categories.<a href="#section-4.1-2" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="train-ai">
+<section id="section-4.2">
+        <h3 id="name-foundation-model-production">
+<a href="#section-4.2" class="section-number selfRef">4.2. </a><a href="#name-foundation-model-production" class="section-name selfRef">Foundation Model Production Category</a>
+        </h3>
+<p id="section-4.2-1">The act of using an asset to train or fine-tune a foundation model.<a href="#section-4.2-1" class="pilcrow">¶</a></p>
+<p id="section-4.2-2">Foundation models are large models that are produced using deep learning
 or other machine learning techniques.
 Foundation models are trained on very large numbers of assets
 so that they can be applied to a wide range of use cases.
 Foundation models typically possess generative capabilities
-in one or more media.<a href="#section-4.1-2" class="pilcrow">¶</a></p>
-<p id="section-4.1-3">Fine-tuning can specialize a general-purpose foundation model
-for a narrower set of use cases.<a href="#section-4.1-3" class="pilcrow">¶</a></p>
+in one or more media.<a href="#section-4.2-2" class="pilcrow">¶</a></p>
+<p id="section-4.2-3">Fine-tuning can specialize a general-purpose foundation model
+for a narrower set of use cases.<a href="#section-4.2-3" class="pilcrow">¶</a></p>
+<p id="section-4.2-4">The use of assets for Foundation Model Production
+is a proper subset of Automated Processing usage.<a href="#section-4.2-4" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="ai-output">
+<section id="section-4.3">
+        <h3 id="name-ai-output">
+<a href="#section-4.3" class="section-number selfRef">4.3. </a><a href="#name-ai-output" class="section-name selfRef">AI Output</a>
+        </h3>
+<p id="section-4.3-1">The act of using an asset in an AI-based system
+to generate outputs
+that are presented to clients of that system.<a href="#section-4.3-1" class="pilcrow">¶</a></p>
+<p id="section-4.3-2">This does not apply to any assets
+that are directly provided as inputs
+to the system by clients.
+This does not include the construction of the system, only its use.<a href="#section-4.3-2" class="pilcrow">¶</a></p>
+<p id="section-4.3-3">This includes the output of search results.
+This includes outputs that are presented to human users
+and outputs that are presented to automated clients.<a href="#section-4.3-3" class="pilcrow">¶</a></p>
+<p id="section-4.3-4">The AI Output category of use includes whatever model training is necessary
+to produce the models that are used
+in the generation of these outputs.<a href="#section-4.3-4" class="pilcrow">¶</a></p>
+<p id="section-4.3-5">The use of assets for AI Output is a proper subset of Automated Processing usage.<a href="#section-4.3-5" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="search">
-<section id="section-4.2">
+<section id="section-4.4">
         <h3 id="name-search">
-<a href="#section-4.2" class="section-number selfRef">4.2. </a><a href="#name-search" class="section-name selfRef">Search</a>
+<a href="#section-4.4" class="section-number selfRef">4.4. </a><a href="#name-search" class="section-name selfRef">Search</a>
         </h3>
-<p id="section-4.2-1">Using one or more assets in a search application
-that directs users to the location from which the assets were retrieved.<a href="#section-4.2-1" class="pilcrow">¶</a></p>
-<p id="section-4.2-2">The presentation of any asset
-that is included in search output
-includes the following conditions:<a href="#section-4.2-2" class="pilcrow">¶</a></p>
+<p id="section-4.4-1">The Search category of use is a refinement of the AI Output category,
+with the addition of the following two conditions:<a href="#section-4.4-1" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="section-4.2-3.1">
-            <p id="section-4.2-3.1.1">A reference to the location that the asset was obtained
-is presented as part of the output.<a href="#section-4.2-3.1.1" class="pilcrow">¶</a></p>
+<li class="normal" id="section-4.4-2.1">
+            <p id="section-4.4-2.1.1">A reference to the location that the asset was obtained
+is presented as part of the output.<a href="#section-4.4-2.1.1" class="pilcrow">¶</a></p>
 </li>
-          <li class="normal" id="section-4.2-3.2">
-            <p id="section-4.2-3.2.1">The asset can only be represented in the output
-with excerpts that are drawn verbatim from it.<a href="#section-4.2-3.2.1" class="pilcrow">¶</a></p>
+          <li class="normal" id="section-4.4-2.2">
+            <p id="section-4.4-2.2.1">The asset can only be represented in the output
+with excerpts that are drawn verbatim from it.<a href="#section-4.4-2.2.1" class="pilcrow">¶</a></p>
 </li>
         </ul>
-<p id="section-4.2-4">An asset can be used in ranking,
-but not present in output.<a href="#section-4.2-4" class="pilcrow">¶</a></p>
-<p id="section-4.2-5">Internal processing of assets
-to perform ranking and presentation
-can include the use and training of AI models.
-This only includes any training that is necessary
-to produce models used in the search application.<a href="#section-4.2-5" class="pilcrow">¶</a></p>
-<p id="section-4.2-6">With both these conditions,
+<p id="section-4.4-3">If these conditions cannot be met,
+the asset then is not included in the output.<a href="#section-4.4-3" class="pilcrow">¶</a></p>
+<p id="section-4.4-4">With both these conditions,
 a preference to allow Search usage
 enables the presentation of links and titles
-in what is considered "traditional" search results.<a href="#section-4.2-6" class="pilcrow">¶</a></p>
+in what is considered “traditional” search results.<a href="#section-4.4-4" class="pilcrow">¶</a></p>
+<p id="section-4.4-5">Like the AI Output category of use,
+Search includes whatever model training is necessary
+to produce the models that are used
+in the generation of these outputs.<a href="#section-4.4-5" class="pilcrow">¶</a></p>
+<p id="section-4.4-6">The use of assets for Search is a proper subset of AI Output usage.<a href="#section-4.4-6" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="vocab-extension">
-<section id="section-4.3">
+<section id="section-4.5">
         <h3 id="name-vocabulary-extensions">
-<a href="#section-4.3" class="section-number selfRef">4.3. </a><a href="#name-vocabulary-extensions" class="section-name selfRef">Vocabulary Extensions</a>
+<a href="#section-4.5" class="section-number selfRef">4.5. </a><a href="#name-vocabulary-extensions" class="section-name selfRef">Vocabulary Extensions</a>
         </h3>
-<p id="section-4.3-1">Extensions to this vocabulary need to be defined in an RFC
-that updates this document.<a href="#section-4.3-1" class="pilcrow">¶</a></p>
-<p id="section-4.3-2">Any future extensions to this vocabulary <span class="bcp14">MUST NOT</span> introduce additional categories
+<p id="section-4.5-1">Extensions to this vocabulary need to be defined in an RFC
+that updates this document.<a href="#section-4.5-1" class="pilcrow">¶</a></p>
+<p id="section-4.5-2">Any future extensions to this vocabulary <span class="bcp14">MUST NOT</span> introduce additional categories
 that include existing categories defined in the vocabulary.
 That is, new categories of use can be defined as a subset of an existing category,
-but not a superset.<a href="#section-4.3-2" class="pilcrow">¶</a></p>
-<p id="section-4.3-3">Systems that use this vocabulary might define their own extensions
+but not a superset.<a href="#section-4.5-2" class="pilcrow">¶</a></p>
+<p id="section-4.5-3">Systems that use this vocabulary might define their own extensions
 as part of a larger data model.
 <a href="#mapping" class="auto internal xref">Section 6.6</a> describes how concepts from an alternative format
-might be mapped to this vocabulary.<a href="#section-4.3-3" class="pilcrow">¶</a></p>
+might be mapped to this vocabulary.<a href="#section-4.5-3" class="pilcrow">¶</a></p>
 </section>
 </div>
 </section>
@@ -1590,8 +1683,7 @@ Preferences about more specific categories override those of any more general ca
 statements of preference.<a href="#section-5.2-2.2.1" class="pilcrow">¶</a></p>
 </li>
         </ul>
-<p id="section-5.2-3">For instance, a statement of preferences might indicate a preference
-to disallow a category of use for an asset.
+<p id="section-5.2-3">For instance, a statement of preferences might indicate that the use of an asset is disallowed for AI Training.
 If arrangements, such as legal agreements, exist that explicitly permit the use of that asset,
 those arrangements likely apply despite the existence of machine-readable statements of preference,
 unless the terms of the arrangement explicitly say otherwise.<a href="#section-5.2-3" class="pilcrow">¶</a></p>
@@ -1610,14 +1702,13 @@ The format describes how the abstract model could be turned into Unicode text or
 The dictionary keys correspond to usage categories
 and the dictionary values correspond to explicit preferences,
 which can be either <code>y</code> or <code>n</code>; see <a href="#y-or-n" class="auto internal xref">Section 6.2</a>.<a href="#section-6-2" class="pilcrow">¶</a></p>
-<p id="section-6-3">For example, the following states a preference
-to allow foundation model production (<a href="#train-ai" class="auto internal xref">Section 4.1</a>),
-disallow search (<a href="#search" class="auto internal xref">Section 4.2</a>), and
+<p id="section-6-3">For example, the following states a preference to allow automated processing (<a href="#bots" class="auto internal xref">Section 4.1</a>),
+disallow foundation model production (<a href="#train-ai" class="auto internal xref">Section 4.2</a>), and
 and states no preference for other categories
 other than subsets of these categories:<a href="#section-6-3" class="pilcrow">¶</a></p>
 <div class="alignLeft art-text artwork" id="section-6-4">
 <pre>
-train-ai=y, search=n
+bots=y, train-ai=n
 </pre><a href="#section-6-4" class="pilcrow">¶</a>
 </div>
 <div id="labels">
@@ -1642,17 +1733,31 @@ train-ai=y, search=n
           </thead>
           <tbody>
             <tr>
+              <td class="text-left" rowspan="1" colspan="1">Automated Processing</td>
+              <td class="text-left" rowspan="1" colspan="1">bots</td>
+              <td class="text-left" rowspan="1" colspan="1">
+                <a href="#bots" class="auto internal xref">Section 4.1</a>
+</td>
+            </tr>
+            <tr>
               <td class="text-left" rowspan="1" colspan="1">Foundation Model Production</td>
               <td class="text-left" rowspan="1" colspan="1">train-ai</td>
               <td class="text-left" rowspan="1" colspan="1">
-                <a href="#train-ai" class="auto internal xref">Section 4.1</a>
+                <a href="#train-ai" class="auto internal xref">Section 4.2</a>
+</td>
+            </tr>
+            <tr>
+              <td class="text-left" rowspan="1" colspan="1">AI Output</td>
+              <td class="text-left" rowspan="1" colspan="1">ai-output</td>
+              <td class="text-left" rowspan="1" colspan="1">
+                <a href="#ai-output" class="auto internal xref">Section 4.3</a>
 </td>
             </tr>
             <tr>
               <td class="text-left" rowspan="1" colspan="1">Search</td>
               <td class="text-left" rowspan="1" colspan="1">search</td>
               <td class="text-left" rowspan="1" colspan="1">
-                <a href="#search" class="auto internal xref">Section 4.2</a>
+                <a href="#search" class="auto internal xref">Section 4.4</a>
 </td>
             </tr>
           </tbody>
@@ -1701,7 +1806,7 @@ Again, this process can use ASCII or UTF-8.<a href="#section-6.3-3" class="pilcr
 <p id="section-6.4-1">There are two ways by which this syntax might be extended:
 the addition of new labels and the addition of parameters.<a href="#section-6.4-1" class="pilcrow">¶</a></p>
 <p id="section-6.4-2">New labels might be defined to correspond to new usage categories.
-<a href="#vocab-extension" class="auto internal xref">Section 4.3</a> addresses the considerations for defining new categories.
+<a href="#vocab-extension" class="auto internal xref">Section 4.5</a> addresses the considerations for defining new categories.
 New labels might also be defined for other types of extension
 that do not assign a preference to a usage category.
 In either case, when processing a parsed Dictionary to obtain preferences,
@@ -1757,7 +1862,7 @@ This means that duplicating a key could result in unexpected outcomes.
 For example, the following expresses no preferences:<a href="#section-6.5-6" class="pilcrow">¶</a></p>
 <div class="alignLeft art-text artwork" id="section-6.5-7">
 <pre>
-train-ai=y, train-ai="n", search=n, search
+train-ai=y, train-ai="n", search=n, search, bots=n, bots=()
 </pre><a href="#section-6.5-7" class="pilcrow">¶</a>
 </div>
 <p id="section-6.5-8">If the parsing of the Dictionary fails, no preferences are stated.

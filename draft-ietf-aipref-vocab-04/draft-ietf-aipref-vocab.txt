@@ -75,9 +75,11 @@ Table of Contents
      3.1.  Conformance
      3.2.  Applicability and Effect
    4.  Vocabulary Definition
-     4.1.  Foundation Model Production Category
-     4.2.  Search
-     4.3.  Vocabulary Extensions
+     4.1.  Automated Processing Category
+     4.2.  Foundation Model Production Category
+     4.3.  AI Output
+     4.4.  Search
+     4.5.  Vocabulary Extensions
    5.  Applying Statements of Preference
      5.1.  Combining Preferences
      5.2.  More Specific Instructions
@@ -172,14 +174,13 @@ Table of Contents
    category applies if no preference is stated for the more specific
    category.
 
-   For example, a more general category might be assigned a preference
-   that allows the associated usage.  In the absence of any statement of
-   preference regarding categories that are more specific subsets of
-   that usage category, usage within those categories would be also be
-   allowed.  An explicit preference regarding the more specific usage
-   category can be used to disallow the more specific usage, while
-   indicating that other usage within the more general category is
-   permissible.
+   For example, the Automated Processing category might be assigned a
+   preference that allows the associated usage.  In the absence of any
+   statement of preference regarding the AI Training category, that
+   usage would be also be allowed, as AI Training is a subset of the
+   Automated Processing category.  In comparison, an explicit preference
+   regarding AI Training might disallow that usage, while permitting
+   other usage within the Automated Processing category.
 
    After processing a statement of preferences the recipient associates
    each category of use one of three preference values: "allowed",
@@ -241,20 +242,24 @@ Table of Contents
    situation:
 
    *  People with accessibility needs, or organizations working on their
-      behalf, might decide to ignore a preference in order to access
-      automated captions or generate accessible formats.
+      behalf, might decide to ignore a preference disallowing Automated
+      Processing (Section 4.1) in order to access automated captions or
+      generate accessible formats.
 
    *  A cultural heritage organization might decide to ignore a
-      preference in order to provide more useful, reliable, or
-      discoverable access to historical web collections.
+      preference disallowing Automated Processing (Section 4.1) in order
+      to provide more useful, reliable, or discoverable access to
+      historical web collections.
 
-   *  An educational institution might decide to ignore a preference in
-      order to enable scholars to develop or use tools to facilitate
-      scientific or other types of research.
+   *  An educational institution might decide to ignore a preference
+      disallowing Foundation Model Production (Section 4.2) in order to
+      enable scholars to develop or use tools to facilitate scientific
+      or other types of research.
 
    *  A website that permits user uploads might decide to ignore a
-      preference in order to develop or use tools that detect harmful
-      content according to established terms of use.
+      preference disallowing Automated Processing (Section 4.1) in order
+      to develop or use tools that detect harmful content according to
+      established terms of use.
 
    Because enforcement is not provided by this specification, the
    consequences of ignoring preferences could vary depending upon how a
@@ -264,7 +269,42 @@ Table of Contents
 
    This section defines the categories of use in the vocabulary.
 
-4.1.  Foundation Model Production Category
+   Figure 1 shows the relationship between these categories:
+
+    .------------------------------------------------.
+   |                                                  |
+   |              Automated Processing                |
+   |                                                  |
+   |                                                  |
+   |    .----------------.      .----------------.    |
+   |   |                  |    |                  |   |
+   |   |                  |    |                  |   |
+   |   |    Foundation    |    |    AI Output     |   |
+   |   |      Model       |    |                  |   |
+   |   |    Production    |    |                  |   |
+   |   |                  |    |  .------------.  |   |
+   |   |                  |    | |              | |   |
+   |    '----------------'     | |    Search    | |   |
+   |                           | |              | |   |
+   |                           | |              | |   |
+   |                           |  '------------'  |   |
+   |                           |                  |   |
+   |                            '----------------'    |
+   |                                                  |
+    '------------------------------------------------'
+
+             Figure 1: Relationsehip Betweeen Categories of Use
+
+4.1.  Automated Processing Category
+
+   The act of using automated processing on one or more assets to
+   analyze text and data in order to generate information which includes
+   but is not limited to patterns, trends and correlations.
+
+   The use of assets for automated processing encompasses all the
+   subsequent categories.
+
+4.2.  Foundation Model Production Category
 
    The act of using an asset to train or fine-tune a foundation model.
 
@@ -277,13 +317,33 @@ Table of Contents
    Fine-tuning can specialize a general-purpose foundation model for a
    narrower set of use cases.
 
-4.2.  Search
+   The use of assets for Foundation Model Production is a proper subset
+   of Automated Processing usage.
 
-   Using one or more assets in a search application that directs users
-   to the location from which the assets were retrieved.
+4.3.  AI Output
 
-   The presentation of any asset that is included in search output
-   includes the following conditions:
+   The act of using an asset in an AI-based system to generate outputs
+   that are presented to clients of that system.
+
+   This does not apply to any assets that are directly provided as
+   inputs to the system by clients.  This does not include the
+   construction of the system, only its use.
+
+   This includes the output of search results.  This includes outputs
+   that are presented to human users and outputs that are presented to
+   automated clients.
+
+   The AI Output category of use includes whatever model training is
+   necessary to produce the models that are used in the generation of
+   these outputs.
+
+   The use of assets for AI Output is a proper subset of Automated
+   Processing usage.
+
+4.4.  Search
+
+   The Search category of use is a refinement of the AI Output category,
+   with the addition of the following two conditions:
 
    *  A reference to the location that the asset was obtained is
       presented as part of the output.
@@ -291,18 +351,20 @@ Table of Contents
    *  The asset can only be represented in the output with excerpts that
       are drawn verbatim from it.
 
-   An asset can be used in ranking, but not present in output.
-
-   Internal processing of assets to perform ranking and presentation can
-   include the use and training of AI models.  This only includes any
-   training that is necessary to produce models used in the search
-   application.
+   If these conditions cannot be met, the asset then is not included in
+   the output.
 
    With both these conditions, a preference to allow Search usage
    enables the presentation of links and titles in what is considered
-   "traditional" search results.
+   “traditional” search results.
 
-4.3.  Vocabulary Extensions
+   Like the AI Output category of use, Search includes whatever model
+   training is necessary to produce the models that are used in the
+   generation of these outputs.
+
+   The use of assets for Search is a proper subset of AI Output usage.
+
+4.5.  Vocabulary Extensions
 
    Extensions to this vocabulary need to be defined in an RFC that
    updates this document.
@@ -371,8 +433,8 @@ Table of Contents
    *  Contractual agreements or other specific arrangements might
       override statements of preference.
 
-   For instance, a statement of preferences might indicate a preference
-   to disallow a category of use for an asset.  If arrangements, such as
+   For instance, a statement of preferences might indicate that the use
+   of an asset is disallowed for AI Training.  If arrangements, such as
    legal agreements, exist that explicitly permit the use of that asset,
    those arrangements likely apply despite the existence of machine-
    readable statements of preference, unless the terms of the
@@ -389,27 +451,31 @@ Table of Contents
    dictionary values correspond to explicit preferences, which can be
    either y or n; see Section 6.2.
 
-   For example, the following states a preference to allow foundation
-   model production (Section 4.1), disallow search (Section 4.2), and
-   and states no preference for other categories other than subsets of
-   these categories:
+   For example, the following states a preference to allow automated
+   processing (Section 4.1), disallow foundation model production
+   (Section 4.2), and and states no preference for other categories
+   other than subsets of these categories:
 
-   train-ai=y, search=n
+   bots=y, train-ai=n
 
 6.1.  Usage Category Labels
 
    Each usage category in the vocabulary (Section 4) is mapped to a
    short textual label.  Table 1 tabulates this mapping.
 
-         +=============================+==========+=============+
-         | Category                    | Label    | Reference   |
-         +=============================+==========+=============+
-         | Foundation Model Production | train-ai | Section 4.1 |
-         +-----------------------------+----------+-------------+
-         | Search                      | search   | Section 4.2 |
-         +-----------------------------+----------+-------------+
+         +=============================+===========+=============+
+         | Category                    | Label     | Reference   |
+         +=============================+===========+=============+
+         | Automated Processing        | bots      | Section 4.1 |
+         +-----------------------------+-----------+-------------+
+         | Foundation Model Production | train-ai  | Section 4.2 |
+         +-----------------------------+-----------+-------------+
+         | AI Output                   | ai-output | Section 4.3 |
+         +-----------------------------+-----------+-------------+
+         | Search                      | search    | Section 4.4 |
+         +-----------------------------+-----------+-------------+
 
-                     Table 1: Mappings for Categories
+                      Table 1: Mappings for Categories
 
    These tokens are case sensitive.
 
@@ -446,7 +512,7 @@ Table of Contents
    addition of new labels and the addition of parameters.
 
    New labels might be defined to correspond to new usage categories.
-   Section 4.3 addresses the considerations for defining new categories.
+   Section 4.5 addresses the considerations for defining new categories.
    New labels might also be defined for other types of extension that do
    not assign a preference to a usage category.  In either case, when
    processing a parsed Dictionary to obtain preferences, any unknown
@@ -493,7 +559,7 @@ Table of Contents
    could result in unexpected outcomes.  For example, the following
    expresses no preferences:
 
-   train-ai=y, train-ai="n", search=n, search
+   train-ai=y, train-ai="n", search=n, search, bots=n, bots=()
 
    If the parsing of the Dictionary fails, no preferences are stated.
    This includes where keys include uppercase characters, as this format
