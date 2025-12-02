@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-11-30T02:11:34.166243+00:00",
+  "timestamp": "2025-12-02T02:02:05.266225+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -8405,24 +8405,26 @@
       "id": "PR_kwDOOWk1-s60BfuW",
       "title": "Remove Automated Processing and AI Output",
       "url": "https://github.com/ietf-wg-aipref/drafts/pull/186",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "martinthomson",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "This is about as small a change as I could manage.  With the removal of any concrete examples regarding subsets and supersets, some of the text had to be updated to be more generic.\r\n\r\nIf we commit to something that doesn't have groupings like this, we'll want to do that.  Because the state of things is still in flux, and because it is less disruptive, I'm going to recommend that we stick with the remnants of nesting for now.",
       "createdAt": "2025-11-18T07:05:08Z",
-      "updatedAt": "2025-11-28T00:51:16Z",
+      "updatedAt": "2025-12-01T08:18:06Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "28e38796f3254410337198c99aebd578a68a4155",
       "headRepository": "ietf-wg-aipref/drafts",
       "headRefName": "remove-bots-output",
       "headRefOid": "75443383587639ced080883e6f29349241657ad3",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2025-12-01T08:18:05Z",
+      "mergedAt": "2025-12-01T08:18:05Z",
+      "mergedBy": "martinthomson",
+      "mergeCommit": {
+        "oid": "75443383587639ced080883e6f29349241657ad3"
+      },
       "comments": [],
       "reviews": [
         {
