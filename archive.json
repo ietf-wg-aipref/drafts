@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-12-09T02:02:50.339586+00:00",
+  "timestamp": "2025-12-14T02:18:24.517861+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -2132,7 +2132,7 @@
       "id": "I_kwDOOWk1-s7KsiTn",
       "title": "Automated Processing is too broad",
       "url": "https://github.com/ietf-wg-aipref/drafts/issues/155",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "mnot",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
@@ -2143,8 +2143,8 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\n_Raised in [email by EKR](https://mailarchive.ietf.org/arch/msg/ai-control/dxpLCD7R2L-L07fEQCITjXjUcMY)_\n\nAs I and others have noted, \"automated processing\" essentially\nsweeps in any web crawler. In particular, as noted by Greg Lindahl,\nparsing the document to find links is plainly \"automated\nprocessing\", so you just can't really have a crawler without\n\"automated processing\", which makes this whole category redundant\nwith forbidding crawling in the existing robots.txt framework.\n\n\n### Proposed Resolution\n\n_No response_",
       "createdAt": "2025-09-10T02:42:04Z",
-      "updatedAt": "2025-12-09T00:12:16Z",
-      "closedAt": null,
+      "updatedAt": "2025-12-11T04:04:34Z",
+      "closedAt": "2025-12-11T04:04:33Z",
       "comments": [
         {
           "author": "TimidRobot",
@@ -2215,6 +2215,13 @@
           "body": "## Mistakes are my own\n\nI have paraphrased @martinthomson a couple of times below. Please assume any fault is my own.\n\n## Pros and cons of a top level category\n\nThe following table is from a a whiteboard (Zurich meeting?). I think it is prudent to reproduce it here in this issue:\n\n| For top-level | Against top-level |\n| --- | --- |\n| <ul><li>Valid to express demand</li><li>Known / unknown / rapid change</li><li>Complete vocabulary</li><li>Alignment w/ regulation</li><li>Suits opt-in / optional</li><li>Promotes market</li><li>Ease of use</li><li>Vocabulary portability</li></ul> | <ul><li>Unintended consequences</li><li>Inhibits innovation</li><li>Misalignment w/ regulation</li><li>Bleed into non-A.I.</li><li>Inconsistent understanding</li><li>Charter impact</li><li>Definitional impossibility</li><li>Learning sharp tools</li></ul> |\n\n## Robots: Automated crawling\n\nFirst, I think it's worth noting the scope of [1. Introduction - RFC 9309: Robots Exclusion Protocol](https://www.rfc-editor.org/rfc/rfc9309.html#name-introduction):\n> Crawlers are automated clients. Search engines, for instance, have crawlers to recursively traverse links for indexing as defined in [[RFC8288](https://www.rfc-editor.org/rfc/rfc9309.html#RFC8288)].\n\nIf we were going to keep this category, more or less as-is, it might be better to replace \"Automated processing\" with Automated clients\".\n\n## \"Automated\" is important, but insufficient\n\n@martinthomson clarified during IETF 124 Montreal, that the \"Automated\" in \"Automated processing\" was, perhaps, misunderstood. (I know that I was laboring under a misunderstanding.) \"Automated\" already excludes many of the concerns that have been raised by this category (negatively impacting pro-social behavior such as browser accessibility, translation, etc.). However, additional concerns remain (negatively impacting pro-social behavior such as archiving, research, etc.). This clarification does not resolve the concerns listed above or in:\n- #169\n- #178\n\n## Blocking on thresholds\n\nDuring  IETF 124 Montreal @martinthomson also put forward the idea of further limiting the top level category by describing its relationship with humans. I think this idea holds promise, but it also raises the issue of quantified thresholds in defining that relationship and the tension between \"automation\" and \"inference\". Until we better define how the entire vocabulary will (or won't) handle inference, we can't (we mustn't) define a top level category.\n\n## Support current removal of category\n\n@mnot wrote in [[ai-control] Status of the Vocabulary Terms](https://mailarchive.ietf.org/arch/msg/ai-control/AM7lHX2TqoWGS_E0ieP_jh1t6Ic/):\n> However, based upon discussion both in the room and on the mailing list, it's become clear that the AI Output and Automated Processing categories are still very contentious. The language for defining them is unlikely to be suitable for a call for consensus without a complete overhaul.\n>\n> As a result, the chairs believe that their presence in the editors' drafts has become a distraction from discussions that might lead us in more fruitful directions. So, we will be instructing the editors to remove them from the next set of drafts. This is not a declaration that there is consensus to omit them from the documents. We encourage participants to make proposals for language in these areas that they believe will be able to achieve consensus.\n\nI think this is a prudent decision because:\n1. I don't think the top level category currently passes a cost/benefit analysis due to the costs defined above (and the linked issues)\n2. I think the top level category has already been in conflict with categories previously in the draft and will continue to be problematic until we resolve how the entire vocabulary will (or won't) handle inference\n\n## Worthwhile utility\n\nI hope that continued work will allow us to define a top level category in the future that has mitigated the most significant concerns while preserving its utility.\n ",
           "createdAt": "2025-11-12T10:52:13Z",
           "updatedAt": "2025-11-12T10:52:13Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Closing as Automated Processing has been removed. ",
+          "createdAt": "2025-12-11T04:04:33Z",
+          "updatedAt": "2025-12-11T04:04:33Z"
         }
       ]
     },
@@ -2229,13 +2236,22 @@
       "assignees": [],
       "labels": [
         "vocabulary",
-        "search"
+        "search",
+        "ready to close"
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\n_Raised in [email by EKR](https://mailarchive.ietf.org/arch/msg/ai-control/dxpLCD7R2L-L07fEQCITjXjUcMY)_\n\nI don't understand why \"search\" is somehow a subset of \"automated\nprocessing\" rather than \"AI training\". In many if not most cases,\nsearch will involve training an AI model, especially given the very\nwide parameters of \"AI\" (see below).\n\n### Proposed Resolution\n\n_No response_",
       "createdAt": "2025-09-10T02:42:38Z",
-      "updatedAt": "2025-12-08T23:56:06Z",
+      "updatedAt": "2025-12-11T04:12:38Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "In the latest draft, Search is no longer a subset of any other term, so I think this can be closed. There is some lingering language about hierarchy in general, but that's covered by #170.",
+          "createdAt": "2025-12-11T04:12:31Z",
+          "updatedAt": "2025-12-11T04:12:31Z"
+        }
+      ]
     },
     {
       "number": 157,
@@ -2382,11 +2398,12 @@
       "assignees": [],
       "labels": [
         "vocabulary",
+        "editorial",
         "terminology"
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nAs raised in 8/25 Jlevy comment and subsequent discussions, the language and terminology embedded throughouth is normatively charged and inaccurately attributes human intentions/emotions into this vocabulary, which by its nature is directed at computer programs or algorithms.   Throughout the Vocab document, the words \"respect\" and \"ignore\" should be changed to \"follow\" or \"not follow\" preference expresssions or intructions.   \n\n\n### Proposed Resolution\n\nSolution:  In 3.2, \n-change \"whether preferences are actually respected during data processing\"  to \"whether preferencdesare actually followed during data processing.\"\n - change \"An entity that receives usage preferences MAY choose to respect those preferences...\" to \"An entity that receives usage preferences MAY choose to follow those preferences.\n-change \"ignored\" to \"not followed\", \"ignoring\" to \"not following\" and \"ignore\" to \"not follow\" throughout 3.2",
       "createdAt": "2025-09-22T07:03:28Z",
-      "updatedAt": "2025-12-09T00:24:19Z",
+      "updatedAt": "2025-12-11T04:39:05Z",
       "closedAt": null,
       "comments": []
     },
@@ -2535,7 +2552,7 @@
       "id": "I_kwDOOWk1-s7OLGjz",
       "title": "Automated Processing category risks jeopardizing a safe and working internet",
       "url": "https://github.com/ietf-wg-aipref/drafts/issues/169",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "kmadhavan-msft",
       "authorAssociation": "NONE",
       "assignees": [],
@@ -2546,8 +2563,8 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nThe current definition of \u201cautomated processing\u201d is broad and ambiguous, encompassing routine functions like exporting to PDF, printing, or viewing content in a browser. As noted by Greg in the working group, even basic link extraction could fall under this category, potentially rendering all crawlers\u2014including non-AI ones\u2014inoperable. \n\nWe\u2019re concerned this framing could unintentionally undermine essential Internet functions such as content moderation, spam filtering, and accessibility features. While we recognize these outcomes are not the intent, the risk remains that critical functionality may be impaired, user expectations misaligned, and implementers exposed to complaints\u2014especially in regulated contexts. \n\nIt\u2019s also worth noting that existing mechanisms already allow publishers to signal bot access preferences. If there are concerns about their adoption or effectiveness, that may be a more productive area for discussion\u2014one we haven\u2019t yet seen raised in this group. \n\n### Proposed Resolution\n\nRemove the automated processing category. We believe that the Automated Processing category is too broad and vague and will lead to a less safe and open  and open Internet in the long run.",
       "createdAt": "2025-09-26T20:24:04Z",
-      "updatedAt": "2025-12-09T00:11:18Z",
-      "closedAt": null,
+      "updatedAt": "2025-12-11T04:04:45Z",
+      "closedAt": "2025-12-11T04:04:45Z",
       "comments": [
         {
           "author": "TimidRobot",
@@ -2555,6 +2572,13 @@
           "body": "This appears to be a duplicate of:\n- #155\n\n",
           "createdAt": "2025-11-12T10:29:03Z",
           "updatedAt": "2025-11-12T10:29:03Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Closing as Automated Processing has been removed.",
+          "createdAt": "2025-12-11T04:04:45Z",
+          "updatedAt": "2025-12-11T04:04:45Z"
         }
       ]
     },
@@ -2569,12 +2593,11 @@
       "assignees": [],
       "labels": [
         "vocabulary",
-        "model",
-        "ready to close"
+        "model"
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nThe hierarchical structure in vocab-03 -  placing categories like Automated Processing, Search, and AI Training in parent\u2013child relationships - introduces complexity without real benefit. In practice, preferences can be expressed directly on each activity, so the hierarchy does not add clarity; instead it forces artificial nesting. Real-world processing often overlaps across categories, and the hierarchy has already led to a patchwork of overlapping or conflicting proposals. Because publishers simply want to state \u201callow\u201d or \u201cdisallow\u201d for specific uses or use multiple preferences, the extra layer of hierarchy is unnecessary and risks confusing both implementers and publishers. A flatter, modular vocabulary would make preferences easier to understand, more consistent to apply, and better aligned with real systems. \n\n### Proposed Resolution\n\nRemove the heirarchical structure and replace with a flatter, modular structure that would make the preferences easier to understand, more consistent to apply, and better aligned with real systems. ",
       "createdAt": "2025-09-26T20:27:17Z",
-      "updatedAt": "2025-12-09T00:16:20Z",
+      "updatedAt": "2025-12-11T04:30:40Z",
       "closedAt": null,
       "comments": [
         {
@@ -2583,6 +2606,20 @@
           "body": "@kmadhavan-msft this appears to overlap with #156 to the degree we could close one. Do you mind if we transfer your comment over there?",
           "createdAt": "2025-12-09T00:16:10Z",
           "updatedAt": "2025-12-09T00:16:10Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Actually never mind - I see that Search is no longer a subset of anything, but there is some lingering text about hierarchy in general, so this should stay open.",
+          "createdAt": "2025-12-11T04:12:13Z",
+          "updatedAt": "2025-12-11T04:12:13Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "@kmadhavan-msft You mention creating a \"flatter, modular structure\" -- could you give some more detail? In particular, what should be done when there is a case that _is_ a subset of a larger term?\n\nFor example, let's imagine that we've agreed on a term for \"(A) AI for the purpose of creating media about animals\", and want to create a new term for \"(B) AI for the purpose of creating pictures of kittens.\" \n\nA recipient of \"A=no\" \"B=yes\" needs to disambiguate these seemingly conflicting signals; AFAICT we have a few options:\n\n1. Make B a subset of A -- i.e., B is more specific and therefore wins\n2. Define B to override a preference for A when stated (functionally equivalent to 1?)\n3. Define A to be overridden by a preference for B (requires B to be known about when A is created)\n4. Don't allow this pattern of definitions / we aren't going to need it\n\nIt seems to me that if terms are to have precedence, that needs to be defined somewhere, with the most likely candidates being the definitions of the terms themselves. If that is the case, I'm wondering whether you're objecting to the capability itself (i.e., 4 above), or it's just the terminology which is causing a problem.\n\n",
+          "createdAt": "2025-12-11T04:30:40Z",
+          "updatedAt": "2025-12-11T04:30:40Z"
         }
       ]
     },
@@ -2685,12 +2722,13 @@
       "assignees": [],
       "labels": [
         "vocabulary",
+        "editorial",
         "model",
         "terminology"
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\n_From @chrisn in [email](https://mailarchive.ietf.org/arch/msg/ai-control/2ZbEx73js_cTQT8mI1Wy6_0ZC_s):_\n\nThe \"no preference\" terminology could be misinterpreted as meaning that a website or content provider does not mind how their content is used (i.e., they don't have a preference either way). This would not be a valid assumption to make. It would be much more accurate to state that the preference is unknown. I recommend that the document aligns on the \"allow\", \"disallow\", and \"unknown\" statuses described in Section 5. This affects various parts of the draft:\n\n* In Section 3, change \"This can mean that no preference is stated for a given usage category\" to \"This can mean that the preference for a given usage category is unknown\".\n\n* In Section 3.2, which says \"allow, disallow, or no preference\"\n\n* In Section 6, I suggest a rephrasing: \"For example, the following states a preference to allow AI training (Section 4.2), disallow generative AI training (Section 4.3). The preference for categories other than subsets of these categories is unknown.\" (This would also fix the repeated \"and\" and \"other\" in the existing text.)\n\n* In Section 6.5, \"Otherwise, no preference is stated for that category of use\" should be \"Otherwise, the preference for that category of use is unknown\".\n\n* In Section 6.6, \"A mapping might then define that no preference is associated with other categories\" should be \"A mapping might then define the preference associated with other categories is unknown.\"\n\n\n### Proposed Resolution\n\n_No response_",
       "createdAt": "2025-09-28T09:02:02Z",
-      "updatedAt": "2025-12-09T00:25:42Z",
+      "updatedAt": "2025-12-11T04:37:59Z",
       "closedAt": null,
       "comments": [
         {
@@ -2721,7 +2759,7 @@
       "id": "I_kwDOOWk1-s7U9Fbl",
       "title": "Follow-Up: Previously Raised Concern on Automated Processing category\u2019s breadth, vagueness, and potential for harm",
       "url": "https://github.com/ietf-wg-aipref/drafts/issues/178",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "kmadhavan-msft",
       "authorAssociation": "NONE",
       "assignees": [],
@@ -2732,8 +2770,8 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nThis issue builds on concerns we raised earlier about the breadth and ambiguity of the automated processing category that we have previously [raised here](https://github.com/ietf-wg-aipref/drafts/issues/169). Despite prior feedback, the latest draft still retains language that conflates unrelated behaviors and lacks enforceable semantics. To summarize our prior concern: \n\nThe term \u201cAutomated Processing\u201d in the current draft is too broad and ambiguous, risking unintended inclusion of ordinary, essential web operations. This overreach could jeopardize legitimate and safe internet functions by restricting non-AI crawlers and foundational automation that keeps the web usable. One critical point to consider here is that existing mechanisms provided under [RFC 9309](https://www.rfc-editor.org/rfc/rfc9309.html) already provide a well understood and viable mechanism to address the scenarios for which this category is intended in the first place. \n\nOne additional observation to add is that we think that this term is not required and seems to have little support. The introduction of categories regarding training and outputs speaks to the crux of the concerns we hear from members of the working group and larger community. This begs the relevance of this \u201cuber\u201d category that may, as we indicate above, impact structural internet operations in ways that some do not anticipate.\n\n### Proposed Resolution\n\nRemove this high-level category completely. Given the edits already present in this draft, this category is largely unnecessary.",
       "createdAt": "2025-10-30T23:09:22Z",
-      "updatedAt": "2025-12-09T00:19:29Z",
-      "closedAt": null,
+      "updatedAt": "2025-12-11T04:04:59Z",
+      "closedAt": "2025-12-11T04:04:59Z",
       "comments": [
         {
           "author": "TimidRobot",
@@ -2741,6 +2779,13 @@
           "body": "This appears to be a duplicate of:\n- #155",
           "createdAt": "2025-11-12T10:29:08Z",
           "updatedAt": "2025-11-12T10:29:08Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Closing as automated processing has been removed.",
+          "createdAt": "2025-12-11T04:04:59Z",
+          "updatedAt": "2025-12-11T04:04:59Z"
         }
       ]
     },
@@ -2826,7 +2871,7 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nThe draft repeatedly uses the term \u201cclient\u201d in describing how content access and preference signaling occur. However, the term is ambiguous in this context. In standard web architecture, \u201cclient\u201d can mean a wide range of entities \u2013 browsers, intermediaries, SDKs, or even subcomponents of larger systems. Within this specification, the word could inadvertently be interpreted as referring to the internal workings of AI systems or proprietary business secrets, rather than the end user. \n\nThis ambiguity creates two key risks: \n\n1. **Interpretive confusion** \u2013 implementers may misread \u201cclient\u201d as implying insight into internal system design rather than describing an external access actor. \n2. **Unintended disclosure ris**k \u2013 references to \u201cclients\u201d could be construed as exposing or requiring disclosure of proprietary AI or service internals that are outside the scope of the draft. \n\nIn addition, the usage of the term \u201cclient\u201d is inconsistent with the working group\u2019s pivot toward output-based preferences, which focus on the representation and use of content in outputs rather than on the mechanisms or actors that perform access. Retaining \u201cclient\u201d therefore risks re-anchoring the draft in the previous model that the group has intentionally evolved beyond. \n\n### Proposed Resolution\n\nReplace \u201cclient\u201d with a more neutral term such as \u201cuser\u201d, which accurately captures the entity initiating access without implying any internal architecture.",
       "createdAt": "2025-10-30T23:19:10Z",
-      "updatedAt": "2025-12-09T00:24:21Z",
+      "updatedAt": "2025-12-11T07:39:41Z",
       "closedAt": null,
       "comments": [
         {
@@ -2835,6 +2880,20 @@
           "body": "Agreed with this issue.  Extending the \"output\" category to clients of a system brings internal and intermediate processes back in scope of something that was intended to scope them out.  \n\nI understand from in-person conversations that the concern is that intermediate steps in a multistep process might be operated by different organizations, and there is a desire not to allow preferences to get lost along the chain of operations on its way to an end-user.  I think there's a simpler way to do that, like for example to have a single sentence that these preferences apply at the user-facing step, and prior steps must ensure that the preference is communicated through the entire chain.",
           "createdAt": "2025-11-05T20:37:37Z",
           "updatedAt": "2025-11-05T20:37:37Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "See also #167.",
+          "createdAt": "2025-12-11T04:07:27Z",
+          "updatedAt": "2025-12-11T04:07:27Z"
+        },
+        {
+          "author": "chrisn",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "In terms of grounding or RAG type usage, preferences need to apply at the step that does the actual processing and not any downstream system.",
+          "createdAt": "2025-12-11T07:39:40Z",
+          "updatedAt": "2025-12-11T07:39:40Z"
         }
       ]
     },
