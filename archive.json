@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-12-18T02:02:40.488721+00:00",
+  "timestamp": "2026-01-01T02:25:20.345856+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -2077,9 +2077,17 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\n_Raised in [email by EKR](https://mailarchive.ietf.org/arch/msg/ai-control/dxpLCD7R2L-L07fEQCITjXjUcMY)_\n\n      AI Training:\n        The application of machine learning to data to produce or improve\n        a model for an artificial intelligence system.\n\nI'm not sure what \"machine learning\" is doing here.\n\n### Proposed Resolution\n\nI'm not sure what \"machine learning\" is doing here. Why not just:\n\n      The use of data to produce or improve an artificial\n      intelligence system.\n\nI would then strike the term \"machine learning\" entirely.",
       "createdAt": "2025-09-10T02:36:02Z",
-      "updatedAt": "2025-12-09T00:24:53Z",
+      "updatedAt": "2025-12-30T03:31:12Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "ashutoshk314",
+          "authorAssociation": "NONE",
+          "body": "Hello,  \nI would like to work on this issue if it is still open. Please let me know if I may proceed.\n\nThank you.",
+          "createdAt": "2025-12-30T03:31:12Z",
+          "updatedAt": "2025-12-30T03:31:12Z"
+        }
+      ]
     },
     {
       "number": 153,
