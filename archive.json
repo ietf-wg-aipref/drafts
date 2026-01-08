@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-01-01T02:25:20.345856+00:00",
+  "timestamp": "2026-01-08T02:09:14.465097+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -2058,9 +2058,31 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\n_Raised in [email by EKR](https://mailarchive.ietf.org/arch/msg/ai-control/dxpLCD7R2L-L07fEQCITjXjUcMY)_\n\nS 2.\n\n      Artificial Intelligence (AI):\n      An engineered system of sufficient complexity that, for a given\n      set of human-defined objectives, learns from data to generate\n      outputs such as content, predictions, recommendations, or\n      decisions.\n\nAs I mentioned previously, I think this definition of AI is extremely\nproblematic and would effectively sweep in any statistical\ntechnique. I understand that \"sufficient complexity\" is intended to\nsomehow reduce the scope, but it's a totally subjective standard.\n\n### Proposed Resolution\n\n_No response_",
       "createdAt": "2025-09-10T02:34:49Z",
-      "updatedAt": "2025-12-09T00:24:53Z",
+      "updatedAt": "2026-01-06T11:24:30Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "bkmgit",
+          "authorAssociation": "NONE",
+          "body": "The definition of an AI system should build on the definition of machine learning.",
+          "createdAt": "2026-01-06T08:50:02Z",
+          "updatedAt": "2026-01-06T08:50:02Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "@bkmgit can you say why? Assertions without reasoning don't really help us come to consensus.",
+          "createdAt": "2026-01-06T09:52:30Z",
+          "updatedAt": "2026-01-06T09:52:30Z"
+        },
+        {
+          "author": "bkmgit",
+          "authorAssociation": "NONE",
+          "body": "Generative AI implementations often use machine learning to create models.  AI in general encompasses machine learning as a technique https://en.wikipedia.org/wiki/Machine_learning",
+          "createdAt": "2026-01-06T11:24:30Z",
+          "updatedAt": "2026-01-06T11:24:30Z"
+        }
+      ]
     },
     {
       "number": 152,
@@ -2077,7 +2099,7 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\n_Raised in [email by EKR](https://mailarchive.ietf.org/arch/msg/ai-control/dxpLCD7R2L-L07fEQCITjXjUcMY)_\n\n      AI Training:\n        The application of machine learning to data to produce or improve\n        a model for an artificial intelligence system.\n\nI'm not sure what \"machine learning\" is doing here.\n\n### Proposed Resolution\n\nI'm not sure what \"machine learning\" is doing here. Why not just:\n\n      The use of data to produce or improve an artificial\n      intelligence system.\n\nI would then strike the term \"machine learning\" entirely.",
       "createdAt": "2025-09-10T02:36:02Z",
-      "updatedAt": "2025-12-30T03:31:12Z",
+      "updatedAt": "2026-01-06T05:31:52Z",
       "closedAt": null,
       "comments": [
         {
@@ -2085,7 +2107,7 @@
           "authorAssociation": "NONE",
           "body": "Hello,  \nI would like to work on this issue if it is still open. Please let me know if I may proceed.\n\nThank you.",
           "createdAt": "2025-12-30T03:31:12Z",
-          "updatedAt": "2025-12-30T03:31:12Z"
+          "updatedAt": "2026-01-06T05:31:52Z"
         }
       ]
     },
@@ -2104,9 +2126,17 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\n_Raised in [email by EKR](https://mailarchive.ietf.org/arch/msg/ai-control/dxpLCD7R2L-L07fEQCITjXjUcMY)_\n\nS 3.\n\n    After processing a statement of preferences the recipient associates\n    each category of use one of three preference values: \"allowed\",\n    \"disallowed\", or \"unknown\".  In the absence of a statement of\n    preference, all usage categories are assigned a preference value of\n    \"unknown\".\n\nWhat's the semnatic difference between \"unknown\" and \"allowed\"?\nEventually, I need to either use or not use a given piece of\ndata. Is this just an internal detail of the algorithm?\n\n### Proposed Resolution\n\n_No response_",
       "createdAt": "2025-09-10T02:36:59Z",
-      "updatedAt": "2025-12-08T23:55:31Z",
+      "updatedAt": "2026-01-06T05:35:11Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "@ekr we discussed this some in Z\u00fcrich. \n\nThe history here is that there's a desire for these preferences to be useful both in an opt-in and an opt-out environment (e.g., as defined by a legal system), so 'unknown' is neither -- it depends on what the default is, which is specifically not set by us. \n\nAlso, remember that we're just conveying preferences, which are not the only things that influence what's allowed (or not).",
+          "createdAt": "2026-01-06T05:35:11Z",
+          "updatedAt": "2026-01-06T05:35:11Z"
+        }
+      ]
     },
     {
       "number": 154,
@@ -2123,7 +2153,7 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\n_Raised in [email by EKR](https://mailarchive.ietf.org/arch/msg/ai-control/dxpLCD7R2L-L07fEQCITjXjUcMY)_\n\nS 5.\n\n    One approach for dealing with an \"unknown\" outcome is to assign a\n    default value.  This document takes no position on what default might\n    be assigned.\n\nI don't think this makes any sense. The purpose of this document\nis to allow the processing agent to understand the declaring\nparty's preferences, and we don't even require the agent\nto respect them, so it's weird to talk about defaults in\nthat context.\n\n### Proposed Resolution\n\n_No response_",
       "createdAt": "2025-09-10T02:38:07Z",
-      "updatedAt": "2025-12-08T23:55:46Z",
+      "updatedAt": "2026-01-06T05:36:14Z",
       "closedAt": null,
       "comments": [
         {
@@ -2132,6 +2162,13 @@
           "body": "Regarding defaults, I suggest that the vocabulary should promote accessibility-friendly defaults, especially for people with cognitive and learning disabilities.\n\nWhen no explicit preference is provided, the system should fall back to defaults that reduce cognitive load  e.g. clear/simple text, predictable navigation, and visual supports. This avoids situations where lack of preference leads to inaccessible or overwhelming outputs.\n\nIn my applied research (Dec\u00e0leg per a l\u2019atenci\u00f3 al p\u00fablic amb TEA, Cerdan-Chiscano, 2023, Diputaci\u00f3 de Barcelona & Aprenem Autisme), one of the key findings is that defaults matter: providing simple explanations, clear documents, and advance information is essential to avoid communication breakdown.\n\nI therefore recommend that the draft explicitly states that defaults should favour accessibility and usability, with cognitive accessibility as a key dimension.",
           "createdAt": "2025-09-21T10:50:53Z",
           "updatedAt": "2025-09-21T11:37:39Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "See #153. ",
+          "createdAt": "2026-01-06T05:36:14Z",
+          "updatedAt": "2026-01-06T05:36:14Z"
         }
       ]
     },
@@ -2310,9 +2347,17 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\n_Raised in [email by EKR](https://mailarchive.ietf.org/arch/msg/ai-control/dxpLCD7R2L-L07fEQCITjXjUcMY)_\n\nAs an aside, it's obviously possible for a bot to collect data for\nmultiple purposes. Maybe I've missed it, but does this draft say what\nthe rules are there? I guess you're supposed to somehow only proceed\nif the intersection of all the uses is allowed? S 5.1 seems to be\nabout the related but different problem of harmonizing multiple\nstatements for a given usage.\n\n### Proposed Resolution\n\n_No response_",
       "createdAt": "2025-09-10T02:45:19Z",
-      "updatedAt": "2025-12-09T00:12:24Z",
+      "updatedAt": "2026-01-06T05:40:29Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "@ekr I think you're correct (i.e., our preferences are use-based, not specific to collection time), but I suspect some will disagree with that. Worth discussing and clarifying.",
+          "createdAt": "2026-01-06T05:40:29Z",
+          "updatedAt": "2026-01-06T05:40:29Z"
+        }
+      ]
     },
     {
       "number": 159,
@@ -2525,7 +2570,7 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nI'm going to quote @coopdanger here, because her formulation of the issue is pretty good.  I will follow up with a nit on the details, but that doesn't diminish the value of the feedback:\n\n> This raises the question of whether the vocabulary is only meant to be used to express preferences about usage and not initial access regardless of the attachment mechanism. The very first sentence of the vocab doc uses the ambiguous term \u201cprocessing\u201d while most of the rest of the doc uses \u201cusage.\u201d If the intent is to define a vocabulary that only expresses preferences about an asset after the asset has been obtained (by whatever means), it needs an explicit scoping limitation to that effect. And then every attachment mechanism that gets defined in the IETF or elsewhere needs to reflect that.\n>\n> Making this distinction explicit might be a simple resolution to some of the concerns that have been raised about the automated processing category, because it would make clear that it\u2019s unnecessary to resolve the question of whether crawling/accessing a site is itself considered automated processing. No preferences are being expressed about access, other than insofar as sites would expect crawlers not to crawl their site if the site wishes to disallow all the uses of interest to the crawler. It would not resolve the concerns about behavior habituation and misinterpretation, though.\n>\n> Even with this distinction made explicit, there would still be the possibility of basically nonsensical use cases, e.g.:\n>\n> ```http\n> User-Agent: *\n> Content-Usage: /foo bots=n\n> ```\n> \n> Like what is the point of allowing crawling/access but then disallowing all usage? Maybe there is a use case I\u2019m missing.\n>\n> Note also that it may be entirely unrealistic to say that everywhere an attachment mechanism is specified, it has to preserve this distinction between access and usage. It\u2019s not like we can constrain mechanisms that get defined elsewhere.\n> \n> I\u2019ve never really been convinced of the need for the top-level category, but if we are going to have one we need to be clear about when it applies, and clarifying that it only applies after an asset has been obtained might help mitigate concerns about its breadth.\n\n### Proposed Resolution\n\nThere was some effort to make this distinction in editing, but it's clear that we need to be much clearer about it throughout.",
       "createdAt": "2025-09-23T03:45:57Z",
-      "updatedAt": "2025-11-03T08:51:51Z",
+      "updatedAt": "2026-01-06T05:41:21Z",
       "closedAt": null,
       "comments": [
         {
@@ -2534,6 +2579,13 @@
           "body": "The very pedantic nit...\n\nThe example probably needs an `Allow: /foo` line.  RFC 9309 is not clear when it comes to delineating groups, particularly when it comes to extensions like this one.  That means that a group with no Allow or Disallow lines might be joined to the next group.  That is, this might be one or two groups:\n\n```\nUser-Agent: *\nContent-Usage: /foo bots=n\nUser-Agent: bar\nContent-Usage: /foo bots=y\n```\n\nThe more substantive point is with respect to this:\n\n> Like what is the point of allowing crawling/access but then disallowing all usage? Maybe there is a use case I\u2019m missing.\n\nAs we have discussed at some length, these are preferences and so crawled content that has an associated preference that it not be used for any purpose is still available for use in cases where there is a reason to ignore preferences.\n\n> Note also that it may be entirely unrealistic to say that everywhere an attachment mechanism is specified, it has to preserve this distinction between access and usage. It\u2019s not like we can constrain mechanisms that get defined elsewhere.\n\nI don't think that this is unrealistic.  Getting the bits and using them are distinct actions.  Consider where the preferences are carried in an HTTP header.  It's not like the response isn't delivered and available, even if the preferences indicate that the reason for making the request goes against the stated preferences.  This distinction recognizes that there are still cases where the use motivates (or justifies) ignoring the preference.",
           "createdAt": "2025-09-23T03:56:48Z",
           "updatedAt": "2025-09-23T03:56:48Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "See also #158.",
+          "createdAt": "2026-01-06T05:41:20Z",
+          "updatedAt": "2026-01-06T05:41:20Z"
         }
       ]
     },
@@ -2714,7 +2766,7 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\n_From @chrisn in [email](https://mailarchive.ietf.org/arch/msg/ai-control/2ZbEx73js_cTQT8mI1Wy6_0ZC_s):_\n\nWhile I appreciate the effort that has gone into crafting this definition, as it stands it still allows all the generative AI usage that publishers find problematic. If adopted, publishers will be in the position of having to allow the Search Category, because they cannot realistically opt-out of traditional (i.e., non generative AI search).\n\nGiven that major search engines are rapidly integrating generative AI features, a generative AI response to a user query that includes links provided via RAG or grounding could be interpreted as \"directs users to the location from which the assets were retrieved\". The qualifying statements: \"Only those parts of applications that direct users to the location of an asset are included in this category of use. This includes the use of titles or excerpts from assets that are used to help users select between multiple candidate options\" don't address this concern. The same applies to \"Parts of applications that do not direct users to the location of assets, such as summaries, are not covered by this category of use\", because search engines that integrate generative AI do produce summaries.\n\n### Proposed Resolution\n\n_No response_",
       "createdAt": "2025-09-28T08:59:46Z",
-      "updatedAt": "2025-12-09T00:18:39Z",
+      "updatedAt": "2026-01-06T05:53:05Z",
       "closedAt": null,
       "comments": [
         {
@@ -2723,6 +2775,13 @@
           "body": "From Bradley Silver in [email](https://mailarchive.ietf.org/arch/msg/ai-control/zaXD4Ah5ruMVIr1sbdwMVeYkOIk):\n\nOn search, I agree with the concerns Chris raised - but I also wonder whether this is something that can be better clarified in the drafting, versus there being actual disagreement about what that category is intended to cover or not, when it comes to the line between search results and \"answers\" with citations.",
           "createdAt": "2025-09-28T09:04:23Z",
           "updatedAt": "2025-09-28T09:04:23Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Hey @chrisn - to clarify: I understand that you want to express a preference for 'traditional' search while expressing one against 'ai' search. \n\nIf a search engine returned a results page that looks like traditional search and happens to use AI to generate it, would you still want to disapprove of it? Or is there some other aspect that it's important for you to express a preference for? ",
+          "createdAt": "2026-01-06T05:53:05Z",
+          "updatedAt": "2026-01-06T05:53:05Z"
         }
       ]
     },
