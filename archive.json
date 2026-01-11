@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-01-08T02:09:14.465097+00:00",
+  "timestamp": "2026-01-11T02:25:59.519263+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -3010,7 +3010,7 @@
       "id": "I_kwDOOWk1-s7YNJma",
       "title": "Search Category references AI Output category",
       "url": "https://github.com/ietf-wg-aipref/drafts/issues/185",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "joncaldon",
       "authorAssociation": "NONE",
       "assignees": [],
@@ -3020,8 +3020,8 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nIf we're not going to have an AI Output category, then the Search category (which may need other work, of course) should be purged of references to AI Output, and should be crafted to stand on its own.\n\nSee:\n\u201cThe Search category of use is a refinement of the AI Output category, with the addition of the following two conditions\u2026\u201d\n\u201cLike the AI Output category of use, Search includes whatever model training is necessary to produce the models that are used in the   generation of these outputs.\u201d\n\u201cThe use of assets for Search is a proper subset of AI Output usage.\u201d\n\nAcknowledge this is still pending alternative proposals for language for the AI Output category. \n\n\n### Proposed Resolution\n\n_No response_",
       "createdAt": "2025-11-14T22:03:01Z",
-      "updatedAt": "2025-12-09T00:38:56Z",
-      "closedAt": null,
+      "updatedAt": "2026-01-08T21:21:53Z",
+      "closedAt": "2026-01-08T21:21:53Z",
       "comments": [
         {
           "author": "mnot",
@@ -3029,6 +3029,13 @@
           "body": "This is something that the editors can take care of.",
           "createdAt": "2025-11-17T03:31:34Z",
           "updatedAt": "2025-11-17T03:31:34Z"
+        },
+        {
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "This has already been dealt with.",
+          "createdAt": "2026-01-08T21:21:53Z",
+          "updatedAt": "2026-01-08T21:21:53Z"
         }
       ]
     },
@@ -8674,6 +8681,46 @@
           "body": "@martinthomson there is still a reference to the old automated processing category in line 556/497:\r\n\r\ntrain-ai=y, train-ai=\"n\", search=n, search, bots=n, bots=()\r\n\r\n",
           "createdAt": "2025-11-27T09:01:46Z",
           "updatedAt": "2025-11-27T09:01:46Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 190,
+      "id": "PR_kwDOOWk1-s68N0HA",
+      "title": "No preference -> unknown preference",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/190",
+      "state": "OPEN",
+      "author": "martinthomson",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "We've used \"no preference\" or \"no expression of preference\" in a few places.  It could be clearer.\r\n\r\nCloses #174.",
+      "createdAt": "2026-01-08T22:37:33Z",
+      "updatedAt": "2026-01-09T09:53:18Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "75443383587639ced080883e6f29349241657ad3",
+      "headRepository": "ietf-wg-aipref/drafts",
+      "headRefName": "no-preference",
+      "headRefOid": "182a2fce915b8ad78fb6f7f60e0b98bfbee3e9ff",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWk1-s7ZJtfe",
+          "commit": {
+            "abbreviatedOid": "182a2fc"
+          },
+          "author": "chrisn",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "Thanks!",
+          "createdAt": "2026-01-09T09:53:18Z",
+          "updatedAt": "2026-01-09T09:53:18Z",
           "comments": []
         }
       ]
