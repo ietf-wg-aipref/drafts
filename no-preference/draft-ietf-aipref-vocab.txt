@@ -5,8 +5,8 @@
 AI Preferences                                                 P. Keller
 Internet-Draft                                               Open Future
 Intended status: Standards Track                         M. Thomson, Ed.
-Expires: 12 July 2026                                            Mozilla
-                                                          8 January 2026
+Expires: 17 July 2026                                            Mozilla
+                                                         13 January 2026
 
 
             A Vocabulary For Expressing AI Usage Preferences
@@ -51,7 +51,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 12 July 2026.
+   This Internet-Draft will expire on 17 July 2026.
 
 Copyright Notice
 
@@ -530,8 +530,8 @@ Table of Contents
 
    For example, an alternative format might only provide the ability to
    convey preferences for a subset of the categories of use.  A mapping
-   might then define that a preference of unknown is associated with
-   other categories.
+   might then define that an unknown preference is associated with other
+   categories.
 
 7.  Security Considerations
 
