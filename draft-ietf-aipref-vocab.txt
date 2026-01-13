@@ -5,8 +5,8 @@
 AI Preferences                                                 P. Keller
 Internet-Draft                                               Open Future
 Intended status: Standards Track                         M. Thomson, Ed.
-Expires: 4 June 2026                                             Mozilla
-                                                         1 December 2025
+Expires: 17 July 2026                                            Mozilla
+                                                         13 January 2026
 
 
             A Vocabulary For Expressing AI Usage Preferences
@@ -51,11 +51,11 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 4 June 2026.
+   This Internet-Draft will expire on 17 July 2026.
 
 Copyright Notice
 
-   Copyright (c) 2025 IETF Trust and the persons identified as the
+   Copyright (c) 2026 IETF Trust and the persons identified as the
    document authors.  All rights reserved.
 
    This document is subject to BCP 78 and the IETF Trust's Legal
@@ -164,12 +164,12 @@ Table of Contents
    associated with the category.
 
    A statement of preference can indicate preferences about some, all,
-   or none of the categories from the vocabulary.  This can mean that no
-   preference is stated for a given usage category.
+   or none of the categories from the vocabulary.  This can mean that
+   the preference is unknown for some usage categories.
 
    Some categories describe a proper subset of the usages of other
    categories.  A preference that is stated for the more general
-   category applies if no preference is stated for the more specific
+   category applies if the preference is unknown for the more specific
    category.
 
    For example, a more general category might be assigned a preference
@@ -211,7 +211,7 @@ Table of Contents
 
    This specification provides a set of definitions for different
    categories of use, plus a system for associating simple preferences
-   to each (allow, disallow, or no preference; see Section 3).
+   to each (allow, disallow, or unknown; see Section 3).
 
    This specification does not provide any enforcement mechanism for
    those preferences, and conformance to it does not encompass whether
@@ -330,7 +330,7 @@ Table of Contents
        usage category, recursively apply this process to that category
        and use the result of that process.
 
-   3.  Otherwise, no preference is stated.
+   3.  Otherwise, the preference for that category is unknown.
 
    This process results in one of three potential answers: allow,
    disallow, and unknown.  Applications can use the answer to guide
@@ -355,7 +355,7 @@ Table of Contents
    *  Otherwise, if any statement of preference allows the usage, the
       result is that the usage is allowed.
 
-   *  Otherwise, no preference is stated.
+   *  Otherwise, the preference for that category is unknown.
 
    This process ensures that the most restrictive preference applies.
 
@@ -391,8 +391,8 @@ Table of Contents
 
    For example, the following states a preference to allow foundation
    model production (Section 4.1), disallow search (Section 4.2), and
-   and states no preference for other categories other than subsets of
-   these categories:
+   and preference for other categories other than subsets of these
+   categories are unknown:
 
    train-ai=y, search=n
 
@@ -481,21 +481,21 @@ Table of Contents
    *  If the value is a Token with a value of n, the associated
       preference is to disallow that category of use.
 
-   *  Otherwise, no preference is stated for that category of use.
+   *  Otherwise, the preference for that category is unknown.
 
    Note that this last alternative includes the key being absent from
    the collection, values that are not Tokens, and Token values that are
    other than y or n.  All of these are not errors, they only result in
-   no preference being inferred.
+   the corresponding preference being unknown.
 
    It is important to note that if the same key appears multiple times,
    only the last value is taken.  This means that duplicating a key
    could result in unexpected outcomes.  For example, the following
-   expresses no preferences:
+   means that preferences are unknown:
 
    train-ai=y, train-ai="n", search=n, search
 
-   If the parsing of the Dictionary fails, no preferences are stated.
+   If the parsing of the Dictionary fails, preferences are unknown.
    This includes where keys include uppercase characters, as this format
    is case sensitive (more correctly, it operates on bytes, not
    strings).
@@ -503,11 +503,11 @@ Table of Contents
    This document does not define a use for parameters.  Where parameters
    are used, only those parameters associated with the value that is
    selected according to Section 4.2.2 of [FIELDS].  Parameters can
-   therefore be carried for any preference value, including where no
-   preference is expressed.
+   therefore be carried for any preference value, including where
+   preferences are unknown.
 
    For example, the following train-ai preference has parameters even
-   though no preference is expressed:
+   though the preference is unknown:
 
    train-ai;has;parameters="?";
 
@@ -530,7 +530,7 @@ Table of Contents
 
    For example, an alternative format might only provide the ability to
    convey preferences for a subset of the categories of use.  A mapping
-   might then define that no preference is associated with other
+   might then define that an unknown preference is associated with other
    categories.
 
 7.  Security Considerations
@@ -571,7 +571,7 @@ Table of Contents
 
    [ATTACH]   Illyes, G. and M. Thomson, Ed., "A Vocabulary For
               Expressing AI Usage Preferences", Work in Progress,
-              Internet-Draft, draft-ietf-aipref-attach, December 2025,
+              Internet-Draft, draft-ietf-aipref-attach, January 2026,
               <https://datatracker.ietf.org/doc/html/draft-ietf-aipref-
               attach>.
 

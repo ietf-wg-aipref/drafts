@@ -23,12 +23,12 @@ of restrictions or permissions for use of digital assets by such systems.
     Python 3.12.12
     ConfigArgParse 1.7
     google-i18n-address 3.1.1
-    intervaltree 3.1.0
+    intervaltree 3.2.1
     Jinja2 3.1.6
-    lxml 5.3.1
-    platformdirs 4.5.0
+    lxml 6.0.2
+    platformdirs 4.5.1
     pycountry 24.6.1
-    PyYAML 6.0.2
+    PyYAML 6.0.3
     requests 2.32.5
     wcwidth 0.2.14
 -->
@@ -1049,11 +1049,11 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <thead><tr>
 <td class="left">Internet-Draft</td>
 <td class="center">AI Preference Vocabulary</td>
-<td class="right">December 2025</td>
+<td class="right">January 2026</td>
 </tr></thead>
 <tfoot><tr>
 <td class="left">Keller &amp; Thomson</td>
-<td class="center">Expires 4 June 2026</td>
+<td class="center">Expires 17 July 2026</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1066,12 +1066,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <dd class="internet-draft">draft-ietf-aipref-vocab-latest</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2025-12-01" class="published">1 December 2025</time>
+<time datetime="2026-01-13" class="published">13 January 2026</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Standards Track</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2026-06-04">4 June 2026</time></dd>
+<dd class="expires"><time datetime="2026-07-17">17 July 2026</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1129,7 +1129,7 @@ of restrictions or permissions for use of digital assets by such systems.<a href
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 4 June 2026.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 17 July 2026.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1138,7 +1138,7 @@ of restrictions or permissions for use of digital assets by such systems.<a href
 <a href="#name-copyright-notice" class="section-name selfRef">Copyright Notice</a>
         </h2>
 <p id="section-boilerplate.2-1">
-            Copyright (c) 2025 IETF Trust and the persons identified as the
+            Copyright (c) 2026 IETF Trust and the persons identified as the
             document authors. All rights reserved.<a href="#section-boilerplate.2-1" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.2-2">
             This document is subject to BCP 78 and the IETF Trust's Legal
@@ -1340,10 +1340,10 @@ A preference is either to allow or disallow
 the usage associated with the category.<a href="#section-3-2" class="pilcrow">¶</a></p>
 <p id="section-3-3">A statement of preference can indicate preferences
 about some, all, or none of the categories from the vocabulary.
-This can mean that no preference is stated for a given usage category.<a href="#section-3-3" class="pilcrow">¶</a></p>
+This can mean that the preference is unknown for some usage categories.<a href="#section-3-3" class="pilcrow">¶</a></p>
 <p id="section-3-4">Some categories describe a proper subset of the usages of other categories.
 A preference that is stated for the more general category applies
-if no preference is stated for the more specific category.<a href="#section-3-4" class="pilcrow">¶</a></p>
+if the preference is unknown for the more specific category.<a href="#section-3-4" class="pilcrow">¶</a></p>
 <p id="section-3-5">For example, a more general category might be assigned a preference
 that allows the associated usage.
 In the absence of any statement of preference
@@ -1383,7 +1383,7 @@ for variation between implementations.<a href="#section-3.1-2" class="pilcrow">�
         </h3>
 <p id="section-3.2-1">This specification provides a set of definitions for different
 categories of use, plus a system for associating simple
-preferences to each (allow, disallow, or no preference; see <a href="#model" class="auto internal xref">Section 3</a>).<a href="#section-3.2-1" class="pilcrow">¶</a></p>
+preferences to each (allow, disallow, or unknown; see <a href="#model" class="auto internal xref">Section 3</a>).<a href="#section-3.2-1" class="pilcrow">¶</a></p>
 <p id="section-3.2-2">This specification does not provide any enforcement mechanism
 for those preferences, and conformance to it does not encompass
 whether preferences are actually respected during data processing.<a href="#section-3.2-2" class="pilcrow">¶</a></p>
@@ -1536,7 +1536,7 @@ recursively apply this process to that category
 and use the result of that process.<a href="#section-5-2.2.1" class="pilcrow">¶</a></p>
 </li>
         <li id="section-5-2.3">
-          <p id="section-5-2.3.1">Otherwise, no preference is stated.<a href="#section-5-2.3.1" class="pilcrow">¶</a></p>
+          <p id="section-5-2.3.1">Otherwise, the preference for that category is unknown.<a href="#section-5-2.3.1" class="pilcrow">¶</a></p>
 </li>
       </ol>
 <p id="section-5-3">This process results in one of three potential answers:
@@ -1566,7 +1566,7 @@ the result is that the usage is disallowed.<a href="#section-5.1-3.1.1" class="p
 the result is that the usage is allowed.<a href="#section-5.1-3.2.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-5.1-3.3">
-            <p id="section-5.1-3.3.1">Otherwise, no preference is stated.<a href="#section-5.1-3.3.1" class="pilcrow">¶</a></p>
+            <p id="section-5.1-3.3.1">Otherwise, the preference for that category is unknown.<a href="#section-5.1-3.3.1" class="pilcrow">¶</a></p>
 </li>
         </ul>
 <p id="section-5.1-4">This process ensures that the most restrictive preference applies.<a href="#section-5.1-4" class="pilcrow">¶</a></p>
@@ -1613,8 +1613,8 @@ which can be either <code>y</code> or <code>n</code>; see <a href="#y-or-n" clas
 <p id="section-6-3">For example, the following states a preference
 to allow foundation model production (<a href="#train-ai" class="auto internal xref">Section 4.1</a>),
 disallow search (<a href="#search" class="auto internal xref">Section 4.2</a>), and
-and states no preference for other categories
-other than subsets of these categories:<a href="#section-6-3" class="pilcrow">¶</a></p>
+and preference for other categories
+other than subsets of these categories are unknown:<a href="#section-6-3" class="pilcrow">¶</a></p>
 <div class="alignLeft art-text artwork" id="section-6-4">
 <pre>
 train-ai=y, search=n
@@ -1741,7 +1741,7 @@ the associated preference is to allow that category of use.<a href="#section-6.5
 the associated preference is to disallow that category of use.<a href="#section-6.5-4.2.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-6.5-4.3">
-            <p id="section-6.5-4.3.1">Otherwise, no preference is stated for that category of use.<a href="#section-6.5-4.3.1" class="pilcrow">¶</a></p>
+            <p id="section-6.5-4.3.1">Otherwise, the preference for that category is unknown.<a href="#section-6.5-4.3.1" class="pilcrow">¶</a></p>
 </li>
         </ul>
 <p id="section-6.5-5">Note that this last alternative includes
@@ -1749,18 +1749,18 @@ the key being absent from the collection,
 values that are not Tokens,
 and Token values that are other than <code>y</code> or <code>n</code>.
 All of these are not errors,
-they only result in no preference being inferred.<a href="#section-6.5-5" class="pilcrow">¶</a></p>
+they only result in the corresponding preference being unknown.<a href="#section-6.5-5" class="pilcrow">¶</a></p>
 <p id="section-6.5-6">It is important to note that
 if the same key appears multiple times,
 only the last value is taken.
 This means that duplicating a key could result in unexpected outcomes.
-For example, the following expresses no preferences:<a href="#section-6.5-6" class="pilcrow">¶</a></p>
+For example, the following means that preferences are unknown:<a href="#section-6.5-6" class="pilcrow">¶</a></p>
 <div class="alignLeft art-text artwork" id="section-6.5-7">
 <pre>
 train-ai=y, train-ai="n", search=n, search
 </pre><a href="#section-6.5-7" class="pilcrow">¶</a>
 </div>
-<p id="section-6.5-8">If the parsing of the Dictionary fails, no preferences are stated.
+<p id="section-6.5-8">If the parsing of the Dictionary fails, preferences are unknown.
 This includes where keys include uppercase characters,
 as this format is case sensitive
 (more correctly, it operates on bytes, not strings).<a href="#section-6.5-8" class="pilcrow">¶</a></p>
@@ -1769,9 +1769,9 @@ Where parameters are used,
 only those parameters associated with the value that is selected
 according to <span><a href="https://rfc-editor.org/rfc/rfc9651#section-4.2.2" class="relref">Section 4.2.2</a> of [<a href="#FIELDS" class="cite xref">FIELDS</a>]</span>.
 Parameters can therefore be carried for any preference value,
-including where no preference is expressed.<a href="#section-6.5-9" class="pilcrow">¶</a></p>
+including where preferences are unknown.<a href="#section-6.5-9" class="pilcrow">¶</a></p>
 <p id="section-6.5-10">For example, the following <code>train-ai</code> preference has parameters
-even though no preference is expressed:<a href="#section-6.5-10" class="pilcrow">¶</a></p>
+even though the preference is unknown:<a href="#section-6.5-10" class="pilcrow">¶</a></p>
 <div class="alignLeft art-text artwork" id="section-6.5-11">
 <pre>
 train-ai;has;parameters="?";
@@ -1799,7 +1799,8 @@ it only needs to be clear and unambiguous.<a href="#section-6.6-3" class="pilcro
 <p id="section-6.6-4">For example, an alternative format
 might only provide the ability to convey preferences
 for a subset of the categories of use.
-A mapping might then define that no preference is associated with other categories.<a href="#section-6.6-4" class="pilcrow">¶</a></p>
+A mapping might then define that an unknown preference
+is associated with other categories.<a href="#section-6.6-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 </section>
@@ -1862,7 +1863,7 @@ is subject to the security considerations in <span><a href="https://rfc-editor.o
 <dl class="references">
 <dt id="ATTACH">[ATTACH]</dt>
         <dd>
-<span class="refAuthor">Illyes, G.</span> and <span class="refAuthor">M. Thomson, Ed.</span>, <span class="refTitle">"A Vocabulary For Expressing AI Usage Preferences"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-aipref-attach</span>, <time datetime="2025-12" class="refDate">December 2025</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-aipref-attach">https://datatracker.ietf.org/doc/html/draft-ietf-aipref-attach</a>&gt;</span>. </dd>
+<span class="refAuthor">Illyes, G.</span> and <span class="refAuthor">M. Thomson, Ed.</span>, <span class="refTitle">"A Vocabulary For Expressing AI Usage Preferences"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-aipref-attach</span>, <time datetime="2026-01" class="refDate">January 2026</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-aipref-attach">https://datatracker.ietf.org/doc/html/draft-ietf-aipref-attach</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="UTF8">[UTF8]</dt>
       <dd>
