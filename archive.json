@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-01-11T02:25:59.519263+00:00",
+  "timestamp": "2026-01-15T02:09:08.008930+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -2790,7 +2790,7 @@
       "id": "I_kwDOOWk1-s7OUOoF",
       "title": "\"No preference\" vs \"unknown\"",
       "url": "https://github.com/ietf-wg-aipref/drafts/issues/174",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "mnot",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
@@ -2802,8 +2802,8 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\n_From @chrisn in [email](https://mailarchive.ietf.org/arch/msg/ai-control/2ZbEx73js_cTQT8mI1Wy6_0ZC_s):_\n\nThe \"no preference\" terminology could be misinterpreted as meaning that a website or content provider does not mind how their content is used (i.e., they don't have a preference either way). This would not be a valid assumption to make. It would be much more accurate to state that the preference is unknown. I recommend that the document aligns on the \"allow\", \"disallow\", and \"unknown\" statuses described in Section 5. This affects various parts of the draft:\n\n* In Section 3, change \"This can mean that no preference is stated for a given usage category\" to \"This can mean that the preference for a given usage category is unknown\".\n\n* In Section 3.2, which says \"allow, disallow, or no preference\"\n\n* In Section 6, I suggest a rephrasing: \"For example, the following states a preference to allow AI training (Section 4.2), disallow generative AI training (Section 4.3). The preference for categories other than subsets of these categories is unknown.\" (This would also fix the repeated \"and\" and \"other\" in the existing text.)\n\n* In Section 6.5, \"Otherwise, no preference is stated for that category of use\" should be \"Otherwise, the preference for that category of use is unknown\".\n\n* In Section 6.6, \"A mapping might then define that no preference is associated with other categories\" should be \"A mapping might then define the preference associated with other categories is unknown.\"\n\n\n### Proposed Resolution\n\n_No response_",
       "createdAt": "2025-09-28T09:02:02Z",
-      "updatedAt": "2025-12-11T04:37:59Z",
-      "closedAt": null,
+      "updatedAt": "2026-01-13T11:05:47Z",
+      "closedAt": "2026-01-13T11:05:47Z",
       "comments": [
         {
           "author": "martinthomson",
@@ -8690,24 +8690,26 @@
       "id": "PR_kwDOOWk1-s68N0HA",
       "title": "No preference -> unknown preference",
       "url": "https://github.com/ietf-wg-aipref/drafts/pull/190",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "martinthomson",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "We've used \"no preference\" or \"no expression of preference\" in a few places.  It could be clearer.\r\n\r\nCloses #174.",
       "createdAt": "2026-01-08T22:37:33Z",
-      "updatedAt": "2026-01-09T09:53:18Z",
+      "updatedAt": "2026-01-13T11:05:48Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "75443383587639ced080883e6f29349241657ad3",
       "headRepository": "ietf-wg-aipref/drafts",
       "headRefName": "no-preference",
-      "headRefOid": "182a2fce915b8ad78fb6f7f60e0b98bfbee3e9ff",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "headRefOid": "91b4302e1f4f60cda0fba67efcc4dce8d46a43da",
+      "closedAt": "2026-01-13T11:05:46Z",
+      "mergedAt": "2026-01-13T11:05:46Z",
+      "mergedBy": "martinthomson",
+      "mergeCommit": {
+        "oid": "03c7ea334c0b99a3495b31f58421aa8b960f80b3"
+      },
       "comments": [],
       "reviews": [
         {
@@ -8722,6 +8724,46 @@
           "createdAt": "2026-01-09T09:53:18Z",
           "updatedAt": "2026-01-09T09:53:18Z",
           "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWk1-s7Z1rVN",
+          "commit": {
+            "abbreviatedOid": "182a2fc"
+          },
+          "author": "paul2keller",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-01-13T09:12:50Z",
+          "updatedAt": "2026-01-13T09:13:18Z",
+          "comments": [
+            {
+              "originalPosition": 101,
+              "body": "this sounds strange (overly complicated) to me. should this not be \"....that an unknown preference is associated...\"",
+              "createdAt": "2026-01-13T09:12:50Z",
+              "updatedAt": "2026-01-13T09:13:18Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s7Z3hDe",
+          "commit": {
+            "abbreviatedOid": "182a2fc"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-01-13T11:05:27Z",
+          "updatedAt": "2026-01-13T11:05:28Z",
+          "comments": [
+            {
+              "originalPosition": 101,
+              "body": "```suggestion\nA mapping might then define that an unknown preference\n```",
+              "createdAt": "2026-01-13T11:05:27Z",
+              "updatedAt": "2026-01-13T11:05:28Z"
+            }
+          ]
         }
       ]
     }
