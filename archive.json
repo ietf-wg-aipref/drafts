@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-01-20T02:11:06.531834+00:00",
+  "timestamp": "2026-01-22T02:21:27.972656+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -2128,7 +2128,7 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\n_Raised in [email by EKR](https://mailarchive.ietf.org/arch/msg/ai-control/dxpLCD7R2L-L07fEQCITjXjUcMY)_\n\nS 3.\n\n    After processing a statement of preferences the recipient associates\n    each category of use one of three preference values: \"allowed\",\n    \"disallowed\", or \"unknown\".  In the absence of a statement of\n    preference, all usage categories are assigned a preference value of\n    \"unknown\".\n\nWhat's the semnatic difference between \"unknown\" and \"allowed\"?\nEventually, I need to either use or not use a given piece of\ndata. Is this just an internal detail of the algorithm?\n\n### Proposed Resolution\n\n_No response_",
       "createdAt": "2025-09-10T02:36:59Z",
-      "updatedAt": "2026-01-19T14:47:14Z",
+      "updatedAt": "2026-01-21T01:40:04Z",
       "closedAt": null,
       "comments": [
         {
@@ -2151,6 +2151,48 @@
           "body": "ISTM that there are two distinct questions:\n\n1. Whether this document should take a position on default opt-in versus default opt-out, potentially driven by some background legal principles.\n2. Whether this document should have an \"unknown\" state.\n\nI'm skeptical of the background legal argument, as I doubt we're going to find that it's anywhere near that clear, but I don't think it's necessary to resolve the second question, to which I think the answer is \"no\".  What I mean specifically here is that the structure of this algorithm is that more specific preferences override less specific preferences (S 5.2). Thus, instead of carrying an unknown value all the way through the system, we should instead have the algorithm start with a default (possibly configurable based on local conditions) rule of allow or deny and then follow the rest of the algorithm as-is. The result is that any given category is always in a determinate state. This is a much more natural design and it's not clear to me we need anything fancier.\n\n\n",
           "createdAt": "2026-01-19T14:47:14Z",
           "updatedAt": "2026-01-19T14:47:14Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "The \"defaults\" question is #154. The only thing I'd point out is that text is non-normative; it's just signposting that we **don't** have an answer for this, so if someone wants a default they have to do it externally.\n\nIt sounds like you want to change that -- to require a default to be defined (and therefore part of the algorithm), even if that is done externally.\n\nIf that's the case a few things pop into mind:\n- Preference hierarchy has turned out to be one of the contentious points in the group, so if we're going to take this approach, this has a dependency on eg #170\n- Likewise, \"top-level\" / overarching preferences have also turned out to be contentious; we currently don't have one in the spec, meaning that this would be *required* to be defined eg by the legal regime, unless we come to consensus on a proposal there\n- If that's the case, \"unknown\" is going to be a fact of life of this framework in operation (at least in places where the law doesn't define a default)\n- We need to be certain that there is no semantic difference between a preference obtained through default vs one that's explicitly assigned\n- It's not clear to me what the downside of having an unknown state is. Is this just a taste thing, or...?\n",
+          "createdAt": "2026-01-20T02:29:42Z",
+          "updatedAt": "2026-01-20T02:29:42Z"
+        },
+        {
+          "author": "ekr",
+          "authorAssociation": "NONE",
+          "body": "> It sounds like you want to change that -- to require a default to be defined (and therefore part of the algorithm), even if that is done externally.\n\nWhether we write it down or not, at the end of the day the client has to either use or not use the content, and so unknown has to ultimately be lowered down to \"allow\" or \"deny\".\n\n\n> Likewise, \"top-level\" / overarching preferences have also turned out to be contentious; we currently don't have one in the spec, meaning that this would be required to be defined eg by the legal regime, unless we come to consensus on a proposal there\n\nNo, I don't think so. There's already some implicit policy for how to handle \"unknown\". In the current algorithm it's handled at the very end of the day by this rather vague text \"One approach for dealing with an \"unknown\" outcome is to assign a\n default value.  This document takes no position on what default might  be assigned.\" I'm simply saying that it would be better have the algorithm start with a default value and leave it up to the implementation how to set that value.\n\n> It's not clear to me what the downside of having an unknown state is. Is this just a taste thing, or...?\n\nIt's not clear to me what the upside of having an unknown state is.\n\n\n\n\n\n\n",
+          "createdAt": "2026-01-20T16:45:01Z",
+          "updatedAt": "2026-01-20T16:45:01Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "> Whether we write it down or not, at the end of the day the client has to either use or not use the content, and so unknown has to ultimately be lowered down to \"allow\" or \"deny\".\n\nSure, but we've never pretended that we provide all of the information necessary to make that decision. Even putting the defaults issue aside, we shy away from imperatives like 'allow' and 'deny' because we are (per charter) focused on _preferences_, not instructions. Having an explicit 'unknown' state aligns with that.\n\n> I'm simply saying that it would be better have the algorithm start with a default value and leave it up to the implementation how to set that value.\n...\n> It's not clear to me what the upside of having an unknown state is.\n\nOK. It sounds like this is an editorial style / clarity issue, not a fundamental problem in the spec.",
+          "createdAt": "2026-01-20T22:24:37Z",
+          "updatedAt": "2026-01-20T22:24:37Z"
+        },
+        {
+          "author": "ekr",
+          "authorAssociation": "NONE",
+          "body": "> Sure, but we've never pretended that we provide all of the information necessary to make that decision. Even putting the defaults issue aside, we shy away from imperatives like 'allow' and 'deny' because we are (per charter) focused on preferences, not instructions. Having an explicit 'unknown' state aligns with that.\n\nThe text explicitly uses the terms \"allowed\" and \"disallowed\". These appear frequently. For instance:\n\n~~~\n   After processing a statement of preferences the recipient associates\n   each category of use one of three preference values: \"allowed\",\n   \"disallowed\", or \"unknown\".  In the absence of a statement of\n   preference, all usage categories are assigned a preference value of\n   \"unknown\".\n~~~\n\n> OK. It sounds like this is an editorial style / clarity issue, not a fundamental problem in the spec.\n\nI don't agree. It's an issue in the algorithm described in the text.\n\n",
+          "createdAt": "2026-01-20T23:08:49Z",
+          "updatedAt": "2026-01-20T23:09:13Z"
+        },
+        {
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "I'm going to disagree with @ekr.  In many systems, the realm of possibilities in response to an answer of \"IDK\" will still be Boolean.  In which case, \"allowed\"/\"disallowed\" is going to be the only thing you want.  That might even be most systems.\n\nBut I can't accept that go/no-go is not the only thing that applies here.  Maybe for some uses, putting content into a human review process is going to be viable.  Obviously, that's not the sort of thing you want to have to run before running an algorithm, but you might be OK with it afterwards.  (Again, obviously not now, where no content has associated preferences.)\n\nLeaving that aside, the composition of preferences means that you can't feed a default in as the starting position.  You'd need a wholly different approach for resolving conflicts between preferences[^1].  If \"disallow\" is stronger than \"allow\" then you can't start with \"disallow\".  The same applies if there is any sort of precedence between the outcomes.  Precedence is currently a fundamental part of the algorithm.  If your goal is to challenge that, then we can maybe be clearer about that.\n\n[^1]: Conflicts at different layers of a hierarchy are another separable question. I'm talking about having two preferences that say different things, such as a header that says one thing and robots.txt saying another.  We can also solve THAT in a different way as well, but one thing at a time, I guess.",
+          "createdAt": "2026-01-21T01:28:51Z",
+          "updatedAt": "2026-01-21T01:28:51Z"
+        },
+        {
+          "author": "ekr",
+          "authorAssociation": "NONE",
+          "body": "A few points:\n\nFirst, I think Martin's response suggests that this is not just an editorial/style issue, so we should tee this up for discussion at the interim.\n\nSecond, I'm not sure I follow what you mean about composition. I agree with you that precedence at the same level is baked into the algorithm, but what I'm effectively saying is that implementations should start with what's effectively a preference at the most general level. Thus, any directive in this document would override it, in accordance with  \" Preferences about more specific categories override those of any more general category.\"\n\n\n",
+          "createdAt": "2026-01-21T01:40:04Z",
+          "updatedAt": "2026-01-21T01:40:04Z"
         }
       ]
     },
@@ -2291,7 +2333,7 @@
       "id": "I_kwDOOWk1-s7Ksih8",
       "title": "Search's Parent",
       "url": "https://github.com/ietf-wg-aipref/drafts/issues/156",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "mnot",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
@@ -2302,8 +2344,8 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\n_Raised in [email by EKR](https://mailarchive.ietf.org/arch/msg/ai-control/dxpLCD7R2L-L07fEQCITjXjUcMY)_\n\nI don't understand why \"search\" is somehow a subset of \"automated\nprocessing\" rather than \"AI training\". In many if not most cases,\nsearch will involve training an AI model, especially given the very\nwide parameters of \"AI\" (see below).\n\n### Proposed Resolution\n\n_No response_",
       "createdAt": "2025-09-10T02:42:38Z",
-      "updatedAt": "2025-12-11T04:12:38Z",
-      "closedAt": null,
+      "updatedAt": "2026-01-20T02:17:56Z",
+      "closedAt": "2026-01-20T02:17:56Z",
       "comments": [
         {
           "author": "mnot",
@@ -2311,6 +2353,13 @@
           "body": "In the latest draft, Search is no longer a subset of any other term, so I think this can be closed. There is some lingering language about hierarchy in general, but that's covered by #170.",
           "createdAt": "2025-12-11T04:12:31Z",
           "updatedAt": "2025-12-11T04:12:31Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Closing - if there's an aspect that still needs discussion, please request reopening.",
+          "createdAt": "2026-01-20T02:17:56Z",
+          "updatedAt": "2026-01-20T02:17:56Z"
         }
       ]
     },
@@ -2392,9 +2441,17 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\n_Raised in [email by EKR](https://mailarchive.ietf.org/arch/msg/ai-control/dxpLCD7R2L-L07fEQCITjXjUcMY)_\n\nI don't think this taxonomy is really going in the right direction. I\nhave some critiques of the specific categories but, more broadly, I\nthink this is tied to specific technology choices in a way that's\nunlikely to age well. I think instead it would be much more useful to\nfocus on the uses to which the data will be put (i.e., the output of the model),\nas that's really the source of unhappiness about these systems.\n\nJust so we're on the same page modern LLMs work (very approximately)\nby training on an enormous corpus of data which sets the model weights\n(I'm deliberately conflating pre-training and fine-tuning).  They are\nthen prompted with input and asked to create output based on that\ninput, as well as the output it's already generated (collectively the\ncontext). As part of that process, some models can also collect new\ndata and use that as part of the context (RAG). In the context of web\ncrawling, then we have two ways for data to get into the system:\n\n- In the training phase and stored in the model weights.\n- In the generation phase as part of the context via RAG.\n\nThis is an important technical distinction, but it's not clear why it\nmatters from the perspective of the site. Consider an AI system which\ncollects the same corpus as is currently used for pre-training but\nonly trains on a small portion of it and then when it's asked to\ngenerate content, uses some kind of \"internal RAG\" to suck in the\nrelevant documents and generate the output (this is a lot more like\nhuman brains seem to work in my experience, because we just can't\nremember much stuff). From the perspective of the site this is the\nsame: the system is using the site's content to generate new content,\nbut in the taxonomy of this draft, this isn't AI training or even\ngenerative AI training because it doesn't impact the model\nweights. Obviously I have no idea if this is a productive technical\ndirection, but neither do you, and conformance shouldn't hinge\non whether it turns out to be.\n\nIn my opinion a much more productive direction would be to focus on\nthe application to which this data is being put.  I don't have\nanything like a complete story, but it seems to me that we have some\nunderstanding of the categories at either end of the spectrum:\n\n- Indexing (search): where you attempt to determine which\n  piece of content the user wants and steer them towards it.\n\n- Substitution: where the service generates something that\n  is effectively a substitute good for the content.\n\nI think these are useful conceptually because the first is the\ntraditional one that I think people have generally accepted as \"good\"\nand the second is the one that seems to be of most concern. Obviously,\nit's not as clear as that because even before generative AI search\nsystems were producing substitute goods (infoboxes, etc.), but I think\nthat's a feature of this analysis, because sites often didn't like\nthat and I think this kind of taxonomy captures that intuition without\nworrying about whether the substitute good was generated via some\nLLM, deterministic hand-written code, or something in between.\n\nIn between these two, we have some other applications. For instance:\n\n- Summarization (think AI overviews) this is a partial substitute, but\n  often it comes with a source link which can steer traffic to the\n  site.\n\n- Generating original content that isn't a direct substitute.  An\n  example here might be code generation: the other day I asked an AI\n  to help write me a scraper for the IETF agenda [0] and while I'm\n  sure it was inspired by a lot of existing scraping scripts, it's not\n  like it plagiarized one of them in total or somehow reduced the\n  demand for them (this is a distinct question from whether it\n  injected some verbatim code).\n\nAgain, I don't claim that these are the right dividing lines, but I\nthink that this kind of analysis does a better job of capturing what\nis actually concerning to sites about AI. The challenge then becomes\nhow to turn these into relatively precise definitions. This is\nprobably harder than the current definitions, but I don't think\nprecision is a virtue if the definitions aren't actually a good fit to\nthe problem they are trying to solve (as they say, \"for every complex\nproblem there is an answer that is clear, simple, and wrong\").\n\n### Proposed Resolution\n\n_No response_",
       "createdAt": "2025-09-11T02:57:32Z",
-      "updatedAt": "2025-12-09T00:01:52Z",
+      "updatedAt": "2026-01-20T02:32:09Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Note at least some overlap with #149.",
+          "createdAt": "2026-01-20T02:32:09Z",
+          "updatedAt": "2026-01-20T02:32:09Z"
+        }
+      ]
     },
     {
       "number": 160,
@@ -2434,7 +2491,7 @@
       "id": "I_kwDOOWk1-s7NASQ7",
       "title": "Removal of \"bots\" from Vocab Section 6.1",
       "url": "https://github.com/ietf-wg-aipref/drafts/issues/161",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "Jo-Levy",
       "authorAssociation": "NONE",
       "assignees": [],
@@ -2446,8 +2503,8 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nSee Jlevy comment from 9/14   re the ambiguity, confusion, and potential  inaccurate overlap with the term \"bots\" in Section 6.1  as used in other IETF WG documents/charters:  \n\n I have searched the entire thread archive, but do not see any discussion regarding the use of the term \u201cbots.\u201d   \n\nThe other terms in 6.1 describe how the data is used, e.g. to \u201ctrain\u201d or \u201csearch.\u201d But the term \u201cbots\u201d suggests it is based on who is using the data, rather than what is being done to the data. For example, in the WebBotAuthN Working Group, the term \u201cbots\u201d is  used to refer to \u201cnon-browser clients.\u201d By using the term \u201cbots\u201d in Section 6.1, it creates an inconsistent approach that will lead to confusion about the meaning of the preference. Some people may incorrectly believe that bots=n is a preference to disallow access by bots. Others may incorrectly believe bots=n is a preference to disallow all use by bots, regardless of whether that use is for or related to AI. \n\nThis is especially important because the Vocab and Attach documents are not intended to be read together all the time.  The Vocab is intended to also be a standalone document. As I understand it, members of this group are liaising with other standards bodies to export the final language from this document to other bodies for their use independently, without the structure of the Attach document or robots.txt.  See, for example, Leonard\u2019s recent email stating: <<This vocab is designed to be used in any scenario - online or offline, web or otherwise - where someone wishes to express a preference about the AI usage of an asset.>>   Earlier drafts also called for the Vocabulary to \u201cstandardize building blocks\u201d that could be used regardless of the manner of attachment. \n\nWhen the categories and descriptions in the Vocab document are considered as standalone expressions, it is even more important that their scope and intent is clear.\n\nProposal: delete the top category and the accompanying \u201cbots\u201d descriptor in 6.1.  This removes the ambiguity and confusion, maintaining the focus on AI and moving the group more toward consensus.\n\n See also PKeller reply 9/14 agreeing that the term \"clearly also problematic\" and suggesting focusing first on the automated processing category (which makes sense).\n\n### Proposed Resolution\n\n_No response_",
       "createdAt": "2025-09-22T06:33:01Z",
-      "updatedAt": "2025-12-09T00:24:19Z",
-      "closedAt": null,
+      "updatedAt": "2026-01-20T02:18:10Z",
+      "closedAt": "2026-01-20T02:18:10Z",
       "comments": [
         {
           "author": "mnot",
@@ -2455,6 +2512,13 @@
           "body": "@Jo-Levy 'bots' doesn't appear in the current draft any more - OK to close?",
           "createdAt": "2025-12-09T00:03:49Z",
           "updatedAt": "2025-12-09T00:03:49Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Closing - if there's an aspect that still needs discussion, please request reopening.",
+          "createdAt": "2026-01-20T02:18:10Z",
+          "updatedAt": "2026-01-20T02:18:10Z"
         }
       ]
     },
@@ -2908,7 +2972,7 @@
       "id": "I_kwDOOWk1-s7U9HwG",
       "title": "Search should be a separate category, not nested under AI Output",
       "url": "https://github.com/ietf-wg-aipref/drafts/issues/180",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "kmadhavan-msft",
       "authorAssociation": "NONE",
       "assignees": [],
@@ -2919,8 +2983,8 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nThe current nesting of the \u201cSearch\u201d category under \u201cAI Output\u201d introduces both conceptual and practical confusion. The argument we have repeatedly heard across the entire community seems to be that Search is a foundational web function that should remain clearly distinct from AI-generated outputs such as summaries, answers, or synthesized responses. The purpose of calling out \u201cSearch\u201d explicitly seems to be aimed at preserving this distinction. If there must be a separate Search category based on rough consensus (still under debate) \u2013 it should not be nested under AI Output. \n\nMore importantly, nesting Search under AI Output risks conflating these fundamentally different activities and could lead to user misunderstanding, where a publisher disables \u201cAI Output\u201d to restrict generative use but inadvertently also disables Search visibility. To maintain semantic clarity and prevent unintended consequences, \u201cSearch\u201d should be elevated as its own category, separate from AI Output. \n\n### Proposed Resolution\n\nSeparate Search into its own category independent of AI output.",
       "createdAt": "2025-10-30T23:14:44Z",
-      "updatedAt": "2025-12-09T00:20:11Z",
-      "closedAt": null,
+      "updatedAt": "2026-01-20T02:18:37Z",
+      "closedAt": "2026-01-20T02:18:37Z",
       "comments": [
         {
           "author": "mnot",
@@ -2928,6 +2992,13 @@
           "body": "This appears to be a duplicate of #170 and #156 ",
           "createdAt": "2025-12-09T00:20:03Z",
           "updatedAt": "2025-12-09T00:20:03Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Closing - if there's an aspect that still needs discussion, please copy to the already-open issues.",
+          "createdAt": "2026-01-20T02:18:37Z",
+          "updatedAt": "2026-01-20T02:18:37Z"
         }
       ]
     },
@@ -3011,11 +3082,12 @@
       "assignees": [],
       "labels": [
         "vocabulary",
-        "training"
+        "training",
+        "needs proposal"
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nThe new definition of Foundation Model Production says:\n\n> Foundation models are large models that are produced using deep learning or other machine learning techniques. Foundation models are trained on very large numbers of assets so that they can be applied to a wide range of use cases. Foundation models typically possess generative capabilities in one or more media.\n\nHow large is \"large\"? How large is \"very large numbers of assets\"?\n\n### Proposed Resolution\n\n_No response_",
       "createdAt": "2025-11-03T12:14:55Z",
-      "updatedAt": "2025-12-09T00:38:22Z",
+      "updatedAt": "2026-01-20T23:14:24Z",
       "closedAt": null,
       "comments": [
         {
@@ -3031,6 +3103,13 @@
           "body": "See also #151 ",
           "createdAt": "2025-12-09T00:38:22Z",
           "updatedAt": "2025-12-09T00:38:22Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "@coopdanger does @martinthomson's comment address your concern? If not, could you sketch out an idea of what might address the issue?",
+          "createdAt": "2026-01-20T23:13:40Z",
+          "updatedAt": "2026-01-20T23:13:40Z"
         }
       ]
     },
