@@ -243,10 +243,15 @@ This section defines the categories of use in the vocabulary.
 
 ## Foundation Model Production Category {#train-ai}
 
+
+
 The act of using an asset to train or fine-tune a foundation model.
 
-Foundation models are large models that are produced using deep learning
-or other machine learning techniques.
+** Foundation model**: 
+AI model that can be used for or readily adapted to a wide range of tasks in one or more domains. 
+
+*Note:* This definition aligns with ISO/IEC 22989 (AI — Concepts and terminology)
+
 Foundation models are trained on very large numbers of assets
 so that they can be applied to a wide range of use cases.
 Foundation models typically possess generative capabilities
