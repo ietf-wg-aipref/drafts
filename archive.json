@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-01-22T02:21:27.972656+00:00",
+  "timestamp": "2026-01-29T02:35:58.533164+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -3195,6 +3195,24 @@
       "body": "AI firms (such as Answer Engines) desire a standardized signaling mechanism for online copyright owners to communicate the specific rights they are granting regarding the use of their copyrighted material. Because copyright law mandates explicit permission rather than an opt-out process, publishers should not need to take any restrictive measures to prevent undesired competing uses.  \n\nA minimal but effective framework should allow media owners to specify three distinct categories of use:\n\n1.\tSource link inclusion in search results (SERP): The media owner may authorize the display of titles, snippets, and URLs for audiences to discover their online properties, and condition such use on specific remuneration methods and amounts. The generally accepted default for online listings to aid discovery and navigation is free use of the navigation link (URL) and publication of the media owner\u2019s summary via the <title></title> and <meta name=\"description\"> tags. \n\u2022\tToday this is signaled via <meta name=\"robots\" content=\"index\"> or content=\u201dnoindex\u201d \n\u2022\tAdditional signals include:  Noindex, Index, Follow, Nofollow, Noimageindex, None, Noarchive, Nocache, Nosnippet, Unavailable_after.\n\u2022\tGiven \u201cindex\u201d was designed solely for SERP, this vocabulary needs to distinguish DISPLAY vs NODISPLAY in SERP, rather than the technical method a search engine or directly listing service might use to include the link and media owner\u2019s summary of their property.\n\n2.\tGenerative use: The media owner may authorize the use of their content for model training, retrieval-augmented generation (RAG), or other methods that produce competitive generative outputs, and condition such use on specific remuneration methods and amounts. Instead of focusing on the technical methods (e.g., cache, index) that will change over time, media owners should focus on purposes of output use regardless of technical method.\n\u2022\tSuch allow/permit or disallow/prohibit signals must control \no\tWHO: access management\no\tWHAT: asset designation\no\tHOW MUCH: payment methods and pricing per purpose/use (see https://rslstandard.org/rsl)\no\tFOR WHAT: purposes (e.g., generation, classification, summarisation, embedding, attribution, onward sharing with others for any of these licensed uses)\no\tHOW LONG: expiration date\no\tDECLARATIONS: legal disclaimers about what is licensed \n\n3.\tBrand endorsement/attribution: The media owner may authorize use of its trademarks or brand identity alongside generative content outputs, including separate forms of RAG that connect outputs with identifiable publisher branding, and condition such use on specific remuneration methods and amounts.\n\u2022\tAlthough endorsement for AI system output is a subset of the purpose/use in 2. above, this is important an important aspect as one can image brand endorsement may altering payment and usage if included in AI system outputs. As such each purpose/use is not stand alone, but also requires logic for combinations (e.g., endorsement link without use in generation or endorsement link with use in generation). \n\nEnsuring flexibility for augmenting the standard distinct signals will enable AI and search systems to honor license boundaries faithfully while maintaining transparency, competition, and respect for copyright. RSL already includes such extensibility in its protocol and should be adopted into the IETF proposal.\n",
       "createdAt": "2025-12-17T17:24:29Z",
       "updatedAt": "2025-12-17T17:24:29Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 192,
+      "id": "I_kwDOOWk1-s7mRk7E",
+      "title": "Introduction clarity re: relation to existing laws",
+      "url": "https://github.com/ietf-wg-aipref/drafts/issues/192",
+      "state": "OPEN",
+      "author": "mgendler",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [
+        "vocabulary"
+      ],
+      "body": "### Confirmation\n\n- [x] I have reviewed our [existing issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nIt is clear from the debate in this working group over the past year that there is significant confusion about what legal implications, if any, the work of this group is aiming to have on creators globally. \n\nFor example, the text of the current vocab draft ([draft-ietf-aipref-vocab-05](https://www.ietf.org/archive/id/draft-ietf-aipref-vocab-05.html)) says that it \u201cis intended to be used in jurisdictions where expressing preferences results in legal obligations \u2026 without prejudice to applicable laws \u2026,\u201d but it is completely unclear (and silent about) what jurisdictions, legal obligations, or laws that it is referring to, exactly. \n\nObviously, this working group, as part of a technical standards body, is not trying to hijack the role of a legislature or regulator.  It is not appropriate for us to design standards that may affect legal protections that millions of creators across the world have with relation to their countries\u2019 domestic copyright, contract, and other laws. \n\nTo make it clear that this working group is not aiming to override copyright owners\u2019 existing legal protections in their respective countries, or to override creators\u2019 existing terms of service, I propose to clarify the language in the introductory section.\n\nI think that clarity will also improve uptake of the standardized language, better fulfilling the objectives of this WG. \n\nThis issue applies to the vocabulary document (including some sections later on other than the introduction) and we should pursue similar clarification for the attachment document, to be clear that nothing in that document has any legal effect either - but I'll leave that for future issue submissions. \n\n### Proposed Resolution\n\nI propose starting by strengthening language in the introductory section.\n \nIt currently reads: \n\n>   The vocabulary is intended to be used in jurisdictions where\n>    expressing preferences results in legal obligations, as well as where\n>    there are no associated legal obligations.  In either case,\n>    expressing preferences is without prejudice to applicable laws,\n>    including the applicability of exceptions and limitations to\n>    Copyright.\n\nProposed edit: \n\n> For clarity, expressing preferences is without prejudice to applicable laws, \n> including the applicability of exceptions and limitations to copyright. \n> In addition to statutory or common law which may apply, the expression of preferences \n> is not intended to overwrite the legal preferences or restrictions that may be embodied\n>  in a website\u2019s Terms of Use (or comparable page), and in the event of any conflict\n>  between these preferences and a website\u2019s Terms of Use, the Terms of Use shall prevail as a matter of law.\n",
+      "createdAt": "2026-01-28T03:26:50Z",
+      "updatedAt": "2026-01-28T05:15:00Z",
       "closedAt": null,
       "comments": []
     }
@@ -8872,6 +8890,54 @@
               "updatedAt": "2026-01-13T11:05:28Z"
             }
           ]
+        }
+      ]
+    },
+    {
+      "number": 191,
+      "id": "PR_kwDOOWk1-s6_pM7Y",
+      "title": "Define \"foundation model\" (align with ISO/IEC 22989)",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/191",
+      "state": "OPEN",
+      "author": "lexlizx2",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "This PR adds an explicit definition of \u201cfoundation model\u201d to the AIPREF vocabulary for clarity and consistency.\r\n\r\nThe definition is aligned with ISO/IEC 22989 (AI \u2014 Concepts and terminology), which defines a foundation model as an AI model that can be used for or readily adapted to a wide range of tasks in one or more domains.\r\n",
+      "createdAt": "2026-01-27T16:17:20Z",
+      "updatedAt": "2026-01-28T15:00:05Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "03c7ea334c0b99a3495b31f58421aa8b960f80b3",
+      "headRepository": "lexlizx2/drafts",
+      "headRefName": "patch-1",
+      "headRefOid": "0d47a2346bbeb64b1efa1a446d82e1bf40383443",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [
+        {
+          "author": "lexlizx2",
+          "authorAssociation": "NONE",
+          "body": "Thanks, Martin.  Yes, I think getting rid of the line \"Foundation models\r\nare trained on very large numbers of assets\r\nso that they can be applied to a wide range of use cases,\" would reduce the\r\nredundancy but wanted to give you and the group the option to consider that\r\nfirst.\r\n\r\nOn Tue, Jan 27, 2026 at 6:26\u202fPM Martin Thomson ***@***.***>\r\nwrote:\r\n\r\n> ***@***.**** commented on this pull request.\r\n>\r\n> I like the definition, but I'll need to tweak the formatting.\r\n>\r\n> The paragraph following your change contains more definition, some of\r\n> which might be redundant with what was added. Did you consider that?\r\n>\r\n> \u2014\r\n> Reply to this email directly, view it on GitHub\r\n> <https://github.com/ietf-wg-aipref/drafts/pull/191#pullrequestreview-3713938162>,\r\n> or unsubscribe\r\n> <https://github.com/notifications/unsubscribe-auth/BJY3CG3XAL4XHXE3AJ6IA7T4I7X3BAVCNFSM6AAAAACTB45NVSVHI2DSMVQWIX3LMV43YUDVNRWFEZLROVSXG5CSMV3GSZLXHMZTOMJTHEZTQMJWGI>\r\n> .\r\n> You are receiving this because you authored the thread.Message ID:\r\n> ***@***.***>\r\n>\r\n",
+          "createdAt": "2026-01-28T15:00:05Z",
+          "updatedAt": "2026-01-28T15:00:05Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWk1-s7dXjLy",
+          "commit": {
+            "abbreviatedOid": "0d47a23"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "I like the definition, but I'll need to tweak the formatting.\n\nThe paragraph following your change contains more definition, some of which might be redundant with what was added.  Did you consider that?",
+          "createdAt": "2026-01-27T23:26:18Z",
+          "updatedAt": "2026-01-27T23:26:18Z",
+          "comments": []
         }
       ]
     }
