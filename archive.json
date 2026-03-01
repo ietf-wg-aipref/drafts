@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-01-29T02:35:58.533164+00:00",
+  "timestamp": "2026-03-01T02:52:58.347164+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -77,6 +77,11 @@
       "name": "terminology",
       "description": "Terminology used in the documents",
       "color": "2b41a6"
+    },
+    {
+      "name": "context",
+      "description": "The context that the vocabulary is used within",
+      "color": "db4baf"
     }
   ],
   "issues": [
@@ -2410,11 +2415,12 @@
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [
-        "vocabulary"
+        "vocabulary",
+        "context"
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\n_Raised in [email by EKR](https://mailarchive.ietf.org/arch/msg/ai-control/dxpLCD7R2L-L07fEQCITjXjUcMY)_\n\nAs an aside, it's obviously possible for a bot to collect data for\nmultiple purposes. Maybe I've missed it, but does this draft say what\nthe rules are there? I guess you're supposed to somehow only proceed\nif the intersection of all the uses is allowed? S 5.1 seems to be\nabout the related but different problem of harmonizing multiple\nstatements for a given usage.\n\n### Proposed Resolution\n\n_No response_",
       "createdAt": "2025-09-10T02:45:19Z",
-      "updatedAt": "2026-01-06T05:40:29Z",
+      "updatedAt": "2026-02-26T03:38:37Z",
       "closedAt": null,
       "comments": [
         {
@@ -2463,11 +2469,12 @@
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [
-        "vocabulary"
+        "vocabulary",
+        "context"
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nPer thread on the list, there is still contention about the text in 3.2.\n\n\n### Proposed Resolution\n\n_Sourced from e-mail by [Alissa](https://mailarchive.ietf.org/arch/msg/ai-control/5vUslBkhFk-na7geaO_XFaWqc0c)_\n\n1. Getting rid of the normative MAY. I know this was discussed on the PR thread before the -03 was published. This whole section is in the realm of non-technical considerations and using a normative keyword muddies that.\n\n2.  Significantly paring back the text starting from \u201cUsage preferences can be ignored \u2026\u201d so that it provides less fodder for future debate about what was really intended here. I have a suggestion below that echoes back to Lila\u2019s original note about historic, widespread use of certain tools. I nixed \u201cfree expression\u201d from the list as it felt like the everything category, but I think including the other examples is helpfully illustrative.\n\n> Parties might choose not to honor preferences they receive on the basis of express agreements they have with other parties, for legal compliance purposes, or for other reasons. Historically, entities engaged in automated processing of digital assets in support of safety, education, scholarship, research, preservation, interoperability, accessibility, and other priorities have needed to make such choices in response to existing preference signaling mechanisms, and affected parties have had to grapple with the consequences. The preference statements described in this specification are no different.\n\n",
       "createdAt": "2025-09-13T03:25:53Z",
-      "updatedAt": "2025-11-03T08:58:49Z",
+      "updatedAt": "2026-02-26T03:38:37Z",
       "closedAt": null,
       "comments": [
         {
@@ -2588,11 +2595,12 @@
       "authorAssociation": "NONE",
       "assignees": [],
       "labels": [
-        "vocabulary"
+        "vocabulary",
+        "context"
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nSection 3.1 titled Conformance states that an implentation is conformant to the specifications if it correctly follows all normative requirements that apply to it.  This pertains to enforcement, which is out of scope for the Vocab and Attach document. It adds nothing to the Vocabulary or statement of preference. Solution: Delete 3.1 Conformance.\n\n### Proposed Resolution\n\nDelete Section 3.1 Conformance.",
       "createdAt": "2025-09-22T07:38:58Z",
-      "updatedAt": "2025-12-09T00:08:37Z",
+      "updatedAt": "2026-02-26T03:38:38Z",
       "closedAt": null,
       "comments": [
         {
@@ -2650,11 +2658,12 @@
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [
-        "vocabulary"
+        "vocabulary",
+        "context"
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nI'm going to quote @coopdanger here, because her formulation of the issue is pretty good.  I will follow up with a nit on the details, but that doesn't diminish the value of the feedback:\n\n> This raises the question of whether the vocabulary is only meant to be used to express preferences about usage and not initial access regardless of the attachment mechanism. The very first sentence of the vocab doc uses the ambiguous term \u201cprocessing\u201d while most of the rest of the doc uses \u201cusage.\u201d If the intent is to define a vocabulary that only expresses preferences about an asset after the asset has been obtained (by whatever means), it needs an explicit scoping limitation to that effect. And then every attachment mechanism that gets defined in the IETF or elsewhere needs to reflect that.\n>\n> Making this distinction explicit might be a simple resolution to some of the concerns that have been raised about the automated processing category, because it would make clear that it\u2019s unnecessary to resolve the question of whether crawling/accessing a site is itself considered automated processing. No preferences are being expressed about access, other than insofar as sites would expect crawlers not to crawl their site if the site wishes to disallow all the uses of interest to the crawler. It would not resolve the concerns about behavior habituation and misinterpretation, though.\n>\n> Even with this distinction made explicit, there would still be the possibility of basically nonsensical use cases, e.g.:\n>\n> ```http\n> User-Agent: *\n> Content-Usage: /foo bots=n\n> ```\n> \n> Like what is the point of allowing crawling/access but then disallowing all usage? Maybe there is a use case I\u2019m missing.\n>\n> Note also that it may be entirely unrealistic to say that everywhere an attachment mechanism is specified, it has to preserve this distinction between access and usage. It\u2019s not like we can constrain mechanisms that get defined elsewhere.\n> \n> I\u2019ve never really been convinced of the need for the top-level category, but if we are going to have one we need to be clear about when it applies, and clarifying that it only applies after an asset has been obtained might help mitigate concerns about its breadth.\n\n### Proposed Resolution\n\nThere was some effort to make this distinction in editing, but it's clear that we need to be much clearer about it throughout.",
       "createdAt": "2025-09-23T03:45:57Z",
-      "updatedAt": "2026-01-06T05:41:21Z",
+      "updatedAt": "2026-02-26T03:38:38Z",
       "closedAt": null,
       "comments": [
         {
@@ -3208,11 +3217,12 @@
       "authorAssociation": "NONE",
       "assignees": [],
       "labels": [
-        "vocabulary"
+        "vocabulary",
+        "context"
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nIt is clear from the debate in this working group over the past year that there is significant confusion about what legal implications, if any, the work of this group is aiming to have on creators globally. \n\nFor example, the text of the current vocab draft ([draft-ietf-aipref-vocab-05](https://www.ietf.org/archive/id/draft-ietf-aipref-vocab-05.html)) says that it \u201cis intended to be used in jurisdictions where expressing preferences results in legal obligations \u2026 without prejudice to applicable laws \u2026,\u201d but it is completely unclear (and silent about) what jurisdictions, legal obligations, or laws that it is referring to, exactly. \n\nObviously, this working group, as part of a technical standards body, is not trying to hijack the role of a legislature or regulator.  It is not appropriate for us to design standards that may affect legal protections that millions of creators across the world have with relation to their countries\u2019 domestic copyright, contract, and other laws. \n\nTo make it clear that this working group is not aiming to override copyright owners\u2019 existing legal protections in their respective countries, or to override creators\u2019 existing terms of service, I propose to clarify the language in the introductory section.\n\nI think that clarity will also improve uptake of the standardized language, better fulfilling the objectives of this WG. \n\nThis issue applies to the vocabulary document (including some sections later on other than the introduction) and we should pursue similar clarification for the attachment document, to be clear that nothing in that document has any legal effect either - but I'll leave that for future issue submissions. \n\n### Proposed Resolution\n\nI propose starting by strengthening language in the introductory section.\n \nIt currently reads: \n\n>   The vocabulary is intended to be used in jurisdictions where\n>    expressing preferences results in legal obligations, as well as where\n>    there are no associated legal obligations.  In either case,\n>    expressing preferences is without prejudice to applicable laws,\n>    including the applicability of exceptions and limitations to\n>    Copyright.\n\nProposed edit: \n\n> For clarity, expressing preferences is without prejudice to applicable laws, \n> including the applicability of exceptions and limitations to copyright. \n> In addition to statutory or common law which may apply, the expression of preferences \n> is not intended to overwrite the legal preferences or restrictions that may be embodied\n>  in a website\u2019s Terms of Use (or comparable page), and in the event of any conflict\n>  between these preferences and a website\u2019s Terms of Use, the Terms of Use shall prevail as a matter of law.\n",
       "createdAt": "2026-01-28T03:26:50Z",
-      "updatedAt": "2026-01-28T05:15:00Z",
+      "updatedAt": "2026-02-26T03:38:39Z",
       "closedAt": null,
       "comments": []
     }
