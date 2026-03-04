@@ -245,9 +245,9 @@ This section defines the categories of use in the vocabulary.
 
 The act of using an asset to train or fine-tune a foundation model.
 
-Foundation models are large models that are produced using deep learning
+Foundation models are models that are produced using deep learning
 or other machine learning techniques.
-Foundation models are trained on very large numbers of assets
+Foundation models are trained on broad range of assets
 so that they can be applied to a wide range of use cases.
 Foundation models typically possess generative capabilities
 in one or more media.
