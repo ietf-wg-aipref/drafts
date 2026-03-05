@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-03-01T02:52:58.347164+00:00",
+  "timestamp": "2026-03-05T02:39:24.188062+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -2063,7 +2063,7 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\n_Raised in [email by EKR](https://mailarchive.ietf.org/arch/msg/ai-control/dxpLCD7R2L-L07fEQCITjXjUcMY)_\n\nS 2.\n\n      Artificial Intelligence (AI):\n      An engineered system of sufficient complexity that, for a given\n      set of human-defined objectives, learns from data to generate\n      outputs such as content, predictions, recommendations, or\n      decisions.\n\nAs I mentioned previously, I think this definition of AI is extremely\nproblematic and would effectively sweep in any statistical\ntechnique. I understand that \"sufficient complexity\" is intended to\nsomehow reduce the scope, but it's a totally subjective standard.\n\n### Proposed Resolution\n\n_No response_",
       "createdAt": "2025-09-10T02:34:49Z",
-      "updatedAt": "2026-01-06T11:24:30Z",
+      "updatedAt": "2026-03-04T15:28:08Z",
       "closedAt": null,
       "comments": [
         {
@@ -2086,6 +2086,27 @@
           "body": "Generative AI implementations often use machine learning to create models.  AI in general encompasses machine learning as a technique https://en.wikipedia.org/wiki/Machine_learning",
           "createdAt": "2026-01-06T11:24:30Z",
           "updatedAt": "2026-01-06T11:24:30Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "March interim:\n\nMT: It would be easy to ascribe motives to get us to argue about angels dancing on pins, but there's probably something to this issue. We've tried a few times. We've looked at referencing law and other standards organisations. There's no simple formula; what we have here is a combination from multiple sources that's adapted. It may be that we can't come to a common understanding of what it means because there are no clear boundaries. Statistical techniques is what the large models do. One thing we could do is we could say that we're explicitly not defining these terms, but relying upon others' understanding of them. \n\nErik Stallman: +1. I looked for other definitions that were preferable; couldn't find any. Until there's a more serviceable definition, we should go what we have. If it's too broad, it would be helpful to identify those uses that shouldn't be swept in. \n\nChris Needham: Broadly agree. I don't think we should go down the road of leaving it up to interpretation. We've made a reasonable attempt. \n\nMeredith: Having some use cases might be helpful to move forward on definitional questions. The point is to influence real-world scenarios. Happy to help. \n\nChris Needham: +1 to use cases. Willing to help.\n\nElaine Newton: Has the group decided not to use eg ISO, OECD definitions?\n\nSuresh: If you have proposals please make them; e.g., ITU definitions were discussed and not felt to be to purpose.\n\nMT: Happy to look at other definitions. What we have is close to the OECD definition; however a few parts of that are weird. There's an academic paper about this, it's a persuasive analysis. This is captured in another issue.\n\nAlissa: Not sure there's broad support for the concern raised here.\n\nErik Stallman: There's a separate NIST definition. My sense was that the OECD definition was considered; is that correct?\n\nMT: yes. It was one of the main sources; it is a pretty good definition, there were a few adjustments necessary because they're so broad.",
+          "createdAt": "2026-03-03T21:33:27Z",
+          "updatedAt": "2026-03-03T21:33:27Z"
+        },
+        {
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "https://github.com/ietf-wg-aipref/drafts/pull/111 is where the current definition originated.  That pull request includes some information about the analysis that was done.  A tweak was made in https://github.com/ietf-wg-aipref/drafts/pull/116.",
+          "createdAt": "2026-03-03T21:35:12Z",
+          "updatedAt": "2026-03-03T21:35:12Z"
+        },
+        {
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Alissa shared [this](https://www.aspendigital.org/report/defining-technologies-of-our-time-ai/?trk=public_post_comment-text) which is a great resource on the different definitions that have been used across a bunch of different legal contexts.  There is a US focus, but the analysis tends to be very useful.  (I won't say that all the analysis I've read so far is something I agree with unconditionally, but it is very thoughtful and useful nonetheless.)",
+          "createdAt": "2026-03-04T15:28:08Z",
+          "updatedAt": "2026-03-04T15:28:08Z"
         }
       ]
     },
@@ -2106,7 +2127,7 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\n_Raised in [email by EKR](https://mailarchive.ietf.org/arch/msg/ai-control/dxpLCD7R2L-L07fEQCITjXjUcMY)_\n\n      AI Training:\n        The application of machine learning to data to produce or improve\n        a model for an artificial intelligence system.\n\nI'm not sure what \"machine learning\" is doing here.\n\n### Proposed Resolution\n\nI'm not sure what \"machine learning\" is doing here. Why not just:\n\n      The use of data to produce or improve an artificial\n      intelligence system.\n\nI would then strike the term \"machine learning\" entirely.",
       "createdAt": "2025-09-10T02:36:02Z",
-      "updatedAt": "2026-01-19T06:57:01Z",
+      "updatedAt": "2026-03-03T21:21:12Z",
       "closedAt": null,
       "comments": [
         {
@@ -2115,6 +2136,13 @@
           "body": "Hello,  \nI would like to work on this issue if it is still open. Please let me know if I may proceed.\n\nThank you.",
           "createdAt": "2025-12-30T03:31:12Z",
           "updatedAt": "2026-01-06T05:31:52Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "March interim:\n\nTimid Robot: I would like more reasoning behind removing it. \"AI\" is too general / meaningless.\n\nNate: Agreed; \"AI\" is a marketing term. Without ML it becomes too amorphous. \n\n",
+          "createdAt": "2026-03-03T21:21:12Z",
+          "updatedAt": "2026-03-03T21:21:12Z"
         }
       ]
     },
@@ -2133,7 +2161,7 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\n_Raised in [email by EKR](https://mailarchive.ietf.org/arch/msg/ai-control/dxpLCD7R2L-L07fEQCITjXjUcMY)_\n\nS 3.\n\n    After processing a statement of preferences the recipient associates\n    each category of use one of three preference values: \"allowed\",\n    \"disallowed\", or \"unknown\".  In the absence of a statement of\n    preference, all usage categories are assigned a preference value of\n    \"unknown\".\n\nWhat's the semnatic difference between \"unknown\" and \"allowed\"?\nEventually, I need to either use or not use a given piece of\ndata. Is this just an internal detail of the algorithm?\n\n### Proposed Resolution\n\n_No response_",
       "createdAt": "2025-09-10T02:36:59Z",
-      "updatedAt": "2026-01-21T01:40:04Z",
+      "updatedAt": "2026-03-03T22:18:55Z",
       "closedAt": null,
       "comments": [
         {
@@ -2198,6 +2226,20 @@
           "body": "A few points:\n\nFirst, I think Martin's response suggests that this is not just an editorial/style issue, so we should tee this up for discussion at the interim.\n\nSecond, I'm not sure I follow what you mean about composition. I agree with you that precedence at the same level is baked into the algorithm, but what I'm effectively saying is that implementations should start with what's effectively a preference at the most general level. Thus, any directive in this document would override it, in accordance with  \" Preferences about more specific categories override those of any more general category.\"\n\n\n",
           "createdAt": "2026-01-21T01:40:04Z",
           "updatedAt": "2026-01-21T01:40:04Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "March interim: (re this and defaults issue)\n\nMT: EKR is trying to 'refactor the code'; I'm struggling to identify the concrete reason to change here. What's proposed is reasonable but I'm not sure there's value in doing so. Not substantive. Prefer we defer this. ",
+          "createdAt": "2026-03-03T22:14:11Z",
+          "updatedAt": "2026-03-03T22:14:11Z"
+        },
+        {
+          "author": "ekr",
+          "authorAssociation": "NONE",
+          "body": "Well, that may be MT's opinion, but I don't agree it's not substantive. I'm willing to defer this, I guess.",
+          "createdAt": "2026-03-03T22:18:55Z",
+          "updatedAt": "2026-03-03T22:18:55Z"
         }
       ]
     },
@@ -2386,7 +2428,7 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\n_Raised in [email by EKR](https://mailarchive.ietf.org/arch/msg/ai-control/dxpLCD7R2L-L07fEQCITjXjUcMY)_\n\nAI training is a coherent category but seems like a trap for the\nunwary, because a lot of people are going to turn it on and thus\nexclude all kinds of useful applications, when what they really want\nis much more narrow (something like gen AI). I also have a problem\nwith the term \"training\" for the reasons indicated above.\n\nGenerative AI training is a remarkably wide category (see\naforementioned comments about substitution, summarization, and\ngenerating original content).\n\n\n### Proposed Resolution\n\n_No response_",
       "createdAt": "2025-09-10T02:44:40Z",
-      "updatedAt": "2026-01-19T06:59:07Z",
+      "updatedAt": "2026-03-03T21:45:07Z",
       "closedAt": null,
       "comments": [
         {
@@ -2402,6 +2444,13 @@
           "body": "Well, there is a still a definition for \"AI training\" in S 2, but it's not used, so I think the fix is to remove it.",
           "createdAt": "2025-12-09T00:33:03Z",
           "updatedAt": "2025-12-09T00:33:03Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "March interim:\n\nMT: Overtaken by events; we now have foundation model training. We shouldn't remove \"AI training\", but we do have other issues for it. ",
+          "createdAt": "2026-03-03T21:45:06Z",
+          "updatedAt": "2026-03-03T21:45:06Z"
         }
       ]
     },
@@ -2420,7 +2469,7 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\n_Raised in [email by EKR](https://mailarchive.ietf.org/arch/msg/ai-control/dxpLCD7R2L-L07fEQCITjXjUcMY)_\n\nAs an aside, it's obviously possible for a bot to collect data for\nmultiple purposes. Maybe I've missed it, but does this draft say what\nthe rules are there? I guess you're supposed to somehow only proceed\nif the intersection of all the uses is allowed? S 5.1 seems to be\nabout the related but different problem of harmonizing multiple\nstatements for a given usage.\n\n### Proposed Resolution\n\n_No response_",
       "createdAt": "2025-09-10T02:45:19Z",
-      "updatedAt": "2026-02-26T03:38:37Z",
+      "updatedAt": "2026-03-03T22:31:56Z",
       "closedAt": null,
       "comments": [
         {
@@ -2429,6 +2478,13 @@
           "body": "@ekr I think you're correct (i.e., our preferences are use-based, not specific to collection time), but I suspect some will disagree with that. Worth discussing and clarifying.",
           "createdAt": "2026-01-06T05:40:29Z",
           "updatedAt": "2026-01-06T05:40:29Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "March interim:\n\nEKR: This text is probably OK now; will take a look.",
+          "createdAt": "2026-03-03T22:31:56Z",
+          "updatedAt": "2026-03-03T22:31:56Z"
         }
       ]
     },
@@ -2566,7 +2622,7 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nThe term \"digital asset\" is used throughout the Vocab document.  It is confusing and misleading.  A \"digital asset\" generally and commonly refers to cryptocurrency. The United States Internal Revenue Service (IRS) defines it as \"any digital representation of value on a cryptographically secured, distributed ledger (blockchain) or similar technology.\"  See https://www.irs.gov/filing/digital-assets#description.  \n It's not a term used in robots.txt or the Attach documet which uses the term \"content\" and \"content-usage.\" A preferable term would be \"Digital Content.\"\n\n### Proposed Resolution\n\nReplace \"digital asset\" or \"digital assets\" with \"digital content.\" Replace \"asset\" with \"digital content.\" Replace \"one or more assets\" with \"digital content.\" There are 23 instances of the term asset or assets throughout the document.  By using \"digital content\" there is also no new for a definition of the term \"Digital Asset.\"",
       "createdAt": "2025-09-22T07:27:50Z",
-      "updatedAt": "2025-12-09T00:24:20Z",
+      "updatedAt": "2026-03-03T21:23:07Z",
       "closedAt": null,
       "comments": [
         {
@@ -2582,6 +2638,20 @@
           "body": "I agree with @lrosenthol, asset is a recognised term, so I see no need for change here. There's a clear definition in the Conventions and Definitions section of the draft.",
           "createdAt": "2025-09-30T06:13:56Z",
           "updatedAt": "2025-09-30T06:13:56Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "March interim:\n\nMT: agree with Jo; 'asset' means something owns something. Since we're not talking about copyright it's a misleading term colloquially. I know that people have put a lot of time into these terms, but I disagree with the outcome. \n\nLila: +1 to MT. Too specific; may be american viewpoint. Content is more all-purpose.\n\nFarz: agree with changing term.\n\n",
+          "createdAt": "2026-03-03T21:18:02Z",
+          "updatedAt": "2026-03-03T21:18:02Z"
+        },
+        {
+          "author": "sposth",
+          "authorAssociation": "NONE",
+          "body": "\u201cContent\u201d is very broad and refers to the expressive or informational layer, not necessarily the concrete digital file or file instance. If the vocabulary refers to identifiable media files \u2013 images, text files, audio files, video files \u2013 then \u201casset\u201d is the more accurate technical term, because it describes the file as a discrete digital object. In the media and metadata domain, \u201cdigital asset\u201d has been used in this sense for many years, unrelated to cryptocurrency.",
+          "createdAt": "2026-03-03T21:23:07Z",
+          "updatedAt": "2026-03-03T21:23:07Z"
         }
       ]
     },
@@ -2600,7 +2670,7 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nSection 3.1 titled Conformance states that an implentation is conformant to the specifications if it correctly follows all normative requirements that apply to it.  This pertains to enforcement, which is out of scope for the Vocab and Attach document. It adds nothing to the Vocabulary or statement of preference. Solution: Delete 3.1 Conformance.\n\n### Proposed Resolution\n\nDelete Section 3.1 Conformance.",
       "createdAt": "2025-09-22T07:38:58Z",
-      "updatedAt": "2026-02-26T03:38:38Z",
+      "updatedAt": "2026-03-03T22:30:14Z",
       "closedAt": null,
       "comments": [
         {
@@ -2609,6 +2679,13 @@
           "body": "I strongly disagree with removing this.",
           "createdAt": "2025-09-30T06:10:53Z",
           "updatedAt": "2025-09-30T06:10:53Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "March interim:\n\nEKR: In what way could an implementation be non-conformance?\n\nSuresh: I think it's about compliance.\n\nEKR: If you say \"I choke on non-conformant labels\" I agree. \n\nmnot: Separation of conformance to processing and conformance to preferences.\n\nJo: My concern is that it pertains to enforcement. If there isn't an enforcement mechanism built in, it should be obvious. \n\nmnot: Enforcement is out of scope.\n\nPaul keller: There might be some misunderstanding about what layer this applies to. Compliance vs conformance.\n\nElaine Newton: I found this confusing because there are very few MUSTs and MUST NOTs.",
+          "createdAt": "2026-03-03T22:30:14Z",
+          "updatedAt": "2026-03-03T22:30:14Z"
         }
       ]
     },
@@ -2750,7 +2827,7 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nThe hierarchical structure in vocab-03 -  placing categories like Automated Processing, Search, and AI Training in parent\u2013child relationships - introduces complexity without real benefit. In practice, preferences can be expressed directly on each activity, so the hierarchy does not add clarity; instead it forces artificial nesting. Real-world processing often overlaps across categories, and the hierarchy has already led to a patchwork of overlapping or conflicting proposals. Because publishers simply want to state \u201callow\u201d or \u201cdisallow\u201d for specific uses or use multiple preferences, the extra layer of hierarchy is unnecessary and risks confusing both implementers and publishers. A flatter, modular vocabulary would make preferences easier to understand, more consistent to apply, and better aligned with real systems. \n\n### Proposed Resolution\n\nRemove the heirarchical structure and replace with a flatter, modular structure that would make the preferences easier to understand, more consistent to apply, and better aligned with real systems. ",
       "createdAt": "2025-09-26T20:27:17Z",
-      "updatedAt": "2025-12-11T04:30:40Z",
+      "updatedAt": "2026-03-03T22:10:44Z",
       "closedAt": null,
       "comments": [
         {
@@ -2773,6 +2850,13 @@
           "body": "@kmadhavan-msft You mention creating a \"flatter, modular structure\" -- could you give some more detail? In particular, what should be done when there is a case that _is_ a subset of a larger term?\n\nFor example, let's imagine that we've agreed on a term for \"(A) AI for the purpose of creating media about animals\", and want to create a new term for \"(B) AI for the purpose of creating pictures of kittens.\" \n\nA recipient of \"A=no\" \"B=yes\" needs to disambiguate these seemingly conflicting signals; AFAICT we have a few options:\n\n1. Make B a subset of A -- i.e., B is more specific and therefore wins\n2. Define B to override a preference for A when stated (functionally equivalent to 1?)\n3. Define A to be overridden by a preference for B (requires B to be known about when A is created)\n4. Don't allow this pattern of definitions / we aren't going to need it\n\nIt seems to me that if terms are to have precedence, that needs to be defined somewhere, with the most likely candidates being the definitions of the terms themselves. If that is the case, I'm wondering whether you're objecting to the capability itself (i.e., 4 above), or it's just the terminology which is causing a problem.\n\n",
           "createdAt": "2025-12-11T04:30:40Z",
           "updatedAt": "2025-12-11T04:30:40Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "March interim:\n\nMT: if we don't have hierarchy, a lot can be removed, but at this stage it's difficult to commit. Leaving this untouched for now, but we can adjust later.",
+          "createdAt": "2026-03-03T22:10:44Z",
+          "updatedAt": "2026-03-03T22:10:44Z"
         }
       ]
     },
@@ -2972,9 +3056,17 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nThe inclusion of \u201cfine-tune\u201d in the Foundation AI Model Production category (section 4.2 of draft version 4) is unnecessary and scientifically imprecise. Fine-tuning has a overly broad meaning dependent on context and is very hard to define. The term is ambiguous and context-dependent: in modern ML practice, fine-tuning can describe a wide range of techniques, from full parameter re-optimization to lightweight adapter or prompt-based adjustments, varying substantially by architecture and application. Treating it as a discrete category risks conflating routine adaptation with foundational training, creating ambiguity for implementers and misalignment with publisher intent.  \n\nImportantly, this terminology was never raised or discussed in prior WG deliberations, and its late unnecessary introduction expands scope without clear consensus or definitional precision. This is also apparent in the fact that fine-tuning is never defined in the document. \n\n### Proposed Resolution\n\nRemove the term fully and avoid confusion and ambiguity. Potentially rename the category as \u201cFoundational AI Model Training and models refined from them\u201d as \u201cThe act of using content to train large-scale, general-purpose generative AI models intended to enable broad capabilities, including the generation of text, images, and other synthetic content across diverse domains.\u201d",
       "createdAt": "2025-10-30T23:12:13Z",
-      "updatedAt": "2025-12-09T00:24:20Z",
+      "updatedAt": "2026-03-03T21:13:52Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "March Interim:\n\nMT: \"overly broad\" is not agreed to, but there is a valid concern here. Concrete issue is the scope of the definition of AI training.\n\nTimid Robot: It would be helpful if people could suggest terms in the issue.\n\nChris Needham: Fine-tuning sits within the definition of training for me, I'm not sure it helps to pull it apart.\n\nAlissa: When does the model stop being produced? I.e., what is the boundary condition? If we can define that, we may be able to make progress.\n\nPedro Suarez: Fine-tuning can mean many things. If we worry just about production, it's easier to talk about. Are the weights changing? is the model itself changing? Is the model stable?\n\n",
+          "createdAt": "2026-03-03T21:13:52Z",
+          "updatedAt": "2026-03-03T21:13:52Z"
+        }
+      ]
     },
     {
       "number": 180,
@@ -3022,13 +3114,21 @@
       "assignees": [],
       "labels": [
         "vocabulary",
-        "pref: search"
+        "search"
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nThe current definition of the \u201cSearch\u201d category attempts to require that \u201cthe asset can only be represented in the output with excerpts that are drawn verbatim from it\u201d, but this conflicts with the well-established operational behavior of modern retrieval systems. Search results often feature generated or reworded snippets to give users relevant context, highlights, or support user intent.  Moreover, the definition appears to conflate \u201cSearch\u201d with the \u201cExact Text Match\u201d or \u201cmatch-text\u201d category defined in [A Vocabulary for Controlling Usage of Content Collected by Search and AI Crawlers](https://datatracker.ietf.org/doc/html/draft-madhavan-aipref-displaybasedpref-01) rather than treating search as a distinct paradigm of retrieval. This conflation risks imposing display constraints on indexing and retrieval workflows that are not aligned with real-world practice. The vocabulary should reflect the intent to allow retrieval and access (for search) without prescribing how snippets or excerpts must be generated or displayed.\n\n### Proposed Resolution\n\nRemove the text regarding verbatim match completely and add the exact output match category as a sub-category to search. Additionally, we strongly recommend further work to iron out the definition for the search category itself given that existing options such as \u201cnoindex\u201d exist and are widely adopted to completely opt out of search.",
       "createdAt": "2025-10-30T23:16:53Z",
-      "updatedAt": "2025-11-03T08:47:10Z",
+      "updatedAt": "2026-03-03T21:59:14Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "March interim:\n\nAlissa: Would be great to have discussion of the more specific proposals in Krishna's draft. \n\nMT: We did that work; those things were in the draft for a period. We discussed them (in Montreal?), it wasn't possible to make sense of them.\n\nAlissa: That's too bad; they make more sense than what's in the WG draft. \n\nMT: My view is that the current text is more aligned with the Microsoft proposals - it's about the outcome rather than the internal processes. \n\nAlissa: I'm specifically talking about the discrete display-based controls in Krishna's draft. \n\nMT: I don't think we've sealed that. When we came to it, no one was able to translate it into something that made sense.\n\nMeredith: Would it be considered neutral or negative if people had to change their technology to meet that definition?\n\nFarz: Krishna's proposal was not thoroughly discussed in Montreal. \n\nPedro: I don't see providers implementing another technology for policy purposes.\n\nPaul Keller: We didn't discuss Krishna's draft in full detail; it's valuable to do so. We need to have clarity about the context -- the vocabulary, or just one attachment mechanism? It will be very useful to have use cases.\n\n",
+          "createdAt": "2026-03-03T21:59:14Z",
+          "updatedAt": "2026-03-03T21:59:14Z"
+        }
+      ]
     },
     {
       "number": 182,
@@ -3096,7 +3196,7 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nThe new definition of Foundation Model Production says:\n\n> Foundation models are large models that are produced using deep learning or other machine learning techniques. Foundation models are trained on very large numbers of assets so that they can be applied to a wide range of use cases. Foundation models typically possess generative capabilities in one or more media.\n\nHow large is \"large\"? How large is \"very large numbers of assets\"?\n\n### Proposed Resolution\n\n_No response_",
       "createdAt": "2025-11-03T12:14:55Z",
-      "updatedAt": "2026-01-20T23:14:24Z",
+      "updatedAt": "2026-03-03T21:42:28Z",
       "closedAt": null,
       "comments": [
         {
@@ -3119,6 +3219,13 @@
           "body": "@coopdanger does @martinthomson's comment address your concern? If not, could you sketch out an idea of what might address the issue?",
           "createdAt": "2026-01-20T23:13:40Z",
           "updatedAt": "2026-01-20T23:13:40Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "March interim:\n\nPedro Suarez: I see an immediate problem in that if we say it's too large or too small, it blurs the line between what a foundation model is and what classic search is. \n\nMT: All definitions out there share a common stem, but diverge. If specific numbers are involved, they are diverse. To pin it down would be dangerous, given how fast things are changing. To Pedro's point, how we distinguish from eg search is by other means, not use size. Using the term that's reinforced elsewhere is a good thing; perfect is the enemy of making progress here.\n\nPedro: Defining a particular size is dangerous because research efforts are about creating capable small models with fewer parameters. If we set a threshold, it may become quickly irrelevant.\n\nChris Needham: +1 to MT and Pedro. Use cases might surface these distinctions.\n\nAlissa: Wasn't trying to suggest that we quantify; rather, that the terms are ambiguous; when does one qualify? Taking those words out would make this clear. Ie don't indicate size at all.\n\n[ many +1 on chat ]",
+          "createdAt": "2026-03-03T21:42:28Z",
+          "updatedAt": "2026-03-03T21:42:28Z"
         }
       ]
     },
@@ -3171,9 +3278,17 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nWe are still left with a Search category that may not reflect how modern Search engines operate today, let alone how they may operate in the near future. While I understand that the purpose of this group is to define a vocabulary, and not to embody policy, it is nonetheless better to define a vocabulary that people can understand and that reflects reality, so that those preferences, once expressed, can be respected in meaningful ways.\n\nSpecifically, there are references to \u201ctraditional\u201d Search which might lead publishers to think that current Search implementations are merely, say, 1998-era Search with additional AI parts bolted to that infrastructure in a way that can be separated. But that is incorrect. \n\nTo take one example, if Search results are to be grouped under headings to give users an idea of the various kinds of results that exist for a particular query, and those headings are generated by AI, with reference to the links grouped thereunder, that would seem to fall outside the Search category as written, even if the links-and-snippets part of the results is otherwise satisfactory. A publisher expressing a \u201ctraditional-Search-only\u201d preference would find themselves outside these grouped links, perhaps, and perhaps not appearing with the prominence they would desire.\n\nSuggest we make clear that Search=yes also encompasses this kind of thing, or, alternatively, that we explain to publishers that if Search=yes remains narrowly defined, that unexpected outcomes are a real risk both now and as products evolve in the future. \n\n\n### Proposed Resolution\n\n_No response_",
       "createdAt": "2025-11-25T00:54:11Z",
-      "updatedAt": "2025-12-09T00:44:46Z",
+      "updatedAt": "2026-03-03T21:50:25Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "March interim:\n\nCaleb: Happy to propose a resolution. \n\nSuresh: Krishna has a similar issue. If you can work with them it might help.\n\nErik Stallman: Was confused as to whether this category was subsuming all of search or some subset (e.g., done by AI) and how to distinguish them. \n\nPedro Suarez: It's been brought up multiple times - 'Traditional' search effectively uses AI because it uses the models in internal representations. ",
+          "createdAt": "2026-03-03T21:50:25Z",
+          "updatedAt": "2026-03-03T21:50:25Z"
+        }
+      ]
     },
     {
       "number": 188,
@@ -3225,6 +3340,32 @@
       "updatedAt": "2026-02-26T03:38:39Z",
       "closedAt": null,
       "comments": []
+    },
+    {
+      "number": 193,
+      "id": "I_kwDOOWk1-s7vjUfY",
+      "title": "Carrying preferences with stuff",
+      "url": "https://github.com/ietf-wg-aipref/drafts/issues/193",
+      "state": "OPEN",
+      "author": "martinthomson",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [
+        "triage"
+      ],
+      "body": "### Confirmation\n\n- [x] I have reviewed our [existing issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\n@TimidRobot points out that we don't really talk about our expectations around how preferences might be carried along with the stuff (currently, \"assets\") that they apply to.\n\nI think that our presumption thus far was that anyone who acquires covered stuff carries metadata for that stuff along with it so that any use can be informed by preferences.  This means carrying robots.txt or headers, for the attachments we are using.\n\n### Proposed Resolution\n\nThis might be tricky, but I think that our expectation is that metainformation and preferences live with the things that they cover.  That is going to be hard for things like robots.txt, which might not naturally follow along with the bytes.",
+      "createdAt": "2026-03-03T22:23:43Z",
+      "updatedAt": "2026-03-03T22:26:26Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Something that was noted about this is that any acquisition that is for a specific purpose can discard stuff that has preference that are incompatible with that use.",
+          "createdAt": "2026-03-03T22:26:26Z",
+          "updatedAt": "2026-03-03T22:26:26Z"
+        }
+      ]
     }
   ],
   "pulls": [
