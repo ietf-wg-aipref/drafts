@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-03-05T02:39:24.188062+00:00",
+  "timestamp": "2026-03-12T02:40:56.200649+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -9091,6 +9091,32 @@
           "comments": []
         }
       ]
+    },
+    {
+      "number": 194,
+      "id": "PR_kwDOOWk1-s7Jhqr0",
+      "title": "Nits from Yudong Sheng",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/194",
+      "state": "OPEN",
+      "author": "martinthomson",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "A small typo and a little expansion of an example.",
+      "createdAt": "2026-03-10T22:35:31Z",
+      "updatedAt": "2026-03-10T22:35:31Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "03c7ea334c0b99a3495b31f58421aa8b960f80b3",
+      "headRepository": "ietf-wg-aipref/drafts",
+      "headRefName": "clarify-hp",
+      "headRefOid": "e0ae096c2cec43223508f4d9dc6e18326b7fc35e",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
     }
   ]
 }
