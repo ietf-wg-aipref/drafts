@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-03-12T02:40:56.200649+00:00",
+  "timestamp": "2026-03-29T03:18:16.180105+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -82,6 +82,11 @@
       "name": "context",
       "description": "The context that the vocabulary is used within",
       "color": "db4baf"
+    },
+    {
+      "name": "deferred",
+      "description": "Something which we'll discuss later, to see if it's still an issue after intervening changes",
+      "color": "a44d52"
     }
   ],
   "issues": [
@@ -1985,11 +1990,11 @@
       "assignees": [],
       "labels": [
         "vocabulary",
-        "triage"
+        "model"
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nBuilding on the note I sent to the Working Group on August 4th, and in reaction to the WGLC, I\u2019m opening this issue to explain our concerns. Most importantly, I\u2019m also attaching a display-based preferences vocabulary proposal as a path forward under the solution  text box. \nAs I and others have stressed, a vocabulary should achieve clarity, able to be adopted, and align with technical realities. Based on careful analysis, the current vocabulary draft (https://datatracker.ietf.org/doc/html/draft-ietf-aipref-vocab-03) does not achieve these aims. I appreciate the input and effort directed towards the draft, including updates to rework certain terms. However, I think key structural issues remain. \n\nI propose that we prioritize display-based preferences instead, which are clearer, enforceable, and better aligned with Search/AI user and publisher expectations. \n\nBefore I explain why a **display-based preferences vocabulary** approach is preferrable, I want to take a moment to unpack several of the structural challenges with the current draft. \n\n**Automated Processing category risks jeopardizing a safe and working internet**\nThe \u201cautomated processing\u201d category even as currently defined is **too broad and vague** to be actionable. It covers any use of content on a modern computing device \u2013 including when we export a document to PDF, print a file, or view pages in a browser. As Greg noted on the working group email, \u201cI imagine that running code on html to extract outgoing links is \u2018automated processing\u2019 [quotes in original]. Therefore, no crawler, even crawlers totally unrelated to AI, could function in such a world.\u201d Our concern is that this category places the larger Internet at risk of being less safe and usable for everyone as this category encompasses:\n\n\u2022\t**Content moderation and filtering** - critical for content safety.\n\u2022\t**Spam/Junk/High risk content tagging** \u2013 critical to operating the Internet safely.\n\u2022\t**Accessibility features** - such as automated captions and layout adjustments.\n\nHere too, we acknowledge that these outcomes are not the intended desire, yet the fact remains that this category risks disabling essential functionality, creating false assurances for users, and introducing complaints against implementers - especially in regulated environments.  It also deserves mention that existing controls allow web publishers to express a preference about whether a bot/crawler can access the site at all. We should focus our attention on those terms if there are issues with their adoption or application; information I have not heard expressed in this working group. \n\n**The \u201cSearch\u201d Category Presents a Host of Problems**\nNotwithstanding the rationale for why \u201cSearch\u201d was introduced into this document, for most webmasters and site owners, \u201cSearch\u201d is a generally well understood system. The introduction of a well-known term in a vague context like \u201cai preferences\u201d disrupts and confuses the larger ecosystem as opposed to adding value (or, to assuage publisher concerns in light of a display-based approach). Let me explain further:\n\n**1. Search and AI are converging**\nThere is an increasingly clear trend to converge search interfaces with AI interfaces, and the user experiences will become even more indistinguishable.\n\n**2. Technically Incoherent**\nModern search systems - whether traditional or AI-enhanced - are deeply integrated with AI technologies for ranking, snippet generation, and relevance modeling. Attempting to isolate \u201csearch\u201d as a distinct opt-out category creates a false dichotomy between AI and non-AI search. This distinction is not technically meaningful and cannot be reliably enforced.\n\n**3. Operationally Unenforceable**\nUnlike display preferences (e.g., \u201cno snippet\u201d), the \u201csearch\u201d category attempts to regulate internal system behavior via some vague notion of \u201cdirects users to the location from which the assets were retrieved\u201d (note the web is full of content redirects). This introduces enforcement challenges: the boundaries of \u201csearch\u201d are undefined and invisible to users, making it difficult to audit whether a system has respected a \u201csearch\u201d opt-out.\n\n**4. Redundant with Existing Mechanisms**\nSite owners already have very many tools like robots.txt, noindex, and structured data to control search indexing and display. The \u201csearch\u201d category duplicates these controls without offering additional clarity or functionality. Worse, it risks conflicting with existing standards and creating confusion for implementers.\n\n\n### Proposed Resolution\n\n**Why Display Preferences Provide a Better Alternative**\n\n**1. Observable and Enforceable**\nDisplay-based preferences focus on how content is shown, not how it is processed behind the scenes. They are testable and auditable, making them far more suitable for a standards-based vocabulary.\n\n**2. Aligned with User Expectations**\nIn our experience, content owners are primarily concerned about how their content appears. Preferences such as, \u201cno index\u201d, \u201cno snippet\u201d or \u201cmax snippet length\u201d reflect real-world concerns and are already supported by major platforms.\n\n**3. Clearer language Allows for Harmonized Adoption** \nVague categories like \u201csearch\u201d or \u201cAI Training\u201d vs \u201cGenerative AI Training\u201d introduce ambiguities that plague a harmonized adoption of these preferences. This sets up future disputes between parties and undermines the credibility of the standard.\n\n**4. Supporting Content Subscription scenarios**\nIn our experience, some content, as paywall content, can have difference level of presentation. Whole document can be accessed for ranking but only some of it can be presented.\n\n**Proposal for change \u2013 display-based preferences**\nOur proposal introduces the concept of display-based preferences, which control (allow, disallow, or limit) the presentation of content collected by web and AI crawlers. These include vocabulary terms on access, indexing and retrieval, text display, text length limits, exact text match, image preview, video preview, and generative AI training. Importantly, each category corresponds to specific usage controls often reflected in existing web standards. This allows the working group to inherit and build off experiences and familiarity.\n\nThis display-based preferences vocabulary also offers control for display/prevention of content in all experiences powered by this content collected, not only web-based experiences and API results. Its offer control for LLM built from the content collected also.\n\n[\\[IETF Issue File\\] A Vocabulary For Expressing Access and Usage of Assets by Search and AI crawlers_Clean_v3.pdf](https://github.com/user-attachments/files/22183722/IETF.Issue.File.A.Vocabulary.For.Expressing.Access.and.Usage.of.Assets.by.Search.and.AI.crawlers_Clean_v3.pdf)",
       "createdAt": "2025-09-06T01:42:57Z",
-      "updatedAt": "2025-12-09T00:43:55Z",
+      "updatedAt": "2026-03-26T07:02:17Z",
       "closedAt": null,
       "comments": [
         {
@@ -2127,22 +2132,29 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\n_Raised in [email by EKR](https://mailarchive.ietf.org/arch/msg/ai-control/dxpLCD7R2L-L07fEQCITjXjUcMY)_\n\n      AI Training:\n        The application of machine learning to data to produce or improve\n        a model for an artificial intelligence system.\n\nI'm not sure what \"machine learning\" is doing here.\n\n### Proposed Resolution\n\nI'm not sure what \"machine learning\" is doing here. Why not just:\n\n      The use of data to produce or improve an artificial\n      intelligence system.\n\nI would then strike the term \"machine learning\" entirely.",
       "createdAt": "2025-09-10T02:36:02Z",
-      "updatedAt": "2026-03-03T21:21:12Z",
+      "updatedAt": "2026-03-26T16:44:33Z",
       "closedAt": null,
       "comments": [
-        {
-          "author": "ashutoshk314",
-          "authorAssociation": "NONE",
-          "body": "Hello,  \nI would like to work on this issue if it is still open. Please let me know if I may proceed.\n\nThank you.",
-          "createdAt": "2025-12-30T03:31:12Z",
-          "updatedAt": "2026-01-06T05:31:52Z"
-        },
         {
           "author": "mnot",
           "authorAssociation": "CONTRIBUTOR",
           "body": "March interim:\n\nTimid Robot: I would like more reasoning behind removing it. \"AI\" is too general / meaningless.\n\nNate: Agreed; \"AI\" is a marketing term. Without ML it becomes too amorphous. \n\n",
           "createdAt": "2026-03-03T21:21:12Z",
           "updatedAt": "2026-03-03T21:21:12Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "@ekr there seemed to be pushback on removing this term -- has your position changed? If not, could you try to motivate removing it more?",
+          "createdAt": "2026-03-26T06:29:37Z",
+          "updatedAt": "2026-03-26T06:29:37Z"
+        },
+        {
+          "author": "ekr",
+          "authorAssociation": "NONE",
+          "body": "No, my position hasn't changed.\n\nWell, using the term \"ML\" doesn't get you out of needing a definition of artificial intelligence, because the text here is:\n\n> The application of machine learning to data to produce or improve\n>  a model for an artificial intelligence system.\n\nSo without a definition of \"artificial intelligence\" this text is meaningless. To see that, try replacing \"artificial intelligence\" with \"agriculture\". So that leaves us with what \"machine learning\" is doing here, and the answer is that, if anything, it's restricting the field to some uses of data to \"to produce or improve a model for an artificial intelligence system.\". So, my question is, what uses of data to \"to produce or improve a model for an artificial intelligence system\" are we trying to exclude from this definition.\n\n\n\n\n\n\n\n",
+          "createdAt": "2026-03-26T16:44:33Z",
+          "updatedAt": "2026-03-26T16:44:33Z"
         }
       ]
     },
@@ -2157,11 +2169,12 @@
       "assignees": [],
       "labels": [
         "vocabulary",
-        "model"
+        "model",
+        "deferred"
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\n_Raised in [email by EKR](https://mailarchive.ietf.org/arch/msg/ai-control/dxpLCD7R2L-L07fEQCITjXjUcMY)_\n\nS 3.\n\n    After processing a statement of preferences the recipient associates\n    each category of use one of three preference values: \"allowed\",\n    \"disallowed\", or \"unknown\".  In the absence of a statement of\n    preference, all usage categories are assigned a preference value of\n    \"unknown\".\n\nWhat's the semnatic difference between \"unknown\" and \"allowed\"?\nEventually, I need to either use or not use a given piece of\ndata. Is this just an internal detail of the algorithm?\n\n### Proposed Resolution\n\n_No response_",
       "createdAt": "2025-09-10T02:36:59Z",
-      "updatedAt": "2026-03-03T22:18:55Z",
+      "updatedAt": "2026-03-26T06:31:42Z",
       "closedAt": null,
       "comments": [
         {
@@ -2254,11 +2267,12 @@
       "assignees": [],
       "labels": [
         "vocabulary",
-        "model"
+        "model",
+        "deferred"
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\n_Raised in [email by EKR](https://mailarchive.ietf.org/arch/msg/ai-control/dxpLCD7R2L-L07fEQCITjXjUcMY)_\n\nS 5.\n\n    One approach for dealing with an \"unknown\" outcome is to assign a\n    default value.  This document takes no position on what default might\n    be assigned.\n\nI don't think this makes any sense. The purpose of this document\nis to allow the processing agent to understand the declaring\nparty's preferences, and we don't even require the agent\nto respect them, so it's weird to talk about defaults in\nthat context.\n\n### Proposed Resolution\n\n_No response_",
       "createdAt": "2025-09-10T02:38:07Z",
-      "updatedAt": "2026-01-06T05:36:14Z",
+      "updatedAt": "2026-03-26T06:32:43Z",
       "closedAt": null,
       "comments": [
         {
@@ -2415,7 +2429,7 @@
       "id": "I_kwDOOWk1-s7KsjYP",
       "title": "AI Training and Generative AI Training are Too Broad",
       "url": "https://github.com/ietf-wg-aipref/drafts/issues/157",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "mnot",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [
@@ -2428,8 +2442,8 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\n_Raised in [email by EKR](https://mailarchive.ietf.org/arch/msg/ai-control/dxpLCD7R2L-L07fEQCITjXjUcMY)_\n\nAI training is a coherent category but seems like a trap for the\nunwary, because a lot of people are going to turn it on and thus\nexclude all kinds of useful applications, when what they really want\nis much more narrow (something like gen AI). I also have a problem\nwith the term \"training\" for the reasons indicated above.\n\nGenerative AI training is a remarkably wide category (see\naforementioned comments about substitution, summarization, and\ngenerating original content).\n\n\n### Proposed Resolution\n\n_No response_",
       "createdAt": "2025-09-10T02:44:40Z",
-      "updatedAt": "2026-03-03T21:45:07Z",
-      "closedAt": null,
+      "updatedAt": "2026-03-26T06:36:03Z",
+      "closedAt": "2026-03-26T06:36:03Z",
       "comments": [
         {
           "author": "mnot",
@@ -2451,6 +2465,13 @@
           "body": "March interim:\n\nMT: Overtaken by events; we now have foundation model training. We shouldn't remove \"AI training\", but we do have other issues for it. ",
           "createdAt": "2026-03-03T21:45:06Z",
           "updatedAt": "2026-03-03T21:45:06Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Closing (but can reopen depending on how we go with other uses).",
+          "createdAt": "2026-03-26T06:36:03Z",
+          "updatedAt": "2026-03-26T06:36:03Z"
         }
       ]
     },
@@ -2469,7 +2490,7 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\n_Raised in [email by EKR](https://mailarchive.ietf.org/arch/msg/ai-control/dxpLCD7R2L-L07fEQCITjXjUcMY)_\n\nAs an aside, it's obviously possible for a bot to collect data for\nmultiple purposes. Maybe I've missed it, but does this draft say what\nthe rules are there? I guess you're supposed to somehow only proceed\nif the intersection of all the uses is allowed? S 5.1 seems to be\nabout the related but different problem of harmonizing multiple\nstatements for a given usage.\n\n### Proposed Resolution\n\n_No response_",
       "createdAt": "2025-09-10T02:45:19Z",
-      "updatedAt": "2026-03-03T22:31:56Z",
+      "updatedAt": "2026-03-26T06:36:26Z",
       "closedAt": null,
       "comments": [
         {
@@ -2485,6 +2506,13 @@
           "body": "March interim:\n\nEKR: This text is probably OK now; will take a look.",
           "createdAt": "2026-03-03T22:31:56Z",
           "updatedAt": "2026-03-03T22:31:56Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "@ekr OK to close?",
+          "createdAt": "2026-03-26T06:36:26Z",
+          "updatedAt": "2026-03-26T06:36:26Z"
         }
       ]
     },
@@ -2663,14 +2691,17 @@
       "state": "OPEN",
       "author": "Jo-Levy",
       "authorAssociation": "NONE",
-      "assignees": [],
+      "assignees": [
+        "martinthomson",
+        "paul2keller"
+      ],
       "labels": [
         "vocabulary",
         "context"
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nSection 3.1 titled Conformance states that an implentation is conformant to the specifications if it correctly follows all normative requirements that apply to it.  This pertains to enforcement, which is out of scope for the Vocab and Attach document. It adds nothing to the Vocabulary or statement of preference. Solution: Delete 3.1 Conformance.\n\n### Proposed Resolution\n\nDelete Section 3.1 Conformance.",
       "createdAt": "2025-09-22T07:38:58Z",
-      "updatedAt": "2026-03-03T22:30:14Z",
+      "updatedAt": "2026-03-26T06:39:10Z",
       "closedAt": null,
       "comments": [
         {
@@ -2686,6 +2717,13 @@
           "body": "March interim:\n\nEKR: In what way could an implementation be non-conformance?\n\nSuresh: I think it's about compliance.\n\nEKR: If you say \"I choke on non-conformant labels\" I agree. \n\nmnot: Separation of conformance to processing and conformance to preferences.\n\nJo: My concern is that it pertains to enforcement. If there isn't an enforcement mechanism built in, it should be obvious. \n\nmnot: Enforcement is out of scope.\n\nPaul keller: There might be some misunderstanding about what layer this applies to. Compliance vs conformance.\n\nElaine Newton: I found this confusing because there are very few MUSTs and MUST NOTs.",
           "createdAt": "2026-03-03T22:30:14Z",
           "updatedAt": "2026-03-03T22:30:14Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Assigning to editors -- it became clear in the March meeting that this language needs more work.",
+          "createdAt": "2026-03-26T06:38:57Z",
+          "updatedAt": "2026-03-26T06:38:57Z"
         }
       ]
     },
@@ -2703,7 +2741,7 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\n In the abstract,  the phrase \u201cContent creators and other stakeholders might wish to signal their preferences about how their content might be consumed by automated systems\u201d is confusing and does not accurately describe the scope. The preference is not about how  content is consumed from the website.  The preference is about how it is  used after it is accessed or consumed. Also, the phrase \"automated systems\" is overly broad, particularly since here it seems to refer to crawlers but later it seems to refer to AI systems that need to read the preferences after it is collected. This will lead to confusion.\n\nSuggestion:  change to \"about whether website content that is accessed orconsumed by crawlers may later be used to train or develop AI models.\"\n\n\n### Proposed Resolution\n\nSuggestion:  change to \"about whether website content that is accessed orconsumed by crawlers may later be used to train or develop AI mode",
       "createdAt": "2025-09-22T07:48:41Z",
-      "updatedAt": "2025-12-09T00:08:49Z",
+      "updatedAt": "2026-03-26T06:45:58Z",
       "closedAt": null,
       "comments": []
     },
@@ -2865,7 +2903,7 @@
       "id": "I_kwDOOWk1-s7OLKz_",
       "title": "Search should be removed and replaced with display-based preferences",
       "url": "https://github.com/ietf-wg-aipref/drafts/issues/171",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "kmadhavan-msft",
       "authorAssociation": "NONE",
       "assignees": [],
@@ -2875,14 +2913,22 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nThe term \u201cSearch\u201d is well understood by webmasters, but using it without a clear definition may cause confusion rather than helping address publisher concerns about display-based approaches. Yet, many challenges arise when attempting to strike a durable definition: \n\nThe line between search and AI is increasingly blurred, making it hard to separate them meaningfully in policy. \n\nModern search relies on AI for functions like ranking and snippets, so a distinct \u201csearch\u201d opt-out may not be practical. \n\nThe current \u201csearch\u201d category appears to regulate internal system behavior in ways that are hard to define or audit. \n\nExisting mechanisms like robots.txt and noindex already give site owners strong control, so adding a new \u201csearch\u201d category could duplicate or conflict with these mechanisms. \n\n### Proposed Resolution\n\nWe have proposed alternate solution detailed here: [https://datatracker.ietf.org/doc/html/draft-madhavan-aipref-displaybasedpref-01](https://datatracker.ietf.org/doc/html/draft-madhavan-aipref-displaybasedpref-01 )",
       "createdAt": "2025-09-26T20:30:33Z",
-      "updatedAt": "2025-12-09T00:15:06Z",
-      "closedAt": null,
-      "comments": []
+      "updatedAt": "2026-03-26T06:26:00Z",
+      "closedAt": "2026-03-26T06:25:59Z",
+      "comments": [
+        {
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Closing as a duplicate of #149. If there's material here that isn't captured there, please copy it over.",
+          "createdAt": "2026-03-26T06:25:59Z",
+          "updatedAt": "2026-03-26T06:25:59Z"
+        }
+      ]
     },
     {
       "number": 172,
       "id": "I_kwDOOWk1-s7OUM2s",
-      "title": "Missing Category for RAG and Grounding",
+      "title": "Category for RAG and Grounding",
       "url": "https://github.com/ietf-wg-aipref/drafts/issues/172",
       "state": "OPEN",
       "author": "mnot",
@@ -2895,7 +2941,7 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\n_From @chrisn in [email](https://mailarchive.ietf.org/arch/msg/ai-control/2ZbEx73js_cTQT8mI1Wy6_0ZC_s):_\n\nWithout a category that covers RAG and grounding usage, the vocabulary does not meet publisher needs. This need was raised at the outset of this work, in the IAB workshop in Washington DC in 2024, and included in the WG charter scope.\n\nIn addition to reducing web traffic to original content, such usage introduces the possibility of creating misleading or biased statements, an issue that impacts news publishers in particular, risking undermining their credibility. Research published by the BBC goes into this in more detail, demonstrating that AI-generated answers summarise and present content in a way that can introduce factual inaccuracies and biases that are not present in the original published content.\n\n### Proposed Resolution\n\n_No response_",
       "createdAt": "2025-09-28T08:57:47Z",
-      "updatedAt": "2025-12-16T11:21:51Z",
+      "updatedAt": "2026-03-26T06:42:26Z",
       "closedAt": null,
       "comments": [
         {
@@ -3191,12 +3237,11 @@
       "assignees": [],
       "labels": [
         "vocabulary",
-        "training",
-        "needs proposal"
+        "training"
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nThe new definition of Foundation Model Production says:\n\n> Foundation models are large models that are produced using deep learning or other machine learning techniques. Foundation models are trained on very large numbers of assets so that they can be applied to a wide range of use cases. Foundation models typically possess generative capabilities in one or more media.\n\nHow large is \"large\"? How large is \"very large numbers of assets\"?\n\n### Proposed Resolution\n\n_No response_",
       "createdAt": "2025-11-03T12:14:55Z",
-      "updatedAt": "2026-03-03T21:42:28Z",
+      "updatedAt": "2026-03-26T06:52:39Z",
       "closedAt": null,
       "comments": [
         {
@@ -3226,6 +3271,13 @@
           "body": "March interim:\n\nPedro Suarez: I see an immediate problem in that if we say it's too large or too small, it blurs the line between what a foundation model is and what classic search is. \n\nMT: All definitions out there share a common stem, but diverge. If specific numbers are involved, they are diverse. To pin it down would be dangerous, given how fast things are changing. To Pedro's point, how we distinguish from eg search is by other means, not use size. Using the term that's reinforced elsewhere is a good thing; perfect is the enemy of making progress here.\n\nPedro: Defining a particular size is dangerous because research efforts are about creating capable small models with fewer parameters. If we set a threshold, it may become quickly irrelevant.\n\nChris Needham: +1 to MT and Pedro. Use cases might surface these distinctions.\n\nAlissa: Wasn't trying to suggest that we quantify; rather, that the terms are ambiguous; when does one qualify? Taking those words out would make this clear. Ie don't indicate size at all.\n\n[ many +1 on chat ]",
           "createdAt": "2026-03-03T21:42:28Z",
           "updatedAt": "2026-03-03T21:42:28Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Straw-man proposal:\n\nFoundation models are models that are produced using deep learning or other machine learning techniques. Foundation models are trained on a sufficient number of assets to be applied to a wide range of use cases. Foundation models typically possess generative capabilities in one or more media.",
+          "createdAt": "2026-03-26T06:51:51Z",
+          "updatedAt": "2026-03-26T06:51:51Z"
         }
       ]
     },
@@ -3295,32 +3347,48 @@
       "id": "I_kwDOOWk1-s7ciTTZ",
       "title": "Remove the vocabulary document and enable a market for content rights documents",
       "url": "https://github.com/ietf-wg-aipref/drafts/issues/188",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "jwrosewell",
       "authorAssociation": "NONE",
       "assignees": [],
       "labels": [],
       "body": "## Current State\n\nThere are two documents this group are considering which I summarize as:\n\n- ATTACH \u2013 a method of communicating content usage signals.\n- VOCAB \u2013 definitions concerning content usage restrictions.\n\nATTACH seems to be nearly complete and sensible as it relates wholly to engineering and the signaling associated with content usage restrictions.  \n\nVOCAB does not relate to engineering but standardizing usage agreements between content owners and receivers. The goal of such standardization is to help reduce friction when communicating with disparate websites about specific use rights.\n\n## Problems\n\n1.\tThe approach of VOCAB lacks fidelity and flexibility.\n\nWhilst it might be convenient for engineers to reduce copyright and licensing to a few short sentences the reality is much more complex. The current approach will restrict the options available for other professions who wish to use language that might have specific legal or contractual meaning. Any restricted list will be anticompetitive.\n\n2.\tThe current VOCAB proposal focuses on technology and not use cases. \n\nAs just one current example it discusses whether to contribute or not to foundational model building whilst neglecting the uses that the resulting model will be put to. The same model used with AI overviews is a very different uses then accessibility solutions.\n\n3. \trobots.txt is only one of many mediums via which licenses for content might be communicated.\n\nAnother challenge is that the VOCAB is geared towards robot scripts by inclusion solely within robots.txt, rather than applying to AI foundational model building, training, enhancements even if the Generative AI is embedded into either a consumer-facing browser or a publisher partner.\n\n## Proposal\n\nI propose the group agrees to replace the VOCAB document with immutable URL documents containing content usage text to address the problems that are well documented and referenced in the end note.\n\nRecipients of these URLs will maintain a table of uses that they deem are allowable based on a human reading the associated content usage document. The following table is an example.\n\n| Content Usage Document URL | Usage |\n| - | - |\n| https://datatracker.ietf.org/doc/html/draft-ietf-aipref-vocab-02#name-automated-processing-catego | Automated Processing |\n| https://datatracker.ietf.org/doc/html/draft-ietf-aipref-vocab-02#name-ai-training-category | AI Training |\n| https://datatracker.ietf.org/doc/html/draft-ietf-aipref-vocab-02#name-generative-ai-training-cate\t| Generative AI Training |\n| https://datatracker.ietf.org/doc/html/draft-ietf-aipref-vocab-02#name-ai-use-category | AI Use |\n| https://datatracker.ietf.org/doc/html/draft-ietf-aipref-vocab-02#name-search-category | Search |\n\nWhen a new URL is received it will be added to this table by the receiver for review and classification. The receiver might wish to determine the order that URLs are reviewed based on frequency of use by content rights holders.\n\nThis aspect of the proposal is out of scope for the group and is provided purely for illustration only as it is for each individual receiver of content to decide how they respond to the content usage document pointed to by the URL.\n\nA content owner that sought to introduce their own content usage text/document would be free to create their own. For example; I might produce a content usage document that required payment for use of my content with AI using the URL `https://rosewell.me/ai-payment-for-content`.\n\nExample\n\nIf my prior example URL where used with ATTACH example showing a robots.txt at 3.4 could be modified to become.\n\n```\n\tUser-Agent: *\n\tAllow: /\n\tDisallow: /never/\n\tContent-Usage: /ai-ok-with-payment/ https://rosewell.me/ai-payment-for-content\n\tUser-Agent: ExampleBot\n\tAllow: /\n\tContent\t-Usage: https://rosewell.me/ai-payment-for-content \n```\n\n## Modifications\n\nThe ATTACH document would need to be simplified to remove the `=n` and `=y` notation. This would no longer be needed because the presence of the URL indicates that the associated document applies to content usage. Determining what is allowed or not allowed for each document will be a matter for the parties involved. The absence of the URL would mean nothing can be assumed.\n\nA further modification to ATTACH is to require the URL provided to never change once published.\n\n## Benefits\n\nThere is ample precedence for this proposal within the field of engineering. Open-source software flourished because it offered standardized terms to all recipients, reducing costs and complexity via its vocabulary of popular contract templates (i.e. MPL, MIT, Apache, etc). We should be careful limiting extensibility by attempting to adopt a centralized vocabulary, without allowing copyright holders to choose how to govern their property (e.g., much like selecting which of many open-source contracts a rights holder offers its property to recipients). With this extensibility many open-source license agreements flourished, and then the industry settled on a relatively small number. It is worth noting that any open-source author is still free to use their own license if they don\u2019t wish to use a common one.\n\nWith such a modification to VOCAB terms and locations a group of lawyers from publishers and AI companies in a given region might come together to define a common content usage document using methods and skills not available to the IETF. This document might become a commonly referenced standard contract.\n\nPublishers and AI companies in other regions might modify content usage documents to support laws or requirements in their regions.\n\nMedium\u2019s that don\u2019t use robots.txt would be able to use the same content-usage documents. For example; a `<div>` tag in HTML might have a specific content usage document that can be assigned to it indicating different requirements to other elements on the web page.\n\nWith this approach the IETF will cease to be involved in defining restrictive language but offer a consistent framework for automated negotiation. Various parties associated with content ownership and usage will be free to define, iterate, and use many agreements using whatever language or process they wish within a standardized framework.\n\nThe direction supports the development of standard contractual clauses by any entity.\n\n## Compatible\n\nFor those that wish to retain usage of the VOCAB definitions that the group has created to date they would simply modify the table at section 6.1 to use a URL that references their text. Using the existing URL as an example the following tables shows the modification.\n\n| Category | Content Usage Document URL |\n| - | - |\n| Automated Processing | https://datatracker.ietf.org/doc/html/draft-ietf-aipref-vocab-02#name-automated-processing-catego |\n| AI Training | https://datatracker.ietf.org/doc/html/draft-ietf-aipref-vocab-02#name-ai-training-category |\n| Generative AI Training | https://datatracker.ietf.org/doc/html/draft-ietf-aipref-vocab-02#name-generative-ai-training-cate |\n| AI Use | https://datatracker.ietf.org/doc/html/draft-ietf-aipref-vocab-02#name-ai-use-category |\n| Search |\thttps://datatracker.ietf.org/doc/html/draft-ietf-aipref-vocab-02#name-search-category |\n\nWith such a change it would be for the market to decide if these definitions were useful or not without being constrained by IETF processes and practices.\n\n## Questions & Challenges\n\n### - Doesn\u2019t the current draft already supports this capability?\n\nThe draft changes frequently so this can\u2019t be answer until a final version is ready. However even if this were possible we need to be mindful that when a technical mechanism becomes widely adopted by dominant companies the possibility of utilizing additional choices and features becomes impractical.\n\n### - Doesn\u2019t this mean rightsholders won\u2019t have a mechanism to communicate preferences for AI training and/or use?\n\nNo. The document referred to by the URL will determine what rights the rightsholder grants to the recipient. The recipient will need to inspect that document and determine what they are permitted to do, or not do. \n\nMarket forces will likely settle on a practical narrow set of common documents after a period of experimentation, trial and error, and innovation.\n\n### - This proposal will make it impossible to share a common set of terminology and definitions.\n\nNo. It will be for market forces to determine which documents get used and which don\u2019t rather than the IETF. If the market wants a set of common definitions and terminology then they will create those documents and they will become adopted.\n\nIt can be reasonably expected that a broad number of documents will be created initially with a smaller number becoming adopted and refined for different use cases over time. This happened in open source licensing.\n\n### - How does this proposal create bounded choices that engineers can work with?\n\nBounding restricts choices. Whilst that might be desirable in technical protocols it is not how business works. Businesses must be free to make their own choices. Unaltered the direction of this group will restrict business choice in practice via bounded lists defined by engineers. That must be avoided if the work is to be successful.\n\nIn this proposal some bounding is achieved via market forces and disciplines other than engineering and an IETF VOCAB document. \n\nBounding is achieved over time in practice rather than at the outset via defined vocabularies.\n\n### - IETF documents can be changed over time. Why doesn\u2019t this proposal recognize this?\n\nMarket participants must be free to decide the terms under which they make their property available to others and not be constrained, including by IETF processes for document control.\n\n### - Human review of documents and URLs will be required.\n\nPossibly, although AIs might be able to help. \n\nIn any case there is human review now. This proposal simply moves the human review from an IETF group like this one where consensus is achieved among a group of predominantly engineering people, to many disciplines and people.\n\n### - The volume of possible documents will be impractical.\n\nThe incentives for the market are to keep the number of content usage documents used in practice to an optimum number. That will be for the market to decide and will likely follow a pattern of rapid expansion and then contraction. \n\nIf a new content usage document is \u201cminted\u201d and used by only one publisher that is of little interest to AI companies then it will not be classified and the content will be ignored by the AI company. \n\nHowever, if that one publisher is successful in persuading many publishers to use the same content usage document then it might become more popular over time and AI companies might then decide to invest the effort in classifying it so that they can consider how they might use the associated content. That is a significant benefit of the proposal.\n\n### - Content owners could mount a Denial of Service (DOS) attach on AIs via many new documents.\n\nThe DOS example is mitigated via incentives. If the publishers have an incentive to create so many documents as to overwhelm AIs then it would be a sign that the market is not functioning for publishers and AI companies will need to change their practices. This is a matter for markets and not the IETF.\n\n### - Content rights documents could be poorly written and inconsistent.\n\nIt is entirely possible content usage documents will be poorly written and inconsistent. In such situation's they are unlikely to be used. See the [NASA Open Source Agreement](https://en.wikipedia.org/wiki/NASA_Open_Source_Agreement) in the field of open-source licensing as an example of such a document.\n\nIt is also possible some will be well written and become widely used. See the [MIT open-source licence](https://opensource.org/license/MIT).\n\n### - Content rights documents may not be clear meaning the outcome for those reviewing the document could be \u201cunknown\u201d.\n\nWell drafted documents form common contractual clauses in many fields. Consider for example standard contractual clauses for data transfers between EU and non-EU countries.\n\nSuitably qualified and motivated people would produce content usage documents that are clear. Of course, if only unqualified people with little motivation work on the problem, then \"unknown\" would be a likely outcome. If that happens then it would show businesses are not really interested in solving the problem. I consider that unlikely given my understanding of the issues.\n\nNeither outcome is a failure for this group.\n \n### - Are you proposing that standards take on a limited role and simple enable arbitrary statements to be carried?\n\nYes. The problem the vocabulary seeks to address is not one for the IETF. It is a business problem for business people.\n\n### - Technical standards taking a limited role is a gamble where we\u2019re betting that there is an interest in creating a market for common rights documents.\n\nThat is no different to the gamble we are all taking spending time writing and reading these emails and issues. If there is no market for the work of this group, then it will have failed. If there is a limited group of market participants who will benefit from the acknowledged restricted options, and a long process to remedy these restrictions for others via IETF processes, then the group will have failed in practice. In all fields some participants win when choice for others is restricted. It is for that reason we must not restrict business choice via a vocabulary.\n\nGiven the level of interest in this group and the importance of the problem to so many constituent groups enabling them to experiment by creating a market for them to do so will result in the best outcomes for the market over time.\n\nIn short; the IETF can setup the conditions for others to innovate; and then get out of the way.\n\n## Related Issues\n\nAdopting this proposal would address the following issues by making them out of scope for IETF and the subject of flexible usage documents created and stewarded by many organizations and not the IETF.\n\n#187\n#185\n#183\n#182\n#181\n#180\n#179\n#178\n#173\n#172\n#171\n#170\n#169\n#163\n#162\n#161\n#160\n#159\n#158\n#157\n#156\n#155\n#154\n#153\n#152\n#151\n#150\n#149\n\n-----\n\nNote: A prior version of this proposal was [posted to the group mailing list]( https://mailarchive.ietf.org/arch/msg/ai-control/3GAPGqrC_LS2VMzdaBkoy8a2Ofg/) on 27th August 2025. The responses via email have been summarized as Questions & Challenges.\n",
       "createdAt": "2025-12-05T18:41:18Z",
-      "updatedAt": "2025-12-05T18:41:18Z",
-      "closedAt": null,
-      "comments": []
+      "updatedAt": "2026-03-26T06:56:39Z",
+      "closedAt": "2026-03-26T06:56:39Z",
+      "comments": [
+        {
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "This list is for issues regarding our current documents; this proposal is a very different approach to the Working Group's deliverables, in a way that would likely require a charter change. \n\nAs such it's most appropriate to discuss it on-list, not here. ",
+          "createdAt": "2026-03-26T06:56:39Z",
+          "updatedAt": "2026-03-26T06:56:39Z"
+        }
+      ]
     },
     {
       "number": 189,
       "id": "I_kwDOOWk1-s7e6JwB",
       "title": "Consider content owner brand use and endorsement",
       "url": "https://github.com/ietf-wg-aipref/drafts/issues/189",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "jwrosewell",
       "authorAssociation": "NONE",
       "assignees": [],
       "labels": [],
       "body": "AI firms (such as Answer Engines) desire a standardized signaling mechanism for online copyright owners to communicate the specific rights they are granting regarding the use of their copyrighted material. Because copyright law mandates explicit permission rather than an opt-out process, publishers should not need to take any restrictive measures to prevent undesired competing uses.  \n\nA minimal but effective framework should allow media owners to specify three distinct categories of use:\n\n1.\tSource link inclusion in search results (SERP): The media owner may authorize the display of titles, snippets, and URLs for audiences to discover their online properties, and condition such use on specific remuneration methods and amounts. The generally accepted default for online listings to aid discovery and navigation is free use of the navigation link (URL) and publication of the media owner\u2019s summary via the <title></title> and <meta name=\"description\"> tags. \n\u2022\tToday this is signaled via <meta name=\"robots\" content=\"index\"> or content=\u201dnoindex\u201d \n\u2022\tAdditional signals include:  Noindex, Index, Follow, Nofollow, Noimageindex, None, Noarchive, Nocache, Nosnippet, Unavailable_after.\n\u2022\tGiven \u201cindex\u201d was designed solely for SERP, this vocabulary needs to distinguish DISPLAY vs NODISPLAY in SERP, rather than the technical method a search engine or directly listing service might use to include the link and media owner\u2019s summary of their property.\n\n2.\tGenerative use: The media owner may authorize the use of their content for model training, retrieval-augmented generation (RAG), or other methods that produce competitive generative outputs, and condition such use on specific remuneration methods and amounts. Instead of focusing on the technical methods (e.g., cache, index) that will change over time, media owners should focus on purposes of output use regardless of technical method.\n\u2022\tSuch allow/permit or disallow/prohibit signals must control \no\tWHO: access management\no\tWHAT: asset designation\no\tHOW MUCH: payment methods and pricing per purpose/use (see https://rslstandard.org/rsl)\no\tFOR WHAT: purposes (e.g., generation, classification, summarisation, embedding, attribution, onward sharing with others for any of these licensed uses)\no\tHOW LONG: expiration date\no\tDECLARATIONS: legal disclaimers about what is licensed \n\n3.\tBrand endorsement/attribution: The media owner may authorize use of its trademarks or brand identity alongside generative content outputs, including separate forms of RAG that connect outputs with identifiable publisher branding, and condition such use on specific remuneration methods and amounts.\n\u2022\tAlthough endorsement for AI system output is a subset of the purpose/use in 2. above, this is important an important aspect as one can image brand endorsement may altering payment and usage if included in AI system outputs. As such each purpose/use is not stand alone, but also requires logic for combinations (e.g., endorsement link without use in generation or endorsement link with use in generation). \n\nEnsuring flexibility for augmenting the standard distinct signals will enable AI and search systems to honor license boundaries faithfully while maintaining transparency, competition, and respect for copyright. RSL already includes such extensibility in its protocol and should be adopted into the IETF proposal.\n",
       "createdAt": "2025-12-17T17:24:29Z",
-      "updatedAt": "2025-12-17T17:24:29Z",
-      "closedAt": null,
-      "comments": []
+      "updatedAt": "2026-03-26T06:57:10Z",
+      "closedAt": "2026-03-26T06:57:10Z",
+      "comments": [
+        {
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "This list is for issues regarding our current documents; this proposal is a very different approach to the Working Group's deliverables, in a way that would likely require a charter change. \n\nAs such it's most appropriate to discuss it on-list, not here. ",
+          "createdAt": "2026-03-26T06:57:10Z",
+          "updatedAt": "2026-03-26T06:57:10Z"
+        }
+      ]
     },
     {
       "number": 192,
@@ -3337,9 +3405,17 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nIt is clear from the debate in this working group over the past year that there is significant confusion about what legal implications, if any, the work of this group is aiming to have on creators globally. \n\nFor example, the text of the current vocab draft ([draft-ietf-aipref-vocab-05](https://www.ietf.org/archive/id/draft-ietf-aipref-vocab-05.html)) says that it \u201cis intended to be used in jurisdictions where expressing preferences results in legal obligations \u2026 without prejudice to applicable laws \u2026,\u201d but it is completely unclear (and silent about) what jurisdictions, legal obligations, or laws that it is referring to, exactly. \n\nObviously, this working group, as part of a technical standards body, is not trying to hijack the role of a legislature or regulator.  It is not appropriate for us to design standards that may affect legal protections that millions of creators across the world have with relation to their countries\u2019 domestic copyright, contract, and other laws. \n\nTo make it clear that this working group is not aiming to override copyright owners\u2019 existing legal protections in their respective countries, or to override creators\u2019 existing terms of service, I propose to clarify the language in the introductory section.\n\nI think that clarity will also improve uptake of the standardized language, better fulfilling the objectives of this WG. \n\nThis issue applies to the vocabulary document (including some sections later on other than the introduction) and we should pursue similar clarification for the attachment document, to be clear that nothing in that document has any legal effect either - but I'll leave that for future issue submissions. \n\n### Proposed Resolution\n\nI propose starting by strengthening language in the introductory section.\n \nIt currently reads: \n\n>   The vocabulary is intended to be used in jurisdictions where\n>    expressing preferences results in legal obligations, as well as where\n>    there are no associated legal obligations.  In either case,\n>    expressing preferences is without prejudice to applicable laws,\n>    including the applicability of exceptions and limitations to\n>    Copyright.\n\nProposed edit: \n\n> For clarity, expressing preferences is without prejudice to applicable laws, \n> including the applicability of exceptions and limitations to copyright. \n> In addition to statutory or common law which may apply, the expression of preferences \n> is not intended to overwrite the legal preferences or restrictions that may be embodied\n>  in a website\u2019s Terms of Use (or comparable page), and in the event of any conflict\n>  between these preferences and a website\u2019s Terms of Use, the Terms of Use shall prevail as a matter of law.\n",
       "createdAt": "2026-01-28T03:26:50Z",
-      "updatedAt": "2026-02-26T03:38:39Z",
+      "updatedAt": "2026-03-27T07:52:11Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "bquinn",
+          "authorAssociation": "NONE",
+          "body": "I like the first part:\n\n> For clarity, expressing preferences is without prejudice to applicable laws,\nincluding the applicability of exceptions and limitations to copyright.\n\nbut I think the second part re how this relates to a site's terms of use is a separate point that should be discussed in a separate github issue.",
+          "createdAt": "2026-03-27T07:52:11Z",
+          "updatedAt": "2026-03-27T07:52:11Z"
+        }
+      ]
     },
     {
       "number": 193,
