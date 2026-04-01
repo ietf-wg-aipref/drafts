@@ -383,7 +383,7 @@ which can be either `y` or `n`; see {{y-or-n}}.
 For example, the following states a preference
 to allow foundation model production ({{train-ai}}),
 disallow search ({{search}}), and
-and preference for other categories
+preference for other categories
 other than subsets of these categories are unknown:
 
 ~~~
