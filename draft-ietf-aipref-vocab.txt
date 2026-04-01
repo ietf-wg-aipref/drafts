@@ -5,8 +5,8 @@
 AI Preferences                                                 P. Keller
 Internet-Draft                                               Open Future
 Intended status: Standards Track                         M. Thomson, Ed.
-Expires: 17 July 2026                                            Mozilla
-                                                         13 January 2026
+Expires: 3 October 2026                                          Mozilla
+                                                            1 April 2026
 
 
             A Vocabulary For Expressing AI Usage Preferences
@@ -51,7 +51,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 17 July 2026.
+   This Internet-Draft will expire on 3 October 2026.
 
 Copyright Notice
 
@@ -391,7 +391,7 @@ Table of Contents
 
    For example, the following states a preference to allow foundation
    model production (Section 4.1), disallow search (Section 4.2), and
-   and preference for other categories other than subsets of these
+   preference for other categories other than subsets of these
    categories are unknown:
 
    train-ai=y, search=n
@@ -491,9 +491,10 @@ Table of Contents
    It is important to note that if the same key appears multiple times,
    only the last value is taken.  This means that duplicating a key
    could result in unexpected outcomes.  For example, the following
-   means that preferences are unknown:
+   means that preferences are unknown, because the type of the parameter
+   values (a boolean and a string respectively) are not tokens:
 
-   train-ai=y, train-ai="n", search=n, search
+   train-ai=y, train-ai, search=n, search="n"
 
    If the parsing of the Dictionary fails, preferences are unknown.
    This includes where keys include uppercase characters, as this format
@@ -571,7 +572,7 @@ Table of Contents
 
    [ATTACH]   Illyes, G. and M. Thomson, Ed., "A Vocabulary For
               Expressing AI Usage Preferences", Work in Progress,
-              Internet-Draft, draft-ietf-aipref-attach, January 2026,
+              Internet-Draft, draft-ietf-aipref-attach, April 2026,
               <https://datatracker.ietf.org/doc/html/draft-ietf-aipref-
               attach>.
 
