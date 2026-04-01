@@ -5,8 +5,8 @@
 AI Preferences                                                 P. Keller
 Internet-Draft                                               Open Future
 Intended status: Standards Track                         M. Thomson, Ed.
-Expires: 2 October 2026                                          Mozilla
-                                                           31 March 2026
+Expires: 3 October 2026                                          Mozilla
+                                                            1 April 2026
 
 
             A Vocabulary For Expressing AI Usage Preferences
@@ -51,7 +51,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 2 October 2026.
+   This Internet-Draft will expire on 3 October 2026.
 
 Copyright Notice
 
@@ -211,12 +211,12 @@ Table of Contents
    to understanding what preferences are (as opposed to what actions
    might then follow).
 
-   A recipient chooses the methods of expressing preferences it
-   recognizes.  Those methods might be limited to those in [ATTACH] or
-   it could also include other methods (see Section 1.3 of [ATTACH]).
-   If a preference is associated with an asset using a method the
-   recipient does not understand or recognize, the recipient will remain
-   ignorant of that preference.
+   A recipient can only understand preferences expressed through
+   mechanisms it has implemented.  Those methods might be limited to
+   those in [ATTACH] or it could also include other methods (see
+   Section 1.3 of [ATTACH]).  If a preference is associated with an
+   asset using a method the recipient does not understand or recognize,
+   the recipient will remain ignorant of that preference.
 
    Depending on the way in which preferences are expressed, a recipient
    might be unable to tell who has expressed a preference.  Unless the
@@ -596,7 +596,7 @@ Table of Contents
 
    [ATTACH]   Illyes, G. and M. Thomson, Ed., "A Vocabulary For
               Expressing AI Usage Preferences", Work in Progress,
-              Internet-Draft, draft-ietf-aipref-attach, March 2026,
+              Internet-Draft, draft-ietf-aipref-attach, April 2026,
               <https://datatracker.ietf.org/doc/html/draft-ietf-aipref-
               attach>.
 
