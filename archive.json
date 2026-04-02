@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-03-29T03:18:16.180105+00:00",
+  "timestamp": "2026-04-02T02:50:50.014938+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -9173,26 +9173,90 @@
       "id": "PR_kwDOOWk1-s7Jhqr0",
       "title": "Nits from Yudong Sheng",
       "url": "https://github.com/ietf-wg-aipref/drafts/pull/194",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "martinthomson",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "A small typo and a little expansion of an example.",
       "createdAt": "2026-03-10T22:35:31Z",
-      "updatedAt": "2026-03-10T22:35:31Z",
+      "updatedAt": "2026-04-01T14:25:21Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "03c7ea334c0b99a3495b31f58421aa8b960f80b3",
       "headRepository": "ietf-wg-aipref/drafts",
       "headRefName": "clarify-hp",
       "headRefOid": "e0ae096c2cec43223508f4d9dc6e18326b7fc35e",
+      "closedAt": "2026-04-01T14:25:19Z",
+      "mergedAt": "2026-04-01T14:25:19Z",
+      "mergedBy": "paul2keller",
+      "mergeCommit": {
+        "oid": "f9620ee9cbbec86ad20d59826b0921fc07b96f6b"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 195,
+      "id": "PR_kwDOOWk1-s7PFpxK",
+      "title": "Conformance -> understanding",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/195",
+      "state": "OPEN",
+      "author": "martinthomson",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "This change attempts to reframe Sections 3.1 and 3.2 in terms of the two things they are intended to address, each separately.\r\n\r\n* Section 3.1 is about what it means to understand what a preference is.\r\n\r\n* Section 3.2 is about what it might mean to act on that understanding.\r\n\r\nIt seems like this distinction was unclear in the past and this is primarily an attempt to address that confusion.\r\n\r\nAt the risk of adding to the confusion though, I felt like it was responsible to talk about the limitations of what we can achieve in that first item.  After all, the system we describe has limitations.  Those are twofold:\r\n\r\n1.  People who receive/obtain assets will not understand every possible way of expressing preferences.  So only those preferences they know about and choose to implement will be understood by them.\r\n\r\n2.  We are not always offering a way to convey *who* expressed a preference.  Some mechanisms might depend on that (the registry ideas need to, for instance), but the ones we are defining today cannot.\r\n\r\nNeither should be especially surprising to anyone, but writing something that is precise turned out to be tricky.  I'm not happy with where it is, but am turning to wider review for feedback.",
+      "createdAt": "2026-03-31T22:58:18Z",
+      "updatedAt": "2026-04-01T23:59:20Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "03c7ea334c0b99a3495b31f58421aa8b960f80b3",
+      "headRepository": "ietf-wg-aipref/drafts",
+      "headRefName": "understanding",
+      "headRefOid": "aaf1fd179d9835d633ba9bacc2330114804723a4",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
       "mergeCommit": null,
-      "comments": [],
-      "reviews": []
+      "comments": [
+        {
+          "author": "paul2keller",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "thanks for this. I have one major concern with the proposed language: The sentence \"A recipient chooses the methods of expressing preferences it recognizes\" conflates two distinct scenarios that the 3.1/3.2 structure is trying to keep separate: a recipient that lacks technical implementation of a particular attachment mechanism, and a recipient that recognizes a preference but makes a discretionary decision not to honor it (acting on a preference in the sense of 3.2). \r\n\r\nThe word \"chooses\" imports the second reading into a section that should only be about the first. If our intent is to capture the technical limitation \u2014 that understanding is bounded by what a recipient has implemented \u2014 something like \"A recipient can only understand preferences expressed through mechanisms it has implemented\" would be more precise and wouldn't risk being read as a general invitation to disregard preferences.",
+          "createdAt": "2026-04-01T08:56:45Z",
+          "updatedAt": "2026-04-01T08:56:45Z"
+        },
+        {
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "That text was intended to apply to the technical implementation only.  I agree that the word \"recognizes\", especially paired with \"chooses\" was a mistake.  I'll take your suggestion.",
+          "createdAt": "2026-04-01T23:58:31Z",
+          "updatedAt": "2026-04-01T23:58:31Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWk1-s7xQqJf",
+          "commit": {
+            "abbreviatedOid": "91c67bb"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-04-01T23:59:03Z",
+          "updatedAt": "2026-04-01T23:59:04Z",
+          "comments": [
+            {
+              "originalPosition": 26,
+              "body": "```suggestion\nA recipient can only understand preferences expressed\nthrough mechanisms it has implemented.\n```",
+              "createdAt": "2026-04-01T23:59:04Z",
+              "updatedAt": "2026-04-01T23:59:04Z"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
