@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-04-02T02:50:50.014938+00:00",
+  "timestamp": "2026-04-07T02:56:09.078033+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -3442,6 +3442,24 @@
           "updatedAt": "2026-03-03T22:26:26Z"
         }
       ]
+    },
+    {
+      "number": 196,
+      "id": "I_kwDOOWk1-s77NvJ_",
+      "title": "Proposed revision of search category to focus on \"substantial\" generative use",
+      "url": "https://github.com/ietf-wg-aipref/drafts/issues/196",
+      "state": "OPEN",
+      "author": "erinsimon",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [
+        "triage"
+      ],
+      "body": "### Confirmation\n\n- [x] I have reviewed our [existing issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nThere has been substantial debate about how to define a search category that can be used to express a preference for use in traditional forms of search results without including the newer more [narrative overviews ](https://github.com/ietf-wg-aipref/drafts/issues/102)that have been introduced in the last few years.  \n\nArticulating this distinction is [tricky](https://github.com/ietf-wg-aipref/drafts/issues/98) for a few reasons: \n- Traditional search results are the [result of AI processes](https://github.com/ietf-wg-aipref/drafts/issues/173), so the category cannot disclaim all AI use or the input of content to AI systems.\n- Traditional search results may involve some amount of [non-verbatim copying](https://github.com/ietf-wg-aipref/drafts/issues/181), such as eliding or mildly rewording text to better highlight relevant aspects.\n- The category is not intended to prohibit categorization and labeling of traditional search results, but an overly strict prohibition on generated content could cover the generation of very short category labels.\n- Referring instead to \"summaries\" does not provide sufficient clarity about how much or what kind of generated output is permissible.  Referring instead to the [potential to substitute for the asset](https://github.com/ietf-wg-aipref/drafts/issues/150) begs legal questions as well as introduces ambiguity in scope.\n- Requiring the asset to be linked to in the output presumes that the asset will be relevant to the output, and could be interpreted to mean that the output cannot be evaluated for inclusion without a guarantee that the asset is included. \n\nWhat is needed is a definition that focuses on the core distinction of the use of the asset as an input to the generation of more than very short amounts of content, but allows for some flexibility in quoting, categorizing, and labeling.  This proposal describes that as \"substantial\" amounts of \"new\" content, and as an initial proposal defines substantial to mean sentence-level text.  A numerical threshold could be used instead, but it would have to account for the differences in semantic density between languages.\n\nIt is also necessary to harmonize this category with the beneficial uses mentioned in the preamble and the working group discussions, to ensure that it does not impede the accessibility of content through AI-mediated means.  Thus the category clarifies that transforming the modality of the content (e.g., text to speech, translation) is not in scope of the category preference.\n\nThis is, of course, a starting point for further discussion.  Please suggest improvements!\n\n### Proposed Resolution\n\nReplace the Search category with the following: \n\n**Non-Generative Search:** Using the asset in search results, where the asset is not used as an input to the generation of a substantial amount of new content.\n- Substantial means sentence-level text, images of any size, and audiovisual content of any length.\n- Search results are the links and associated content presented to users of a search application.\n- Transcription, translation, and speech-to-text do not constitute new content.\n- Evaluating an asset for potential use does not constitute use of the asset.\n- This category also permits use of the asset to produce the models that are used in the search application.",
+      "createdAt": "2026-04-07T00:07:29Z",
+      "updatedAt": "2026-04-07T00:07:29Z",
+      "closedAt": null,
+      "comments": []
     }
   ],
   "pulls": [
