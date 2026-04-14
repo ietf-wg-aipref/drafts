@@ -276,12 +276,12 @@ In this definition:
   to the presentation of material,
   which includes transcription, translation, text-to-speech, and speech-to-text.
 
-* The internal processing of assets
-  to perform indexing, ranking, and retrieval can use AI models.
-
 * Internal processing includes use of the asset in training models
   but only for models exclusively used by the search application
   under this definition.
+
+Note that search applications might use AI models internally
+to perform tasks such as indexing, ranking, and retrieval.
 
 
 ## Vocabulary Extensions {#vocab-extension}
