@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-04-12T03:27:52.969830+00:00",
+  "timestamp": "2026-04-14T03:24:08.932875+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -2068,7 +2068,7 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\n_Raised in [email by EKR](https://mailarchive.ietf.org/arch/msg/ai-control/dxpLCD7R2L-L07fEQCITjXjUcMY)_\n\nS 2.\n\n      Artificial Intelligence (AI):\n      An engineered system of sufficient complexity that, for a given\n      set of human-defined objectives, learns from data to generate\n      outputs such as content, predictions, recommendations, or\n      decisions.\n\nAs I mentioned previously, I think this definition of AI is extremely\nproblematic and would effectively sweep in any statistical\ntechnique. I understand that \"sufficient complexity\" is intended to\nsomehow reduce the scope, but it's a totally subjective standard.\n\n### Proposed Resolution\n\n_No response_",
       "createdAt": "2025-09-10T02:34:49Z",
-      "updatedAt": "2026-04-10T05:53:02Z",
+      "updatedAt": "2026-04-13T14:49:43Z",
       "closedAt": null,
       "comments": [
         {
@@ -2112,6 +2112,13 @@
           "body": "Alissa shared [this](https://www.aspendigital.org/report/defining-technologies-of-our-time-ai/?trk=public_post_comment-text) which is a great resource on the different definitions that have been used across a bunch of different legal contexts.  There is a US focus, but the analysis tends to be very useful.  (I won't say that all the analysis I've read so far is something I agree with unconditionally, but it is very thoughtful and useful nonetheless.)",
           "createdAt": "2026-03-04T15:28:08Z",
           "updatedAt": "2026-03-04T15:28:08Z"
+        },
+        {
+          "author": "llemeurfr",
+          "authorAssociation": "NONE",
+          "body": "We can add here the definitions of the European AI Act: https://artificialintelligenceact.eu/article/3/",
+          "createdAt": "2026-04-13T14:49:43Z",
+          "updatedAt": "2026-04-13T14:49:43Z"
         }
       ]
     },
@@ -2996,7 +3003,7 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\n_From @chrisn in [email](https://mailarchive.ietf.org/arch/msg/ai-control/2ZbEx73js_cTQT8mI1Wy6_0ZC_s):_\n\nWhile I appreciate the effort that has gone into crafting this definition, as it stands it still allows all the generative AI usage that publishers find problematic. If adopted, publishers will be in the position of having to allow the Search Category, because they cannot realistically opt-out of traditional (i.e., non generative AI search).\n\nGiven that major search engines are rapidly integrating generative AI features, a generative AI response to a user query that includes links provided via RAG or grounding could be interpreted as \"directs users to the location from which the assets were retrieved\". The qualifying statements: \"Only those parts of applications that direct users to the location of an asset are included in this category of use. This includes the use of titles or excerpts from assets that are used to help users select between multiple candidate options\" don't address this concern. The same applies to \"Parts of applications that do not direct users to the location of assets, such as summaries, are not covered by this category of use\", because search engines that integrate generative AI do produce summaries.\n\n### Proposed Resolution\n\n_No response_",
       "createdAt": "2025-09-28T08:59:46Z",
-      "updatedAt": "2026-04-10T05:51:28Z",
+      "updatedAt": "2026-04-13T14:36:59Z",
       "closedAt": null,
       "comments": [
         {
@@ -3012,6 +3019,13 @@
           "body": "Hey @chrisn - to clarify: I understand that you want to express a preference for 'traditional' search while expressing one against 'ai' search. \n\nIf a search engine returned a results page that looks like traditional search and happens to use AI to generate it, would you still want to disapprove of it? Or is there some other aspect that it's important for you to express a preference for? ",
           "createdAt": "2026-01-06T05:53:05Z",
           "updatedAt": "2026-01-06T05:53:05Z"
+        },
+        {
+          "author": "chrisn",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Here's a proposed change to the definition of Search category, which focuses its scope a bit:\n\nThe use of one or more assets to create a search index for the purpose of providing search results in the form of returning links to a website's contents. Use includes:\n* Backend Processing: The internal processing of assets to perform indexing, ranking, and retrieval may utilize AI/ML models specifically and only to the extent necessary for those search functions.\n* Display and Output: The presentation of the asset in the search output must include a direct reference or link to the original location. Verbatim excerpts or snippets may be displayed to assist users in evaluating the relevance of the result.\n\nThe Search category does not include uses that generate outputs which materially reduce the need to access the original asset.\n",
+          "createdAt": "2026-04-13T14:36:58Z",
+          "updatedAt": "2026-04-13T14:36:58Z"
         }
       ]
     },
