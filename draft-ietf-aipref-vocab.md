@@ -264,7 +264,9 @@ where the asset is not used in the generation of substantial quantities of outpu
 In this definition:
 
 * Substantial quantities of output means
-  sentence-level text, images of any size, and audiovisual content of any length.
+  text beyond short phrases or simple sentences,
+  images of any size,
+  and audiovisual content of any length.
 
 * Search result are the links and associated content
   presented to users of a search application.
