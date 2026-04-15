@@ -283,19 +283,21 @@ Table of Contents
    users to the location of those assets.
 
    This category of use only applies where the presentation of an asset
-   in search output includes a direct reference or link to the original
-   location from which the asset was retrieved.
+   in search output -- if selected for presentation -- includes a direct
+   reference or link to the original location from which the asset was
+   retrieved.
 
    To assist users in evaluating the relevance of the result, [verbatim]
    excerpts or snippets from the source asset can be displayed.  This
    category does not include the use of assets to generate summaries.
 
-   This preference does not apply to any internal processing that is
-   performed on assets by the search application, provided that the
-   asset and the outputs of any processing is exclusively used by the
-   search application according to the other restrictions in this
-   section.  This admits the use or training of AI models as long as the
-   outputs are only used as described.
+   A preference to allow this category of use also implies a preference
+   to allow any internal processing that is performed on assets by the
+   search application, provided that the asset and the outputs of any
+   processing is exclusively used by the search application according to
+   the other restrictions in this section.  This admits the use or
+   training of AI models as long as the outputs are only used as
+   described.
 
 4.3.  Vocabulary Extensions
 
