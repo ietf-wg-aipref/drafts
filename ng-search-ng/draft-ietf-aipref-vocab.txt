@@ -5,8 +5,8 @@
 AI Preferences                                                 P. Keller
 Internet-Draft                                               Open Future
 Intended status: Standards Track                         M. Thomson, Ed.
-Expires: 16 October 2026                                         Mozilla
-                                                           14 April 2026
+Expires: 17 October 2026                                         Mozilla
+                                                           15 April 2026
 
 
             A Vocabulary For Expressing AI Usage Preferences
@@ -51,7 +51,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 16 October 2026.
+   This Internet-Draft will expire on 17 October 2026.
 
 Copyright Notice
 
@@ -284,8 +284,9 @@ Table of Contents
 
    In this definition:
 
-   *  Substantial quantities of output means sentence-level text, images
-      of any size, and audiovisual content of any length.
+   *  Substantial quantities of output means text beyond short phrases
+      or simple sentences, images of any size, and audiovisual content
+      of any length.
 
    *  Search result are the links and associated content presented to
       users of a search application.
