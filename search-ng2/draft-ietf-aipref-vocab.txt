@@ -295,11 +295,13 @@ Table of Contents
    This category does not include the use of assets to generate
    summaries.
 
-   [Non-substantive changes to the presentation of titles, excerpts, or
-   snippets from assets is included in this definition.  This includes
-   ensuring that users are able to understand the material, which
-   includes transformations like transcription, translation, or text-to-
-   speech.]
+   [Non-substantive transformations to the presentation of titles,
+   excerpts, or snippets from assets is included for the purposes of
+   accessibility.  Non-substantive transformations include ensuring that
+   users are able to understand these items, which includes translation,
+   transcription, or text-to-speech.  Where existing controls restrict
+   presentation of these items, such as limitations on snippet size,
+   those apply before any transformation.]
 
    A preference to allow this category of use also implies a preference
    to allow any internal processing that is performed on assets by the
