@@ -382,10 +382,10 @@ Table of Contents
    dictionary values correspond to explicit preferences, which can be
    either y or n; see Section 6.2.
 
-   For example, the following states a preference to allow foundation
-   model production (Section 4.1), disallow search (Section 4.2), and
-   preference for other categories other than subsets of these
-   categories are unknown:
+   For example, the following states a preference to allow model
+   training (Section 4.1), disallow search (Section 4.2), and preference
+   for other categories other than subsets of these categories are
+   unknown:
 
    train-ai=y, search=n
 
@@ -394,13 +394,13 @@ Table of Contents
    Each usage category in the vocabulary (Section 4) is mapped to a
    short textual label.  Table 1 tabulates this mapping.
 
-         +=============================+==========+=============+
-         | Category                    | Label    | Reference   |
-         +=============================+==========+=============+
-         | Foundation Model Production | train-ai | Section 4.1 |
-         +-----------------------------+----------+-------------+
-         | Search                      | search   | Section 4.2 |
-         +-----------------------------+----------+-------------+
+              +===================+==========+=============+
+              | Category          | Label    | Reference   |
+              +===================+==========+=============+
+              | AI Model Training | train-ai | Section 4.1 |
+              +-------------------+----------+-------------+
+              | Search            | search   | Section 4.2 |
+              +-------------------+----------+-------------+
 
                      Table 1: Mappings for Categories
 
