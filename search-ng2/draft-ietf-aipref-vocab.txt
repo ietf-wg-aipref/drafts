@@ -288,19 +288,19 @@ Table of Contents
       for presentation -- includes a direct reference or link to the
       original location from which the asset was retrieved.
 
-   *  Only excerpts from the source asset are displayed to assist users
-      in evaluating the relevance of the result.
+   *  Only excerpts from the asset are displayed to assist users in
+      evaluating the relevance of the result.
 
    This category does not include the use of assets to generate
    summaries.
 
-   [Non-substantive changes to the presentation of titles or excerpts
-   from the original assets is included for the purposes of
-   accessibility.  Translation, transcription, or text-to-speech are
-   examples of non-substantive changes that could help users understand
-   what is being presented.  Where existing controls restrict
-   presentation of these items, such as limitations on snippet size,
-   those apply before any changes.]
+   Non-substantive changes to the presentation of titles or excerpts
+   from assets are included for the purposes of accessibility.
+   Translation, transcription, or text-to-speech are examples of non-
+   substantive changes that could help users understand what is being
+   presented.  Where existing controls restrict presentation of these
+   items, such as limitations on snippet size, those apply before any
+   changes.
 
    A preference to allow this category of use also implies a preference
    to allow any internal processing that is performed on assets by the
