@@ -5,8 +5,8 @@
 AI Preferences                                                 P. Keller
 Internet-Draft                                               Open Future
 Intended status: Standards Track                         M. Thomson, Ed.
-Expires: 16 October 2026                                         Mozilla
-                                                           14 April 2026
+Expires: 17 October 2026                                         Mozilla
+                                                           15 April 2026
 
 
             A Vocabulary For Expressing AI Usage Preferences
@@ -51,7 +51,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 16 October 2026.
+   This Internet-Draft will expire on 17 October 2026.
 
 Copyright Notice
 
@@ -279,26 +279,23 @@ Table of Contents
 
 4.2.  Search
 
-   The use of one or more assets in a search application to direct users
-   to the location of the asset.
+   The use of one or more assets in a search application that direct
+   users to the location of those assets.
 
-   This category of use has the following conditions:
+   This category of use only applies where the presentation of an asset
+   in search output includes a direct reference or link to the original
+   location from which the asset was retrieved.
 
-   *  The presentation of the asset in the search output must include a
-      direct reference or link to the original location from which the
-      asset was retrieved.
+   To assist users in evaluating the relevance of the result, [verbatim]
+   excerpts or snippets from the source asset can be displayed.  This
+   category does not include the use of assets to generate summaries.
 
-   *  To assist users in evaluating the relevance of the result,
-      excerpts or snippets may be displayed from the source asset.
-
-   The internal processing of assets to perform tasks such as indexing,
-   ranking, and retrieval may involve the use and training of AI/ML
-   models, provided that those models are used exclusively by the search
-   application.  That is, evaluating an asset for potential use is
-   included.
-
-   This category does not include the use of assets to generate
-   summaries.
+   This preference does not apply to any internal processing that is
+   performed on assets by the search application, provided that the
+   asset is used exclusively by the search application according to the
+   other restrictions in this section.  This includes the use or
+   training of AI models as long as the outputs are only used as
+   described here.
 
 4.3.  Vocabulary Extensions
 
