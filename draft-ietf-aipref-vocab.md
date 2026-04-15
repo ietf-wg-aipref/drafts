@@ -66,7 +66,7 @@ of restrictions or permissions for use of digital assets by such systems.
 
 --- middle
 
-# Introduction
+# Introduction {#intro}
 
 This document defines a vocabulary of preferences
 regarding how automated systems process digital assets --
@@ -180,60 +180,35 @@ for variation between implementations.
 
 ## Applicability and Effect {#applicability}
 
-This specification provides a set of definitions for different
-categories of use, plus a system for associating simple
-preferences to each (allow, disallow, or unknown; see {{model}}).
+This specification provides a set of definitions
+for different categories of use,
+plus a system for associating simple preferences to each
+(allow, disallow, or no preference; see {{model}}).
+The categories defined in this specification
+are intended to describe functional outcomes of content use,
+rather than specific technical implementations or system architectures.
 
 This specification does not provide any enforcement mechanism
-for those preferences, and conformance to it does not encompass
-whether preferences are actually respected during data processing.
+for those preferences
+and is agnostic as to conformance with it by parties during data processing.
+Legal or contractual agreements, rules and frameworks
+are outside the scope of this specification.
 
-Preferences do not themselves create rights or prohibitions,
-either in the positive or the negative. Other mechanisms—technical,
-legal, contractual, or otherwise—might enforce stated preferences
-and thereby determine the consequences of following or not following
-a stated preference.
+Specifically, preferences do not themselves create rights or prohibitions,
+either in the positive or the negative.
+Other mechanisms --
+technical, legal, contractual, or otherwise --
+might determine the consequences of following or not following a stated preference.
+As stated in {{intro}},
+expressing preferences is without prejudice to
+and does not override applicable laws and agreements,
+including the applicability of exceptions and limitations to copyright.
 
-An entity that receives usage preferences MAY choose to respect
-those preferences it has discovered, according to
-an understanding of how the asset is used,
-how that usage corresponds to the usage categories
-where preferences have been stated,
-and the applicable legal context.
-
-Usage preferences can be ignored due to express agreements
-between relevant parties, explicit provisions of law, or
-the exercise of discretion in situations where widely recognized
-priorities justify doing so. Priorities that could justify
-ignoring preferences include—but are not limited to—free
-expression, safety, education, scholarship, research,
-preservation, interoperability, and accessibility.
-
-The following lists examples of cases
-where other priorities could lead someone to ignore expressed preferences
-in a particular situation:
-
-* People with accessibility needs,
-  or organizations working on their behalf,
-  might decide to ignore a preference
-  in order to access automated captions
-  or generate accessible formats.
-
-* A cultural heritage organization might decide to ignore a preference
-  in order to provide more useful, reliable, or discoverable access
-  to historical web collections.
-
-* An educational institution might decide to ignore a preference
-  in order to enable scholars to develop or use tools
-  to facilitate scientific or other types of research.
-
-* A website that permits user uploads might decide to ignore a preference
-  in order to develop or use tools that detect harmful content
-  according to established terms of use.
-
-Because enforcement is not provided by this specification,
-the consequences of ignoring preferences could vary
-depending upon how a given legal jurisdiction recognizes preferences.
+As enforcement is out of scope for this specification,
+it also does not determine the consequences
+of respecting or ignoring preferences,
+which could vary depending on factors outside the scope of this document,
+such as applicable legal or contractual rules.
 
 
 # Vocabulary Definition {#vocab}
