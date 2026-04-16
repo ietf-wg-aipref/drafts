@@ -288,8 +288,8 @@ Table of Contents
       for presentation -- includes a direct reference or link to the
       original location from which the asset was retrieved.
 
-   *  Excerpts from the asset are displayed to assist users in
-      evaluating the relevance of the result.
+   *  When excerpts from the asset are displayed they serve to assist
+      users in evaluating the relevance of the result.
 
    This category does not include the use of assets to generate
    summaries.
