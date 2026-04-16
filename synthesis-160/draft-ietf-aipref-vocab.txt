@@ -223,11 +223,10 @@ Table of Contents
    respected.
 
    Enforcement is not provided by this specification.  Preferences do
-   not themselves create rights, obligations, or prohibitions, either in
-   the positive or the negative.  Other mechanisms -- technical, legal,
-   contractual, or otherwise -- might enforce adherence or non-adherance
-   to these preferences and thereby determine the consequences of not
-   respecting a stated preference.
+   not themselves create rights, obligations, or prohibitions.  Other
+   mechanisms -- technical, legal, contractual, or otherwise -- might
+   enforce adherence or non-adherance to these preferences and thereby
+   determine the consequences of not respecting a stated preference.
 
    An entity that receives usage preferences has a choice about whether
    to respect the preferences it has discovered.  It makes this choice
