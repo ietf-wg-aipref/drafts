@@ -276,8 +276,9 @@ Table of Contents
 
 4.2.  Search
 
-   Use of an asset in an application that selects assets and directs
-   users to the location of those assets.
+   Use of an asset in an application where the primary purpose of the
+   application is to select assets and direct users to the location of
+   those assets.
 
    This category of use only applies under the following conditions:
 
