@@ -5,8 +5,8 @@
 AI Preferences                                                 P. Keller
 Internet-Draft                                               Open Future
 Intended status: Standards Track                         M. Thomson, Ed.
-Expires: 17 October 2026                                         Mozilla
-                                                           15 April 2026
+Expires: 18 October 2026                                         Mozilla
+                                                           16 April 2026
 
 
             A Vocabulary For Expressing AI Usage Preferences
@@ -51,7 +51,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 17 October 2026.
+   This Internet-Draft will expire on 18 October 2026.
 
 Copyright Notice
 
@@ -225,9 +225,9 @@ Table of Contents
    Enforcement is not provided by this specification.  Preferences do
    not themselves create rights, obligations, or prohibitions, either in
    the positive or the negative.  Other mechanisms -- technical, legal,
-   contractual, or otherwise -- might enforce adherence to these
-   preferences and thereby determine the consequences of not following a
-   stated preference.
+   contractual, or otherwise -- might enforce adherence or non-adherance
+   to these preferences and thereby determine the consequences of not
+   following a stated preference.
 
    An entity that receives usage preferences has a choice about whether
    to respect the preferences it has discovered.  It makes this choice
@@ -244,7 +244,7 @@ Table of Contents
    the asset would be used in that application.  The mechanisms in this
    document might be more direct than previous ways of expressing
    preferences, but the same fundamental challenges remain when deciding
-   whether to use an asset.
+   whether or not to use an asset.
 
 4.  Vocabulary Definition
 
