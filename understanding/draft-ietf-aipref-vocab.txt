@@ -5,8 +5,8 @@
 AI Preferences                                                 P. Keller
 Internet-Draft                                               Open Future
 Intended status: Standards Track                         M. Thomson, Ed.
-Expires: 3 October 2026                                          Mozilla
-                                                            1 April 2026
+Expires: 20 October 2026                                         Mozilla
+                                                           18 April 2026
 
 
             A Vocabulary For Expressing AI Usage Preferences
@@ -51,7 +51,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 3 October 2026.
+   This Internet-Draft will expire on 20 October 2026.
 
 Copyright Notice
 
@@ -208,8 +208,8 @@ Table of Contents
    factors; see Section 3.2.
 
    There are also some caveats that need to be considered as it relates
-   to understanding what preferences are (as opposed to what actions
-   might then follow).
+   to understanding what the preferences for a given asset are (as
+   opposed to what actions might then follow).
 
    A recipient can only understand preferences expressed through
    mechanisms it has implemented.  Those methods might be limited to
@@ -219,14 +219,14 @@ Table of Contents
    the recipient will remain ignorant of that preference.
 
    Depending on the way in which preferences are expressed, a recipient
-   might be unable to tell who has expressed a preference.  Unless the
+   might be unable to tell the source of the preference.  Unless the
    source is explicitly identified, no assumptions can be made about
    where a preference originates.  For example, preferences in
-   robots.txt (see Section 3 of [ATTACH]) only implies that the operator
-   of a server is the source of those preferences.
+   robots.txt (see Section 3 of [ATTACH]) only implies that a server is
+   the source of those preferences.
 
    A method of associating preferences with assets could explicitly
-   define who is responsible for preferences, which might involve
+   define the source of the preferences, which might involve
    authentication.  Otherwise, no assumptions can be made about the
    origin of preferences.  The apparent source of preferences could be
    representing their own preferences, the preferences of others, or the
