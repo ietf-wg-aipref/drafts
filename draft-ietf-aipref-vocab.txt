@@ -147,9 +147,6 @@ Table of Contents
    Machine Learning (ML):
       The processing of data to produce or improve a model that encodes
       the relationship between the data and human-defined objectives.
-   Search Application:
-      A search application is a system that enables users locate items
-      on the internet or in a specific data store.
 
 3.  Statements of Preference
 
@@ -272,28 +269,38 @@ Table of Contents
 
 4.2.  Search
 
-   Using one or more assets in a search application that directs users
-   to the location from which the assets were retrieved.
+   Use of an asset in an application where the primary purpose of the
+   application is to select assets and direct users to the location of
+   those assets.
 
-   The presentation of any asset that is included in search output
-   includes the following conditions:
+   This category of use only applies under the following conditions:
 
-   *  A reference to the location that the asset was obtained is
-      presented as part of the output.
+   *  Where the presentation of an asset in search output -- if selected
+      for presentation -- includes a direct reference or link to the
+      original location from which the asset was retrieved.
 
-   *  The asset can only be represented in the output with excerpts that
-      are drawn verbatim from it.
+   *  When excerpts from the asset are displayed they serve to assist
+      users in evaluating the relevance of the result.
 
-   An asset can be used in ranking, but not present in output.
+   This category does not include the use of assets to generate
+   summaries.
 
-   Internal processing of assets to perform ranking and presentation can
-   include the use and training of AI models.  This only includes any
-   training that is necessary to produce models used in the search
-   application.
+   Non-substantive changes to the presentation of titles or excerpts
+   from assets are included for the purposes of accessibility.
+   Translation, transcription, or text-to-speech are examples of non-
+   substantive changes that could help users understand what is being
+   presented.  Where existing controls restrict presentation of these
+   items, such as limitations on snippet size, those apply before any
+   changes.
 
-   With both these conditions, a preference to allow Search usage
-   enables the presentation of links and titles in what is considered
-   "traditional" search results.
+   A preference to allow this category of use includes allowing any
+   processing internal to the application that is performed on assets.
+   Allowing this use is conditional on the outputs of any processing
+   being exclusively used by the search application according to the
+   other restrictions in this section.  That includes the training of AI
+   models using the assets and the use of those models provided that the
+   resulting models and their outputs are used exclusively in ways that
+   meet the above conditions.
 
 4.3.  Vocabulary Extensions
 
@@ -578,14 +585,15 @@ Acknowledgments
    The following individuals made significant contributions to this
    document:
 
-   *  Lila Bailey
    *  Cullen Miller
-   *  Laurent Le Meur
-   *  Krishna Madhavan
-   *  Felix Reda
-   *  Leonard Rosenthol
-   *  Sebastian Posth
    *  Erin Simon
+   *  Felix Reda
+   *  Krishna Madhavan
+   *  Laurent Le Meur
+   *  Leonard Rosenthol
+   *  Lila Bailey
+   *  Nate Hake
+   *  Sebastian Posth
    *  Timid Robot Zehta
 
 Authors' Addresses
