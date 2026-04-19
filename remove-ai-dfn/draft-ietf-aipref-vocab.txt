@@ -5,8 +5,8 @@
 AI Preferences                                                 P. Keller
 Internet-Draft                                               Open Future
 Intended status: Standards Track                         M. Thomson, Ed.
-Expires: 16 October 2026                                         Mozilla
-                                                           14 April 2026
+Expires: 21 October 2026                                         Mozilla
+                                                           19 April 2026
 
 
             A Vocabulary For Expressing AI Usage Preferences
@@ -51,7 +51,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 16 October 2026.
+   This Internet-Draft will expire on 21 October 2026.
 
 Copyright Notice
 
@@ -75,7 +75,7 @@ Table of Contents
      3.1.  Conformance
      3.2.  Applicability and Effect
    4.  Vocabulary Definition
-     4.1.  Foundation Model Production Category
+     4.1.  AI Model Training Category
      4.2.  Search
      4.3.  Vocabulary Extensions
    5.  Applying Statements of Preference
@@ -136,9 +136,6 @@ Table of Contents
       metadata.
    Declaring party:
       The entity that expresses a preference with regards to an Asset.
-   Search Application:
-      A search application is a system that enables users locate items
-      on the internet or in a specific data store.
 
 3.  Statements of Preference
 
@@ -253,43 +250,46 @@ Table of Contents
 
    This section defines the categories of use in the vocabulary.
 
-4.1.  Foundation Model Production Category
+4.1.  AI Model Training Category
 
-   The act of using an asset to train or fine-tune a foundation model.
-
-   Foundation models are large models that are produced using deep
-   learning or other machine learning techniques.  Foundation models are
-   trained on very large numbers of assets so that they can be applied
-   to a wide range of use cases.  Foundation models typically possess
-   generative capabilities in one or more media.
-
-   Fine-tuning can specialize a general-purpose foundation model for a
-   narrower set of use cases.
+   The act of using an asset in the production or refinement of an AI
+   model that can generate content in one or more modalities (text,
+   image, audio, etc...).
 
 4.2.  Search
 
-   Using one or more assets in a search application that directs users
-   to the location from which the assets were retrieved.
+   Use of an asset in an application where the primary purpose of the
+   application is to select assets and direct users to the location of
+   those assets.
 
-   The presentation of any asset that is included in search output
-   includes the following conditions:
+   This category of use only applies under the following conditions:
 
-   *  A reference to the location that the asset was obtained is
-      presented as part of the output.
+   *  Where the presentation of an asset in search output -- if selected
+      for presentation -- includes a direct reference or link to the
+      original location from which the asset was retrieved.
 
-   *  The asset can only be represented in the output with excerpts that
-      are drawn verbatim from it.
+   *  When excerpts from the asset are displayed they serve to assist
+      users in evaluating the relevance of the result.
 
-   An asset can be used in ranking, but not present in output.
+   This category does not include the use of assets to generate
+   summaries.
 
-   Internal processing of assets to perform ranking and presentation can
-   include the use and training of AI models.  This only includes any
-   training that is necessary to produce models used in the search
-   application.
+   Non-substantive changes to the presentation of titles or excerpts
+   from assets are included for the purposes of accessibility.
+   Translation, transcription, or text-to-speech are examples of non-
+   substantive changes that could help users understand what is being
+   presented.  Where existing controls restrict presentation of these
+   items, such as limitations on snippet size, those apply before any
+   changes.
 
-   With both these conditions, a preference to allow Search usage
-   enables the presentation of links and titles in what is considered
-   "traditional" search results.
+   A preference to allow this category of use includes allowing any
+   processing internal to the application that is performed on assets.
+   Allowing this use is conditional on the outputs of any processing
+   being exclusively used by the search application according to the
+   other restrictions in this section.  That includes the training of AI
+   models using the assets and the use of those models provided that the
+   resulting models and their outputs are used exclusively in ways that
+   meet the above conditions.
 
 4.3.  Vocabulary Extensions
 
@@ -378,10 +378,10 @@ Table of Contents
    dictionary values correspond to explicit preferences, which can be
    either y or n; see Section 6.2.
 
-   For example, the following states a preference to allow foundation
-   model production (Section 4.1), disallow search (Section 4.2), and
-   preference for other categories other than subsets of these
-   categories are unknown:
+   For example, the following states a preference to allow model
+   training (Section 4.1), disallow search (Section 4.2), and preference
+   for other categories other than subsets of these categories are
+   unknown:
 
    train-ai=y, search=n
 
@@ -390,13 +390,13 @@ Table of Contents
    Each usage category in the vocabulary (Section 4) is mapped to a
    short textual label.  Table 1 tabulates this mapping.
 
-         +=============================+==========+=============+
-         | Category                    | Label    | Reference   |
-         +=============================+==========+=============+
-         | Foundation Model Production | train-ai | Section 4.1 |
-         +-----------------------------+----------+-------------+
-         | Search                      | search   | Section 4.2 |
-         +-----------------------------+----------+-------------+
+              +===================+==========+=============+
+              | Category          | Label    | Reference   |
+              +===================+==========+=============+
+              | AI Model Training | train-ai | Section 4.1 |
+              +-------------------+----------+-------------+
+              | Search            | search   | Section 4.2 |
+              +-------------------+----------+-------------+
 
                      Table 1: Mappings for Categories
 
@@ -574,14 +574,15 @@ Acknowledgments
    The following individuals made significant contributions to this
    document:
 
-   *  Lila Bailey
    *  Cullen Miller
-   *  Laurent Le Meur
-   *  Krishna Madhavan
-   *  Felix Reda
-   *  Leonard Rosenthol
-   *  Sebastian Posth
    *  Erin Simon
+   *  Felix Reda
+   *  Krishna Madhavan
+   *  Laurent Le Meur
+   *  Leonard Rosenthol
+   *  Lila Bailey
+   *  Nate Hake
+   *  Sebastian Posth
    *  Timid Robot Zehta
 
 Authors' Addresses
