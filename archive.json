@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-04-16T03:30:22.445910+00:00",
+  "timestamp": "2026-04-19T03:32:43.348939+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -3053,7 +3053,7 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\n_From @chrisn in [email](https://mailarchive.ietf.org/arch/msg/ai-control/2ZbEx73js_cTQT8mI1Wy6_0ZC_s):_\n\nWithout a category that covers RAG and grounding usage, the vocabulary does not meet publisher needs. This need was raised at the outset of this work, in the IAB workshop in Washington DC in 2024, and included in the WG charter scope.\n\nIn addition to reducing web traffic to original content, such usage introduces the possibility of creating misleading or biased statements, an issue that impacts news publishers in particular, risking undermining their credibility. Research published by the BBC goes into this in more detail, demonstrating that AI-generated answers summarise and present content in a way that can introduce factual inaccuracies and biases that are not present in the original published content.\n\n### Proposed Resolution\n\n_No response_",
       "createdAt": "2025-09-28T08:57:47Z",
-      "updatedAt": "2026-04-10T05:54:22Z",
+      "updatedAt": "2026-04-16T17:10:06Z",
       "closedAt": null,
       "comments": [
         {
@@ -3083,6 +3083,41 @@
           "body": "Thanks, not yet, so I need to review this in the context of the latest draft.",
           "createdAt": "2025-12-16T11:21:50Z",
           "updatedAt": "2025-12-16T11:21:50Z"
+        },
+        {
+          "author": "paul2keller",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "here is a proposal for a category that I have been working on based on some side conversations. This builds on the way `ai-input` is defined in the [RSL](https://rslstandard.org/rsl#_3-4-1-1-usage-vocabulary) and [Cloudflare](https://contentsignals.org) vocabularies (which cover RAG), but added an exclusion for assets that are directly provided by the end user of the system as a user rights safeguard:\n\n> `AI-input` Retrieving assets as input into an AI-based system to generate outputs that are presented to clients of that system (retrieval augmented generation). This does not include assets that are provided as input by end users of the AI-based system either directly or by providing the location of the asset(s). ",
+          "createdAt": "2026-04-16T13:57:17Z",
+          "updatedAt": "2026-04-16T13:57:17Z"
+        },
+        {
+          "author": "lrosenthol",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "> This does not include assets that are provided as input by end users of the AI-based system either directly or by providing the location of the asset(s).\n\nI have significant objections to this sentence.  Adobe's Creative customers have a strong desire to be able to have their asset's associated preferences work in applications when directly presented as well.  For that reason, Adobe's applications (and services) today actively respect the `cawg.ai_inference ` preference when present in a CAWG training & data mining assertion (https://cawg.io/training-and-data-mining/1.1/).  That functionality is important to our customers and needs to be permitted.",
+          "createdAt": "2026-04-16T16:24:33Z",
+          "updatedAt": "2026-04-16T16:24:33Z"
+        },
+        {
+          "author": "cantechit",
+          "authorAssociation": "NONE",
+          "body": "This category doesn't address RAG for the purposes of training use.    If I could suggest text similar to.. \n\nRetrieving assets as input into an AI-based system to generate outputs that are presented to clients of that system (retrieval augmented generation).  This does not include assets that are provided as input by end users of the AI-based system either directly or by providing the location of the asset(s).   **RAG or AI-Input used for the purposes of retraining, refining  or creation of a foundation model is excluded by this section**",
+          "createdAt": "2026-04-16T16:27:56Z",
+          "updatedAt": "2026-04-16T16:27:56Z"
+        },
+        {
+          "author": "MikeBishop",
+          "authorAssociation": "NONE",
+          "body": "> This does not include assets that are provided as input by end users of the AI-based system either directly or by providing the location of the asset(s).\n\nI would suggest instead that explicit user direction might be a reason an application would choose to ignore a preference. \"The source of this image prefers that it not be used as input to AI-based tools. If you choose to continue, you assume any legal liability. Should I continue anyway?\"",
+          "createdAt": "2026-04-16T16:31:59Z",
+          "updatedAt": "2026-04-16T16:31:59Z"
+        },
+        {
+          "author": "natehake",
+          "authorAssociation": "NONE",
+          "body": "This category should logically start where the training category ends. In other words, it should cover use of assets by an AI model that has been trained. \n\nAs one potential starting point (which I may refine later), we could say: \n\n> **AI-Inference**: The act of using an asset for inference by an AI model that can generate content in one or more modalities (text, image, audio, etc...). Inference means all use beyond the production or refinement of an AI model. \n\nWith respect to user-provided assets and other concerns about overly broad use, I think two approaches would potentially work: 1) having two versions of this category (one for use by end users, one for use by automated systems); and/or 2) addressing concerns about overreach at the top level, as we have for other definitions. ",
+          "createdAt": "2026-04-16T17:10:06Z",
+          "updatedAt": "2026-04-16T17:10:06Z"
         }
       ]
     },
@@ -3659,7 +3694,7 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nThe WG has discussed following a purpose based foundation of expressing preferences.     A consequence of formulating preferences based on purpose is what is the WG's expectation on secondary purpose uses.  \n\nIf the WG does choose to follow a purpose based preferences vocabulary, then it should clearly document its expected approach to secondary uses.      \n\nThere would be a couple of different approaches that could be chosen by the WG (this is not a complete list)\n\n1.  An option is that no secondary use is expected or allowed, without the need to express it explicitly\n2. Another option, would be to add an explicit declaration on secondary uses.\n\n\n\n### Proposed Resolution\n\n_No response_",
       "createdAt": "2026-04-14T15:31:51Z",
-      "updatedAt": "2026-04-15T15:15:19Z",
+      "updatedAt": "2026-04-16T11:49:18Z",
       "closedAt": null,
       "comments": [
         {
@@ -3668,6 +3703,13 @@
           "body": "I'm not following what you are intending here:\n\n* If there is a preference defined in our vocabulary (or a vocabulary that all the entities involve understand), then that preference can be conveyed.\n* No preference is stated if no preference is stated, either because there is no preference or because the stated preference uses a vocabulary term that is not understood by the recipient.\n\nThat is, there is no such thing as \"secondary use\" in this system.  To imply that there might be is not consistent with what we are defining.\n\nAs noted in #167, preferences apply to all uses, not the acquisition of stuff.  I don't see how this issue would be actionable.",
           "createdAt": "2026-04-15T15:15:19Z",
           "updatedAt": "2026-04-15T15:15:19Z"
+        },
+        {
+          "author": "gitnnelg",
+          "authorAssociation": "NONE",
+          "body": "If the focus shifts to declaring preferences for specific uses as in done in other frameworks, then a common question that arises is _what about secondary use that is desired or comes about for the data after the initial use?_         \n\nIn PII handling situations the mainstream rule is that secondary uses that were not included in the original data purpose declared to the PII owner at the time of permission granting by the PII owner are not allowed and would require a new permission.\n\nWhile AI-Pref is not a strict permission grant, but is an expression of preference the question arises of what is the expected behavior from the users accessing the data, when their purpose for the data grows beyond the original access.    \n\nThere are several use-cases to then cover:\n\n1. If the full AI-Pref expression from the original access has been retained and has the new purpose listed, then that is straighforward, since the preferences for the new purpose are available in the retained AI-Pref expression.\n2. If the AI-Pref expression was discarded after the original access, then the user should be directed to re-obtain the AI-Pref via a new request.\n\nthe core issue here involves not preferences applying to all uses, but the situation where the past preferences have not been retrained, while the use of the data is being put to a new purpose.",
+          "createdAt": "2026-04-16T11:47:50Z",
+          "updatedAt": "2026-04-16T11:49:18Z"
         }
       ]
     },
@@ -3752,14 +3794,38 @@
       "id": "I_kwDOOWk1-s7-MOFA",
       "title": "Non-substantive modifications to excerpts in search",
       "url": "https://github.com/ietf-wg-aipref/drafts/issues/202",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "martinthomson",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "In #199, there is text that allows transcriptions, translations, or other such \"non-substantive\" modifications to text.\n\nSome people think that it is essential to allow this.  Others consider this as part of the problems that generative AI usage lead to.  We need to resolve that tension one way or other.",
       "createdAt": "2026-04-14T20:39:50Z",
-      "updatedAt": "2026-04-14T20:39:50Z",
+      "updatedAt": "2026-04-16T13:39:39Z",
+      "closedAt": "2026-04-16T13:39:39Z",
+      "comments": [
+        {
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "At the meeting in Toronto, we resolved to include something along these lines in the document. There is a question about whether the term \"non-substantive\" in that text, though positions in either direction were both weakly-held and reasonable in both directions.",
+          "createdAt": "2026-04-16T13:39:09Z",
+          "updatedAt": "2026-04-16T13:39:09Z"
+        }
+      ]
+    },
+    {
+      "number": 208,
+      "id": "I_kwDOOWk1-s7-4HSz",
+      "title": "Use of the term \"non-substantive\" in the translation/etc text in search definition",
+      "url": "https://github.com/ietf-wg-aipref/drafts/issues/208",
+      "state": "OPEN",
+      "author": "martinthomson",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Discussion in Toronto highlighted two competing positions with respect to this term:\n\n* The term is (for some) essential to narrow the scope of the exception.\n* The term is (for others) a little problematic in terms of how it aids clarity.\n\nThese were both recognized as reasonable positions, but those that expressed them acknowledged that they didn't have a strongly-held views in either direction and were not able to offer changes that would address their concern without strengthening the (recognized) objections of the opposite position.",
+      "createdAt": "2026-04-16T13:44:47Z",
+      "updatedAt": "2026-04-16T13:44:47Z",
       "closedAt": null,
       "comments": []
     }
@@ -9295,25 +9361,33 @@
       "id": "PR_kwDOOWk1-s6xTBkO",
       "title": "indexing and derivative works",
       "url": "https://github.com/ietf-wg-aipref/drafts/pull/184",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "mallory",
       "authorAssociation": "NONE",
       "assignees": [],
       "labels": [],
       "body": "Updated sections on AI Output and Search categories to clarify derivative works and indexing requirements as per my comments on the mic today.",
       "createdAt": "2025-11-03T23:57:05Z",
-      "updatedAt": "2025-11-03T23:57:06Z",
+      "updatedAt": "2026-04-18T15:46:11Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "8a75b7389d5cc9cc06bac968ed63dd26d1b9e9e9",
       "headRepository": "mallory/drafts",
       "headRefName": "patch-1",
       "headRefOid": "097b6331d3a73915e85018cc6cc653e1c39027e9",
-      "closedAt": null,
+      "closedAt": "2026-04-18T15:46:11Z",
       "mergedAt": null,
       "mergedBy": null,
       "mergeCommit": null,
-      "comments": [],
+      "comments": [
+        {
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "A lot of things have changed since and this affects text that has new proposals that have been extensively discussed.  Closing now as overtaken by events.",
+          "createdAt": "2026-04-18T15:46:11Z",
+          "updatedAt": "2026-04-18T15:46:11Z"
+        }
+      ],
       "reviews": []
     },
     {
@@ -9445,21 +9519,21 @@
       "id": "PR_kwDOOWk1-s6_pM7Y",
       "title": "Define \"foundation model\" (align with ISO/IEC 22989)",
       "url": "https://github.com/ietf-wg-aipref/drafts/pull/191",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "lexlizx2",
       "authorAssociation": "NONE",
       "assignees": [],
       "labels": [],
       "body": "This PR adds an explicit definition of \u201cfoundation model\u201d to the AIPREF vocabulary for clarity and consistency.\r\n\r\nThe definition is aligned with ISO/IEC 22989 (AI \u2014 Concepts and terminology), which defines a foundation model as an AI model that can be used for or readily adapted to a wide range of tasks in one or more domains.\r\n",
       "createdAt": "2026-01-27T16:17:20Z",
-      "updatedAt": "2026-01-28T15:00:05Z",
+      "updatedAt": "2026-04-18T15:41:48Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "03c7ea334c0b99a3495b31f58421aa8b960f80b3",
       "headRepository": "lexlizx2/drafts",
       "headRefName": "patch-1",
       "headRefOid": "0d47a2346bbeb64b1efa1a446d82e1bf40383443",
-      "closedAt": null,
+      "closedAt": "2026-04-18T15:41:47Z",
       "mergedAt": null,
       "mergedBy": null,
       "mergeCommit": null,
@@ -9470,6 +9544,13 @@
           "body": "Thanks, Martin.  Yes, I think getting rid of the line \"Foundation models\r\nare trained on very large numbers of assets\r\nso that they can be applied to a wide range of use cases,\" would reduce the\r\nredundancy but wanted to give you and the group the option to consider that\r\nfirst.\r\n\r\nOn Tue, Jan 27, 2026 at 6:26\u202fPM Martin Thomson ***@***.***>\r\nwrote:\r\n\r\n> ***@***.**** commented on this pull request.\r\n>\r\n> I like the definition, but I'll need to tweak the formatting.\r\n>\r\n> The paragraph following your change contains more definition, some of\r\n> which might be redundant with what was added. Did you consider that?\r\n>\r\n> \u2014\r\n> Reply to this email directly, view it on GitHub\r\n> <https://github.com/ietf-wg-aipref/drafts/pull/191#pullrequestreview-3713938162>,\r\n> or unsubscribe\r\n> <https://github.com/notifications/unsubscribe-auth/BJY3CG3XAL4XHXE3AJ6IA7T4I7X3BAVCNFSM6AAAAACTB45NVSVHI2DSMVQWIX3LMV43YUDVNRWFEZLROVSXG5CSMV3GSZLXHMZTOMJTHEZTQMJWGI>\r\n> .\r\n> You are receiving this because you authored the thread.Message ID:\r\n> ***@***.***>\r\n>\r\n",
           "createdAt": "2026-01-28T15:00:05Z",
           "updatedAt": "2026-01-28T15:00:05Z"
+        },
+        {
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "After our recent interim, we're going with something else in #207.",
+          "createdAt": "2026-04-18T15:41:47Z",
+          "updatedAt": "2026-04-18T15:41:47Z"
         }
       ],
       "reviews": [
@@ -9528,13 +9609,13 @@
       "labels": [],
       "body": "This change attempts to reframe Sections 3.1 and 3.2 in terms of the two things they are intended to address, each separately.\r\n\r\n* Section 3.1 is about what it means to understand what a preference is.\r\n\r\n* Section 3.2 is about what it might mean to act on that understanding.\r\n\r\nIt seems like this distinction was unclear in the past and this is primarily an attempt to address that confusion.\r\n\r\nAt the risk of adding to the confusion though, I felt like it was responsible to talk about the limitations of what we can achieve in that first item.  After all, the system we describe has limitations.  Those are twofold:\r\n\r\n1.  People who receive/obtain assets will not understand every possible way of expressing preferences.  So only those preferences they know about and choose to implement will be understood by them.\r\n\r\n2.  We are not always offering a way to convey *who* expressed a preference.  Some mechanisms might depend on that (the registry ideas need to, for instance), but the ones we are defining today cannot.\r\n\r\nNeither should be especially surprising to anyone, but writing something that is precise turned out to be tricky.  I'm not happy with where it is, but am turning to wider review for feedback.",
       "createdAt": "2026-03-31T22:58:18Z",
-      "updatedAt": "2026-04-15T15:55:53Z",
+      "updatedAt": "2026-04-18T15:43:00Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "03c7ea334c0b99a3495b31f58421aa8b960f80b3",
       "headRepository": "ietf-wg-aipref/drafts",
       "headRefName": "understanding",
-      "headRefOid": "aaf1fd179d9835d633ba9bacc2330114804723a4",
+      "headRefOid": "26d7ee68274f606d564c83d632777eb41f5c1cd2",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
@@ -9627,25 +9708,33 @@
       "id": "PR_kwDOOWk1-s7Sa4pI",
       "title": "(Non-generative) Search proposal synthesis",
       "url": "https://github.com/ietf-wg-aipref/drafts/pull/199",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "martinthomson",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "This takes text from @erinsimon and @chrisn in #196 and #173 and smooshes it together somewhat awkwardly in an attempt to try to find a starting point.\r\n\r\nThere are clearly aspects of this that are duplicative, redundant, and (importantly) contested.  The general sense though is that this is forward movement and we would open issues to track those points of disagreement.",
       "createdAt": "2026-04-14T19:46:16Z",
-      "updatedAt": "2026-04-15T19:08:29Z",
+      "updatedAt": "2026-04-18T15:45:09Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "f9620ee9cbbec86ad20d59826b0921fc07b96f6b",
       "headRepository": "ietf-wg-aipref/drafts",
       "headRefName": "ng-search-ng",
       "headRefOid": "d73a4a429ca730d5e9814e2997ee97a3a21e33b7",
-      "closedAt": null,
+      "closedAt": "2026-04-18T15:45:09Z",
       "mergedAt": null,
       "mergedBy": null,
       "mergeCommit": null,
-      "comments": [],
+      "comments": [
+        {
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "After a lot of discussion at the interim, the (marginal) preference seemed to be in favor of #201 for this item.",
+          "createdAt": "2026-04-18T15:45:09Z",
+          "updatedAt": "2026-04-18T15:45:09Z"
+        }
+      ],
       "reviews": []
     },
     {
@@ -9686,13 +9775,13 @@
       "labels": [],
       "body": "As proposed by @chrisn in https://github.com/ietf-wg-aipref/drafts/issues/173#issuecomment-4246716167",
       "createdAt": "2026-04-14T20:15:14Z",
-      "updatedAt": "2026-04-15T20:22:20Z",
+      "updatedAt": "2026-04-16T14:45:38Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "f9620ee9cbbec86ad20d59826b0921fc07b96f6b",
       "headRepository": "ietf-wg-aipref/drafts",
       "headRefName": "search-ng2",
-      "headRefOid": "59a96e7fe332e4137f21581137b4e16b1e2bb588",
+      "headRefOid": "0ccf1837978dbcea1d6ac1aac8ed0ca8be6a67c3",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
@@ -9774,6 +9863,52 @@
               "updatedAt": "2026-04-15T19:39:50Z"
             }
           ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s71qIVb",
+          "commit": {
+            "abbreviatedOid": "59a96e7"
+          },
+          "author": "llemeurfr",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-04-16T13:58:45Z",
+          "updatedAt": "2026-04-16T13:58:45Z",
+          "comments": [
+            {
+              "originalPosition": 44,
+              "body": "this is where more details about what summaries are would be useful: \"... to generate summaries of the search results as a whole, or of each individual search result\".  ",
+              "createdAt": "2026-04-16T13:58:45Z",
+              "updatedAt": "2026-04-16T13:58:45Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s71qQT3",
+          "commit": {
+            "abbreviatedOid": "ed31419"
+          },
+          "author": "lrosenthol",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-04-16T14:02:53Z",
+          "updatedAt": "2026-04-16T14:03:12Z",
+          "comments": [
+            {
+              "originalPosition": 40,
+              "body": "```suggestion\n* When excerpts from the asset are displayed,\n```",
+              "createdAt": "2026-04-16T14:02:53Z",
+              "updatedAt": "2026-04-16T14:03:12Z"
+            },
+            {
+              "originalPosition": 41,
+              "body": "```suggestion\n  they serve to assist users\n```",
+              "createdAt": "2026-04-16T14:03:02Z",
+              "updatedAt": "2026-04-16T14:03:12Z"
+            }
+          ]
         }
       ]
     },
@@ -9782,25 +9917,33 @@
       "id": "PR_kwDOOWk1-s7Sqz2L",
       "title": "Remove the \"MAY\" from S3.2",
       "url": "https://github.com/ietf-wg-aipref/drafts/pull/203",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "martinthomson",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "This is a partial response to Alissa's comments in #160.\r\n\r\nThis is not a normative statement anyway, so avoid the use of normative language.",
       "createdAt": "2026-04-15T14:19:44Z",
-      "updatedAt": "2026-04-15T14:19:44Z",
+      "updatedAt": "2026-04-18T15:46:40Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "f9620ee9cbbec86ad20d59826b0921fc07b96f6b",
       "headRepository": "ietf-wg-aipref/drafts",
       "headRefName": "no-may-respect",
       "headRefOid": "730d3ae98c01e7f56742556249ff2eae07ab2a25",
-      "closedAt": null,
+      "closedAt": "2026-04-18T15:46:40Z",
       "mergedAt": null,
       "mergedBy": null,
       "mergeCommit": null,
-      "comments": [],
+      "comments": [
+        {
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Closing in favor of #206.",
+          "createdAt": "2026-04-18T15:46:40Z",
+          "updatedAt": "2026-04-18T15:46:40Z"
+        }
+      ],
       "reviews": []
     },
     {
@@ -9808,25 +9951,33 @@
       "id": "PR_kwDOOWk1-s7Sq549",
       "title": "Brad's text from #160",
       "url": "https://github.com/ietf-wg-aipref/drafts/pull/204",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "martinthomson",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "See https://github.com/ietf-wg-aipref/drafts/issues/160#issuecomment-4252747123\r\n\r\nCloses #160.",
       "createdAt": "2026-04-15T14:24:48Z",
-      "updatedAt": "2026-04-15T14:24:48Z",
+      "updatedAt": "2026-04-18T15:40:10Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "f9620ee9cbbec86ad20d59826b0921fc07b96f6b",
       "headRepository": "ietf-wg-aipref/drafts",
       "headRefName": "bsilver-160",
       "headRefOid": "e87c1bca1f99aba5c9ceacba8ed1d9f142cabeee",
-      "closedAt": null,
+      "closedAt": "2026-04-18T15:40:09Z",
       "mergedAt": null,
       "mergedBy": null,
       "mergeCommit": null,
-      "comments": [],
+      "comments": [
+        {
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Closing in favor of #206, based on discussion at the interim.",
+          "createdAt": "2026-04-18T15:40:09Z",
+          "updatedAt": "2026-04-18T15:40:09Z"
+        }
+      ],
       "reviews": []
     },
     {
@@ -9834,25 +9985,33 @@
       "id": "PR_kwDOOWk1-s7SrfYN",
       "title": "Switch from \"ignore\" to focus on a choice not to honor preferences",
       "url": "https://github.com/ietf-wg-aipref/drafts/pull/205",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "martinthomson",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "This is a lighter-weight approach to addressing the comments raised in #160.  It retains the longer list of reasons that people might choose not to honor preferences.\r\n\r\nCloses #160.",
       "createdAt": "2026-04-15T14:56:23Z",
-      "updatedAt": "2026-04-15T14:56:23Z",
+      "updatedAt": "2026-04-18T15:47:28Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "f9620ee9cbbec86ad20d59826b0921fc07b96f6b",
       "headRepository": "ietf-wg-aipref/drafts",
       "headRefName": "focus-non-honor",
       "headRefOid": "87c651c74b6d9daf332b4bad59afce7e380b8fcb",
-      "closedAt": null,
+      "closedAt": "2026-04-18T15:47:27Z",
       "mergedAt": null,
       "mergedBy": null,
       "mergeCommit": null,
-      "comments": [],
+      "comments": [
+        {
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Closing in favor of the text discussed at the interim in #206.",
+          "createdAt": "2026-04-18T15:47:27Z",
+          "updatedAt": "2026-04-18T15:47:27Z"
+        }
+      ],
       "reviews": []
     },
     {
@@ -9867,19 +10026,124 @@
       "labels": [],
       "body": "This is an attempt to deal with the questions around the text in\r\nSection 3.2.  The changes here are stacked up, but really the best way\r\nto look at this as a complete replacement for the section.\r\n\r\nI have taken text from both Alissa and Brad in putting this together.  I\r\n*think* that I have captured a lot of the intent behind each, without\r\nlosing things from the original text that was adding value and did not\r\nreceive objections.  This also takes Kevin's suggestion that we avoid\r\npurely \"positive\" examples of use; to that end, I've added some\r\n\"negative\" examples to the list.\r\n\r\nCloses #160.",
       "createdAt": "2026-04-15T18:15:06Z",
-      "updatedAt": "2026-04-15T18:15:06Z",
+      "updatedAt": "2026-04-16T16:08:32Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "f9620ee9cbbec86ad20d59826b0921fc07b96f6b",
       "headRepository": "ietf-wg-aipref/drafts",
       "headRefName": "synthesis-160",
-      "headRefOid": "a579ac32f2ac7a06a89be76bb2da6f177dc8e250",
+      "headRefOid": "dd805e5733b438e9bbe910a4badb942564d4b852",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
       "mergeCommit": null,
       "comments": [],
-      "reviews": []
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWk1-s71seR8",
+          "commit": {
+            "abbreviatedOid": "a579ac3"
+          },
+          "author": "lrosenthol",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "CHANGES_REQUESTED",
+          "body": "editorials and flagging a point about to whom this is directed...",
+          "createdAt": "2026-04-16T15:17:41Z",
+          "updatedAt": "2026-04-16T15:20:53Z",
+          "comments": [
+            {
+              "originalPosition": 18,
+              "body": "```suggestion\nnot provide a means of ensuring that preferences are respected.\n```\n\nfollowed seems like the wrong word here...",
+              "createdAt": "2026-04-16T15:17:41Z",
+              "updatedAt": "2026-04-16T15:20:53Z"
+            },
+            {
+              "originalPosition": 26,
+              "body": "```suggestion\nand thereby determine the consequences of a system not respecting\n```",
+              "createdAt": "2026-04-16T15:18:27Z",
+              "updatedAt": "2026-04-16T15:20:53Z"
+            },
+            {
+              "originalPosition": 35,
+              "body": "```suggestion\nof how the asset is being used,\n```",
+              "createdAt": "2026-04-16T15:19:05Z",
+              "updatedAt": "2026-04-16T15:20:53Z"
+            },
+            {
+              "originalPosition": 78,
+              "body": "```suggestion\nof pre-existing signals about preferences\n```",
+              "createdAt": "2026-04-16T15:19:35Z",
+              "updatedAt": "2026-04-16T15:20:53Z"
+            },
+            {
+              "originalPosition": 83,
+              "body": "```suggestion\nwhen a system decides whether to use an asset.\n```",
+              "createdAt": "2026-04-16T15:20:19Z",
+              "updatedAt": "2026-04-16T15:20:53Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s71sm9-",
+          "commit": {
+            "abbreviatedOid": "6c51adb"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-04-16T15:22:34Z",
+          "updatedAt": "2026-04-16T15:22:34Z",
+          "comments": [
+            {
+              "originalPosition": 35,
+              "body": "I don't think this is an improvement.",
+              "createdAt": "2026-04-16T15:22:34Z",
+              "updatedAt": "2026-04-16T15:22:35Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s71snum",
+          "commit": {
+            "abbreviatedOid": "6c51adb"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-04-16T15:23:02Z",
+          "updatedAt": "2026-04-16T15:23:02Z",
+          "comments": [
+            {
+              "originalPosition": 78,
+              "body": "My dictionary said that this was OK without the hyphen, but I've made the change.",
+              "createdAt": "2026-04-16T15:23:02Z",
+              "updatedAt": "2026-04-16T15:23:02Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s71soWC",
+          "commit": {
+            "abbreviatedOid": "1076932"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-04-16T15:23:25Z",
+          "updatedAt": "2026-04-16T15:23:25Z",
+          "comments": [
+            {
+              "originalPosition": 26,
+              "body": "I'm OK with the passive voice here.",
+              "createdAt": "2026-04-16T15:23:25Z",
+              "updatedAt": "2026-04-16T15:23:25Z"
+            }
+          ]
+        }
+      ]
     },
     {
       "number": 207,
@@ -9893,19 +10157,73 @@
       "labels": [],
       "body": "(This commit is just the main text, I now need to go through and clean up other mentions...)\r\n\r\nCloses #198.",
       "createdAt": "2026-04-15T18:19:13Z",
-      "updatedAt": "2026-04-15T18:21:04Z",
+      "updatedAt": "2026-04-18T16:17:05Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "f9620ee9cbbec86ad20d59826b0921fc07b96f6b",
       "headRepository": "ietf-wg-aipref/drafts",
       "headRefName": "train-ai-dfn",
-      "headRefOid": "30678aeb141c4779f3ea6946b3a399c281564c8a",
+      "headRefOid": "d94ff2ae47d571fa54f2a59c4db787ba6fa107d9",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
       "mergeCommit": null,
       "comments": [],
-      "reviews": []
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWk1-s71sQBJ",
+          "commit": {
+            "abbreviatedOid": "30678ae"
+          },
+          "author": "lrosenthol",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-04-16T15:08:49Z",
+          "updatedAt": "2026-04-16T15:09:02Z",
+          "comments": [
+            {
+              "originalPosition": 20,
+              "body": "```suggestion\nthat can generate assets in one or more modalities\n```\n\n(or whatever word we land on)",
+              "createdAt": "2026-04-16T15:08:49Z",
+              "updatedAt": "2026-04-16T15:09:02Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s71sbhU",
+          "commit": {
+            "abbreviatedOid": "d94ff2a"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-04-16T15:15:56Z",
+          "updatedAt": "2026-04-16T15:15:56Z",
+          "comments": [
+            {
+              "originalPosition": 20,
+              "body": "The choice to use a different word is deliberate, because we don't want to restrict things to just things that produce entire \"assets\", which is a word we are using to refer to an entire artifact/thing/etc.  Here, we are looking at something more general.",
+              "createdAt": "2026-04-16T15:15:56Z",
+              "updatedAt": "2026-04-16T15:15:56Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s72ciol",
+          "commit": {
+            "abbreviatedOid": "d94ff2a"
+          },
+          "author": "paul2keller",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "This looks ready to merge to me",
+          "createdAt": "2026-04-18T16:17:05Z",
+          "updatedAt": "2026-04-18T16:17:05Z",
+          "comments": []
+        }
+      ]
     }
   ]
 }
