@@ -260,10 +260,10 @@ Table of Contents
 
 4.  Vocabulary Definition
 
-   This section defines the categories of use in the vocabulary.
-
    NOTE: This section does not yet have consensus; see "Note to Readers"
    above.
+
+   This section defines the categories of use in the vocabulary.
 
 4.1.  AI Model Training Category
 
