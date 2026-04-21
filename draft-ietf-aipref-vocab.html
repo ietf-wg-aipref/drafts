@@ -1055,7 +1055,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 </tr></thead>
 <tfoot><tr>
 <td class="left">Keller &amp; Thomson</td>
-<td class="center">Expires 21 October 2026</td>
+<td class="center">Expires 23 October 2026</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1068,12 +1068,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <dd class="internet-draft">draft-ietf-aipref-vocab-latest</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2026-04-19" class="published">19 April 2026</time>
+<time datetime="2026-04-21" class="published">21 April 2026</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Standards Track</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2026-10-21">21 October 2026</time></dd>
+<dd class="expires"><time datetime="2026-10-23">23 October 2026</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1112,6 +1112,12 @@ of restrictions or permissions for use of digital assets by such systems.<a href
 <p id="section-note.1-4">Source for this draft and an issue tracker can be found at
         <span><a href="https://github.com/ietf-wg-aipref/drafts">https://github.com/ietf-wg-aipref/drafts</a></span>.<a href="#section-note.1-4" class="pilcrow">¶</a></p>
 </section>
+<section class="note" id="section-note.2">
+      <h2 id="name-note-to-readers">
+<a href="#name-note-to-readers" class="section-name selfRef">Note to Readers</a>
+      </h2>
+<p id="section-note.2-1">As detailed below, this is a working document. Its contents DO NOT REFLECT CONSENSUS of the Working Group either in whole or part. Presense or absense of any particular text does not indicate consensus, and this document is published solely as a basis of further discussion.<a href="#section-note.2-1" class="pilcrow">¶</a></p>
+</section>
 <div id="status-of-memo">
 <section id="section-boilerplate.1">
         <h2 id="name-status-of-this-memo">
@@ -1131,7 +1137,7 @@ of restrictions or permissions for use of digital assets by such systems.<a href
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 21 October 2026.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 23 October 2026.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1305,21 +1311,22 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
       <h2 id="name-statements-of-preference">
 <a href="#section-3" class="section-number selfRef">3. </a><a href="#name-statements-of-preference" class="section-name selfRef">Statements of Preference</a>
       </h2>
-<p id="section-3-1">The vocabulary is a set of categories,
+<p id="section-3-1">NOTE: This section does not yet have consensus; see "Note to Readers" above.<a href="#section-3-1" class="pilcrow">¶</a></p>
+<p id="section-3-2">The vocabulary is a set of categories,
 each of which is defined to cover a class of usage for assets.
-<a href="#vocab" class="auto internal xref">Section 4</a> defines the core set of usage categories in detail.<a href="#section-3-1" class="pilcrow">¶</a></p>
-<p id="section-3-2">A statement of preference -- or usage preference -- is made about an asset.
+<a href="#vocab" class="auto internal xref">Section 4</a> defines the core set of usage categories in detail.<a href="#section-3-2" class="pilcrow">¶</a></p>
+<p id="section-3-3">A statement of preference -- or usage preference -- is made about an asset.
 A statement of preference follows a simple data model where a preference
 is assigned to each of the categories of use in the vocabulary.
 A preference is either to allow or disallow
-the usage associated with the category.<a href="#section-3-2" class="pilcrow">¶</a></p>
-<p id="section-3-3">A statement of preference can indicate preferences
+the usage associated with the category.<a href="#section-3-3" class="pilcrow">¶</a></p>
+<p id="section-3-4">A statement of preference can indicate preferences
 about some, all, or none of the categories from the vocabulary.
-This can mean that the preference is unknown for some usage categories.<a href="#section-3-3" class="pilcrow">¶</a></p>
-<p id="section-3-4">Some categories describe a proper subset of the usages of other categories.
+This can mean that the preference is unknown for some usage categories.<a href="#section-3-4" class="pilcrow">¶</a></p>
+<p id="section-3-5">Some categories describe a proper subset of the usages of other categories.
 A preference that is stated for the more general category applies
-if the preference is unknown for the more specific category.<a href="#section-3-4" class="pilcrow">¶</a></p>
-<p id="section-3-5">For example, a more general category might be assigned a preference
+if the preference is unknown for the more specific category.<a href="#section-3-5" class="pilcrow">¶</a></p>
+<p id="section-3-6">For example, a more general category might be assigned a preference
 that allows the associated usage.
 In the absence of any statement of preference
 regarding categories that are more specific subsets of that usage category,
@@ -1327,17 +1334,17 @@ usage within those categories would be also be allowed.
 An explicit preference regarding the more specific usage category
 can be used to disallow the more specific usage,
 while indicating that other usage within the more general category
-is permissible.<a href="#section-3-5" class="pilcrow">¶</a></p>
-<p id="section-3-6">After processing a statement of preferences
+is permissible.<a href="#section-3-6" class="pilcrow">¶</a></p>
+<p id="section-3-7">After processing a statement of preferences
 the recipient associates each category of use
 one of three preference values: "allowed", "disallowed", or "unknown".
 In the absence of a statement of preference,
-all usage categories are assigned a preference value of "unknown".<a href="#section-3-6" class="pilcrow">¶</a></p>
-<p id="section-3-7">The process for consulting a statement of preference is defined in <a href="#usage" class="auto internal xref">Section 5</a>.<a href="#section-3-7" class="pilcrow">¶</a></p>
-<p id="section-3-8">Different declaring parties might each make their own statement of preference
+all usage categories are assigned a preference value of "unknown".<a href="#section-3-7" class="pilcrow">¶</a></p>
+<p id="section-3-8">The process for consulting a statement of preference is defined in <a href="#usage" class="auto internal xref">Section 5</a>.<a href="#section-3-8" class="pilcrow">¶</a></p>
+<p id="section-3-9">Different declaring parties might each make their own statement of preference
 regarding a particular asset.
-The process for managing multiple statements of preference is defined in <a href="#combine" class="auto internal xref">Section 5.1</a>.<a href="#section-3-8" class="pilcrow">¶</a></p>
-<p id="section-3-9">An exemplary syntax for statements of preference is defined in <a href="#format" class="auto internal xref">Section 6</a>.<a href="#section-3-9" class="pilcrow">¶</a></p>
+The process for managing multiple statements of preference is defined in <a href="#combine" class="auto internal xref">Section 5.1</a>.<a href="#section-3-9" class="pilcrow">¶</a></p>
+<p id="section-3-10">An exemplary syntax for statements of preference is defined in <a href="#format" class="auto internal xref">Section 6</a>.<a href="#section-3-10" class="pilcrow">¶</a></p>
 <div id="understanding">
 <section id="section-3.1">
         <h3 id="name-understanding-preferences">
@@ -1416,7 +1423,8 @@ and the applicable legal context.<a href="#section-3.2-5" class="pilcrow">¶</a>
       <h2 id="name-vocabulary-definition">
 <a href="#section-4" class="section-number selfRef">4. </a><a href="#name-vocabulary-definition" class="section-name selfRef">Vocabulary Definition</a>
       </h2>
-<p id="section-4-1">This section defines the categories of use in the vocabulary.<a href="#section-4-1" class="pilcrow">¶</a></p>
+<p id="section-4-1">NOTE: This section does not yet have consensus; see "Note to Readers" above.<a href="#section-4-1" class="pilcrow">¶</a></p>
+<p id="section-4-2">This section defines the categories of use in the vocabulary.<a href="#section-4-2" class="pilcrow">¶</a></p>
 <div id="train-ai">
 <section id="section-4.1">
         <h3 id="name-ai-model-training-category">

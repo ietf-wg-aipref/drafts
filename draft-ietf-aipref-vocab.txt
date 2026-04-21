@@ -5,8 +5,8 @@
 AI Preferences                                                 P. Keller
 Internet-Draft                                               Open Future
 Intended status: Standards Track                         M. Thomson, Ed.
-Expires: 21 October 2026                                         Mozilla
-                                                           19 April 2026
+Expires: 23 October 2026                                         Mozilla
+                                                           21 April 2026
 
 
             A Vocabulary For Expressing AI Usage Preferences
@@ -36,6 +36,14 @@ About This Document
    Source for this draft and an issue tracker can be found at
    https://github.com/ietf-wg-aipref/drafts.
 
+Note to Readers
+
+   As detailed below, this is a working document.  Its contents DO NOT
+   REFLECT CONSENSUS of the Working Group either in whole or part.
+   Presense or absense of any particular text does not indicate
+   consensus, and this document is published solely as a basis of
+   further discussion.
+
 Status of This Memo
 
    This Internet-Draft is submitted in full conformance with the
@@ -51,7 +59,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 21 October 2026.
+   This Internet-Draft will expire on 23 October 2026.
 
 Copyright Notice
 
@@ -138,6 +146,9 @@ Table of Contents
       The entity that expresses a preference with regards to an Asset.
 
 3.  Statements of Preference
+
+   NOTE: This section does not yet have consensus; see "Note to Readers"
+   above.
 
    The vocabulary is a set of categories, each of which is defined to
    cover a class of usage for assets.  Section 4 defines the core set of
@@ -248,6 +259,9 @@ Table of Contents
    stated, and the applicable legal context.
 
 4.  Vocabulary Definition
+
+   NOTE: This section does not yet have consensus; see "Note to Readers"
+   above.
 
    This section defines the categories of use in the vocabulary.
 
