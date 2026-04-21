@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-04-19T03:32:43.348939+00:00",
+  "timestamp": "2026-04-21T03:26:49.580914+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -2065,7 +2065,7 @@
       "id": "I_kwDOOWk1-s7Ksekz",
       "title": "Definition of AI",
       "url": "https://github.com/ietf-wg-aipref/drafts/issues/151",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "mnot",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
@@ -2075,8 +2075,8 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\n_Raised in [email by EKR](https://mailarchive.ietf.org/arch/msg/ai-control/dxpLCD7R2L-L07fEQCITjXjUcMY)_\n\nS 2.\n\n      Artificial Intelligence (AI):\n      An engineered system of sufficient complexity that, for a given\n      set of human-defined objectives, learns from data to generate\n      outputs such as content, predictions, recommendations, or\n      decisions.\n\nAs I mentioned previously, I think this definition of AI is extremely\nproblematic and would effectively sweep in any statistical\ntechnique. I understand that \"sufficient complexity\" is intended to\nsomehow reduce the scope, but it's a totally subjective standard.\n\n### Proposed Resolution\n\n_No response_",
       "createdAt": "2025-09-10T02:34:49Z",
-      "updatedAt": "2026-04-14T19:41:02Z",
-      "closedAt": null,
+      "updatedAt": "2026-04-19T19:34:53Z",
+      "closedAt": "2026-04-19T19:34:53Z",
       "comments": [
         {
           "author": "bkmgit",
@@ -2141,7 +2141,7 @@
       "id": "I_kwDOOWk1-s7KsfSJ",
       "title": "Use of 'Machine Learning'",
       "url": "https://github.com/ietf-wg-aipref/drafts/issues/152",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "mnot",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [
@@ -2153,8 +2153,8 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\n_Raised in [email by EKR](https://mailarchive.ietf.org/arch/msg/ai-control/dxpLCD7R2L-L07fEQCITjXjUcMY)_\n\n      AI Training:\n        The application of machine learning to data to produce or improve\n        a model for an artificial intelligence system.\n\nI'm not sure what \"machine learning\" is doing here.\n\n### Proposed Resolution\n\nI'm not sure what \"machine learning\" is doing here. Why not just:\n\n      The use of data to produce or improve an artificial\n      intelligence system.\n\nI would then strike the term \"machine learning\" entirely.",
       "createdAt": "2025-09-10T02:36:02Z",
-      "updatedAt": "2026-04-14T19:44:28Z",
-      "closedAt": null,
+      "updatedAt": "2026-04-19T19:34:53Z",
+      "closedAt": "2026-04-19T19:34:53Z",
       "comments": [
         {
           "author": "mnot",
@@ -2597,7 +2597,7 @@
       "id": "I_kwDOOWk1-s7LZllF",
       "title": "3.2 Respecting Preferences",
       "url": "https://github.com/ietf-wg-aipref/drafts/issues/160",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "mnot",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
@@ -2607,8 +2607,8 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nPer thread on the list, there is still contention about the text in 3.2.\n\n\n### Proposed Resolution\n\n_Sourced from e-mail by [Alissa](https://mailarchive.ietf.org/arch/msg/ai-control/5vUslBkhFk-na7geaO_XFaWqc0c)_\n\n1. Getting rid of the normative MAY. I know this was discussed on the PR thread before the -03 was published. This whole section is in the realm of non-technical considerations and using a normative keyword muddies that.\n\n2.  Significantly paring back the text starting from \u201cUsage preferences can be ignored \u2026\u201d so that it provides less fodder for future debate about what was really intended here. I have a suggestion below that echoes back to Lila\u2019s original note about historic, widespread use of certain tools. I nixed \u201cfree expression\u201d from the list as it felt like the everything category, but I think including the other examples is helpfully illustrative.\n\n> Parties might choose not to honor preferences they receive on the basis of express agreements they have with other parties, for legal compliance purposes, or for other reasons. Historically, entities engaged in automated processing of digital assets in support of safety, education, scholarship, research, preservation, interoperability, accessibility, and other priorities have needed to make such choices in response to existing preference signaling mechanisms, and affected parties have had to grapple with the consequences. The preference statements described in this specification are no different.\n\n",
       "createdAt": "2025-09-13T03:25:53Z",
-      "updatedAt": "2026-04-15T14:25:52Z",
-      "closedAt": null,
+      "updatedAt": "2026-04-19T19:35:17Z",
+      "closedAt": "2026-04-19T19:35:17Z",
       "comments": [
         {
           "author": "mcerdancch-png",
@@ -3694,7 +3694,7 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nThe WG has discussed following a purpose based foundation of expressing preferences.     A consequence of formulating preferences based on purpose is what is the WG's expectation on secondary purpose uses.  \n\nIf the WG does choose to follow a purpose based preferences vocabulary, then it should clearly document its expected approach to secondary uses.      \n\nThere would be a couple of different approaches that could be chosen by the WG (this is not a complete list)\n\n1.  An option is that no secondary use is expected or allowed, without the need to express it explicitly\n2. Another option, would be to add an explicit declaration on secondary uses.\n\n\n\n### Proposed Resolution\n\n_No response_",
       "createdAt": "2026-04-14T15:31:51Z",
-      "updatedAt": "2026-04-16T11:49:18Z",
+      "updatedAt": "2026-04-19T19:54:59Z",
       "closedAt": null,
       "comments": [
         {
@@ -3710,6 +3710,13 @@
           "body": "If the focus shifts to declaring preferences for specific uses as in done in other frameworks, then a common question that arises is _what about secondary use that is desired or comes about for the data after the initial use?_         \n\nIn PII handling situations the mainstream rule is that secondary uses that were not included in the original data purpose declared to the PII owner at the time of permission granting by the PII owner are not allowed and would require a new permission.\n\nWhile AI-Pref is not a strict permission grant, but is an expression of preference the question arises of what is the expected behavior from the users accessing the data, when their purpose for the data grows beyond the original access.    \n\nThere are several use-cases to then cover:\n\n1. If the full AI-Pref expression from the original access has been retained and has the new purpose listed, then that is straighforward, since the preferences for the new purpose are available in the retained AI-Pref expression.\n2. If the AI-Pref expression was discarded after the original access, then the user should be directed to re-obtain the AI-Pref via a new request.\n\nthe core issue here involves not preferences applying to all uses, but the situation where the past preferences have not been retrained, while the use of the data is being put to a new purpose.",
           "createdAt": "2026-04-16T11:47:50Z",
           "updatedAt": "2026-04-16T11:49:18Z"
+        },
+        {
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "A user that has a new use in mind would consult the preferences associated with the assets they have.  If the preferences apply to that use, then they have information about preferences.  If not, then they learn nothing.\n\nObviously, if they discard information at the point of collection because they believe it to be irrelevant at the time (they were only collecting data for a search engine, not arbitrary model training to give one example) then that would be their fault and they probably can't assume that no preferences were expressed later when they check.  Otherwise, this is not very difficult: there is a preference only if there is a preference.",
+          "createdAt": "2026-04-19T19:54:59Z",
+          "updatedAt": "2026-04-19T19:54:59Z"
         }
       ]
     },
@@ -3718,7 +3725,7 @@
       "id": "I_kwDOOWk1-s7-HPi0",
       "title": "Foundation Models are too specific",
       "url": "https://github.com/ietf-wg-aipref/drafts/issues/198",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "mnot",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
@@ -3728,8 +3735,8 @@
       ],
       "body": "In Toronto, Paul expresses concern that FM excludes use cases that people want to express preferences about, and suggests broadening so that there isn't a distinction. \n\n",
       "createdAt": "2026-04-14T16:02:01Z",
-      "updatedAt": "2026-04-15T18:57:31Z",
-      "closedAt": null,
+      "updatedAt": "2026-04-19T19:33:37Z",
+      "closedAt": "2026-04-19T19:33:37Z",
       "comments": [
         {
           "author": "tymrtn",
@@ -9602,24 +9609,26 @@
       "id": "PR_kwDOOWk1-s7PFpxK",
       "title": "Conformance -> understanding",
       "url": "https://github.com/ietf-wg-aipref/drafts/pull/195",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "martinthomson",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "This change attempts to reframe Sections 3.1 and 3.2 in terms of the two things they are intended to address, each separately.\r\n\r\n* Section 3.1 is about what it means to understand what a preference is.\r\n\r\n* Section 3.2 is about what it might mean to act on that understanding.\r\n\r\nIt seems like this distinction was unclear in the past and this is primarily an attempt to address that confusion.\r\n\r\nAt the risk of adding to the confusion though, I felt like it was responsible to talk about the limitations of what we can achieve in that first item.  After all, the system we describe has limitations.  Those are twofold:\r\n\r\n1.  People who receive/obtain assets will not understand every possible way of expressing preferences.  So only those preferences they know about and choose to implement will be understood by them.\r\n\r\n2.  We are not always offering a way to convey *who* expressed a preference.  Some mechanisms might depend on that (the registry ideas need to, for instance), but the ones we are defining today cannot.\r\n\r\nNeither should be especially surprising to anyone, but writing something that is precise turned out to be tricky.  I'm not happy with where it is, but am turning to wider review for feedback.",
       "createdAt": "2026-03-31T22:58:18Z",
-      "updatedAt": "2026-04-18T15:43:00Z",
+      "updatedAt": "2026-04-19T19:35:43Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "03c7ea334c0b99a3495b31f58421aa8b960f80b3",
       "headRepository": "ietf-wg-aipref/drafts",
       "headRefName": "understanding",
       "headRefOid": "26d7ee68274f606d564c83d632777eb41f5c1cd2",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2026-04-19T19:35:41Z",
+      "mergedAt": "2026-04-19T19:35:41Z",
+      "mergedBy": "martinthomson",
+      "mergeCommit": {
+        "oid": "949d857495af7ed15c3af18889b4888b3c4346b6"
+      },
       "comments": [
         {
           "author": "paul2keller",
@@ -9742,24 +9751,26 @@
       "id": "PR_kwDOOWk1-s7SbE01",
       "title": "Remove AI definitions",
       "url": "https://github.com/ietf-wg-aipref/drafts/pull/200",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "martinthomson",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "As discussed in Toronto.",
       "createdAt": "2026-04-14T19:59:51Z",
-      "updatedAt": "2026-04-15T15:16:31Z",
+      "updatedAt": "2026-04-19T19:34:54Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
-      "baseRefOid": "f9620ee9cbbec86ad20d59826b0921fc07b96f6b",
+      "baseRefOid": "77e142c082326df82daa39222406734e059f1268",
       "headRepository": "ietf-wg-aipref/drafts",
       "headRefName": "remove-ai-dfn",
-      "headRefOid": "d42c78a6376b3c2b2715e54056d63e1a6f1e1bfc",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "headRefOid": "1c33c9558e41b7deb29ef380f5a9a9e731f029e2",
+      "closedAt": "2026-04-19T19:34:52Z",
+      "mergedAt": "2026-04-19T19:34:52Z",
+      "mergedBy": "martinthomson",
+      "mergeCommit": {
+        "oid": "0b94284498f24d04fb7bf895f18b32e530eefb1d"
+      },
       "comments": [],
       "reviews": []
     },
@@ -9768,24 +9779,26 @@
       "id": "PR_kwDOOWk1-s7SbT2_",
       "title": "An iteration of Leah's wording of search",
       "url": "https://github.com/ietf-wg-aipref/drafts/pull/201",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "martinthomson",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "As proposed by @chrisn in https://github.com/ietf-wg-aipref/drafts/issues/173#issuecomment-4246716167",
       "createdAt": "2026-04-14T20:15:14Z",
-      "updatedAt": "2026-04-16T14:45:38Z",
+      "updatedAt": "2026-04-19T19:34:01Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "f9620ee9cbbec86ad20d59826b0921fc07b96f6b",
       "headRepository": "ietf-wg-aipref/drafts",
       "headRefName": "search-ng2",
       "headRefOid": "0ccf1837978dbcea1d6ac1aac8ed0ca8be6a67c3",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2026-04-19T19:34:00Z",
+      "mergedAt": "2026-04-19T19:34:00Z",
+      "mergedBy": "martinthomson",
+      "mergeCommit": {
+        "oid": "77e142c082326df82daa39222406734e059f1268"
+      },
       "comments": [
         {
           "author": "tymrtn",
@@ -10019,24 +10032,26 @@
       "id": "PR_kwDOOWk1-s7Su0Xl",
       "title": "Synthesis of proposed text for issue 160",
       "url": "https://github.com/ietf-wg-aipref/drafts/pull/206",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "martinthomson",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "This is an attempt to deal with the questions around the text in\r\nSection 3.2.  The changes here are stacked up, but really the best way\r\nto look at this as a complete replacement for the section.\r\n\r\nI have taken text from both Alissa and Brad in putting this together.  I\r\n*think* that I have captured a lot of the intent behind each, without\r\nlosing things from the original text that was adding value and did not\r\nreceive objections.  This also takes Kevin's suggestion that we avoid\r\npurely \"positive\" examples of use; to that end, I've added some\r\n\"negative\" examples to the list.\r\n\r\nCloses #160.",
       "createdAt": "2026-04-15T18:15:06Z",
-      "updatedAt": "2026-04-16T16:08:32Z",
+      "updatedAt": "2026-04-19T19:35:18Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "f9620ee9cbbec86ad20d59826b0921fc07b96f6b",
       "headRepository": "ietf-wg-aipref/drafts",
       "headRefName": "synthesis-160",
       "headRefOid": "dd805e5733b438e9bbe910a4badb942564d4b852",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2026-04-19T19:35:16Z",
+      "mergedAt": "2026-04-19T19:35:16Z",
+      "mergedBy": "martinthomson",
+      "mergeCommit": {
+        "oid": "53b077dac83866540fd9f0ffd4148933aa228a4a"
+      },
       "comments": [],
       "reviews": [
         {
@@ -10150,24 +10165,26 @@
       "id": "PR_kwDOOWk1-s7Su4e_",
       "title": "Replace foundation model production with AI training",
       "url": "https://github.com/ietf-wg-aipref/drafts/pull/207",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "martinthomson",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "(This commit is just the main text, I now need to go through and clean up other mentions...)\r\n\r\nCloses #198.",
       "createdAt": "2026-04-15T18:19:13Z",
-      "updatedAt": "2026-04-18T16:17:05Z",
+      "updatedAt": "2026-04-19T19:33:37Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "f9620ee9cbbec86ad20d59826b0921fc07b96f6b",
       "headRepository": "ietf-wg-aipref/drafts",
       "headRefName": "train-ai-dfn",
       "headRefOid": "d94ff2ae47d571fa54f2a59c4db787ba6fa107d9",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2026-04-19T19:33:36Z",
+      "mergedAt": "2026-04-19T19:33:36Z",
+      "mergedBy": "martinthomson",
+      "mergeCommit": {
+        "oid": "5043960a9dc8ce7bcf7af9316cf489eb98239e85"
+      },
       "comments": [],
       "reviews": [
         {
@@ -10221,6 +10238,87 @@
           "body": "This looks ready to merge to me",
           "createdAt": "2026-04-18T16:17:05Z",
           "updatedAt": "2026-04-18T16:17:05Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 209,
+      "id": "PR_kwDOOWk1-s7T97pt",
+      "title": "Flag consensus status",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/209",
+      "state": "OPEN",
+      "author": "mnot",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2026-04-20T13:35:57Z",
+      "updatedAt": "2026-04-20T19:55:00Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "949d857495af7ed15c3af18889b4888b3c4346b6",
+      "headRepository": "ietf-wg-aipref/drafts",
+      "headRefName": "mnot/disclaimers",
+      "headRefOid": "54c3cf5caee4a980008511a541506d01c7b754f7",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [
+        {
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "If you want to add more, please go ahead...",
+          "createdAt": "2026-04-20T19:55:00Z",
+          "updatedAt": "2026-04-20T19:55:00Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWk1-s72y6bi",
+          "commit": {
+            "abbreviatedOid": "8a0d8d1"
+          },
+          "author": "paul2keller",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "CHANGES_REQUESTED",
+          "body": "",
+          "createdAt": "2026-04-20T13:44:55Z",
+          "updatedAt": "2026-04-20T13:45:04Z",
+          "comments": [
+            {
+              "originalPosition": 23,
+              "body": "I would suggest moving this up above line 228/233 which makes it more clear what the \"this section\" applies to.",
+              "createdAt": "2026-04-20T13:44:55Z",
+              "updatedAt": "2026-04-20T13:45:04Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s72zgIh",
+          "commit": {
+            "abbreviatedOid": "54c3cf5"
+          },
+          "author": "paul2keller",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "LGTM",
+          "createdAt": "2026-04-20T14:06:05Z",
+          "updatedAt": "2026-04-20T14:06:05Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWk1-s722lZX",
+          "commit": {
+            "abbreviatedOid": "54c3cf5"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "Much less damage than anticipated. Are you sure that you don\u2019t want more of these notes?",
+          "createdAt": "2026-04-20T15:55:32Z",
+          "updatedAt": "2026-04-20T15:55:32Z",
           "comments": []
         }
       ]
