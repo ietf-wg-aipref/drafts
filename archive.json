@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-04-21T03:26:49.580914+00:00",
+  "timestamp": "2026-04-23T03:28:31.968144+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -10247,24 +10247,26 @@
       "id": "PR_kwDOOWk1-s7T97pt",
       "title": "Flag consensus status",
       "url": "https://github.com/ietf-wg-aipref/drafts/pull/209",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "mnot",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "",
       "createdAt": "2026-04-20T13:35:57Z",
-      "updatedAt": "2026-04-20T19:55:00Z",
+      "updatedAt": "2026-04-21T17:26:35Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "949d857495af7ed15c3af18889b4888b3c4346b6",
       "headRepository": "ietf-wg-aipref/drafts",
       "headRefName": "mnot/disclaimers",
       "headRefOid": "54c3cf5caee4a980008511a541506d01c7b754f7",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2026-04-21T17:26:00Z",
+      "mergedAt": "2026-04-21T17:26:00Z",
+      "mergedBy": "martinthomson",
+      "mergeCommit": {
+        "oid": "0ff883a978a24c0585aece6e8da172532a92788e"
+      },
       "comments": [
         {
           "author": "mnot",
@@ -10272,6 +10274,13 @@
           "body": "If you want to add more, please go ahead...",
           "createdAt": "2026-04-20T19:55:00Z",
           "updatedAt": "2026-04-20T19:55:00Z"
+        },
+        {
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "We can start here. As we drive down into specific terms, we can split out diversify.",
+          "createdAt": "2026-04-21T17:26:35Z",
+          "updatedAt": "2026-04-21T17:26:35Z"
         }
       ],
       "reviews": [
