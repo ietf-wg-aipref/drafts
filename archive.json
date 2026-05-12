@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-04-23T03:28:31.968144+00:00",
+  "timestamp": "2026-05-12T03:48:56.315444+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -3053,7 +3053,7 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\n_From @chrisn in [email](https://mailarchive.ietf.org/arch/msg/ai-control/2ZbEx73js_cTQT8mI1Wy6_0ZC_s):_\n\nWithout a category that covers RAG and grounding usage, the vocabulary does not meet publisher needs. This need was raised at the outset of this work, in the IAB workshop in Washington DC in 2024, and included in the WG charter scope.\n\nIn addition to reducing web traffic to original content, such usage introduces the possibility of creating misleading or biased statements, an issue that impacts news publishers in particular, risking undermining their credibility. Research published by the BBC goes into this in more detail, demonstrating that AI-generated answers summarise and present content in a way that can introduce factual inaccuracies and biases that are not present in the original published content.\n\n### Proposed Resolution\n\n_No response_",
       "createdAt": "2025-09-28T08:57:47Z",
-      "updatedAt": "2026-04-16T17:10:06Z",
+      "updatedAt": "2026-05-11T15:42:18Z",
       "closedAt": null,
       "comments": [
         {
@@ -3118,6 +3118,48 @@
           "body": "This category should logically start where the training category ends. In other words, it should cover use of assets by an AI model that has been trained. \n\nAs one potential starting point (which I may refine later), we could say: \n\n> **AI-Inference**: The act of using an asset for inference by an AI model that can generate content in one or more modalities (text, image, audio, etc...). Inference means all use beyond the production or refinement of an AI model. \n\nWith respect to user-provided assets and other concerns about overly broad use, I think two approaches would potentially work: 1) having two versions of this category (one for use by end users, one for use by automated systems); and/or 2) addressing concerns about overreach at the top level, as we have for other definitions. ",
           "createdAt": "2026-04-16T17:10:06Z",
           "updatedAt": "2026-04-16T17:10:06Z"
+        },
+        {
+          "author": "llemeurfr",
+          "authorAssociation": "NONE",
+          "body": "Adding an AI Inference property to the vocabulary, as a counterpart to the AI Training property, has been widely discussed, but hasn't reached consensus because Inference encompasses many different uses. This proposal creates three inference-type properties that appear to cover most uses of an AI Model, excluding Search and Discovery capabilities, which are treated separately.\n\nFirst, we'll have to define the user-facing software solution powered by an AI model. Let's call it **AI system** =  a software that exposes AI-related functionalities (i.e., an AI model) to end users.\n\nThe three proposed properties are:\n### AI Grounding\nThe act, for an AI system, of automatically selecting one or more assets for use as input to a trained AI/ML model, as part of the operation of that system.\n\nUse case: \n- A RAG solution (a user submits a prompt to an AI system. The system uses the prompt to fetch a set of documents from the web, processes them to augment the prompt with additional context, and submits the augmented prompt to the underlying AI Model. \n\n### AI Input\nThe act, for an AI system, of using one or more user-selected assets as input to an AI/ML model as part of the operation of that system.\n\nUse cases: \n- A user is reading a document in a reading system where the TTS feature is powered by AI. He selects a voice and hits the play button. \n- A user submits a PDF document to a translation software powered by an AI model. He chooses a target language and requests a PDF document in return.\n- A user submits a document containing complex wording to an AI System. He requests simplified wording that he can better understand.\n- A user is reading an ebook in an AI-powered reading system. Because he left the book aside to some time, and the reading system tracks where he left, he requests a summary of the previous chapters.\n- A user submits a personal image and a reference image to an AI System. He asks the software to generate a target image from the personal image, in the style of the reference image. \n\n### AI Remix\nThe act of using an asset in an AI system to generate an output generated from a combination of assets. \n\nUse case: \n- A user sends a request to an AI System, which responds with a remix of different documents, with no hyperlink to the source of each document.  \n- A user has gathered a set of documents relative to a specific topic. He asks an AI System to process the directory containing these documents, then prompts it to provide precise answers to his questions. \n\nThe first property deals with content fetched and processed by an AI system without user intervention. The second is similar, but users somehow take responsibility for the choice of content used as input to the AI System. The third property is about the output of an AI System, not its input. \n\nTechnically speaking, I'm not certain that an AI Remix can be obtained with content that is not used for AI Grounding or AI Input. But I understand that one aspect of our work is to keep a distance from what is feasible today. \n\nHappy to discuss this proposal. ",
+          "createdAt": "2026-05-11T13:20:43Z",
+          "updatedAt": "2026-05-11T13:20:43Z"
+        },
+        {
+          "author": "ekr",
+          "authorAssociation": "NONE",
+          "body": "> A RAG solution (a user submits a prompt to an AI system. The system uses the prompt to fetch a set of documents from the web, processes them to augment the prompt with additional context, and submits the augmented prompt to the underlying AI Model.\n\nFor example, suppose that I have a system where I have pre-retrieved a large group of documents and stored them locally and then feed them to the AI system as part of servicing a query. Is this qualitatively different from retrieving them on-demand as far as the origin of the documents is concerned?\n\n",
+          "createdAt": "2026-05-11T14:14:15Z",
+          "updatedAt": "2026-05-11T14:15:17Z"
+        },
+        {
+          "author": "llemeurfr",
+          "authorAssociation": "NONE",
+          "body": "> RAG: For example, suppose that I have a system where I have pre-retrieved a large group of documents and stored them locally and then feed them to the AI system as part of servicing a query. Is this qualitatively different from retrieving them on-demand as far as the origin of the documents is concerned?``\n\nGood question: the trigger is \"I have pre-retrieved\" -> as a human taking responsibility for this processing. In this case, the `AI Input` signal is the one the system should look after, imho. ",
+          "createdAt": "2026-05-11T14:32:39Z",
+          "updatedAt": "2026-05-11T14:32:39Z"
+        },
+        {
+          "author": "ekr",
+          "authorAssociation": "NONE",
+          "body": "Sorry, I realized in retrospect that this was written unclearly. I'm talking about the case where the AI system has pre-retrieved the content and uses it as part of servicing your query rather than retrieving it on demand.",
+          "createdAt": "2026-05-11T14:39:44Z",
+          "updatedAt": "2026-05-11T14:39:44Z"
+        },
+        {
+          "author": "llemeurfr",
+          "authorAssociation": "NONE",
+          "body": "> Sorry, I realized in retrospect that this was written unclearly. I'm talking about the case where the AI system has pre-retrieved the content and uses it as part of servicing your query rather than retrieving it on demand.\n\nI consider the on-demand vs pre-fetched aspect irrelevant when retrieval is automatic (without human decision) -> the `AI Grounding` signal is what the system should focus on.  ",
+          "createdAt": "2026-05-11T15:26:47Z",
+          "updatedAt": "2026-05-11T15:27:30Z"
+        },
+        {
+          "author": "ekr",
+          "authorAssociation": "NONE",
+          "body": "I agree with you, but your proposed text implies otherwise \"uses the prompt to fetch a set of documents from the web\"",
+          "createdAt": "2026-05-11T15:42:18Z",
+          "updatedAt": "2026-05-11T15:42:18Z"
         }
       ]
     },
