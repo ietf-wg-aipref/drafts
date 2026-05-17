@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-05-12T03:48:56.315444+00:00",
+  "timestamp": "2026-05-17T04:01:23.909400+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -3053,7 +3053,7 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\n_From @chrisn in [email](https://mailarchive.ietf.org/arch/msg/ai-control/2ZbEx73js_cTQT8mI1Wy6_0ZC_s):_\n\nWithout a category that covers RAG and grounding usage, the vocabulary does not meet publisher needs. This need was raised at the outset of this work, in the IAB workshop in Washington DC in 2024, and included in the WG charter scope.\n\nIn addition to reducing web traffic to original content, such usage introduces the possibility of creating misleading or biased statements, an issue that impacts news publishers in particular, risking undermining their credibility. Research published by the BBC goes into this in more detail, demonstrating that AI-generated answers summarise and present content in a way that can introduce factual inaccuracies and biases that are not present in the original published content.\n\n### Proposed Resolution\n\n_No response_",
       "createdAt": "2025-09-28T08:57:47Z",
-      "updatedAt": "2026-05-11T15:42:18Z",
+      "updatedAt": "2026-05-14T13:28:52Z",
       "closedAt": null,
       "comments": [
         {
@@ -3160,6 +3160,13 @@
           "body": "I agree with you, but your proposed text implies otherwise \"uses the prompt to fetch a set of documents from the web\"",
           "createdAt": "2026-05-11T15:42:18Z",
           "updatedAt": "2026-05-11T15:42:18Z"
+        },
+        {
+          "author": "new-world-coder",
+          "authorAssociation": "NONE",
+          "body": "Minimal concrete vocabulary proposal for this issue: https://github.com/ietf-wg-aipref/drafts/pull/210 (adds `rag-ground`; commit message Refs #172).",
+          "createdAt": "2026-05-14T13:28:51Z",
+          "updatedAt": "2026-05-14T13:28:51Z"
         }
       ]
     },
@@ -10373,6 +10380,47 @@
           "comments": []
         }
       ]
+    },
+    {
+      "number": 210,
+      "id": "PR_kwDOOWk1-s7biKsJ",
+      "title": "vocab: add rag-ground (RAG and grounding) category",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/210",
+      "state": "OPEN",
+      "author": "new-world-coder",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "Refs #172\n\nThis PR adds a single vocabulary category `rag-ground` (\"Retrieval-Augmented Generation and Grounding\") to `draft-ietf-aipref-vocab.md`, as a minimal concrete proposal for the discussion in #172.\n\n**Design choices (minimal / single category):**\n- Definition is **retrieval-mechanism-neutral** (on-demand fetch, pre-built index/corpus, or mixed), consistent with the latest clarification on #172 between automatic retrieval and grounding vs wording that implied \"fetch from the web\" only.\n- **Distinct from** `train-ai` (inference-time retrieval/grounding only).\n- **Narrower than / not implied by** `search`: allowing `search` does not imply allowing `rag-ground`; combining rules in {{combine}} still apply.\n\n**Files:** vocabulary section + labels table (`{#t-category-labels}`).\n\nFeedback welcome on naming (`rag-ground` vs alternatives discussed in the issue) and boundaries vs `search` / future inference categories.\n\nMade with [Cursor](https://cursor.com)",
+      "createdAt": "2026-05-14T13:28:24Z",
+      "updatedAt": "2026-05-14T15:58:25Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "26841404458861cc6bd54ef52af63c7736c315c2",
+      "headRepository": "new-world-coder/drafts",
+      "headRefName": "feat/vocab-rag-ground",
+      "headRefOid": "aa2f0c7a7a8607428a748f8e26167e8854bf1e7d",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [
+        {
+          "author": "new-world-coder",
+          "authorAssociation": "NONE",
+          "body": "Summary for reviewers:\n\n- One new section `## Retrieval-Augmented Generation and Grounding {#rag-ground}` inserted after `## Search {#search}`.\n- Labels table updated with `rag-ground`.\n- Intent: satisfy **#172**'s ask for a **concrete** proposal while staying minimal (single category) so the WG can iterate or split later if consensus favors multiple inference-related labels.\n\nExplicitly **Refs #172** (does not claim to close the issue until editors/chairs agree).",
+          "createdAt": "2026-05-14T13:28:32Z",
+          "updatedAt": "2026-05-14T13:28:32Z"
+        },
+        {
+          "author": "llemeurfr",
+          "authorAssociation": "NONE",
+          "body": "The term \"rag\" was discussed previously by the group members and is considered a current technique that may be replaced by other techniques in the future. The vocabulary we try to create should be independent of technical terms.",
+          "createdAt": "2026-05-14T15:58:25Z",
+          "updatedAt": "2026-05-14T15:58:25Z"
+        }
+      ],
+      "reviews": []
     }
   ]
 }
