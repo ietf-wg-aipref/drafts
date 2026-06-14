@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-05-17T04:01:23.909400+00:00",
+  "timestamp": "2026-06-14T04:48:54.444926+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -3622,7 +3622,7 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nIt is clear from the debate in this working group over the past year that there is significant confusion about what legal implications, if any, the work of this group is aiming to have on creators globally. \n\nFor example, the text of the current vocab draft ([draft-ietf-aipref-vocab-05](https://www.ietf.org/archive/id/draft-ietf-aipref-vocab-05.html)) says that it \u201cis intended to be used in jurisdictions where expressing preferences results in legal obligations \u2026 without prejudice to applicable laws \u2026,\u201d but it is completely unclear (and silent about) what jurisdictions, legal obligations, or laws that it is referring to, exactly. \n\nObviously, this working group, as part of a technical standards body, is not trying to hijack the role of a legislature or regulator.  It is not appropriate for us to design standards that may affect legal protections that millions of creators across the world have with relation to their countries\u2019 domestic copyright, contract, and other laws. \n\nTo make it clear that this working group is not aiming to override copyright owners\u2019 existing legal protections in their respective countries, or to override creators\u2019 existing terms of service, I propose to clarify the language in the introductory section.\n\nI think that clarity will also improve uptake of the standardized language, better fulfilling the objectives of this WG. \n\nThis issue applies to the vocabulary document (including some sections later on other than the introduction) and we should pursue similar clarification for the attachment document, to be clear that nothing in that document has any legal effect either - but I'll leave that for future issue submissions. \n\n### Proposed Resolution\n\nI propose starting by strengthening language in the introductory section.\n \nIt currently reads: \n\n>   The vocabulary is intended to be used in jurisdictions where\n>    expressing preferences results in legal obligations, as well as where\n>    there are no associated legal obligations.  In either case,\n>    expressing preferences is without prejudice to applicable laws,\n>    including the applicability of exceptions and limitations to\n>    Copyright.\n\nProposed edit: \n\n> For clarity, expressing preferences is without prejudice to applicable laws, \n> including the applicability of exceptions and limitations to copyright. \n> In addition to statutory or common law which may apply, the expression of preferences \n> is not intended to overwrite the legal preferences or restrictions that may be embodied\n>  in a website\u2019s Terms of Use (or comparable page), and in the event of any conflict\n>  between these preferences and a website\u2019s Terms of Use, the Terms of Use shall prevail as a matter of law.\n",
       "createdAt": "2026-01-28T03:26:50Z",
-      "updatedAt": "2026-04-15T13:50:24Z",
+      "updatedAt": "2026-06-12T18:12:00Z",
       "closedAt": null,
       "comments": [
         {
@@ -3638,6 +3638,13 @@
           "body": "I would replace the section specific to TOS/TOU with something general about \"agreements between parties\"",
           "createdAt": "2026-04-15T13:50:24Z",
           "updatedAt": "2026-04-15T13:50:24Z"
+        },
+        {
+          "author": "mgendler",
+          "authorAssociation": "NONE",
+          "body": "I wanted to capture the conversation and feedback from Toronto regarding this issue, here's my proposed language:\n\n> For clarity, expressing preferences is without prejudice to applicable laws, including the applicability of exceptions and limitations to copyright. In addition to statutory or common law which may apply, the expression of preferences is not intended to overwrite agreements between parties.",
+          "createdAt": "2026-06-12T18:11:59Z",
+          "updatedAt": "2026-06-12T18:11:59Z"
         }
       ]
     },
