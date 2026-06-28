@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-06-25T04:07:41.671706+00:00",
+  "timestamp": "2026-06-28T04:23:00.413635+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -10441,7 +10441,7 @@
       "labels": [],
       "body": "Here are the proposed tweaks to the definition of model training that I mentioned on the interim call.  (This was originally homework from Toronto; sorry that it's taken so long to post.)  I think that this gets us to a description of what it means to train a general-purpose foundation model without relying on any of the words that have raised objections in past drafts.\r\n\r\nThe most substantive change I'm proposing in this PR is that we move from talking about a model that \"can generate\" to one that \"is used, or made available for use, to generate.\"  One of the things that I heard most clearly in Toronto from people thinking about declaring preferences was concern about the subjectivity of definitions based on purpose and intent, and about the possibility that either might change over time.\r\n\r\nThis makes the category slightly more narrow, but also more objective\u2014something either was used or it wasn't; much less is subject to interpretation.  The same property should let implementers apply the category consistently, too.\r\n\r\nThis approach also focuses on the activity rather than the technology, which I hope addresses the concerns that were raised in Toronto about unintended consequences.\r\n\r\nI've expanded \"used\" to \"used, or made available for use\" in an attempt to address the concerns that were raised about open-weight models and organizational boundaries.\r\n\r\nI've replaced the \"produce or refine\" language in the current draft with \"modify\", which I think encompasses both; producing a model is the process of iteratively refining its weights.\r\n\r\nI've also kept \"asset\" from the current draft.  I know that some folks had concerns about that term in Toronto; I don't feel strongly about it, so long as we have a word for \"piece of data\".",
       "createdAt": "2026-06-23T23:30:45Z",
-      "updatedAt": "2026-06-25T01:35:56Z",
+      "updatedAt": "2026-06-26T12:26:53Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "26841404458861cc6bd54ef52af63c7736c315c2",
@@ -10459,6 +10459,20 @@
           "body": "A small framing point from the list discussion: I think it helps to keep two questions separate here:\n\n1. the vocabulary category: whether the asset is used to modify model state that can later be used to generate content; and\n2. the propagation/attachment question: whether preference information has to travel with a dataset or model artifact so a downstream actor can evaluate it.\n\nFor this PR, I would keep section 4.1 mostly on the first question. The open-weight case is important, but if \"made available for use\" carries too much weight, it can start to sound like model publication itself triggers the preference even where the downstream actor does not have enough attached context to evaluate it.\n\nOne possible direction would be something like:\n\n> Using an asset to modify an AI model that is used, or made available for use by another actor, to generate content in one or more modalities.\n\nThen, if useful, a short note could say that passing preference information with datasets or model artifacts is a processing/metadata question, not something this vocabulary definition by itself specifies.\n\nThat keeps the definition objective, while not forcing this PR to resolve the larger chain-of-custody question.",
           "createdAt": "2026-06-25T01:35:56Z",
           "updatedAt": "2026-06-25T01:35:56Z"
+        },
+        {
+          "author": "lrosenthol",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "> 2. the propagation/attachment question: whether preference information has to travel with a dataset or model artifact so a downstream actor can evaluate it.\r\n> \r\nThat's a completely separate document.\r\n\r\nThis document is ONLY the Vocab.",
+          "createdAt": "2026-06-25T14:29:55Z",
+          "updatedAt": "2026-06-25T14:29:55Z"
+        },
+        {
+          "author": "B1ueD0g",
+          "authorAssociation": "NONE",
+          "body": "Agreed; keeping this PR strictly on the vocabulary seems right.\n\nWith that boundary, I would narrow the proposed definition to the model-state change itself and avoid importing attachment/propagation semantics here. One possible text shape would be:\n\n> Using an asset to modify an AI model's persistent internal parameters, where the model is used, or made available for use, to generate content in one or more modalities.\n\nIf \"made available for use\" is still considered to pull in the downstream-actor problem, I would prefer dropping that clause here and leaving the A-to-B allocation entirely to the separate attachment/processing document. The key vocabulary distinction, for me, is persistent internal model-state modification, not request-time configuration, retrieval context, or later inference handling.",
+          "createdAt": "2026-06-26T12:26:53Z",
+          "updatedAt": "2026-06-26T12:26:53Z"
         }
       ],
       "reviews": [
@@ -10542,19 +10556,48 @@
       "labels": [],
       "body": "This removes two paragraphs from Section 3.2, following discussion in the subgroup that's formed to focus on this part of the draft.\r\n\r\n- The first reiterates what's stated elsewhere in the draft\r\n- The second describes the categories, so belongs in Section 4\r\n\r\n",
       "createdAt": "2026-06-24T20:37:51Z",
-      "updatedAt": "2026-06-24T20:37:51Z",
+      "updatedAt": "2026-06-25T12:07:35Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "26841404458861cc6bd54ef52af63c7736c315c2",
       "headRepository": "chrisn/ietf-wg-aipref-drafts",
       "headRefName": "simplify-section-3.2",
-      "headRefOid": "8d007c64e4143b6476abe2234c43c17e4d6e791b",
+      "headRefOid": "227eda90dcf0df979cd96cd138f3a1a48252e825",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
       "mergeCommit": null,
-      "comments": [],
-      "reviews": []
+      "comments": [
+        {
+          "author": "chrisn",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Thanks, your edit looks good. This is in preparation for further changes that I'm hoping the group will propose soon.",
+          "createdAt": "2026-06-25T12:07:35Z",
+          "updatedAt": "2026-06-25T12:07:35Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABEGzADg",
+          "commit": {
+            "abbreviatedOid": "8d007c6"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "This is strictly editorial and I'm OK with it.  Thanks Chris.\n\nI don't think that we lose anything: the text that is cut is elsewhere in the document.",
+          "createdAt": "2026-06-25T11:38:58Z",
+          "updatedAt": "2026-06-25T11:39:50Z",
+          "comments": [
+            {
+              "originalPosition": 21,
+              "body": "```suggestion\nThese categories describe concrete, observable outcomes that depend on the use of assets.\nThe definitions seek to avoid describing internal details of implementations\n```\n\nThis is probably my fault, but I can't read it without wanting to fix this now.",
+              "createdAt": "2026-06-25T11:38:58Z",
+              "updatedAt": "2026-06-25T11:39:50Z"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
