@@ -225,9 +225,9 @@ NOTE: This section does not yet have consensus; see "Note to Readers" above.
 
 This section defines the categories of use in the vocabulary.
 
-These categories describe concrete, observable outcomes that depend on the use of assets.
-The definitions seek to avoid describing internal details of implementations
-or their architecture.
+These categories describe concrete, observable outcomes that depend on the use
+of assets.  The definitions seek to avoid describing internal details of
+implementations or their architecture.
 
 
 ## AI Model Training {#train-ai}
