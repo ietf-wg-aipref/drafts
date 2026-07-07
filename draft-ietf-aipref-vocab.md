@@ -197,26 +197,20 @@ or the synthesis of multiple preferences from different sources.
 
 ## Applying Preferences {#applicability}
 
-This specification only seeks to ensure that preferences can be understood,
-not provide a means of ensuring that preferences are respected.
-There may be considerations that take precedence over any stated preferences,
-especially when taking the public interest into account.
+This specification enables the expression of a defined set of preferences that
+can be communicated and interoperably understood.  Readers of this
+specification should understand that it does not:
 
-Enforcement is not provided by this specification.
-Preferences do not themselves create rights, obligations, or prohibitions.
-Other mechanisms --
-technical, legal, contractual, or otherwise --
-might enforce adherence or non-adherance to these preferences
-and thereby determine the consequences of not respecting
-a stated preference.
+- provide for enforcement;
+- address if, how, or when preferences should be followed or ignored;
+- address external mechanisms -- technical, legal, contractual, or otherwise --
+  that might determine adherence or non-adherence to these preferences;
+- consider situations or purposes that might justify following or ignoring
+  expressed preferences.
 
-An entity that receives usage preferences has a choice
-about whether to respect the preferences it has discovered.
-It makes this choice according to its understanding
-of how the asset is used,
-how that usage corresponds to the usage categories
-where preferences have been stated,
-and the applicable legal context.
+Because of this, stakeholders need to evaluate when and how to respect
+preferences in the context of other legal, institutional, or ethical
+commitments.
 
 
 # Vocabulary Definition {#vocab}
