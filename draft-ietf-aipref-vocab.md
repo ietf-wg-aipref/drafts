@@ -198,7 +198,7 @@ or the synthesis of multiple preferences from different sources.
 ## Applying Preferences {#applicability}
 
 This specification enables the expression of a defined set of preferences that
-can be communicated and interoperably understood.  Readers of this
+can be communicated and interoperably understood. Readers of this
 specification should understand that it does not:
 
 - provide for enforcement;
