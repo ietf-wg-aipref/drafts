@@ -203,8 +203,8 @@ specification should understand that it does not:
 
 - provide for enforcement;
 - address if, how, or when preferences should be followed or ignored;
-- address external mechanisms -- technical, legal, contractual, or otherwise --
-  that might determine adherence or non-adherence to these preferences;
+- address technical, legal, contractual, or other mechanisms that might create
+  a stronger requirement to follow or not follow preferences;
 - consider situations or purposes that might justify following or ignoring
   expressed preferences.
 
