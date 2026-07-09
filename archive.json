@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-07-05T04:02:03.892363+00:00",
+  "timestamp": "2026-07-09T03:52:40.454178+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -10594,6 +10594,81 @@
               "body": "```suggestion\nThese categories describe concrete, observable outcomes that depend on the use of assets.\nThe definitions seek to avoid describing internal details of implementations\n```\n\nThis is probably my fault, but I can't read it without wanting to fix this now.",
               "createdAt": "2026-06-25T11:38:58Z",
               "updatedAt": "2026-06-25T11:39:50Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 213,
+      "id": "PR_kwDOOWk1-s7uw82h",
+      "title": "Update \u00a73.2 Applying Preferences and \u00a74 Vocabulary Definition",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/213",
+      "state": "OPEN",
+      "author": "TimidRobot",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "**Update Sections 3.2 Applying Preferences and Section 4 Vocabulary Definition**\r\n- Replace Sections 3.2 Applying Preferences with proposed text from subgroup, updated to incorporate Editors' suggestions.\r\n  - Goals of the update include (non-exhaustive):\r\n    - Simplify and ease reader comprehension\r\n    - Provide waypoints for well-intended conscientious public actors\r\n    - Call attention to the limitations of the Vocabulary\r\n  - The above goals are in tension. Hopefully the proposed text strikes a good balance that minimizes misunderstanding and unintentional harms.\r\n- Add clarifying text to Section 4 Vocabulary Definition (this PR builds on #212)",
+      "createdAt": "2026-07-07T10:02:37Z",
+      "updatedAt": "2026-07-08T14:19:26Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "26841404458861cc6bd54ef52af63c7736c315c2",
+      "headRepository": "TimidRobot/aipref-drafts",
+      "headRefName": "sections-3-2-and-4",
+      "headRefOid": "a4b2b0c0c3e750d8b166e8c25ea902178a6595de",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [
+        {
+          "author": "TimidRobot",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "This PR doesn't fix issue 162. I think we should consider the few updates that would resolve that issue before this PR is merged.\r\n- #162",
+          "createdAt": "2026-07-07T10:05:19Z",
+          "updatedAt": "2026-07-07T10:05:19Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABFNGMWQ",
+          "commit": {
+            "abbreviatedOid": "81ffb85"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-07-07T10:42:39Z",
+          "updatedAt": "2026-07-07T10:42:39Z",
+          "comments": [
+            {
+              "originalPosition": 40,
+              "body": "Is \"determine\" the right word here?  At some level, we don't want to imply that adherence to regulation is discretionary, but this really will come down to setting up incentives rather than imperatives.\n\nPut differently, part of the point of this section is to emphasize that respecting preferences is -- to some extent -- discretionary.  That it might not be a choice at some level is the point of this statement, but the implication from using \"determine\" is that there could be a straight switch.\n\nHow about:\n\n> \n```suggestion\n- address technical, legal, contractual, or other mechanisms\n  that might create a stronger requirement to follow preferences;\n```",
+              "createdAt": "2026-07-07T10:42:39Z",
+              "updatedAt": "2026-07-07T10:42:39Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABFVFIKQ",
+          "commit": {
+            "abbreviatedOid": "81ffb85"
+          },
+          "author": "TimidRobot",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-07-08T09:05:38Z",
+          "updatedAt": "2026-07-08T09:05:39Z",
+          "comments": [
+            {
+              "originalPosition": 40,
+              "body": "this makes sense to me with the addition of \"or not follow\":\n```diff\n- - address external mechanisms -- technical, legal, contractual, or otherwise --\n-   that might determine adherence or non-adherence to these preferences;\n+ - address technical, legal, contractual, or other mechanisms that might create\n+   a stronger requirement to follow or not follow preferences;\n```\n",
+              "createdAt": "2026-07-08T09:05:39Z",
+              "updatedAt": "2026-07-08T09:05:39Z"
             }
           ]
         }
