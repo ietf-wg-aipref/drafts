@@ -208,7 +208,7 @@ specification should understand that it does not:
 - consider situations or purposes that might justify following or ignoring
   expressed preferences.
 
-Because of this, stakeholders need to evaluate when and how to respect
+Because of this, stakeholders need to decide when and how to follow or ignore
 preferences in the context of other legal, institutional, or ethical
 commitments.
 
