@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-07-09T03:52:40.454178+00:00",
+  "timestamp": "2026-07-16T03:16:06.708113+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -10611,13 +10611,13 @@
       "labels": [],
       "body": "**Update Sections 3.2 Applying Preferences and Section 4 Vocabulary Definition**\r\n- Replace Sections 3.2 Applying Preferences with proposed text from subgroup, updated to incorporate Editors' suggestions.\r\n  - Goals of the update include (non-exhaustive):\r\n    - Simplify and ease reader comprehension\r\n    - Provide waypoints for well-intended conscientious public actors\r\n    - Call attention to the limitations of the Vocabulary\r\n  - The above goals are in tension. Hopefully the proposed text strikes a good balance that minimizes misunderstanding and unintentional harms.\r\n- Add clarifying text to Section 4 Vocabulary Definition (this PR builds on #212)",
       "createdAt": "2026-07-07T10:02:37Z",
-      "updatedAt": "2026-07-08T14:19:26Z",
+      "updatedAt": "2026-07-15T19:15:45Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "26841404458861cc6bd54ef52af63c7736c315c2",
       "headRepository": "TimidRobot/aipref-drafts",
       "headRefName": "sections-3-2-and-4",
-      "headRefOid": "a4b2b0c0c3e750d8b166e8c25ea902178a6595de",
+      "headRefOid": "0943efcb950d829f2ef1b540816f4601519d9f66",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
