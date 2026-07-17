@@ -201,16 +201,16 @@ This specification enables the expression of a defined set of preferences that
 can be communicated and interoperably understood. Readers of this
 specification should understand that it does not:
 
-- provide for enforcement;
-- address if, how, or when preferences should be followed or ignored;
+- provide for enforcement of these preferences;
+- address if, how, or when preferences should be followed or not-followed;
 - address technical, legal, contractual, or other mechanisms that might create
   a stronger requirement to follow or not follow preferences;
-- consider situations or purposes that might justify following or ignoring
+- consider situations or purposes that might justify following or not-following
   expressed preferences.
 
-Because of this, stakeholders need to decide when and how to follow or ignore
-preferences in the context of other legal, institutional, or ethical
-commitments.
+Because of this, stakeholders need to decide when and how to follow or
+not-follow preferences in the context of other legal, institutional, or
+ethical commitments.
 
 
 # Vocabulary Definition {#vocab}
