@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-07-16T03:16:06.708113+00:00",
+  "timestamp": "2026-07-19T03:28:17.148678+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -10609,15 +10609,15 @@
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
-      "body": "**Update Sections 3.2 Applying Preferences and Section 4 Vocabulary Definition**\r\n- Replace Sections 3.2 Applying Preferences with proposed text from subgroup, updated to incorporate Editors' suggestions.\r\n  - Goals of the update include (non-exhaustive):\r\n    - Simplify and ease reader comprehension\r\n    - Provide waypoints for well-intended conscientious public actors\r\n    - Call attention to the limitations of the Vocabulary\r\n  - The above goals are in tension. Hopefully the proposed text strikes a good balance that minimizes misunderstanding and unintentional harms.\r\n- Add clarifying text to Section 4 Vocabulary Definition (this PR builds on #212)",
+      "body": "**Update Sections 3.2 Applying Preferences and Section 4 Vocabulary Definition**\r\n- Replace Sections 3.2 Applying Preferences with proposed text from subgroup, updated to incorporate Editors' suggestions.\r\n  - Goals of the update include (non-exhaustive):\r\n    - Simplify and ease reader comprehension\r\n    - Provide waypoints for well-intended conscientious public actors\r\n    - Call attention to the limitations of the Vocabulary\r\n  - The above goals are in tension. Hopefully the proposed text strikes a good balance that minimizes misunderstanding and unintentional harms.\r\n- Add clarifying text to Section 4 Vocabulary Definition (this PR builds on #212)\r\n- Uses non-normative language per:\r\n  - #162",
       "createdAt": "2026-07-07T10:02:37Z",
-      "updatedAt": "2026-07-15T19:15:45Z",
+      "updatedAt": "2026-07-17T20:00:08Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "26841404458861cc6bd54ef52af63c7736c315c2",
       "headRepository": "TimidRobot/aipref-drafts",
       "headRefName": "sections-3-2-and-4",
-      "headRefOid": "0943efcb950d829f2ef1b540816f4601519d9f66",
+      "headRefOid": "b8e5cde1dabf78595bae8e2cb4b269c847c4a4d5",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
@@ -10628,7 +10628,7 @@
           "authorAssociation": "CONTRIBUTOR",
           "body": "This PR doesn't fix issue 162. I think we should consider the few updates that would resolve that issue before this PR is merged.\r\n- #162",
           "createdAt": "2026-07-07T10:05:19Z",
-          "updatedAt": "2026-07-07T10:05:19Z"
+          "updatedAt": "2026-07-17T09:30:40Z"
         }
       ],
       "reviews": [
@@ -10669,6 +10669,39 @@
               "body": "this makes sense to me with the addition of \"or not follow\":\n```diff\n- - address external mechanisms -- technical, legal, contractual, or otherwise --\n-   that might determine adherence or non-adherence to these preferences;\n+ - address technical, legal, contractual, or other mechanisms that might create\n+   a stronger requirement to follow or not follow preferences;\n```\n",
               "createdAt": "2026-07-08T09:05:39Z",
               "updatedAt": "2026-07-08T09:05:39Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABGWn_zg",
+          "commit": {
+            "abbreviatedOid": "b8e5cde"
+          },
+          "author": "paul2keller",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-07-17T09:32:23Z",
+          "updatedAt": "2026-07-17T09:32:23Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABGayzaA",
+          "commit": {
+            "abbreviatedOid": "b8e5cde"
+          },
+          "author": "TimidRobot",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-07-17T20:00:07Z",
+          "updatedAt": "2026-07-17T20:00:07Z",
+          "comments": [
+            {
+              "originalPosition": 46,
+              "body": "Suggestion by Brandon Butler on mailing list following up on feedback from Eric Rescorla:\n```suggestion\nnot-follow preferences in the context of legal, institutional, ethical, or\nother interests and commitments.\n```",
+              "createdAt": "2026-07-17T20:00:07Z",
+              "updatedAt": "2026-07-17T20:00:07Z"
             }
           ]
         }
