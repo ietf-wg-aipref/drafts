@@ -209,8 +209,8 @@ specification should understand that it does not:
   expressed preferences.
 
 Because of this, stakeholders need to decide when and how to follow or
-not-follow preferences in the context of other legal, institutional, or
-ethical commitments.
+not-follow preferences in the context of legal, institutional, ethical, or
+other interests and commitments.
 
 
 # Vocabulary Definition {#vocab}
