@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-07-21T03:21:42.937967+00:00",
+  "timestamp": "2026-07-23T03:27:08.862293+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -10611,7 +10611,7 @@
       "labels": [],
       "body": "**Update Sections 3.2 Applying Preferences and Section 4 Vocabulary Definition**\r\n- Replace Sections 3.2 Applying Preferences with proposed text from subgroup, updated to incorporate Editors' suggestions.\r\n  - Goals of the update include (non-exhaustive):\r\n    - Simplify and ease reader comprehension\r\n    - Provide waypoints for well-intended conscientious public actors\r\n    - Call attention to the limitations of the Vocabulary\r\n  - The above goals are in tension. Hopefully the proposed text strikes a good balance that minimizes misunderstanding and unintentional harms.\r\n- Add clarifying text to Section 4 Vocabulary Definition (this PR builds on #212)\r\n- Uses non-normative language per:\r\n  - #162",
       "createdAt": "2026-07-07T10:02:37Z",
-      "updatedAt": "2026-07-20T07:17:12Z",
+      "updatedAt": "2026-07-22T22:15:41Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "26841404458861cc6bd54ef52af63c7736c315c2",
@@ -10704,6 +10704,19 @@
               "updatedAt": "2026-07-17T20:00:07Z"
             }
           ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABG6vFFg",
+          "commit": {
+            "abbreviatedOid": "511413e"
+          },
+          "author": "Eco0099",
+          "authorAssociation": "NONE",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-07-22T22:15:41Z",
+          "updatedAt": "2026-07-22T22:15:41Z",
+          "comments": []
         }
       ]
     }
