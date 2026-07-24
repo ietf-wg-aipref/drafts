@@ -237,7 +237,7 @@ This section defines the categories of use in the vocabulary.
 
 ## AI Model Training {#train-ai}
 
-Using an asset to modify the common parameters of an AI model
+Using an asset to modify the learned parameters of an AI model
 that is used
 to generate synthetic content in one or more modalities.
 
