@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-07-23T03:27:08.862293+00:00",
+  "timestamp": "2026-07-26T03:33:24.612037+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -3889,6 +3889,40 @@
       "body": "Discussion in Toronto highlighted two competing positions with respect to this term:\n\n* The term is (for some) essential to narrow the scope of the exception.\n* The term is (for others) a little problematic in terms of how it aids clarity.\n\nThese were both recognized as reasonable positions, but those that expressed them acknowledged that they didn't have a strongly-held views in either direction and were not able to offer changes that would address their concern without strengthening the (recognized) objections of the opposite position.",
       "createdAt": "2026-04-16T13:44:47Z",
       "updatedAt": "2026-04-16T13:44:47Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 214,
+      "id": "I_kwDOOWk1-s8AAAABKCOZAw",
+      "title": "Add use-case matrix artifact for train-ai/search overlap classification",
+      "url": "https://github.com/ietf-wg-aipref/drafts/issues/214",
+      "state": "CLOSED",
+      "author": "altanai",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "I think the current AIPREF category definitions for `train-ai` and `search` need tighter boundary behavior in edge cases, especially where workflows involve retrieval, summarization, and mixed pipelines. This creates ambiguity for implementers and reviewers when categories overlap.\n\nRelated discussions already exist, but they do not provide a shared test matrix artifact for classification consistency:\n- https://github.com/ietf-wg-aipref/drafts/issues/196\n- https://github.com/ietf-wg-aipref/drafts/issues/172\n- https://github.com/ietf-wg-aipref/drafts/issues/150\n\nI propose to create a dedicated use-case matrix artifact (appendix or companion markdown) that tests expected behavior per category and overlap precedence.\n\n## Initial Edge-Case Scenarios\n- Search retrieval with snippets only (no model update)\n- Search retrieval feeding grounding for generated answer\n- Search result ranking model continuously updated from click logs\n- User-supplied content in prompt plus crawler-sourced context\n- Crawler-sourced corpus used for test-time adaptation\n- RAG pipeline with caching of embeddings derived from content\n- Search display where AI transforms excerpts for accessibility",
+      "createdAt": "2026-07-24T12:25:09Z",
+      "updatedAt": "2026-07-24T12:30:21Z",
+      "closedAt": "2026-07-24T12:30:21Z",
+      "comments": []
+    },
+    {
+      "number": 215,
+      "id": "I_kwDOOWk1-s8AAAABKCZR_g",
+      "title": "Use-Case Matrix Artifact for Train-AI/Search",
+      "url": "https://github.com/ietf-wg-aipref/drafts/issues/215",
+      "state": "OPEN",
+      "author": "altanai",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [
+        "triage"
+      ],
+      "body": "### Confirmation\n\n- [x] I have reviewed our [existing issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nI think the current AIPREF category definitions for `train-ai` and `search` need tighter boundary behavior in edge cases, especially where workflows involve retrieval, summarization, and mixed pipelines. This creates ambiguity for implementers and reviewers when categories overlap.\n\nRelated discussions already exist, but they do not provide a shared test matrix artifact for classification consistency:\n- https://github.com/ietf-wg-aipref/drafts/issues/196\n- https://github.com/ietf-wg-aipref/drafts/issues/172\n- https://github.com/ietf-wg-aipref/drafts/issues/150\n\n### Proposed Resolution\n\nI propose to create a dedicated use-case matrix artifact (appendix or companion markdown) that tests expected behavior per category and overlap precedence.\n\n## Edge-Case Scenarios\n- Search retrieval with snippets only (no model update)\n- Search retrieval feeding grounding for generated answer\n- Search result ranking model continuously updated from click logs\n- User-supplied content in prompt plus crawler-sourced context\n- Crawler-sourced corpus used for test-time adaptation\n- RAG pipeline with caching of embeddings derived from content\n- Search display where AI transforms excerpts for accessibility\n\nPS : This does not introduce new categories, only validates current category behavior\n\n## Suggested matrix columns:\n\n* Scenario ID\n* Input source (crawler discovered / user provided / hybrid)\n* Processing stage (indexing / ranking / retrieval / grounding / generation / model update)\n* Output behavior (link-only / snippet / summary / generated answer)\n* Categories triggered (search, train-ai, other)\n* Declared preferences\n* Expected effective result\n* Rationale (with spec section reference)\n* Ambiguity note (if any)",
+      "createdAt": "2026-07-24T12:50:35Z",
+      "updatedAt": "2026-07-24T12:50:35Z",
       "closedAt": null,
       "comments": []
     }
@@ -10441,13 +10475,13 @@
       "labels": [],
       "body": "Here are the proposed tweaks to the definition of model training that I mentioned on the interim call.  (This was originally homework from Toronto; sorry that it's taken so long to post.)  I think that this gets us to a description of what it means to train a general-purpose foundation model without relying on any of the words that have raised objections in past drafts.\r\n\r\nThe most substantive change I'm proposing in this PR is that we move from talking about a model that \"can generate\" to one that \"is used, or made available for use, to generate.\"  One of the things that I heard most clearly in Toronto from people thinking about declaring preferences was concern about the subjectivity of definitions based on purpose and intent, and about the possibility that either might change over time.\r\n\r\nThis makes the category slightly more narrow, but also more objective\u2014something either was used or it wasn't; much less is subject to interpretation.  The same property should let implementers apply the category consistently, too.\r\n\r\nThis approach also focuses on the activity rather than the technology, which I hope addresses the concerns that were raised in Toronto about unintended consequences.\r\n\r\nI've expanded \"used\" to \"used, or made available for use\" in an attempt to address the concerns that were raised about open-weight models and organizational boundaries.\r\n\r\nI've replaced the \"produce or refine\" language in the current draft with \"modify\", which I think encompasses both; producing a model is the process of iteratively refining its weights.\r\n\r\nI've also kept \"asset\" from the current draft.  I know that some folks had concerns about that term in Toronto; I don't feel strongly about it, so long as we have a word for \"piece of data\".",
       "createdAt": "2026-06-23T23:30:45Z",
-      "updatedAt": "2026-06-26T12:26:53Z",
+      "updatedAt": "2026-07-24T13:02:50Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "26841404458861cc6bd54ef52af63c7736c315c2",
       "headRepository": "kelleyk/ietf-wg-aipref-drafts",
       "headRefName": "training-definition",
-      "headRefOid": "e5e12271ba7eb6f6a9d0469372d29fb1ad7e3e50",
+      "headRefOid": "628e9f474853fbc6fe9c65381fdcbfbc7556a611",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
@@ -10473,6 +10507,13 @@
           "body": "Agreed; keeping this PR strictly on the vocabulary seems right.\n\nWith that boundary, I would narrow the proposed definition to the model-state change itself and avoid importing attachment/propagation semantics here. One possible text shape would be:\n\n> Using an asset to modify an AI model's persistent internal parameters, where the model is used, or made available for use, to generate content in one or more modalities.\n\nIf \"made available for use\" is still considered to pull in the downstream-actor problem, I would prefer dropping that clause here and leaving the A-to-B allocation entirely to the separate attachment/processing document. The key vocabulary distinction, for me, is persistent internal model-state modification, not request-time configuration, retrieval context, or later inference handling.",
           "createdAt": "2026-06-26T12:26:53Z",
           "updatedAt": "2026-06-26T12:26:53Z"
+        },
+        {
+          "author": "kelleyk",
+          "authorAssociation": "NONE",
+          "body": "I've updated this PR based on the discussion on the list.  Folks there generally agreed with the idea behind the \"or made available for use\" phrasing, but felt that it would be better handled as an attachment concern.  That seems just as good to me.",
+          "createdAt": "2026-07-24T12:01:39Z",
+          "updatedAt": "2026-07-24T12:01:39Z"
         }
       ],
       "reviews": [
@@ -10539,6 +10580,92 @@
               "body": "```suggestion\nUsing an asset to modify an AI model\n```",
               "createdAt": "2026-06-24T12:32:05Z",
               "updatedAt": "2026-06-24T12:32:05Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABHH5Xvg",
+          "commit": {
+            "abbreviatedOid": "aaa8004"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-07-24T12:06:21Z",
+          "updatedAt": "2026-07-24T12:06:21Z",
+          "comments": [
+            {
+              "originalPosition": 9,
+              "body": "Based on discussion, could this be something like this?\n\n```suggestion\nUsing an asset to modify the learned parameters of an AI model\n```",
+              "createdAt": "2026-07-24T12:06:21Z",
+              "updatedAt": "2026-07-24T12:06:21Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABHIGO9g",
+          "commit": {
+            "abbreviatedOid": "628e9f4"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "\ud83e\udd0c\ud83e\udd0c\ud83e\udd0c",
+          "createdAt": "2026-07-24T12:41:02Z",
+          "updatedAt": "2026-07-24T12:41:02Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABHIGZNA",
+          "commit": {
+            "abbreviatedOid": "628e9f4"
+          },
+          "author": "thunderpoot",
+          "authorAssociation": "NONE",
+          "state": "APPROVED",
+          "body": "\ud83e\udd0c\ud83e\udd0c\ud83e\udd0c\ud83e\udd0c",
+          "createdAt": "2026-07-24T12:41:26Z",
+          "updatedAt": "2026-07-24T12:41:26Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABHIJTnA",
+          "commit": {
+            "abbreviatedOid": "628e9f4"
+          },
+          "author": "bumblefudge",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-07-24T12:48:49Z",
+          "updatedAt": "2026-07-24T12:48:49Z",
+          "comments": [
+            {
+              "originalPosition": 11,
+              "body": "maybe adding a definition of \"synthetic\" to the list of terms at the end of section 2 would help, if it's confusing to only use the term here?",
+              "createdAt": "2026-07-24T12:48:49Z",
+              "updatedAt": "2026-07-24T12:48:49Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABHIP6Tg",
+          "commit": {
+            "abbreviatedOid": "e5e1227"
+          },
+          "author": "thunderpoot",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-07-24T13:02:49Z",
+          "updatedAt": "2026-07-24T13:02:50Z",
+          "comments": [
+            {
+              "originalPosition": 11,
+              "body": "As MT said in the plenary chat:\r\n> > synthetic /s\u012dn-th\u0115t\u2032\u012dk/ adjective\r\n> > Relating to, involving, or of the nature of synthesis.\r\n> > Produced by synthesis, especially not of natural origin.\r\n> > Prepared or made artificially.\r\n\r\n> Seems like we can rely on the dictionary definition for the word.",
+              "createdAt": "2026-07-24T13:02:49Z",
+              "updatedAt": "2026-07-24T13:02:50Z"
             }
           ]
         }
@@ -10611,7 +10738,7 @@
       "labels": [],
       "body": "**Update Sections 3.2 Applying Preferences and Section 4 Vocabulary Definition**\r\n- Replace Sections 3.2 Applying Preferences with proposed text from subgroup, updated to incorporate Editors' suggestions.\r\n  - Goals of the update include (non-exhaustive):\r\n    - Simplify and ease reader comprehension\r\n    - Provide waypoints for well-intended conscientious public actors\r\n    - Call attention to the limitations of the Vocabulary\r\n  - The above goals are in tension. Hopefully the proposed text strikes a good balance that minimizes misunderstanding and unintentional harms.\r\n- Add clarifying text to Section 4 Vocabulary Definition (this PR builds on #212)\r\n- Uses non-normative language per:\r\n  - #162",
       "createdAt": "2026-07-07T10:02:37Z",
-      "updatedAt": "2026-07-22T22:15:41Z",
+      "updatedAt": "2026-07-24T14:17:24Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "26841404458861cc6bd54ef52af63c7736c315c2",
@@ -10717,6 +10844,206 @@
           "createdAt": "2026-07-22T22:15:41Z",
           "updatedAt": "2026-07-22T22:15:41Z",
           "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABHH9DBw",
+          "commit": {
+            "abbreviatedOid": "511413e"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-07-24T12:16:19Z",
+          "updatedAt": "2026-07-24T12:16:20Z",
+          "comments": [
+            {
+              "originalPosition": 46,
+              "body": "~~This is my iteration on the suggestion from Sebastian on list.~~  I'll add his too.\r\n\r\n(See below)",
+              "createdAt": "2026-07-24T12:16:19Z",
+              "updatedAt": "2026-07-24T14:16:22Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABHH9Ztw",
+          "commit": {
+            "abbreviatedOid": "511413e"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-07-24T12:17:11Z",
+          "updatedAt": "2026-07-24T12:17:12Z",
+          "comments": [
+            {
+              "originalPosition": 46,
+              "body": "Sebastian's text, which has received considerable support on the list:\n\n```suggestion\nAn entity that receives usage preferences has a choice\nwhether to follow those preferences.\nThis specification does not determine how that choice is made.\nWhether and under which circumstances a preference is followed\nis outside the scope of this specification.\n```",
+              "createdAt": "2026-07-24T12:17:12Z",
+              "updatedAt": "2026-07-24T12:17:12Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABHH_-aA",
+          "commit": {
+            "abbreviatedOid": "511413e"
+          },
+          "author": "mirjak",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-07-24T12:24:08Z",
+          "updatedAt": "2026-07-24T12:24:08Z",
+          "comments": [
+            {
+              "originalPosition": 46,
+              "body": "External to what? Maybe s/external/different/",
+              "createdAt": "2026-07-24T12:24:08Z",
+              "updatedAt": "2026-07-24T12:24:08Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABHIA95w",
+          "commit": {
+            "abbreviatedOid": "511413e"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-07-24T12:26:55Z",
+          "updatedAt": "2026-07-24T12:26:55Z",
+          "comments": [
+            {
+              "originalPosition": 46,
+              "body": "There is also the possibility that \"whether to follow\" is better as \"whether to follow or not follow\"",
+              "createdAt": "2026-07-24T12:26:55Z",
+              "updatedAt": "2026-07-24T12:26:55Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABHIBZoQ",
+          "commit": {
+            "abbreviatedOid": "511413e"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-07-24T12:28:07Z",
+          "updatedAt": "2026-07-24T12:28:07Z",
+          "comments": [
+            {
+              "originalPosition": 46,
+              "body": "External to the interactions between the entity with this document.  In this case, any ambiguity is fine.",
+              "createdAt": "2026-07-24T12:28:07Z",
+              "updatedAt": "2026-07-24T12:28:07Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABHIDSTA",
+          "commit": {
+            "abbreviatedOid": "511413e"
+          },
+          "author": "mirjak",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-07-24T12:33:19Z",
+          "updatedAt": "2026-07-24T12:33:19Z",
+          "comments": [
+            {
+              "originalPosition": 37,
+              "body": "I think the original language was slightly better here:\n\"not provide a means of ensuring that preferences are respected\"",
+              "createdAt": "2026-07-24T12:33:19Z",
+              "updatedAt": "2026-07-24T12:33:19Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABHIFbRA",
+          "commit": {
+            "abbreviatedOid": "511413e"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-07-24T12:38:58Z",
+          "updatedAt": "2026-07-24T12:38:58Z",
+          "comments": [
+            {
+              "originalPosition": 46,
+              "body": "On the \"external\" point.\n\n```suggestion\nAn entity that receives usage preferences has a choice\nwhether to follow those preferences.\nMultiple factors could influence that decision,\nbut the decision itself is outside the scope of this document.\n```\n\nAfter consideration, though I do think that centering the focus on the document would be a good thing (to Sebastian's point during discussion), this sentence puts the document at the pointy end of the paragraph (the end) rather than the other point end (the start) and that's fine.",
+              "createdAt": "2026-07-24T12:38:58Z",
+              "updatedAt": "2026-07-24T12:38:58Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABHIaJkg",
+          "commit": {
+            "abbreviatedOid": "511413e"
+          },
+          "author": "TimidRobot",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-07-24T13:22:08Z",
+          "updatedAt": "2026-07-24T13:22:08Z",
+          "comments": [
+            {
+              "originalPosition": 46,
+              "body": "@martinthomson I'd like to send an email to the list with the uncontested portion followed by the three proposed endings. Do you have edits you'd like to make first (as implied in meeting chat)?",
+              "createdAt": "2026-07-24T13:22:08Z",
+              "updatedAt": "2026-07-24T13:22:08Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABHI0DuQ",
+          "commit": {
+            "abbreviatedOid": "511413e"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-07-24T14:15:52Z",
+          "updatedAt": "2026-07-24T14:15:52Z",
+          "comments": [
+            {
+              "originalPosition": 46,
+              "body": "I think that I prefer the \"Multiple factors\" variant here.  Other than that, this is close enough.  Thanks for asking.",
+              "createdAt": "2026-07-24T14:15:52Z",
+              "updatedAt": "2026-07-24T14:15:52Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABHI08DA",
+          "commit": {
+            "abbreviatedOid": "511413e"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-07-24T14:17:23Z",
+          "updatedAt": "2026-07-24T14:17:24Z",
+          "comments": [
+            {
+              "originalPosition": 37,
+              "body": "Thanks Mirja,\r\n\r\nI'll let @TimidRobot decide how to deal with this, but I'm assuming that this is a friendly amendment.",
+              "createdAt": "2026-07-24T14:17:24Z",
+              "updatedAt": "2026-07-24T14:17:24Z"
+            }
+          ]
         }
       ]
     }
