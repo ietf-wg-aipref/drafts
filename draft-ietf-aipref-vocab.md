@@ -289,6 +289,22 @@ are used exclusively
 in ways that meet the above conditions.
 
 
+## AI System Inference {#ai-system-inference}
+
+Using an asset for inference by an AI model that is used to generate synthetic content in one or more modalities. 
+Inference means all use beyond the modification of an AI model’s learned parameters. 
+This category does not include the use of assets that a human end user has specifically identified 
+(by providing either the asset itself or a location from which it can be retrieved).
+
+
+## AI User Input {#ai-user-input}
+
+Using an asset that a human end user has specifically identified 
+(by providing either the asset itself or a location from which it can be retrieved)
+for inference by an AI model that is used to generate synthetic content in one or more modalities. 
+Inference means all use beyond the modification of an AI model’s learned parameters.
+
+
 ## Vocabulary Extensions {#vocab-extension}
 
 Extensions to this vocabulary need to be defined in an RFC
