@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-07-26T03:33:24.612037+00:00",
+  "timestamp": "2026-07-30T02:49:21.505819+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -10738,7 +10738,7 @@
       "labels": [],
       "body": "**Update Sections 3.2 Applying Preferences and Section 4 Vocabulary Definition**\r\n- Replace Sections 3.2 Applying Preferences with proposed text from subgroup, updated to incorporate Editors' suggestions.\r\n  - Goals of the update include (non-exhaustive):\r\n    - Simplify and ease reader comprehension\r\n    - Provide waypoints for well-intended conscientious public actors\r\n    - Call attention to the limitations of the Vocabulary\r\n  - The above goals are in tension. Hopefully the proposed text strikes a good balance that minimizes misunderstanding and unintentional harms.\r\n- Add clarifying text to Section 4 Vocabulary Definition (this PR builds on #212)\r\n- Uses non-normative language per:\r\n  - #162",
       "createdAt": "2026-07-07T10:02:37Z",
-      "updatedAt": "2026-07-24T14:17:24Z",
+      "updatedAt": "2026-07-29T23:52:46Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "26841404458861cc6bd54ef52af63c7736c315c2",
@@ -11042,6 +11042,66 @@
               "body": "Thanks Mirja,\r\n\r\nI'll let @TimidRobot decide how to deal with this, but I'm assuming that this is a friendly amendment.",
               "createdAt": "2026-07-24T14:17:24Z",
               "updatedAt": "2026-07-24T14:17:24Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABHqJIRw",
+          "commit": {
+            "abbreviatedOid": "511413e"
+          },
+          "author": "TimidRobot",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-07-29T13:43:19Z",
+          "updatedAt": "2026-07-29T13:43:20Z",
+          "comments": [
+            {
+              "originalPosition": 37,
+              "body": "@mirjak if I understand your suggestion:\r\n```suggestion\r\n- provide a means of ensuring that preferences are respected;\r\n```\r\nit contains normative language (\"respected\").\r\n\r\nhow do you feel about:\r\n```suggestion\r\n- provide a means of ensuring that preferences are followed;\r\n```\r\n?",
+              "createdAt": "2026-07-29T13:43:19Z",
+              "updatedAt": "2026-07-29T13:54:42Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABHrpPvQ",
+          "commit": {
+            "abbreviatedOid": "511413e"
+          },
+          "author": "achimschloss",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-07-29T16:13:27Z",
+          "updatedAt": "2026-07-29T16:13:27Z",
+          "comments": [
+            {
+              "originalPosition": 46,
+              "body": "Sorry for jumping in late - how about a pure procedural description and scoping? \n\n```suggestion\nAn entity that receives usage preferences must \ndetermine how to apply those preferences.\nThis specification does not define how that \ndetermination is made.\n```\n\n",
+              "createdAt": "2026-07-29T16:13:27Z",
+              "updatedAt": "2026-07-29T23:51:41Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABHu5UJQ",
+          "commit": {
+            "abbreviatedOid": "511413e"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-07-29T23:52:45Z",
+          "updatedAt": "2026-07-29T23:52:45Z",
+          "comments": [
+            {
+              "originalPosition": 37,
+              "body": "I prefer the \"followed\" option, or the even more terse, but perhaps better still:\n\n```suggestion\n- ensure that preferences are followed;\n```",
+              "createdAt": "2026-07-29T23:52:45Z",
+              "updatedAt": "2026-07-29T23:52:46Z"
             }
           ]
         }
