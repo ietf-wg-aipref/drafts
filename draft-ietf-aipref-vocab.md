@@ -209,8 +209,9 @@ specification should understand that it does not:
   expressed preferences.
 
 An entity that receives usage preferences has a choice whether to follow those
-preferences. Multiple factors could influence that decision, but the decision
-itself is outside the scope of this document.
+preferences. This specification does not determine how that choice is made.
+Whether and under which circumstances a preference is followed is outside the
+scope of this specification.
 
 
 # Vocabulary Definition {#vocab}
