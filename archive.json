@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-08-02T03:31:31.804831+00:00",
+  "timestamp": "2026-08-09T02:08:17.612250+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -10738,13 +10738,13 @@
       "labels": [],
       "body": "**Update Sections 3.2 Applying Preferences and Section 4 Vocabulary Definition**\r\n- Replace Sections 3.2 Applying Preferences with proposed text from subgroup, updated to incorporate Editors' suggestions.\r\n  - Goals of the update include (non-exhaustive):\r\n    - Simplify and ease reader comprehension\r\n    - Provide waypoints for well-intended conscientious public actors\r\n    - Call attention to the limitations of the Vocabulary\r\n  - The above goals are in tension. Hopefully the proposed text strikes a good balance that minimizes misunderstanding and unintentional harms.\r\n- Add clarifying text to Section 4 Vocabulary Definition (this PR builds on #212)\r\n- Uses non-normative language per:\r\n  - #162",
       "createdAt": "2026-07-07T10:02:37Z",
-      "updatedAt": "2026-07-30T12:09:27Z",
+      "updatedAt": "2026-08-06T13:57:32Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "26841404458861cc6bd54ef52af63c7736c315c2",
       "headRepository": "TimidRobot/aipref-drafts",
       "headRefName": "sections-3-2-and-4",
-      "headRefOid": "511413e1cd7748f62e0e0ff18687f8e6d323e2f5",
+      "headRefOid": "6ecdbb87518c5a9f709e83275af294a59a7130e2",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
@@ -11144,6 +11144,46 @@
               "updatedAt": "2026-07-30T12:09:27Z"
             }
           ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABImbBCQ",
+          "commit": {
+            "abbreviatedOid": "511413e"
+          },
+          "author": "TimidRobot",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-08-06T07:28:08Z",
+          "updatedAt": "2026-08-06T07:28:08Z",
+          "comments": [
+            {
+              "originalPosition": 46,
+              "body": "~~This suggestion received the strongest support on the mailing list~~\r\n\r\nCorrection. I failed to read the \"[ai-control] Re: ai-control Digest, Vol 29, Issue 50\" when evaluating feedback.\r\n\r\nPR has been updated to use Sebastian's suggestion.",
+              "createdAt": "2026-08-06T07:28:08Z",
+              "updatedAt": "2026-08-06T13:58:45Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABImdexw",
+          "commit": {
+            "abbreviatedOid": "511413e"
+          },
+          "author": "TimidRobot",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-08-06T07:33:17Z",
+          "updatedAt": "2026-08-06T07:33:18Z",
+          "comments": [
+            {
+              "originalPosition": 46,
+              "body": "With the the updated text, @achimschloss 's suggestion is now:\r\n```diff\r\n- An entity that receives usage preferences has a choice whether to follow those\r\n- preferences. This specification does not determine how that choice is made.\r\n- Whether and under which circumstances a preference is followed is outside the\r\n- scope of this specification.\r\n+ An entity that receives usage preferences must determine how to apply those\r\n+ preferences. This specification does not define how that determination is made.\r\n```",
+              "createdAt": "2026-08-06T07:33:18Z",
+              "updatedAt": "2026-08-06T13:59:43Z"
+            }
+          ]
         }
       ]
     },
@@ -11159,7 +11199,7 @@
       "labels": [],
       "body": "This adds two proposed inference/use vocab categories that are intended to work in tandem: \r\n-AI System Inference \r\n-AI User Input\r\n\r\nThese definitions both rely on the AI training definition of PR 211 as a logical starting point. They define inference as all use of assets by AI models beyond the modification of learned parameters. \r\n\r\nTogether, these proposed categories would enable the expression of preferences covering the full field of post-training usage. They also give declaring parties the option to express different preferences when assets are used by autonomous systems vs when assets are identified by a human end user.",
       "createdAt": "2026-07-30T08:55:41Z",
-      "updatedAt": "2026-07-30T12:15:47Z",
+      "updatedAt": "2026-08-07T10:41:01Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "26841404458861cc6bd54ef52af63c7736c315c2",
@@ -11177,6 +11217,13 @@
           "body": "I like the distinction between system-selected and user-selected assets, but I think the definitions can be much clearer.\r\n\r\nThe key distinction is not inference itself, but who identifies the asset used during inference.\r\n\r\nFor example:\r\n\r\n**AI System Inference**\r\n\r\nUsing an asset during inference by an AI system where the asset is identified or retrieved by the system itself. Inference means all use beyond the modification of an AI model's learned parameters.\r\n\r\n**AI User Input**\r\n\r\nUsing an asset during inference by an AI system where the asset has been explicitly identified by a human user. This includes assets provided directly by the user or assets whose location has been explicitly specified by the user. Inference means all use beyond the modification of an AI model's learned parameters.\r\n\r\nThis makes the distinction immediately visible:\r\n\r\n- the system selects or retrieves the asset; or\r\n- the human explicitly selects the asset.\r\n\r\nThe rest of the definition is common to both categories.\r\n\r\nI also think another aspect deserves discussion.\r\n\r\nThe phrase\r\n\r\n> \"by providing either the asset itself or a location from which it can be retrieved\"\r\n\r\ndoes more than define the category. It also implies different attachment and discovery mechanisms.\r\n\r\nA directly provided asset can carry an attached preference signal, for example through embedded metadata, a sidecar file, or an associated registry declaration. By contrast, when a user provides a URL or domain, the preference is most likely resolved through a location-based mechanism rather than being attached directly to the asset.\r\n\r\nIt would therefore be useful to clarify whether these are simply equivalent ways of identifying an asset, or whether the specification expects different attachment and discovery mechanisms depending on whether the user provides the asset itself or only a reference to its location. If the latter is intended, making this explicit may be worthwhile, as it has implications for implementers.\r\n\r\nOne additional observation concerns the naming. The distinction is really about who selected the asset, not about the inference process itself. For that reason, names such as **System-selected Assets** and **User-selected Assets**, or **System-selected Inference** and **User-directed Inference**, may communicate the distinction more clearly than AI User Input, which could easily be interpreted as referring to prompts rather than to the source material used during inference.",
           "createdAt": "2026-07-30T12:15:47Z",
           "updatedAt": "2026-07-30T12:15:47Z"
+        },
+        {
+          "author": "coopdanger",
+          "authorAssociation": "NONE",
+          "body": "1. When using the word \"beyond\" in the phrase \"beyond the modification of an AI model's learned parameters,\" does \"beyond\" mean \"after\" or does \"beyond\" mean \"except\"? \r\n\r\n2. I think the term \"inference\" should be defined in Section 2 rather than here, which would allow \"Inference means all use beyond the modification of an AI model's learned parameters\" to be removed from this section.\r\n\r\n3. I think Sebastian's suggested re-labeling of these two categories is useful but it might be clearer if they were symmetric: **system-directed inference** and **user-directed inference**. \r\n\r\n4. I think the interactions between system-directed inference and the search category will require a lot of clarification. If an expressed preference says \"search=y;system-inference=n,\" how is that supposed to be interpreted by a search application?",
+          "createdAt": "2026-08-07T10:41:01Z",
+          "updatedAt": "2026-08-07T10:41:01Z"
         }
       ],
       "reviews": []
