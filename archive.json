@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-08-09T02:08:17.612250+00:00",
+  "timestamp": "2026-08-11T02:07:28.542844+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -10475,7 +10475,7 @@
       "labels": [],
       "body": "Here are the proposed tweaks to the definition of model training that I mentioned on the interim call.  (This was originally homework from Toronto; sorry that it's taken so long to post.)  I think that this gets us to a description of what it means to train a general-purpose foundation model without relying on any of the words that have raised objections in past drafts.\r\n\r\nThe most substantive change I'm proposing in this PR is that we move from talking about a model that \"can generate\" to one that \"is used, or made available for use, to generate.\"  One of the things that I heard most clearly in Toronto from people thinking about declaring preferences was concern about the subjectivity of definitions based on purpose and intent, and about the possibility that either might change over time.\r\n\r\nThis makes the category slightly more narrow, but also more objective\u2014something either was used or it wasn't; much less is subject to interpretation.  The same property should let implementers apply the category consistently, too.\r\n\r\nThis approach also focuses on the activity rather than the technology, which I hope addresses the concerns that were raised in Toronto about unintended consequences.\r\n\r\nI've expanded \"used\" to \"used, or made available for use\" in an attempt to address the concerns that were raised about open-weight models and organizational boundaries.\r\n\r\nI've replaced the \"produce or refine\" language in the current draft with \"modify\", which I think encompasses both; producing a model is the process of iteratively refining its weights.\r\n\r\nI've also kept \"asset\" from the current draft.  I know that some folks had concerns about that term in Toronto; I don't feel strongly about it, so long as we have a word for \"piece of data\".",
       "createdAt": "2026-06-23T23:30:45Z",
-      "updatedAt": "2026-07-24T13:02:50Z",
+      "updatedAt": "2026-08-10T16:08:12Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "26841404458861cc6bd54ef52af63c7736c315c2",
@@ -10668,6 +10668,26 @@
               "updatedAt": "2026-07-24T13:02:50Z"
             }
           ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABI_x6yA",
+          "commit": {
+            "abbreviatedOid": "e5e1227"
+          },
+          "author": "chrisn",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-08-10T16:08:12Z",
+          "updatedAt": "2026-08-10T16:08:12Z",
+          "comments": [
+            {
+              "originalPosition": 11,
+              "body": "I think we should remove the word \"synthetic\". It only raises the question of what is considered synthetic and what is not, and this question is immaterial from the perspective of websites or creators that want to express this preference.",
+              "createdAt": "2026-08-10T16:08:12Z",
+              "updatedAt": "2026-08-10T16:08:12Z"
+            }
+          ]
         }
       ]
     },
@@ -10738,7 +10758,7 @@
       "labels": [],
       "body": "**Update Sections 3.2 Applying Preferences and Section 4 Vocabulary Definition**\r\n- Replace Sections 3.2 Applying Preferences with proposed text from subgroup, updated to incorporate Editors' suggestions.\r\n  - Goals of the update include (non-exhaustive):\r\n    - Simplify and ease reader comprehension\r\n    - Provide waypoints for well-intended conscientious public actors\r\n    - Call attention to the limitations of the Vocabulary\r\n  - The above goals are in tension. Hopefully the proposed text strikes a good balance that minimizes misunderstanding and unintentional harms.\r\n- Add clarifying text to Section 4 Vocabulary Definition (this PR builds on #212)\r\n- Uses non-normative language per:\r\n  - #162",
       "createdAt": "2026-07-07T10:02:37Z",
-      "updatedAt": "2026-08-06T13:57:32Z",
+      "updatedAt": "2026-08-10T23:57:09Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "26841404458861cc6bd54ef52af63c7736c315c2",
@@ -11182,6 +11202,46 @@
               "body": "With the the updated text, @achimschloss 's suggestion is now:\r\n```diff\r\n- An entity that receives usage preferences has a choice whether to follow those\r\n- preferences. This specification does not determine how that choice is made.\r\n- Whether and under which circumstances a preference is followed is outside the\r\n- scope of this specification.\r\n+ An entity that receives usage preferences must determine how to apply those\r\n+ preferences. This specification does not define how that determination is made.\r\n```",
               "createdAt": "2026-08-06T07:33:18Z",
               "updatedAt": "2026-08-06T13:59:43Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABJADyhA",
+          "commit": {
+            "abbreviatedOid": "6ecdbb8"
+          },
+          "author": "TimidRobot",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-08-10T16:42:09Z",
+          "updatedAt": "2026-08-10T16:42:09Z",
+          "comments": [
+            {
+              "originalPosition": 44,
+              "body": "Recommended by Andrew on mailing list (with a couple of +1s):\n```suggestion\nAn entity that receives usage preferences may have a choice whether to follow those\n```",
+              "createdAt": "2026-08-10T16:42:09Z",
+              "updatedAt": "2026-08-10T16:42:09Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABJC0Evw",
+          "commit": {
+            "abbreviatedOid": "6ecdbb8"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-08-10T23:57:09Z",
+          "updatedAt": "2026-08-10T23:57:09Z",
+          "comments": [
+            {
+              "originalPosition": 44,
+              "body": "I'm just going to leave this here: https://www.prindleinstitute.org/2025/04/why-follow-the-law/",
+              "createdAt": "2026-08-10T23:57:09Z",
+              "updatedAt": "2026-08-10T23:57:09Z"
             }
           ]
         }
