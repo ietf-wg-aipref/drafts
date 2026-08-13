@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-08-11T02:07:28.542844+00:00",
+  "timestamp": "2026-08-13T02:26:45.658821+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -11259,7 +11259,7 @@
       "labels": [],
       "body": "This adds two proposed inference/use vocab categories that are intended to work in tandem: \r\n-AI System Inference \r\n-AI User Input\r\n\r\nThese definitions both rely on the AI training definition of PR 211 as a logical starting point. They define inference as all use of assets by AI models beyond the modification of learned parameters. \r\n\r\nTogether, these proposed categories would enable the expression of preferences covering the full field of post-training usage. They also give declaring parties the option to express different preferences when assets are used by autonomous systems vs when assets are identified by a human end user.",
       "createdAt": "2026-07-30T08:55:41Z",
-      "updatedAt": "2026-08-07T10:41:01Z",
+      "updatedAt": "2026-08-12T08:31:46Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "26841404458861cc6bd54ef52af63c7736c315c2",
@@ -11284,6 +11284,13 @@
           "body": "1. When using the word \"beyond\" in the phrase \"beyond the modification of an AI model's learned parameters,\" does \"beyond\" mean \"after\" or does \"beyond\" mean \"except\"? \r\n\r\n2. I think the term \"inference\" should be defined in Section 2 rather than here, which would allow \"Inference means all use beyond the modification of an AI model's learned parameters\" to be removed from this section.\r\n\r\n3. I think Sebastian's suggested re-labeling of these two categories is useful but it might be clearer if they were symmetric: **system-directed inference** and **user-directed inference**. \r\n\r\n4. I think the interactions between system-directed inference and the search category will require a lot of clarification. If an expressed preference says \"search=y;system-inference=n,\" how is that supposed to be interpreted by a search application?",
           "createdAt": "2026-08-07T10:41:01Z",
           "updatedAt": "2026-08-07T10:41:01Z"
+        },
+        {
+          "author": "natehake",
+          "authorAssociation": "NONE",
+          "body": "To Alissa's comments: \r\n-\"beyond\" is intended to mean \"all use that doesn't change the learned parameters.\" So I suppose it's both after and except in that sense. I'd be fine swapping out that word if folks think another is cleaner \r\n-yes, defining inference makes sense. Timid Robot's proposal on the list seems good to me \r\n-these names are ok with me, but I'd prefer having \"AI inference\" in the name just for user clarity \r\n-yes, the way search is written it's intended to operate as an exception where a \"search=y, inference =n\" would permit all inference that qualifies as search (but no other inference for that category)\r\n\r\nOn Sebastian's comment: I mentioned this on the mailing list, but the reason I don't think that approach works is that the two halves do not cover the whole field. One needs to define itself by reference to the other in order for us to achieve full coverage.",
+          "createdAt": "2026-08-12T08:31:46Z",
+          "updatedAt": "2026-08-12T08:31:46Z"
         }
       ],
       "reviews": []
