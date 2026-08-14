@@ -197,35 +197,21 @@ or the synthesis of multiple preferences from different sources.
 
 ## Applying Preferences {#applicability}
 
-This specification provides a set of definitions for different
-categories of use, plus a system for associating simple
-preferences to each (allow, disallow, or unknown; see {{model}}).
+This specification enables the expression of a defined set of preferences that
+can be communicated and interoperably understood. Readers of this
+specification should understand that it does not:
 
-The categories of use in the vocabulary (see {{vocab}})
-describe concrete, observable outcomes that depend on the use of assets,
-they seek to avoid describing internal details of implementations
-or their architecture.
+- ensure that preferences are followed;
+- address if, how, or when preferences should be followed or not-followed;
+- address technical, legal, contractual, or other mechanisms that might create
+  a stronger requirement to follow or not follow preferences;
+- consider situations or purposes that might justify following or not-following
+  expressed preferences.
 
-This specification only seeks to ensure that preferences can be understood,
-not provide a means of ensuring that preferences are respected.
-There may be considerations that take precedence over any stated preferences,
-especially when taking the public interest into account.
-
-Enforcement is not provided by this specification.
-Preferences do not themselves create rights, obligations, or prohibitions.
-Other mechanisms --
-technical, legal, contractual, or otherwise --
-might enforce adherence or non-adherance to these preferences
-and thereby determine the consequences of not respecting
-a stated preference.
-
-An entity that receives usage preferences has a choice
-about whether to respect the preferences it has discovered.
-It makes this choice according to its understanding
-of how the asset is used,
-how that usage corresponds to the usage categories
-where preferences have been stated,
-and the applicable legal context.
+An entity that receives usage preferences has a choice whether to follow those
+preferences. This specification does not determine how that choice is made.
+Whether and under which circumstances a preference is followed is outside the
+scope of this specification.
 
 
 # Vocabulary Definition {#vocab}
@@ -233,6 +219,10 @@ and the applicable legal context.
 NOTE: This section does not yet have consensus; see "Note to Readers" above.
 
 This section defines the categories of use in the vocabulary.
+
+These categories describe concrete, observable outcomes that depend on the use
+of assets.  The definitions seek to avoid describing internal details of
+implementations or their architecture.
 
 
 ## AI Model Training {#train-ai}
