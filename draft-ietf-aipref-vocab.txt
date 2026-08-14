@@ -5,8 +5,8 @@
 AI Preferences                                                 P. Keller
 Internet-Draft                                               Open Future
 Intended status: Standards Track                         M. Thomson, Ed.
-Expires: 30 October 2026                                         Mozilla
-                                                           28 April 2026
+Expires: 15 February 2027                                        Mozilla
+                                                          14 August 2026
 
 
             A Vocabulary For Expressing AI Usage Preferences
@@ -59,7 +59,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 30 October 2026.
+   This Internet-Draft will expire on 15 February 2027.
 
 Copyright Notice
 
@@ -231,32 +231,26 @@ Table of Contents
 
 3.2.  Applying Preferences
 
-   This specification provides a set of definitions for different
-   categories of use, plus a system for associating simple preferences
-   to each (allow, disallow, or unknown; see Section 3).
+   This specification enables the expression of a defined set of
+   preferences that can be communicated and interoperably understood.
+   Readers of this specification should understand that it does not:
 
-   The categories of use in the vocabulary (see Section 4) describe
-   concrete, observable outcomes that depend on the use of assets, they
-   seek to avoid describing internal details of implementations or their
-   architecture.
+   *  ensure that preferences are followed;
 
-   This specification only seeks to ensure that preferences can be
-   understood, not provide a means of ensuring that preferences are
-   respected.  There may be considerations that take precedence over any
-   stated preferences, especially when taking the public interest into
-   account.
+   *  address if, how, or when preferences should be followed or not-
+      followed;
 
-   Enforcement is not provided by this specification.  Preferences do
-   not themselves create rights, obligations, or prohibitions.  Other
-   mechanisms -- technical, legal, contractual, or otherwise -- might
-   enforce adherence or non-adherance to these preferences and thereby
-   determine the consequences of not respecting a stated preference.
+   *  address technical, legal, contractual, or other mechanisms that
+      might create a stronger requirement to follow or not follow
+      preferences;
 
-   An entity that receives usage preferences has a choice about whether
-   to respect the preferences it has discovered.  It makes this choice
-   according to its understanding of how the asset is used, how that
-   usage corresponds to the usage categories where preferences have been
-   stated, and the applicable legal context.
+   *  consider situations or purposes that might justify following or
+      not-following expressed preferences.
+
+   An entity that receives usage preferences has a choice whether to
+   follow those preferences.  This specification does not determine how
+   that choice is made.  Whether and under which circumstances a
+   preference is followed is outside the scope of this specification.
 
 4.  Vocabulary Definition
 
@@ -264,6 +258,10 @@ Table of Contents
    above.
 
    This section defines the categories of use in the vocabulary.
+
+   These categories describe concrete, observable outcomes that depend
+   on the use of assets.  The definitions seek to avoid describing
+   internal details of implementations or their architecture.
 
 4.1.  AI Model Training
 
@@ -556,7 +554,7 @@ Table of Contents
 9.1.  Normative References
 
    [ASCII]    Cerf, V., "ASCII format for network interchange", STD 80,
-              RFC 20, DOI 10.17487/RFC0020, October 1969,
+              RFC 20, DOI 10.17487/RFC20, October 1969,
               <https://www.rfc-editor.org/rfc/rfc20>.
 
    [FIELDS]   Nottingham, M. and P. Kamp, "Structured Field Values for
@@ -576,7 +574,7 @@ Table of Contents
 
    [ATTACH]   Illyes, G. and M. Thomson, Ed., "A Vocabulary For
               Expressing AI Usage Preferences", Work in Progress,
-              Internet-Draft, draft-ietf-aipref-attach, April 2026,
+              Internet-Draft, draft-ietf-aipref-attach, August 2026,
               <https://datatracker.ietf.org/doc/html/draft-ietf-aipref-
               attach>.
 
