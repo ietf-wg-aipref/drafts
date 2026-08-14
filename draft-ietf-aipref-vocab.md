@@ -227,11 +227,9 @@ implementations or their architecture.
 
 ## AI Model Training {#train-ai}
 
-The act of using an asset
-in the production or refinement of an AI model
-that can generate content in one or more modalities
-(text, image, audio, etc...).
-
+Using an asset to modify the learned parameters of an AI model
+that is used
+to generate synthetic content in one or more modalities.
 
 ## Search {#search}
 
