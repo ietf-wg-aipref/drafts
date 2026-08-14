@@ -265,9 +265,8 @@ Table of Contents
 
 4.1.  AI Model Training
 
-   The act of using an asset in the production or refinement of an AI
-   model that can generate content in one or more modalities (text,
-   image, audio, etc...).
+   Using an asset to modify the learned parameters of an AI model that
+   is used to generate synthetic content in one or more modalities.
 
 4.2.  Search
 
