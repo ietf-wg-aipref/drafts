@@ -100,6 +100,24 @@ these allow for the automated gathering of preferences
 in the same way that content is obtained.
 
 
+## Acquisition and Following Preferences
+
+The acquisition of an asset --
+or the receiving of a representation --
+is distinct from how that asset is subsequently used.
+
+Consequently, this document takes the view
+that usage preferences do not apply
+to the acquisition of assets.
+They only apply to how those assets are used;
+see {{Section 3.2 of VOCAB}} for a discussion
+on what it means to follow or not follow a preference.
+
+Mechanisms for limiting access to assets,
+such as access control or the `Disallow` rules in "robots.txt",
+are out of scope for this work.
+
+
 ## Statements of Preference
 
 The format of a statement of preference
