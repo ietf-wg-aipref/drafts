@@ -160,8 +160,8 @@ are intended to be complementary with other mechanisms.
 ### Embedded Preferences
 
 Embedding preferences is expected to be an effective means
-of associating preferences with content,
-because it ensures that metadata is always associated with content.
+of associating preferences with assets,
+because it ensures that metadata travels with the asset.
 This document, however, does not define any specific means of embedding preferences
 in content.
 
@@ -174,8 +174,8 @@ whether it represent audio, documents, images, video,
 or other types of content.
 Furthermore,
 some content types,
-such as plain text (`text/plain`),
-offer no standardized means of embedding preferences.
+such as plain text (`text/plain` and many other purely textual formats),
+offer no standardized and interoperable means of embedding metadata.
 
 
 ### Registry-Based Preferences
@@ -207,14 +207,17 @@ that applies the representation data ({{Section 8.1 of HTTP}}).
 Informally, usage preferences apply to the content of a message,
 not the resource.
 
-Servers MUST retain any preferences associated with a request
+Servers can use any preferences associated with a request
 if the content of that request
 is used to answer later requests.
 For example,
-the content of a PUT request that is used
-to answer subsequent GET requests.
-Note that servers that have not been updated to understand this field
-will not comply with this requirement.
+attached preferences for a PUT request,
+where the content that is used to answer subsequent GET requests,
+might be copied to the response to those GET requests.
+For this to happen,
+servers or resources need to be updated
+to understand this field
+and then decide to use the preferences.
 
 The Content-Usage field does not have any special effect on caching.
 
@@ -225,6 +228,7 @@ The core function of Robots Exclusion Protocol format {{ROBOTS}}
 (or the "robots.txt" file)
 is to describe the expectations of the server operator
 about which paths can be crawled.
+
 This document adds a new rule that associates usage preferences
 with different paths.
 This new rule applies to any paths that can be crawled;
@@ -317,6 +321,12 @@ The remainder of the line -
 up to either the first CR (U+0D), LF (U+0A), or octothorpe ("#", U+23) -
 is the rule value.
 
+{:aside}
+> Note that while URI syntax permits the use of an octothorpe
+> for a fragment identifier,
+> fragment identifiers cannot be used
+> with HTTP or the "robots.txt" format.
+
 The first character of the rule value will be "/" (U+2F)
 if a non-empty path is specified.
 Paths always start with a "/" character,
@@ -334,7 +344,9 @@ defined in {{Section 6 of VOCAB}}.
 The parsing and processing rules from {{Sections 6 and 7 of VOCAB}} apply.
 
 Note that a statement of preference is processed as a sequence of bytes,
-rather than Unicode text; see {{Section 6.3 of VOCAB}}.
+rather than Unicode text.
+The value is first encoded into bytes before processing;
+see {{Section 6.3 of VOCAB}}.
 
 
 ## When Preferences Apply
