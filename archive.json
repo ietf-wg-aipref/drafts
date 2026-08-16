@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-08-13T02:26:45.658821+00:00",
+  "timestamp": "2026-08-16T01:43:14.995524+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -2688,7 +2688,7 @@
       "id": "I_kwDOOWk1-s7NAlMo",
       "title": "Removing normative language: respect, ignore",
       "url": "https://github.com/ietf-wg-aipref/drafts/issues/162",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "Jo-Levy",
       "authorAssociation": "NONE",
       "assignees": [
@@ -2701,9 +2701,24 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nAs raised in 8/25 Jlevy comment and subsequent discussions, the language and terminology embedded throughouth is normatively charged and inaccurately attributes human intentions/emotions into this vocabulary, which by its nature is directed at computer programs or algorithms.   Throughout the Vocab document, the words \"respect\" and \"ignore\" should be changed to \"follow\" or \"not follow\" preference expresssions or intructions.   \n\n\n### Proposed Resolution\n\nSolution:  In 3.2, \n-change \"whether preferences are actually respected during data processing\"  to \"whether preferencdesare actually followed during data processing.\"\n - change \"An entity that receives usage preferences MAY choose to respect those preferences...\" to \"An entity that receives usage preferences MAY choose to follow those preferences.\n-change \"ignored\" to \"not followed\", \"ignoring\" to \"not following\" and \"ignore\" to \"not follow\" throughout 3.2",
       "createdAt": "2025-09-22T07:03:28Z",
-      "updatedAt": "2026-04-10T05:53:42Z",
-      "closedAt": null,
-      "comments": []
+      "updatedAt": "2026-08-14T07:54:01Z",
+      "closedAt": "2026-08-14T07:42:28Z",
+      "comments": [
+        {
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "I think that we've made enough different changes that this is no longer a concern.  #213 make the final cuts here, so that we only use \"follow\" and variations on that.\n\nI just searched for the two words in question (\"respect\" and \"ignore\") and each appears twice... sort of.  The occurrences of \"respect\" only appear as part of \"respectively\", which is fine, and the occurrences of \"ignore\" relate to how we handle extensions (the requirement is that those are \"ignored\").\n\nIn short, I think we've fixed this and I'm going to close it (it's an editorial issue).",
+          "createdAt": "2026-08-14T07:42:28Z",
+          "updatedAt": "2026-08-14T07:42:28Z"
+        },
+        {
+          "author": "Jo-Levy",
+          "authorAssociation": "NONE",
+          "body": "That makes sense \u2014I agree. \r\n\r\n\r\nSent from Yahoo Mail for iPhone\r\n\r\n\r\nOn Friday, August 14, 2026, 12:42 AM, Martin Thomson ***@***.***> wrote:\r\n\r\nmartinthomson left a comment (ietf-wg-aipref/drafts#162)\r\nI think that we've made enough different changes that this is no longer a concern. #213 make the final cuts here, so that we only use \"follow\" and variations on that.\r\n\r\nI just searched for the two words in question (\"respect\" and \"ignore\") and each appears twice... sort of. The occurrences of \"respect\" only appear as part of \"respectively\", which is fine, and the occurrences of \"ignore\" relate to how we handle extensions (the requirement is that those are \"ignored\").\r\n\r\nIn short, I think we've fixed this and I'm going to close it (it's an editorial issue).\r\n\r\n\u2014\r\nReply to this email directly, view it on GitHub, or unsubscribe.\r\nYou are receiving this because you authored the thread.Message ID: ***@***.***>\r\n \r\n\r\n\r\n",
+          "createdAt": "2026-08-14T07:54:01Z",
+          "updatedAt": "2026-08-14T07:54:01Z"
+        }
+      ]
     },
     {
       "number": 163,
@@ -2799,7 +2814,7 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nSection 3.1 titled Conformance states that an implentation is conformant to the specifications if it correctly follows all normative requirements that apply to it.  This pertains to enforcement, which is out of scope for the Vocab and Attach document. It adds nothing to the Vocabulary or statement of preference. Solution: Delete 3.1 Conformance.\n\n### Proposed Resolution\n\nDelete Section 3.1 Conformance.",
       "createdAt": "2025-09-22T07:38:58Z",
-      "updatedAt": "2026-04-15T15:52:12Z",
+      "updatedAt": "2026-08-14T07:38:51Z",
       "closedAt": null,
       "comments": [
         {
@@ -2829,6 +2844,13 @@
           "body": "Please take a look at PR #195 for some text suggestions from the editors.",
           "createdAt": "2026-04-15T15:52:12Z",
           "updatedAt": "2026-04-15T15:52:12Z"
+        },
+        {
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "As #195 was merged (after a constructive discussion) I'd like to check whether this concern remains.  I *think* that we are OK closing this, but I want to be sure.",
+          "createdAt": "2026-08-14T07:38:51Z",
+          "updatedAt": "2026-08-14T07:38:51Z"
         }
       ]
     },
@@ -2864,9 +2886,17 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nBoth robots.txt and the Vocab document have language clarifying that the documents do not include enforcement mechanisms.  The Attach document is not. Propose adding  non-enforcement provision similar to Vocab document.\n\n### Proposed Resolution\n\nSuggest adding new Section with non-enforceability language: \n Non-Enforceability.   This specification is not enforceable.  An entity that receives content usage preferences MAY choose whether or not to follow the preferences.  Many factors may be considered in determining whether to follow a preference, including but not limited to  how the usage corresponds to the usage categories where preferences have been expressed, the type of content, the identity and authority of the Declarant to assert a preference over the specified content, the applicable legal context, or other considerations such as free expression, safety, education, scholarship, research, preservation, interoperability, and accessibility.\n",
       "createdAt": "2025-09-22T07:59:17Z",
-      "updatedAt": "2026-04-10T05:55:15Z",
+      "updatedAt": "2026-08-14T07:11:11Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "With the changes to Section 3.2 now added in #213, is this proposal still active @Jo-Levy? ",
+          "createdAt": "2026-08-14T07:11:11Z",
+          "updatedAt": "2026-08-14T07:11:11Z"
+        }
+      ]
     },
     {
       "number": 167,
@@ -3312,7 +3342,7 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nThe inclusion of \u201cfine-tune\u201d in the Foundation AI Model Production category (section 4.2 of draft version 4) is unnecessary and scientifically imprecise. Fine-tuning has a overly broad meaning dependent on context and is very hard to define. The term is ambiguous and context-dependent: in modern ML practice, fine-tuning can describe a wide range of techniques, from full parameter re-optimization to lightweight adapter or prompt-based adjustments, varying substantially by architecture and application. Treating it as a discrete category risks conflating routine adaptation with foundational training, creating ambiguity for implementers and misalignment with publisher intent.  \n\nImportantly, this terminology was never raised or discussed in prior WG deliberations, and its late unnecessary introduction expands scope without clear consensus or definitional precision. This is also apparent in the fact that fine-tuning is never defined in the document. \n\n### Proposed Resolution\n\nRemove the term fully and avoid confusion and ambiguity. Potentially rename the category as \u201cFoundational AI Model Training and models refined from them\u201d as \u201cThe act of using content to train large-scale, general-purpose generative AI models intended to enable broad capabilities, including the generation of text, images, and other synthetic content across diverse domains.\u201d",
       "createdAt": "2025-10-30T23:12:13Z",
-      "updatedAt": "2026-04-10T05:54:37Z",
+      "updatedAt": "2026-08-14T07:12:12Z",
       "closedAt": null,
       "comments": [
         {
@@ -3321,6 +3351,13 @@
           "body": "March Interim:\n\nMT: \"overly broad\" is not agreed to, but there is a valid concern here. Concrete issue is the scope of the definition of AI training.\n\nTimid Robot: It would be helpful if people could suggest terms in the issue.\n\nChris Needham: Fine-tuning sits within the definition of training for me, I'm not sure it helps to pull it apart.\n\nAlissa: When does the model stop being produced? I.e., what is the boundary condition? If we can define that, we may be able to make progress.\n\nPedro Suarez: Fine-tuning can mean many things. If we worry just about production, it's easier to talk about. Are the weights changing? is the model itself changing? Is the model stable?\n\n",
           "createdAt": "2026-03-03T21:13:52Z",
           "updatedAt": "2026-03-03T21:13:52Z"
+        },
+        {
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "With #211, the definition doesn't use that language.  I think that this one has been addressed.",
+          "createdAt": "2026-08-14T07:12:12Z",
+          "updatedAt": "2026-08-14T07:12:12Z"
         }
       ]
     },
@@ -3923,6 +3960,28 @@
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nI think the current AIPREF category definitions for `train-ai` and `search` need tighter boundary behavior in edge cases, especially where workflows involve retrieval, summarization, and mixed pipelines. This creates ambiguity for implementers and reviewers when categories overlap.\n\nRelated discussions already exist, but they do not provide a shared test matrix artifact for classification consistency:\n- https://github.com/ietf-wg-aipref/drafts/issues/196\n- https://github.com/ietf-wg-aipref/drafts/issues/172\n- https://github.com/ietf-wg-aipref/drafts/issues/150\n\n### Proposed Resolution\n\nI propose to create a dedicated use-case matrix artifact (appendix or companion markdown) that tests expected behavior per category and overlap precedence.\n\n## Edge-Case Scenarios\n- Search retrieval with snippets only (no model update)\n- Search retrieval feeding grounding for generated answer\n- Search result ranking model continuously updated from click logs\n- User-supplied content in prompt plus crawler-sourced context\n- Crawler-sourced corpus used for test-time adaptation\n- RAG pipeline with caching of embeddings derived from content\n- Search display where AI transforms excerpts for accessibility\n\nPS : This does not introduce new categories, only validates current category behavior\n\n## Suggested matrix columns:\n\n* Scenario ID\n* Input source (crawler discovered / user provided / hybrid)\n* Processing stage (indexing / ranking / retrieval / grounding / generation / model update)\n* Output behavior (link-only / snippet / summary / generated answer)\n* Categories triggered (search, train-ai, other)\n* Declared preferences\n* Expected effective result\n* Rationale (with spec section reference)\n* Ambiguity note (if any)",
       "createdAt": "2026-07-24T12:50:35Z",
       "updatedAt": "2026-07-24T12:50:35Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 217,
+      "id": "I_kwDOOWk1-s8AAAABMuSAgg",
+      "title": "Use of \"synthetic\" in AI definitions",
+      "url": "https://github.com/ietf-wg-aipref/drafts/issues/217",
+      "state": "OPEN",
+      "author": "martinthomson",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [
+        "martinthomson",
+        "paul2keller"
+      ],
+      "labels": [
+        "vocabulary",
+        "terminology"
+      ],
+      "body": "### Confirmation\n\n- [x] I have reviewed our [existing issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nBoth @lrosenthol and @chrisn identified the word \"synthetic\" as being somewhat objectionable in the following definition of AI Training (from #211):\n\n> Using an asset to modify the learned parameters of an AI model that is used to generate **synthetic** content in one or more modalities.\n\n(Emphasis mine.)\n\nThis phrasing, \"an AI model that is used to generate (synthetic) content in one or more modalities\" is likely to be part of other vocabulary definitions we build.  So, while my sense is that the objection is not very strong, it is worth getting this right.\n\n---\n\nFor reference, a dictionary defines \"synthetic\" (adj.) as:\n\n1. Relating to, involving, or of the nature of synthesis.\n2. Produced by synthesis, especially not of natural origin.\n3. Prepared or made artificially.\n\n### Proposed Resolution\n\nNo concrete recommendation from me; I just want a resolution.\n\nArguments in favor of removal presented thus far are centered on the view that the word is redundant or immaterial. @chrisn suggests that using the word leaves another place where meaning and interpretation are open to debate.\n\nFrom my reading of the definitions above, an AI model inarguably produces synthetic content, likely following definition 3. The origin of any AI output is always artificial, unless it is reduced to a copy of material from a single natural source.  That's not a useful thing.  Once multiple sources are copied, that is synthesis.\n\nSo I don't think that the meaning can be ambiguous in any way.  However, the question of redundancy remains.\n\nEven if it is redundant, the arguments in favor of retaining \"synthetic\" seem to reduce to a belief that it is an important emphasis.",
+      "createdAt": "2026-08-14T05:59:19Z",
+      "updatedAt": "2026-08-14T05:59:19Z",
       "closedAt": null,
       "comments": []
     }
@@ -10468,24 +10527,26 @@
       "id": "PR_kwDOOWk1-s7p4CDM",
       "title": "Refine section 4.1 based on Toronto discussion",
       "url": "https://github.com/ietf-wg-aipref/drafts/pull/211",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "kelleyk",
-      "authorAssociation": "NONE",
+      "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "Here are the proposed tweaks to the definition of model training that I mentioned on the interim call.  (This was originally homework from Toronto; sorry that it's taken so long to post.)  I think that this gets us to a description of what it means to train a general-purpose foundation model without relying on any of the words that have raised objections in past drafts.\r\n\r\nThe most substantive change I'm proposing in this PR is that we move from talking about a model that \"can generate\" to one that \"is used, or made available for use, to generate.\"  One of the things that I heard most clearly in Toronto from people thinking about declaring preferences was concern about the subjectivity of definitions based on purpose and intent, and about the possibility that either might change over time.\r\n\r\nThis makes the category slightly more narrow, but also more objective\u2014something either was used or it wasn't; much less is subject to interpretation.  The same property should let implementers apply the category consistently, too.\r\n\r\nThis approach also focuses on the activity rather than the technology, which I hope addresses the concerns that were raised in Toronto about unintended consequences.\r\n\r\nI've expanded \"used\" to \"used, or made available for use\" in an attempt to address the concerns that were raised about open-weight models and organizational boundaries.\r\n\r\nI've replaced the \"produce or refine\" language in the current draft with \"modify\", which I think encompasses both; producing a model is the process of iteratively refining its weights.\r\n\r\nI've also kept \"asset\" from the current draft.  I know that some folks had concerns about that term in Toronto; I don't feel strongly about it, so long as we have a word for \"piece of data\".",
       "createdAt": "2026-06-23T23:30:45Z",
-      "updatedAt": "2026-08-10T16:08:12Z",
+      "updatedAt": "2026-08-14T05:59:54Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "26841404458861cc6bd54ef52af63c7736c315c2",
       "headRepository": "kelleyk/ietf-wg-aipref-drafts",
       "headRefName": "training-definition",
       "headRefOid": "628e9f474853fbc6fe9c65381fdcbfbc7556a611",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2026-08-14T05:59:54Z",
+      "mergedAt": "2026-08-14T05:59:54Z",
+      "mergedBy": "martinthomson",
+      "mergeCommit": {
+        "oid": "6e48ff0429f85874c9a6424aeb552117973c14f7"
+      },
       "comments": [
         {
           "author": "B1ueD0g",
@@ -10510,7 +10571,7 @@
         },
         {
           "author": "kelleyk",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "body": "I've updated this PR based on the discussion on the list.  Folks there generally agreed with the idea behind the \"or made available for use\" phrasing, but felt that it would be better handled as an attachment concern.  That seems just as good to me.",
           "createdAt": "2026-07-24T12:01:39Z",
           "updatedAt": "2026-07-24T12:01:39Z"
@@ -10524,10 +10585,10 @@
           },
           "author": "lrosenthol",
           "authorAssociation": "CONTRIBUTOR",
-          "state": "CHANGES_REQUESTED",
+          "state": "DISMISSED",
           "body": "",
           "createdAt": "2026-06-24T11:48:23Z",
-          "updatedAt": "2026-06-24T11:49:02Z",
+          "updatedAt": "2026-08-14T05:59:50Z",
           "comments": [
             {
               "originalPosition": 9,
@@ -10696,24 +10757,26 @@
       "id": "PR_kwDOOWk1-s7qSA9T",
       "title": "Simplify Section 3.2",
       "url": "https://github.com/ietf-wg-aipref/drafts/pull/212",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "chrisn",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "This removes two paragraphs from Section 3.2, following discussion in the subgroup that's formed to focus on this part of the draft.\r\n\r\n- The first reiterates what's stated elsewhere in the draft\r\n- The second describes the categories, so belongs in Section 4\r\n\r\n",
       "createdAt": "2026-06-24T20:37:51Z",
-      "updatedAt": "2026-06-25T12:07:35Z",
+      "updatedAt": "2026-08-14T01:20:13Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "26841404458861cc6bd54ef52af63c7736c315c2",
       "headRepository": "chrisn/ietf-wg-aipref-drafts",
       "headRefName": "simplify-section-3.2",
       "headRefOid": "227eda90dcf0df979cd96cd138f3a1a48252e825",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2026-08-14T01:20:13Z",
+      "mergedAt": "2026-08-14T01:20:13Z",
+      "mergedBy": "martinthomson",
+      "mergeCommit": {
+        "oid": "227eda90dcf0df979cd96cd138f3a1a48252e825"
+      },
       "comments": [
         {
           "author": "chrisn",
@@ -10751,24 +10814,26 @@
       "id": "PR_kwDOOWk1-s7uw82h",
       "title": "Update \u00a73.2 Applying Preferences and \u00a74 Vocabulary Definition",
       "url": "https://github.com/ietf-wg-aipref/drafts/pull/213",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "TimidRobot",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "**Update Sections 3.2 Applying Preferences and Section 4 Vocabulary Definition**\r\n- Replace Sections 3.2 Applying Preferences with proposed text from subgroup, updated to incorporate Editors' suggestions.\r\n  - Goals of the update include (non-exhaustive):\r\n    - Simplify and ease reader comprehension\r\n    - Provide waypoints for well-intended conscientious public actors\r\n    - Call attention to the limitations of the Vocabulary\r\n  - The above goals are in tension. Hopefully the proposed text strikes a good balance that minimizes misunderstanding and unintentional harms.\r\n- Add clarifying text to Section 4 Vocabulary Definition (this PR builds on #212)\r\n- Uses non-normative language per:\r\n  - #162",
       "createdAt": "2026-07-07T10:02:37Z",
-      "updatedAt": "2026-08-10T23:57:09Z",
+      "updatedAt": "2026-08-14T01:20:11Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "26841404458861cc6bd54ef52af63c7736c315c2",
       "headRepository": "TimidRobot/aipref-drafts",
       "headRefName": "sections-3-2-and-4",
       "headRefOid": "6ecdbb87518c5a9f709e83275af294a59a7130e2",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2026-08-14T01:20:11Z",
+      "mergedAt": "2026-08-14T01:20:11Z",
+      "mergedBy": "martinthomson",
+      "mergeCommit": {
+        "oid": "de1408b8088ad855c6d8619725980e363bb3d82f"
+      },
       "comments": [
         {
           "author": "TimidRobot",
@@ -11293,6 +11358,138 @@
           "updatedAt": "2026-08-12T08:31:46Z"
         }
       ],
+      "reviews": []
+    },
+    {
+      "number": 218,
+      "id": "PR_kwDOOWk1-s7-9CNR",
+      "title": "Make sure we acknowledge Kevin",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/218",
+      "state": "OPEN",
+      "author": "martinthomson",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [
+        "editorial"
+      ],
+      "body": "The text in #211 was an important contribution.",
+      "createdAt": "2026-08-14T06:01:43Z",
+      "updatedAt": "2026-08-14T06:01:43Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "6e48ff0429f85874c9a6424aeb552117973c14f7",
+      "headRepository": "ietf-wg-aipref/drafts",
+      "headRefName": "ack-kevin",
+      "headRefOid": "9221c129c58952f0a6a96a7baed50d17168b1259",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 219,
+      "id": "PR_kwDOOWk1-s7--dgB",
+      "title": "Remove nesting",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/219",
+      "state": "OPEN",
+      "author": "martinthomson",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "The hierarchical design we started with in earlier revisions has been clearly replaced with a system of tiling.  No term nests within another and no overlap is tolerated.  This change executes on that fully.\r\n\r\nThere might be a few minor cleanups throughout as I touched those parts, but I left the contentious stuff along.  Those changes should be purely editorial.\r\n\r\nCloses #170.",
+      "createdAt": "2026-08-14T07:12:54Z",
+      "updatedAt": "2026-08-14T07:12:54Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "6e48ff0429f85874c9a6424aeb552117973c14f7",
+      "headRepository": "ietf-wg-aipref/drafts",
+      "headRefName": "no-hierarchy",
+      "headRefOid": "ee6eb24a4d9989949f612989a69551ed43484693",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 220,
+      "id": "PR_kwDOOWk1-s7--lXv",
+      "title": "Loosen requirement on HTTP resources",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/220",
+      "state": "OPEN",
+      "author": "martinthomson",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Plus a few minor editorial things in the attachment document, tracking similar changes in the vocabulary.\r\n\r\nCloses #168.",
+      "createdAt": "2026-08-14T07:18:59Z",
+      "updatedAt": "2026-08-14T07:18:59Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "6e48ff0429f85874c9a6424aeb552117973c14f7",
+      "headRepository": "ietf-wg-aipref/drafts",
+      "headRefName": "fixup-attach",
+      "headRefOid": "47652126c472e2962a481becedd0f6c5395fb07b",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 221,
+      "id": "PR_kwDOOWk1-s7--1JE",
+      "title": "Address distinction between access and use",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/221",
+      "state": "OPEN",
+      "author": "martinthomson",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "There's a lengthy discussion of this in #167 and #193, but the change here is short enough, I think.\r\n\r\nThis addresses questions of the difference between getting something and then using it.  It also addresses the expectations about preferences with respect to uses of assets downstream of acquisition.  This is particularly relevant to the attachment mechanisms we have here (unlike embedded metadata or registries) because the preferences are external to the asset itself.\r\n\r\nCloses #167.\r\nCloses #193.",
+      "createdAt": "2026-08-14T07:29:01Z",
+      "updatedAt": "2026-08-14T08:02:12Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "6e48ff0429f85874c9a6424aeb552117973c14f7",
+      "headRepository": "ietf-wg-aipref/drafts",
+      "headRefName": "access-vs-use",
+      "headRefOid": "67dd5fc4189717879a12916d31f0c1dd537869f7",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 222,
+      "id": "PR_kwDOOWk1-s7--_gH",
+      "title": "Rework attachment abstract",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/222",
+      "state": "OPEN",
+      "author": "martinthomson",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "This takes a more dramatic cut than proposed in the issue, but I think it is best to focus on this document being strictly factual.  And as dry as possible (fond thoughts of France, not the inclusion of vermouth, as it were).\r\n\r\nCloses #165.",
+      "createdAt": "2026-08-14T07:37:04Z",
+      "updatedAt": "2026-08-14T07:37:04Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "6e48ff0429f85874c9a6424aeb552117973c14f7",
+      "headRepository": "ietf-wg-aipref/drafts",
+      "headRefName": "consumed-reword",
+      "headRefOid": "b8e6c47fba73ce4b91d3fee9ad19fa6b550b6631",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
       "reviews": []
     }
   ]
