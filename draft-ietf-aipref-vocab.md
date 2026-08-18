@@ -273,8 +273,6 @@ in ways that meet the above conditions.
 Extensions to this vocabulary are defined
 in a standards-track RFC that updates this document.
 
-Vocabulary extensions MUST consider
-how the definition of terms could overlap with other existing terms.
 The definition of the extension MUST define
 how any potential overlap is resolved.
 
