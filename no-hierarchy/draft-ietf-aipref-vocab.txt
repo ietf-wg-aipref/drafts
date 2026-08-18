@@ -301,9 +301,8 @@ Table of Contents
    Extensions to this vocabulary are defined in a standards-track RFC
    that updates this document.
 
-   Vocabulary extensions MUST consider how the definition of terms could
-   overlap with other existing terms.  The definition of the extension
-   MUST define how any potential overlap is resolved.
+   The definition of the extension MUST define how any potential overlap
+   is resolved.
 
    This document resolves overlap between categories of use by
    explicitly designating any usage that might be covered by multiple
