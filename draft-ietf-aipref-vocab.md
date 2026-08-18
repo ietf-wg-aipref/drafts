@@ -156,7 +156,6 @@ as it relates to understanding what the preferences for a given asset are
 (as opposed to what actions might then follow).
 
 A recipient can only apply preferences it understands.
-Recipients might not implement this specification.
 Recipients that implement this specification
 will understand the vocabulary terms defined in {{vocab}},
 but they might not understand extensions; see {{extension}}.
