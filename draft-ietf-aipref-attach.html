@@ -1342,8 +1342,8 @@ are intended to be complementary with other mechanisms.<a href="#section-1.3-3" 
 <a href="#section-1.3.1" class="section-number selfRef">1.3.1. </a><a href="#name-embedded-preferences" class="section-name selfRef">Embedded Preferences</a>
           </h4>
 <p id="section-1.3.1-1">Embedding preferences is expected to be an effective means
-of associating preferences with content,
-because it ensures that metadata is always associated with content.
+of associating preferences with assets,
+because it ensures that metadata travels with the asset.
 This document, however, does not define any specific means of embedding preferences
 in content.<a href="#section-1.3.1-1" class="pilcrow">¶</a></p>
 <p id="section-1.3.1-2">The main challenge with embedding preferences is that
@@ -1355,8 +1355,8 @@ whether it represent audio, documents, images, video,
 or other types of content.
 Furthermore,
 some content types,
-such as plain text (<code>text/plain</code>),
-offer no standardized means of embedding preferences.<a href="#section-1.3.1-2" class="pilcrow">¶</a></p>
+such as plain text (<code>text/plain</code> and many other purely textual formats),
+offer no standardized and interoperable means of embedding metadata.<a href="#section-1.3.1-2" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="registry-based-preferences">
@@ -1402,14 +1402,17 @@ That is, the field is representation metadata (<span><a href="https://rfc-editor
 that applies the representation data (<span><a href="https://rfc-editor.org/rfc/rfc9110#section-8.1" class="relref">Section 8.1</a> of [<a href="#HTTP" class="cite xref">HTTP</a>]</span>).
 Informally, usage preferences apply to the content of a message,
 not the resource.<a href="#section-2-2" class="pilcrow">¶</a></p>
-<p id="section-2-3">Servers <span class="bcp14">MUST</span> retain any preferences associated with a request
+<p id="section-2-3">Servers can use any preferences associated with a request
 if the content of that request
 is used to answer later requests.
 For example,
-the content of a PUT request that is used
-to answer subsequent GET requests.
-Note that servers that have not been updated to understand this field
-will not comply with this requirement.<a href="#section-2-3" class="pilcrow">¶</a></p>
+attached preferences for a PUT request,
+where the content that is used to answer subsequent GET requests,
+might be copied to the response to those GET requests.
+For this to happen,
+servers or resources would need to be updated
+to understand this field
+and then decide to use the preferences.<a href="#section-2-3" class="pilcrow">¶</a></p>
 <p id="section-2-4">The Content-Usage field does not have any special effect on caching.<a href="#section-2-4" class="pilcrow">¶</a></p>
 </section>
 </div>
@@ -1421,19 +1424,19 @@ will not comply with this requirement.<a href="#section-2-3" class="pilcrow">¶<
 <p id="section-3-1">The core function of Robots Exclusion Protocol format <span>[<a href="#ROBOTS" class="cite xref">ROBOTS</a>]</span>
 (or the "robots.txt" file)
 is to describe the expectations of the server operator
-about which paths can be crawled.
-This document adds a new rule that associates usage preferences
+about which paths can be crawled.<a href="#section-3-1" class="pilcrow">¶</a></p>
+<p id="section-3-2">This document adds a new rule that associates usage preferences
 with different paths.
 This new rule applies to any paths that can be crawled;
-paths that cannot be crawled have no associated usage preferences.<a href="#section-3-1" class="pilcrow">¶</a></p>
-<p id="section-3-2">A Content-Usage rule is added to the set of potential rules
+paths that cannot be crawled have no associated usage preferences.<a href="#section-3-2" class="pilcrow">¶</a></p>
+<p id="section-3-3">A Content-Usage rule is added to the set of potential rules
 that can be included in a Group
-for "robots.txt".<a href="#section-3-2" class="pilcrow">¶</a></p>
-<p id="section-3-3">The <code>rule</code> ABNF pattern from <span><a href="https://rfc-editor.org/rfc/rfc9309#section-2.2" class="relref">Section 2.2</a> of [<a href="#ROBOTS" class="cite xref">ROBOTS</a>]</span>
-is extended as shown in <a href="#f-abnf" class="auto internal xref">Figure 1</a>.<a href="#section-3-3" class="pilcrow">¶</a></p>
+for "robots.txt".<a href="#section-3-3" class="pilcrow">¶</a></p>
+<p id="section-3-4">The <code>rule</code> ABNF pattern from <span><a href="https://rfc-editor.org/rfc/rfc9309#section-2.2" class="relref">Section 2.2</a> of [<a href="#ROBOTS" class="cite xref">ROBOTS</a>]</span>
+is extended as shown in <a href="#f-abnf" class="auto internal xref">Figure 1</a>.<a href="#section-3-4" class="pilcrow">¶</a></p>
 <span id="name-extended-robotstxt-abnf"></span><div id="f-abnf">
 <figure id="figure-1">
-        <div class="lang-abnf sourcecode" id="section-3-4.1">
+        <div class="lang-abnf sourcecode" id="section-3-5.1">
 <pre>
 rule =/ content-usage
 
@@ -1446,15 +1449,15 @@ usage-pref    = &lt;usage preference vocabulary from [VOCAB]&gt;
 <a href="#name-extended-robotstxt-abnf" class="selfRef">Extended robots.txt ABNF</a>
         </figcaption></figure>
 </div>
-<p id="section-3-5">Each group contains zero or more Content-Usage rules.
+<p id="section-3-6">Each group contains zero or more Content-Usage rules.
 Each Content-Usage rule consists of a path
 and a usage preference.
 The path might be absent or empty;
 if a path present,
-a SP or HTAB separates it from the usage preference.<a href="#section-3-5" class="pilcrow">¶</a></p>
-<p id="section-3-6">Note that the statement of preference encoding
+a SP or HTAB separates it from the usage preference.<a href="#section-3-6" class="pilcrow">¶</a></p>
+<p id="section-3-7">Note that the statement of preference encoding
 does not use an ABNF definition,
-relying instead on the definitions in <span>[<a href="#FIELDS" class="cite xref">FIELDS</a>]</span>.<a href="#section-3-6" class="pilcrow">¶</a></p>
+relying instead on the definitions in <span>[<a href="#FIELDS" class="cite xref">FIELDS</a>]</span>.<a href="#section-3-7" class="pilcrow">¶</a></p>
 <div id="content-usage-rule-semantics">
 <section id="section-3.1">
         <h3 id="name-content-usage-rule-semantic">
@@ -1511,21 +1514,29 @@ in addition to before and after the COLON (":", U+3A) separator.<a href="#sectio
 <p id="section-3.2-2">The remainder of the line -
 up to either the first CR (U+0D), LF (U+0A), or octothorpe ("#", U+23) -
 is the rule value.<a href="#section-3.2-2" class="pilcrow">¶</a></p>
-<p id="section-3.2-3">The first character of the rule value will be "/" (U+2F)
+<aside id="section-3.2-3">
+          <p id="section-3.2-3.1">Note that while URI syntax permits the use of an octothorpe
+for a fragment identifier,
+fragment identifiers cannot be used
+with HTTP or the "robots.txt" format.<a href="#section-3.2-3.1" class="pilcrow">¶</a></p>
+</aside>
+<p id="section-3.2-4">The first character of the rule value will be "/" (U+2F)
 if a non-empty path is specified.
 Paths always start with a "/" character,
 so a rule value that starts with any other character
-indicates that the path is absent.<a href="#section-3.2-3" class="pilcrow">¶</a></p>
-<p id="section-3.2-4">If a path is specified,
+indicates that the path is absent.<a href="#section-3.2-4" class="pilcrow">¶</a></p>
+<p id="section-3.2-5">If a path is specified,
 the path ends immediately before the first SP (U+20) or HTAB ("U+09") character.
 The remainder of the rule value is the statement of preference.
 If a path is absent,
-the entire rule value is the statement of preference.<a href="#section-3.2-4" class="pilcrow">¶</a></p>
-<p id="section-3.2-5">The usage preference is encoded using the exemplary format
+the entire rule value is the statement of preference.<a href="#section-3.2-5" class="pilcrow">¶</a></p>
+<p id="section-3.2-6">The usage preference is encoded using the exemplary format
 defined in <span><a href="https://datatracker.ietf.org/doc/html/draft-ietf-aipref-vocab#section-6" class="relref">Section 6</a> of [<a href="#VOCAB" class="cite xref">VOCAB</a>]</span>.
-The parsing and processing rules from Sections <a href="https://datatracker.ietf.org/doc/html/draft-ietf-aipref-vocab#section-6" class="relref">6</a> and <a href="https://datatracker.ietf.org/doc/html/draft-ietf-aipref-vocab#section-7" class="relref">7</a> of <span>[<a href="#VOCAB" class="cite xref">VOCAB</a>]</span> apply.<a href="#section-3.2-5" class="pilcrow">¶</a></p>
-<p id="section-3.2-6">Note that a statement of preference is processed as a sequence of bytes,
-rather than Unicode text; see <span><a href="https://datatracker.ietf.org/doc/html/draft-ietf-aipref-vocab#section-6.3" class="relref">Section 6.3</a> of [<a href="#VOCAB" class="cite xref">VOCAB</a>]</span>.<a href="#section-3.2-6" class="pilcrow">¶</a></p>
+The parsing and processing rules from Sections <a href="https://datatracker.ietf.org/doc/html/draft-ietf-aipref-vocab#section-6" class="relref">6</a> and <a href="https://datatracker.ietf.org/doc/html/draft-ietf-aipref-vocab#section-7" class="relref">7</a> of <span>[<a href="#VOCAB" class="cite xref">VOCAB</a>]</span> apply.<a href="#section-3.2-6" class="pilcrow">¶</a></p>
+<p id="section-3.2-7">Note that a statement of preference is processed as a sequence of bytes,
+rather than Unicode text.
+The value is first encoded into bytes before processing;
+see <span><a href="https://datatracker.ietf.org/doc/html/draft-ietf-aipref-vocab#section-6.3" class="relref">Section 6.3</a> of [<a href="#VOCAB" class="cite xref">VOCAB</a>]</span>.<a href="#section-3.2-7" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="when-preferences-apply">
