@@ -278,12 +278,6 @@ how any potential overlap between usage categories is resolved.
 Definitions can identify which usage category applies
 for any such overlap.
 
-This document resolves overlap between categories of use
-by explicitly designating any usage
-that might be covered by multiple terms
-as belonging to a single category.
-This approach is strongly encouraged for any extension.
-
 Systems that use this vocabulary might seek to integrate
 the terms in this vocabulary
 as part of a larger data model that includes other terms not defined here.
