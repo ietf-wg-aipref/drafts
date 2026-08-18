@@ -6,7 +6,7 @@ AI Preferences                                                 G. Illyes
 Internet-Draft                                                    Google
 Updates: 9309 (if approved)                                   M. Thomson
 Intended status: Standards Track                                 Mozilla
-Expires: 15 February 2027                                 14 August 2026
+Expires: 19 February 2027                                 18 August 2026
 
 
          Associating AI Usage Preferences with Content in HTTP
@@ -54,7 +54,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 15 February 2027.
+   This Internet-Draft will expire on 19 February 2027.
 
 Copyright Notice
 
@@ -161,10 +161,9 @@ Table of Contents
    The acquisition of an asset -- or the receiving of a representation
    -- is distinct from how that asset is subsequently used.
 
-   Consequently, this document takes the view that usage preferences do
-   not apply to the acquisition of assets.  They only apply to how those
-   assets are used; see Section 3.2 of [VOCAB] for a discussion on what
-   it means to follow or not follow a preference.
+   Usage preferences do not apply to how assets are acquired.  They only
+   apply to how those assets are used; see Section 3.2 of [VOCAB] for a
+   discussion on what it means to follow or not follow a preference.
 
    Mechanisms for limiting access to assets, such as access control or
    the Disallow rules in "robots.txt", are out of scope for this work.
