@@ -197,9 +197,9 @@ Table of Contents
    opposed to what actions might then follow).
 
    A recipient can only apply preferences it understands.  Recipients
-   might not implement this specification.  Recipients that implement
-   this specification will understand the vocabulary terms defined in
-   Section 4, but they might not understand extensions; see Section 6.4.
+   that implement this specification will understand the vocabulary
+   terms defined in Section 4, but they might not understand extensions;
+   see Section 6.4.
 
    A recipient can only understand preferences expressed through
    mechanisms it has implemented.  Those methods might be limited to
