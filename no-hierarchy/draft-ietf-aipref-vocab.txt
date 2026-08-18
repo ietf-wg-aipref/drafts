@@ -5,8 +5,8 @@
 AI Preferences                                                 P. Keller
 Internet-Draft                                               Open Future
 Intended status: Standards Track                         M. Thomson, Ed.
-Expires: 15 February 2027                                        Mozilla
-                                                          14 August 2026
+Expires: 19 February 2027                                        Mozilla
+                                                          18 August 2026
 
 
             A Vocabulary For Expressing AI Usage Preferences
@@ -59,7 +59,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 15 February 2027.
+   This Internet-Draft will expire on 19 February 2027.
 
 Copyright Notice
 
@@ -311,10 +311,10 @@ Table of Contents
    encouraged for any extension.
 
    Systems that use this vocabulary might seek to integrate the terms in
-   this vocabulary as part of a larger data model.  This is not subject
-   to the RFC requirement above, but special care is needed to avoid
-   defining overlapping categories of use.  Section 6.6 describes how
-   concepts from an alternative format might be mapped to this
+   this vocabulary as part of a larger data model.  Such usage is not
+   subject to the RFC requirement above, but special care is needed to
+   avoid defining overlapping categories of use.  Section 6.6 describes
+   how concepts from an alternative format might be mapped to this
    vocabulary.
 
 5.  Applying Statements of Preference
