@@ -270,7 +270,7 @@ in ways that meet the above conditions.
 
 ## Vocabulary Extensions {#vocab-extension}
 
-Extensions to this vocabulary MUST be defined
+Extensions to this vocabulary are defined
 in a standards-track RFC that updates this document.
 
 Vocabulary extensions MUST consider
