@@ -6,7 +6,7 @@ AI Preferences                                                 G. Illyes
 Internet-Draft                                                    Google
 Updates: 9309 (if approved)                                   M. Thomson
 Intended status: Standards Track                                 Mozilla
-Expires: 15 February 2027                                 14 August 2026
+Expires: 19 February 2027                                 18 August 2026
 
 
          Associating AI Usage Preferences with Content in HTTP
@@ -54,7 +54,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 15 February 2027.
+   This Internet-Draft will expire on 19 February 2027.
 
 Copyright Notice
 
@@ -218,8 +218,8 @@ Table of Contents
    example, attached preferences for a PUT request, where the content
    that is used to answer subsequent GET requests, might be copied to
    the response to those GET requests.  For this to happen, servers or
-   resources need to be updated to understand this field and then decide
-   to use the preferences.
+   resources would need to be updated to understand this field and then
+   decide to use the preferences.
 
    The Content-Usage field does not have any special effect on caching.
 
