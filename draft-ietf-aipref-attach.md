@@ -215,7 +215,7 @@ attached preferences for a PUT request,
 where the content that is used to answer subsequent GET requests,
 might be copied to the response to those GET requests.
 For this to happen,
-servers or resources need to be updated
+servers or resources would need to be updated
 to understand this field
 and then decide to use the preferences.
 
