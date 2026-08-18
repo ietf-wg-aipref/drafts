@@ -274,7 +274,9 @@ Extensions to this vocabulary are defined
 in a standards-track RFC that updates this document.
 
 The definition of the extension MUST define
-how any potential overlap is resolved.
+how any potential overlap between usage categories is resolved.
+Definitions can identify which usage category applies
+for any such overlap.
 
 This document resolves overlap between categories of use
 by explicitly designating any usage
