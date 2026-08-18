@@ -287,7 +287,7 @@ This approach is strongly encouraged for any extension.
 
 Systems that use this vocabulary might seek to integrate
 the terms in this vocabulary
-as part of a larger data model.
+as part of a larger data model that includes other terms not defined here.
 Such usage is not subject to the RFC requirement above,
 but special care is needed
 to avoid defining overlapping categories of use.
