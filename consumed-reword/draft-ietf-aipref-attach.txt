@@ -6,7 +6,7 @@ AI Preferences                                                 G. Illyes
 Internet-Draft                                                    Google
 Updates: 9309 (if approved)                                   M. Thomson
 Intended status: Standards Track                                 Mozilla
-Expires: 15 February 2027                                 14 August 2026
+Expires: 19 February 2027                                 18 August 2026
 
 
          Associating AI Usage Preferences with Content in HTTP
@@ -15,9 +15,9 @@ Expires: 15 February 2027                                 14 August 2026
 Abstract
 
    Methods are defined for associating usage preferences with content
-   that is obtained using the HTTP protocol.  Two complementary methods
-   are defined using either the Robots Exclusion Protocol or HTTP header
-   fields.
+   that is obtained using the HTTP protocol.  This document defines
+   attachment methods using the Robots Exclusion Protocol and HTTP
+   header fields.
 
    This document updates RFC 9309 to allow for the inclusion of usage
    preferences.
@@ -54,7 +54,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 15 February 2027.
+   This Internet-Draft will expire on 19 February 2027.
 
 Copyright Notice
 
