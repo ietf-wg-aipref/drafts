@@ -147,9 +147,8 @@ The acquisition of an asset --
 or the receiving of a representation --
 is distinct from how that asset is subsequently used.
 
-Consequently, this document takes the view
-that usage preferences do not apply
-to the acquisition of assets.
+Usage preferences do not apply
+to how assets are acquired.
 They only apply to how those assets are used;
 see {{Section 3.2 of VOCAB}} for a discussion
 on what it means to follow or not follow a preference.
