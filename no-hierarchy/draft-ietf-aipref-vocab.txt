@@ -302,7 +302,8 @@ Table of Contents
    that updates this document.
 
    The definition of the extension MUST define how any potential overlap
-   is resolved.
+   between usage categories is resolved.  Definitions can identify which
+   usage category applies for any such overlap.
 
    This document resolves overlap between categories of use by
    explicitly designating any usage that might be covered by multiple
