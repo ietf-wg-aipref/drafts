@@ -59,9 +59,8 @@ informative:
 
 Methods are defined for associating usage preferences
 with content that is obtained using the HTTP protocol.
-Two complementary methods are defined
-using either the Robots Exclusion Protocol
-or HTTP header fields.
+This document defines attachment methods
+using the Robots Exclusion Protocol and HTTP header fields.
 
 This document updates RFC 9309
 to allow for the inclusion of usage preferences.
