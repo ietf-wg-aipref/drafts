@@ -125,20 +125,6 @@ A statement of preference can indicate preferences
 about some, all, or none of the categories from the vocabulary.
 This can mean that the preference is unknown for some usage categories.
 
-Some categories describe a proper subset of the usages of other categories.
-A preference that is stated for the more general category applies
-if the preference is unknown for the more specific category.
-
-For example, a more general category might be assigned a preference
-that allows the associated usage.
-In the absence of any statement of preference
-regarding categories that are more specific subsets of that usage category,
-usage within those categories would be also be allowed.
-An explicit preference regarding the more specific usage category
-can be used to disallow the more specific usage,
-while indicating that other usage within the more general category
-is permissible.
-
 After processing a statement of preferences
 the recipient associates each category of use
 one of three preference values: "allowed", "disallowed", or "unknown".
@@ -168,6 +154,11 @@ see {{applicability}}.
 There are also some caveats that need to be considered
 as it relates to understanding what the preferences for a given asset are
 (as opposed to what actions might then follow).
+
+A recipient can only apply preferences it understands.
+Recipients that implement this specification
+will understand the vocabulary terms defined in {{vocab}},
+but they might not understand extensions; see {{extension}}.
 
 A recipient can only understand preferences expressed
 through mechanisms it has implemented.
@@ -279,16 +270,20 @@ in ways that meet the above conditions.
 
 ## Vocabulary Extensions {#vocab-extension}
 
-Extensions to this vocabulary need to be defined in an RFC
-that updates this document.
+Extensions to this vocabulary are defined
+in a standards-track RFC that updates this document.
 
-Any future extensions to this vocabulary MUST NOT introduce additional categories
-that include existing categories defined in the vocabulary.
-That is, new categories of use can be defined as a subset of an existing category,
-but not a superset.
+The definition of the extension MUST define
+how any potential overlap between usage categories is resolved.
+Definitions can identify which usage category applies
+for any such overlap.
 
-Systems that use this vocabulary might define their own extensions
-as part of a larger data model.
+Systems that use this vocabulary might seek to integrate
+the terms in this vocabulary
+as part of a larger data model that includes other terms not defined here.
+Such usage is not subject to the RFC requirement above,
+but special care is needed
+to avoid defining overlapping categories of use.
 {{mapping}} describes how concepts from an alternative format
 might be mapped to this vocabulary.
 
@@ -297,33 +292,26 @@ might be mapped to this vocabulary.
 
 After acquiring a statement of preference,
 which might use the process in {{processing}},
-an application can determine the status of a specific usage category
-as follows:
+an application can determine the status of a specific usage category.
 
-1. If the statement of preference contains an explicit preference
-   regarding that category of use --
-   either to allow or disallow --
-   that is the result.
-
-2. Otherwise, if the usage category is a proper subset
-   of another usage category,
-   recursively apply this process to that category
-   and use the result of that process.
-
-3. Otherwise, the preference for that category is unknown.
+If the statement of preference contains an explicit preference
+regarding that category of use --
+either to allow or disallow --
+that is the outcome.
+Otherwise, the preference for that category is unknown.
 
 This process results in one of three potential answers:
 allow, disallow, and unknown.
 Applications can use the answer to guide their behavior.
 
-One approach for dealing with an "unknown" outcome
+One approach for dealing with an unknown outcome
 is to assign a default value.
 This document takes no position on what default might be assigned.
 
 
 ## Combining Preferences {#combine}
 
-an application might receive multiple statements of preference,
+An application might receive multiple statements of preference,
 obtained using different methods
 or from different declaring parties.
 This might result in conflicting preferences.
@@ -348,8 +336,8 @@ A recipient of a statement of preferences
 that follows the model in {{model}}
 might receive more specific instructions in two ways:
 
-* Extensions to the vocabulary might define more specific categories of usage.
-  Preferences about more specific categories override those of any more general category.
+* Extensions to the vocabulary
+  might add qualifications or conditions to preferences about usage.
 
 * Contractual agreements or other specific arrangements might override
   statements of preference.
@@ -374,8 +362,7 @@ which can be either `y` or `n`; see {{y-or-n}}.
 For example, the following states a preference
 to allow model training ({{train-ai}}),
 disallow search ({{search}}),
-and preference for other categories
-other than subsets of these categories are unknown:
+with the preference for other categories being unknown:
 
 ~~~
 train-ai=y, search=n
@@ -402,7 +389,7 @@ These are encoded using the mappings in {{ASCII}}.
 
 ## Preference Labels {#y-or-n}
 
-The data model in {{model}} used has two options for preferences
+The data model in {{model}} used has two options for explicit preferences
 associated with each category: allow and disallow.
 These are mapped to single byte Tokens ({{Section 3.3.4 of FIELDS}})
 of `y` and `n`, respectively.
@@ -417,7 +404,7 @@ This makes this format suitable for inclusion in any protocol or format that car
 Some formats are defined in terms of strings rather than bytes.
 These formats might need to decode the bytes of this format to obtain a string.
 As the syntax is limited to ASCII {{ASCII}},
-an ASCII decoder or UTF-8 decoder {{UTF8}} can be used.
+an ASCII or UTF-8 decoder {{UTF8}} can be used.
 This results in the strings that this document uses.
 
 Processing (see {{processing}}) requires a sequence of bytes,
@@ -432,6 +419,7 @@ the addition of new labels and the addition of parameters.
 
 New labels might be defined to correspond to new usage categories.
 {{vocab-extension}} addresses the considerations for defining new categories.
+
 New labels might also be defined for other types of extension
 that do not assign a preference to a usage category.
 In either case, when processing a parsed Dictionary to obtain preferences,
@@ -478,11 +466,18 @@ and Token values that are other than `y` or `n`.
 All of these are not errors,
 they only result in the corresponding preference being unknown.
 
+This process results in an abstract data model
+that assigns a preference to each usage category
+as described in {{model}}.
+
+
+### Multiple Preferences
+
 It is important to note that
 if the same key appears multiple times,
-only the last value is taken.
+the algorithms in {{FIELDS}} ensure that only the last value applies.
 This means that duplicating a key could result in unexpected outcomes.
-For example, the following means that preferences are unknown,
+For example, the following results in all preferences being unknown,
 because the type of the parameter values
 (a boolean and a string respectively)
 are not tokens:
@@ -496,13 +491,20 @@ This includes where keys include uppercase characters,
 as this format is case sensitive
 (more correctly, it operates on bytes, not strings).
 
+### Preference Parameters
+
 This document does not define a use for parameters.
-Where parameters are used,
-only those parameters associated with the value that is selected
-according to {{Section 4.2.2 of FIELDS}}.
+Only those parameters associated with the value that is selected
+according to {{Section 4.2.2 of FIELDS}} apply.
+For example, the following preference carries no parameters,
+and a preference to allow the usage:
+
+~~~
+train-ai;allow=n, train-ai=y
+~~~
+
 Parameters can therefore be carried for any preference value,
 including where preferences are unknown.
-
 For example, the following `train-ai` preference has parameters
 even though the preference is unknown:
 
@@ -510,14 +512,11 @@ even though the preference is unknown:
 train-ai;has;parameters="?";
 ~~~
 
-This process produces an abstract data model
-that assigns a preference to each usage category
-as described in {{model}}.
-
 
 ## Alternative Formats {#mapping}
 
-This format is only an exemplary way to represent preferences.
+The format defined in this document
+is only an exemplary way to represent preferences.
 The data model described in {{model}}
 can be used without this serialization.
 
