@@ -562,6 +562,7 @@ The following individuals made significant contributions to this document:
 * {{{Cullen Miller}}}
 * {{{Erin Simon}}}
 * {{{Felix Reda}}}
+* {{{Kevin Kelley}}}
 * {{{Krishna Madhavan}}}
 * {{{Laurent Le Meur}}}
 * {{{Leonard Rosenthol}}}
