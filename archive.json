@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-08-16T01:43:14.995524+00:00",
+  "timestamp": "2026-08-18T01:36:28.940509+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -1982,7 +1982,7 @@
     {
       "number": 149,
       "id": "I_kwDOOWk1-s7KAqTi",
-      "title": "Replace current vocabulary with a display-based preferences vocabulary",
+      "title": "A display-based preferences vocabulary",
       "url": "https://github.com/ietf-wg-aipref/drafts/issues/149",
       "state": "OPEN",
       "author": "kmadhavan-msft",
@@ -1994,7 +1994,7 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nBuilding on the note I sent to the Working Group on August 4th, and in reaction to the WGLC, I\u2019m opening this issue to explain our concerns. Most importantly, I\u2019m also attaching a display-based preferences vocabulary proposal as a path forward under the solution  text box. \nAs I and others have stressed, a vocabulary should achieve clarity, able to be adopted, and align with technical realities. Based on careful analysis, the current vocabulary draft (https://datatracker.ietf.org/doc/html/draft-ietf-aipref-vocab-03) does not achieve these aims. I appreciate the input and effort directed towards the draft, including updates to rework certain terms. However, I think key structural issues remain. \n\nI propose that we prioritize display-based preferences instead, which are clearer, enforceable, and better aligned with Search/AI user and publisher expectations. \n\nBefore I explain why a **display-based preferences vocabulary** approach is preferrable, I want to take a moment to unpack several of the structural challenges with the current draft. \n\n**Automated Processing category risks jeopardizing a safe and working internet**\nThe \u201cautomated processing\u201d category even as currently defined is **too broad and vague** to be actionable. It covers any use of content on a modern computing device \u2013 including when we export a document to PDF, print a file, or view pages in a browser. As Greg noted on the working group email, \u201cI imagine that running code on html to extract outgoing links is \u2018automated processing\u2019 [quotes in original]. Therefore, no crawler, even crawlers totally unrelated to AI, could function in such a world.\u201d Our concern is that this category places the larger Internet at risk of being less safe and usable for everyone as this category encompasses:\n\n\u2022\t**Content moderation and filtering** - critical for content safety.\n\u2022\t**Spam/Junk/High risk content tagging** \u2013 critical to operating the Internet safely.\n\u2022\t**Accessibility features** - such as automated captions and layout adjustments.\n\nHere too, we acknowledge that these outcomes are not the intended desire, yet the fact remains that this category risks disabling essential functionality, creating false assurances for users, and introducing complaints against implementers - especially in regulated environments.  It also deserves mention that existing controls allow web publishers to express a preference about whether a bot/crawler can access the site at all. We should focus our attention on those terms if there are issues with their adoption or application; information I have not heard expressed in this working group. \n\n**The \u201cSearch\u201d Category Presents a Host of Problems**\nNotwithstanding the rationale for why \u201cSearch\u201d was introduced into this document, for most webmasters and site owners, \u201cSearch\u201d is a generally well understood system. The introduction of a well-known term in a vague context like \u201cai preferences\u201d disrupts and confuses the larger ecosystem as opposed to adding value (or, to assuage publisher concerns in light of a display-based approach). Let me explain further:\n\n**1. Search and AI are converging**\nThere is an increasingly clear trend to converge search interfaces with AI interfaces, and the user experiences will become even more indistinguishable.\n\n**2. Technically Incoherent**\nModern search systems - whether traditional or AI-enhanced - are deeply integrated with AI technologies for ranking, snippet generation, and relevance modeling. Attempting to isolate \u201csearch\u201d as a distinct opt-out category creates a false dichotomy between AI and non-AI search. This distinction is not technically meaningful and cannot be reliably enforced.\n\n**3. Operationally Unenforceable**\nUnlike display preferences (e.g., \u201cno snippet\u201d), the \u201csearch\u201d category attempts to regulate internal system behavior via some vague notion of \u201cdirects users to the location from which the assets were retrieved\u201d (note the web is full of content redirects). This introduces enforcement challenges: the boundaries of \u201csearch\u201d are undefined and invisible to users, making it difficult to audit whether a system has respected a \u201csearch\u201d opt-out.\n\n**4. Redundant with Existing Mechanisms**\nSite owners already have very many tools like robots.txt, noindex, and structured data to control search indexing and display. The \u201csearch\u201d category duplicates these controls without offering additional clarity or functionality. Worse, it risks conflicting with existing standards and creating confusion for implementers.\n\n\n### Proposed Resolution\n\n**Why Display Preferences Provide a Better Alternative**\n\n**1. Observable and Enforceable**\nDisplay-based preferences focus on how content is shown, not how it is processed behind the scenes. They are testable and auditable, making them far more suitable for a standards-based vocabulary.\n\n**2. Aligned with User Expectations**\nIn our experience, content owners are primarily concerned about how their content appears. Preferences such as, \u201cno index\u201d, \u201cno snippet\u201d or \u201cmax snippet length\u201d reflect real-world concerns and are already supported by major platforms.\n\n**3. Clearer language Allows for Harmonized Adoption** \nVague categories like \u201csearch\u201d or \u201cAI Training\u201d vs \u201cGenerative AI Training\u201d introduce ambiguities that plague a harmonized adoption of these preferences. This sets up future disputes between parties and undermines the credibility of the standard.\n\n**4. Supporting Content Subscription scenarios**\nIn our experience, some content, as paywall content, can have difference level of presentation. Whole document can be accessed for ranking but only some of it can be presented.\n\n**Proposal for change \u2013 display-based preferences**\nOur proposal introduces the concept of display-based preferences, which control (allow, disallow, or limit) the presentation of content collected by web and AI crawlers. These include vocabulary terms on access, indexing and retrieval, text display, text length limits, exact text match, image preview, video preview, and generative AI training. Importantly, each category corresponds to specific usage controls often reflected in existing web standards. This allows the working group to inherit and build off experiences and familiarity.\n\nThis display-based preferences vocabulary also offers control for display/prevention of content in all experiences powered by this content collected, not only web-based experiences and API results. Its offer control for LLM built from the content collected also.\n\n[\\[IETF Issue File\\] A Vocabulary For Expressing Access and Usage of Assets by Search and AI crawlers_Clean_v3.pdf](https://github.com/user-attachments/files/22183722/IETF.Issue.File.A.Vocabulary.For.Expressing.Access.and.Usage.of.Assets.by.Search.and.AI.crawlers_Clean_v3.pdf)",
       "createdAt": "2025-09-06T01:42:57Z",
-      "updatedAt": "2026-04-14T15:17:38Z",
+      "updatedAt": "2026-08-17T06:55:04Z",
       "closedAt": null,
       "comments": [
         {
@@ -2810,11 +2810,12 @@
       ],
       "labels": [
         "vocabulary",
+        "ready to close",
         "context"
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nSection 3.1 titled Conformance states that an implentation is conformant to the specifications if it correctly follows all normative requirements that apply to it.  This pertains to enforcement, which is out of scope for the Vocab and Attach document. It adds nothing to the Vocabulary or statement of preference. Solution: Delete 3.1 Conformance.\n\n### Proposed Resolution\n\nDelete Section 3.1 Conformance.",
       "createdAt": "2025-09-22T07:38:58Z",
-      "updatedAt": "2026-08-14T07:38:51Z",
+      "updatedAt": "2026-08-17T06:57:49Z",
       "closedAt": null,
       "comments": [
         {
@@ -2851,6 +2852,13 @@
           "body": "As #195 was merged (after a constructive discussion) I'd like to check whether this concern remains.  I *think* that we are OK closing this, but I want to be sure.",
           "createdAt": "2026-08-14T07:38:51Z",
           "updatedAt": "2026-08-14T07:38:51Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "@Jo-Levy any further thoughts? ",
+          "createdAt": "2026-08-17T06:27:24Z",
+          "updatedAt": "2026-08-17T06:27:24Z"
         }
       ]
     },
@@ -2868,9 +2876,17 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\n In the abstract,  the phrase \u201cContent creators and other stakeholders might wish to signal their preferences about how their content might be consumed by automated systems\u201d is confusing and does not accurately describe the scope. The preference is not about how  content is consumed from the website.  The preference is about how it is  used after it is accessed or consumed. Also, the phrase \"automated systems\" is overly broad, particularly since here it seems to refer to crawlers but later it seems to refer to AI systems that need to read the preferences after it is collected. This will lead to confusion.\n\nSuggestion:  change to \"about whether website content that is accessed orconsumed by crawlers may later be used to train or develop AI models.\"\n\n\n### Proposed Resolution\n\nSuggestion:  change to \"about whether website content that is accessed orconsumed by crawlers may later be used to train or develop AI mode",
       "createdAt": "2025-09-22T07:48:41Z",
-      "updatedAt": "2026-04-10T05:56:44Z",
+      "updatedAt": "2026-08-16T10:42:08Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "I'm proposing a new abstract in #222.  I agree that the phrasing was not ideal.",
+          "createdAt": "2026-08-16T10:42:08Z",
+          "updatedAt": "2026-08-16T10:42:08Z"
+        }
+      ]
     },
     {
       "number": 166,
@@ -3003,11 +3019,12 @@
       "assignees": [],
       "labels": [
         "vocabulary",
-        "model"
+        "model",
+        "deferred"
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nThe hierarchical structure in vocab-03 -  placing categories like Automated Processing, Search, and AI Training in parent\u2013child relationships - introduces complexity without real benefit. In practice, preferences can be expressed directly on each activity, so the hierarchy does not add clarity; instead it forces artificial nesting. Real-world processing often overlaps across categories, and the hierarchy has already led to a patchwork of overlapping or conflicting proposals. Because publishers simply want to state \u201callow\u201d or \u201cdisallow\u201d for specific uses or use multiple preferences, the extra layer of hierarchy is unnecessary and risks confusing both implementers and publishers. A flatter, modular vocabulary would make preferences easier to understand, more consistent to apply, and better aligned with real systems. \n\n### Proposed Resolution\n\nRemove the heirarchical structure and replace with a flatter, modular structure that would make the preferences easier to understand, more consistent to apply, and better aligned with real systems. ",
       "createdAt": "2025-09-26T20:27:17Z",
-      "updatedAt": "2026-04-10T05:51:53Z",
+      "updatedAt": "2026-08-17T06:54:21Z",
       "closedAt": null,
       "comments": [
         {
@@ -3037,6 +3054,13 @@
           "body": "March interim:\n\nMT: if we don't have hierarchy, a lot can be removed, but at this stage it's difficult to commit. Leaving this untouched for now, but we can adjust later.",
           "createdAt": "2026-03-03T22:10:44Z",
           "updatedAt": "2026-03-03T22:10:44Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Marking as deferred so that we can come back to this if necessary.",
+          "createdAt": "2026-08-17T06:54:16Z",
+          "updatedAt": "2026-08-17T06:54:16Z"
         }
       ]
     },
@@ -3211,11 +3235,12 @@
       "assignees": [],
       "labels": [
         "vocabulary",
-        "search"
+        "search",
+        "ready to close"
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\n_From @chrisn in [email](https://mailarchive.ietf.org/arch/msg/ai-control/2ZbEx73js_cTQT8mI1Wy6_0ZC_s):_\n\nWhile I appreciate the effort that has gone into crafting this definition, as it stands it still allows all the generative AI usage that publishers find problematic. If adopted, publishers will be in the position of having to allow the Search Category, because they cannot realistically opt-out of traditional (i.e., non generative AI search).\n\nGiven that major search engines are rapidly integrating generative AI features, a generative AI response to a user query that includes links provided via RAG or grounding could be interpreted as \"directs users to the location from which the assets were retrieved\". The qualifying statements: \"Only those parts of applications that direct users to the location of an asset are included in this category of use. This includes the use of titles or excerpts from assets that are used to help users select between multiple candidate options\" don't address this concern. The same applies to \"Parts of applications that do not direct users to the location of assets, such as summaries, are not covered by this category of use\", because search engines that integrate generative AI do produce summaries.\n\n### Proposed Resolution\n\n_No response_",
       "createdAt": "2025-09-28T08:59:46Z",
-      "updatedAt": "2026-04-14T20:00:48Z",
+      "updatedAt": "2026-08-17T06:52:32Z",
       "closedAt": null,
       "comments": [
         {
@@ -3245,6 +3270,13 @@
           "body": "Updated proposal, from Leah:\n\nThe use of one or more assets in a search application to direct users to the original location from which the assets were retrieved.\n\nThis category includes:\n\n* The presentation of the asset in the search output must include a direct reference or link to the original location. To assist users in evaluating the relevance of the result, excerpts, or snippets may be displayed from the source asset.\n* The internal processing of assets to perform indexing, ranking, and retrieval may include the use and training of AI/ML models, specifically for, and only to enable, the search application itself.\n\n\nThis category does not include:\n\n* The asset(s) must not be used, ~~incorporated, summarized, aggregated, or reproduced~~ to generate summaries or other new content beyond excerpts or snippets, as referenced above.\n* Evaluating an asset for potential use does not constitute use of the asset.",
           "createdAt": "2026-04-14T19:53:22Z",
           "updatedAt": "2026-04-14T20:00:48Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "@chrisn the evolution of that text is now [in the editors draft](https://ietf-wg-aipref.github.io/drafts/draft-ietf-aipref-vocab.html#name-search). Has that resolved this issue? Note that we can still discuss search, of course.",
+          "createdAt": "2026-08-17T06:43:19Z",
+          "updatedAt": "2026-08-17T06:43:19Z"
         }
       ]
     },
@@ -3338,11 +3370,12 @@
       "labels": [
         "vocabulary",
         "training",
+        "ready to close",
         "terminology"
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nThe inclusion of \u201cfine-tune\u201d in the Foundation AI Model Production category (section 4.2 of draft version 4) is unnecessary and scientifically imprecise. Fine-tuning has a overly broad meaning dependent on context and is very hard to define. The term is ambiguous and context-dependent: in modern ML practice, fine-tuning can describe a wide range of techniques, from full parameter re-optimization to lightweight adapter or prompt-based adjustments, varying substantially by architecture and application. Treating it as a discrete category risks conflating routine adaptation with foundational training, creating ambiguity for implementers and misalignment with publisher intent.  \n\nImportantly, this terminology was never raised or discussed in prior WG deliberations, and its late unnecessary introduction expands scope without clear consensus or definitional precision. This is also apparent in the fact that fine-tuning is never defined in the document. \n\n### Proposed Resolution\n\nRemove the term fully and avoid confusion and ambiguity. Potentially rename the category as \u201cFoundational AI Model Training and models refined from them\u201d as \u201cThe act of using content to train large-scale, general-purpose generative AI models intended to enable broad capabilities, including the generation of text, images, and other synthetic content across diverse domains.\u201d",
       "createdAt": "2025-10-30T23:12:13Z",
-      "updatedAt": "2026-08-14T07:12:12Z",
+      "updatedAt": "2026-08-17T06:51:07Z",
       "closedAt": null,
       "comments": [
         {
@@ -3407,11 +3440,12 @@
       "assignees": [],
       "labels": [
         "vocabulary",
-        "search"
+        "search",
+        "ready to close"
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nThe current definition of the \u201cSearch\u201d category attempts to require that \u201cthe asset can only be represented in the output with excerpts that are drawn verbatim from it\u201d, but this conflicts with the well-established operational behavior of modern retrieval systems. Search results often feature generated or reworded snippets to give users relevant context, highlights, or support user intent.  Moreover, the definition appears to conflate \u201cSearch\u201d with the \u201cExact Text Match\u201d or \u201cmatch-text\u201d category defined in [A Vocabulary for Controlling Usage of Content Collected by Search and AI Crawlers](https://datatracker.ietf.org/doc/html/draft-madhavan-aipref-displaybasedpref-01) rather than treating search as a distinct paradigm of retrieval. This conflation risks imposing display constraints on indexing and retrieval workflows that are not aligned with real-world practice. The vocabulary should reflect the intent to allow retrieval and access (for search) without prescribing how snippets or excerpts must be generated or displayed.\n\n### Proposed Resolution\n\nRemove the text regarding verbatim match completely and add the exact output match category as a sub-category to search. Additionally, we strongly recommend further work to iron out the definition for the search category itself given that existing options such as \u201cnoindex\u201d exist and are widely adopted to completely opt out of search.",
       "createdAt": "2025-10-30T23:16:53Z",
-      "updatedAt": "2026-04-10T05:51:20Z",
+      "updatedAt": "2026-08-17T06:52:22Z",
       "closedAt": null,
       "comments": [
         {
@@ -3420,6 +3454,13 @@
           "body": "March interim:\n\nAlissa: Would be great to have discussion of the more specific proposals in Krishna's draft. \n\nMT: We did that work; those things were in the draft for a period. We discussed them (in Montreal?), it wasn't possible to make sense of them.\n\nAlissa: That's too bad; they make more sense than what's in the WG draft. \n\nMT: My view is that the current text is more aligned with the Microsoft proposals - it's about the outcome rather than the internal processes. \n\nAlissa: I'm specifically talking about the discrete display-based controls in Krishna's draft. \n\nMT: I don't think we've sealed that. When we came to it, no one was able to translate it into something that made sense.\n\nMeredith: Would it be considered neutral or negative if people had to change their technology to meet that definition?\n\nFarz: Krishna's proposal was not thoroughly discussed in Montreal. \n\nPedro: I don't see providers implementing another technology for policy purposes.\n\nPaul Keller: We didn't discuss Krishna's draft in full detail; it's valuable to do so. We need to have clarity about the context -- the vocabulary, or just one attachment mechanism? It will be very useful to have use cases.\n\n",
           "createdAt": "2026-03-03T21:59:14Z",
           "updatedAt": "2026-03-03T21:59:14Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "@kmadhavan-msft the [definition of search](https://ietf-wg-aipref.github.io/drafts/draft-ietf-aipref-vocab.html#name-search) has evolved considerably since this was raised. Have your concerns been addressed? Of course, we can continue to discuss search.",
+          "createdAt": "2026-08-17T06:44:17Z",
+          "updatedAt": "2026-08-17T06:44:17Z"
         }
       ]
     },
@@ -3484,11 +3525,12 @@
       "assignees": [],
       "labels": [
         "vocabulary",
-        "training"
+        "training",
+        "ready to close"
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nThe new definition of Foundation Model Production says:\n\n> Foundation models are large models that are produced using deep learning or other machine learning techniques. Foundation models are trained on very large numbers of assets so that they can be applied to a wide range of use cases. Foundation models typically possess generative capabilities in one or more media.\n\nHow large is \"large\"? How large is \"very large numbers of assets\"?\n\n### Proposed Resolution\n\n_No response_",
       "createdAt": "2025-11-03T12:14:55Z",
-      "updatedAt": "2026-04-14T16:01:11Z",
+      "updatedAt": "2026-08-17T06:53:21Z",
       "closedAt": null,
       "comments": [
         {
@@ -3532,6 +3574,13 @@
           "body": "Discussed in Toronto; no pushback on dropping 'large'. @coopdanger any further thoughts?",
           "createdAt": "2026-04-14T16:01:11Z",
           "updatedAt": "2026-04-14T16:01:11Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "This seems to have settled down.",
+          "createdAt": "2026-08-17T06:53:17Z",
+          "updatedAt": "2026-08-17T06:53:17Z"
         }
       ]
     },
@@ -3574,7 +3623,7 @@
       "id": "I_kwDOOWk1-s7aN08M",
       "title": "Search Cateogry May Lead to Unintended Effects",
       "url": "https://github.com/ietf-wg-aipref/drafts/issues/187",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "joncaldon",
       "authorAssociation": "NONE",
       "assignees": [],
@@ -3584,8 +3633,8 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nWe are still left with a Search category that may not reflect how modern Search engines operate today, let alone how they may operate in the near future. While I understand that the purpose of this group is to define a vocabulary, and not to embody policy, it is nonetheless better to define a vocabulary that people can understand and that reflects reality, so that those preferences, once expressed, can be respected in meaningful ways.\n\nSpecifically, there are references to \u201ctraditional\u201d Search which might lead publishers to think that current Search implementations are merely, say, 1998-era Search with additional AI parts bolted to that infrastructure in a way that can be separated. But that is incorrect. \n\nTo take one example, if Search results are to be grouped under headings to give users an idea of the various kinds of results that exist for a particular query, and those headings are generated by AI, with reference to the links grouped thereunder, that would seem to fall outside the Search category as written, even if the links-and-snippets part of the results is otherwise satisfactory. A publisher expressing a \u201ctraditional-Search-only\u201d preference would find themselves outside these grouped links, perhaps, and perhaps not appearing with the prominence they would desire.\n\nSuggest we make clear that Search=yes also encompasses this kind of thing, or, alternatively, that we explain to publishers that if Search=yes remains narrowly defined, that unexpected outcomes are a real risk both now and as products evolve in the future. \n\n\n### Proposed Resolution\n\n_No response_",
       "createdAt": "2025-11-25T00:54:11Z",
-      "updatedAt": "2026-04-10T05:51:20Z",
-      "closedAt": null,
+      "updatedAt": "2026-08-17T06:47:02Z",
+      "closedAt": "2026-08-17T06:47:02Z",
       "comments": [
         {
           "author": "mnot",
@@ -3593,6 +3642,13 @@
           "body": "March interim:\n\nCaleb: Happy to propose a resolution. \n\nSuresh: Krishna has a similar issue. If you can work with them it might help.\n\nErik Stallman: Was confused as to whether this category was subsuming all of search or some subset (e.g., done by AI) and how to distinguish them. \n\nPedro Suarez: It's been brought up multiple times - 'Traditional' search effectively uses AI because it uses the models in internal representations. ",
           "createdAt": "2026-03-03T21:50:25Z",
           "updatedAt": "2026-03-03T21:50:25Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "@joncaldon the [definition of search](https://ietf-wg-aipref.github.io/drafts/draft-ietf-aipref-vocab.html#name-search) has evolved considerably since this was opened. Please take a look and if you have remaining concerns, raise them here or on the mailing list. ",
+          "createdAt": "2026-08-17T06:47:02Z",
+          "updatedAt": "2026-08-17T06:47:02Z"
         }
       ]
     },
@@ -3647,7 +3703,7 @@
     {
       "number": 192,
       "id": "I_kwDOOWk1-s7mRk7E",
-      "title": "Introduction clarity re: relation to existing laws",
+      "title": "Introduction: relation to existing laws",
       "url": "https://github.com/ietf-wg-aipref/drafts/issues/192",
       "state": "OPEN",
       "author": "mgendler",
@@ -3659,7 +3715,7 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nIt is clear from the debate in this working group over the past year that there is significant confusion about what legal implications, if any, the work of this group is aiming to have on creators globally. \n\nFor example, the text of the current vocab draft ([draft-ietf-aipref-vocab-05](https://www.ietf.org/archive/id/draft-ietf-aipref-vocab-05.html)) says that it \u201cis intended to be used in jurisdictions where expressing preferences results in legal obligations \u2026 without prejudice to applicable laws \u2026,\u201d but it is completely unclear (and silent about) what jurisdictions, legal obligations, or laws that it is referring to, exactly. \n\nObviously, this working group, as part of a technical standards body, is not trying to hijack the role of a legislature or regulator.  It is not appropriate for us to design standards that may affect legal protections that millions of creators across the world have with relation to their countries\u2019 domestic copyright, contract, and other laws. \n\nTo make it clear that this working group is not aiming to override copyright owners\u2019 existing legal protections in their respective countries, or to override creators\u2019 existing terms of service, I propose to clarify the language in the introductory section.\n\nI think that clarity will also improve uptake of the standardized language, better fulfilling the objectives of this WG. \n\nThis issue applies to the vocabulary document (including some sections later on other than the introduction) and we should pursue similar clarification for the attachment document, to be clear that nothing in that document has any legal effect either - but I'll leave that for future issue submissions. \n\n### Proposed Resolution\n\nI propose starting by strengthening language in the introductory section.\n \nIt currently reads: \n\n>   The vocabulary is intended to be used in jurisdictions where\n>    expressing preferences results in legal obligations, as well as where\n>    there are no associated legal obligations.  In either case,\n>    expressing preferences is without prejudice to applicable laws,\n>    including the applicability of exceptions and limitations to\n>    Copyright.\n\nProposed edit: \n\n> For clarity, expressing preferences is without prejudice to applicable laws, \n> including the applicability of exceptions and limitations to copyright. \n> In addition to statutory or common law which may apply, the expression of preferences \n> is not intended to overwrite the legal preferences or restrictions that may be embodied\n>  in a website\u2019s Terms of Use (or comparable page), and in the event of any conflict\n>  between these preferences and a website\u2019s Terms of Use, the Terms of Use shall prevail as a matter of law.\n",
       "createdAt": "2026-01-28T03:26:50Z",
-      "updatedAt": "2026-06-12T18:12:00Z",
+      "updatedAt": "2026-08-17T06:59:18Z",
       "closedAt": null,
       "comments": [
         {
@@ -3695,11 +3751,11 @@
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [
-        "triage"
+        "attachment"
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\n@TimidRobot points out that we don't really talk about our expectations around how preferences might be carried along with the stuff (currently, \"assets\") that they apply to.\n\nI think that our presumption thus far was that anyone who acquires covered stuff carries metadata for that stuff along with it so that any use can be informed by preferences.  This means carrying robots.txt or headers, for the attachments we are using.\n\n### Proposed Resolution\n\nThis might be tricky, but I think that our expectation is that metainformation and preferences live with the things that they cover.  That is going to be hard for things like robots.txt, which might not naturally follow along with the bytes.",
       "createdAt": "2026-03-03T22:23:43Z",
-      "updatedAt": "2026-03-03T22:26:26Z",
+      "updatedAt": "2026-08-17T06:31:08Z",
       "closedAt": null,
       "comments": [
         {
@@ -3722,11 +3778,12 @@
       "assignees": [],
       "labels": [
         "vocabulary",
-        "search"
+        "search",
+        "ready to close"
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nThere has been substantial debate about how to define a search category that can be used to express a preference for use in traditional forms of search results without including the newer more [narrative overviews ](https://github.com/ietf-wg-aipref/drafts/issues/102)that have been introduced in the last few years.  \n\nArticulating this distinction is [tricky](https://github.com/ietf-wg-aipref/drafts/issues/98) for a few reasons: \n- Traditional search results are the [result of AI processes](https://github.com/ietf-wg-aipref/drafts/issues/173), so the category cannot disclaim all AI use or the input of content to AI systems.\n- Traditional search results may involve some amount of [non-verbatim copying](https://github.com/ietf-wg-aipref/drafts/issues/181), such as eliding or mildly rewording text to better highlight relevant aspects.\n- The category is not intended to prohibit categorization and labeling of traditional search results, but an overly strict prohibition on generated content could cover the generation of very short category labels.\n- Referring instead to \"summaries\" does not provide sufficient clarity about how much or what kind of generated output is permissible.  Referring instead to the [potential to substitute for the asset](https://github.com/ietf-wg-aipref/drafts/issues/150) begs legal questions as well as introduces ambiguity in scope.\n- Requiring the asset to be linked to in the output presumes that the asset will be relevant to the output, and could be interpreted to mean that the output cannot be evaluated for inclusion without a guarantee that the asset is included. \n\nWhat is needed is a definition that focuses on the core distinction of the use of the asset as an input to the generation of more than very short amounts of content, but allows for some flexibility in quoting, categorizing, and labeling.  This proposal describes that as \"substantial\" amounts of \"new\" content, and as an initial proposal defines substantial to mean sentence-level text.  A numerical threshold could be used instead, but it would have to account for the differences in semantic density between languages.\n\nIt is also necessary to harmonize this category with the beneficial uses mentioned in the preamble and the working group discussions, to ensure that it does not impede the accessibility of content through AI-mediated means.  Thus the category clarifies that transforming the modality of the content (e.g., text to speech, translation) is not in scope of the category preference.\n\nThis is, of course, a starting point for further discussion.  Please suggest improvements!\n\n### Proposed Resolution\n\nReplace the Search category with the following: \n\n**Non-Generative Search:** Using the asset in search results, where the asset is not used as an input to the generation of a substantial amount of new content.\n- Substantial means sentence-level text, images of any size, and audiovisual content of any length.\n- Search results are the links and associated content presented to users of a search application.\n- Transcription, translation, and speech-to-text do not constitute new content.\n- Evaluating an asset for potential use does not constitute use of the asset.\n- This category also permits use of the asset to produce the models that are used in the search application.",
       "createdAt": "2026-04-07T00:07:29Z",
-      "updatedAt": "2026-07-04T19:29:34Z",
+      "updatedAt": "2026-08-17T06:52:14Z",
       "closedAt": null,
       "comments": [
         {
@@ -3770,6 +3827,13 @@
           "body": "A few things:\n\n> Evaluating an asset for potential use does not constitute use of the asset.\n\nCould this be \"Allowing search includes evaluating assets for potential use, even if those assets are not selected.\"  That is, rather than excluding ranking from the category, explicitly include it.\n\n> This category also permits use of the asset to produce the models that are used in the search application.\n\nI think that I heard Erin concede this already, but this might be better as \"Including the asset in the training of models that are exclusively used by the non-generative search application.\"",
           "createdAt": "2026-04-14T18:46:54Z",
           "updatedAt": "2026-04-14T18:49:21Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "@erinsimon I _think_ this has been overcome by events -- OK to close?",
+          "createdAt": "2026-08-17T06:47:43Z",
+          "updatedAt": "2026-08-17T06:47:43Z"
         }
       ]
     },
@@ -3916,18 +3980,29 @@
     {
       "number": 208,
       "id": "I_kwDOOWk1-s7-4HSz",
-      "title": "Use of the term \"non-substantive\" in the translation/etc text in search definition",
+      "title": "Use of the term \"non-substantive\"",
       "url": "https://github.com/ietf-wg-aipref/drafts/issues/208",
       "state": "OPEN",
       "author": "martinthomson",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
-      "labels": [],
+      "labels": [
+        "vocabulary",
+        "search"
+      ],
       "body": "Discussion in Toronto highlighted two competing positions with respect to this term:\n\n* The term is (for some) essential to narrow the scope of the exception.\n* The term is (for others) a little problematic in terms of how it aids clarity.\n\nThese were both recognized as reasonable positions, but those that expressed them acknowledged that they didn't have a strongly-held views in either direction and were not able to offer changes that would address their concern without strengthening the (recognized) objections of the opposite position.",
       "createdAt": "2026-04-16T13:44:47Z",
-      "updatedAt": "2026-04-16T13:44:47Z",
+      "updatedAt": "2026-08-17T06:49:19Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "(in the translation/etc text in search definition)",
+          "createdAt": "2026-08-17T06:49:11Z",
+          "updatedAt": "2026-08-17T06:49:11Z"
+        }
+      ]
     },
     {
       "number": 214,
@@ -3950,7 +4025,7 @@
       "id": "I_kwDOOWk1-s8AAAABKCZR_g",
       "title": "Use-Case Matrix Artifact for Train-AI/Search",
       "url": "https://github.com/ietf-wg-aipref/drafts/issues/215",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "altanai",
       "authorAssociation": "NONE",
       "assignees": [],
@@ -3959,9 +4034,17 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nI think the current AIPREF category definitions for `train-ai` and `search` need tighter boundary behavior in edge cases, especially where workflows involve retrieval, summarization, and mixed pipelines. This creates ambiguity for implementers and reviewers when categories overlap.\n\nRelated discussions already exist, but they do not provide a shared test matrix artifact for classification consistency:\n- https://github.com/ietf-wg-aipref/drafts/issues/196\n- https://github.com/ietf-wg-aipref/drafts/issues/172\n- https://github.com/ietf-wg-aipref/drafts/issues/150\n\n### Proposed Resolution\n\nI propose to create a dedicated use-case matrix artifact (appendix or companion markdown) that tests expected behavior per category and overlap precedence.\n\n## Edge-Case Scenarios\n- Search retrieval with snippets only (no model update)\n- Search retrieval feeding grounding for generated answer\n- Search result ranking model continuously updated from click logs\n- User-supplied content in prompt plus crawler-sourced context\n- Crawler-sourced corpus used for test-time adaptation\n- RAG pipeline with caching of embeddings derived from content\n- Search display where AI transforms excerpts for accessibility\n\nPS : This does not introduce new categories, only validates current category behavior\n\n## Suggested matrix columns:\n\n* Scenario ID\n* Input source (crawler discovered / user provided / hybrid)\n* Processing stage (indexing / ranking / retrieval / grounding / generation / model update)\n* Output behavior (link-only / snippet / summary / generated answer)\n* Categories triggered (search, train-ai, other)\n* Declared preferences\n* Expected effective result\n* Rationale (with spec section reference)\n* Ambiguity note (if any)",
       "createdAt": "2026-07-24T12:50:35Z",
-      "updatedAt": "2026-07-24T12:50:35Z",
-      "closedAt": null,
-      "comments": []
+      "updatedAt": "2026-08-17T06:33:32Z",
+      "closedAt": "2026-08-17T06:33:32Z",
+      "comments": [
+        {
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Hello,\n\nWelcome to the work. This is something that the group has discussed as an aid to its work. See the wiki - especially [Vocabulary Use Cases](https://github.com/ietf-wg-aipref/drafts/wiki/Vocabulary-Use-Cases). If you'd like to create a companion wiki page (e.g., `Vocabulary Use Matrix` as a proposal, please do.",
+          "createdAt": "2026-08-17T06:33:32Z",
+          "updatedAt": "2026-08-17T06:33:32Z"
+        }
+      ]
     },
     {
       "number": 217,
@@ -11400,7 +11483,7 @@
       "labels": [],
       "body": "The hierarchical design we started with in earlier revisions has been clearly replaced with a system of tiling.  No term nests within another and no overlap is tolerated.  This change executes on that fully.\r\n\r\nThere might be a few minor cleanups throughout as I touched those parts, but I left the contentious stuff along.  Those changes should be purely editorial.\r\n\r\nCloses #170.",
       "createdAt": "2026-08-14T07:12:54Z",
-      "updatedAt": "2026-08-14T07:12:54Z",
+      "updatedAt": "2026-08-17T07:28:58Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "6e48ff0429f85874c9a6424aeb552117973c14f7",
@@ -11412,7 +11495,88 @@
       "mergedBy": null,
       "mergeCommit": null,
       "comments": [],
-      "reviews": []
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABJwCghQ",
+          "commit": {
+            "abbreviatedOid": "ee6eb24"
+          },
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-08-17T07:27:03Z",
+          "updatedAt": "2026-08-17T07:27:04Z",
+          "comments": [
+            {
+              "originalPosition": 26,
+              "body": "Hmm. This may raise eyebrows.",
+              "createdAt": "2026-08-17T07:27:03Z",
+              "updatedAt": "2026-08-17T07:27:04Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABJwC3zg",
+          "commit": {
+            "abbreviatedOid": "ee6eb24"
+          },
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-08-17T07:28:02Z",
+          "updatedAt": "2026-08-17T07:28:02Z",
+          "comments": [
+            {
+              "originalPosition": 55,
+              "body": "This is a bit abstract",
+              "createdAt": "2026-08-17T07:28:02Z",
+              "updatedAt": "2026-08-17T07:28:02Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABJwDIWg",
+          "commit": {
+            "abbreviatedOid": "ee6eb24"
+          },
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-08-17T07:28:44Z",
+          "updatedAt": "2026-08-17T07:28:44Z",
+          "comments": [
+            {
+              "originalPosition": 62,
+              "body": "```suggestion\nSuch usage is not subject to the RFC requirement above,\n```",
+              "createdAt": "2026-08-17T07:28:44Z",
+              "updatedAt": "2026-08-17T07:28:44Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABJwDNww",
+          "commit": {
+            "abbreviatedOid": "ee6eb24"
+          },
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-08-17T07:28:58Z",
+          "updatedAt": "2026-08-17T07:28:58Z",
+          "comments": [
+            {
+              "originalPosition": 61,
+              "body": "```suggestion\nas part of a larger data model that includes other terms not defined here.\n```",
+              "createdAt": "2026-08-17T07:28:58Z",
+              "updatedAt": "2026-08-17T07:28:58Z"
+            }
+          ]
+        }
+      ]
     },
     {
       "number": 220,
@@ -11426,7 +11590,7 @@
       "labels": [],
       "body": "Plus a few minor editorial things in the attachment document, tracking similar changes in the vocabulary.\r\n\r\nCloses #168.",
       "createdAt": "2026-08-14T07:18:59Z",
-      "updatedAt": "2026-08-14T07:18:59Z",
+      "updatedAt": "2026-08-17T16:29:01Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "6e48ff0429f85874c9a6424aeb552117973c14f7",
@@ -11438,7 +11602,60 @@
       "mergedBy": null,
       "mergeCommit": null,
       "comments": [],
-      "reviews": []
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABJwD-Tw",
+          "commit": {
+            "abbreviatedOid": "4765212"
+          },
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-08-17T07:31:01Z",
+          "updatedAt": "2026-08-17T07:31:01Z",
+          "comments": [
+            {
+              "originalPosition": 7,
+              "body": "Remember #163.",
+              "createdAt": "2026-08-17T07:31:01Z",
+              "updatedAt": "2026-08-17T07:31:01Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABJzM6MA",
+          "commit": {
+            "abbreviatedOid": "4765212"
+          },
+          "author": "ekr-ietf",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-08-17T16:27:26Z",
+          "updatedAt": "2026-08-17T16:29:00Z",
+          "comments": [
+            {
+              "originalPosition": 7,
+              "body": "```suggestion\nbecause it allows metadata to travel with the asset.\n```\n\nIt doesn't ensure it because it can be stripped.",
+              "createdAt": "2026-08-17T16:27:26Z",
+              "updatedAt": "2026-08-17T16:29:01Z"
+            },
+            {
+              "originalPosition": 37,
+              "body": "This is old text, but how would I indicate to the server that I don't want it to train on this content but that I don't want it to propagate the preference?",
+              "createdAt": "2026-08-17T16:28:28Z",
+              "updatedAt": "2026-08-17T16:29:01Z"
+            },
+            {
+              "originalPosition": 39,
+              "body": "```suggestion\nservers or resources would need to be updated\n```",
+              "createdAt": "2026-08-17T16:28:39Z",
+              "updatedAt": "2026-08-17T16:29:01Z"
+            }
+          ]
+        }
+      ]
     },
     {
       "number": 221,
@@ -11449,10 +11666,12 @@
       "author": "martinthomson",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
-      "labels": [],
+      "labels": [
+        "attachment"
+      ],
       "body": "There's a lengthy discussion of this in #167 and #193, but the change here is short enough, I think.\r\n\r\nThis addresses questions of the difference between getting something and then using it.  It also addresses the expectations about preferences with respect to uses of assets downstream of acquisition.  This is particularly relevant to the attachment mechanisms we have here (unlike embedded metadata or registries) because the preferences are external to the asset itself.\r\n\r\nCloses #167.\r\nCloses #193.",
       "createdAt": "2026-08-14T07:29:01Z",
-      "updatedAt": "2026-08-14T08:02:12Z",
+      "updatedAt": "2026-08-17T16:32:32Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "6e48ff0429f85874c9a6424aeb552117973c14f7",
@@ -11463,8 +11682,77 @@
       "mergedAt": null,
       "mergedBy": null,
       "mergeCommit": null,
-      "comments": [],
-      "reviews": []
+      "comments": [
+        {
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "I do wonder whether it's better to do this in the vocabulary document. Yes, it's about attachment, but this document is not the only document defining attachment; only the vocabulary document is the choke point. Fundamentally, this text is about the _nature_ of the vocabulary terms -- it just happened to be expressed in terms of how it's attached.",
+          "createdAt": "2026-08-17T06:39:42Z",
+          "updatedAt": "2026-08-17T06:39:42Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABJvu4XQ",
+          "commit": {
+            "abbreviatedOid": "67dd5fc"
+          },
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-08-17T06:37:03Z",
+          "updatedAt": "2026-08-17T06:37:04Z",
+          "comments": [
+            {
+              "originalPosition": 7,
+              "body": "\"receipt\"? \"fetching\"? ",
+              "createdAt": "2026-08-17T06:37:03Z",
+              "updatedAt": "2026-08-17T06:37:04Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABJvu_Rg",
+          "commit": {
+            "abbreviatedOid": "67dd5fc"
+          },
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-08-17T06:37:25Z",
+          "updatedAt": "2026-08-17T06:37:25Z",
+          "comments": [
+            {
+              "originalPosition": 10,
+              "body": "documents don't take views.",
+              "createdAt": "2026-08-17T06:37:25Z",
+              "updatedAt": "2026-08-17T06:37:25Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABJzOPUg",
+          "commit": {
+            "abbreviatedOid": "67dd5fc"
+          },
+          "author": "ekr-ietf",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-08-17T16:30:55Z",
+          "updatedAt": "2026-08-17T16:32:31Z",
+          "comments": [
+            {
+              "originalPosition": 19,
+              "body": "Perhaps also \"and should be enforced independently of the mechanisms defined in this document.\"",
+              "createdAt": "2026-08-17T16:30:55Z",
+              "updatedAt": "2026-08-17T16:32:31Z"
+            }
+          ]
+        }
+      ]
     },
     {
       "number": 222,
@@ -11478,7 +11766,7 @@
       "labels": [],
       "body": "This takes a more dramatic cut than proposed in the issue, but I think it is best to focus on this document being strictly factual.  And as dry as possible (fond thoughts of France, not the inclusion of vermouth, as it were).\r\n\r\nCloses #165.",
       "createdAt": "2026-08-14T07:37:04Z",
-      "updatedAt": "2026-08-14T07:37:04Z",
+      "updatedAt": "2026-08-17T19:22:13Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "6e48ff0429f85874c9a6424aeb552117973c14f7",
@@ -11490,7 +11778,28 @@
       "mergedBy": null,
       "mergeCommit": null,
       "comments": [],
-      "reviews": []
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABJ0WhdQ",
+          "commit": {
+            "abbreviatedOid": "b8e6c47"
+          },
+          "author": "ekr-ietf",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-08-17T19:22:13Z",
+          "updatedAt": "2026-08-17T19:22:13Z",
+          "comments": [
+            {
+              "originalPosition": 13,
+              "body": "```suggestion\nThis document defines attachment methods, using the Robots Exclusion Protocol and HTTP header fields.\n```",
+              "createdAt": "2026-08-17T19:22:13Z",
+              "updatedAt": "2026-08-17T19:22:13Z"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
