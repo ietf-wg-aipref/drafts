@@ -57,11 +57,10 @@ informative:
 
 --- abstract
 
-Content creators and other stakeholders might wish to signal
-their preferences about how their content
-might be consumed by automated systems.
-This document defines how preferences can be signaled
-as part of the acquisition of content in HTTP.
+Methods are defined for associating usage preferences
+with content that is obtained using the HTTP protocol.
+This document defines attachment methods
+using the Robots Exclusion Protocol and HTTP header fields.
 
 This document updates RFC 9309
 to allow for the inclusion of usage preferences.
