@@ -6,7 +6,7 @@ AI Preferences                                                 G. Illyes
 Internet-Draft                                                    Google
 Updates: 9309 (if approved)                                   M. Thomson
 Intended status: Standards Track                                 Mozilla
-Expires: 19 February 2027                                 18 August 2026
+Expires: 20 February 2027                                 19 August 2026
 
 
          Associating AI Usage Preferences with Content in HTTP
@@ -54,7 +54,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 19 February 2027.
+   This Internet-Draft will expire on 20 February 2027.
 
 Copyright Notice
 
@@ -212,6 +212,10 @@ Table of Contents
    (Section 8.2 of [HTTP]) that applies the representation data
    (Section 8.1 of [HTTP]).  Informally, usage preferences apply to the
    content of a message, not the resource.
+
+   Clients can use any preference associated with a request to guide
+   their usage of the content of the request.  This allows servers to
+   express usage preferences for assets they serve.
 
    Servers can use any preferences associated with a request if the
    content of that request is used to answer later requests.  For
