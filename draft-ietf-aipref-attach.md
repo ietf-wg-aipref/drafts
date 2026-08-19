@@ -140,6 +140,44 @@ Content-Usage: train-ai=n
 ~~~
 
 
+## Acquisition and Following of Preferences
+
+The acquisition of an asset --
+or the receiving of a representation --
+is distinct from how that asset is subsequently used.
+
+Usage preferences do not apply
+to how assets are acquired.
+They only apply to how those assets are used;
+see {{Section 3.2 of VOCAB}} for a discussion
+on what it means to follow or not follow a preference.
+
+Mechanisms for limiting access to assets,
+such as access control or the `Disallow` rules in "robots.txt",
+are out of scope for this work.
+
+
+## Retention and Distribution of Preferences
+
+The mechanisms in this document provide usage preferences
+external to the data that comprises the asset.
+
+A system might need to apply usage preferences
+in a decision some time after obtaining the asset.
+Such a system therefore needs to retain
+any applicable preferences alongside assets
+until any decision are made.
+
+Where acquisition and use occur in separate subsystems,
+the subsystem responsible for acquisition
+needs to provide some means
+of associating the usage preferences it receives
+with the assets it makes available for use.
+A subsystem that uses an asset
+cannot assume that no preferences have been expressed
+without such a mechanism.
+
+
 ## Other Mechanisms
 
 This document provides two general purpose methods
