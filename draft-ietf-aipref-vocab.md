@@ -268,6 +268,33 @@ are used exclusively
 in ways that meet the above conditions.
 
 
+## Retrieval-Augmented Generation and Grounding {#rag-ground}
+
+The act of an automated system
+retrieving information from an asset,
+selecting information from a collection of assets or derived indexes,
+or otherwise incorporating asset content
+into the input of a trained AI model,
+in order to augment or ground the model's output,
+as part of operating the system
+(for example when responding to a user prompt).
+
+This category applies regardless of whether retrieval is performed on demand,
+from a pre-built index or corpus,
+or from a combination of sources.
+
+This category does not include
+the use of an asset in the production or refinement of an AI model;
+see {{train-ai}}.
+Uses that are solely for {{search}} as defined in this document
+fall under {{search}}, not under {{rag-ground}}.
+
+Allowing {{search}} for an asset
+does not by itself imply permission for {{rag-ground}};
+a preference for {{rag-ground}} MUST be determined separately,
+including when preferences are combined as in {{combine}}.
+
+
 ## Vocabulary Extensions {#vocab-extension}
 
 Extensions to this vocabulary are defined
@@ -378,6 +405,7 @@ Each usage category in the vocabulary ({{vocab}}) is mapped to a short textual l
 |:----------------------------|:------------|:----------------|
 | AI Model Training           | train-ai    | {{train-ai}}    |
 | Search                      | search      | {{search}}      |
+| Retrieval-Augmented Generation and Grounding | rag-ground | {{rag-ground}} |
 {: #t-category-labels title="Mappings for Categories"}
 
 These tokens are case sensitive.
