@@ -106,6 +106,9 @@ Asset:
 Declaring party:
 : The entity that expresses a preference with regards to an Asset.
 
+Inference:
+: All use of an AI system, except use that modifies the learned parameters of an AI model.
+
 
 # Statements of Preference {#model}
 
@@ -268,20 +271,15 @@ are used exclusively
 in ways that meet the above conditions.
 
 
-## AI System Inference {#ai-system-inference}
+## Inference Directed by User {#ai-inference-user}
 
-Using an asset for inference by an AI model that is used to generate synthetic content in one or more modalities. 
-Inference means all use beyond the modification of an AI model’s learned parameters. 
-This category does not include the use of assets that a human end user has specifically identified 
-(by providing either the asset itself or a location from which it can be retrieved).
+Using an asset during inference where the asset has been explicitly selected by a human user. 
+This includes assets provided directly by the user or assets whose location has been explicitly specified by the user.
 
 
-## AI User Input {#ai-user-input}
+## Inference Directed by System {#ai-inference-system}
 
-Using an asset that a human end user has specifically identified 
-(by providing either the asset itself or a location from which it can be retrieved)
-for inference by an AI model that is used to generate synthetic content in one or more modalities. 
-Inference means all use beyond the modification of an AI model’s learned parameters.
+Using an asset during inference where the asset is selected by the system itself or any other mechanism that is not a human user.
 
 
 ## Vocabulary Extensions {#vocab-extension}
