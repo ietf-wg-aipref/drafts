@@ -206,6 +206,11 @@ that applies the representation data ({{Section 8.1 of HTTP}}).
 Informally, usage preferences apply to the content of a message,
 not the resource.
 
+Clients can use any preference associated with a request
+to guide their usage of the content of the request.
+This allows servers to express usage preferences
+for assets they serve.
+
 Servers can use any preferences associated with a request
 if the content of that request
 is used to answer later requests.
