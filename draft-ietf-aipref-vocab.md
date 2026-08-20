@@ -107,7 +107,10 @@ Declaring party:
 : The entity that expresses a preference with regards to an Asset.
 
 Inference:
-: All use of an AI system, except use that modifies the learned parameters of an AI model.
+: All use of an AI model that can generate content in one or more modalities (text, image, audio, etc...), except use that modifies the learned parameters of the model.
+
+Selection step:
+: An operation, performed by any party or process other than the human user on whose behalf the inference occurs, that identifies one or more assets in response to a request, including searching, browsing, ranking, recommending, or resolving a description to an asset. Identifying an asset from among assets that user previously provided is not a selection step.
 
 
 # Statements of Preference {#model}
@@ -273,13 +276,15 @@ in ways that meet the above conditions.
 
 ## Inference Directed by User {#ai-inference-user}
 
-Using an asset during inference where the asset has been explicitly selected by a human user. 
-This includes assets provided directly by the user or assets whose location has been explicitly specified by the user.
+Using an asset during inference where the human user on whose behalf the inference is performed has provided the asset itself, or a reference to the asset that the system retrieves directly without performing any selection step.
 
 
 ## Inference Directed by System {#ai-inference-system}
 
-Using an asset during inference where the asset is selected by the system itself or any other mechanism that is not a human user.
+Using an asset during inference in any other circumstance, including where the asset is identified through one or more selection steps.
+Where a system begins from a user-provided reference and retrieves further assets of its own choosing, those further assets are selected by the system.
+
+This category applies at the time of use, regardless of when or how the asset was acquired.
 
 
 ## Vocabulary Extensions {#vocab-extension}
@@ -388,10 +393,12 @@ train-ai=y, search=n
 Each usage category in the vocabulary ({{vocab}}) is mapped to a short textual label.
 {{t-category-labels}} tabulates this mapping.
 
-| Category                    | Label       | Reference       |
-|:----------------------------|:------------|:----------------|
-| AI Model Training           | train-ai    | {{train-ai}}    |
-| Search                      | search      | {{search}}      |
+| Category                    | Label        | Reference               |
+|:----------------------------|:-------------|:------------------------|
+| AI Model Training           | train-ai     | {{train-ai}}            |
+| Search                      | search       | {{search}}              |
+| Inference Directed by User  | infer-user   | {{ai-inference-user}}   |
+| Inference Directed by System| infer-system | {{ai-inference-system}} |
 {: #t-category-labels title="Mappings for Categories"}
 
 These tokens are case sensitive.
@@ -566,6 +573,24 @@ This document has no IANA actions.
 
 
 --- back
+
+# Examples of the Inference Category Boundary {#inference-examples}
+
+This appendix is informative.
+
+The following examples illustrate the boundary between {{ai-inference-user}} and {{ai-inference-system}}. Each example classifies the use of a single asset; a single response can use several assets, each carrying its own classification.
+
+- A user uploads a document for summarization: directed by user.
+- A user provides a URL and the system retrieves only that resource: directed by user.
+- A user saves a collection of documents, and the system later retrieves relevant excerpts from that collection to answer a question: directed by user.
+- An assistant automatically saves pages a user visits and later retrieves them to answer a question: directed by system.
+- A user asks for the Wikipedia article on hats without providing a link, and the system resolves the description to the page: directed by system.
+- A user asks the system to find a similar image from a named page: directed by system.
+- A user asks for a summary of recent articles on a topic: directed by system.
+- A user asks an agent to find five photographs, and the agent searches for and selects them: directed by system.
+- A system answers a question using assets it previously crawled and indexed: directed by system.
+- An operator loads a library of documents into a system that answers other users' questions; retrieval from that library: directed by system.
+
 
 # Acknowledgments
 {:numbered="false"}
