@@ -107,10 +107,10 @@ Declaring party:
 : The entity that expresses a preference with regards to an Asset.
 
 Inference:
-: All use of an AI model that can generate content in one or more modalities (text, image, audio, etc...), except use that modifies the learned parameters of the model.
+: All use of an AI model that is used to generate synthetic content in one or more modalities, except use that modifies the learned parameters of the model.
 
 Selection step:
-: An operation, performed by any party or process other than the human user on whose behalf the inference occurs, that identifies one or more assets in response to a request, including searching, browsing, ranking, recommending, or resolving a description to an asset. Identifying an asset from among assets that user previously provided is not a selection step.
+: An operation, performed by any party or process other than the human user on whose behalf the inference occurs, that identifies one or more assets in response to a request, including searching, browsing, ranking, recommending, or resolving a description to an asset. Identifying an asset from among assets that the user previously provided is not a selection step.
 
 
 # Statements of Preference {#model}
