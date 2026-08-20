@@ -574,24 +574,6 @@ This document has no IANA actions.
 
 --- back
 
-# Examples of the Inference Category Boundary {#inference-examples}
-
-This appendix is informative.
-
-The following examples illustrate the boundary between {{ai-inference-user}} and {{ai-inference-system}}. Each example classifies the use of a single asset; a single response can use several assets, each carrying its own classification.
-
-- A user uploads a document for summarization: directed by user.
-- A user provides a URL and the system retrieves only that resource: directed by user.
-- A user saves a collection of documents, and the system later retrieves relevant excerpts from that collection to answer a question: directed by user.
-- An assistant automatically saves pages a user visits and later retrieves them to answer a question: directed by system.
-- A user asks for the Wikipedia article on hats without providing a link, and the system resolves the description to the page: directed by system.
-- A user asks the system to find a similar image from a named page: directed by system.
-- A user asks for a summary of recent articles on a topic: directed by system.
-- A user asks an agent to find five photographs, and the agent searches for and selects them: directed by system.
-- A system answers a question using assets it previously crawled and indexed: directed by system.
-- An operator loads a library of documents into a system that answers other users' questions; retrieval from that library: directed by system.
-
-
 # Acknowledgments
 {:numbered="false"}
 
