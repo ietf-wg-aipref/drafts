@@ -106,6 +106,12 @@ Asset:
 Declaring party:
 : The entity that expresses a preference with regards to an Asset.
 
+Inference:
+: All use of an AI model that is used to generate synthetic content in one or more modalities, except use that modifies the learned parameters of the model.
+
+Selection step:
+: An operation, performed by any party or process other than the human user on whose behalf the inference occurs, that identifies one or more assets in response to a request, including searching, browsing, ranking, recommending, or resolving a description to an asset. Identifying an asset from among assets that the user previously provided is not a selection step.
+
 
 # Statements of Preference {#model}
 
@@ -268,6 +274,19 @@ are used exclusively
 in ways that meet the above conditions.
 
 
+## Inference Directed by User {#ai-inference-user}
+
+Using an asset during inference where the human user on whose behalf the inference is performed has provided the asset itself, or a reference to the asset that the system retrieves directly without performing any selection step.
+
+
+## Inference Directed by System {#ai-inference-system}
+
+Using an asset during inference in any other circumstance, including where the asset is identified through one or more selection steps.
+Where a system begins from a user-provided reference and retrieves further assets of its own choosing, those further assets are selected by the system.
+
+This category applies at the time of use, regardless of when or how the asset was acquired.
+
+
 ## Vocabulary Extensions {#vocab-extension}
 
 Extensions to this vocabulary are defined
@@ -374,10 +393,12 @@ train-ai=y, search=n
 Each usage category in the vocabulary ({{vocab}}) is mapped to a short textual label.
 {{t-category-labels}} tabulates this mapping.
 
-| Category                    | Label       | Reference       |
-|:----------------------------|:------------|:----------------|
-| AI Model Training           | train-ai    | {{train-ai}}    |
-| Search                      | search      | {{search}}      |
+| Category                    | Label        | Reference               |
+|:----------------------------|:-------------|:------------------------|
+| AI Model Training           | train-ai     | {{train-ai}}            |
+| Search                      | search       | {{search}}              |
+| Inference Directed by User  | infer-user   | {{ai-inference-user}}   |
+| Inference Directed by System| infer-system | {{ai-inference-system}} |
 {: #t-category-labels title="Mappings for Categories"}
 
 These tokens are case sensitive.
