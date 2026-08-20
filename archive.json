@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-08-18T01:36:28.940509+00:00",
+  "timestamp": "2026-08-20T01:37:00.997959+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -2867,7 +2867,7 @@
       "id": "I_kwDOOWk1-s7NBH8P",
       "title": "\"consumed by automated systems\"",
       "url": "https://github.com/ietf-wg-aipref/drafts/issues/165",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "Jo-Levy",
       "authorAssociation": "NONE",
       "assignees": [],
@@ -2876,8 +2876,8 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\n In the abstract,  the phrase \u201cContent creators and other stakeholders might wish to signal their preferences about how their content might be consumed by automated systems\u201d is confusing and does not accurately describe the scope. The preference is not about how  content is consumed from the website.  The preference is about how it is  used after it is accessed or consumed. Also, the phrase \"automated systems\" is overly broad, particularly since here it seems to refer to crawlers but later it seems to refer to AI systems that need to read the preferences after it is collected. This will lead to confusion.\n\nSuggestion:  change to \"about whether website content that is accessed orconsumed by crawlers may later be used to train or develop AI models.\"\n\n\n### Proposed Resolution\n\nSuggestion:  change to \"about whether website content that is accessed orconsumed by crawlers may later be used to train or develop AI mode",
       "createdAt": "2025-09-22T07:48:41Z",
-      "updatedAt": "2026-08-16T10:42:08Z",
-      "closedAt": null,
+      "updatedAt": "2026-08-18T21:36:28Z",
+      "closedAt": "2026-08-18T21:36:28Z",
       "comments": [
         {
           "author": "martinthomson",
@@ -2960,7 +2960,7 @@
       "id": "I_kwDOOWk1-s7NuMS_",
       "title": "Attachment: Section 2 preservation of HTTP request header \"MUST\" is too strong",
       "url": "https://github.com/ietf-wg-aipref/drafts/issues/168",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "bnewbold",
       "authorAssociation": "NONE",
       "assignees": [],
@@ -2969,8 +2969,8 @@
       ],
       "body": "I think this is a couple days late for the formal WGLC, but hope it is helpful to file this here as an issue ahead of the upcoming meeting. I can also take this to the list if prefered.\n\n### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nSection 2 of the Attachment draft has a new section about retaining the `Content-Usage` header from requests, and re-using them on responses for the same content later:\n\n> Servers MUST retain any preferences associated with a request if the content of that request is used to answer later requests. For example, the content of a PUT request that is used to answer subsequent GET requests. Note that servers that have not been updated to understand this field will not comply with this requirement.\n\nI think having the server retain the preference metadata is a great idea, but making it a \"MUST\" for any server which implements usage preferences is too restrictive. I believe servers should be allowed (and encouraged) to include this metadata header even if they don't have the means to implement state persistence based on request headers. Servers might implement alternative or more ergonomic mechanisms for expressing preferences, for instance via an HTML form field, and that is fine.\n\n### Proposed Resolution\n\nMake it \"MAY\".\n\nOverall I think this should be more of a recommendation or best practice. Given that I would defer to the editors in terms of how best to phrase things.",
       "createdAt": "2025-09-25T01:00:41Z",
-      "updatedAt": "2026-04-10T05:54:09Z",
-      "closedAt": null,
+      "updatedAt": "2026-08-18T21:31:03Z",
+      "closedAt": "2026-08-18T21:31:03Z",
       "comments": []
     },
     {
@@ -3013,19 +3013,18 @@
       "id": "I_kwDOOWk1-s7OLI0M",
       "title": "Hierarchical structure is problematic and introduces unnecessary complexity",
       "url": "https://github.com/ietf-wg-aipref/drafts/issues/170",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "kmadhavan-msft",
       "authorAssociation": "NONE",
       "assignees": [],
       "labels": [
         "vocabulary",
-        "model",
-        "deferred"
+        "model"
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nThe hierarchical structure in vocab-03 -  placing categories like Automated Processing, Search, and AI Training in parent\u2013child relationships - introduces complexity without real benefit. In practice, preferences can be expressed directly on each activity, so the hierarchy does not add clarity; instead it forces artificial nesting. Real-world processing often overlaps across categories, and the hierarchy has already led to a patchwork of overlapping or conflicting proposals. Because publishers simply want to state \u201callow\u201d or \u201cdisallow\u201d for specific uses or use multiple preferences, the extra layer of hierarchy is unnecessary and risks confusing both implementers and publishers. A flatter, modular vocabulary would make preferences easier to understand, more consistent to apply, and better aligned with real systems. \n\n### Proposed Resolution\n\nRemove the heirarchical structure and replace with a flatter, modular structure that would make the preferences easier to understand, more consistent to apply, and better aligned with real systems. ",
       "createdAt": "2025-09-26T20:27:17Z",
-      "updatedAt": "2026-08-17T06:54:21Z",
-      "closedAt": null,
+      "updatedAt": "2026-08-19T04:40:27Z",
+      "closedAt": "2026-08-18T21:28:40Z",
       "comments": [
         {
           "author": "mnot",
@@ -3061,6 +3060,13 @@
           "body": "Marking as deferred so that we can come back to this if necessary.",
           "createdAt": "2026-08-17T06:54:16Z",
           "updatedAt": "2026-08-17T06:54:16Z"
+        },
+        {
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Just noting that the current document has no hierarchy, so I closed this issue.  I'm basing that on my own judgment, so I wanted to flag this.  It's been clear for a little while that we don't have a hierarchy and we have no intention of returning to it.",
+          "createdAt": "2026-08-19T04:40:27Z",
+          "updatedAt": "2026-08-19T04:40:27Z"
         }
       ]
     },
@@ -4067,6 +4073,60 @@
       "updatedAt": "2026-08-14T05:59:19Z",
       "closedAt": null,
       "comments": []
+    },
+    {
+      "number": 223,
+      "id": "I_kwDOOWk1-s8AAAABNS22iQ",
+      "title": "Propagation of preferences in PUT",
+      "url": "https://github.com/ietf-wg-aipref/drafts/issues/223",
+      "state": "OPEN",
+      "author": "ekr-ietf",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [
+        "attachment"
+      ],
+      "body": "### Confirmation\n\n- [x] I have reviewed our [existing issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\n_No response_\n\n### Proposed Resolution\n\n_No response_",
+      "createdAt": "2026-08-18T23:03:26Z",
+      "updatedAt": "2026-08-19T12:59:59Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "ekr-ietf",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Post PR#220, the draft says:\n\n> Servers MUST retain any preferences associated with a request if the content of that request is used to answer later requests. For example, the content of a PUT request that is used to answer subsequent GET requests. Note that servers that have not been updated to understand this field will not comply with this requirement.\n\n\nIn retrospect, I'm not sure what \"retain\" means, but arguably it means \"propagate\", so if I upload some asset with a given preference that must be provided whenever the asset is served. \n\nThis actually seems problematic in several specific respects:\n\n1. What if the asset is not served directly but rather mixed with other assets? This could happen if it's subsequently used for inference but also if it's just fed into some other process. For example, suppose that someone uploads a meme template with a permissive set of preferences and then I ask the system to do a face swap with a face with a less permissive set of preferences. What preferences should be served?\n\n2. It seems like there is no way to provide different permissions to the site where you are uploading content than are provided when the content is served. For example, I might upload a photo to a social media site and be willing to let *them* train on it (potentially because it's part of the TOS) but then not want them to pass on that preference.\n\n\n\nIt also seems anomalous that clients are permitted to ignore these preferences but servers are required to propagate them.\n\nMore broadly, I'm not quite sure how this is supposed to work. The two dominant ways in which users upload content are (1) via a Web browser and (2) via apps. In the app case, it seems unlikely the user will be allowed to set HTTP headers directly, and the app can figure out its own way to propagate the user's preferences (assuming it wants to). I suppose it's possible that on the Web we would specify some kind of DNT/GPC-like header that the user could set in a browser preference, but that seems like it's more likely than not to lead to really widespread ignoring of the header.\n\n\n\n",
+          "createdAt": "2026-08-18T23:17:12Z",
+          "updatedAt": "2026-08-18T23:17:12Z"
+        },
+        {
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Correct #220 changes that text to:\n\n> Servers can use any preferences associated with a request if the content of that request is used to answer later requests. For example, attached preferences for a PUT request, where the content that is used to answer subsequent GET requests, might be copied to the response to those GET requests.\n\nDoes that change your position?  Because you seem to be concerned about the same things as in #168, which #220 addressed. The old text you quote was clearly bad when considering the vocabulary discussions we've had; it was mostly just outdated.\n\nBasically, the new text is really just a reminder to maybe consider preferences attached to requests, especially when the content of those requests is later served.",
+          "createdAt": "2026-08-19T02:33:36Z",
+          "updatedAt": "2026-08-19T02:33:36Z"
+        },
+        {
+          "author": "ekr-ietf",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Sorry, I somehow thought that #220 had merged. I agree the new text is superior and now largely harmless. With that said, I think my last point remains. As a practical matter, how do you expect clients to send the preference indication.\n\n\n",
+          "createdAt": "2026-08-19T03:13:24Z",
+          "updatedAt": "2026-08-19T03:13:24Z"
+        },
+        {
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "The content-usage header field can be included in requests and responses both.  In re-reading the text, it might be worth saying how *clients* can also use the value received in a response.  It's weird to talk about servers only, when the expectation is that clients are the ones who are expected to use the information.",
+          "createdAt": "2026-08-19T03:46:12Z",
+          "updatedAt": "2026-08-19T03:46:12Z"
+        },
+        {
+          "author": "ekr-ietf",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "I was focusing on the server because in the example you provided something that is in a PUT is remembered in a subsequent GET, which seems to be a case of the server remembering.\n\nAs far as the client using the value, it seems like there are broadly two cases:\n\n1. Automated AI-based clients.\n2. Other ordinary clients (e.g., normal browsers)\n\nThe former are the subject of this document so I think that's clear and this text doesn't bear on that. I don't understand how the latter would work at all. Do you somehow have in mind that when a browser downloads an asset it should store the preferences and then replay them on future PUT/POSTs?",
+          "createdAt": "2026-08-19T12:59:59Z",
+          "updatedAt": "2026-08-19T12:59:59Z"
+        }
+      ]
     }
   ],
   "pulls": [
@@ -10573,14 +10633,16 @@
       "author": "new-world-coder",
       "authorAssociation": "NONE",
       "assignees": [],
-      "labels": [],
+      "labels": [
+        "vocabulary"
+      ],
       "body": "Refs #172\n\nThis PR adds a single vocabulary category `rag-ground` (\"Retrieval-Augmented Generation and Grounding\") to `draft-ietf-aipref-vocab.md`, as a minimal concrete proposal for the discussion in #172.\n\n**Design choices (minimal / single category):**\n- Definition is **retrieval-mechanism-neutral** (on-demand fetch, pre-built index/corpus, or mixed), consistent with the latest clarification on #172 between automatic retrieval and grounding vs wording that implied \"fetch from the web\" only.\n- **Distinct from** `train-ai` (inference-time retrieval/grounding only).\n- **Narrower than / not implied by** `search`: allowing `search` does not imply allowing `rag-ground`; combining rules in {{combine}} still apply.\n\n**Files:** vocabulary section + labels table (`{#t-category-labels}`).\n\nFeedback welcome on naming (`rag-ground` vs alternatives discussed in the issue) and boundaries vs `search` / future inference categories.\n\nMade with [Cursor](https://cursor.com)",
       "createdAt": "2026-05-14T13:28:24Z",
-      "updatedAt": "2026-05-14T15:58:25Z",
+      "updatedAt": "2026-08-18T19:45:35Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "26841404458861cc6bd54ef52af63c7736c315c2",
-      "headRepository": "new-world-coder/drafts",
+      "headRepository": "new-world-coder/aipref-vocabulary",
       "headRefName": "feat/vocab-rag-ground",
       "headRefOid": "aa2f0c7a7a8607428a748f8e26167e8854bf1e7d",
       "closedAt": null,
@@ -10603,7 +10665,21 @@
           "updatedAt": "2026-05-14T15:58:25Z"
         }
       ],
-      "reviews": []
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABJ_HDEg",
+          "commit": {
+            "abbreviatedOid": "aa2f0c7"
+          },
+          "author": "paul2keller",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "I think this can be closed without merging, seems like this discussion has moved elsewhere (#216)",
+          "createdAt": "2026-08-18T19:45:35Z",
+          "updatedAt": "2026-08-18T19:45:35Z",
+          "comments": []
+        }
+      ]
     },
     {
       "number": 211,
@@ -11407,13 +11483,13 @@
       "labels": [],
       "body": "This adds two proposed inference/use vocab categories that are intended to work in tandem: \r\n-AI System Inference \r\n-AI User Input\r\n\r\nThese definitions both rely on the AI training definition of PR 211 as a logical starting point. They define inference as all use of assets by AI models beyond the modification of learned parameters. \r\n\r\nTogether, these proposed categories would enable the expression of preferences covering the full field of post-training usage. They also give declaring parties the option to express different preferences when assets are used by autonomous systems vs when assets are identified by a human end user.",
       "createdAt": "2026-07-30T08:55:41Z",
-      "updatedAt": "2026-08-12T08:31:46Z",
+      "updatedAt": "2026-08-19T17:26:09Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "26841404458861cc6bd54ef52af63c7736c315c2",
       "headRepository": "natehake/drafts",
       "headRefName": "patch-1",
-      "headRefOid": "3cb4b80214566caf204dbc35d2ef633c7030bf64",
+      "headRefOid": "160ccdccf5ca3bc2887f125d32f2800379c8c580",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
@@ -11439,61 +11515,124 @@
           "body": "To Alissa's comments: \r\n-\"beyond\" is intended to mean \"all use that doesn't change the learned parameters.\" So I suppose it's both after and except in that sense. I'd be fine swapping out that word if folks think another is cleaner \r\n-yes, defining inference makes sense. Timid Robot's proposal on the list seems good to me \r\n-these names are ok with me, but I'd prefer having \"AI inference\" in the name just for user clarity \r\n-yes, the way search is written it's intended to operate as an exception where a \"search=y, inference =n\" would permit all inference that qualifies as search (but no other inference for that category)\r\n\r\nOn Sebastian's comment: I mentioned this on the mailing list, but the reason I don't think that approach works is that the two halves do not cover the whole field. One needs to define itself by reference to the other in order for us to achieve full coverage.",
           "createdAt": "2026-08-12T08:31:46Z",
           "updatedAt": "2026-08-12T08:31:46Z"
+        },
+        {
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "That plan sounds good.  I'm happy to make a copy of the PR or suggestions against this one, but I think that it's best coming from @natehake and @TimidRobot.  If there is something I can do to help, let me know.",
+          "createdAt": "2026-08-18T21:17:26Z",
+          "updatedAt": "2026-08-18T21:17:26Z"
+        },
+        {
+          "author": "TimidRobot",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "> My suggestion for this would be to update it to reflect @TimidRobot 's 7 August redraft: \"inference\" defined once in Section 2, symmetric \"directed by system\" / \"directed by user\" naming, and the \"or any other mechanism that is not a human user\" catch so nothing falls between the two categories.\r\n\r\nFor reference, my 2026 Aug 7 email: [[ai-control] Re: Proposed \"AI System Inference\" and \"AI User Input\" categories](https://mailarchive.ietf.org/arch/msg/ai-control/95F2Np0MbcNfGTqq3_yXzPwhQ4I/)",
+          "createdAt": "2026-08-19T07:00:42Z",
+          "updatedAt": "2026-08-19T07:00:42Z"
+        },
+        {
+          "author": "natehake",
+          "authorAssociation": "NONE",
+          "body": "Makes sense to me. This is my first PR, but I *think* I have correctly updated the pull request to reflect @TimidRobot's updated language. If I have done something wrong or need to do something further, please let me know @martinthomson / @paul2keller \r\n\r\nNote one change I made from Timid Robot's language: since the training definition has now been updated to focus on \"learned parameters\" I tweaked the inference definition to say: \"All use of an AI system, except use that modifies the learned parameters of an AI model.\" I am not wedded to this specific language though, and perhaps there is a more elegant way of writing it.",
+          "createdAt": "2026-08-19T17:05:07Z",
+          "updatedAt": "2026-08-19T17:05:07Z"
+        },
+        {
+          "author": "coopdanger",
+          "authorAssociation": "NONE",
+          "body": "This is improving IMO. I think it has two key problems:\r\n\r\n1. Nowhere do we define \"system\" or \"AI system.\" And I believe this is purposeful, that we have avoided defining AI system because doing so is hard. We found ways around this in the other two category definitions by using \"AI model\" and \"search application.\"\r\n\r\n2. What is supposed to happen when agents act on the human user's behalf? For example, I ask my local agent to find five photos on my hard drive, upload them to a cloud-based AI system, and make me a holiday card featuring the photos. When my agent provides the photos to the AI system in the cloud, are those photos considered user-selected or system-selected? They aren't selected by the cloud AI system, but they are selected by the local agent system.",
+          "createdAt": "2026-08-19T17:26:09Z",
+          "updatedAt": "2026-08-19T17:26:09Z"
         }
       ],
-      "reviews": []
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABJ_YyMA",
+          "commit": {
+            "abbreviatedOid": "3cb4b80"
+          },
+          "author": "paul2keller",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "I think it would make sense to get this PR into a state where it can serve as a concrete proposal for the discussion in London, rather than having several versions of the text scattered across the list.\n\nMy suggestion for this would be to update it to reflect @TimidRobot 's 7 August redraft: \"inference\" defined once in Section 2, symmetric \"directed by system\" / \"directed by user\" naming, and the \"or any other mechanism that is not a human user\" catch so nothing falls between the two categories. \n\nThat version also picks up @sposth 's point that the distinction turns on who identifies the asset, which I think is right. I personally have no attachment to the wording @natehake and I originally proposed and I think this redraft answers Sebastian's naming objection and @coopdanger 's Section 2 point better than what we originally proposed. \n\n@TimidRobot are you ok with this?\n@martinthomson does this approach make sense to you? \n@natehake since the branch is yours, I assume it's easiest if you push the update?",
+          "createdAt": "2026-08-18T20:22:12Z",
+          "updatedAt": "2026-08-18T20:22:12Z",
+          "comments": []
+        }
+      ]
     },
     {
       "number": 218,
       "id": "PR_kwDOOWk1-s7-9CNR",
       "title": "Make sure we acknowledge Kevin",
       "url": "https://github.com/ietf-wg-aipref/drafts/pull/218",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "martinthomson",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [
+        "vocabulary",
         "editorial"
       ],
       "body": "The text in #211 was an important contribution.",
       "createdAt": "2026-08-14T06:01:43Z",
-      "updatedAt": "2026-08-14T06:01:43Z",
+      "updatedAt": "2026-08-18T21:17:39Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "6e48ff0429f85874c9a6424aeb552117973c14f7",
       "headRepository": "ietf-wg-aipref/drafts",
       "headRefName": "ack-kevin",
       "headRefOid": "9221c129c58952f0a6a96a7baed50d17168b1259",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2026-08-18T21:17:37Z",
+      "mergedAt": "2026-08-18T21:17:37Z",
+      "mergedBy": "martinthomson",
+      "mergeCommit": {
+        "oid": "4b921d18e9e3e446cf675f919825eefa7c699112"
+      },
       "comments": [],
-      "reviews": []
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABJ_Fhkw",
+          "commit": {
+            "abbreviatedOid": "9221c12"
+          },
+          "author": "paul2keller",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-08-18T19:42:32Z",
+          "updatedAt": "2026-08-18T19:42:32Z",
+          "comments": []
+        }
+      ]
     },
     {
       "number": 219,
       "id": "PR_kwDOOWk1-s7--dgB",
       "title": "Remove nesting",
       "url": "https://github.com/ietf-wg-aipref/drafts/pull/219",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "martinthomson",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
-      "labels": [],
+      "labels": [
+        "vocabulary"
+      ],
       "body": "The hierarchical design we started with in earlier revisions has been clearly replaced with a system of tiling.  No term nests within another and no overlap is tolerated.  This change executes on that fully.\r\n\r\nThere might be a few minor cleanups throughout as I touched those parts, but I left the contentious stuff along.  Those changes should be purely editorial.\r\n\r\nCloses #170.",
       "createdAt": "2026-08-14T07:12:54Z",
-      "updatedAt": "2026-08-17T07:28:58Z",
+      "updatedAt": "2026-08-18T21:28:41Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "6e48ff0429f85874c9a6424aeb552117973c14f7",
       "headRepository": "ietf-wg-aipref/drafts",
       "headRefName": "no-hierarchy",
-      "headRefOid": "ee6eb24a4d9989949f612989a69551ed43484693",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "headRefOid": "d02ea8b266c1fdd07157621740f08d74ff7dcabd",
+      "closedAt": "2026-08-18T21:28:39Z",
+      "mergedAt": "2026-08-18T21:28:39Z",
+      "mergedBy": "martinthomson",
+      "mergeCommit": {
+        "oid": "cabf4f9367905ea87e34a785811e08ed6a03e685"
+      },
       "comments": [],
       "reviews": [
         {
@@ -11575,6 +11714,197 @@
               "updatedAt": "2026-08-17T07:28:58Z"
             }
           ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABJ_EXkQ",
+          "commit": {
+            "abbreviatedOid": "ee6eb24"
+          },
+          "author": "paul2keller",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "I think this is good to merge and it will be helpful to have a version without nesting as basis for the discussion in London.",
+          "createdAt": "2026-08-18T19:40:20Z",
+          "updatedAt": "2026-08-18T19:40:20Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABJ0oMlw",
+          "commit": {
+            "abbreviatedOid": "ee6eb24"
+          },
+          "author": "ekr-ietf",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-08-17T20:03:13Z",
+          "updatedAt": "2026-08-18T20:13:25Z",
+          "comments": [
+            {
+              "originalPosition": 26,
+              "body": "I don't quite understand why we need this text. Isn't that always true?",
+              "createdAt": "2026-08-17T20:03:13Z",
+              "updatedAt": "2026-08-18T20:13:25Z"
+            },
+            {
+              "originalPosition": 41,
+              "body": "I understand what you are doing here, but why not just say \"are defined\" rather than trying to cram in 2119 keywords.",
+              "createdAt": "2026-08-17T20:04:31Z",
+              "updatedAt": "2026-08-18T20:13:25Z"
+            },
+            {
+              "originalPosition": 44,
+              "body": "I would remove this. I mean you should do this but it's not really actionable unless you are requiring a section in the extensions document. Otherwise you are saying extension authors need to consider.",
+              "createdAt": "2026-08-17T20:05:41Z",
+              "updatedAt": "2026-08-18T20:13:25Z"
+            },
+            {
+              "originalPosition": 55,
+              "body": "Agreed.",
+              "createdAt": "2026-08-17T20:06:09Z",
+              "updatedAt": "2026-08-18T20:13:25Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABJ_1LZw",
+          "commit": {
+            "abbreviatedOid": "8eb1601"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-08-18T21:21:03Z",
+          "updatedAt": "2026-08-18T21:21:03Z",
+          "comments": [
+            {
+              "originalPosition": 26,
+              "body": "```suggestion\n```\n\nYeah, no need.",
+              "createdAt": "2026-08-18T21:21:03Z",
+              "updatedAt": "2026-08-18T21:21:03Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABJ_1grg",
+          "commit": {
+            "abbreviatedOid": "14658ba"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-08-18T21:21:52Z",
+          "updatedAt": "2026-08-18T21:21:52Z",
+          "comments": [
+            {
+              "originalPosition": 47,
+              "body": "```suggestion\nExtensions to this vocabulary are defined\n```",
+              "createdAt": "2026-08-18T21:21:52Z",
+              "updatedAt": "2026-08-18T21:21:52Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABJ_2GiQ",
+          "commit": {
+            "abbreviatedOid": "5ed0fd7"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-08-18T21:23:10Z",
+          "updatedAt": "2026-08-18T21:23:10Z",
+          "comments": [
+            {
+              "originalPosition": 41,
+              "body": "I believe that the usual model for extensions is that an extension doesn't generally have to update the document that defined the extension point.  In this case, the agreement was to require an RFC.  Still, I'm not a fan of overuse of MUST.",
+              "createdAt": "2026-08-18T21:23:10Z",
+              "updatedAt": "2026-08-18T21:23:10Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABJ_2ZcQ",
+          "commit": {
+            "abbreviatedOid": "5ed0fd7"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-08-18T21:23:53Z",
+          "updatedAt": "2026-08-18T21:23:53Z",
+          "comments": [
+            {
+              "originalPosition": 51,
+              "body": "```suggestion\n```\n",
+              "createdAt": "2026-08-18T21:23:53Z",
+              "updatedAt": "2026-08-18T21:23:53Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABJ_3RPA",
+          "commit": {
+            "abbreviatedOid": "61655f1"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-08-18T21:26:02Z",
+          "updatedAt": "2026-08-18T21:26:02Z",
+          "comments": [
+            {
+              "originalPosition": 53,
+              "body": "```suggestion\nhow any potential overlap between usage categories is resolved.\nDefinitions can identify which usage category applies\nwhen such an overlap occurs.\n```",
+              "createdAt": "2026-08-18T21:26:02Z",
+              "updatedAt": "2026-08-18T21:26:02Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABJ_3vtQ",
+          "commit": {
+            "abbreviatedOid": "61655f1"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-08-18T21:27:19Z",
+          "updatedAt": "2026-08-18T21:27:19Z",
+          "comments": [
+            {
+              "originalPosition": 43,
+              "body": "```suggestion\nThe definition of the extension MUST define\nhow any potential overlap between usage categories is resolved.\nDefinitions can identify which usage category applies\nfor any such overlap.\n```",
+              "createdAt": "2026-08-18T21:27:19Z",
+              "updatedAt": "2026-08-18T21:27:19Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABJ_37Hw",
+          "commit": {
+            "abbreviatedOid": "185c16e"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-08-18T21:27:46Z",
+          "updatedAt": "2026-08-18T21:27:46Z",
+          "comments": [
+            {
+              "originalPosition": 60,
+              "body": "```suggestion\n```",
+              "createdAt": "2026-08-18T21:27:46Z",
+              "updatedAt": "2026-08-18T21:27:46Z"
+            }
+          ]
         }
       ]
     },
@@ -11583,24 +11913,28 @@
       "id": "PR_kwDOOWk1-s7--lXv",
       "title": "Loosen requirement on HTTP resources",
       "url": "https://github.com/ietf-wg-aipref/drafts/pull/220",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "martinthomson",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
-      "labels": [],
+      "labels": [
+        "attachment"
+      ],
       "body": "Plus a few minor editorial things in the attachment document, tracking similar changes in the vocabulary.\r\n\r\nCloses #168.",
       "createdAt": "2026-08-14T07:18:59Z",
-      "updatedAt": "2026-08-17T16:29:01Z",
+      "updatedAt": "2026-08-18T21:31:04Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "6e48ff0429f85874c9a6424aeb552117973c14f7",
       "headRepository": "ietf-wg-aipref/drafts",
       "headRefName": "fixup-attach",
-      "headRefOid": "47652126c472e2962a481becedd0f6c5395fb07b",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "headRefOid": "d1598b52bb6f2838464a1a95610671a56413f815",
+      "closedAt": "2026-08-18T21:31:02Z",
+      "mergedAt": "2026-08-18T21:31:02Z",
+      "mergedBy": "martinthomson",
+      "mergeCommit": {
+        "oid": "15820a62690e2addb4cf5c0a601ac10b7df44687"
+      },
       "comments": [],
       "reviews": [
         {
@@ -11629,7 +11963,7 @@
             "abbreviatedOid": "4765212"
           },
           "author": "ekr-ietf",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "state": "COMMENTED",
           "body": "",
           "createdAt": "2026-08-17T16:27:26Z",
@@ -11654,6 +11988,46 @@
               "updatedAt": "2026-08-17T16:29:01Z"
             }
           ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABJ_4ylA",
+          "commit": {
+            "abbreviatedOid": "4765212"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-08-18T21:29:46Z",
+          "updatedAt": "2026-08-18T21:29:46Z",
+          "comments": [
+            {
+              "originalPosition": 37,
+              "body": "I don't think that's possible.  Worth an issue?",
+              "createdAt": "2026-08-18T21:29:46Z",
+              "updatedAt": "2026-08-18T21:29:46Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABJ_5O7w",
+          "commit": {
+            "abbreviatedOid": "4765212"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-08-18T21:30:57Z",
+          "updatedAt": "2026-08-18T21:30:57Z",
+          "comments": [
+            {
+              "originalPosition": 7,
+              "body": "Yeah, it would be good to resolve that.  The goal here is to close the distance between the two documents first.  Then at least it is easier to do a search and replace if we conclude somehow.",
+              "createdAt": "2026-08-18T21:30:57Z",
+              "updatedAt": "2026-08-18T21:30:57Z"
+            }
+          ]
         }
       ]
     },
@@ -11671,13 +12045,13 @@
       ],
       "body": "There's a lengthy discussion of this in #167 and #193, but the change here is short enough, I think.\r\n\r\nThis addresses questions of the difference between getting something and then using it.  It also addresses the expectations about preferences with respect to uses of assets downstream of acquisition.  This is particularly relevant to the attachment mechanisms we have here (unlike embedded metadata or registries) because the preferences are external to the asset itself.\r\n\r\nCloses #167.\r\nCloses #193.",
       "createdAt": "2026-08-14T07:29:01Z",
-      "updatedAt": "2026-08-17T16:32:32Z",
+      "updatedAt": "2026-08-18T21:35:23Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "6e48ff0429f85874c9a6424aeb552117973c14f7",
       "headRepository": "ietf-wg-aipref/drafts",
       "headRefName": "access-vs-use",
-      "headRefOid": "67dd5fc4189717879a12916d31f0c1dd537869f7",
+      "headRefOid": "5b79f2eca09a5b8ffd7c9ea8d0e673b62b0db945",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
@@ -11689,6 +12063,13 @@
           "body": "I do wonder whether it's better to do this in the vocabulary document. Yes, it's about attachment, but this document is not the only document defining attachment; only the vocabulary document is the choke point. Fundamentally, this text is about the _nature_ of the vocabulary terms -- it just happened to be expressed in terms of how it's attached.",
           "createdAt": "2026-08-17T06:39:42Z",
           "updatedAt": "2026-08-17T06:39:42Z"
+        },
+        {
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Let's discuss this at the upcoming meeting.  I agree that this might be worth moving to the vocabulary document.  It's fairly fundamental.",
+          "createdAt": "2026-08-18T21:35:23Z",
+          "updatedAt": "2026-08-18T21:35:23Z"
         }
       ],
       "reviews": [
@@ -11738,7 +12119,7 @@
             "abbreviatedOid": "67dd5fc"
           },
           "author": "ekr-ietf",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "state": "COMMENTED",
           "body": "",
           "createdAt": "2026-08-17T16:30:55Z",
@@ -11751,6 +12132,26 @@
               "updatedAt": "2026-08-17T16:32:31Z"
             }
           ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABJ_6eKw",
+          "commit": {
+            "abbreviatedOid": "67dd5fc"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-08-18T21:33:57Z",
+          "updatedAt": "2026-08-18T21:33:58Z",
+          "comments": [
+            {
+              "originalPosition": 12,
+              "body": "```suggestion\nUsage preferences do not apply\nto how assets are acquired.\n```",
+              "createdAt": "2026-08-18T21:33:58Z",
+              "updatedAt": "2026-08-18T21:33:58Z"
+            }
+          ]
         }
       ]
     },
@@ -11759,24 +12160,28 @@
       "id": "PR_kwDOOWk1-s7--_gH",
       "title": "Rework attachment abstract",
       "url": "https://github.com/ietf-wg-aipref/drafts/pull/222",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "martinthomson",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
-      "labels": [],
+      "labels": [
+        "attachment"
+      ],
       "body": "This takes a more dramatic cut than proposed in the issue, but I think it is best to focus on this document being strictly factual.  And as dry as possible (fond thoughts of France, not the inclusion of vermouth, as it were).\r\n\r\nCloses #165.",
       "createdAt": "2026-08-14T07:37:04Z",
-      "updatedAt": "2026-08-17T19:22:13Z",
+      "updatedAt": "2026-08-18T21:36:29Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "6e48ff0429f85874c9a6424aeb552117973c14f7",
       "headRepository": "ietf-wg-aipref/drafts",
       "headRefName": "consumed-reword",
-      "headRefOid": "b8e6c47fba73ce4b91d3fee9ad19fa6b550b6631",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "headRefOid": "66139eb43bd1507f0a0a29bbec6f6bfb905c4d41",
+      "closedAt": "2026-08-18T21:36:27Z",
+      "mergedAt": "2026-08-18T21:36:27Z",
+      "mergedBy": "martinthomson",
+      "mergeCommit": {
+        "oid": "108d112eccbf3e7b146415a1dc78a3f7d5ff25d9"
+      },
       "comments": [],
       "reviews": [
         {
@@ -11785,7 +12190,7 @@
             "abbreviatedOid": "b8e6c47"
           },
           "author": "ekr-ietf",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "state": "COMMENTED",
           "body": "",
           "createdAt": "2026-08-17T19:22:13Z",
@@ -11793,13 +12198,43 @@
           "comments": [
             {
               "originalPosition": 13,
-              "body": "```suggestion\nThis document defines attachment methods, using the Robots Exclusion Protocol and HTTP header fields.\n```",
+              "body": "```suggestion\r\nThis document defines attachment methods\r\nusing the Robots Exclusion Protocol and HTTP header fields.\r\n```",
               "createdAt": "2026-08-17T19:22:13Z",
-              "updatedAt": "2026-08-17T19:22:13Z"
+              "updatedAt": "2026-08-18T21:36:08Z"
             }
           ]
         }
       ]
+    },
+    {
+      "number": 224,
+      "id": "PR_kwDOOWk1-s8AAAABAOv03g",
+      "title": "Mention how clients use the header",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/224",
+      "state": "MERGED",
+      "author": "martinthomson",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [
+        "attachment"
+      ],
+      "body": "This might help address the one-sided nature of the description of the header as noted in #223.",
+      "createdAt": "2026-08-19T03:49:28Z",
+      "updatedAt": "2026-08-19T03:50:19Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "108d112eccbf3e7b146415a1dc78a3f7d5ff25d9",
+      "headRepository": "ietf-wg-aipref/drafts",
+      "headRefName": "client-header",
+      "headRefOid": "9adba8517369ebbd06708f0046e41b908fd8e210",
+      "closedAt": "2026-08-19T03:50:17Z",
+      "mergedAt": "2026-08-19T03:50:17Z",
+      "mergedBy": "martinthomson",
+      "mergeCommit": {
+        "oid": "7ca0afce45b32609dc0131eebc2c0137469cdad9"
+      },
+      "comments": [],
+      "reviews": []
     }
   ]
 }
