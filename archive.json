@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-08-20T01:37:00.997959+00:00",
+  "timestamp": "2026-08-23T01:45:23.533867+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -2735,7 +2735,7 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nThe term \"digital asset\" is used throughout the Vocab document.  It is confusing and misleading.  A \"digital asset\" generally and commonly refers to cryptocurrency. The United States Internal Revenue Service (IRS) defines it as \"any digital representation of value on a cryptographically secured, distributed ledger (blockchain) or similar technology.\"  See https://www.irs.gov/filing/digital-assets#description.  \n It's not a term used in robots.txt or the Attach documet which uses the term \"content\" and \"content-usage.\" A preferable term would be \"Digital Content.\"\n\n### Proposed Resolution\n\nReplace \"digital asset\" or \"digital assets\" with \"digital content.\" Replace \"asset\" with \"digital content.\" Replace \"one or more assets\" with \"digital content.\" There are 23 instances of the term asset or assets throughout the document.  By using \"digital content\" there is also no new for a definition of the term \"Digital Asset.\"",
       "createdAt": "2025-09-22T07:27:50Z",
-      "updatedAt": "2026-04-15T15:45:25Z",
+      "updatedAt": "2026-08-22T06:54:33Z",
       "closedAt": null,
       "comments": [
         {
@@ -2793,6 +2793,20 @@
           "body": "Some of the side discussions here in Toronto seem to have identified \"artifact\" as a potentially useful alternative.  No substantial objection was identified.",
           "createdAt": "2026-04-15T15:18:56Z",
           "updatedAt": "2026-04-15T15:18:56Z"
+        },
+        {
+          "author": "ekr-ietf",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "@mnot I see you proposed to close this but shouldn't we instead do asset -> artifact?",
+          "createdAt": "2026-08-22T03:29:30Z",
+          "updatedAt": "2026-08-22T03:29:30Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Yeah I saw that it persisted in some text, will keep open until it's reflected in drafts. ",
+          "createdAt": "2026-08-22T06:54:33Z",
+          "updatedAt": "2026-08-22T06:54:33Z"
         }
       ]
     },
@@ -3235,7 +3249,7 @@
       "id": "I_kwDOOWk1-s7OUNyQ",
       "title": "Search is too Broad",
       "url": "https://github.com/ietf-wg-aipref/drafts/issues/173",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "mnot",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
@@ -3246,8 +3260,8 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\n_From @chrisn in [email](https://mailarchive.ietf.org/arch/msg/ai-control/2ZbEx73js_cTQT8mI1Wy6_0ZC_s):_\n\nWhile I appreciate the effort that has gone into crafting this definition, as it stands it still allows all the generative AI usage that publishers find problematic. If adopted, publishers will be in the position of having to allow the Search Category, because they cannot realistically opt-out of traditional (i.e., non generative AI search).\n\nGiven that major search engines are rapidly integrating generative AI features, a generative AI response to a user query that includes links provided via RAG or grounding could be interpreted as \"directs users to the location from which the assets were retrieved\". The qualifying statements: \"Only those parts of applications that direct users to the location of an asset are included in this category of use. This includes the use of titles or excerpts from assets that are used to help users select between multiple candidate options\" don't address this concern. The same applies to \"Parts of applications that do not direct users to the location of assets, such as summaries, are not covered by this category of use\", because search engines that integrate generative AI do produce summaries.\n\n### Proposed Resolution\n\n_No response_",
       "createdAt": "2025-09-28T08:59:46Z",
-      "updatedAt": "2026-08-17T06:52:32Z",
-      "closedAt": null,
+      "updatedAt": "2026-08-22T08:18:41Z",
+      "closedAt": "2026-08-22T08:18:41Z",
       "comments": [
         {
           "author": "mnot",
@@ -3283,6 +3297,13 @@
           "body": "@chrisn the evolution of that text is now [in the editors draft](https://ietf-wg-aipref.github.io/drafts/draft-ietf-aipref-vocab.html#name-search). Has that resolved this issue? Note that we can still discuss search, of course.",
           "createdAt": "2026-08-17T06:43:19Z",
           "updatedAt": "2026-08-17T06:43:19Z"
+        },
+        {
+          "author": "chrisn",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Thank you. Yes, I'm happy to close this.",
+          "createdAt": "2026-08-21T14:05:49Z",
+          "updatedAt": "2026-08-21T14:05:49Z"
         }
       ]
     },
@@ -4088,7 +4109,7 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\n_No response_\n\n### Proposed Resolution\n\n_No response_",
       "createdAt": "2026-08-18T23:03:26Z",
-      "updatedAt": "2026-08-19T12:59:59Z",
+      "updatedAt": "2026-08-20T07:51:30Z",
       "closedAt": null,
       "comments": [
         {
@@ -4125,6 +4146,13 @@
           "body": "I was focusing on the server because in the example you provided something that is in a PUT is remembered in a subsequent GET, which seems to be a case of the server remembering.\n\nAs far as the client using the value, it seems like there are broadly two cases:\n\n1. Automated AI-based clients.\n2. Other ordinary clients (e.g., normal browsers)\n\nThe former are the subject of this document so I think that's clear and this text doesn't bear on that. I don't understand how the latter would work at all. Do you somehow have in mind that when a browser downloads an asset it should store the preferences and then replay them on future PUT/POSTs?",
           "createdAt": "2026-08-19T12:59:59Z",
           "updatedAt": "2026-08-19T12:59:59Z"
+        },
+        {
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "As a browser-maker, I can't imagine doing anything with preferences in a browser.  That said, that's based on what I think is a consideration of the preferences in relation to what a browser is for (that is, a browser is a *user* agent).  Anything that we pass on to our users can't really capture preferences in a way that will survive most user flows, including viewing web pages, content on those pages, and file downloads.  As you well know, we can expose information in debugging interfaces, but most users have no use for those capabilities.\n\nOn the other hand, that's not a judgment that necessarily holds for web applications that fetch stuff that have this header field.  The Fetch API will expose the header field value, so those web applications can make their own judgment.  The same is true for other client software, like a curl integration in an app.\n\nI tend to think that this is fine.  I don't think that anyone really expects a browser to do anything special here.  That it is possible to seek out and pay attention to preferences seems to be sufficient.  I'd be curious if anyone thinks that this is an unreasonable position.",
+          "createdAt": "2026-08-20T07:51:30Z",
+          "updatedAt": "2026-08-20T07:51:30Z"
         }
       ]
     }
@@ -11483,7 +11511,7 @@
       "labels": [],
       "body": "This adds two proposed inference/use vocab categories that are intended to work in tandem: \r\n-AI System Inference \r\n-AI User Input\r\n\r\nThese definitions both rely on the AI training definition of PR 211 as a logical starting point. They define inference as all use of assets by AI models beyond the modification of learned parameters. \r\n\r\nTogether, these proposed categories would enable the expression of preferences covering the full field of post-training usage. They also give declaring parties the option to express different preferences when assets are used by autonomous systems vs when assets are identified by a human end user.",
       "createdAt": "2026-07-30T08:55:41Z",
-      "updatedAt": "2026-08-19T17:26:09Z",
+      "updatedAt": "2026-08-21T01:54:17Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "26841404458861cc6bd54ef52af63c7736c315c2",
@@ -11558,6 +11586,26 @@
           "createdAt": "2026-08-18T20:22:12Z",
           "updatedAt": "2026-08-18T20:22:12Z",
           "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABKV8KOA",
+          "commit": {
+            "abbreviatedOid": "160ccdc"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-08-21T01:54:16Z",
+          "updatedAt": "2026-08-21T01:54:17Z",
+          "comments": [
+            {
+              "originalPosition": 12,
+              "body": "Some editorial notes:\n\nThe inference categories need to address the potential for overlap with search.  Search almost certainly involves inference and we need to be clear on which preference applies if the usage is identifiably both search and inference.  My sense is that search is a narrower notion generally - even if it includes stuff outside of inference, it's only a tiny subset of possible inference uses.  If you agree, then my suggestion would be to say that a search preference applies when the usage is clearly search (and the inference preferences do not).\n\nAs a matter of document structure, I would prefer that search be listed last (sort from most general to most specific).  That follows on from the previous point.\n\nI'm happy to make these changes during integration, if the group decides on something like this. I just wanted to flag these.",
+              "createdAt": "2026-08-21T01:54:16Z",
+              "updatedAt": "2026-08-21T01:54:17Z"
+            }
+          ]
         }
       ]
     },
@@ -12235,6 +12283,93 @@
       },
       "comments": [],
       "reviews": []
+    },
+    {
+      "number": 225,
+      "id": "PR_kwDOOWk1-s8AAAABAcT7Jw",
+      "title": "Add Selection Step, Inference User, Inference System",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/225",
+      "state": "OPEN",
+      "author": "tymrtn",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "This refines #216 by defining the boundary between user-directed and system-directed inference. Nate's original commits are preserved at the base; this rebases onto -07 and adds two things.\r\n\r\nFirst, a \"selection step\" that makes the user/system distinction mechanical: an operation by any party or process other than the user that identifies assets in response to a request (searching, browsing, ranking, recommending, resolving a description). Retrieval from among assets the user previously provided is not a selection step.\r\n\r\nSecond, the two category definitions rewritten around that term. User-directed: the user provided the asset or a direct reference the system fetches without any selection step. System-directed: everything else, including further assets fetched of the system's own choosing. Applies at time of use regardless of acquisition.\r\n\r\nUnder \u00a76.4, categories not in the base document degrade to \"unknown\" permanently for conforming recipients. If inference categories are going in, they need to be here before this ships.\r\n\r\nA decision-tree tool that walks scenarios through the vocabulary is at \r\n[The Inference Line](https://claude.ai/code/artifact/a4a1f206-1759-454b-8b03-90861d8d110b)\r\n\r\nAddresses discussion in #216 from @natehake, @paul2keller, @ekr, @martinthomson, @TimidRobot, @chrisn, @lrosenthol, and @posth.",
+      "createdAt": "2026-08-20T16:17:07Z",
+      "updatedAt": "2026-08-21T07:21:23Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "7ca0afce45b32609dc0131eebc2c0137469cdad9",
+      "headRepository": "tymrtn/drafts",
+      "headRefName": "selection-step-v7",
+      "headRefOid": "3c84adf28d94d3ae57cc971b3e48a96dc846cfbd",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABKV65aw",
+          "commit": {
+            "abbreviatedOid": "3c84adf"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-08-21T01:49:02Z",
+          "updatedAt": "2026-08-21T01:49:02Z",
+          "comments": [
+            {
+              "originalPosition": 27,
+              "body": "We've agreed not to have overlap between categories, but this creates an overlap with the infer-user category.\n\nIt also potentially overlaps with search, which is a problem with @natehake's original as well.  A specific exclusion, in one or other direction, could address that.  That is, you could say that if search applies, then either inference category does not apply.  I'd make a change to the search definition in that case.\n\n(I don't think that the opposite makes a lot of sense, because search is a more specific scope than training or inference, even with the qualifications here.)",
+              "createdAt": "2026-08-21T01:49:02Z",
+              "updatedAt": "2026-08-21T01:49:02Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABKWvWOg",
+          "commit": {
+            "abbreviatedOid": "3c84adf"
+          },
+          "author": "tymrtn",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-08-21T05:23:11Z",
+          "updatedAt": "2026-08-21T05:23:12Z",
+          "comments": [
+            {
+              "originalPosition": 27,
+              "body": "Infer-system's definition opens with \"any other circumstance\" \u2014 other than infer-user. So it can't overlap infer-user; it's built as everything infer-user doesn't cover. The one place I can see it leaking is the last sentence, if \"regardless of when or how the asset was acquired\" reads as an independent scope grant rather than timing detail inside the complement:\r\n\r\n> Whether this category applies is determined at the time of use, according to how the asset was identified for that use rather than when it was acquired.\r\n\r\nOn search, can you help me understand the overlap you're seeing? [4.2 is about snippets and links to assets](https://datatracker.ietf.org/doc/html/draft-ietf-aipref-vocab-07#section-4.2), not generating content, so it shouldn't clear the inference gate at all. datatracker.ietf.org/doc/html/draft-ietf-aipref-vocab-07#section-4.2 AI-generated search results overviews already route to inference by the summary exclusion in 4.2. ",
+              "createdAt": "2026-08-21T05:23:12Z",
+              "updatedAt": "2026-08-21T05:23:12Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABKXkG0A",
+          "commit": {
+            "abbreviatedOid": "3c84adf"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-08-21T07:21:23Z",
+          "updatedAt": "2026-08-21T07:21:23Z",
+          "comments": [
+            {
+              "originalPosition": 27,
+              "body": "The general consensus is that search is always inference.\r\n\r\nThere's some contention, but search is sometimes training, which is why we explicitly allow training if it is exclusively for a search application.  The same would apply to inference.\r\n\r\nI don't think that \"any other\" is sufficiently clear.",
+              "createdAt": "2026-08-21T07:21:23Z",
+              "updatedAt": "2026-08-21T07:21:24Z"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
