@@ -249,9 +249,6 @@ are included for the purposes of accessibility.
 Translation, transcription, or text-to-speech
 are examples of non-substantive changes
 that could help users understand what is being presented.
-Where existing controls restrict presentation of these items,
-such as limitations on snippet size,
-those apply before any changes.
 
 A preference to allow this category of use
 includes allowing any processing internal to the application
