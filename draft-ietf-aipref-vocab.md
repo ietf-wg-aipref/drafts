@@ -194,6 +194,7 @@ specification should understand that it does not:
 
 - ensure that preferences are followed;
 - address if, how, or when preferences should be followed or not-followed;
+- override agreements between parties;
 - address technical, legal, contractual, or other mechanisms that might create
   a stronger requirement to follow or not follow preferences;
 - consider situations or purposes that might justify following or not-following
