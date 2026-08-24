@@ -243,8 +243,8 @@ This category of use only applies under the following conditions:
 This category does not include the use of assets
 to generate summaries.
 
-Changes to the presentation of titles or excerpts from assets such as
-translation, transcription, or text-to-speech are included in this
+Changes such as translation, transcription, or text-to-speech of the
+presentation of titles or excerpts from assets are included in this
 category. These changes must not involve the generation of new
 material, though such changes may be permissible for other reasons.
 
