@@ -256,16 +256,17 @@ those apply before any changes.
 A preference to allow this category of use
 includes allowing any processing internal to the application
 that is performed on assets.
-Allowing this use is conditional on the outputs of any processing
+Allowing this processing is conditional on the outputs of any processing
 being exclusively used by the search application
 according to the other restrictions in this section.
-That includes the training of AI models
+Allowed processing therefore includes the training of AI models
 using the assets
 and the use of those models
 provided that the resulting models
 and their outputs
 are used exclusively
-in ways that meet the above conditions.
+in ways that meet the above conditions
+regarding referencing and excerpts.
 
 
 ## Vocabulary Extensions {#vocab-extension}
