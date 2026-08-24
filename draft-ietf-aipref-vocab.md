@@ -106,6 +106,11 @@ Asset:
 Declaring party:
 : The entity that expresses a preference with regards to an Asset.
 
+Generative AI model:
+: An AI model that is used
+  to generate synthetic content
+  in one or more modalities.
+
 
 # Statements of Preference {#model}
 
@@ -218,9 +223,8 @@ implementations or their architecture.
 
 ## AI Model Training {#train-ai}
 
-Using an asset to modify the learned parameters of an AI model
-that is used
-to generate synthetic content in one or more modalities.
+Using an asset to modify the learned parameters
+of a generative AI model.
 
 ## Search {#search}
 
