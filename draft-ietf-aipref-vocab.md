@@ -300,8 +300,9 @@ and AI Use ({{ai-use}}).
 
 ## Vocabulary Extensions {#vocab-extensions}
 
-Extensions to this vocabulary are defined
+Extensions to this vocabulary may be defined
 in a standards-track RFC that updates this document.
+Or they may be defined by other organizations.
 
 The definition of the extension MUST define
 how any potential overlap between usage categories is resolved.
