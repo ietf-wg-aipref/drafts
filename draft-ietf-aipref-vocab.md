@@ -229,7 +229,8 @@ of a generative AI model.
 The training of models that are used
 to perform exclusively non-generative tasks,
 like ranking or classification,
-are not included in this category, even if the model is capable of generative tasks.
+are not included in this category,
+even if the model is capable of generative tasks.
 
 
 ## Search {#search}
