@@ -226,6 +226,14 @@ implementations or their architecture.
 Using an asset to modify the learned parameters
 of a generative AI model.
 
+AI models can have multiple uses,
+some of which are not generative,
+even if the model might have those capabilities.
+The training of models that are used to perform non-generative tasks,
+like ranking or classification,
+are not included in this category.
+
+
 ## Search {#search}
 
 Use of an asset in an application
