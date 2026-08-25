@@ -5,8 +5,8 @@
 AI Preferences                                                 P. Keller
 Internet-Draft                                               Open Future
 Intended status: Standards Track                         M. Thomson, Ed.
-Expires: 25 February 2027                                        Mozilla
-                                                          24 August 2026
+Expires: 26 February 2027                                        Mozilla
+                                                          25 August 2026
 
 
             A Vocabulary For Expressing AI Usage Preferences
@@ -59,7 +59,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 25 February 2027.
+   This Internet-Draft will expire on 26 February 2027.
 
 Copyright Notice
 
@@ -146,9 +146,9 @@ Table of Contents
       metadata.
    Declaring party:
       The entity that expresses a preference with regards to an Asset.
-   Generative AI model:
-      An AI model that is used to generate synthetic content in one or
-      more modalities.
+   Generative AI process:
+      Use of AI model to generate synthetic content in one or more
+      modalities.
 
 3.  Statements of Preference
 
@@ -261,8 +261,8 @@ Table of Contents
 
 4.1.  AI Model Training
 
-   Using an asset to modify the learned parameters of a generative AI
-   model.
+   Using an asset to modify the learned parameters of a model that is
+   used for a generative AI process.
 
 4.2.  Search
 
