@@ -108,8 +108,12 @@ Declaring party:
 
 Generative AI model:
 : An AI model that is used
+  \[, or made available for use,]<!-- A -->
   to generate synthetic content
   in one or more modalities.
+  \[This does not include classification, ranking, or scoring,
+  or the generation of brief explanations
+  of the outputs of those operations.\]<!-- B -->
 
 
 # Statements of Preference {#model}
@@ -233,6 +237,16 @@ are not included in this category,
 even if the model is capable of generative tasks.
 
 
+## AI Use {#ai-use}
+
+Use of an asset as input to a generative AI model,
+\[as the result of a request\]<!-- C -->
+which does not alter the learned parameters of the model.
+
+This does not include any use that is included
+in the AI Training usage category ({{train-ai}}).
+
+
 ## Search {#search}
 
 Use of an asset in an application
@@ -277,6 +291,11 @@ provided that the resulting models
 and their outputs
 are used exclusively
 in ways that meet the above conditions.
+
+This category of use overrides any usage
+that falls into other categories,
+including AI Training ({{train-ai}})
+and AI Use ({{ai-use}}).
 
 
 ## Vocabulary Extensions {#vocab-extension}
@@ -388,6 +407,7 @@ Each usage category in the vocabulary ({{vocab}}) is mapped to a short textual l
 | Category                    | Label       | Reference       |
 |:----------------------------|:------------|:----------------|
 | AI Model Training           | train-ai    | {{train-ai}}    |
+| AI Use                      | ai-use      | {{ai-use}}      |
 | Search                      | search      | {{search}}      |
 {: #t-category-labels title="Mappings for Categories"}
 
