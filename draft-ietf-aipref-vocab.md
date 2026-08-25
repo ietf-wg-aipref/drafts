@@ -160,8 +160,8 @@ Recipients that implement this specification
 will understand the vocabulary terms defined in {{vocab}},
 but they might not understand extensions; see {{extension}}.
 
-A recipient can only understand preferences expressed
-through mechanisms it has implemented.
+A recipient will only process preferences expressed
+through methods it has implemented.
 Those methods might be limited to those in {{ATTACH}}
 or it could also include other methods (see {{Section 1.3 of ATTACH}}).
 If a preference is associated with an asset
