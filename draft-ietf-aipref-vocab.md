@@ -229,7 +229,8 @@ of a generative AI model.
 AI models can have multiple uses,
 some of which are not generative,
 even if the model might have those capabilities.
-The training of models that are used to perform non-generative tasks,
+The training of models that are used
+to perform exclusively non-generative tasks,
 like ranking or classification,
 are not included in this category.
 
