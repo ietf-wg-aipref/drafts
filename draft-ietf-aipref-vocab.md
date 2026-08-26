@@ -225,7 +225,7 @@ of assets.  The definitions seek to avoid describing internal details of
 implementations or their architecture.
 
 
-## AI Model Training {#train-ai}
+## Generative AI Model Training {#train-genai}
 
 Using an asset to modify the learned parameters
 of a generative AI model.
@@ -244,7 +244,7 @@ Use of an asset as input to a generative AI model,
 which does not alter the learned parameters of the model.
 
 This does not include any use that is included
-in the AI Training usage category ({{train-ai}}).
+in the Generative AI Model Training usage category ({{train-genai}}).
 
 
 ## Search {#search}
@@ -294,7 +294,7 @@ in ways that meet the above conditions.
 
 This category of use overrides any usage
 that falls into other categories,
-including AI Training ({{train-ai}})
+including Generative AI Model Training ({{train-genai}})
 and AI Use ({{ai-use}}).
 
 
@@ -390,12 +390,12 @@ and the dictionary values correspond to explicit preferences,
 which can be either `y` or `n`; see {{y-or-n}}.
 
 For example, the following states a preference
-to allow model training ({{train-ai}}),
+to allow model training ({{train-genai}}),
 disallow search ({{search}}),
 with the preference for other categories being unknown:
 
 ~~~
-train-ai=y, search=n
+train-genai=y, search=n
 ~~~
 
 
@@ -404,11 +404,11 @@ train-ai=y, search=n
 Each usage category in the vocabulary ({{vocab}}) is mapped to a short textual label.
 {{t-category-labels}} tabulates this mapping.
 
-| Category                    | Label       | Reference       |
-|:----------------------------|:------------|:----------------|
-| AI Model Training           | train-ai    | {{train-ai}}    |
-| AI Use                      | ai-use      | {{ai-use}}      |
-| Search                      | search      | {{search}}      |
+| Category                     | Label          | Reference       |
+|:-----------------------------|:---------------|:----------------|
+| Generative AI Model Training | train-genai    | {{train-genai}} |
+| AI Use                       | ai-use         | {{ai-use}}      |
+| Search                       | search         | {{search}}      |
 {: #t-category-labels title="Mappings for Categories"}
 
 These tokens are case sensitive.
@@ -514,7 +514,7 @@ because the type of the parameter values
 are not tokens:
 
 ~~~
-train-ai=y, train-ai, search=n, search="n"
+train-genai=y, train-genai, search=n, search="n"
 ~~~
 
 If the parsing of the Dictionary fails, preferences are unknown.
@@ -531,16 +531,16 @@ For example, the following preference carries no parameters,
 and a preference to allow the usage:
 
 ~~~
-train-ai;allow=n, train-ai=y
+train-genai;allow=n, train-genai=y
 ~~~
 
 Parameters can therefore be carried for any preference value,
 including where preferences are unknown.
-For example, the following `train-ai` preference has parameters
+For example, the following `train-genai` preference has parameters
 even though the preference is unknown:
 
 ~~~
-train-ai;has;parameters="?";
+train-genai;has;parameters="?";
 ~~~
 
 
