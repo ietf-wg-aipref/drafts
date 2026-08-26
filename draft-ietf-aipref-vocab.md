@@ -281,7 +281,7 @@ Using an asset during inference where the human user, on whose behalf the infere
 
 ## Inference Directed by System {#ai-inference-system}
 
-Using an asset during inference in any other circumstance, including where the asset is identified through one or more selection steps.
+Using an asset during inference in any circumstance other than user direction, including where the asset is identified through one or more selection steps.
 Where a system begins from a user-provided reference and retrieves further assets of its own choosing, those further assets are selected by the system.
 
 This category applies at the time of use, regardless of when or how the asset was acquired.
