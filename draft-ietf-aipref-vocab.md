@@ -300,7 +300,7 @@ that falls into other categories,
 including AI Training ({{train-ai}})
 and AI Use ({{ai-use}}).
 
-If a model is trained under a search allowence preference, that context must be
+If a model is trained under a search allowance preference, that context must be
 documented alongside the model.
 
 
