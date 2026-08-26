@@ -107,7 +107,8 @@ Declaring party:
 : The entity that expresses a preference with regards to an Asset.
 
 Generative AI model:
-: An AI model that is used
+: An AI model that is used,
+  or made available for use,
   to generate synthetic content
   in one or more modalities.
   \[This does not include classification, ranking, or scoring,
