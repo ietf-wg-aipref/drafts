@@ -254,6 +254,8 @@ Use of an asset as input to a generative AI model,
 where the asset is not directly provided by the user\[,
 either as a URL or by supplying the asset itself\].
 
+<!-- Choose either the above or the below. -->
+
 \[If a system that needs to perform inference
 in order to determine which asset to use,
 that does not qualify as a user directly providing the asset.\]
