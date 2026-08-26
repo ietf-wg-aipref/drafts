@@ -97,7 +97,7 @@ The vocabulary is a set of categories,
 each of which is defined to cover a class of usage for assets.
 {{vocab}} defines these categories in more detail.
 
-A statement of preference is made about an asset.
+A statement of preference is made about an asset and any derivative forms of that asset. For example, preferences on an asset also apply to AI embeddings created from that asset.
 Statements of preferences can assign preferences
 to each of the categories of use in the vocabulary.
 Preferences regarding each category can be expressed
