@@ -93,18 +93,24 @@ and {{format}} describes a way to serialize preferences into a string.
 Other means of association might be defined separately in the future.
 
 
-# Conventions and Definitions
+# Conventions and Definitions {#defs}
 
 {::boilerplate bcp14-tagged}
+
+*[asset]: #dfn-asset
+*[declaring party]: #dfn-decl-party
+*[generative AI model]: #dfn-genai
 
 This document uses the following terms:
 
 {: newline="true" spacing="compact"}
 Asset:
 : A digital file or stream of data, usually with associated metadata.
+  {: anchor="dfn-asset"}
 
 Declaring party:
 : The entity that expresses a preference with regards to an Asset.
+  {: anchor="dfn-decl-party"}
 
 Generative AI model:
 : An AI model that is used
@@ -118,6 +124,7 @@ Generative AI model:
   in classification, ranking, or scoring,
   even if those models generate rationales
   for the output of those operations.
+  {: anchor="dfn-genai"}
 
 
 # Statements of Preference {#model}
@@ -235,8 +242,7 @@ Using an asset to modify the learned parameters
 of a generative AI model.
 
 The training of models that are used
-to perform exclusively non-generative tasks,
-like ranking or classification,
+to perform exclusively non-generative tasks
 are not included in this category,
 even if the model is capable of generative tasks.
 
