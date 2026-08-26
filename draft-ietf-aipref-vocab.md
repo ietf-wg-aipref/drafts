@@ -276,7 +276,7 @@ in ways that meet the above conditions.
 
 ## Inference Directed by User {#ai-inference-user}
 
-Using an asset during inference where the human user on whose behalf the inference is performed has provided the asset itself, or a reference to the asset that the system retrieves directly without performing any selection step.
+Using an asset during inference where the human user, on whose behalf the inference is performed, has provided the asset itself, or a reference to the asset that the system retrieves directly without performing any selection step.
 
 
 ## Inference Directed by System {#ai-inference-system}
