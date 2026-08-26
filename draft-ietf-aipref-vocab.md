@@ -107,8 +107,8 @@ Declaring party:
 : The entity that expresses a preference with regards to an Asset.
 
 Generative AI model:
-: An AI model that is used
-  \[, or made available for use,]<!-- A -->
+: An AI model that is used,
+  or made available for use,
   to generate synthetic content
   in one or more modalities.
   \[This does not include classification, ranking, or scoring,
@@ -235,6 +235,11 @@ to perform exclusively non-generative tasks,
 like ranking or classification,
 are not included in this category,
 even if the model is capable of generative tasks.
+
+Compliance with preferences about this category of use
+also includes conveying preferences
+associated with the training data of a model
+along with that model.
 
 
 ## AI Use {#ai-use}
