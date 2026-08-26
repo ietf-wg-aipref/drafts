@@ -277,8 +277,13 @@ Table of Contents
 
 4.2.  AI Use
 
-   Use of an asset as input to a generative AI model, which does not
-   alter the learned parameters of the model.
+   Use of an asset as input to a generative AI model, where the asset is
+   not directly provided by the user[, either as a URL or by supplying
+   the asset itself].
+
+   [If a system that needs to perform inference in order to determine
+   which asset to use, that does not qualify as a user directly
+   providing the asset.]
 
    This does not include any use that is included in the AI Training
    usage category (Section 4.1).
@@ -633,9 +638,9 @@ Index
          asset  Section 3, Paragraph 3; Section 3, Paragraph 7;
             Section 3.1, Paragraph 2; Section 3.1, Paragraph 3;
             Section 3.1, Paragraph 5; Section 4.1, Paragraph 1;
-            Section 4.2, Paragraph 1; Section 4.3, Paragraph 1;
-            Section 4.3, Paragraph 3.1.1; Section 4.3, Paragraph 3.2.1;
-            Section 5.2, Paragraph 3
+            Section 4.2, Paragraph 1; Section 4.2, Paragraph 2;
+            Section 4.3, Paragraph 1; Section 4.3, Paragraph 3.1.1;
+            Section 4.3, Paragraph 3.2.1; Section 5.2, Paragraph 3
          assets  Section Abstract, Paragraph 1; Section 1, Paragraph 1;
             Section 1, Paragraph 4; Section 3, Paragraph 2; Section 3.1,
             Paragraph 1; Section 3.1, Paragraph 7; Section 4, Paragraph
