@@ -109,8 +109,8 @@ Declaring party:
 Generative AI model:
 : An AI model that is used
   to generate synthetic content
-  in one or more modalities
-  or an AI model that is made available for use
+  in one or more modalities.
+  Alternatively, an AI model that is made available for use
   in generating synthetic content
   in one or more modalities.
   \[This does not include classification, ranking, or scoring,
