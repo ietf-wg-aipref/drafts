@@ -237,14 +237,10 @@ are not included in this category,
 even if the model is capable of generative tasks.
 
 Though models can be trained for non-generative tasks,
-using assets that have indicated preferences
-that request training not be performed,
-there is an expectation that the model not be adapted
-to enable any generative capacity.
-An entity that distributes such a model
-is thus expected to communicate a preference
-that the model not be used
-for generative purposes
+using assets that have a "disallowed" preference
+for this category of use,
+an entity that distributes such a model
+is expected to communicate this information
 to potential users of the model.
 
 
