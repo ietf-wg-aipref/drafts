@@ -116,7 +116,7 @@ Generative AI model:
   This definition does not include models that are used,
   or made available for use,
   in classification, ranking, or scoring,
-  even if those models can generate rationale
+  even if those models generate rationales
   for the output of those operations.
 
 
@@ -229,7 +229,7 @@ of assets.  The definitions seek to avoid describing internal details of
 implementations or their architecture.
 
 
-## AI Model Training {#train-ai}
+## AI Training {#train-ai}
 
 Using an asset to modify the learned parameters
 of a generative AI model.
@@ -410,7 +410,7 @@ Each usage category in the vocabulary ({{vocab}}) is mapped to a short textual l
 
 | Category                    | Label       | Reference       |
 |:----------------------------|:------------|:----------------|
-| AI Model Training           | train-ai    | {{train-ai}}    |
+| AI Training                 | train-ai    | {{train-ai}}    |
 | AI Use                      | ai-use      | {{ai-use}}      |
 | Search                      | search      | {{search}}      |
 {: #t-category-labels title="Mappings for Categories"}
