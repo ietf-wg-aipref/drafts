@@ -236,6 +236,9 @@ like ranking or classification,
 are not included in this category,
 even if the model is capable of generative tasks.
 
+If a model is trained under this exclusively non-generative tasks allowence,
+that context must be documented alongside the model.
+
 
 ## AI Use {#ai-use}
 
@@ -296,6 +299,9 @@ This category of use overrides any usage
 that falls into other categories,
 including AI Training ({{train-ai}})
 and AI Use ({{ai-use}}).
+
+If a model is trained under a search allowence preference, that context must be
+documented alongside the model.
 
 
 ## Vocabulary Extensions {#vocab-extension}
