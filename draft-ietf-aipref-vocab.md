@@ -108,8 +108,10 @@ Declaring party:
 
 Generative AI model:
 : An AI model that is used
-  \[, or made available for use,]<!-- A -->
   to generate synthetic content
+  in one or more modalities.
+  Alternatively, an AI model that is made available for use
+  in generating synthetic content
   in one or more modalities.
   \[This does not include classification, ranking, or scoring,
   or the generation of brief explanations
