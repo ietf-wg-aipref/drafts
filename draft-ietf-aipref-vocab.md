@@ -240,9 +240,10 @@ using assets that have indicated preferences
 that request training not be performed,
 there is an expectation that the model not be adapted
 to enable any generative capacity.
-An entity that distributes such a model is thus obligated
-to communicate a preference than the model not be adapted
-in that way
+An entity that distributes such a model
+is thus expected to communicate a preference
+that the model not be used
+for generative purposes
 to potential users of the model.
 
 
