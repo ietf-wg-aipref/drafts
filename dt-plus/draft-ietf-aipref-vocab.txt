@@ -83,7 +83,7 @@ Table of Contents
      3.1.  Understanding Preferences
      3.2.  Applying Preferences
    4.  Vocabulary Definition
-     4.1.  AI Model Training
+     4.1.  AI Training
      4.2.  AI Use
      4.3.  Search
      4.4.  Vocabulary Extensions
@@ -153,8 +153,8 @@ Table of Contents
       available for use to generate synthetic content in one or more
       modalities.  This definition does not include models that are
       used, or made available for use, in classification, ranking, or
-      scoring, even if those models can generate rationale for the
-      output of those operations.
+      scoring, even if those models generate rationales for the output
+      of those operations.
 
 3.  Statements of Preference
 
@@ -265,7 +265,7 @@ Table of Contents
    on the use of assets.  The definitions seek to avoid describing
    internal details of implementations or their architecture.
 
-4.1.  AI Model Training
+4.1.  AI Training
 
    Using an asset to modify the learned parameters of a generative AI
    model.
@@ -415,15 +415,15 @@ Table of Contents
    Each usage category in the vocabulary (Section 4) is mapped to a
    short textual label.  Table 1 tabulates this mapping.
 
-              +===================+==========+=============+
-              | Category          | Label    | Reference   |
-              +===================+==========+=============+
-              | AI Model Training | train-ai | Section 4.1 |
-              +-------------------+----------+-------------+
-              | AI Use            | ai-use   | Section 4.2 |
-              +-------------------+----------+-------------+
-              | Search            | search   | Section 4.3 |
-              +-------------------+----------+-------------+
+                 +=============+==========+=============+
+                 | Category    | Label    | Reference   |
+                 +=============+==========+=============+
+                 | AI Training | train-ai | Section 4.1 |
+                 +-------------+----------+-------------+
+                 | AI Use      | ai-use   | Section 4.2 |
+                 +-------------+----------+-------------+
+                 | Search      | search   | Section 4.3 |
+                 +-------------+----------+-------------+
 
                      Table 1: Mappings for Categories
 
