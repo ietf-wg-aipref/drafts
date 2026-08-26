@@ -277,8 +277,8 @@ Table of Contents
 
 4.2.  AI Use
 
-   Use of an asset as input to a generative AI model, [as the result of
-   a request]which does not alter the learned parameters of the model.
+   Use of an asset as input to a generative AI model, which does not
+   alter the learned parameters of the model.
 
    This does not include any use that is included in the AI Training
    usage category (Section 4.1).
