@@ -116,8 +116,8 @@ Generative AI model:
   \[This definition does not include models that are used,
   or made available for use,
   in classification, ranking, or scoring,
-  including the creation of minimal explanations
-  of the outputs of those operations.\]<!-- B -->
+  even if those models can generate rationale
+  for the output of those operations.\]<!-- B -->
 
 
 # Statements of Preference {#model}
