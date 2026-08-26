@@ -148,10 +148,10 @@ Table of Contents
    Declaring party:
       The entity that expresses a preference with regards to an Asset.
    Generative AI model:
-      An AI model that is used to generate synthetic content in one or
-      more modalities.  [This does not include classification, ranking,
-      or scoring, or the generation of brief explanations of the outputs
-      of those operations.]
+      An AI model that is used, or made available for use, to generate
+      synthetic content in one or more modalities.  [This does not
+      include classification, ranking, or scoring, or the generation of
+      brief explanations of the outputs of those operations.]
 
 3.  Statements of Preference
 
