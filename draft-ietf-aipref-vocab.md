@@ -205,6 +205,32 @@ Whether and under which circumstances a preference is followed is outside the
 scope of this specification.
 
 
+## Documenting Conformance With This Specification {#decl}
+
+An entity that might be in a position to act on preferences
+can document their conformance with this specification.
+
+In making such statements,
+it is not sufficient to simply declare compliance
+with this specification.
+That only encompasses the model for preferences ({{model}}),
+how preferences are understood and applied in general ({{usage}}),
+and maybe the exemplary serialization format ({{format}}).
+
+In documenting how an entity conforms with this specification,
+the entity can include:
+
+* a list of the attachment mechanisms that are understood,
+  which might include those defined in {{ATTACH}};
+
+* a list of the vocabulary terms that are understood,
+  either from {{vocab}} or extensions ({{extension}}); and
+
+* ideally, documentation for each vocabulary term
+  that describes the circumstances under which
+  the entity will or will not follow expressed preferences
+  for each vocabulary term.
+
 # Vocabulary Definition {#vocab}
 
 NOTE: This section does not yet have consensus; see "Note to Readers" above.
