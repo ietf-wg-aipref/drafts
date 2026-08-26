@@ -1259,7 +1259,10 @@ of restrictions or permissions for use of digital assets by such systems.<a href
             <p id="section-toc.1-1.10.1"><a href="#appendix-A" class="auto internal xref"></a><a href="#name-acknowledgments" class="internal xref">Acknowledgments</a></p>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.11">
-            <p id="section-toc.1-1.11.1"><a href="#appendix-B" class="auto internal xref"></a><a href="#name-authors-addresses" class="internal xref">Authors' Addresses</a></p>
+            <p id="section-toc.1-1.11.1"><a href="#appendix-B" class="auto internal xref"></a><a href="#name-index" class="internal xref">Index</a></p>
+</li>
+          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.12">
+            <p id="section-toc.1-1.12.1"><a href="#appendix-C" class="auto internal xref"></a><a href="#name-authors-addresses" class="internal xref">Authors' Addresses</a></p>
 </li>
         </ul>
 </nav>
@@ -1274,7 +1277,7 @@ of restrictions or permissions for use of digital assets by such systems.<a href
 regarding how automated systems process digital assets --
 in particular, the training and use of AI models.
 This vocabulary can be used to describe
-the types of uses that a declaring party may wish to explicitly restrict or allow.<a href="#section-1-1" class="pilcrow">¶</a></p>
+the types of uses that a <span id="iref-declaring-party-1" class="iref"></span><a href="#dfn-decl-party" class="internal xref">declaring party</a> may wish to explicitly restrict or allow.<a href="#section-1-1" class="pilcrow">¶</a></p>
 <p id="section-1-2">The vocabulary is intended to be used
 in jurisdictions where expressing preferences results in legal obligations,
 as well as where there are no associated legal obligations.
@@ -1289,7 +1292,7 @@ and <a href="#format" class="auto internal xref">Section 6</a> describes a way t
 Other means of association might be defined separately in the future.<a href="#section-1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
-<div id="conventions-and-definitions">
+<div id="defs">
 <section id="section-2">
       <h2 id="name-conventions-and-definitions">
 <a href="#section-2" class="section-number selfRef">2. </a><a href="#name-conventions-and-definitions" class="section-name selfRef">Conventions and Definitions</a>
@@ -1302,17 +1305,22 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
 <span class="break"></span><dl class="dlCompact dlNewline" id="section-2-3">
         <dt id="section-2-3.1">Asset:</dt>
         <dd style="margin-left: 1.5em" id="section-2-3.2">
-          <p id="section-2-3.2.1">A digital file or stream of data, usually with associated metadata.<a href="#section-2-3.2.1" class="pilcrow">¶</a></p>
+          <div id="dfn-asset">
+<p id="section-2-3.2.1">A digital file or stream of data, usually with associated metadata.<a href="#section-2-3.2.1" class="pilcrow">¶</a></p>
+</div>
 </dd>
         <dd class="break"></dd>
 <dt id="section-2-3.3">Declaring party:</dt>
         <dd style="margin-left: 1.5em" id="section-2-3.4">
-          <p id="section-2-3.4.1">The entity that expresses a preference with regards to an Asset.<a href="#section-2-3.4.1" class="pilcrow">¶</a></p>
+          <div id="dfn-decl-party">
+<p id="section-2-3.4.1">The entity that expresses a preference with regards to an Asset.<a href="#section-2-3.4.1" class="pilcrow">¶</a></p>
+</div>
 </dd>
         <dd class="break"></dd>
 <dt id="section-2-3.5">Generative AI model:</dt>
         <dd style="margin-left: 1.5em" id="section-2-3.6">
-          <p id="section-2-3.6.1">An AI model that is used
+          <div id="dfn-genai">
+<p id="section-2-3.6.1">An AI model that is used
 to generate synthetic content
 in one or more modalities.
 Alternatively, an AI model that is made available for use
@@ -1323,6 +1331,7 @@ or made available for use,
 in classification, ranking, or scoring,
 even if those models generate rationales
 for the output of those operations.<a href="#section-2-3.6.1" class="pilcrow">¶</a></p>
+</div>
 </dd>
       <dd class="break"></dd>
 </dl>
@@ -1337,7 +1346,7 @@ for the output of those operations.<a href="#section-2-3.6.1" class="pilcrow">¶
 <p id="section-3-2">The vocabulary is a set of categories,
 each of which is defined to cover a class of usage for assets.
 <a href="#vocab" class="auto internal xref">Section 4</a> defines the core set of usage categories in detail.<a href="#section-3-2" class="pilcrow">¶</a></p>
-<p id="section-3-3">A statement of preference -- or usage preference -- is made about an asset.
+<p id="section-3-3">A statement of preference -- or usage preference -- is made about an <span id="iref-asset-2" class="iref"></span><a href="#dfn-asset" class="internal xref">asset</a>.
 A statement of preference follows a simple data model where a preference
 is assigned to each of the categories of use in the vocabulary.
 A preference is either to allow or disallow
@@ -1352,7 +1361,7 @@ In the absence of a statement of preference,
 all usage categories are assigned a preference value of "unknown".<a href="#section-3-5" class="pilcrow">¶</a></p>
 <p id="section-3-6">The process for consulting a statement of preference is defined in <a href="#usage" class="auto internal xref">Section 5</a>.<a href="#section-3-6" class="pilcrow">¶</a></p>
 <p id="section-3-7">Different declaring parties might each make their own statement of preference
-regarding a particular asset.
+regarding a particular <span id="iref-asset-3" class="iref"></span><a href="#dfn-asset" class="internal xref">asset</a>.
 The process for managing multiple statements of preference is defined in <a href="#combine" class="auto internal xref">Section 5.1</a>.<a href="#section-3-7" class="pilcrow">¶</a></p>
 <p id="section-3-8">An exemplary syntax for statements of preference is defined in <a href="#format" class="auto internal xref">Section 6</a>.<a href="#section-3-8" class="pilcrow">¶</a></p>
 <div id="understanding">
@@ -1363,12 +1372,12 @@ The process for managing multiple statements of preference is defined in <a href
 <p id="section-3.1-1">This document and <span>[<a href="#ATTACH" class="cite xref">ATTACH</a>]</span>
 describe how statements of preference are associated with assets.<a href="#section-3.1-1" class="pilcrow">¶</a></p>
 <p id="section-3.1-2">The goal of these specifications is to ensure
-that the recipient of an asset knows
-what preferences have been associated with the asset.
+that the recipient of an <span id="iref-asset-4" class="iref"></span><a href="#dfn-asset" class="internal xref">asset</a> knows
+what preferences have been associated with the <span id="iref-asset-5" class="iref"></span><a href="#dfn-asset" class="internal xref">asset</a>.
 What a recipient then does with that information depends on many factors;
 see <a href="#applicability" class="auto internal xref">Section 3.2</a>.<a href="#section-3.1-2" class="pilcrow">¶</a></p>
 <p id="section-3.1-3">There are also some caveats that need to be considered
-as it relates to understanding what the preferences for a given asset are
+as it relates to understanding what the preferences for a given <span id="iref-asset-6" class="iref"></span><a href="#dfn-asset" class="internal xref">asset</a> are
 (as opposed to what actions might then follow).<a href="#section-3.1-3" class="pilcrow">¶</a></p>
 <p id="section-3.1-4">A recipient can only apply preferences it understands.
 Recipients that implement this specification
@@ -1378,7 +1387,7 @@ but they might not understand extensions; see <a href="#extension" class="auto i
 through mechanisms it has implemented.
 Those methods might be limited to those in <span>[<a href="#ATTACH" class="cite xref">ATTACH</a>]</span>
 or it could also include other methods (see <span><a href="https://datatracker.ietf.org/doc/html/draft-ietf-aipref-attach#section-1.3" class="relref">Section 1.3</a> of [<a href="#ATTACH" class="cite xref">ATTACH</a>]</span>).
-If a preference is associated with an asset
+If a preference is associated with an <span id="iref-asset-7" class="iref"></span><a href="#dfn-asset" class="internal xref">asset</a>
 using a method the recipient does not understand or recognize,
 the recipient will remain ignorant of that preference.<a href="#section-3.1-5" class="pilcrow">¶</a></p>
 <p id="section-3.1-6">Depending on the way in which preferences are expressed,
@@ -1445,11 +1454,10 @@ implementations or their architecture.<a href="#section-4-3" class="pilcrow">¶<
         <h3 id="name-ai-training">
 <a href="#section-4.1" class="section-number selfRef">4.1. </a><a href="#name-ai-training" class="section-name selfRef">AI Training</a>
         </h3>
-<p id="section-4.1-1">Using an asset to modify the learned parameters
-of a generative AI model.<a href="#section-4.1-1" class="pilcrow">¶</a></p>
+<p id="section-4.1-1">Using an <span id="iref-asset-8" class="iref"></span><a href="#dfn-asset" class="internal xref">asset</a> to modify the learned parameters
+of a <span id="iref-generative-ai-model-9" class="iref"></span><a href="#dfn-genai" class="internal xref">generative AI model</a>.<a href="#section-4.1-1" class="pilcrow">¶</a></p>
 <p id="section-4.1-2">The training of models that are used
-to perform exclusively non-generative tasks,
-like ranking or classification,
+to perform exclusively non-generative tasks
 are not included in this category,
 even if the model is capable of generative tasks.<a href="#section-4.1-2" class="pilcrow">¶</a></p>
 </section>
@@ -1459,7 +1467,7 @@ even if the model is capable of generative tasks.<a href="#section-4.1-2" class=
         <h3 id="name-ai-use">
 <a href="#section-4.2" class="section-number selfRef">4.2. </a><a href="#name-ai-use" class="section-name selfRef">AI Use</a>
         </h3>
-<p id="section-4.2-1">Use of an asset as input to a generative AI model,
+<p id="section-4.2-1">Use of an <span id="iref-asset-10" class="iref"></span><a href="#dfn-asset" class="internal xref">asset</a> as input to a <span id="iref-generative-ai-model-11" class="iref"></span><a href="#dfn-genai" class="internal xref">generative AI model</a>,
 [as the result of a request]
 which does not alter the learned parameters of the model.<a href="#section-4.2-1" class="pilcrow">¶</a></p>
 <p id="section-4.2-2">This does not include any use that is included
@@ -1471,20 +1479,20 @@ in the AI Training usage category (<a href="#train-ai" class="auto internal xref
         <h3 id="name-search">
 <a href="#section-4.3" class="section-number selfRef">4.3. </a><a href="#name-search" class="section-name selfRef">Search</a>
         </h3>
-<p id="section-4.3-1">Use of an asset in an application
+<p id="section-4.3-1">Use of an <span id="iref-asset-12" class="iref"></span><a href="#dfn-asset" class="internal xref">asset</a> in an application
 where the primary purpose of the application
 is to select assets
 and direct users to the location of those assets.<a href="#section-4.3-1" class="pilcrow">¶</a></p>
 <p id="section-4.3-2">This category of use only applies under the following conditions:<a href="#section-4.3-2" class="pilcrow">¶</a></p>
 <ul class="normal">
 <li class="normal" id="section-4.3-3.1">
-            <p id="section-4.3-3.1.1">Where the presentation of an asset in search output --
+            <p id="section-4.3-3.1.1">Where the presentation of an <span id="iref-asset-13" class="iref"></span><a href="#dfn-asset" class="internal xref">asset</a> in search output --
 if selected for presentation --
 includes a direct reference or link
-to the original location from which the asset was retrieved.<a href="#section-4.3-3.1.1" class="pilcrow">¶</a></p>
+to the original location from which the <span id="iref-asset-14" class="iref"></span><a href="#dfn-asset" class="internal xref">asset</a> was retrieved.<a href="#section-4.3-3.1.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-4.3-3.2">
-            <p id="section-4.3-3.2.1">When excerpts from the asset are displayed
+            <p id="section-4.3-3.2.1">When excerpts from the <span id="iref-asset-15" class="iref"></span><a href="#dfn-asset" class="internal xref">asset</a> are displayed
 they serve to assist users
 in evaluating the relevance of the result.<a href="#section-4.3-3.2.1" class="pilcrow">¶</a></p>
 </li>
@@ -1607,8 +1615,8 @@ statements of preference.<a href="#section-5.2-2.2.1" class="pilcrow">¶</a></p>
 </li>
         </ul>
 <p id="section-5.2-3">For instance, a statement of preferences might indicate a preference
-to disallow a category of use for an asset.
-If arrangements, such as legal agreements, exist that explicitly permit the use of that asset,
+to disallow a category of use for an <span id="iref-asset-16" class="iref"></span><a href="#dfn-asset" class="internal xref">asset</a>.
+If arrangements, such as legal agreements, exist that explicitly permit the use of that <span id="iref-asset-17" class="iref"></span><a href="#dfn-asset" class="internal xref">asset</a>,
 those arrangements likely apply despite the existence of machine-readable statements of preference,
 unless the terms of the arrangement explicitly say otherwise.<a href="#section-5.2-3" class="pilcrow">¶</a></p>
 </section>
@@ -1964,8 +1972,86 @@ is subject to the security considerations in <span><a href="https://rfc-editor.o
       </ul>
 </section>
 </div>
-<div id="authors-addresses">
 <section id="appendix-B">
+      <h2 id="name-index">
+<a href="#name-index" class="section-name selfRef">Index</a>
+      </h2>
+<div id="rfc.index.index">
+<p id="appendix-B-1">
+        <a href="#rfc.index.u65" class="internal xref">A</a>
+        <a href="#rfc.index.u68" class="internal xref">D</a>
+        <a href="#rfc.index.u71" class="internal xref">G</a><a href="#appendix-B-1" class="pilcrow">¶</a></p>
+</div>
+<ul class="normal ulEmpty">
+<li class="normal ulEmpty" id="appendix-B-2.1">
+          <div id="rfc.index.u65">
+<p id="appendix-B-2.1.1" class="keepWithNext">
+            <a href="#rfc.index.u65" class="internal xref">A</a><a href="#appendix-B-2.1.1" class="pilcrow">¶</a></p>
+</div>
+<ul class="compact normal ulEmpty">
+<li class="compact normal ulEmpty" id="appendix-B-2.1.2.1">
+              <span class="break"></span><dl class="dlCompact dlParallel" id="appendix-B-2.1.2.1.1">
+                <dt id="appendix-B-2.1.2.1.1.1">asset</dt>
+                <dd style="margin-left: 1.5em" id="appendix-B-2.1.2.1.1.2">
+                  <p id="appendix-B-2.1.2.1.1.2.1">
+                    <a href="#section-3-3" class="auto internal xref">Section 3, Paragraph 3</a>; 
+<a href="#section-3-7" class="auto internal xref">Section 3, Paragraph 7</a>; 
+<a href="#section-3.1-2" class="auto internal xref">Section 3.1, Paragraph 2</a>; 
+<a href="#section-3.1-3" class="auto internal xref">Section 3.1, Paragraph 3</a>; 
+<a href="#section-3.1-5" class="auto internal xref">Section 3.1, Paragraph 5</a>; 
+<a href="#section-4.1-1" class="auto internal xref">Section 4.1, Paragraph 1</a>; 
+<a href="#section-4.2-1" class="auto internal xref">Section 4.2, Paragraph 1</a>; 
+<a href="#section-4.3-1" class="auto internal xref">Section 4.3, Paragraph 1</a>; 
+<a href="#section-4.3-3.1.1" class="auto internal xref">Section 4.3, Paragraph 3.1.1</a>; 
+<a href="#section-4.3-3.2.1" class="auto internal xref">Section 4.3, Paragraph 3.2.1</a>; 
+<a href="#section-5.2-3" class="auto internal xref">Section 5.2, Paragraph 3</a><a href="#appendix-B-2.1.2.1.1.2.1" class="pilcrow">¶</a></p>
+</dd>
+              <dd class="break"></dd>
+</dl>
+</li>
+          </ul>
+</li>
+        <li class="normal ulEmpty" id="appendix-B-2.2">
+          <div id="rfc.index.u68">
+<p id="appendix-B-2.2.1" class="keepWithNext">
+            <a href="#rfc.index.u68" class="internal xref">D</a><a href="#appendix-B-2.2.1" class="pilcrow">¶</a></p>
+</div>
+<ul class="compact normal ulEmpty">
+<li class="compact normal ulEmpty" id="appendix-B-2.2.2.1">
+              <span class="break"></span><dl class="dlCompact dlParallel" id="appendix-B-2.2.2.1.1">
+                <dt id="appendix-B-2.2.2.1.1.1">declaring party</dt>
+                <dd style="margin-left: 1.5em" id="appendix-B-2.2.2.1.1.2">
+                  <p id="appendix-B-2.2.2.1.1.2.1">
+                    <a href="#section-1-1" class="auto internal xref">Section 1, Paragraph 1</a><a href="#appendix-B-2.2.2.1.1.2.1" class="pilcrow">¶</a></p>
+</dd>
+              <dd class="break"></dd>
+</dl>
+</li>
+          </ul>
+</li>
+        <li class="normal ulEmpty" id="appendix-B-2.3">
+          <div id="rfc.index.u71">
+<p id="appendix-B-2.3.1" class="keepWithNext">
+            <a href="#rfc.index.u71" class="internal xref">G</a><a href="#appendix-B-2.3.1" class="pilcrow">¶</a></p>
+</div>
+<ul class="compact normal ulEmpty">
+<li class="compact normal ulEmpty" id="appendix-B-2.3.2.1">
+              <span class="break"></span><dl class="dlCompact dlParallel" id="appendix-B-2.3.2.1.1">
+                <dt id="appendix-B-2.3.2.1.1.1">generative AI model</dt>
+                <dd style="margin-left: 1.5em" id="appendix-B-2.3.2.1.1.2">
+                  <p id="appendix-B-2.3.2.1.1.2.1">
+                    <a href="#section-4.1-1" class="auto internal xref">Section 4.1, Paragraph 1</a>; 
+<a href="#section-4.2-1" class="auto internal xref">Section 4.2, Paragraph 1</a><a href="#appendix-B-2.3.2.1.1.2.1" class="pilcrow">¶</a></p>
+</dd>
+              <dd class="break"></dd>
+</dl>
+</li>
+          </ul>
+</li>
+      </ul>
+</section>
+<div id="authors-addresses">
+<section id="appendix-C">
       <h2 id="name-authors-addresses">
 <a href="#name-authors-addresses" class="section-name selfRef">Authors' Addresses</a>
       </h2>

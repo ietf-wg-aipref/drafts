@@ -105,6 +105,7 @@ Table of Contents
      9.1.  Normative References
      9.2.  Informative References
    Acknowledgments
+   Index
    Authors' Addresses
 
 1.  Introduction
@@ -271,8 +272,8 @@ Table of Contents
    model.
 
    The training of models that are used to perform exclusively non-
-   generative tasks, like ranking or classification, are not included in
-   this category, even if the model is capable of generative tasks.
+   generative tasks are not included in this category, even if the model
+   is capable of generative tasks.
 
 4.2.  AI Use
 
@@ -622,6 +623,28 @@ Acknowledgments
    *  Nate Hake
    *  Sebastian Posth
    *  Timid Robot Zehta
+
+Index
+
+   A D G
+
+      A
+
+         asset  Section 3, Paragraph 3; Section 3, Paragraph 7;
+            Section 3.1, Paragraph 2; Section 3.1, Paragraph 3;
+            Section 3.1, Paragraph 5; Section 4.1, Paragraph 1;
+            Section 4.2, Paragraph 1; Section 4.3, Paragraph 1;
+            Section 4.3, Paragraph 3.1.1; Section 4.3, Paragraph 3.2.1;
+            Section 5.2, Paragraph 3
+
+      D
+
+         declaring party  Section 1, Paragraph 1
+
+      G
+
+         generative AI model  Section 4.1, Paragraph 1; Section 4.2,
+            Paragraph 1
 
 Authors' Addresses
 
