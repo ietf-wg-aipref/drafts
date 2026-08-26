@@ -236,7 +236,7 @@ like ranking or classification,
 are not included in this category,
 even if the model is capable of generative tasks.
 
-If a model is trained under this exclusively non-generative tasks allowance,
+If a model that is trained under this exclusively non-generative tasks allowance is made available for use,
 that context must be documented alongside the model.
 
 
