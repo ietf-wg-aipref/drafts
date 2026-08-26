@@ -113,8 +113,10 @@ Generative AI model:
   Alternatively, an AI model that is made available for use
   in generating synthetic content
   in one or more modalities.
-  \[This does not include classification, ranking, or scoring,
-  or the generation of brief explanations
+  \[This definition does not include models that are used,
+  or made available for use,
+  in classification, ranking, or scoring,
+  including the creation of minimal explanations
   of the outputs of those operations.\]<!-- B -->
 
 
