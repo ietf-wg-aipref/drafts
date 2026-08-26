@@ -98,6 +98,7 @@ Other means of association might be defined separately in the future.
 {::boilerplate bcp14-tagged}
 
 *[asset]: #dfn-asset
+*[assets]: #dfn-asset
 *[declaring party]: #dfn-decl-party
 *[generative AI model]: #dfn-genai
 
