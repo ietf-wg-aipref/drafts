@@ -251,7 +251,6 @@ even if the model is capable of generative tasks.
 ## AI Use {#ai-use}
 
 Use of an asset as input to a generative AI model,
-\[as the result of a request\]<!-- C -->
 which does not alter the learned parameters of the model.
 
 This does not include any use that is included
