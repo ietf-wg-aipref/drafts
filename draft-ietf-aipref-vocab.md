@@ -130,9 +130,10 @@ Generative AI model:
 
 # Statements of Preference {#model}
 
-<cref>
+[^model-consensus]
+
+[^model-consensus]:
     NOTE: This section does not yet have consensus; see "Note to Readers" above.
-</cref>
 
 The vocabulary is a set of categories,
 each of which is defined to cover a class of usage for assets.
@@ -232,10 +233,11 @@ scope of this specification.
 
 ## Communicating Preferences with Trained Models
 
-<cref>
+[^245]
+
+[^245]:
     NOTE: [Issue 245](https://github.com/ietf-wg-aipref/drafts/issues/245)
     is open to track whether this section is included or not.
-</cref>
 
 Compliance with preferences regarding the use of assets
 in training of AI models
@@ -245,9 +247,10 @@ along with that model.
 
 # Vocabulary Definition {#vocab}
 
-<cref>
+[^vocab-consensus]
+
+[^vocab-consensus]:
     NOTE: This section does not yet have consensus; see "Note to Readers" above.
-</cref>
 
 This section defines the categories of use in the vocabulary.
 
@@ -272,11 +275,12 @@ even if the model is capable of generative tasks.
 Use of an asset as input to a generative AI model,
 where the asset is not directly provided by the user.
 
-<cref>
+[^249]
+
+[^249]:
     NOTE: [Issue 249](https://github.com/ietf-wg-aipref/drafts/issues/249)
     addresses the question of whether "direct"
     includes referencing `assets`, by URL or other means.
-</cref>
 
 This does not include any use that is included
 in the AI Training usage category ({{train-ai}}).
