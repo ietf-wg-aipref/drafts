@@ -352,15 +352,12 @@ This category of use only applies under the following conditions:
 This category does not include the use of assets
 to generate summaries.
 
-Non-substantive changes to the presentation
-of titles or excerpts from assets
-are included for the purposes of accessibility.
-Translation, transcription, or text-to-speech
-are examples of non-substantive changes
-that could help users understand what is being presented.
-Where existing controls restrict presentation of these items,
-such as limitations on snippet size,
-those apply before any changes.
+In displaying titles or excerpts from assets,
+changes to improve accessibility,
+such as translation, transcription, or text-to-speech,
+are included in this category.
+These changes must not involve the generation of new material,
+though such changes may be permissible for other reasons.
 
 A preference to allow this category of use
 includes allowing any processing internal to the application
