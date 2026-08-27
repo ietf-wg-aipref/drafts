@@ -268,6 +268,12 @@ or in different parts of systems,
 retaining any usage preferences associated with those assets
 ensures that they are available to inform decisions about use.
 
+Retaining preferences with assets that are transformed
+into an alternative format prior to their use,
+including the creation of embeddings or other simplified forms,
+also provides an opportunity to apply preferences
+at the point of use.
+
 
 # Vocabulary Definition {#vocab}
 
