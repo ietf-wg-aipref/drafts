@@ -207,29 +207,30 @@ scope of this specification.
 
 ## Documenting Conformance With This Specification {#decl}
 
-An entity that might be in a position to act on preferences
+An entity that could act on preferences
 can document their conformance with this specification.
 
 In making such statements,
-it is not sufficient to simply declare compliance
+it is not sufficient to simply declare support for
 with this specification.
-That only encompasses the model for preferences ({{model}}),
+Support for this specification only includes
+the model for preferences ({{model}}),
 how preferences are understood and applied in general ({{usage}}),
 and maybe the exemplary serialization format ({{format}}).
 
-In documenting how an entity conforms with this specification,
-the entity can include:
+Statements about how an entity conforms with this specification
+ideally address:
 
-* a list of the attachment mechanisms that are understood,
+* which attachment mechanisms are understood,
   which might include those defined in {{ATTACH}};
 
-* a list of the vocabulary terms that are understood,
+* which of the vocabulary terms are understood,
   either from {{vocab}} or extensions ({{extension}}); and
 
-* ideally, documentation for each vocabulary term
-  that describes the circumstances under which
-  the entity will or will not follow expressed preferences
-  for each vocabulary term.
+* for each vocabulary term,
+  it is also helpful to describe the circumstances under which
+  the entity will or will not follow expressed preferences.
+
 
 # Vocabulary Definition {#vocab}
 
