@@ -259,7 +259,7 @@ Table of Contents
 3.3.  Communicating Preferences with Trained Models
 
 
-   // NOTE: [Issue 245](https://github.com/ietf-wg-aipref/drafts/
+   // NOTE: Issue 245 (https://github.com/ietf-wg-aipref/drafts/
    // issues/245) is open to track whether this section is included or
    // not.
 
@@ -294,9 +294,9 @@ Table of Contents
    not directly provided by the user.
 
 
-   // NOTE: [Issue 249](https://github.com/ietf-wg-aipref/drafts/
+   // NOTE: Issue 249 (https://github.com/ietf-wg-aipref/drafts/
    // issues/249) addresses the question of whether "direct" includes
-   // referencing `assets`, by URL or other means.
+   // referencing assets, by URL or other means.
 
    This does not include any use that is included in the AI Training
    usage category (Section 4.1).
