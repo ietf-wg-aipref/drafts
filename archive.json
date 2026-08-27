@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-08-25T01:37:45.639335+00:00",
+  "timestamp": "2026-08-27T08:41:52.651960+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -4233,7 +4233,7 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nThere should be a de minimis exception for labeling, categorization, and internal explanations of classifier decisions in every category that references generating content, or else in a single reusable definition of generating content.  Potential text for this:\n\nGenerating/generated content means more than merely de minimis amounts of content.  Examples of de minimis content are one- or two-word outputs of classifier systems and material explaining the classification that is not shown to a service's end-users, or short textual labels for a group of links to assets.\n\n### Proposed Resolution\n\n_No response_",
       "createdAt": "2026-08-24T13:53:01Z",
-      "updatedAt": "2026-08-24T15:05:53Z",
+      "updatedAt": "2026-08-25T06:55:55Z",
       "closedAt": null,
       "comments": [
         {
@@ -4270,8 +4270,69 @@
           "body": "Yes, but in that example the output is just thumbnails of images, right?  If there are generated labels, they're textual.  \n\nThat said, I don't object to the way that text modifies the reference to classifiers.  I do want to preserve the concept of labels, though.  So how about: \n\nGenerating/generated content means more than merely de minimis amounts of content. Examples of de minimis content are the limited outputs of classifier systems and the material explaining the classification that is not shown to a service's end-users, or short textual labels for a group of links to assets.\n\n\n",
           "createdAt": "2026-08-24T15:05:53Z",
           "updatedAt": "2026-08-24T15:05:53Z"
+        },
+        {
+          "author": "chrisn",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "As the intent here seems to be to distinguish classification from generative AI, I don't think we should include \"or short textual labels for a group of links to assets\".",
+          "createdAt": "2026-08-25T06:55:54Z",
+          "updatedAt": "2026-08-25T06:55:54Z"
         }
       ]
+    },
+    {
+      "number": 245,
+      "id": "I_kwDOOWk1-s8AAAABOUZqKQ",
+      "title": "Concern about redistribution of models",
+      "url": "https://github.com/ietf-wg-aipref/drafts/issues/245",
+      "state": "OPEN",
+      "author": "TimidRobot",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [
+        "triage"
+      ],
+      "body": "### Confirmation\n\n- [x] I have reviewed our [existing issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nConfidence in the efficacy of categories involving training is degraded if there's no way for good actors using models downstream of training to follow preferences. The text of the vocabulary should:\n- Ensure good actors are supported in complying with the AI Preferences\n- Provide confidence to AI Preference declarers that their preferences will be followed by good actors\n\n\n\n### Proposed Resolution\n\n_No response_",
+      "createdAt": "2026-08-26T10:15:59Z",
+      "updatedAt": "2026-08-26T10:15:59Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 246,
+      "id": "I_kwDOOWk1-s8AAAABOUzlsQ",
+      "title": "Address concerns of caching, embeddings and other derived forms",
+      "url": "https://github.com/ietf-wg-aipref/drafts/issues/246",
+      "state": "OPEN",
+      "author": "lrosenthol",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [
+        "triage"
+      ],
+      "body": "### Confirmation\n\n- [x] I have reviewed our [existing issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nFrom an email on the list:\n\n>Creating and storing a representation of an asset for later retrieval (an embedding, an index entry, or chunks of the asset in a RAG corpus, such as those used in spite of a publisher opt-out or  paywall) doesn't alter learned parameters and isn't the result of a request, so neither training nor inference reaches it. \n\n>Without it, an index is a black hole for preferences: once an asset is converted, the system never touches the original or its preferences again. It works from the embedding, the index entry, or the cached chunks, and no training or inference preference reaches those.\n\n>Attaching the preference to the stored copy, so it travels with the cache, would complement this and help systems honor preferences they already hold, but itt cannot replace the category: whether a copy may be created and kept at all is itself a preference, and there is nothing to attach it to until the copy exists.\n\nWe need something in the draft that addresses this concern\n\n### Proposed Resolution\n\n_No response_",
+      "createdAt": "2026-08-26T11:07:11Z",
+      "updatedAt": "2026-08-26T11:07:11Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 247,
+      "id": "I_kwDOOWk1-s8AAAABOWjVzg",
+      "title": "Rethink about moving the the \"Exemplary Serialization\" into a Data Model + exemplary serialization",
+      "url": "https://github.com/ietf-wg-aipref/drafts/issues/247",
+      "state": "OPEN",
+      "author": "lrosenthol",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [
+        "triage"
+      ],
+      "body": "### Confirmation\n\n- [x] I have reviewed our [existing issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nThere are a few mentions in the draft about the idea of a \"data model\", but there isn't any specific declaration/definition of such a thing.  \n\nAs part of the creation of a proposal around extensibility, the idea of having a formal data model would enable an easier set of points for extensibility.\n\n### Proposed Resolution\n\n_No response_",
+      "createdAt": "2026-08-26T14:21:29Z",
+      "updatedAt": "2026-08-26T14:21:29Z",
+      "closedAt": null,
+      "comments": []
     }
   ],
   "pulls": [
@@ -12477,13 +12538,13 @@
       "labels": [],
       "body": "This refines #216 by defining the boundary between user-directed and system-directed inference. Nate's original commits are preserved at the base; this rebases onto -07 and adds two things.\r\n\r\nFirst, a \"selection step\" that makes the user/system distinction mechanical: an operation by any party or process other than the user that identifies assets in response to a request (searching, browsing, ranking, recommending, resolving a description). Retrieval from among assets the user previously provided is not a selection step.\r\n\r\nSecond, the two category definitions rewritten around that term. User-directed: the user provided the asset or a direct reference the system fetches without any selection step. System-directed: everything else, including further assets fetched of the system's own choosing. Applies at time of use regardless of acquisition.\r\n\r\nUnder \u00a76.4, categories not in the base document degrade to \"unknown\" permanently for conforming recipients. If inference categories are going in, they need to be here before this ships.\r\n\r\nA decision-tree tool that walks scenarios through the vocabulary is at \r\n[The Inference Line](https://claude.ai/code/artifact/a4a1f206-1759-454b-8b03-90861d8d110b)\r\n\r\nAddresses discussion in #216 from @natehake, @paul2keller, @ekr, @martinthomson, @TimidRobot, @chrisn, @lrosenthol, and @posth.",
       "createdAt": "2026-08-20T16:17:07Z",
-      "updatedAt": "2026-08-24T07:34:47Z",
+      "updatedAt": "2026-08-26T04:43:27Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
-      "baseRefOid": "7ca0afce45b32609dc0131eebc2c0137469cdad9",
+      "baseRefOid": "d405f9dcb1b24463d217c059cc57eb7bcb957177",
       "headRepository": "tymrtn/drafts",
       "headRefName": "selection-step-v7",
-      "headRefOid": "3c84adf28d94d3ae57cc971b3e48a96dc846cfbd",
+      "headRefOid": "a1762c57f99b67922208a4bb0eb166c095100353",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
@@ -12642,26 +12703,42 @@
       "id": "PR_kwDOOWk1-s8AAAABAyyx8Q",
       "title": "Clean up the text a little bit around unimplemented mechanisms.",
       "url": "https://github.com/ietf-wg-aipref/drafts/pull/229",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "ekr-ietf",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "This is super nitpicky, but...\r\n\r\n- You might *understand* mechanisms that are sent in attachment mechanisms you don't know, you just won't see them.\r\n\r\n- You mix \"mechanism\" and \"method\" so I chose \"method\"",
       "createdAt": "2026-08-24T12:05:33Z",
-      "updatedAt": "2026-08-24T12:05:43Z",
+      "updatedAt": "2026-08-25T08:21:50Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "7ca0afce45b32609dc0131eebc2c0137469cdad9",
       "headRepository": "ekr-ietf/aipref-drafts",
       "headRefName": "cleanup-attach",
       "headRefOid": "05aa71b007ac61fe01bcda7fb550d887300ac26d",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2026-08-25T08:21:50Z",
+      "mergedAt": "2026-08-25T08:21:50Z",
+      "mergedBy": "martinthomson",
+      "mergeCommit": {
+        "oid": "d405f9dcb1b24463d217c059cc57eb7bcb957177"
+      },
       "comments": [],
-      "reviews": []
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABKwEMLg",
+          "commit": {
+            "abbreviatedOid": "05aa71b"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-08-25T08:21:42Z",
+          "updatedAt": "2026-08-25T08:21:42Z",
+          "comments": []
+        }
+      ]
     },
     {
       "number": 230,
@@ -12675,10 +12752,10 @@
       "labels": [],
       "body": "This changes the AI model training definition to point to a new definition \"generative AI model\", which uses exactly the same language we had in the definition of AI model training.  This is just reorganized.",
       "createdAt": "2026-08-24T12:34:41Z",
-      "updatedAt": "2026-08-24T12:34:41Z",
+      "updatedAt": "2026-08-25T13:57:43Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
-      "baseRefOid": "7ca0afce45b32609dc0131eebc2c0137469cdad9",
+      "baseRefOid": "d405f9dcb1b24463d217c059cc57eb7bcb957177",
       "headRepository": "ietf-wg-aipref/drafts",
       "headRefName": "generative",
       "headRefOid": "e1aeb09a336734ff573a9651aec233bfa0b20cf1",
@@ -12686,7 +12763,15 @@
       "mergedAt": null,
       "mergedBy": null,
       "mergeCommit": null,
-      "comments": [],
+      "comments": [
+        {
+          "author": "kelleyk",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "This seems very reasonable to me!",
+          "createdAt": "2026-08-25T12:18:26Z",
+          "updatedAt": "2026-08-25T12:18:26Z"
+        }
+      ],
       "reviews": []
     },
     {
@@ -12762,6 +12847,605 @@
           "updatedAt": "2026-08-24T15:01:15Z"
         }
       ],
+      "reviews": []
+    },
+    {
+      "number": 234,
+      "id": "PR_kwDOOWk1-s8AAAABA6W5Lw",
+      "title": "Replace \"asset\" term with \"resource\"",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/234",
+      "state": "OPEN",
+      "author": "kelleyk",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "This morning, I was thinking about the concerns that were raised yesterday about the use of the term \"asset\".   I think that someone had suggested replacing it with \"artifact\", which also doesn't seem exactly right.  What if we use \"resource\" instead?\r\n\r\nI've also added RFC 3986 as an informative reference and noted in the Resource definition that this document uses a narrower sense of the term than RFC 3986's more general usage.",
+      "createdAt": "2026-08-25T09:02:20Z",
+      "updatedAt": "2026-08-26T09:12:12Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "d405f9dcb1b24463d217c059cc57eb7bcb957177",
+      "headRepository": "kelleyk/ietf-wg-aipref-drafts",
+      "headRefName": "claude/resource-terminology-ietf-xu2pab",
+      "headRefOid": "6902ad88a9efdc260218b7ac9a388b6862821353",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [
+        {
+          "author": "ekr-ietf",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "I could live with\"resource\"",
+          "createdAt": "2026-08-25T09:06:59Z",
+          "updatedAt": "2026-08-25T09:06:59Z"
+        },
+        {
+          "author": "chrisn",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "This is OK for me too. I previously raised a [concern](https://github.com/ietf-wg-aipref/drafts/issues/163#issuecomment-4247065161) about \"resource\", so the the reference to RFC 3986 was important to emphasise it being a technical term - but not to suggest that the vocabulary only applies to resources fetched via HTTP.",
+          "createdAt": "2026-08-26T07:07:39Z",
+          "updatedAt": "2026-08-26T07:07:39Z"
+        },
+        {
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "In HTTP, a resource is an abstract notion that does not have the sort of concrete representation that this uses.  Why not \"artifact\"?",
+          "createdAt": "2026-08-26T09:12:12Z",
+          "updatedAt": "2026-08-26T09:12:12Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABKwoaJQ",
+          "commit": {
+            "abbreviatedOid": "6902ad8"
+          },
+          "author": "lrosenthol",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "I can live with this",
+          "createdAt": "2026-08-25T09:11:51Z",
+          "updatedAt": "2026-08-25T09:11:51Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 235,
+      "id": "PR_kwDOOWk1-s8AAAABA8n1kg",
+      "title": "More explanation on the generative aspect",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/235",
+      "state": "OPEN",
+      "author": "martinthomson",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "This expands on #230.",
+      "createdAt": "2026-08-25T14:10:37Z",
+      "updatedAt": "2026-08-25T15:20:29Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "d405f9dcb1b24463d217c059cc57eb7bcb957177",
+      "headRepository": "ietf-wg-aipref/drafts",
+      "headRefName": "generative-explicative",
+      "headRefOid": "7835a95d13483bb739d15f67178583f4c2ceb4de",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABKzom0Q",
+          "commit": {
+            "abbreviatedOid": "1fe4cb9"
+          },
+          "author": "TimidRobot",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-08-25T14:33:32Z",
+          "updatedAt": "2026-08-25T14:33:33Z",
+          "comments": [
+            {
+              "originalPosition": 39,
+              "body": "```suggestion\nThe training of models that are used\nto perform exclusively non-generative tasks,\nlike ranking or classification,\nare not included in this category, even if the model is capable of generative tasks.\n```",
+              "createdAt": "2026-08-25T14:33:32Z",
+              "updatedAt": "2026-08-25T14:33:33Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABK0HSFQ",
+          "commit": {
+            "abbreviatedOid": "7835a95"
+          },
+          "author": "achimschloss",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-08-25T15:20:09Z",
+          "updatedAt": "2026-08-25T15:20:29Z",
+          "comments": [
+            {
+              "originalPosition": 33,
+              "body": "```suggestion\nThe training of models\n```",
+              "createdAt": "2026-08-25T15:20:09Z",
+              "updatedAt": "2026-08-25T15:20:29Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 236,
+      "id": "PR_kwDOOWk1-s8AAAABA8qqqQ",
+      "title": "Restore \"make available for use\" in generative defintion",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/236",
+      "state": "OPEN",
+      "author": "martinthomson",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "An improvement on #230 to include @kelleyk's original phrasing that covered open weight models.",
+      "createdAt": "2026-08-25T14:15:52Z",
+      "updatedAt": "2026-08-26T07:03:37Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "d405f9dcb1b24463d217c059cc57eb7bcb957177",
+      "headRepository": "ietf-wg-aipref/drafts",
+      "headRefName": "generative-available",
+      "headRefOid": "afabc4e1e28fd214682e29a173dc8ce8b3af05b4",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABKzhuYg",
+          "commit": {
+            "abbreviatedOid": "7a80df8"
+          },
+          "author": "kelleyk",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-08-25T14:23:27Z",
+          "updatedAt": "2026-08-25T14:23:27Z",
+          "comments": [
+            {
+              "originalPosition": 5,
+              "body": "Can we put commas around this, so that it's \"used, or made available for use, ...\"?  I think that that reads a little bit more easily.",
+              "createdAt": "2026-08-25T14:23:27Z",
+              "updatedAt": "2026-08-25T14:23:27Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABKziMJg",
+          "commit": {
+            "abbreviatedOid": "7a80df8"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-08-25T14:24:07Z",
+          "updatedAt": "2026-08-25T14:24:07Z",
+          "comments": [
+            {
+              "originalPosition": 5,
+              "body": "```suggestion\r\n: An AI model that is used, or made available for use,\r\n```",
+              "createdAt": "2026-08-25T14:24:07Z",
+              "updatedAt": "2026-08-25T14:24:08Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABKzvniA",
+          "commit": {
+            "abbreviatedOid": "afabc4e"
+          },
+          "author": "lrosenthol",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-08-25T14:44:20Z",
+          "updatedAt": "2026-08-25T14:44:20Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABK6sCjw",
+          "commit": {
+            "abbreviatedOid": "afabc4e"
+          },
+          "author": "chrisn",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-08-26T07:03:37Z",
+          "updatedAt": "2026-08-26T07:03:37Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 237,
+      "id": "PR_kwDOOWk1-s8AAAABA_YOmA",
+      "title": "Fix extensions",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/237",
+      "state": "CLOSED",
+      "author": "lrosenthol",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Addresses #226 by:\r\n- renaming the extension labels and using the correct one\r\n- up-levelling the alternate format section",
+      "createdAt": "2026-08-25T20:22:56Z",
+      "updatedAt": "2026-08-25T20:23:30Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "d405f9dcb1b24463d217c059cc57eb7bcb957177",
+      "headRepository": "lrosenthol/drafts",
+      "headRefName": "fix-extensions",
+      "headRefOid": "6f4562785bedae58882e1cd93f5a1d6abc74fc9a",
+      "closedAt": "2026-08-25T20:23:29Z",
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [
+        {
+          "author": "lrosenthol",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Wrong comparison!",
+          "createdAt": "2026-08-25T20:23:29Z",
+          "updatedAt": "2026-08-25T20:23:29Z"
+        }
+      ],
+      "reviews": []
+    },
+    {
+      "number": 238,
+      "id": "PR_kwDOOWk1-s8AAAABA_ZpSg",
+      "title": "Correct linking to extensions & alternate formats",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/238",
+      "state": "OPEN",
+      "author": "lrosenthol",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Address #226 by changing the labels and up-levelling the alternative formats section",
+      "createdAt": "2026-08-25T20:25:31Z",
+      "updatedAt": "2026-08-25T20:28:10Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "dt-plus",
+      "baseRefOid": "0443cc12185cf01771d0ea18970f0c456d2acab6",
+      "headRepository": "lrosenthol/drafts",
+      "headRefName": "fix-extensions",
+      "headRefOid": "125cb838c505562417ea1988193ef47e8da9f000",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 239,
+      "id": "PR_kwDOOWk1-s8AAAABBCpIZw",
+      "title": "Add model context documentation requirement",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/239",
+      "state": "OPEN",
+      "author": "TimidRobot",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Closes #245 \r\n\r\nAdd model context documentation requirement\r\n\r\nThe goal of this PR is to close an interpretation/implicit loophole to;\r\n- Ensure good actors are supported in complying with the AI Preferences\r\n- Increase confidence of AI Preference declarers that their preferences will be followed by good actors\r\n",
+      "createdAt": "2026-08-26T07:23:41Z",
+      "updatedAt": "2026-08-26T10:16:18Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "dt-plus",
+      "baseRefOid": "0443cc12185cf01771d0ea18970f0c456d2acab6",
+      "headRepository": "TimidRobot/aipref-drafts",
+      "headRefName": "dt-plus",
+      "headRefOid": "bef04452fa9f7723124c4bc22722ea7a7ef1cdef",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABK7I52A",
+          "commit": {
+            "abbreviatedOid": "13e773f"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-08-26T08:02:46Z",
+          "updatedAt": "2026-08-26T08:04:29Z",
+          "comments": [
+            {
+              "originalPosition": 4,
+              "body": "```suggestion\nIf a model is trained under this exclusively non-generative tasks allowance,\n```",
+              "createdAt": "2026-08-26T08:02:46Z",
+              "updatedAt": "2026-08-26T08:04:29Z"
+            },
+            {
+              "originalPosition": 14,
+              "body": "```suggestion\nIf a model is trained under a search allowance preference, that context must be\n```",
+              "createdAt": "2026-08-26T08:03:06Z",
+              "updatedAt": "2026-08-26T08:04:29Z"
+            },
+            {
+              "originalPosition": 16,
+              "body": "I think that this is already covered by \"provided that the resulting models and their outputs are used exclusively in ways that meet the above conditions.\"",
+              "createdAt": "2026-08-26T08:03:55Z",
+              "updatedAt": "2026-08-26T08:04:29Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABK7nk6Q",
+          "commit": {
+            "abbreviatedOid": "87d4fd7"
+          },
+          "author": "TimidRobot",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-08-26T09:03:47Z",
+          "updatedAt": "2026-08-26T09:03:47Z",
+          "comments": [
+            {
+              "originalPosition": 4,
+              "body": "Sebastian's excellent suggestion\n```suggestion\nIf a model that is trained under this exclusively non-generative tasks allowance is made available for use,\n```",
+              "createdAt": "2026-08-26T09:03:47Z",
+              "updatedAt": "2026-08-26T09:03:47Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 240,
+      "id": "PR_kwDOOWk1-s8AAAABBDJggg",
+      "title": "Add language concerning derived forms of an asset",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/240",
+      "state": "OPEN",
+      "author": "lrosenthol",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Addresses  concerns about whether or not preferences apply to derived forms of an asset, such as AI embeddings\r\n\r\nFixes #246 ",
+      "createdAt": "2026-08-26T08:41:24Z",
+      "updatedAt": "2026-08-26T11:07:50Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "d405f9dcb1b24463d217c059cc57eb7bcb957177",
+      "headRepository": "lrosenthol/drafts",
+      "headRefName": "derived-forms",
+      "headRefOid": "cecb9b0e8d9e8181fc9fc4ae450b9fb9f3546554",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 241,
+      "id": "PR_kwDOOWk1-s8AAAABBDRBfQ",
+      "title": "Distribution implies communicating preferences",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/241",
+      "state": "OPEN",
+      "author": "martinthomson",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "This point is important as a clarification of what we have around the separation of training and use.\r\n\r\nCloses #239 as an alternative.",
+      "createdAt": "2026-08-26T08:59:25Z",
+      "updatedAt": "2026-08-26T09:35:55Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "dt-plus",
+      "baseRefOid": "0443cc12185cf01771d0ea18970f0c456d2acab6",
+      "headRepository": "ietf-wg-aipref/drafts",
+      "headRefName": "model-preferences",
+      "headRefOid": "ca977b21121877b924a9a087dd612286f82ea72d",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABK7oTUg",
+          "commit": {
+            "abbreviatedOid": "97fe455"
+          },
+          "author": "TimidRobot",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-08-26T09:05:07Z",
+          "updatedAt": "2026-08-26T09:05:07Z",
+          "comments": [
+            {
+              "originalPosition": 27,
+              "body": "```suggestion\nto communicate a preference that the model not be adapted\n```",
+              "createdAt": "2026-08-26T09:05:07Z",
+              "updatedAt": "2026-08-26T09:05:07Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABK7uk9Q",
+          "commit": {
+            "abbreviatedOid": "ab51036"
+          },
+          "author": "TimidRobot",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-08-26T09:17:20Z",
+          "updatedAt": "2026-08-26T09:17:21Z",
+          "comments": [
+            {
+              "originalPosition": 29,
+              "body": "I think it is valuable to reference the definition language here (building on what Sebastian suggested). Something like:\n```suggestion\nAn entity that makes the model available for use\n```",
+              "createdAt": "2026-08-26T09:17:20Z",
+              "updatedAt": "2026-08-26T09:17:21Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABK7xRLw",
+          "commit": {
+            "abbreviatedOid": "ab51036"
+          },
+          "author": "TimidRobot",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-08-26T09:21:31Z",
+          "updatedAt": "2026-08-26T09:21:31Z",
+          "comments": [
+            {
+              "originalPosition": 26,
+              "body": "my attempt to address Sebastian's concern\n```suggestion\nthat request generative training not be performed,\n```",
+              "createdAt": "2026-08-26T09:21:31Z",
+              "updatedAt": "2026-08-26T09:21:31Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 242,
+      "id": "PR_kwDOOWk1-s8AAAABBDggaQ",
+      "title": "Align the vocab term name and keyword to its definition and meaning",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/242",
+      "state": "OPEN",
+      "author": "bquinn",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "This also leaves open the possibility for other AI training terms to be added in the future without causing confusion",
+      "createdAt": "2026-08-26T09:34:19Z",
+      "updatedAt": "2026-08-26T09:34:20Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "dt-plus",
+      "baseRefOid": "0443cc12185cf01771d0ea18970f0c456d2acab6",
+      "headRepository": "bquinn/drafts",
+      "headRefName": "genai-term-name",
+      "headRefOid": "c95ce504a78bd12243d50ca832fdab97e7d9f23a",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 243,
+      "id": "PR_kwDOOWk1-s8AAAABBDjX-g",
+      "title": "Conveying training preferences with models",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/243",
+      "state": "OPEN",
+      "author": "martinthomson",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Yet another alternative to this \"make preferences known with the model\" downstream.\r\n\r\nCloses #239.\r\nCloses #241.",
+      "createdAt": "2026-08-26T09:40:49Z",
+      "updatedAt": "2026-08-26T09:40:49Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "dt-plus",
+      "baseRefOid": "0443cc12185cf01771d0ea18970f0c456d2acab6",
+      "headRepository": "ietf-wg-aipref/drafts",
+      "headRefName": "erin-conveying",
+      "headRefOid": "8e822fee92a4e6fae14ddc1278bf2c4c453c7910",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 244,
+      "id": "PR_kwDOOWk1-s8AAAABBDxXqQ",
+      "title": "Communicating preferences with models",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/244",
+      "state": "OPEN",
+      "author": "martinthomson",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "I don't think that this is quite right.  But some people thought it was worthwhile.",
+      "createdAt": "2026-08-26T10:10:41Z",
+      "updatedAt": "2026-08-26T10:31:08Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "d405f9dcb1b24463d217c059cc57eb7bcb957177",
+      "headRepository": "ietf-wg-aipref/drafts",
+      "headRefName": "use-stuff-plus",
+      "headRefOid": "4cc6d3cf84ca51c81cdb109ea8cc580094e116d9",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABK8ZM1Q",
+          "commit": {
+            "abbreviatedOid": "4cc6d3c"
+          },
+          "author": "bquinn",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-08-26T10:31:07Z",
+          "updatedAt": "2026-08-26T10:31:07Z",
+          "comments": [
+            {
+              "originalPosition": 11,
+              "body": "Alternative: \"This definition does not include models used for classification, ranking or scoring, even if those models output minimal generative content such as explanations of the outputs of those operations\"\n\n(this doesn't answer Glenn's objection, but I believe it clarifies the meaning of this sentence)",
+              "createdAt": "2026-08-26T10:31:07Z",
+              "updatedAt": "2026-08-26T10:31:07Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 248,
+      "id": "PR_kwDOOWk1-s8AAAABBGJBdQ",
+      "title": "Explain what might be needed to document conformance",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/248",
+      "state": "OPEN",
+      "author": "martinthomson",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "This is in response to concerns raised by Elaine about the lack of documentation about what it means to \"conform\" to this specification. This doesn't change that, but aims to make it clear how people can communicate about their conformance more generally.",
+      "createdAt": "2026-08-26T15:28:19Z",
+      "updatedAt": "2026-08-26T15:28:19Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "d405f9dcb1b24463d217c059cc57eb7bcb957177",
+      "headRepository": "ietf-wg-aipref/drafts",
+      "headRefName": "declarations",
+      "headRefOid": "5461e6285dbb75622150fe84516b257c1b8267f6",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
       "reviews": []
     }
   ]
