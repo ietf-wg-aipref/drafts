@@ -130,7 +130,9 @@ Generative AI model:
 
 # Statements of Preference {#model}
 
-NOTE: This section does not yet have consensus; see "Note to Readers" above.
+<cref>
+    NOTE: This section does not yet have consensus; see "Note to Readers" above.
+</cref>
 
 The vocabulary is a set of categories,
 each of which is defined to cover a class of usage for assets.
@@ -226,9 +228,52 @@ Whether and under which circumstances a preference is followed is outside the
 scope of this specification.
 
 
+## Documenting Conformance With This Specification {#decl}
+
+An entity that could act on preferences
+can document their conformance with this specification.
+
+In making such statements,
+it is not sufficient to simply declare support for
+with this specification.
+Support for this specification only includes
+the model for preferences ({{model}}),
+how preferences are understood and applied in general ({{usage}}),
+and maybe the exemplary serialization format ({{format}}).
+
+Statements about how an entity conforms with this specification
+ideally address:
+
+* which attachment mechanisms are understood,
+  which might include those defined in {{ATTACH}};
+
+* which of the vocabulary terms are understood,
+  either from {{vocab}} or extensions ({{extension}}); and
+
+* for each vocabulary term,
+  it is also helpful to describe the circumstances under which
+  the entity will or will not follow expressed preferences.
+
+
+## Communicating Preferences with Trained Models
+
+<cref>
+    NOTE: [Issue 245](https://github.com/ietf-wg-aipref/drafts/issues/245)
+    is open to track whether this section is included or not.
+</cref>
+
+Compliance with preferences regarding the use of assets
+in training of AI models
+also includes conveying the preferences
+associated with those assets
+along with that model.
+
+
 # Vocabulary Definition {#vocab}
 
-NOTE: This section does not yet have consensus; see "Note to Readers" above.
+<cref>
+    NOTE: This section does not yet have consensus; see "Note to Readers" above.
+</cref>
 
 This section defines the categories of use in the vocabulary.
 
@@ -251,13 +296,13 @@ even if the model is capable of generative tasks.
 ## AI Use {#ai-use}
 
 Use of an asset as input to a generative AI model,
-where the asset is not directly provided by the user. [^249]
+where the asset is not directly provided by the user.
 
-[^249]: \[\[
-    [Issue 249](https://github.com/ietf-wg-aipref/drafts/issues/249)
+<cref>
+    NOTE: [Issue 249](https://github.com/ietf-wg-aipref/drafts/issues/249)
     addresses the question of whether "direct"
     includes referencing `assets`, by URL or other means.
-    \]\]
+</cref>
 
 This does not include any use that is included
 in the AI Training usage category ({{train-ai}}).
