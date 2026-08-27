@@ -307,8 +307,9 @@ In displaying titles or excerpts from assets,
 changes to improve accessibility,
 such as translation, transcription, or text-to-speech,
 are included in this category.
-These changes must not involve the generation of new material,
-though such changes may be permissible for other reasons.
+Such accessibility changes cannot generate new material,
+though additional changes could be acceptable
+based on other reasons.
 
 A preference to allow this category of use
 includes allowing any processing internal to the application
