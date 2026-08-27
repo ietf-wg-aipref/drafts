@@ -84,6 +84,7 @@ Table of Contents
      3.2.  Applying Preferences
      3.3.  Documenting Conformance With This Specification
      3.4.  Communicating Preferences with Trained Models
+     3.5.  Acquisition of Assets and Preferences
    4.  Vocabulary Definition
      4.1.  AI Training
      4.2.  AI Use
@@ -292,6 +293,25 @@ Table of Contents
    Compliance with preferences regarding the use of assets in training
    of AI models also includes conveying the preferences associated with
    those assets along with that model.
+
+3.5.  Acquisition of Assets and Preferences
+
+   The fetching or receiving an asset is distinct from how that asset is
+   subsequently used.
+
+   Usage preferences do not apply to how assets are obtained.  They only
+   apply to how those assets are subsequently used; see Section 3.2.
+
+   Mechanisms exist -- such as encryption, access controls, or the
+   Disallow rules in "robots.txt" [ROBOTS] -- that might prevent an
+   entity from acquiring an asset.  Such mechanisms are independent of
+   the ability of a declaring party to state their preferences about the
+   use of assets.
+
+   Where acquisition and use of assets occur at different times or in
+   different parts of systems, retaining any usage preferences
+   associated with those assets ensures that they are available to
+   inform decisions about use.
 
 4.  Vocabulary Definition
 
@@ -646,6 +666,11 @@ Table of Contents
               <https://datatracker.ietf.org/doc/html/draft-ietf-aipref-
               attach>.
 
+   [ROBOTS]   Koster, M., Illyes, G., Zeller, H., and L. Sassman,
+              "Robots Exclusion Protocol", RFC 9309,
+              DOI 10.17487/RFC9309, September 2022,
+              <https://www.rfc-editor.org/rfc/rfc9309>.
+
    [UTF8]     Yergeau, F., "UTF-8, a transformation format of ISO
               10646", STD 63, RFC 3629, DOI 10.17487/RFC3629, November
               2003, <https://www.rfc-editor.org/rfc/rfc3629>.
@@ -675,20 +700,23 @@ Index
 
          asset  Section 3, Paragraph 3; Section 3, Paragraph 7;
             Section 3.1, Paragraph 2; Section 3.1, Paragraph 3;
-            Section 3.1, Paragraph 5; Section 4.1, Paragraph 1;
+            Section 3.1, Paragraph 5; Section 3.5, Paragraph 1;
+            Section 3.5, Paragraph 3; Section 4.1, Paragraph 1;
             Section 4.2, Paragraph 1; Section 4.3, Paragraph 1;
             Section 4.3, Paragraph 3.1.1; Section 4.3, Paragraph 3.2.1;
             Section 5.2, Paragraph 3
          assets  Section Abstract, Paragraph 1; Section 1, Paragraph 1;
             Section 1, Paragraph 4; Section 3, Paragraph 2; Section 3.1,
             Paragraph 1; Section 3.1, Paragraph 7; Section 3.4,
-            Paragraph 2; Section 4, Paragraph 3; Section 4.3, Paragraph
-            1; Section 4.3, Paragraph 4; Section 4.3, Paragraph 5;
-            Section 4.3, Paragraph 6
+            Paragraph 2; Section 3.5, Paragraph 2; Section 3.5,
+            Paragraph 3; Section 3.5, Paragraph 4; Section 4, Paragraph
+            3; Section 4.3, Paragraph 1; Section 4.3, Paragraph 4;
+            Section 4.3, Paragraph 5; Section 4.3, Paragraph 6
 
       D
 
-         declaring party  Section 1, Paragraph 1
+         declaring party  Section 1, Paragraph 1; Section 3.5, Paragraph
+            3
 
       G
 
