@@ -181,7 +181,8 @@ as it relates to understanding what the preferences for a given asset are
 A recipient can only apply preferences it understands.
 Recipients that implement this specification
 will understand the vocabulary terms defined in {{vocab}},
-but they might not understand extensions; see {{extension}}.
+but they might not understand terms defined in extensions;
+see {{vocab-extensions}}.
 
 A recipient can only understand preferences expressed
 through mechanisms it has implemented.
@@ -248,7 +249,7 @@ ideally address:
   which might include those defined in {{ATTACH}};
 
 * which of the vocabulary terms are understood,
-  either from {{vocab}} or extensions ({{extension}}); and
+  either from {{vocab}} or extensions ({{vocab-extensions}}); and
 
 * for each vocabulary term,
   it is also helpful to describe the circumstances under which
@@ -380,7 +381,7 @@ including AI Training ({{train-ai}})
 and AI Use ({{ai-use}}).
 
 
-## Vocabulary Extensions {#vocab-extension}
+## Vocabulary Extensions {#vocab-extensions}
 
 Extensions to this vocabulary are defined
 in a standards-track RFC that updates this document.
@@ -525,13 +526,13 @@ so any format that uses strings needs to encode strings first.
 Again, this process can use ASCII or UTF-8.
 
 
-## Syntax Extensions {#extension}
+## Syntax Extensions {#syntax-extensions}
 
 There are two ways by which this syntax might be extended:
 the addition of new labels and the addition of parameters.
 
 New labels might be defined to correspond to new usage categories.
-{{vocab-extension}} addresses the considerations for defining new categories.
+{{vocab-extensions}} addresses the considerations for defining new categories.
 
 New labels might also be defined for other types of extension
 that do not assign a preference to a usage category.
@@ -626,7 +627,7 @@ train-ai;has;parameters="?";
 ~~~
 
 
-## Alternative Formats {#mapping}
+# Alternative Formats {#mapping}
 
 The format defined in this document
 is only an exemplary way to represent preferences.
@@ -636,7 +637,8 @@ can be used without this serialization.
 Any alternative format needs to define the mapping
 both from that format to the model used in this document
 and from the model to the alternative format.
-This includes any potential for extensions ({{extension}}).
+This includes any potential for extensions to the vocabulary;
+see {{vocab-extensions}}.
 
 The mapping between the data model and the alternative format
 does not need to be complete,
