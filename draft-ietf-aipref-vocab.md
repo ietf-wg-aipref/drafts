@@ -120,11 +120,11 @@ Generative AI model:
   Alternatively, an AI model that is made available for use
   to generate synthetic content
   in one or more modalities.
-  This definition does not include models that are used,
+  This definition does not include a model that is used,
   or made available for use,
-  in classification, ranking, or scoring,
-  even if those models generate rationales
-  for the output of those operations.
+  for classification, ranking, or scoring,
+  even where the model generates rationale
+  for its output.
   {: anchor="dfn-genai"}
 
 
@@ -251,14 +251,13 @@ even if the model is capable of generative tasks.
 ## AI Use {#ai-use}
 
 Use of an asset as input to a generative AI model,
-where the asset is not directly provided by the user\[,
-either as a URL or by supplying the asset itself\].
+where the asset is not directly provided by the user. [^249]
 
-<!-- Choose either the above or the below. -->
-
-\[If a system needs to perform inference
-in order to determine which asset to use,
-that does not qualify as a user directly providing the asset.\]
+[^249]: \[\[
+    [Issue 249](https://github.com/ietf-wg-aipref/drafts/issues/249)
+    addresses the question of whether "direct"
+    includes referencing `assets`, by URL or other means.
+    \]\]
 
 This does not include any use that is included
 in the AI Training usage category ({{train-ai}}).
