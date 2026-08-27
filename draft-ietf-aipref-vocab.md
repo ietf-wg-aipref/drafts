@@ -229,32 +229,6 @@ Whether and under which circumstances a preference is followed is outside the
 scope of this specification.
 
 
-## Documenting Conformance With This Specification {#decl}
-
-An entity that could act on preferences
-can document their conformance with this specification.
-
-In making such statements,
-it is not sufficient to simply declare support for
-with this specification.
-Support for this specification only includes
-the model for preferences ({{model}}),
-how preferences are understood and applied in general ({{usage}}),
-and maybe the exemplary serialization format ({{format}}).
-
-Statements about how an entity conforms with this specification
-ideally address:
-
-* which attachment mechanisms are understood,
-  which might include those defined in {{ATTACH}};
-
-* which of the vocabulary terms are understood,
-  either from {{vocab}} or extensions ({{vocab-extensions}}); and
-
-* for each vocabulary term,
-  it is also helpful to describe the circumstances under which
-  the entity will or will not follow expressed preferences.
-
 
 ## Communicating Preferences with Trained Models
 
@@ -268,30 +242,6 @@ in training of AI models
 also includes conveying the preferences
 associated with those assets
 along with that model.
-
-
-## Acquisition of Assets and Preferences {#acquisition-and-use}
-
-The fetching or receiving an asset
-is distinct from how that asset is subsequently used.
-
-Usage preferences do not apply
-to how assets are obtained.
-They only apply to how those assets are subsequently used;
-see {{applicability}}.
-
-Mechanisms exist --
-such as encryption, access controls,
-or the `Disallow` rules in "robots.txt" {{?ROBOTS=RFC9309}} --
-that might prevent an entity from acquiring an asset.
-Such mechanisms are independent of the ability of a declaring party
-to state their preferences about the use of assets.
-
-Where acquisition and use of assets occur at different times
-or in different parts of systems,
-retaining any usage preferences associated with those assets
-ensures that they are available to inform decisions about use.
-
 
 # Vocabulary Definition {#vocab}
 
