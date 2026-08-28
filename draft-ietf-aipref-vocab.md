@@ -266,7 +266,7 @@ of a generative AI model.
 
 The training of models that are used
 to perform exclusively non-generative tasks
-are not included in this category,
+is not included in this category,
 even if the model is capable of generative tasks.
 
 
@@ -307,7 +307,7 @@ This category of use only applies under the following conditions:
 This category does not include the use of assets
 to generate summaries.
 
-In displaying titles or excerpts from assets,
+Displaying titles or excerpts from assets,
 changes to improve accessibility,
 such as translation, transcription, or text-to-speech,
 are included in this category.
