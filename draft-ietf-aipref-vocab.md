@@ -280,7 +280,7 @@ where the asset is not directly provided by the user.
 [^249]:
     NOTE: [Issue 249](https://github.com/ietf-wg-aipref/drafts/issues/249)
     addresses the question of whether "direct"
-    includes referencing `assets`, by URL or other means.
+    includes referencing assets, by URL or other means.
 
 This does not include any use that is included
 in the AI Training usage category ({{train-ai}}).
