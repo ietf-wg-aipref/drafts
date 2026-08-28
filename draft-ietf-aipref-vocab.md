@@ -243,7 +243,7 @@ Compliance with preferences regarding the use of assets
 in training of AI models
 also includes conveying the preferences
 associated with those assets
-along with that model.
+along with that model when it is distributed.
 
 # Vocabulary Definition {#vocab}
 
