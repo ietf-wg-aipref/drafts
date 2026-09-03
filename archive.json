@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-08-30T04:53:47.248909+00:00",
+  "timestamp": "2026-09-03T03:58:12.610021+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -13731,7 +13731,7 @@
       "labels": [],
       "body": "This collects a bunch of changes from the discussion in London.\r\n\r\nOf note is:\r\n\r\n* the new definition of \"generative AI model\" and the specific exclusions we have in that definition around classifiers\r\n* the revisions to the \"AI Training\" category of use\r\n   * The expectation is that this doesn't change the meaning of the category at all, just adds clarity.\r\n* the addition of the \"AI Use\" category\r\n    * The name of this category likely needs to be refined, but the request is to look at the meaning.\r\n    * There is a clear note here about the \"directly provided by a user\" language and what that means in relation to providing a URL.  This explicitly references an open issue on this point.\r\n* text on including indications about preferences associated with assets in model documentation, which also has an issue reference as this was controversial\r\n\r\nThere are some additional minor edits, but those are the bulk of the change.\r\n\r\nThe commit history here is a little fragmented.  Many of the changes were iterated upon in multiple phases.  In reviewing this, please look at the final product.\r\n\r\nA rendered version of this can be viewed at https://ietf-wg-aipref.github.io/drafts/post-london/draft-ietf-aipref-vocab.html",
       "createdAt": "2026-08-27T15:22:01Z",
-      "updatedAt": "2026-08-28T11:09:18Z",
+      "updatedAt": "2026-09-02T17:44:30Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "d405f9dcb1b24463d217c059cc57eb7bcb957177",
@@ -13891,6 +13891,32 @@
               "body": "Fair.\r\n\r\n```suggestion\r\nalong with that model when it is distributed.\r\n```",
               "createdAt": "2026-08-28T11:09:06Z",
               "updatedAt": "2026-08-28T11:09:07Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABL5Jjxg",
+          "commit": {
+            "abbreviatedOid": "f47e12f"
+          },
+          "author": "ekr-ietf",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "This looks reasonable to publish as an editor's draft.",
+          "createdAt": "2026-09-02T17:40:30Z",
+          "updatedAt": "2026-09-02T17:44:30Z",
+          "comments": [
+            {
+              "originalPosition": 82,
+              "body": "Perhaps also:\nThis requirement can be met by providing a list of inputs along with their associated preferences or by providing the set of uses which are consistent with the preferences associated with all the inputs to the model.\n\n",
+              "createdAt": "2026-09-02T17:40:30Z",
+              "updatedAt": "2026-09-02T17:44:30Z"
+            },
+            {
+              "originalPosition": 148,
+              "body": "I would suggest that we just strike this sentence, as on reflection I think the previous sentence is clear enough.",
+              "createdAt": "2026-09-02T17:43:59Z",
+              "updatedAt": "2026-09-02T17:44:30Z"
             }
           ]
         }
