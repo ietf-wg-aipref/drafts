@@ -295,7 +295,7 @@ Table of Contents
 
 4.2.  AI Use
 
-   Use of an asset as input to a generative AI model, where the asset is
+   Using an asset as input to a generative AI model, where the asset is
    not directly provided by the user.
 
 
@@ -308,7 +308,7 @@ Table of Contents
 
 4.3.  Search
 
-   Use of an asset in an application where the primary purpose of the
+   Using an asset in an application where the primary purpose of the
    application is to select assets and direct users to the location of
    those assets.
 
