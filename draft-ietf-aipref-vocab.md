@@ -245,6 +245,11 @@ also includes conveying the preferences
 associated with those assets
 along with that model when it is distributed.
 
+This requirement can be met by providing information
+on the full range of preferences that were associated with assets
+that were included in the training inputs
+or by indicating what sorts of uses are consistent with those preferences.
+
 # Vocabulary Definition {#vocab}
 
 [^vocab-consensus]
@@ -311,9 +316,6 @@ Displaying titles or excerpts from assets,
 changes to improve accessibility,
 such as translation, transcription, or text-to-speech,
 are included in this category.
-Such accessibility changes cannot generate new material,
-though additional changes could be acceptable
-based on other reasons.
 
 A preference to allow this category of use
 includes allowing any processing internal to the application
