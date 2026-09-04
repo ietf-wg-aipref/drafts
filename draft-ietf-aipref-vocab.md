@@ -277,7 +277,7 @@ even if the model is capable of generative tasks.
 
 ## AI Use {#ai-use}
 
-Use of an asset as input to a generative AI model,
+Using an asset as input to a generative AI model,
 where the asset is not directly provided by the user.
 
 [^249]
@@ -293,7 +293,7 @@ in the AI Training usage category ({{train-ai}}).
 
 ## Search {#search}
 
-Use of an asset in an application
+Using an asset in an application
 where the primary purpose of the application
 is to select assets
 and direct users to the location of those assets.
