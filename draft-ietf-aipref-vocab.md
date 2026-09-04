@@ -93,23 +93,47 @@ and {{format}} describes a way to serialize preferences into a string.
 Other means of association might be defined separately in the future.
 
 
-# Conventions and Definitions
+# Conventions and Definitions {#defs}
 
 {::boilerplate bcp14-tagged}
+
+*[asset]: #dfn-asset
+*[assets]: #dfn-asset
+*[declaring party]: #dfn-decl-party
+*[generative AI model]: #dfn-genai
 
 This document uses the following terms:
 
 {: newline="true" spacing="compact"}
 Asset:
 : A digital file or stream of data, usually with associated metadata.
+  {: anchor="dfn-asset"}
 
 Declaring party:
 : The entity that expresses a preference with regards to an Asset.
+  {: anchor="dfn-decl-party"}
+
+Generative AI model:
+: An AI model that is used
+  to generate synthetic content
+  in one or more modalities.
+  Alternatively, an AI model that is made available for use
+  to generate synthetic content
+  in one or more modalities.
+  This definition does not include a model that is used,
+  or made available for use,
+  for classification, ranking, or scoring,
+  even where the model generates rationale
+  for its output.
+  {: anchor="dfn-genai"}
 
 
 # Statements of Preference {#model}
 
-NOTE: This section does not yet have consensus; see "Note to Readers" above.
+[^model-consensus]
+
+[^model-consensus]:
+    NOTE: This section does not yet have consensus; see "Note to Readers" above.
 
 The vocabulary is a set of categories,
 each of which is defined to cover a class of usage for assets.
@@ -158,7 +182,8 @@ as it relates to understanding what the preferences for a given asset are
 A recipient can only apply preferences it understands.
 Recipients that implement this specification
 will understand the vocabulary terms defined in {{vocab}},
-but they might not understand extensions; see {{extension}}.
+but they might not understand terms defined in extensions;
+see {{vocab-extensions}}.
 
 A recipient will only process preferences expressed
 through methods it has implemented.
@@ -205,9 +230,32 @@ Whether and under which circumstances a preference is followed is outside the
 scope of this specification.
 
 
+
+## Communicating Preferences with Trained Models
+
+[^245]
+
+[^245]:
+    NOTE: [Issue 245](https://github.com/ietf-wg-aipref/drafts/issues/245)
+    is open to track whether this section is included or not.
+
+Compliance with preferences regarding the use of assets
+in training of AI models
+also includes conveying the preferences
+associated with those assets
+along with that model when it is distributed.
+
+This requirement can be met by providing information
+on the full range of preferences that were associated with assets
+that were included in the training inputs
+or by indicating what sorts of uses are consistent with those preferences.
+
 # Vocabulary Definition {#vocab}
 
-NOTE: This section does not yet have consensus; see "Note to Readers" above.
+[^vocab-consensus]
+
+[^vocab-consensus]:
+    NOTE: This section does not yet have consensus; see "Note to Readers" above.
 
 This section defines the categories of use in the vocabulary.
 
@@ -216,15 +264,36 @@ of assets.  The definitions seek to avoid describing internal details of
 implementations or their architecture.
 
 
-## AI Model Training {#train-ai}
+## AI Training {#train-ai}
 
-Using an asset to modify the learned parameters of an AI model
-that is used
-to generate synthetic content in one or more modalities.
+Using an asset to modify the learned parameters
+of a generative AI model.
+
+The training of models that are used
+to perform exclusively non-generative tasks
+is not included in this category,
+even if the model is capable of generative tasks.
+
+
+## AI Use {#ai-use}
+
+Using an asset as input to a generative AI model,
+where the asset is not directly provided by the user.
+
+[^249]
+
+[^249]:
+    NOTE: [Issue 249](https://github.com/ietf-wg-aipref/drafts/issues/249)
+    addresses the question of whether "direct"
+    includes referencing assets, by URL or other means.
+
+This does not include any use that is included
+in the AI Training usage category ({{train-ai}}).
+
 
 ## Search {#search}
 
-Use of an asset in an application
+Using an asset in an application
 where the primary purpose of the application
 is to select assets
 and direct users to the location of those assets.
@@ -243,32 +312,33 @@ This category of use only applies under the following conditions:
 This category does not include the use of assets
 to generate summaries.
 
-Non-substantive changes to the presentation
-of titles or excerpts from assets
-are included for the purposes of accessibility.
-Translation, transcription, or text-to-speech
-are examples of non-substantive changes
-that could help users understand what is being presented.
-Where existing controls restrict presentation of these items,
-such as limitations on snippet size,
-those apply before any changes.
+Displaying titles or excerpts from assets,
+changes to improve accessibility,
+such as translation, transcription, or text-to-speech,
+are included in this category.
 
 A preference to allow this category of use
 includes allowing any processing internal to the application
 that is performed on assets.
-Allowing this use is conditional on the outputs of any processing
+Allowing this processing is conditional on the outputs of any processing
 being exclusively used by the search application
 according to the other restrictions in this section.
-That includes the training of AI models
+Allowed processing therefore includes the training of AI models
 using the assets
 and the use of those models
 provided that the resulting models
 and their outputs
 are used exclusively
-in ways that meet the above conditions.
+in ways that meet the above conditions
+regarding referencing and excerpts.
+
+This category of use overrides any usage
+that falls into other categories,
+including AI Training ({{train-ai}})
+and AI Use ({{ai-use}}).
 
 
-## Vocabulary Extensions {#vocab-extension}
+## Vocabulary Extensions {#vocab-extensions}
 
 Extensions to this vocabulary are defined
 in a standards-track RFC that updates this document.
@@ -376,7 +446,8 @@ Each usage category in the vocabulary ({{vocab}}) is mapped to a short textual l
 
 | Category                    | Label       | Reference       |
 |:----------------------------|:------------|:----------------|
-| AI Model Training           | train-ai    | {{train-ai}}    |
+| AI Training                 | train-ai    | {{train-ai}}    |
+| AI Use                      | ai-use      | {{ai-use}}      |
 | Search                      | search      | {{search}}      |
 {: #t-category-labels title="Mappings for Categories"}
 
@@ -412,13 +483,13 @@ so any format that uses strings needs to encode strings first.
 Again, this process can use ASCII or UTF-8.
 
 
-## Syntax Extensions {#extension}
+## Syntax Extensions {#syntax-extensions}
 
 There are two ways by which this syntax might be extended:
 the addition of new labels and the addition of parameters.
 
 New labels might be defined to correspond to new usage categories.
-{{vocab-extension}} addresses the considerations for defining new categories.
+{{vocab-extensions}} addresses the considerations for defining new categories.
 
 New labels might also be defined for other types of extension
 that do not assign a preference to a usage category.
@@ -513,7 +584,7 @@ train-ai;has;parameters="?";
 ~~~
 
 
-## Alternative Formats {#mapping}
+# Alternative Formats {#mapping}
 
 The format defined in this document
 is only an exemplary way to represent preferences.
@@ -523,7 +594,8 @@ can be used without this serialization.
 Any alternative format needs to define the mapping
 both from that format to the model used in this document
 and from the model to the alternative format.
-This includes any potential for extensions ({{extension}}).
+This includes any potential for extensions to the vocabulary;
+see {{vocab-extensions}}.
 
 The mapping between the data model and the alternative format
 does not need to be complete,
