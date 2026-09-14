@@ -5,8 +5,8 @@
 AI Preferences                                                 P. Keller
 Internet-Draft                                               Open Future
 Intended status: Standards Track                         M. Thomson, Ed.
-Expires: 26 February 2027                                        Mozilla
-                                                          25 August 2026
+Expires: 18 March 2027                                           Mozilla
+                                                       14 September 2026
 
 
             A Vocabulary For Expressing AI Usage Preferences
@@ -59,7 +59,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 26 February 2027.
+   This Internet-Draft will expire on 18 March 2027.
 
 Copyright Notice
 
@@ -82,10 +82,12 @@ Table of Contents
    3.  Statements of Preference
      3.1.  Understanding Preferences
      3.2.  Applying Preferences
+     3.3.  Communicating Preferences with Trained Models
    4.  Vocabulary Definition
-     4.1.  AI Model Training
-     4.2.  Search
-     4.3.  Vocabulary Extensions
+     4.1.  AI Training
+     4.2.  AI Use
+     4.3.  Search
+     4.4.  Vocabulary Extensions
    5.  Applying Statements of Preference
      5.1.  Combining Preferences
      5.2.  More Specific Instructions
@@ -97,13 +99,14 @@ Table of Contents
      6.5.  Processing Algorithm
        6.5.1.  Multiple Preferences
        6.5.2.  Preference Parameters
-     6.6.  Alternative Formats
-   7.  Security Considerations
-   8.  IANA Considerations
-   9.  References
-     9.1.  Normative References
-     9.2.  Informative References
+   7.  Alternative Formats
+   8.  Security Considerations
+   9.  IANA Considerations
+   10. References
+     10.1.  Normative References
+     10.2.  Informative References
    Acknowledgments
+   Index
    Authors' Addresses
 
 1.  Introduction
@@ -146,11 +149,19 @@ Table of Contents
       metadata.
    Declaring party:
       The entity that expresses a preference with regards to an Asset.
+   Generative AI model:
+      An AI model that is used to generate synthetic content in one or
+      more modalities.  Alternatively, an AI model that is made
+      available for use to generate synthetic content in one or more
+      modalities.  This definition does not include a model that is
+      used, or made available for use, for classification, ranking, or
+      scoring, even where the model generates rationale for its output.
 
 3.  Statements of Preference
 
-   NOTE: This section does not yet have consensus; see "Note to Readers"
-   above.
+
+   // NOTE: This section does not yet have consensus; see "Note to
+   // Readers" above.
 
    The vocabulary is a set of categories, each of which is defined to
    cover a class of usage for assets.  Section 4 defines the core set of
@@ -198,8 +209,8 @@ Table of Contents
 
    A recipient can only apply preferences it understands.  Recipients
    that implement this specification will understand the vocabulary
-   terms defined in Section 4, but they might not understand extensions;
-   see Section 6.4.
+   terms defined in Section 4, but they might not understand terms
+   defined in extensions; see Section 4.4.
 
    A recipient will only process preferences expressed through methods
    it has implemented.  Those methods might be limited to those in
@@ -245,10 +256,27 @@ Table of Contents
    that choice is made.  Whether and under which circumstances a
    preference is followed is outside the scope of this specification.
 
+3.3.  Communicating Preferences with Trained Models
+
+
+   // NOTE: Issue 245 (https://github.com/ietf-wg-aipref/drafts/
+   // issues/245) is open to track whether this section is included or
+   // not.
+
+   Compliance with preferences regarding the use of assets in training
+   of AI models also includes conveying the preferences associated with
+   those assets along with that model when it is distributed.
+
+   This requirement can be met by providing information on the full
+   range of preferences that were associated with assets that were
+   included in the training inputs or by indicating what sorts of uses
+   are consistent with those preferences.
+
 4.  Vocabulary Definition
 
-   NOTE: This section does not yet have consensus; see "Note to Readers"
-   above.
+
+   // NOTE: This section does not yet have consensus; see "Note to
+   // Readers" above.
 
    This section defines the categories of use in the vocabulary.
 
@@ -256,14 +284,31 @@ Table of Contents
    on the use of assets.  The definitions seek to avoid describing
    internal details of implementations or their architecture.
 
-4.1.  AI Model Training
+4.1.  AI Training
 
-   Using an asset to modify the learned parameters of an AI model that
-   is used to generate synthetic content in one or more modalities.
+   Using an asset to modify the learned parameters of a generative AI
+   model.
 
-4.2.  Search
+   The training of models that are used to perform exclusively non-
+   generative tasks is not included in this category, even if the model
+   is capable of generative tasks.
 
-   Use of an asset in an application where the primary purpose of the
+4.2.  AI Use
+
+   Using an asset as input to a generative AI model, where the asset is
+   not directly provided by the user.
+
+
+   // NOTE: Issue 249 (https://github.com/ietf-wg-aipref/drafts/
+   // issues/249) addresses the question of whether "direct" includes
+   // referencing assets, by URL or other means.
+
+   This does not include any use that is included in the AI Training
+   usage category (Section 4.1).
+
+4.3.  Search
+
+   Using an asset in an application where the primary purpose of the
    application is to select assets and direct users to the location of
    those assets.
 
@@ -279,24 +324,25 @@ Table of Contents
    This category does not include the use of assets to generate
    summaries.
 
-   Non-substantive changes to the presentation of titles or excerpts
-   from assets are included for the purposes of accessibility.
-   Translation, transcription, or text-to-speech are examples of non-
-   substantive changes that could help users understand what is being
-   presented.  Where existing controls restrict presentation of these
-   items, such as limitations on snippet size, those apply before any
-   changes.
+   Displaying titles or excerpts from assets, changes to improve
+   accessibility, such as translation, transcription, or text-to-speech,
+   are included in this category.
 
    A preference to allow this category of use includes allowing any
    processing internal to the application that is performed on assets.
-   Allowing this use is conditional on the outputs of any processing
-   being exclusively used by the search application according to the
-   other restrictions in this section.  That includes the training of AI
-   models using the assets and the use of those models provided that the
-   resulting models and their outputs are used exclusively in ways that
-   meet the above conditions.
+   Allowing this processing is conditional on the outputs of any
+   processing being exclusively used by the search application according
+   to the other restrictions in this section.  Allowed processing
+   therefore includes the training of AI models using the assets and the
+   use of those models provided that the resulting models and their
+   outputs are used exclusively in ways that meet the above conditions
+   regarding referencing and excerpts.
 
-4.3.  Vocabulary Extensions
+   This category of use overrides any usage that falls into other
+   categories, including AI Training (Section 4.1) and AI Use
+   (Section 4.2).
+
+4.4.  Vocabulary Extensions
 
    Extensions to this vocabulary are defined in a standards-track RFC
    that updates this document.
@@ -309,8 +355,8 @@ Table of Contents
    this vocabulary as part of a larger data model that includes other
    terms not defined here.  Such usage is not subject to the RFC
    requirement above, but special care is needed to avoid defining
-   overlapping categories of use.  Section 6.6 describes how concepts
-   from an alternative format might be mapped to this vocabulary.
+   overlapping categories of use.  Section 7 describes how concepts from
+   an alternative format might be mapped to this vocabulary.
 
 5.  Applying Statements of Preference
 
@@ -380,7 +426,7 @@ Table of Contents
    either y or n; see Section 6.2.
 
    For example, the following states a preference to allow model
-   training (Section 4.1), disallow search (Section 4.2), with the
+   training (Section 4.1), disallow search (Section 4.3), with the
    preference for other categories being unknown:
 
    train-ai=y, search=n
@@ -390,13 +436,15 @@ Table of Contents
    Each usage category in the vocabulary (Section 4) is mapped to a
    short textual label.  Table 1 tabulates this mapping.
 
-              +===================+==========+=============+
-              | Category          | Label    | Reference   |
-              +===================+==========+=============+
-              | AI Model Training | train-ai | Section 4.1 |
-              +-------------------+----------+-------------+
-              | Search            | search   | Section 4.2 |
-              +-------------------+----------+-------------+
+                 +=============+==========+=============+
+                 | Category    | Label    | Reference   |
+                 +=============+==========+=============+
+                 | AI Training | train-ai | Section 4.1 |
+                 +-------------+----------+-------------+
+                 | AI Use      | ai-use   | Section 4.2 |
+                 +-------------+----------+-------------+
+                 | Search      | search   | Section 4.3 |
+                 +-------------+----------+-------------+
 
                      Table 1: Mappings for Categories
 
@@ -435,7 +483,7 @@ Table of Contents
    addition of new labels and the addition of parameters.
 
    New labels might be defined to correspond to new usage categories.
-   Section 4.3 addresses the considerations for defining new categories.
+   Section 4.4 addresses the considerations for defining new categories.
 
    New labels might also be defined for other types of extension that do
    not assign a preference to a usage category.  In either case, when
@@ -514,7 +562,7 @@ Table of Contents
 
    train-ai;has;parameters="?";
 
-6.6.  Alternative Formats
+7.  Alternative Formats
 
    The format defined in this document is only an exemplary way to
    represent preferences.  The data model described in Section 3 can be
@@ -522,8 +570,8 @@ Table of Contents
 
    Any alternative format needs to define the mapping both from that
    format to the model used in this document and from the model to the
-   alternative format.  This includes any potential for extensions
-   (Section 6.4).
+   alternative format.  This includes any potential for extensions to
+   the vocabulary; see Section 4.4.
 
    The mapping between the data model and the alternative format does
    not need to be complete, it only needs to be clear and unambiguous.
@@ -533,7 +581,7 @@ Table of Contents
    might then define that an unknown preference is associated with other
    categories.
 
-7.  Security Considerations
+8.  Security Considerations
 
    Preferences are not a security mechanism.  Section 3.2 addresses what
    it means to express a preference.
@@ -542,13 +590,13 @@ Table of Contents
    in Section 6 is subject to the security considerations in Section 6
    of [FIELDS].
 
-8.  IANA Considerations
+9.  IANA Considerations
 
    This document has no IANA actions.
 
-9.  References
+10.  References
 
-9.1.  Normative References
+10.1.  Normative References
 
    [ASCII]    Cerf, V., "ASCII format for network interchange", STD 80,
               RFC 20, DOI 10.17487/RFC20, October 1969,
@@ -567,13 +615,13 @@ Table of Contents
               2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
               May 2017, <https://www.rfc-editor.org/rfc/rfc8174>.
 
-9.2.  Informative References
+10.2.  Informative References
 
    [ATTACH]   Illyes, G. and M. Thomson, Ed., "A Vocabulary For
               Expressing AI Usage Preferences", Work in Progress,
-              Internet-Draft, draft-ietf-aipref-attach, August 2026,
-              <https://datatracker.ietf.org/doc/html/draft-ietf-aipref-
-              attach>.
+              Internet-Draft, draft-ietf-aipref-attach, 14 September
+              2026, <https://datatracker.ietf.org/doc/html/draft-ietf-
+              aipref-attach>.
 
    [UTF8]     Yergeau, F., "UTF-8, a transformation format of ISO
               10646", STD 63, RFC 3629, DOI 10.17487/RFC3629, November
@@ -595,6 +643,34 @@ Acknowledgments
    *  Nate Hake
    *  Sebastian Posth
    *  Timid Robot Zehta
+
+Index
+
+   A D G
+
+      A
+
+         asset  Section 3, Paragraph 3; Section 3, Paragraph 7;
+            Section 3.1, Paragraph 2; Section 3.1, Paragraph 3;
+            Section 3.1, Paragraph 5; Section 4.1, Paragraph 1;
+            Section 4.2, Paragraph 1; Section 4.3, Paragraph 1;
+            Section 4.3, Paragraph 3.1.1; Section 4.3, Paragraph 3.2.1;
+            Section 5.2, Paragraph 3
+         assets  Section Abstract, Paragraph 1; Section 1, Paragraph 1;
+            Section 1, Paragraph 4; Section 3, Paragraph 2; Section 3.1,
+            Paragraph 1; Section 3.1, Paragraph 7; Section 3.3,
+            Paragraph 2; Section 3.3, Paragraph 3; Section 4, Paragraph
+            3; Section 4.3, Paragraph 1; Section 4.3, Paragraph 4;
+            Section 4.3, Paragraph 5; Section 4.3, Paragraph 6
+
+      D
+
+         declaring party  Section 1, Paragraph 1
+
+      G
+
+         generative AI model  Section 4.1, Paragraph 1; Section 4.2,
+            Paragraph 1
 
 Authors' Addresses
 
