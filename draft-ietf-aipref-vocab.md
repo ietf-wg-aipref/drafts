@@ -250,6 +250,30 @@ on the full range of preferences that were associated with assets
 that were included in the training inputs
 or by indicating what sorts of uses are consistent with those preferences.
 
+
+## Acquisition of Assets and Preferences {#acquisition-and-use}
+
+The fetching or receiving an asset
+is distinct from how that asset is subsequently used.
+
+Usage preferences do not apply
+to how assets are obtained.
+They only apply to how those assets are subsequently used;
+see {{applicability}}.
+
+Mechanisms exist --
+such as encryption, access controls,
+or the `Disallow` rules in "robots.txt" {{?ROBOTS=RFC9309}} --
+that might prevent an entity from acquiring an asset.
+Such mechanisms are independent of the ability of a declaring party
+to state their preferences about the use of assets.
+
+Where acquisition and use of assets occur at different times
+or in different parts of systems,
+retaining any usage preferences associated with those assets
+ensures that they are available to inform decisions about use.
+
+
 # Vocabulary Definition {#vocab}
 
 [^vocab-consensus]
