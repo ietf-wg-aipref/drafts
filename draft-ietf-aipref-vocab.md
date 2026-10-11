@@ -230,6 +230,33 @@ Whether and under which circumstances a preference is followed is outside the
 scope of this specification.
 
 
+## Documenting Conformance With This Specification {#doc-conform}
+
+An entity that could act on preferences
+can document their conformance with this specification.
+
+In making such statements,
+it is not sufficient to simply declare support for
+with this specification.
+Support for this specification means
+understanding the model for preferences ({{model}}),
+the vocabulary terms it defined ({{vocab}}),
+how preferences are understood and applied in general ({{usage}}),
+and maybe the exemplary serialization format ({{format}}).
+
+Statements about how an entity conforms with this specification
+also need to address:
+
+* which attachment mechanisms are understood,
+  which might include those defined in {{ATTACH}};
+
+* which of the vocabulary terms are understood,
+  either from {{vocab}} or extensions ({{vocab-extensions}}); and
+
+* for each vocabulary term,
+  it is also helpful to describe the circumstances under which
+  the entity will or will not follow expressed preferences.
+
 
 ## Communicating Preferences with Trained Models
 
