@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-09-15T04:25:57.705330+00:00",
+  "timestamp": "2026-10-18T04:01:01.944943+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -14157,6 +14157,40 @@
       "mergedBy": null,
       "mergeCommit": null,
       "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 254,
+      "id": "PR_kwDOOWk1-s8AAAABI6B0dw",
+      "title": "Revise ai-use definition",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/254",
+      "state": "OPEN",
+      "author": "chrisn",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "An attempt at resolving #249.\n\nIn discussion with @kelleyk, we agreed that the scope should be limited to individual assets being provided to the model. The intent is to include:\n- The user provides the asset directly to the AI system (e.g., through file upload)\n- The user provides a URL to an asset that the AI system fetches\n- The AI system offers to the user to include a specific asset (a URL) as possible input, as part of the user's conversation with the AI system, and the user confirms providing that link as input (either by clicking the link or responding affirmatively in the conversation)\n\nand to exclude:\n- The user provides a description (e.g., the Google homepage as in the #249 example) that the AI system resolves to a URL\n- The user provides a description that potentially resolves to multiple assets (e.g., \"Wikipedia pages describing the countries of Europe\")",
+      "createdAt": "2026-10-16T18:32:52Z",
+      "updatedAt": "2026-10-17T10:31:05Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "63cd65c4a49d2f5c67bcee25d1057b21d999714a",
+      "headRepository": "chrisn/ietf-wg-aipref-drafts",
+      "headRefName": "chrisn-ai-use",
+      "headRefOid": "730df7a6c24b4642c12f9be8abafc81991102f85",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [
+        {
+          "author": "paul2keller",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "thanks for this @chrisn and @kelleyk but it seems to me what you have done here is to turn the definition of the exception into the definition of the category itself (by dropping the \"not\" from the original text). As proposed by you `ai-use` would now cover only the user-directed cases which I do not think was your intent here. can you have another look?",
+          "createdAt": "2026-10-17T10:31:04Z",
+          "updatedAt": "2026-10-17T10:31:04Z"
+        }
+      ],
       "reviews": []
     }
   ]
