@@ -278,8 +278,8 @@ even if the model is capable of generative tasks.
 ## AI Use {#ai-use}
 
 Using an asset as input to a generative AI model,
-where the express user intent is to interact with
-that specific asset.
+excluding usage where the express user intent
+is to interact with that specific asset.
 
 [^249]
 
