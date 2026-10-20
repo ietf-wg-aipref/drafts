@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-10-18T04:01:01.944943+00:00",
+  "timestamp": "2026-10-20T04:22:44.009606+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -81,7 +81,7 @@
     {
       "name": "context",
       "description": "The context that the vocabulary is used within",
-      "color": "db4baf"
+      "color": "178e84"
     },
     {
       "name": "deferred",
@@ -1990,11 +1990,12 @@
       "assignees": [],
       "labels": [
         "vocabulary",
-        "model"
+        "model",
+        "deferred"
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nBuilding on the note I sent to the Working Group on August 4th, and in reaction to the WGLC, I\u2019m opening this issue to explain our concerns. Most importantly, I\u2019m also attaching a display-based preferences vocabulary proposal as a path forward under the solution  text box. \nAs I and others have stressed, a vocabulary should achieve clarity, able to be adopted, and align with technical realities. Based on careful analysis, the current vocabulary draft (https://datatracker.ietf.org/doc/html/draft-ietf-aipref-vocab-03) does not achieve these aims. I appreciate the input and effort directed towards the draft, including updates to rework certain terms. However, I think key structural issues remain. \n\nI propose that we prioritize display-based preferences instead, which are clearer, enforceable, and better aligned with Search/AI user and publisher expectations. \n\nBefore I explain why a **display-based preferences vocabulary** approach is preferrable, I want to take a moment to unpack several of the structural challenges with the current draft. \n\n**Automated Processing category risks jeopardizing a safe and working internet**\nThe \u201cautomated processing\u201d category even as currently defined is **too broad and vague** to be actionable. It covers any use of content on a modern computing device \u2013 including when we export a document to PDF, print a file, or view pages in a browser. As Greg noted on the working group email, \u201cI imagine that running code on html to extract outgoing links is \u2018automated processing\u2019 [quotes in original]. Therefore, no crawler, even crawlers totally unrelated to AI, could function in such a world.\u201d Our concern is that this category places the larger Internet at risk of being less safe and usable for everyone as this category encompasses:\n\n\u2022\t**Content moderation and filtering** - critical for content safety.\n\u2022\t**Spam/Junk/High risk content tagging** \u2013 critical to operating the Internet safely.\n\u2022\t**Accessibility features** - such as automated captions and layout adjustments.\n\nHere too, we acknowledge that these outcomes are not the intended desire, yet the fact remains that this category risks disabling essential functionality, creating false assurances for users, and introducing complaints against implementers - especially in regulated environments.  It also deserves mention that existing controls allow web publishers to express a preference about whether a bot/crawler can access the site at all. We should focus our attention on those terms if there are issues with their adoption or application; information I have not heard expressed in this working group. \n\n**The \u201cSearch\u201d Category Presents a Host of Problems**\nNotwithstanding the rationale for why \u201cSearch\u201d was introduced into this document, for most webmasters and site owners, \u201cSearch\u201d is a generally well understood system. The introduction of a well-known term in a vague context like \u201cai preferences\u201d disrupts and confuses the larger ecosystem as opposed to adding value (or, to assuage publisher concerns in light of a display-based approach). Let me explain further:\n\n**1. Search and AI are converging**\nThere is an increasingly clear trend to converge search interfaces with AI interfaces, and the user experiences will become even more indistinguishable.\n\n**2. Technically Incoherent**\nModern search systems - whether traditional or AI-enhanced - are deeply integrated with AI technologies for ranking, snippet generation, and relevance modeling. Attempting to isolate \u201csearch\u201d as a distinct opt-out category creates a false dichotomy between AI and non-AI search. This distinction is not technically meaningful and cannot be reliably enforced.\n\n**3. Operationally Unenforceable**\nUnlike display preferences (e.g., \u201cno snippet\u201d), the \u201csearch\u201d category attempts to regulate internal system behavior via some vague notion of \u201cdirects users to the location from which the assets were retrieved\u201d (note the web is full of content redirects). This introduces enforcement challenges: the boundaries of \u201csearch\u201d are undefined and invisible to users, making it difficult to audit whether a system has respected a \u201csearch\u201d opt-out.\n\n**4. Redundant with Existing Mechanisms**\nSite owners already have very many tools like robots.txt, noindex, and structured data to control search indexing and display. The \u201csearch\u201d category duplicates these controls without offering additional clarity or functionality. Worse, it risks conflicting with existing standards and creating confusion for implementers.\n\n\n### Proposed Resolution\n\n**Why Display Preferences Provide a Better Alternative**\n\n**1. Observable and Enforceable**\nDisplay-based preferences focus on how content is shown, not how it is processed behind the scenes. They are testable and auditable, making them far more suitable for a standards-based vocabulary.\n\n**2. Aligned with User Expectations**\nIn our experience, content owners are primarily concerned about how their content appears. Preferences such as, \u201cno index\u201d, \u201cno snippet\u201d or \u201cmax snippet length\u201d reflect real-world concerns and are already supported by major platforms.\n\n**3. Clearer language Allows for Harmonized Adoption** \nVague categories like \u201csearch\u201d or \u201cAI Training\u201d vs \u201cGenerative AI Training\u201d introduce ambiguities that plague a harmonized adoption of these preferences. This sets up future disputes between parties and undermines the credibility of the standard.\n\n**4. Supporting Content Subscription scenarios**\nIn our experience, some content, as paywall content, can have difference level of presentation. Whole document can be accessed for ranking but only some of it can be presented.\n\n**Proposal for change \u2013 display-based preferences**\nOur proposal introduces the concept of display-based preferences, which control (allow, disallow, or limit) the presentation of content collected by web and AI crawlers. These include vocabulary terms on access, indexing and retrieval, text display, text length limits, exact text match, image preview, video preview, and generative AI training. Importantly, each category corresponds to specific usage controls often reflected in existing web standards. This allows the working group to inherit and build off experiences and familiarity.\n\nThis display-based preferences vocabulary also offers control for display/prevention of content in all experiences powered by this content collected, not only web-based experiences and API results. Its offer control for LLM built from the content collected also.\n\n[\\[IETF Issue File\\] A Vocabulary For Expressing Access and Usage of Assets by Search and AI crawlers_Clean_v3.pdf](https://github.com/user-attachments/files/22183722/IETF.Issue.File.A.Vocabulary.For.Expressing.Access.and.Usage.of.Assets.by.Search.and.AI.crawlers_Clean_v3.pdf)",
       "createdAt": "2025-09-06T01:42:57Z",
-      "updatedAt": "2026-08-17T06:55:04Z",
+      "updatedAt": "2026-10-19T03:26:41Z",
       "closedAt": null,
       "comments": [
         {
@@ -2052,11 +2053,12 @@
       "assignees": [],
       "labels": [
         "vocabulary",
-        "use"
+        "use",
+        "ready to close"
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nNote:  this issue mirrors the proposal made in this I-D here:  https://datatracker.ietf.org/doc/draft-silver-aipref-vocab-substitutive/ \n\nThis proposal aims to address a material gap in the Vocabulary document.  This gap renders the proposal incomplete but also potentially harmful to the interests of right holders who may be unable to specifically express a preference regarding the summarization/stylistic simulation of their content.  This category is an essential companion to the search category, given the broad adoption of summarization approaches by existing search engines as well most other LLMs.  \n\n**Issue Description**:\nExisting mechanisms for expressing preferences in the Vocabulary Document do not address concerns which\nhave been strongly articulated about the practice of using digital assets as input to AI models to generate outputs which substitute for or undermine the value of the original assets.  This gap leaves a broad group of stakeholders (including creators, journalists and publishers) without a means to express a preference for a type of use which is already having a material adverse impact on their rights.  Developers and deployers of AI systems are also left without a clear, standardized preference signal regarding such uses, which results in \"blunt\" approaches to gathering such content - exposing them to legal risk.  This proposal is for the addition of a category in the Vocabulary document to define a tailored preference category to address the specific need, improve visibility across the board and support continued broad access to information and content.\n\nThe use of digital assets for inferencing \"in real time\" is widespread as a means of improving the accuracy and contextual relevance of outputs, such as through the use of techniques such as Retrieval-Augmented Generation (RAG).  The flipside of that value is that such outputs are inclined to substitute for or dilute the value of the original asset, which decreases user engagement with the original asset.  This harms revenue opportunities and undermines the ability of the owner or distributor of the original asset to connect directly with their intended audience.  For example, the use of journalistic material to create AI-generated summaries which have resulted in the substantial reduction of internet traffic to online publications.  In the longer term, this jeopardises the sustainability of those enterprises and the underlying incentives to create and publish such material.  To mitigate this, some are moving content behind paywalls and deploying other means of limiting open access - diminishing access to information and content.\n\nShould incentives to create diminish, AI innovation will also suffer as a result of less quality content on which to build a distribution funnel.  This would also undermine the sustainability and verifiability of news and information services relied upon by the public and government institutions.  Where the AI model or platform takes on the role of information gatekeeper and shaper, connections between the public and original sources can be severed (or warped), which undermines the ability and willingness of internet users to ensure what they are reading, hearing or watching matches the original source(s), allowing factual misrepresentations to propagate and go unchecked.\n\nCreators have also justifiably expressed the need for a preference that addresses the use of their assets to create derivative works \"in the style of\" such original assets.  Creators are harmed by the unfettered use of their works as inputs to AI Models to create outputs which dilute the market for their works, adopting distinctive elements and styles established by the creators themselves - which also harms their moral rights and interests to protect the integrity of their works and ensure attribution.\n\n  Insertion of new category:  **AI Substitutive Use Category** \n\n   The Act of using one or more assets as input to a trained AI/ML model\n   (as opposed to the training of the model) which results in an output\n   which incorporates, summarizes, aggregates or reproduces the assets,\n   including stylistic elements thereof; provided, however that this\n   category does not cover the use of a lawfully acquired digital asset\n   where carried out directly by an end user (as opposed to a search\n   application or bot) as input to a trained model to create a summary\n   of such digital asset.\n\n   The use of assets for AI Substitutive Use is a proper subset of\n   Automated Processing usage [AIPREF-VOCAB].\n\n   This category is distinct from AI Training or Generative AI Training,\n   as it addresses uses that occur after a model has been trained,\n   during inference.  It is also distinct from Search, which covers uses\n   that direct users back to the original asset.  Substitutive Use, by\n   contrast, describes outputs that replace, reduce the utility of, or\n   make the source asset redundant to users by summarizing, reproducing,\n   or restyling its contents.\n\n   Consistent with that objective, this category would not apply where\n   end users are summarising digital assets which they have already\n   acquired, outside of the context of search or retrieving such assets\n   from online locations in summarized form.\n\n### Proposed Resolution\n\n_No response_",
       "createdAt": "2025-09-09T14:37:34Z",
-      "updatedAt": "2026-04-10T05:53:25Z",
+      "updatedAt": "2026-10-19T03:25:04Z",
       "closedAt": null,
       "comments": []
     },
@@ -2728,14 +2730,16 @@
       "state": "OPEN",
       "author": "Jo-Levy",
       "authorAssociation": "NONE",
-      "assignees": [],
+      "assignees": [
+        "martinthomson"
+      ],
       "labels": [
         "vocabulary",
         "terminology"
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nThe term \"digital asset\" is used throughout the Vocab document.  It is confusing and misleading.  A \"digital asset\" generally and commonly refers to cryptocurrency. The United States Internal Revenue Service (IRS) defines it as \"any digital representation of value on a cryptographically secured, distributed ledger (blockchain) or similar technology.\"  See https://www.irs.gov/filing/digital-assets#description.  \n It's not a term used in robots.txt or the Attach documet which uses the term \"content\" and \"content-usage.\" A preferable term would be \"Digital Content.\"\n\n### Proposed Resolution\n\nReplace \"digital asset\" or \"digital assets\" with \"digital content.\" Replace \"asset\" with \"digital content.\" Replace \"one or more assets\" with \"digital content.\" There are 23 instances of the term asset or assets throughout the document.  By using \"digital content\" there is also no new for a definition of the term \"Digital Asset.\"",
       "createdAt": "2025-09-22T07:27:50Z",
-      "updatedAt": "2026-08-22T06:54:33Z",
+      "updatedAt": "2026-10-19T04:55:47Z",
       "closedAt": null,
       "comments": [
         {
@@ -2950,7 +2954,7 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nI'm going to quote @coopdanger here, because her formulation of the issue is pretty good.  I will follow up with a nit on the details, but that doesn't diminish the value of the feedback:\n\n> This raises the question of whether the vocabulary is only meant to be used to express preferences about usage and not initial access regardless of the attachment mechanism. The very first sentence of the vocab doc uses the ambiguous term \u201cprocessing\u201d while most of the rest of the doc uses \u201cusage.\u201d If the intent is to define a vocabulary that only expresses preferences about an asset after the asset has been obtained (by whatever means), it needs an explicit scoping limitation to that effect. And then every attachment mechanism that gets defined in the IETF or elsewhere needs to reflect that.\n>\n> Making this distinction explicit might be a simple resolution to some of the concerns that have been raised about the automated processing category, because it would make clear that it\u2019s unnecessary to resolve the question of whether crawling/accessing a site is itself considered automated processing. No preferences are being expressed about access, other than insofar as sites would expect crawlers not to crawl their site if the site wishes to disallow all the uses of interest to the crawler. It would not resolve the concerns about behavior habituation and misinterpretation, though.\n>\n> Even with this distinction made explicit, there would still be the possibility of basically nonsensical use cases, e.g.:\n>\n> ```http\n> User-Agent: *\n> Content-Usage: /foo bots=n\n> ```\n> \n> Like what is the point of allowing crawling/access but then disallowing all usage? Maybe there is a use case I\u2019m missing.\n>\n> Note also that it may be entirely unrealistic to say that everywhere an attachment mechanism is specified, it has to preserve this distinction between access and usage. It\u2019s not like we can constrain mechanisms that get defined elsewhere.\n> \n> I\u2019ve never really been convinced of the need for the top-level category, but if we are going to have one we need to be clear about when it applies, and clarifying that it only applies after an asset has been obtained might help mitigate concerns about its breadth.\n\n### Proposed Resolution\n\nThere was some effort to make this distinction in editing, but it's clear that we need to be much clearer about it throughout.",
       "createdAt": "2025-09-23T03:45:57Z",
-      "updatedAt": "2026-04-15T13:37:53Z",
+      "updatedAt": "2026-10-20T03:43:03Z",
       "closedAt": null,
       "comments": [
         {
@@ -2973,6 +2977,20 @@
           "body": "I would say that preferences are for use and not for access.  ",
           "createdAt": "2026-04-15T13:37:53Z",
           "updatedAt": "2026-04-15T13:37:53Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "@martinthomson does this need more work in the drafts?",
+          "createdAt": "2026-10-19T04:56:18Z",
+          "updatedAt": "2026-10-19T04:56:18Z"
+        },
+        {
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "It might be good to discuss #252 at our upcoming interim meeting.  The discussion hasn't really progressed on from that point (which is where we were at the last in-person meeting).",
+          "createdAt": "2026-10-20T03:43:03Z",
+          "updatedAt": "2026-10-20T03:43:03Z"
         }
       ]
     },
@@ -3130,11 +3148,11 @@
       "labels": [
         "vocabulary",
         "use",
-        "needs proposal"
+        "ready to close"
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\n_From @chrisn in [email](https://mailarchive.ietf.org/arch/msg/ai-control/2ZbEx73js_cTQT8mI1Wy6_0ZC_s):_\n\nWithout a category that covers RAG and grounding usage, the vocabulary does not meet publisher needs. This need was raised at the outset of this work, in the IAB workshop in Washington DC in 2024, and included in the WG charter scope.\n\nIn addition to reducing web traffic to original content, such usage introduces the possibility of creating misleading or biased statements, an issue that impacts news publishers in particular, risking undermining their credibility. Research published by the BBC goes into this in more detail, demonstrating that AI-generated answers summarise and present content in a way that can introduce factual inaccuracies and biases that are not present in the original published content.\n\n### Proposed Resolution\n\n_No response_",
       "createdAt": "2025-09-28T08:57:47Z",
-      "updatedAt": "2026-05-14T13:28:52Z",
+      "updatedAt": "2026-10-19T03:24:01Z",
       "closedAt": null,
       "comments": [
         {
@@ -3749,7 +3767,7 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nIt is clear from the debate in this working group over the past year that there is significant confusion about what legal implications, if any, the work of this group is aiming to have on creators globally. \n\nFor example, the text of the current vocab draft ([draft-ietf-aipref-vocab-05](https://www.ietf.org/archive/id/draft-ietf-aipref-vocab-05.html)) says that it \u201cis intended to be used in jurisdictions where expressing preferences results in legal obligations \u2026 without prejudice to applicable laws \u2026,\u201d but it is completely unclear (and silent about) what jurisdictions, legal obligations, or laws that it is referring to, exactly. \n\nObviously, this working group, as part of a technical standards body, is not trying to hijack the role of a legislature or regulator.  It is not appropriate for us to design standards that may affect legal protections that millions of creators across the world have with relation to their countries\u2019 domestic copyright, contract, and other laws. \n\nTo make it clear that this working group is not aiming to override copyright owners\u2019 existing legal protections in their respective countries, or to override creators\u2019 existing terms of service, I propose to clarify the language in the introductory section.\n\nI think that clarity will also improve uptake of the standardized language, better fulfilling the objectives of this WG. \n\nThis issue applies to the vocabulary document (including some sections later on other than the introduction) and we should pursue similar clarification for the attachment document, to be clear that nothing in that document has any legal effect either - but I'll leave that for future issue submissions. \n\n### Proposed Resolution\n\nI propose starting by strengthening language in the introductory section.\n \nIt currently reads: \n\n>   The vocabulary is intended to be used in jurisdictions where\n>    expressing preferences results in legal obligations, as well as where\n>    there are no associated legal obligations.  In either case,\n>    expressing preferences is without prejudice to applicable laws,\n>    including the applicability of exceptions and limitations to\n>    Copyright.\n\nProposed edit: \n\n> For clarity, expressing preferences is without prejudice to applicable laws, \n> including the applicability of exceptions and limitations to copyright. \n> In addition to statutory or common law which may apply, the expression of preferences \n> is not intended to overwrite the legal preferences or restrictions that may be embodied\n>  in a website\u2019s Terms of Use (or comparable page), and in the event of any conflict\n>  between these preferences and a website\u2019s Terms of Use, the Terms of Use shall prevail as a matter of law.\n",
       "createdAt": "2026-01-28T03:26:50Z",
-      "updatedAt": "2026-08-17T06:59:18Z",
+      "updatedAt": "2026-10-19T05:00:59Z",
       "closedAt": null,
       "comments": [
         {
@@ -3772,6 +3790,13 @@
           "body": "I wanted to capture the conversation and feedback from Toronto regarding this issue, here's my proposed language:\n\n> For clarity, expressing preferences is without prejudice to applicable laws, including the applicability of exceptions and limitations to copyright. In addition to statutory or common law which may apply, the expression of preferences is not intended to overwrite agreements between parties.",
           "createdAt": "2026-06-12T18:11:59Z",
           "updatedAt": "2026-06-12T18:11:59Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "@mgendler any progress from your side -- e.g., a revised proposal, or further insights?",
+          "createdAt": "2026-10-19T05:00:59Z",
+          "updatedAt": "2026-10-19T05:00:59Z"
         }
       ]
     },
@@ -4029,11 +4054,12 @@
       "assignees": [],
       "labels": [
         "vocabulary",
-        "search"
+        "search",
+        "ready to close"
       ],
       "body": "Discussion in Toronto highlighted two competing positions with respect to this term:\n\n* The term is (for some) essential to narrow the scope of the exception.\n* The term is (for others) a little problematic in terms of how it aids clarity.\n\nThese were both recognized as reasonable positions, but those that expressed them acknowledged that they didn't have a strongly-held views in either direction and were not able to offer changes that would address their concern without strengthening the (recognized) objections of the opposite position.",
       "createdAt": "2026-04-16T13:44:47Z",
-      "updatedAt": "2026-08-24T14:39:43Z",
+      "updatedAt": "2026-10-19T04:59:36Z",
       "closedAt": null,
       "comments": [
         {
@@ -4070,6 +4096,13 @@
           "body": "> Search applications must not generate new material\n> using assets.\n> \n> In displaying titles or excerpts from assets,\n> changes to improve accessibility -\n> such as translation, transcription, or text-to-speech -\n> are included in this category.\n",
           "createdAt": "2026-08-24T14:39:43Z",
           "updatedAt": "2026-08-24T14:39:43Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "'substantive' no longer appears in the ED.",
+          "createdAt": "2026-10-19T04:59:32Z",
+          "updatedAt": "2026-10-19T04:59:32Z"
         }
       ]
     },
@@ -4321,14 +4354,22 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nFrom an email on the list:\n\n>Creating and storing a representation of an asset for later retrieval (an embedding, an index entry, or chunks of the asset in a RAG corpus, such as those used in spite of a publisher opt-out or  paywall) doesn't alter learned parameters and isn't the result of a request, so neither training nor inference reaches it. \n\n>Without it, an index is a black hole for preferences: once an asset is converted, the system never touches the original or its preferences again. It works from the embedding, the index entry, or the cached chunks, and no training or inference preference reaches those.\n\n>Attaching the preference to the stored copy, so it travels with the cache, would complement this and help systems honor preferences they already hold, but itt cannot replace the category: whether a copy may be created and kept at all is itself a preference, and there is nothing to attach it to until the copy exists.\n\nWe need something in the draft that addresses this concern\n\n### Proposed Resolution\n\n_No response_",
       "createdAt": "2026-08-26T11:07:11Z",
-      "updatedAt": "2026-08-27T13:21:25Z",
+      "updatedAt": "2026-10-20T03:46:32Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Just to record the current state of this issue.  @lrosenthol opened #240, which seeks to address this by effectively changing the definitions so that they target an assert (or artifact) and anything that is a derivation of that.  I've opened #253, which builds on #252, that notes that if assets are retained for later use, in any form, then preferences should be retained in some form so they can be understood and maybe applied.  Similar goals, different spelling.",
+          "createdAt": "2026-10-20T03:46:32Z",
+          "updatedAt": "2026-10-20T03:46:32Z"
+        }
+      ]
     },
     {
       "number": 247,
       "id": "I_kwDOOWk1-s8AAAABOWjVzg",
-      "title": "Rethink about moving the the \"Exemplary Serialization\" into a Data Model + exemplary serialization",
+      "title": "Moving the \"Exemplary Serialization\" into a Data Model + exemplary serialization",
       "url": "https://github.com/ietf-wg-aipref/drafts/issues/247",
       "state": "OPEN",
       "author": "lrosenthol",
@@ -4340,7 +4381,7 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nThere are a few mentions in the draft about the idea of a \"data model\", but there isn't any specific declaration/definition of such a thing.  \n\nAs part of the creation of a proposal around extensibility, the idea of having a formal data model would enable an easier set of points for extensibility.\n\n### Proposed Resolution\n\n_No response_",
       "createdAt": "2026-08-26T14:21:29Z",
-      "updatedAt": "2026-08-28T09:02:05Z",
+      "updatedAt": "2026-10-19T03:27:48Z",
       "closedAt": null,
       "comments": [
         {
@@ -14119,19 +14160,46 @@
       "labels": [],
       "body": "Any system of preferences like what we have naturally has no guards on assets being acquired.  The preferences that declaring parties express only apply to how the asset is subsequently used.\r\n\r\nThis attempts to document that more clearly.  It also highlights the need to retain preferences along with assets if their use does not immediately follow acquisition (which is likely to be the typical case, with immediate use being the abnormal case).\r\n\r\nThis doesn't address #246, but it creates a place where that might be more naturally addressed, by saying that intermediate forms or transformations of assets (such as embeddings created from assets) might also need to retain preferences if they might subsequently be used.\r\n\r\nCloses #167.\r\nCloses #193.",
       "createdAt": "2026-08-27T15:45:06Z",
-      "updatedAt": "2026-09-14T06:12:06Z",
+      "updatedAt": "2026-10-20T03:50:58Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "726979f1851a1071c370636bb27dfd6d50a461f3",
       "headRepository": "ietf-wg-aipref/drafts",
       "headRefName": "acquisition-use",
-      "headRefOid": "008bd890d5e00e60878118287b71ce0a6d32fccc",
+      "headRefOid": "f1ba8bed42948df43d85c7853c7b81aba56f8453",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
       "mergeCommit": null,
       "comments": [],
-      "reviews": []
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABTKBtuA",
+          "commit": {
+            "abbreviatedOid": "008bd89"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-10-20T03:49:42Z",
+          "updatedAt": "2026-10-20T03:50:46Z",
+          "comments": [
+            {
+              "originalPosition": 21,
+              "body": "```suggestion\nThe fetching or receiving of an asset\n```",
+              "createdAt": "2026-10-20T03:49:42Z",
+              "updatedAt": "2026-10-20T03:50:46Z"
+            },
+            {
+              "originalPosition": 23,
+              "body": "```suggestion\n```",
+              "createdAt": "2026-10-20T03:50:02Z",
+              "updatedAt": "2026-10-20T03:50:46Z"
+            }
+          ]
+        }
+      ]
     },
     {
       "number": 253,
@@ -14169,15 +14237,15 @@
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
-      "body": "An attempt at resolving #249.\n\nIn discussion with @kelleyk, we agreed that the scope should be limited to individual assets being provided to the model. The intent is to include:\n- The user provides the asset directly to the AI system (e.g., through file upload)\n- The user provides a URL to an asset that the AI system fetches\n- The AI system offers to the user to include a specific asset (a URL) as possible input, as part of the user's conversation with the AI system, and the user confirms providing that link as input (either by clicking the link or responding affirmatively in the conversation)\n\nand to exclude:\n- The user provides a description (e.g., the Google homepage as in the #249 example) that the AI system resolves to a URL\n- The user provides a description that potentially resolves to multiple assets (e.g., \"Wikipedia pages describing the countries of Europe\")",
+      "body": "An attempt at resolving #249.\r\n\r\nIn discussion with @kelleyk, we agreed that the scope should be limited to content that's retrieved by the AI system, e.g., via a RAG index or tool call, and not for individual assets being provided by the user to the AI system. The intent is to include:\r\n- The user provides a description (e.g., the Google homepage as in the #249 example) that the AI system resolves to a URL\r\n- The user provides a description that potentially resolves to multiple assets (e.g., \"Wikipedia pages describing the countries of Europe\")\r\n\r\nand to exclude:\r\n- The user provides the asset directly to the AI system (e.g., through file upload)\r\n- The user provides a URL to an asset that the AI system fetches\r\n- The AI system offers to the user to include a specific asset (a URL) as possible input, as part of the user's conversation with the AI system, and the user confirms providing that link as input (either by clicking the link or responding affirmatively in the conversation)\r\n",
       "createdAt": "2026-10-16T18:32:52Z",
-      "updatedAt": "2026-10-17T10:31:05Z",
+      "updatedAt": "2026-10-20T01:37:07Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "63cd65c4a49d2f5c67bcee25d1057b21d999714a",
       "headRepository": "chrisn/ietf-wg-aipref-drafts",
       "headRefName": "chrisn-ai-use",
-      "headRefOid": "730df7a6c24b4642c12f9be8abafc81991102f85",
+      "headRefOid": "1b7236ec2c033cbe0288673ea4ba719496d7f700",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
@@ -14189,8 +14257,55 @@
           "body": "thanks for this @chrisn and @kelleyk but it seems to me what you have done here is to turn the definition of the exception into the definition of the category itself (by dropping the \"not\" from the original text). As proposed by you `ai-use` would now cover only the user-directed cases which I do not think was your intent here. can you have another look?",
           "createdAt": "2026-10-17T10:31:04Z",
           "updatedAt": "2026-10-17T10:31:04Z"
+        },
+        {
+          "author": "chrisn",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Sorry, @paul2keller, you're right. I've just updated the PR and description.",
+          "createdAt": "2026-10-19T13:18:25Z",
+          "updatedAt": "2026-10-19T13:18:25Z"
+        },
+        {
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "This looks fine to me.  Your framing on the pull request is pretty helpful.  I'd like to raise the question of whether we include some of that explanatory text to help readers understand what we mean by \"express user intent\".\r\n\r\nThe words are nice, but they are words that can have a range of interpretations and the line you are attempting to draw follows a very careful line.  I'd be concerned that some of what you intend to include as in-scope would be something others might consider as out of scope.\r\n\r\nA prompt of \"what is the big news on the BBC site\" is, I think, intentionally not an exclusion.  My understanding is that your intent is that user confirmation (\"would you like me to use https://bbc.co.uk to answer?\") would activate that exclusion.  That's a reasonable line to draw, but quite a fine one.\r\n\r\nAdditional words are dangerous here, because they are harder to reach (apparent) consensus on, but I think this needs that.",
+          "createdAt": "2026-10-20T01:16:20Z",
+          "updatedAt": "2026-10-20T01:16:20Z"
+        },
+        {
+          "author": "kelleyk",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Very fair points, Martin---maybe we can use some of the live time we have\r\non Wednesday to get thoughts from the larger group?\r\n\r\nOn Mon, Oct 19, 2026 at 6:16\u202fPM Martin Thomson ***@***.***>\r\nwrote:\r\n\r\n> *martinthomson* left a comment (ietf-wg-aipref/drafts#254)\r\n> <https://github.com/ietf-wg-aipref/drafts/pull/254#issuecomment-6281028607>\r\n>\r\n> This looks fine to me. Your framing on the pull request is pretty helpful.\r\n> I'd like to raise the question of whether we include some of that\r\n> explanatory text to help readers understand what we mean by \"express user\r\n> intent\".\r\n>\r\n> The words are nice, but they are words that can have a range of\r\n> interpretations and the line you are attempting to draw follows a very\r\n> careful line. I'd be concerned that some of what you intend to include as\r\n> in-scope would be something others might consider as out of scope.\r\n>\r\n> A prompt of \"what is the big news on the BBC site\" is, I think,\r\n> intentionally not an exclusion. My understanding is that your intent is\r\n> that user confirmation (\"would you like me to use https://bbc.co.uk to\r\n> answer?\") would activate that exclusion. That's a reasonable line to draw,\r\n> but quite a fine one.\r\n>\r\n> Additional words are dangerous here, because they are harder to reach\r\n> (apparent) consensus on, but I think this needs that.\r\n>\r\n> \u2014\r\n> Reply to this email directly, view it on GitHub\r\n> <https://github.com/ietf-wg-aipref/drafts/pull/254?email_source=notifications&email_token=AAGH7BXVQ3VNZDB2FN2VIK35U24HVA5CNFSNUABFM5UWIORPF5TWS5BNNB2WEL2JONZXKZKDN5WW2ZLOOQXTMMRYGEYDEOBWGA32M4TFMFZW63VHNVSW45DJN5XKKZLWMVXHJLDGN5XXIZLSL5RWY2LDNM#issuecomment-6281028607>,\r\n> or unsubscribe\r\n> <https://github.com/notifications/unsubscribe-auth/AAGH7BTLYXSRITU33XZSVVL5U24HVAVCNFSNUABFKJSXA33TNF2G64TZHM4TMMZRHE3DIMJQHNEXG43VMU5TKOBYHEZDSNZTGQZKC5QC>\r\n> .\r\n> Triage notifications, keep track of coding agent tasks and review pull\r\n> requests on the go with GitHub Mobile for iOS\r\n> <https://github.com/notifications/mobile/ios/AAGH7BVR3OD2POQKUSI452L5U24HVA5CNFSNUABFM5UWIORPF5TWS5BNNB2WEL2JONZXKZKDN5WW2ZLOOQXTMMRYGEYDEOBWGA32M4TFMFZW63VHNVSW45DJN5XKKZLWMVXHJKTGN5XXIZLSL5UW64Y>\r\n> and Android\r\n> <https://github.com/notifications/mobile/android/AAGH7BSRAOLNZJND56MIVM35U24HVA5CNFSNUABFM5UWIORPF5TWS5BNNB2WEL2JONZXKZKDN5WW2ZLOOQXTMMRYGEYDEOBWGA32M4TFMFZW63VHNVSW45DJN5XKKZLWMVXHJLTGN5XXIZLSL5QW4ZDSN5UWI>.\r\n> Download it today!\r\n> You are receiving this because you were mentioned.Message ID:\r\n> ***@***.***>\r\n>\r\n",
+          "createdAt": "2026-10-20T01:37:06Z",
+          "updatedAt": "2026-10-20T01:37:06Z"
         }
       ],
+      "reviews": []
+    },
+    {
+      "number": 255,
+      "id": "PR_kwDOOWk1-s8AAAABJePeYg",
+      "title": "\"asset\" -> \"artifact\"",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/255",
+      "state": "OPEN",
+      "author": "martinthomson",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Closes #163.\r\n\r\nSee the discussion on #163.  No term here is perfect, but this one seems to be the most robust of those we've identified.  (More on this below.)\r\n\r\nI've held off on implementing this change, in the interests of keeping terminology stable while other parts of the work are still under active discussion, but I think we've matured most of those discussions to the point where this would be good to get done.\r\n\r\nThis boils down to a very simple search and replace for the word \"asset\", which we've used fairly consistently.\r\n\r\nWhere this gets interesting is in the attachment draft, which has to contend with HTTP terminology around \"content\" and \"resource\" (candidate alternatives that we rejected).  Correctness of that draft requires that those terms are used when referring to HTTP concepts, but the use of \"asset\" there was less consistent when it came to referring to the subject of a preference.  That required a little bit more care.\r\n\r\nIn terms of drawbacks:\r\n\r\n* \"asset\" is widely used in creative work, but it also (unnecessarily) implies ownership; we've had repeated problems in communicating the distinction between preferences and copyright law that this might make harder to explain\r\n\r\n* \"content\" is sometimes seen as a perjorative term for art, as it carries negative connotations that can imply low-quality junk; it is seen as being too general as well, potentially referring to the information that a file contains rather than the file itself; finally, it collides with the HTTP concept, which is a fairly good match, but an imperfect match would create confusion\r\n\r\n* \"resource\" carries connotations of a substance that exists to be exploited, which might be derogatory in the same way as \"content\"; it also refers to an HTTP concept\r\n\r\n* \"item\" and \"entity\" seem overly generic, such that they could refer to art, a person, or an organization equally; either would need further qualification\r\n\r\n* compound terms are possible.\r\n\r\nTo be clear, \"artifact\" isn't perfect either - it can refer to a glitch - but no major problems have been identified.  Hence this change.",
+      "createdAt": "2026-10-20T03:39:58Z",
+      "updatedAt": "2026-10-20T03:46:51Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "63cd65c4a49d2f5c67bcee25d1057b21d999714a",
+      "headRepository": "ietf-wg-aipref/drafts",
+      "headRefName": "artifact",
+      "headRefOid": "5fc73402531ca64dbd6b17c07b5aaa69d4e94dcf",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
       "reviews": []
     }
   ]
