@@ -248,9 +248,6 @@ along with that model.
 
 ## Acquisition of Assets and Preferences {#acquisition-and-use}
 
-The fetching or receiving an asset
-is distinct from how that asset is subsequently used.
-
 Usage preferences do not apply
 to how assets are obtained.
 They only apply to how those assets are subsequently used;
