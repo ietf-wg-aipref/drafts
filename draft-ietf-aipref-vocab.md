@@ -105,12 +105,12 @@ Other means of association might be defined separately in the future.
 This document uses the following terms:
 
 {: newline="true" spacing="compact"}
-Asset:
+Artifact:
 : A digital file or stream of data, usually with associated metadata.
   {: anchor="dfn-artifact"}
 
 Declaring party:
-: The entity that expresses a preference with regards to an Asset.
+: The entity that expresses a preference with regards to an Artifact.
   {: anchor="dfn-decl-party"}
 
 Generative AI model:
