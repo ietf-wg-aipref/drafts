@@ -115,10 +115,10 @@ Declaring party:
 
 Generative AI model:
 : An AI model that is used
-  to generate synthetic content
+  to generate content
   in one or more modalities.
   Alternatively, an AI model that is made available for use
-  to generate synthetic content
+  to generate content
   in one or more modalities.
   This definition does not include a model that is used,
   or made available for use,
