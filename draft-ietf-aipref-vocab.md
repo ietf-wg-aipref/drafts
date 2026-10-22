@@ -59,9 +59,9 @@ informative:
 --- abstract
 
 This document defines a vocabulary for expressing preferences
-regarding how digital assets are used by automated processing systems.
+regarding how digital artifacts are used by automated processing systems.
 This vocabulary allows for the declaration
-of restrictions or permissions for use of digital assets by such systems.
+of restrictions or permissions for use of digital artifacts by such systems.
 
 --- note_Note_to_Readers
 
@@ -72,7 +72,7 @@ As detailed below, this is a working document. Its contents DO NOT REFLECT CONSE
 # Introduction
 
 This document defines a vocabulary of preferences
-regarding how automated systems process digital assets --
+regarding how automated systems process digital artifacts --
 in particular, the training and use of AI models.
 This vocabulary can be used to describe
 the types of uses that a declaring party may wish to explicitly restrict or allow.
@@ -89,7 +89,7 @@ including the applicability of exceptions and limitations to copyright.
 and {{format}} describes a way to serialize preferences into a string.
 {{usage}} describes a process for determining the preference for a category of use.
 
-{{ATTACH}} defines mechanisms to associate preferences with assets.
+{{ATTACH}} defines mechanisms to associate preferences with artifacts.
 Other means of association might be defined separately in the future.
 
 
@@ -97,20 +97,20 @@ Other means of association might be defined separately in the future.
 
 {::boilerplate bcp14-tagged}
 
-*[asset]: #dfn-asset
-*[assets]: #dfn-asset
+*[artifact]: #dfn-artifact
+*[artifacts]: #dfn-artifact
 *[declaring party]: #dfn-decl-party
 *[generative AI model]: #dfn-genai
 
 This document uses the following terms:
 
 {: newline="true" spacing="compact"}
-Asset:
+Artifact:
 : A digital file or stream of data, usually with associated metadata.
-  {: anchor="dfn-asset"}
+  {: anchor="dfn-artifact"}
 
 Declaring party:
-: The entity that expresses a preference with regards to an Asset.
+: The entity that expresses a preference with regards to an Artifact.
   {: anchor="dfn-decl-party"}
 
 Generative AI model:
@@ -136,10 +136,10 @@ Generative AI model:
     NOTE: This section does not yet have consensus; see "Note to Readers" above.
 
 The vocabulary is a set of categories,
-each of which is defined to cover a class of usage for assets.
+each of which is defined to cover a class of usage for artifacts.
 {{vocab}} defines the core set of usage categories in detail.
 
-A statement of preference -- or usage preference -- is made about an asset.
+A statement of preference -- or usage preference -- is made about an artifact.
 A statement of preference follows a simple data model where a preference
 is assigned to each of the categories of use in the vocabulary.
 A preference is either to allow or disallow
@@ -158,7 +158,7 @@ all usage categories are assigned a preference value of "unknown".
 The process for consulting a statement of preference is defined in {{usage}}.
 
 Different declaring parties might each make their own statement of preference
-regarding a particular asset.
+regarding a particular artifact.
 The process for managing multiple statements of preference is defined in {{combine}}.
 
 An exemplary syntax for statements of preference is defined in {{format}}.
@@ -167,16 +167,16 @@ An exemplary syntax for statements of preference is defined in {{format}}.
 ## Understanding Preferences {#understanding}
 
 This document and {{ATTACH}}
-describe how statements of preference are associated with assets.
+describe how statements of preference are associated with artifacts.
 
 The goal of these specifications is to ensure
-that the recipient of an asset knows
-what preferences have been associated with the asset.
+that the recipient of an artifact knows
+what preferences have been associated with the artifact.
 What a recipient then does with that information depends on many factors;
 see {{applicability}}.
 
 There are also some caveats that need to be considered
-as it relates to understanding what the preferences for a given asset are
+as it relates to understanding what the preferences for a given artifact are
 (as opposed to what actions might then follow).
 
 A recipient can only apply preferences it understands.
@@ -189,7 +189,7 @@ A recipient will only process preferences expressed
 through methods it has implemented.
 Those methods might be limited to those in {{ATTACH}}
 or it could also include other methods (see {{Section 1.3 of ATTACH}}).
-If a preference is associated with an asset
+If a preference is associated with an artifact
 using a method the recipient does not understand or recognize,
 the recipient will remain ignorant of that preference.
 
@@ -201,7 +201,7 @@ For example, preferences in robots.txt (see {{Section 3 of ATTACH}})
 only implies that a server
 is the source of those preferences.
 
-A method of associating preferences with assets
+A method of associating preferences with artifacts
 could explicitly define the source of the preferences,
 which might involve authentication.
 Otherwise, no assumptions can be made about the origin of preferences.
@@ -239,14 +239,14 @@ scope of this specification.
     NOTE: [Issue 245](https://github.com/ietf-wg-aipref/drafts/issues/245)
     is open to track whether this section is included or not.
 
-Compliance with preferences regarding the use of assets
+Compliance with preferences regarding the use of artifacts
 in training of AI models
 also includes conveying the preferences
-associated with those assets
+associated with those artifacts
 along with that model when it is distributed.
 
 This requirement can be met by providing information
-on the full range of preferences that were associated with assets
+on the full range of preferences that were associated with artifacts
 that were included in the training inputs
 or by indicating what sorts of uses are consistent with those preferences.
 
@@ -260,13 +260,13 @@ or by indicating what sorts of uses are consistent with those preferences.
 This section defines the categories of use in the vocabulary.
 
 These categories describe concrete, observable outcomes that depend on the use
-of assets.  The definitions seek to avoid describing internal details of
+of artifacts.  The definitions seek to avoid describing internal details of
 implementations or their architecture.
 
 
 ## AI Training {#train-ai}
 
-Using an asset to modify the learned parameters
+Using an artifact to modify the learned parameters
 of a generative AI model.
 
 The training of models that are used
@@ -277,15 +277,15 @@ even if the model is capable of generative tasks.
 
 ## AI Use {#ai-use}
 
-Using an asset as input to a generative AI model,
-where the asset is not directly provided by the user.
+Using an artifact as input to a generative AI model,
+where the artifact is not directly provided by the user.
 
 [^249]
 
 [^249]:
     NOTE: [Issue 249](https://github.com/ietf-wg-aipref/drafts/issues/249)
     addresses the question of whether "direct"
-    includes referencing assets, by URL or other means.
+    includes referencing artifacts, by URL or other means.
 
 This does not include any use that is included
 in the AI Training usage category ({{train-ai}}).
@@ -293,38 +293,38 @@ in the AI Training usage category ({{train-ai}}).
 
 ## Search {#search}
 
-Using an asset in an application
+Using an artifact in an application
 where the primary purpose of the application
-is to select assets
-and direct users to the location of those assets.
+is to select artifacts
+and direct users to the location of those artifacts.
 
 This category of use only applies under the following conditions:
 
-* Where the presentation of an asset in search output --
+* Where the presentation of an artifact in search output --
   if selected for presentation --
   includes a direct reference or link
-  to the original location from which the asset was retrieved.
+  to the original location from which the artifact was retrieved.
 
-* When excerpts from the asset are displayed
+* When excerpts from the artifact are displayed
   they serve to assist users
   in evaluating the relevance of the result.
 
-This category does not include the use of assets
+This category does not include the use of artifacts
 to generate summaries.
 
-Displaying titles or excerpts from assets,
+Displaying titles or excerpts from artifacts,
 changes to improve accessibility,
 such as translation, transcription, or text-to-speech,
 are included in this category.
 
 A preference to allow this category of use
 includes allowing any processing internal to the application
-that is performed on assets.
+that is performed on artifacts.
 Allowing this processing is conditional on the outputs of any processing
 being exclusively used by the search application
 according to the other restrictions in this section.
 Allowed processing therefore includes the training of AI models
-using the assets
+using the artifacts
 and the use of those models
 provided that the resulting models
 and their outputs
@@ -413,8 +413,8 @@ might receive more specific instructions in two ways:
   statements of preference.
 
 For instance, a statement of preferences might indicate a preference
-to disallow a category of use for an asset.
-If arrangements, such as legal agreements, exist that explicitly permit the use of that asset,
+to disallow a category of use for an artifact.
+If arrangements, such as legal agreements, exist that explicitly permit the use of that artifact,
 those arrangements likely apply despite the existence of machine-readable statements of preference,
 unless the terms of the arrangement explicitly say otherwise.
 

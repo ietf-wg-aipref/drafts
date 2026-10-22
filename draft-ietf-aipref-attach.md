@@ -74,17 +74,17 @@ The automated consumption of content by crawlers and other machines
 has increased significantly in recent years.
 This is partly due to the training of machine-learning models.
 
-Content creators and other stakeholders,
+Artists, authors, and other stakeholders,
 such as distributors,
 might wish to express a preference
 regarding the types of usage they consider acceptable.
-Entities that might use that content
+Entities that might use an artifact
 need those preferences to be stated
 in a way that is easily consumed
 by an automated system.
 
 This document describes two mechanisms
-for associating preferences with content:
+for associating preferences with artifacts:
 
 * A Content-Usage header field
   for HTTP {{HTTP}};
@@ -94,9 +94,9 @@ for associating preferences with content:
   (colloquially known as "robots.txt") {{ROBOTS}};
   see {{robots}}.
 
-For automated systems that use HTTP to gather content,
+For automated systems that use HTTP to gather artifacts,
 these allow for the automated gathering of preferences
-in the same way that content is obtained.
+in the same way that the artifact is obtained.
 
 
 ## Statements of Preference
@@ -112,13 +112,13 @@ The preference vocabulary defines:
   for use in a protocol.
 
 This document only defines how the strings or byte sequences are conveyed
-so that statements of preference can be associated with content.
+so that statements of preference can be associated with artifacts.
 
 
 ## Examples
 
-A server that provides content could signal preferences
-about how that content is used by the Content-Usage header field
+A server that provides an artifact could signal preferences
+about how that artifact is used by the Content-Usage header field
 in the HTTP response:
 
 ~~~http-message
@@ -127,7 +127,7 @@ Date: Wed, 23 Apr 2025 04:48:02 GMT
 Content-Type: text/plain
 Content-Usage: train-ai=n
 
-This is some content.
+This is an artifact.
 ~~~
 
 Alternatively, or additionally,
@@ -143,13 +143,14 @@ Content-Usage: train-ai=n
 ## Other Mechanisms
 
 This document provides two general purpose methods
-for associating statements of preference with assets
+for associating statements of preference with artifacts
 that are transferred using HTTP.
 
-The mechanisms in this document can be applied to any content type,
-provided that the content is obtained using HTTP (and maybe FTP).
+The mechanisms in this document can be applied to an artifact
+of any content type,
+provided that the artifact is obtained using HTTP (and maybe FTP).
 Future work might define how preferences might be indicated
-for alternative content distribution or acquisition methods,
+for alternative distribution or acquisition methods,
 such as email.
 
 The attachment mechanism in this document
@@ -159,10 +160,10 @@ are intended to be complementary with other mechanisms.
 ### Embedded Preferences
 
 Embedding preferences is expected to be an effective means
-of associating preferences with assets,
-because it ensures that metadata travels with the asset.
+of associating preferences with artifacts,
+because it ensures that metadata travels with the artifact.
 This document, however, does not define any specific means of embedding preferences
-in content.
+in content types.
 
 The main challenge with embedding preferences is that
 a different method might be needed for each content type.
@@ -170,7 +171,7 @@ That is,
 a different storage or serialization model of conveying the preferences
 might need to be defined for each format
 whether it represent audio, documents, images, video,
-or other types of content.
+or other types of artifact.
 Furthermore,
 some content types,
 such as plain text (`text/plain` and many other purely textual formats),
@@ -180,7 +181,7 @@ offer no standardized and interoperable means of embedding metadata.
 ### Registry-Based Preferences
 
 A preferences registry is a database that stores usage preference statements
-associated with both content identifiers
+associated with both artifact identifiers
 and a means of identifying the declaring party.
 Registry-based approaches might be applicable in certain contexts,
 particularly where embedding is impractical or unavailable.
@@ -200,7 +201,7 @@ as defined in {{Section 3.2 of FIELDS}}.
 This field follows the vocabulary and processing rules in {{VOCAB}}.
 
 This field indicates usage preferences
-regarding the content of the HTTP message.
+regarding the artifact that is the content of the HTTP message.
 That is, the field is representation metadata ({{Section 8.2 of HTTP}})
 that applies the representation data ({{Section 8.1 of HTTP}}).
 Informally, usage preferences apply to the content of a message,
@@ -209,7 +210,7 @@ not the resource.
 Clients can use any preference associated with a request
 to guide their usage of the content of the request.
 This allows servers to express usage preferences
-for assets they serve.
+for artifacts they serve.
 
 Servers can use any preferences associated with a request
 if the content of that request
@@ -386,11 +387,11 @@ Content-Usage: train-ai=y
 {: #f-ex-robots title="Example robots.txt file"}
 
 A crawler that identifies as "ExampleBot" uses the second group.
-That crawler would be able to obtain all content
+That crawler would be able to fetch artifacts from all resources
 and apply usage preferences of "ai=y" as defined in {{VOCAB}}.
 
 All other crawlers use the first group.
-This allows crawling of all content other than resources under "/never/".
+This allows crawling of all resources other than those under "/never/".
 Of those resources,
 those under "/ai-ok/" have an associated usage preference of "train-ai=y"
 and all other resources have a usage preference of "train-ai=n".
