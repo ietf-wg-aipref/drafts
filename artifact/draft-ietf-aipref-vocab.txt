@@ -5,8 +5,8 @@
 AI Preferences                                                 P. Keller
 Internet-Draft                                               Open Future
 Intended status: Standards Track                         M. Thomson, Ed.
-Expires: 23 April 2027                                           Mozilla
-                                                         20 October 2026
+Expires: 25 April 2027                                           Mozilla
+                                                         22 October 2026
 
 
             A Vocabulary For Expressing AI Usage Preferences
@@ -59,7 +59,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 23 April 2027.
+   This Internet-Draft will expire on 25 April 2027.
 
 Copyright Notice
 
@@ -144,11 +144,12 @@ Table of Contents
 
    This document uses the following terms:
 
-   Asset:
+   Artifact:
       A digital file or stream of data, usually with associated
       metadata.
    Declaring party:
-      The entity that expresses a preference with regards to an Asset.
+      The entity that expresses a preference with regards to an
+      Artifact.
    Generative AI model:
       An AI model that is used to generate synthetic content in one or
       more modalities.  Alternatively, an AI model that is made
@@ -620,7 +621,7 @@ Table of Contents
 
    [ATTACH]   Illyes, G. and M. Thomson, Ed., "A Vocabulary For
               Expressing AI Usage Preferences", Work in Progress,
-              Internet-Draft, draft-ietf-aipref-attach, 20 October 2026,
+              Internet-Draft, draft-ietf-aipref-attach, 22 October 2026,
               <https://datatracker.ietf.org/doc/html/draft-ietf-aipref-
               attach>.
 
