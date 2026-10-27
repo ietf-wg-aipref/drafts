@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-10-22T04:12:54.143953+00:00",
+  "timestamp": "2026-10-27T04:33:10.920561+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -14384,7 +14384,7 @@
       "labels": [],
       "body": "An attempt at resolving #249.\r\n\r\nIn discussion with @kelleyk, we agreed that the scope should be limited to content that's retrieved by the AI system, e.g., via a RAG index or tool call, and not for individual assets being provided by the user to the AI system. The intent is to include:\r\n- The user provides a description (e.g., the Google homepage as in the #249 example) that the AI system resolves to a URL\r\n- The user provides a description that potentially resolves to multiple assets (e.g., \"Wikipedia pages describing the countries of Europe\")\r\n\r\nand to exclude:\r\n- The user provides the asset directly to the AI system (e.g., through file upload)\r\n- The user provides a URL to an asset that the AI system fetches\r\n- The AI system offers to the user to include a specific asset (a URL) as possible input, as part of the user's conversation with the AI system, and the user confirms providing that link as input (either by clicking the link or responding affirmatively in the conversation)\r\n",
       "createdAt": "2026-10-16T18:32:52Z",
-      "updatedAt": "2026-10-21T19:50:06Z",
+      "updatedAt": "2026-10-25T05:34:01Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "63cd65c4a49d2f5c67bcee25d1057b21d999714a",
@@ -14430,6 +14430,13 @@
           "body": "Yes, it's a pretty fine line, I'm not sure now that the distinction holds up in the case of agentic access, as the intent here is that there's an actual human interaction.",
           "createdAt": "2026-10-21T19:49:53Z",
           "updatedAt": "2026-10-21T19:50:06Z"
+        },
+        {
+          "author": "frmoretto",
+          "authorAssociation": "NONE",
+          "body": "One data point for the agentic case @chrisn raises.\r\nDisclosure: my small publishing house reserves exactly this line: an agent acting for someone who holds a lawful copy may read, quote and summarise; training is reserved (TDMRep + RSL, prose at https://affero.it/tdm, since neither vocabulary can say it).\r\n\r\nThe hard case is delegation: a reader asks their agent for help with a task, and the agent picks a book the reader already owns. The intent is about the task, not that specific asset. Does that fall inside ai-use under the revised text?",
+          "createdAt": "2026-10-25T05:34:01Z",
+          "updatedAt": "2026-10-25T05:34:01Z"
         }
       ],
       "reviews": []
