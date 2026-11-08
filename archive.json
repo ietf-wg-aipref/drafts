@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-11-05T06:05:27.225443+00:00",
+  "timestamp": "2026-11-08T05:33:20.895905+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -14359,7 +14359,7 @@
       "labels": [],
       "body": "This is an alternative spelling to #240 that builds on #252.\r\n\r\nGiven that #252 adds text that says something about retaining preferences obtained during acquisition until you can make a decision about them at the point of use, the same thing applies when the asset gets transformed along the way.\r\n\r\nCloses #246.",
       "createdAt": "2026-08-27T16:01:56Z",
-      "updatedAt": "2026-10-22T03:39:21Z",
+      "updatedAt": "2026-11-07T03:24:17Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "acquisition-use",
       "baseRefOid": "008bd890d5e00e60878118287b71ce0a6d32fccc",
@@ -14384,6 +14384,13 @@
           "body": "@bquinn, embeddings were one motivation for this, but there are other transformations that people are concerned about.  One thing we see is services that transform HTML into Markdown for model consumption.  That is also clearly in scope.\r\n\r\nThe operative text is \"transformed into an alternative format\", which I think covers a lot of things.  That is about as generic as I can manage without creating a wide net.\r\n\r\nSome of this is going to have to depend on good intentions more than a strict interpretation of text.  Take a \"transformation\" that is not one-to-one in the way you might naturally assume.  A service could take hundreds of resources, categorize them, then produce artifacts that are representations or aggregations across each category.  That could involve some AI use or training in practice, which would activate preferences, but it doesn't have to.  It's possible to imagine processes that don't. \r\n\r\nThose sorts of examples don't necessarily help, because it then becomes a game of trying to find language that encompasses an increasingly nebulous space of usage.  If you have something better to suggest, please do so, my attempt originated in the spare moments during the last London meeting, spiced by jet lag.  I'm certain that we can do better.  Or, if you think this needs further chasing down, please open an issue.",
           "createdAt": "2026-10-22T03:39:21Z",
           "updatedAt": "2026-10-22T03:39:21Z"
+        },
+        {
+          "author": "Farzaneh-Unicode",
+          "authorAssociation": "NONE",
+          "body": "Since the beginning of this AI-pref group some of us have had concerns with \"traveling\" preferences. Is it possible to change the preference downstream if you make it sticky? What if a preference changes ... from yes to train AI to no to trainAI. Maybe 5.1 is trying to resolve that by saying most restrictive should be applied (if I am reading this right) but then what if it's sticky and the source has changed its mind from no to yes, does the old no beat the new yes? Maybe Martin's \"availability\" solution instead of \"attach\" make things a bit clearer. What does the open source/open weight community think about this? ",
+          "createdAt": "2026-11-07T03:24:17Z",
+          "updatedAt": "2026-11-07T03:24:17Z"
         }
       ],
       "reviews": [
@@ -14557,7 +14564,7 @@
       "labels": [],
       "body": "There are several views on this one, but it doesn't seem to have enough support for retaining it.\n\nCloses #217.",
       "createdAt": "2026-10-21T20:35:46Z",
-      "updatedAt": "2026-10-21T20:35:46Z",
+      "updatedAt": "2026-11-05T10:35:35Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "63cd65c4a49d2f5c67bcee25d1057b21d999714a",
@@ -14568,7 +14575,15 @@
       "mergedAt": null,
       "mergedBy": null,
       "mergeCommit": null,
-      "comments": [],
+      "comments": [
+        {
+          "author": "bquinn",
+          "authorAssociation": "NONE",
+          "body": "I'm in favour of removing the word \"synthetic\" - I think \"use[d] to generate content in one or more modalities\" covers the same ground so having both \"synthetic\" and \"generate content\" could introduce potential confusion and ambiguity.",
+          "createdAt": "2026-11-05T10:35:35Z",
+          "updatedAt": "2026-11-05T10:35:35Z"
+        }
+      ],
       "reviews": []
     }
   ]
