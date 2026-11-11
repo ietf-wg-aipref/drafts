@@ -277,8 +277,24 @@ even if the model is capable of generative tasks.
 
 ## AI Use {#ai-use}
 
+*[user-chosen input]: #dfn-user-input
+
 Using an asset as input to a generative AI model,
-where the asset is not directly provided by the user.
+other than user-chosen input.
+
+<iref primary="true" item="user-chosen input"/>
+User-chosen input is defined as any input to a generative AI model
+that consists of either:
+{: anchor="dfn-user-input"}
+
+1. an asset that the user provides directly to the model
+   (e.g., via file upload),
+
+2. a URL that the user provides directly to the model, or
+
+3. a URL that the model suggests to the user
+   and that the user chooses to select as input to the model.
+
 
 [^249]
 
