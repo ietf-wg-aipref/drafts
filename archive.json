@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-11-08T05:33:20.895905+00:00",
+  "timestamp": "2026-11-12T06:47:08.478300+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -4488,9 +4488,17 @@
       ],
       "body": "Search currently mentions accessibility:\n\n> Displaying titles or excerpts from assets, changes to improve accessibility, such as translation, transcription, or text-to-speech, are included in this category.\n\nThis has the effect of allowing such uses in search applications when `search=y`, regardless of other values.\n\nAs discussed in the October interim (and raised previously), we do not address accessibility elsewhere:\n\n* Whether there should be an accommodation for accessibility in `train-ai` regardless of the value of `search`\n* Whether `ai-use` should also have an accommodation for such uses\n* What form the accommodation should take (global, term-specific, carve-out, other language)\n\nSee also [draft use cases](https://mailarchive.ietf.org/arch/msg/ai-control/ZmSunpKekekLfCJfCyF2Ujx-IBU).",
       "createdAt": "2026-11-05T05:48:34Z",
-      "updatedAt": "2026-11-05T05:48:50Z",
+      "updatedAt": "2026-11-11T10:27:34Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "chrisn",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Uses of content for accessibility have existing legal protections, and these vary across jurisdictions. Questions regarding AI usage for accessibility are best left to policymakers, and IETF shouldn't attempt to standardise. So, no, there should be no additional accommodations. The search category already goes too far (in protecting the interests of search engines), in my view.",
+          "createdAt": "2026-11-11T10:27:09Z",
+          "updatedAt": "2026-11-11T10:27:34Z"
+        }
+      ]
     }
   ],
   "pulls": [
@@ -14448,7 +14456,7 @@
       "labels": [],
       "body": "An attempt at resolving #249.\r\n\r\nIn discussion with @kelleyk, we agreed that the scope should be limited to content that's retrieved by the AI system, e.g., via a RAG index or tool call, and not for individual assets being provided by the user to the AI system. The intent is to include:\r\n- The user provides a description (e.g., the Google homepage as in the #249 example) that the AI system resolves to a URL\r\n- The user provides a description that potentially resolves to multiple assets (e.g., \"Wikipedia pages describing the countries of Europe\")\r\n\r\nand to exclude:\r\n- The user provides the asset directly to the AI system (e.g., through file upload)\r\n- The user provides a URL to an asset that the AI system fetches\r\n- The AI system offers to the user to include a specific asset (a URL) as possible input, as part of the user's conversation with the AI system, and the user confirms providing that link as input (either by clicking the link or responding affirmatively in the conversation)\r\n",
       "createdAt": "2026-10-16T18:32:52Z",
-      "updatedAt": "2026-10-25T05:34:01Z",
+      "updatedAt": "2026-11-12T01:35:40Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "63cd65c4a49d2f5c67bcee25d1057b21d999714a",
@@ -14501,6 +14509,69 @@
           "body": "One data point for the agentic case @chrisn raises.\r\nDisclosure: my small publishing house reserves exactly this line: an agent acting for someone who holds a lawful copy may read, quote and summarise; training is reserved (TDMRep + RSL, prose at https://affero.it/tdm, since neither vocabulary can say it).\r\n\r\nThe hard case is delegation: a reader asks their agent for help with a task, and the agent picks a book the reader already owns. The intent is about the task, not that specific asset. Does that fall inside ai-use under the revised text?",
           "createdAt": "2026-10-25T05:34:01Z",
           "updatedAt": "2026-10-25T05:34:01Z"
+        },
+        {
+          "author": "coopdanger",
+          "authorAssociation": "NONE",
+          "body": "Here is my suggestion for defining the exception and then using the defined exception term in the definition of AI use:\r\n\r\n> User-chosen input: An input to a generative AI model that consists of (1) an asset that the user provides directly to the model (e.g., via file upload), (2) a URL that the user provides directly to the model, or (3) a URL that the model suggests to the user and that the user chooses to select as input to the model.\r\n\r\n> AI Use: Using any asset or URL as input to a generative AI model, other than user-chosen input. This does not include any use that is used in the AI Training category.\r\n\r\n\r\nThis eliminates the vague/undefined notion of what it means for the user to \"interact with\" an asset, and it also covers URLs (which I do not believe fall under the definition of \"asset\" in the document). \r\n\r\nEven in this formulation, I think these definitions (and other text in the document) suffer for not having a usable definition of \"AI system.\" Increasingly we have software built around the models, and a reader could question what it means to provide something \"directly\" to a model in light of that.\r\n\r\nBoth the proposal in the PR and my suggestions above are ambiguous about what happens when the user has an agent acting on its behalf (i.e., the user's agent uploads an asset, inputs a URL, clicks a provided URL, etc.). This is a meta-issue about what we mean when we say \"the user\" does <XYZ> that needs to be clarified in the document.",
+          "createdAt": "2026-11-11T03:02:45Z",
+          "updatedAt": "2026-11-11T03:03:24Z"
+        },
+        {
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Thanks for the suggestion @coopdanger, it's helpful.  I've turned this into a pull request.  In the process, I made a few small adjustments, but I wasn't sure about the phrasing around URLs.  I've commented on #258 with more details on the concerns and some suggested text (which I'm not 100% happy with).",
+          "createdAt": "2026-11-11T04:31:13Z",
+          "updatedAt": "2026-11-11T04:31:13Z"
+        },
+        {
+          "author": "Farzaneh-Unicode",
+          "authorAssociation": "NONE",
+          "body": "I wouldn\u2019t go down the rabbit hole of defining what a user is. But I think this clarification is useful. I\u2019d get rid of \u201cdirectly\u201d and add \u201cchosen\u201d or say \u201cdirected\u201d. Because user might not directly provide it but use a software. ",
+          "createdAt": "2026-11-11T05:02:21Z",
+          "updatedAt": "2026-11-11T05:02:21Z"
+        },
+        {
+          "author": "natehake",
+          "authorAssociation": "NONE",
+          "body": "Why do we have a \"User-chosen input\" exception at all? \r\n\r\nI find it profoundly odd that we are debating an exception for which no one can publicly articulate a rationale. \r\n\r\nAs a reminder, the way we got here was that I had proposed a compromise that would have had two halfs (system and user) that were both subjection to an expression of preference. And then suddenly half of my proposal just got rug pulled from under my feet, and now we're left with an \"exception\" that no one has actually argued a reason for. I just think if we are going to carve out a particular category of use that we think should always be non-consensual, then we should be able to articulate the \"why\" of having that exception. ",
+          "createdAt": "2026-11-11T09:06:24Z",
+          "updatedAt": "2026-11-11T09:06:24Z"
+        },
+        {
+          "author": "chrisn",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Based on feedback from the last interim meeting, we need to remove these use cases from the definition:\r\n\r\n* The user provides a URL to an asset that the AI system fetches\r\n* The AI system offers to the user to include a specific asset (a URL) as possible input\r\n\r\nas they enable substitutive use of content.\r\n\r\nI also tend to agree with Nate that there shouldn't be an exception for users providing assets directly to the AI system. Such a category wouldn't satisfy Leonard's use case of an AI system that wants to respect a creator-provided \"no AI-use\" signal.\r\n\r\nIf such an exception needs to exist, there then needs to be an additional category covering directly providing assets.",
+          "createdAt": "2026-11-11T09:56:20Z",
+          "updatedAt": "2026-11-11T09:56:20Z"
+        },
+        {
+          "author": "BradSilver99",
+          "authorAssociation": "NONE",
+          "body": "With appreciation for Alissa's proposal, I agree with Nate and Chris about the lack of sufficient rationale for a user-directed exception.  User directed engagement with an asset can take a variety of (evolving) forms, many of which result in the user engaging with the AI-generated outputs, as a substitute for the original source.  The publisher should be entitled to express a (mere) preference as to whether they want that to occur or not.  \r\n\r\nThe draft vocabulary doc already provides for a universal, flexible proviso in Section 3.2 that acknowledges the various factors which could dictate whether a preference will be followed or not.  AI enabled, user-directed uses are at the center of what steers consumers away from engaging with publishers' content.  This is not an edge case for why an AI-use preference is desirable, it is THE case. ",
+          "createdAt": "2026-11-11T22:27:14Z",
+          "updatedAt": "2026-11-11T22:27:14Z"
+        },
+        {
+          "author": "coopdanger",
+          "authorAssociation": "NONE",
+          "body": "@Farzaneh-Unicode wrote:\r\n\r\n> I wouldn\u2019t go down the rabbit hole of defining what a user is. \r\n\r\nI think if the document is silent about what it means for the user to provide something, it creates a lot of ambiguity about whether the preference applies. In other words, if I can have a preference apply or not apply simply by having my agent provide the asset, that feels like a big loophole in the application of preferences.",
+          "createdAt": "2026-11-12T01:06:55Z",
+          "updatedAt": "2026-11-12T01:06:55Z"
+        },
+        {
+          "author": "coopdanger",
+          "authorAssociation": "NONE",
+          "body": "@chrisn wrote:\r\n\r\n> I also tend to agree with Nate that there shouldn't be an exception for users providing assets directly to the AI system. Such a category wouldn't satisfy Leonard's use case of an AI system that wants to respect a creator-provided \"no AI-use\" signal.\r\n> \r\n> If such an exception needs to exist, there then needs to be an additional category covering directly providing assets.\r\n\r\nI was going off of what you wrote when you opened this issue:\r\n\r\n> we agreed that the scope should be limited to content that's retrieved by the AI system, e.g., via a RAG index or tool call, and not for individual assets being provided by the user to the AI system.",
+          "createdAt": "2026-11-12T01:26:00Z",
+          "updatedAt": "2026-11-12T01:26:00Z"
+        },
+        {
+          "author": "coopdanger",
+          "authorAssociation": "NONE",
+          "body": "@BradSilver99 wrote:\r\n\r\n> The draft vocabulary doc already provides for a universal, flexible proviso in Section 3.2 that acknowledges the various factors which could dictate whether a preference will be followed or not. \r\n\r\nIf I understand the concerns of the DRM-wary constituency correctly, the concern is not that a preference attached to a user-chosen input _won't_ be followed, but that it _will_ be followed. So if I'm a consumer and I purchase a piece of content and I take it to my chatbot to exercise my fair use rights with it, the chatbot will prevent me from doing that because of the preference embedded in the content. (Just trying to represent what I understand the concern to be.) This is one of the reasons I understand the user-chosen input category to be so controversial.\r\n\r\n> AI enabled, user-directed uses are at the center of what steers consumers away from engaging with publishers' content. This is not an edge case for why an AI-use preference is desirable, it is THE case.\r\n\r\nI think maybe we've got our wires crossed? Because the above sort of implies that users uploading PDFs of news articles to AI systems, or pasting direct links to articles into AI systems, is the most important conduct that is steering consumers away from engaging with the content. That does not match my understanding of the situation.",
+          "createdAt": "2026-11-12T01:35:40Z",
+          "updatedAt": "2026-11-12T01:35:40Z"
         }
       ],
       "reviews": []
@@ -14584,6 +14655,85 @@
           "updatedAt": "2026-11-05T10:35:35Z"
         }
       ],
+      "reviews": []
+    },
+    {
+      "number": 258,
+      "id": "PR_kwDOOWk1-s8AAAABOSaoqQ",
+      "title": "Use Alissa's proposed AI Use definition",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/258",
+      "state": "OPEN",
+      "author": "martinthomson",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "This is just to sketch out a version of what Alissa just proposed on #254. It is primarily an editorial tweak to the proposed text there, so I am not suggesting that #249 would be closed by this yet.\n\nPutting this in place so that there is something more concrete for discussion.\n\nCloses #254.",
+      "createdAt": "2026-11-11T04:26:13Z",
+      "updatedAt": "2026-11-11T04:29:31Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "63cd65c4a49d2f5c67bcee25d1057b21d999714a",
+      "headRepository": "ietf-wg-aipref/drafts",
+      "headRefName": "alissa-use",
+      "headRefOid": "383b3a3db45b968232d2921396df4929a5b6e18f",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABXOrxDw",
+          "commit": {
+            "abbreviatedOid": "383b3a3"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-11-11T04:28:06Z",
+          "updatedAt": "2026-11-11T04:29:31Z",
+          "comments": [
+            {
+              "originalPosition": 19,
+              "body": "I wanted to flag that this might be a little imprecise, because it implies that the URL is the asset.\n\nAn alternative spelling might be:\n\n\"an asset that user provides a URL for directly to the model, or\"",
+              "createdAt": "2026-11-11T04:28:06Z",
+              "updatedAt": "2026-11-11T04:29:31Z"
+            },
+            {
+              "originalPosition": 22,
+              "body": "Following from the above comment, this might be spelled as:\n\n\"an asset that the model suggests by presenting a URL to the user\n and the user chooses to select that asset as input to the model\"\n\nor something along those lines.\n\nI'm not happy with either phrasing, of course, neither is as intuitive and clear as what Alissa originally came up with.",
+              "createdAt": "2026-11-11T04:29:27Z",
+              "updatedAt": "2026-11-11T04:29:31Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 259,
+      "id": "PR_kwDOOWk1-s8AAAABOSeUKQ",
+      "title": "Editorial shuffling of XML for definitions",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/259",
+      "state": "OPEN",
+      "author": "martinthomson",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "This cleans up the hotlinking and index in the HTML versions of the draft.\n\nUnfortunately, that means losing markdown for the definitions, because it's just too awkward otherwise.",
+      "createdAt": "2026-11-11T04:33:06Z",
+      "updatedAt": "2026-11-11T04:33:06Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "63cd65c4a49d2f5c67bcee25d1057b21d999714a",
+      "headRepository": "ietf-wg-aipref/drafts",
+      "headRefName": "tweak-dfns",
+      "headRefOid": "05886e420120c4c40cdd54658c507da89669d957",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
       "reviews": []
     }
   ]
