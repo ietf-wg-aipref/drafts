@@ -6,7 +6,6 @@ category: std
 docname: draft-ietf-aipref-attach-latest
 submissiontype: IETF
 number:
-updates: 9309
 date:
 consensus: true
 v: 3
@@ -36,7 +35,6 @@ normative:
   FIELDS: RFC9651
   HTTP: RFC9110
   ROBOTS: RFC9309
-  URI: RFC3986
   VOCAB:
     title: "A Vocabulary For Expressing AI Usage Preferences"
     date: draft-ietf-aipref-vocab-date
@@ -62,7 +60,8 @@ with content that is obtained using the HTTP protocol.
 This document defines attachment methods
 using the Robots Exclusion Protocol and HTTP header fields.
 
-This document updates RFC 9309
+This document registers a "usage" namespace
+for the Robots Exclusion Protocol
 to allow for the inclusion of usage preferences.
 
 
@@ -89,7 +88,7 @@ for associating preferences with content:
 * A Content-Usage header field
   for HTTP {{HTTP}};
   see {{header}}.
-* A Content-Usage directive
+* A "usage" namespace {{!REP-NS=I-D.kelley-rep-namespaces}}
   for the Robots Exclusion Protocol
   (colloquially known as "robots.txt") {{ROBOTS}};
   see {{robots}}.
@@ -131,12 +130,14 @@ This is some content.
 ~~~
 
 Alternatively, or additionally,
-a server might include the same directive in its "robots.txt" file:
+a server might include the same preference in its "robots.txt" file:
 
 ~~~
 User-Agent: *
 Allow: /
-Content-Usage: train-ai=n
+
+User-Agent: __usage_train-ai
+Disallow: /
 ~~~
 
 
@@ -226,47 +227,46 @@ and then decide to use the preferences.
 The Content-Usage field does not have any special effect on caching.
 
 
-# Robots Exclusion Protocol Content-Usage Rule {#robots}
+# Robots Exclusion Protocol Usage Namespace {#robots}
 
 The core function of Robots Exclusion Protocol format {{ROBOTS}}
 (or the "robots.txt" file)
 is to describe the expectations of the server operator
 about which paths can be crawled.
 
-This document adds a new rule that associates usage preferences
+This document defines a "usage" namespace {{REP-NS}} that associates usage preferences
 with different paths.
-This new rule applies to any paths that can be crawled;
-paths that cannot be crawled have no associated usage preferences.
+This namespace applies to any paths, whether or not they can be crawled;
+whether a path can be crawled does not affect its associated usage preferences.
 
-A Content-Usage rule is added to the set of potential rules
-that can be included in a Group
+Each usage category label ({{Section 6.1 of VOCAB}}) defines a namespaced label
+that can be carried by a selector (a User-Agent line)
 for "robots.txt".
 
-The `rule` ABNF pattern from {{Section 2.2 of ROBOTS}}
-is extended as shown in {{f-abnf}}.
+The `ns-label` ABNF pattern from {{Section 3.1 of REP-NS}}
+is restricted as shown in {{f-abnf}}.
 
 ~~~abnf
-rule =/ content-usage
+usage-label   = "__usage_" usage-cat
 
-content-usage = *WS "content-usage" *WS ":" *WS
-                [ path-pattern 1*WS ] usage-pref EOL
-usage-pref    = <usage preference vocabulary from [VOCAB]>
+usage-cat     = ns-label
+              ; a usage category label from [VOCAB]
 ~~~
-{: #f-abnf title="Extended robots.txt ABNF"}
+{: #f-abnf title="Usage namespace label ABNF"}
 
-Each group contains zero or more Content-Usage rules.
-Each Content-Usage rule consists of a path
-and a usage preference.
-The path might be absent or empty;
-if a path present,
-a SP or HTAB separates it from the usage preference.
+Each group contains zero or more selectors carrying a usage label.
+Each usage label identifies one usage category;
+the Allow and Disallow rules of the group
+express the usage preference for that category.
+A selector carrying a usage label
+can share a group with any other selectors.
 
-Note that the statement of preference encoding
-does not use an ABNF definition,
-relying instead on the definitions in {{FIELDS}}.
+Note that a usage category label that is not an `ns-label`,
+such as one that contains a digit, ".", or "*",
+cannot be expressed using this namespace.
 
 
-## Content-Usage Rule Semantics
+## Usage Namespace Semantics
 
 Each group in the file applies to a set of crawlers,
 identified by product token as defined in {{Section 2.2.1 of ROBOTS}}.
@@ -276,35 +276,49 @@ as defined in {{Section 2.2.2 of ROBOTS}}.
 
 This creates a two-stage arrangement
 that distinguishes acquisition and usage.
-Acquisition relies on Allow/Disallow rules;
-usage preference relies on Content-Usage rules.
+Acquisition relies on Allow/Disallow rules for product tokens;
+usage preference relies on Allow/Disallow rules for usage labels.
 
-Any Content-Usage rules determine the usage preferences for resources
-using the same path prefix matching rules as defined for Allow and Disallow.
-That is, the path prefix length is determined by counting the number of bytes
-in the encoded path.
+These signals are independent.  However, consumers of preference
+signals MAY use them to inform acquisition decisions; see
+{{crawling}}.
 
-Usage preferences apply only to those resources that can be crawled
-according to Allow/Disallow rules;
-no preferences are implied for resources that are disallowed.
+In accordance with {{Section 4 of REP-NS}}, the "usage" namespace is
+defined as follows:
 
-Paths specified for Content-Usage rules use the same percent-encoding rules
-as used for Allow/Disallow rules,
-as defined in {{Section 2.1 of URI}}.
-In particular, SP (U+20) and HTAB (U+09) characters need to be replaced
-with "%20" and "%09" respectively.
+Label syntax:
+: A usage label is any usage category label from {{VOCAB}}.  In the
+  grammar of {{REP-NS}}, they are `ns-label`s.
 
-The ordering of rules in a group carries no semantics.
-Thus, Content-Usage rules can be interleaved
-with Allow and Disallow rules.
+Wildcard fallback:
+: No. Wildcard selectors do not match any labels in the "usage"
+  namespace.  This is important because it means that existing
+  robots.txt files will not be interpreted as expressing preferences
+  that the authors, writing before this mechanism was deployed, could
+  not have intended.
 
-If there are Content-Usage rules that have identical paths
-and conflicting usage preferences,
-these preferences apply separately
-according to the process defined in {{Section 7.1 of VOCAB}}.
-Note that this differs from the Allow/Disallow rules,
-where a conflict leads to the more permissive option,
-allowing crawling.
+Allowed and disallowed:
+: A path that is allowed for a usage label has a positive preference
+  for the corresponding usage category; a path that is disallowed has
+  a negative preference.
+
+No matching selector:
+: If no selector matches a usage label, no preference is expressed for
+  that usage category.
+
+No matching rule:
+: As in {{ROBOTS}}.
+
+Interaction with other labels:
+: None. Selectors in a group are disjunctive, as with the
+  product-token selectors of {{ROBOTS}}.
+
+Relationship to product-token rules:
+: Usage labels are policy tokens, as described in {{Section 6 of
+  REP-NS}}.  Consumers may document that product tokens act as
+  proprietary policy tokens.  Where they do, those more specific
+  signals take precedence over the more general ones described in this
+  draft; see {{precedence}}.
 
 A crawlers can cache a "robots.txt" file for up to 24 hours,
 following HTTP Cache-Control semantics defined in {{HTTP-CACHE}};
@@ -313,44 +327,34 @@ Updates to preferences within the period that a file is cached
 might not be visible.
 
 
-## Processing Content-Usage Rules
+## Processing Usage Labels
 
-To process a Content-Usage rule,
-a parser identifies lines with the "Content-Usage" label.
-This requires that SP and HTAB characters are ignored,
-before and after the label,
-in addition to before and after the COLON (":", U+3A) separator.
-
-The remainder of the line -
-up to either the first CR (U+0D), LF (U+0A), or octothorpe ("#", U+23) -
-is the rule value.
+To process a usage label, a parser looks up the path and the label as
+described in {{Section 5 of REP-NS}}.  This requires that the label is
+matched exactly, apart from case, and that groups with a wildcard
+selector are not consulted for the label.  A parser repeats this
+process for each usage category whose preference is sought.
 
 {:aside}
-> Note that while URI syntax permits the use of an octothorpe
-> for a fragment identifier,
-> fragment identifiers cannot be used
-> with HTTP or the "robots.txt" format.
+> Note that general-purpose robots.txt parsers
+> often apply the wildcard fallback to any label,
+> and some match labels by prefix or substring;
+> see {{Section 5 of REP-NS}}.
 
-The first character of the rule value will be "/" (U+2F)
-if a non-empty path is specified.
-Paths always start with a "/" character,
-so a rule value that starts with any other character
-indicates that the path is absent.
+A selector carrying a namespaced label in the "usage" namespace that
+does not correspond to a known usage category is ignored.
 
-If a path is specified,
-the path ends immediately before the first SP (U+20) or HTAB ("U+09") character.
-The remainder of the rule value is the statement of preference.
-If a path is absent,
-the entire rule value is the statement of preference.
+If no group contains a usage label for a usage category (i.e., there
+is no `User-Agent: __usage_<label>` line in the file), then no
+preference has been expressed for that category.  If such a file
+contains a proprietary policy token ({{Section 2 of REP-NS}}),
+consumers SHOULD interpret that token as they would in the absence of
+this document, but MUST NOT treat it as expressing a preference in the
+context of this document (see {{precedence}}).
 
-The usage preference is encoded using the exemplary format
-defined in {{Section 6 of VOCAB}}.
-The parsing and processing rules from {{Sections 6 and 7 of VOCAB}} apply.
-
-Note that a statement of preference is processed as a sequence of bytes,
-rather than Unicode text.
-The value is first encoded into bytes before processing;
-see {{Section 6.3 of VOCAB}}.
+The usage preferences are mapped to the data model defined in
+{{Section 3 of VOCAB}}.  The processing rules from {{Section 5 of
+VOCAB}} apply.
 
 
 ## When Preferences Apply
@@ -368,6 +372,30 @@ after a crawler has retrieved the updated "robots.txt"
 and subsequently retrieved the affected resource again.
 
 
+## Effects on Crawling Behavior {#crawling}
+
+Usage labels are not directives for crawling behavior.
+
+A consumer MAY use preferences to inform crawling.
+For example, if it crawls only for purposes covered by a usage label,
+it MAY refrain from retrieving resources
+for which a preference against those purposes has been expressed.
+
+If a service operator wishes to limit crawling,
+it MAY use groups for crawlers' product tokens in "robots.txt" to do so.
+
+
+## Precedence {#precedence}
+
+Specific expressions SHOULD take precedence over general ones.
+
+Consumers MAY document that they interpret rules
+that match proprietary policy tokens
+as being more specific than usage labels.
+
+Private agreements MAY override preferences expressed via this mechanism.
+
+
 ## Example
 
 {{f-ex-robots}} shows a simple "robots.txt" document.
@@ -376,31 +404,40 @@ and subsequently retrieved the affected resource again.
 User-Agent: *
 Allow: /
 Disallow: /never/
-Content-Usage: train-ai=n
-Content-Usage: /ai-ok/ train-ai=y
 
 User-Agent: ExampleBot
 Allow: /
-Content-Usage: train-ai=y
+
+User-Agent: __usage_train-ai
+Disallow: /
+Allow: /ai-ok/
 ~~~
 {: #f-ex-robots title="Example robots.txt file"}
 
 A crawler that identifies as "ExampleBot" uses the second group.
-That crawler would be able to obtain all content
-and apply usage preferences of "ai=y" as defined in {{VOCAB}}.
+That crawler would be able to obtain all content.
 
 All other crawlers use the first group.
 This allows crawling of all content other than resources under "/never/".
-Of those resources,
-those under "/ai-ok/" have an associated usage preference of "train-ai=y"
+
+Usage preferences are taken from the third group,
+regardless of which crawler obtains a resource.
+Resources under "/ai-ok/" have an associated usage preference of "train-ai=y"
 and all other resources have a usage preference of "train-ai=n".
+Preferences for other usage categories are unknown.
 
 | Path           | Crawl   | Usage Preference |
 |:---------------|:-------:|:-----------------|
 | /test          |  yes    | train-ai=n       |
-| /never/test    |  no     | N/A              |
+| /never/test    |  no     | train-ai=n       |
 | /ai-ok/test    |  yes    | train-ai=y       |
 {: #t-example title="Sample of usage preferences for different paths"}
+
+The "Crawl" column describes crawlers other than "ExampleBot".
+
+Note that, unlike rules for product tokens,
+usage preferences cannot be scoped to a particular crawler;
+see {{Section 3.2 of REP-NS}}.
 
 
 # Security Considerations
@@ -413,6 +450,8 @@ Different guidelines for robust parsing can be found in
 {{Section 3 of ROBOTS}} describes security considerations for "robots.txt".
 A "robots.txt" file can be up to 500KiB of text.
 This specification does not increase this limit.
+Because usage labels can share groups with other selectors,
+expressing usage preferences need not add many lines to a "robots.txt" file.
 
 
 # IANA Considerations
@@ -435,6 +474,27 @@ Reference:
 
 Comments:
 : None
+{: spacing="compact"}
+
+The "usage" namespace defined in {{robots}}
+is added to the "REP Namespaces" registry
+established in {{Section 10.1 of REP-NS}}:
+
+Namespace:
+: usage
+
+Label syntax:
+: Usage category labels from {{Section 6.1 of VOCAB}}
+  that conform to the `ns-label` rule; see {{robots}}
+
+Wildcard fallback:
+: no
+
+Reference:
+: {{robots}}
+
+Change controller:
+: IETF (iesg@ietf.org)
 {: spacing="compact"}
 
 
