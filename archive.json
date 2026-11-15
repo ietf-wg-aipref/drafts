@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-11-12T06:47:08.478300+00:00",
+  "timestamp": "2026-11-15T05:52:26.985363+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -4174,7 +4174,7 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nBoth @lrosenthol and @chrisn identified the word \"synthetic\" as being somewhat objectionable in the following definition of AI Training (from #211):\n\n> Using an asset to modify the learned parameters of an AI model that is used to generate **synthetic** content in one or more modalities.\n\n(Emphasis mine.)\n\nThis phrasing, \"an AI model that is used to generate (synthetic) content in one or more modalities\" is likely to be part of other vocabulary definitions we build.  So, while my sense is that the objection is not very strong, it is worth getting this right.\n\n---\n\nFor reference, a dictionary defines \"synthetic\" (adj.) as:\n\n1. Relating to, involving, or of the nature of synthesis.\n2. Produced by synthesis, especially not of natural origin.\n3. Prepared or made artificially.\n\n### Proposed Resolution\n\nNo concrete recommendation from me; I just want a resolution.\n\nArguments in favor of removal presented thus far are centered on the view that the word is redundant or immaterial. @chrisn suggests that using the word leaves another place where meaning and interpretation are open to debate.\n\nFrom my reading of the definitions above, an AI model inarguably produces synthetic content, likely following definition 3. The origin of any AI output is always artificial, unless it is reduced to a copy of material from a single natural source.  That's not a useful thing.  Once multiple sources are copied, that is synthesis.\n\nSo I don't think that the meaning can be ambiguous in any way.  However, the question of redundancy remains.\n\nEven if it is redundant, the arguments in favor of retaining \"synthetic\" seem to reduce to a belief that it is an important emphasis.",
       "createdAt": "2026-08-14T05:59:19Z",
-      "updatedAt": "2026-11-05T04:47:42Z",
+      "updatedAt": "2026-11-14T16:28:47Z",
       "closedAt": null,
       "comments": [
         {
@@ -4183,6 +4183,13 @@
           "body": "Discussed at the 2026-10-21 interim. Not resolved; no decision was taken.\n\nBrad Silver, Nate Hake, Matthew Hervey, Timid Robot and Chris Needham favoured dropping \u201csynthetic\u201d. Their reasons: the generative/non-generative line is already drawn elsewhere in the definition; the word invites a debate over whether verbatim or quoted output counts as \u201csynthetic\u201d; and some AI developers argue their output is \u201coriginal\u201d, which could be used to claim it falls outside the term. Kevin Kelley said the intent is to cover that output, and that the word evokes the substitutive-use concern. Eric Rescorla\u2019s concern was that the word shouldn\u2019t be load-bearing, and that the draft has to be clear to readers who haven\u2019t followed this discussion.\n\nA straw poll (\u201cdo you feel strongly that we should keep \u2018synthetic\u2019 in the draft?\u201d) gave yes 3, no 15, no opinion 1. That\u2019s a read of the room, not a decision. Farzaneh asked to defer this to IETF 127, since people with the background weren\u2019t present.\n\nNext: anyone who wants to keep the term should propose a definition, showing what\u2019s in and out of scope with and without it. Anyone who wants it removed should write up the case. Both ahead of San Francisco.",
           "createdAt": "2026-11-05T04:47:41Z",
           "updatedAt": "2026-11-05T04:47:41Z"
+        },
+        {
+          "author": "achimschloss",
+          "authorAssociation": "NONE",
+          "body": "+1 to dropping",
+          "createdAt": "2026-11-14T16:28:47Z",
+          "updatedAt": "2026-11-14T16:28:47Z"
         }
       ]
     },
@@ -4488,7 +4495,7 @@
       ],
       "body": "Search currently mentions accessibility:\n\n> Displaying titles or excerpts from assets, changes to improve accessibility, such as translation, transcription, or text-to-speech, are included in this category.\n\nThis has the effect of allowing such uses in search applications when `search=y`, regardless of other values.\n\nAs discussed in the October interim (and raised previously), we do not address accessibility elsewhere:\n\n* Whether there should be an accommodation for accessibility in `train-ai` regardless of the value of `search`\n* Whether `ai-use` should also have an accommodation for such uses\n* What form the accommodation should take (global, term-specific, carve-out, other language)\n\nSee also [draft use cases](https://mailarchive.ietf.org/arch/msg/ai-control/ZmSunpKekekLfCJfCyF2Ujx-IBU).",
       "createdAt": "2026-11-05T05:48:34Z",
-      "updatedAt": "2026-11-11T10:27:34Z",
+      "updatedAt": "2026-11-12T20:15:37Z",
       "closedAt": null,
       "comments": [
         {
@@ -4497,6 +4504,13 @@
           "body": "Uses of content for accessibility have existing legal protections, and these vary across jurisdictions. Questions regarding AI usage for accessibility are best left to policymakers, and IETF shouldn't attempt to standardise. So, no, there should be no additional accommodations. The search category already goes too far (in protecting the interests of search engines), in my view.",
           "createdAt": "2026-11-11T10:27:09Z",
           "updatedAt": "2026-11-11T10:27:34Z"
+        },
+        {
+          "author": "lila-i-b",
+          "authorAssociation": "NONE",
+          "body": "I understand that the idea of having any kind of carve out for accessibility or other uses remains fraught, but in the interest of more use cases, here are some we are seeing being experimented with as part of the remediation and accessibility work we do with University, college and school partners to help serve their students with print disabilities:\n\n1. Remediating scanned books into accessible EPUB and DAISY* \n\nScenario: A library has scanned a book, but the automatically derived EPUB has problems. Paragraphs break at every page turn, the page numbers and running heads at the top of each page show up in the text and get read aloud, and there are no chapter headings to navigate by. An AI remediation pass reads the page images alongside the OCR text. It fixes those problems, adds the structure, and follows the DAISY Consortium's published guidance. Then a print-disabled patron borrows the corrected file.\n\nRisk: The AI is the remediation tool itself. If the publisher's opt-out signal is read as \"no AI processing of this work,\" the authorized entity can't make the accessible copy that US law and the Marrakesh Treaty lets it make without permission.\n\n*A DAISY file is an accessible format used by read-aloud devices.\n\n2. Image descriptions (alt text)\n\nScenario: Most images in digitized books have no description. AI writes draft descriptions, and a review platform shows each draft next to its image so people can check and correct it quickly and enjoyably. *Real example: the illustrator of an 1890s Pride and Prejudice hand-lettered the captions under its 101 plates, so the OCR read them as junk. An AI-assisted pass recovered them by matching each plate to the printed List of Illustrations as a base-level alt text that\u2019s ready to be improved by human addition.\n\nRisk: Describing an image is \"processing the content.\" A signal attached to the images or the book could stop the descriptions being made at all.\n\n3. Accessibility metadata, so patrons know before they borrow\n\nScenario: AI checks each file and writes standard accessibility metadata, such as whether it has text, navigation, page numbers or image descriptions. A blind patron can then tell from the catalog page whether a file will work with their screen reader.\n\nRisk: If analyzing a file is blocked, the metadata is missing. Patrons go back to a significantly more time-consuming process of borrowing files and opening them to find out which ones work.\n\n4. Quality checks across a whole collection\n\nScenario: AI tools check EPUB and DAISY files at scale against accessibility standards. They find problems before they reach the patron, and the fixes go back into how every future file is made.\n\nRisk: These accessibility checks have to read the full text of each work. A collection-wide opt-out would stop the checks across the whole collection.\n\n5. Synthetic narration for talking books\n\nScenario: A DAISY talking book pairs the text with audio, and for most books nobody will ever record a human narrator. A neural text-to-speech model, run privately on the library's own machines, narrates the book sentence by sentence and keeps the audio in sync with the text.\n\nWhen the narration is built into the file, the patron doesn't need good text-to-speech on their own device. They can listen on an inexpensive or older phone, a basic DAISY player, or a shared computer. They don't need a paid screen reader, a current operating system with high-quality voices, or a steady connection to a cloud voice service. They can download the book once and listen offline. Many languages have no good built-in voice on common devices, so narration made by the library is often the only listenable version a patron can get.\n\nRisk: Text-to-speech is generative AI. A \"no generative AI\" signal could be read as forbidding the narration, which is the whole point of the format. That cost falls hardest on the patrons with the least access to technology.\n\n6. Recognizing the structure of a page\n\nScenario: Layout-recognition models label the headings, page numbers, figures, tables and footnotes on each scanned page. That lets a screen-reader user jump between chapters and go to a printed page number, for example to keep up with \"turn to page 212\" in class.\n\nRisk: A ban on machine analysis of the scan takes away navigation, which sighted readers get by glancing at the page but that blind and low-vision readers need additional support to obtain.\n\n7. Training models that remediate better\n\nScenario: A library can bulk-analyze its collection to see how its accessibility code works across thousands of books. It can then train or fine-tune models to remediate specific kinds of book better, divided by genre or by language. A cookbook's recipes and ingredient lists, the line breaks of a poem, and the speaker names in a play each need different handling. A model that has learned from many examples of that kind of book gets them right more often. The resulting models exist only to make accessible copies.\n\nRisk: Training is the use opt-out signals most clearly target. A blanket \"no training\" signal would block narrow, purpose-built accessibility models along with general-purpose ones. Remediation would stay stuck at the quality of generic tools, and books in less-served genres and languages would be the hardest hit.\n\nFraming note: Every example here, training included, is done by or for an entity legally authorized to serve print-disabled people, and only to make accessible copies or otherwise support accessibility. ",
+          "createdAt": "2026-11-12T20:15:37Z",
+          "updatedAt": "2026-11-12T20:15:37Z"
         }
       ]
     }
@@ -14234,7 +14248,7 @@
       "labels": [],
       "body": "Any system of preferences like what we have naturally has no guards on assets being acquired.  The preferences that declaring parties express only apply to how the asset is subsequently used.\r\n\r\nThis attempts to document that more clearly.  It also highlights the need to retain preferences along with assets if their use does not immediately follow acquisition (which is likely to be the typical case, with immediate use being the abnormal case).\r\n\r\nThis doesn't address #246, but it creates a place where that might be more naturally addressed, by saying that intermediate forms or transformations of assets (such as embeddings created from assets) might also need to retain preferences if they might subsequently be used.\r\n\r\nCloses #167.\r\nCloses #193.",
       "createdAt": "2026-08-27T15:45:06Z",
-      "updatedAt": "2026-10-21T21:01:54Z",
+      "updatedAt": "2026-11-14T17:34:31Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "726979f1851a1071c370636bb27dfd6d50a461f3",
@@ -14352,6 +14366,26 @@
               "updatedAt": "2026-10-21T21:01:53Z"
             }
           ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABYAgMOg",
+          "commit": {
+            "abbreviatedOid": "f1ba8be"
+          },
+          "author": "achimschloss",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-11-14T17:34:30Z",
+          "updatedAt": "2026-11-14T17:34:31Z",
+          "comments": [
+            {
+              "originalPosition": 24,
+              "body": "This seems worthwhile to add without extending scope or conflicting with \u00a73.2\n```suggestion\nsee {{applicability}}. Applications can use known preferences to guide their acquisition behavior.\n```",
+              "createdAt": "2026-11-14T17:34:30Z",
+              "updatedAt": "2026-11-14T17:34:31Z"
+            }
+          ]
         }
       ]
     },
@@ -14456,7 +14490,7 @@
       "labels": [],
       "body": "An attempt at resolving #249.\r\n\r\nIn discussion with @kelleyk, we agreed that the scope should be limited to content that's retrieved by the AI system, e.g., via a RAG index or tool call, and not for individual assets being provided by the user to the AI system. The intent is to include:\r\n- The user provides a description (e.g., the Google homepage as in the #249 example) that the AI system resolves to a URL\r\n- The user provides a description that potentially resolves to multiple assets (e.g., \"Wikipedia pages describing the countries of Europe\")\r\n\r\nand to exclude:\r\n- The user provides the asset directly to the AI system (e.g., through file upload)\r\n- The user provides a URL to an asset that the AI system fetches\r\n- The AI system offers to the user to include a specific asset (a URL) as possible input, as part of the user's conversation with the AI system, and the user confirms providing that link as input (either by clicking the link or responding affirmatively in the conversation)\r\n",
       "createdAt": "2026-10-16T18:32:52Z",
-      "updatedAt": "2026-11-12T01:35:40Z",
+      "updatedAt": "2026-11-14T16:09:08Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "63cd65c4a49d2f5c67bcee25d1057b21d999714a",
@@ -14572,6 +14606,20 @@
           "body": "@BradSilver99 wrote:\r\n\r\n> The draft vocabulary doc already provides for a universal, flexible proviso in Section 3.2 that acknowledges the various factors which could dictate whether a preference will be followed or not. \r\n\r\nIf I understand the concerns of the DRM-wary constituency correctly, the concern is not that a preference attached to a user-chosen input _won't_ be followed, but that it _will_ be followed. So if I'm a consumer and I purchase a piece of content and I take it to my chatbot to exercise my fair use rights with it, the chatbot will prevent me from doing that because of the preference embedded in the content. (Just trying to represent what I understand the concern to be.) This is one of the reasons I understand the user-chosen input category to be so controversial.\r\n\r\n> AI enabled, user-directed uses are at the center of what steers consumers away from engaging with publishers' content. This is not an edge case for why an AI-use preference is desirable, it is THE case.\r\n\r\nI think maybe we've got our wires crossed? Because the above sort of implies that users uploading PDFs of news articles to AI systems, or pasting direct links to articles into AI systems, is the most important conduct that is steering consumers away from engaging with the content. That does not match my understanding of the situation.",
           "createdAt": "2026-11-12T01:35:40Z",
           "updatedAt": "2026-11-12T01:35:40Z"
+        },
+        {
+          "author": "BradSilver99",
+          "authorAssociation": "NONE",
+          "body": "@coopdanger - thanks for your reply.  Two (I hope) clarifying points:\r\n\r\nFirst, I understand that the attempts to limit the scope of the AI Use category come from a DRM-wary place, and I am wary of scoping preferences as if they are DRM, which they are not.  I think that this will result in imposing a normative framework on the category which is why 3.2 exists. \r\n\r\nSecond, yes perhaps there is a crossed wire here.  The point I am making is that a great deal of RAG and related activity, is highly substitute and likely falls into the bigger bucket of user-initiated activities.  I think this is a big enough factor why trying to define a user-initiated exception is problematic.  I was not commenting specifically on the links to an article, and uploading digital assets as being the epicenter of substitutive uses.   I do still think that there are reasons why publishers should be entitled to express preferences even as to those uses, however - where they result in a substitute for the original source.  \r\n\r\nAn adjacent question - are URLs assets for which a preference could attach?  If a user pasted that into a model as a query and the model sent a user-agent to crawl the site, wouldn't the preference sit at the site, and not the URL?   ",
+          "createdAt": "2026-11-13T19:03:48Z",
+          "updatedAt": "2026-11-13T19:03:48Z"
+        },
+        {
+          "author": "achimschloss",
+          "authorAssociation": "NONE",
+          "body": "I agree with @chrisn, @BradSilver99 and @natehake that the user-directed exception leaves a substantial gap in what publishers can express preferences about, unless it is paired with a separate preference covering those uses - or a more general AI-use preference covering all model input, as discussed by @natehake. \r\n\r\nWhether a preference should be followed in a particular situation is a separate question, already addressed by \u00a73.2; excluding the use without a corresponding preference category from the vocabulary prevents the publisher from expressing that preference in the first place. I agree with @BradSilver99 that narrowing preference coverage to address concerns about DRM conflates expressing a preference with deciding whether it should be followed.\r\n\r\n1.  My understanding of the London discussion was about splitting user-provided and system-selected inputs into separate preference categories, not creating a larger exemption (adding url exemptions and user confirmation) with no preference coverage.  The exemption could leave use outside the ai-use preference where content could be fetched, cached or indexed and a user later supplies or confirms URLs identifying that content. The system would then use the previously acquired content in response to that request, potentially treating it as exempt. This connects to @coopdanger\u2019s loophole concern. I don\u2019t see how to close that gap without removing the exception or having a corresponding preference cover those cases. \r\n\r\n2.  The lines that it tries to draw between a general user ask for which an AI system selects the best fitting input to generate a result and a user specifying assets/content are getting less and less meaningful with the development of agentic capabilities / products and generally delegation of authority to ai systems. As agents increasingly combine browsing, source selection and task execution, consumers can receive the resulting output without visiting the original sources. The underlying retrieval and use can remain the same while a small change in the interface determines whether the publisher\u2019s preference applies. A scenario - A user might ask his agentic system to get the latest on topic XYZ and be continuously updated on a daily, weekly basis. The agent curates a list of sources, asks to create a task/agent for that (maybe briefly mentioning the sources) and from there on the user gets his personal real time update on XYZ. This seems to be the very definition of substitutive use of content, which one could argue falls into this exemption. \r\n\r\nExtending on this, what if pre-packaged agent-plugins and skills appear that are simply installed and only mention the sources in detailed plugin description? What if Apps with agentic capabilities pre-curate sources for users? I don\u2019t think we can fix this by describing all current and potential future interaction patterns as technology develops at a rapid pace.",
+          "createdAt": "2026-11-14T16:09:08Z",
+          "updatedAt": "2026-11-14T16:09:08Z"
         }
       ],
       "reviews": []
@@ -14635,7 +14683,7 @@
       "labels": [],
       "body": "There are several views on this one, but it doesn't seem to have enough support for retaining it.\n\nCloses #217.",
       "createdAt": "2026-10-21T20:35:46Z",
-      "updatedAt": "2026-11-05T10:35:35Z",
+      "updatedAt": "2026-11-14T16:28:30Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "63cd65c4a49d2f5c67bcee25d1057b21d999714a",
@@ -14653,6 +14701,13 @@
           "body": "I'm in favour of removing the word \"synthetic\" - I think \"use[d] to generate content in one or more modalities\" covers the same ground so having both \"synthetic\" and \"generate content\" could introduce potential confusion and ambiguity.",
           "createdAt": "2026-11-05T10:35:35Z",
           "updatedAt": "2026-11-05T10:35:35Z"
+        },
+        {
+          "author": "achimschloss",
+          "authorAssociation": "NONE",
+          "body": "I'm also in favor of removing synthetic. Keeping it introduces pot. unclarity with a non-defined term while not addressing any known open issue to my understanding.  ",
+          "createdAt": "2026-11-14T16:28:30Z",
+          "updatedAt": "2026-11-14T16:28:30Z"
         }
       ],
       "reviews": []
@@ -14729,6 +14784,32 @@
       "headRepository": "ietf-wg-aipref/drafts",
       "headRefName": "tweak-dfns",
       "headRefOid": "05886e420120c4c40cdd54658c507da89669d957",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 260,
+      "id": "PR_kwDOOWk1-s8AAAABO00Htw",
+      "title": "Use cross-vendor policy tokens instead of adding a Content-Usage rule",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/260",
+      "state": "OPEN",
+      "author": "kelleyk",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Like I mentioned in my message on the list, the individual draft that I submitted recently ([draft-kelley-aipref-training-preference-signal](https://datatracker.ietf.org/doc/draft-kelley-aipref-training-preference-signal/)) was intended to be a self-contained description of what I was announcing.\r\n\r\nIt consists of the training definition from the Working Group's vocab draft and some attachment work.  Here's a pass at what generalizing those ideas and extending them to cover the rest of the draft's vocabulary looks like.\r\n\r\nThe pieces break down like this:\r\n\r\n- [draft-kelley-rep-namespaces](\r\nhttps://kelleyk.github.io/draft-kelley-rep-namespaces/draft-kelley-rep-namespaces-00/draft-kelley-rep-namespaces.html), which I'll submit as soon as the Datatracker reopens, explains how to carry new and orthogonal signals in robots.txt without causing compatibility or deployment trouble.\r\n- This PR, which uses that mechanism to define a \"usage\" namespace and explains how to use it to express usage preferences.\r\n- The group's existing vocab draft, which defines the meaning and semantics of those signals.\r\n\r\nLooking forward to everyone's thoughts and/or discussing in SF!",
+      "createdAt": "2026-11-13T04:14:25Z",
+      "updatedAt": "2026-11-13T04:57:10Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "63cd65c4a49d2f5c67bcee25d1057b21d999714a",
+      "headRepository": "kelleyk/ietf-wg-aipref-drafts",
+      "headRefName": "usage-namespace",
+      "headRefOid": "4ad139d618eb31ac8eca24b655bc14df498be77c",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
