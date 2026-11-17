@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-11-15T05:52:26.985363+00:00",
+  "timestamp": "2026-11-17T07:29:29.250505+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -2919,7 +2919,7 @@
       "id": "I_kwDOOWk1-s7NBPR3",
       "title": "Add non-enforceability provision similar to what is in the Vocab document",
       "url": "https://github.com/ietf-wg-aipref/drafts/issues/166",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "Jo-Levy",
       "authorAssociation": "NONE",
       "assignees": [],
@@ -2928,8 +2928,8 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nBoth robots.txt and the Vocab document have language clarifying that the documents do not include enforcement mechanisms.  The Attach document is not. Propose adding  non-enforcement provision similar to Vocab document.\n\n### Proposed Resolution\n\nSuggest adding new Section with non-enforceability language: \n Non-Enforceability.   This specification is not enforceable.  An entity that receives content usage preferences MAY choose whether or not to follow the preferences.  Many factors may be considered in determining whether to follow a preference, including but not limited to  how the usage corresponds to the usage categories where preferences have been expressed, the type of content, the identity and authority of the Declarant to assert a preference over the specified content, the applicable legal context, or other considerations such as free expression, safety, education, scholarship, research, preservation, interoperability, and accessibility.\n",
       "createdAt": "2025-09-22T07:59:17Z",
-      "updatedAt": "2026-08-14T07:11:11Z",
-      "closedAt": null,
+      "updatedAt": "2026-11-16T19:40:41Z",
+      "closedAt": "2026-11-16T19:40:41Z",
       "comments": [
         {
           "author": "martinthomson",
@@ -2937,6 +2937,13 @@
           "body": "With the changes to Section 3.2 now added in #213, is this proposal still active @Jo-Levy? ",
           "createdAt": "2026-08-14T07:11:11Z",
           "updatedAt": "2026-08-14T07:11:11Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Discussed in SF; overcome by events (but still need to focus on alignment overall).",
+          "createdAt": "2026-11-16T19:40:41Z",
+          "updatedAt": "2026-11-16T19:40:41Z"
         }
       ]
     },
@@ -3822,7 +3829,7 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\n@TimidRobot points out that we don't really talk about our expectations around how preferences might be carried along with the stuff (currently, \"assets\") that they apply to.\n\nI think that our presumption thus far was that anyone who acquires covered stuff carries metadata for that stuff along with it so that any use can be informed by preferences.  This means carrying robots.txt or headers, for the attachments we are using.\n\n### Proposed Resolution\n\nThis might be tricky, but I think that our expectation is that metainformation and preferences live with the things that they cover.  That is going to be hard for things like robots.txt, which might not naturally follow along with the bytes.",
       "createdAt": "2026-03-03T22:23:43Z",
-      "updatedAt": "2026-08-17T06:31:08Z",
+      "updatedAt": "2026-11-16T19:38:06Z",
       "closedAt": null,
       "comments": [
         {
@@ -3831,6 +3838,13 @@
           "body": "Something that was noted about this is that any acquisition that is for a specific purpose can discard stuff that has preference that are incompatible with that use.",
           "createdAt": "2026-03-03T22:26:26Z",
           "updatedAt": "2026-03-03T22:26:26Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Discussed in SF; waiting for vocab discussion to settle.",
+          "createdAt": "2026-11-16T19:38:06Z",
+          "updatedAt": "2026-11-16T19:38:06Z"
         }
       ]
     },
@@ -4198,7 +4212,7 @@
       "id": "I_kwDOOWk1-s8AAAABNS22iQ",
       "title": "Propagation of preferences in PUT",
       "url": "https://github.com/ietf-wg-aipref/drafts/issues/223",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "ekr-ietf",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
@@ -4207,8 +4221,8 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\n_No response_\n\n### Proposed Resolution\n\n_No response_",
       "createdAt": "2026-08-18T23:03:26Z",
-      "updatedAt": "2026-08-20T07:51:30Z",
-      "closedAt": null,
+      "updatedAt": "2026-11-16T19:36:24Z",
+      "closedAt": "2026-11-16T19:36:24Z",
       "comments": [
         {
           "author": "ekr-ietf",
@@ -4251,6 +4265,13 @@
           "body": "As a browser-maker, I can't imagine doing anything with preferences in a browser.  That said, that's based on what I think is a consideration of the preferences in relation to what a browser is for (that is, a browser is a *user* agent).  Anything that we pass on to our users can't really capture preferences in a way that will survive most user flows, including viewing web pages, content on those pages, and file downloads.  As you well know, we can expose information in debugging interfaces, but most users have no use for those capabilities.\n\nOn the other hand, that's not a judgment that necessarily holds for web applications that fetch stuff that have this header field.  The Fetch API will expose the header field value, so those web applications can make their own judgment.  The same is true for other client software, like a curl integration in an app.\n\nI tend to think that this is fine.  I don't think that anyone really expects a browser to do anything special here.  That it is possible to seek out and pay attention to preferences seems to be sufficient.  I'd be curious if anyone thinks that this is an unreasonable position.",
           "createdAt": "2026-08-20T07:51:30Z",
           "updatedAt": "2026-08-20T07:51:30Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Discussed in San Francisco; overcome by events.",
+          "createdAt": "2026-11-16T19:36:24Z",
+          "updatedAt": "2026-11-16T19:36:24Z"
         }
       ]
     },
@@ -4469,7 +4490,7 @@
       ],
       "body": "In discussions about AI use, the definition we considered was something like this:\n\n> Use of an asset as input to a generative AI model,\n> where the asset is not directly provided by the user.\n\n## In favor of references\n\nThis wording leaves it ambiguous about whether a URL is direct.  Two options were floated, neither of which got a sufficiently positive response.\n\nThe first suggestion was to clarify that a URL can be used explicitly by adding something like \", either as a URL or by supplying the asset itself\".\n\nThe second was a less explicit, focusing instead on what is necessary to go from a prompt that includes a reference to the asset.  In this version, the line would be drawn by saying that where inference is needed to determine what to feed into the model, that cannot be direct.\n\nIn this second model, it's possible that some statements could be recognized as unambiguous references that would not need interpretation.  For example \"the Google homepage\" as a string is not ambiguous.  Nor would the typo of \"the Googgle homepage\" be ambiguous, and it would meet this \"user-supplied\" test f a simple process that did not involve AI could recognize that.\n\nExample text for that version was: \"If a system needs to perform inference in order to determine which asset to use, that does not qualify as a user directly providing the asset.\"\n\nA concern with that language was that it was potentially circular, in that the \"inference\" part would have to defined and that might lead to referencing the \"AI Use\" term.\n\nIn either case, the general arguments in favor of this focused on user convenience.  Providing a URL potentially saves a user (or their agent/browser) from having to acquire the asset and feed it to the model.\n\n## In favor of forbidding references\n \nThe alternative is to say that \"direct\" means that this only covers the case where the bytes of the asset is supplied as input.\n\nPotential text for this could be \"Directly providing an asset does not include identifying the asset, such as by naming it or by providing a URL.  Users need to supply the literal asset as input directly.\"\n\nThe strongest argument here was an attention economy-based one.  Publishers were concerned that supplying a URL would mean that no human would ever see the content, denying them a potential opportunity to engage with a user.\n\n---\n\nIt was also observed that the attachment mechanisms we are defining would naturally be stripped when supplying an asset directly in this way.  Only embedded metadata (and maybe registries) would be able to inform the AI system of the preference in this case.  Whatever the decision we make here, that's a factor we might consider acknowledging.",
       "createdAt": "2026-08-27T10:46:12Z",
-      "updatedAt": "2026-11-05T04:58:25Z",
+      "updatedAt": "2026-11-16T05:56:00Z",
       "closedAt": null,
       "comments": [
         {
@@ -4478,6 +4499,13 @@
           "body": "Discussed at the 2026-10-21 interim, via #254. Its proposed line: ai-use covers assets the system retrieves from a description (e.g. RAG, tool call), and excludes assets the user provides, points to by URL, or confirms when the system offers a link. \n\nNext: proposals with explanatory text and examples ahead of San Francisco. The carve-out vs all-use question, and a general accessibility carve-out, are separate. ",
           "createdAt": "2026-11-05T04:58:25Z",
           "updatedAt": "2026-11-05T04:58:25Z"
+        },
+        {
+          "author": "frmoretto",
+          "authorAssociation": "NONE",
+          "body": "Following the request for proposals with examples ahead of San Francisco, here are four cases from the publisher side that test where this line falls. I publish books, so these are cases I have to decide for our own titles.\n\n1. A reader owns an ebook and asks their assistant to summarise chapter 3. The assistant fetches the file by URL from the reader's own library account. The reader holds a lawful copy and pointed to it.\n2. A reader pastes the URL of a paywalled article they do not subscribe to, and the system can reach it through its own access. The reader pointed to it, but holds no access to it.\n3. A reader asks their agent to compare what three books they own say on a topic, without naming the books. The agent picks them from the reader's library. No per-asset reference, no per-asset confirmation.\n4. A reader asks a question and the assistant retrieves a book from the open web or from its own index. Nobody in the exchange holds a copy.\n\nWith the line from #254 as summarised above, 1 and 2 are excluded, 3 and 4 are covered. With a bytes-only rule, all four are covered unless the reader uploads the file, so in case 1 the reader has to download and re-upload a book they already own, which adds friction without protecting anything.\n\nFrom where I sit, what separates 1 from 2 is not whether a URL was used, but whether the asset reaches the model through access the user already has. URL versus bytes is a proxy for that, and it misfires in both directions.\n\nI'm not suggesting the vocabulary can verify access. But the explanatory text could say that the exclusion is meant for assets the user supplies or retrieves under their own access, and that pointing to an asset the user cannot access does not make it user-provided. Case 3 then remains the open question it already is in #254: delegation without a per-asset choice.\n\nRSL has the same gap on the licence side (rslstandard/rsl#12), so the line drawn here is likely the one licences will end up mapping to.",
+          "createdAt": "2026-11-16T05:56:00Z",
+          "updatedAt": "2026-11-16T05:56:00Z"
         }
       ]
     },
@@ -14401,7 +14429,7 @@
       "labels": [],
       "body": "This is an alternative spelling to #240 that builds on #252.\r\n\r\nGiven that #252 adds text that says something about retaining preferences obtained during acquisition until you can make a decision about them at the point of use, the same thing applies when the asset gets transformed along the way.\r\n\r\nCloses #246.",
       "createdAt": "2026-08-27T16:01:56Z",
-      "updatedAt": "2026-11-07T03:24:17Z",
+      "updatedAt": "2026-11-16T14:36:00Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "acquisition-use",
       "baseRefOid": "008bd890d5e00e60878118287b71ce0a6d32fccc",
@@ -14475,6 +14503,26 @@
               "updatedAt": "2026-10-21T20:56:26Z"
             }
           ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABYPbJMA",
+          "commit": {
+            "abbreviatedOid": "97b425a"
+          },
+          "author": "achimschloss",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-11-16T14:36:00Z",
+          "updatedAt": "2026-11-16T14:36:00Z",
+          "comments": [
+            {
+              "originalPosition": 6,
+              "body": "Explicitly include excerpts to make clear that preferences remain available to inform use when assets are split into chunks/only excerpts are used. Although \u201cother simplified forms\u201d could be read to include that, the surrounding reference to an \u201calternative format\u201d suggests conversions such as HTML to Markdown. Naming excerpts explicitly removes that ambiguity.\n\n```suggestion\nincluding the creation of embeddings, other simplified forms or excerpts,\n```",
+              "createdAt": "2026-11-16T14:36:00Z",
+              "updatedAt": "2026-11-16T14:36:00Z"
+            }
+          ]
         }
       ]
     },
@@ -14490,7 +14538,7 @@
       "labels": [],
       "body": "An attempt at resolving #249.\r\n\r\nIn discussion with @kelleyk, we agreed that the scope should be limited to content that's retrieved by the AI system, e.g., via a RAG index or tool call, and not for individual assets being provided by the user to the AI system. The intent is to include:\r\n- The user provides a description (e.g., the Google homepage as in the #249 example) that the AI system resolves to a URL\r\n- The user provides a description that potentially resolves to multiple assets (e.g., \"Wikipedia pages describing the countries of Europe\")\r\n\r\nand to exclude:\r\n- The user provides the asset directly to the AI system (e.g., through file upload)\r\n- The user provides a URL to an asset that the AI system fetches\r\n- The AI system offers to the user to include a specific asset (a URL) as possible input, as part of the user's conversation with the AI system, and the user confirms providing that link as input (either by clicking the link or responding affirmatively in the conversation)\r\n",
       "createdAt": "2026-10-16T18:32:52Z",
-      "updatedAt": "2026-11-14T16:09:08Z",
+      "updatedAt": "2026-11-15T21:07:22Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "63cd65c4a49d2f5c67bcee25d1057b21d999714a",
@@ -14620,6 +14668,13 @@
           "body": "I agree with @chrisn, @BradSilver99 and @natehake that the user-directed exception leaves a substantial gap in what publishers can express preferences about, unless it is paired with a separate preference covering those uses - or a more general AI-use preference covering all model input, as discussed by @natehake. \r\n\r\nWhether a preference should be followed in a particular situation is a separate question, already addressed by \u00a73.2; excluding the use without a corresponding preference category from the vocabulary prevents the publisher from expressing that preference in the first place. I agree with @BradSilver99 that narrowing preference coverage to address concerns about DRM conflates expressing a preference with deciding whether it should be followed.\r\n\r\n1.  My understanding of the London discussion was about splitting user-provided and system-selected inputs into separate preference categories, not creating a larger exemption (adding url exemptions and user confirmation) with no preference coverage.  The exemption could leave use outside the ai-use preference where content could be fetched, cached or indexed and a user later supplies or confirms URLs identifying that content. The system would then use the previously acquired content in response to that request, potentially treating it as exempt. This connects to @coopdanger\u2019s loophole concern. I don\u2019t see how to close that gap without removing the exception or having a corresponding preference cover those cases. \r\n\r\n2.  The lines that it tries to draw between a general user ask for which an AI system selects the best fitting input to generate a result and a user specifying assets/content are getting less and less meaningful with the development of agentic capabilities / products and generally delegation of authority to ai systems. As agents increasingly combine browsing, source selection and task execution, consumers can receive the resulting output without visiting the original sources. The underlying retrieval and use can remain the same while a small change in the interface determines whether the publisher\u2019s preference applies. A scenario - A user might ask his agentic system to get the latest on topic XYZ and be continuously updated on a daily, weekly basis. The agent curates a list of sources, asks to create a task/agent for that (maybe briefly mentioning the sources) and from there on the user gets his personal real time update on XYZ. This seems to be the very definition of substitutive use of content, which one could argue falls into this exemption. \r\n\r\nExtending on this, what if pre-packaged agent-plugins and skills appear that are simply installed and only mention the sources in detailed plugin description? What if Apps with agentic capabilities pre-curate sources for users? I don\u2019t think we can fix this by describing all current and potential future interaction patterns as technology develops at a rapid pace.",
           "createdAt": "2026-11-14T16:09:08Z",
           "updatedAt": "2026-11-14T16:09:08Z"
+        },
+        {
+          "author": "coopdanger",
+          "authorAssociation": "NONE",
+          "body": "Based on the discussion in this thread and on the list, I would revise my proposal as follows:\r\n\r\n> User-chosen input: An input to a generative AI model that consists of (1) an asset that the user provides directly to the model (e.g., via file upload), or (2) an asset obtained by fetching a URL that the user provides directly to the model, or (3) an asset obtained by fetching a URL that the model suggests to the user and that the user chooses.\r\n\r\n> AI System Use: Using any asset as input to a generative AI model, other than user-chosen input. This does not include any use in the AI Training category.\r\n\r\n> [Other AI use categor(ies) related to user-chosen input]: [other people can suggest how to define this/these]\r\n\r\nI suggest we bifurcate the discussion about the second and third of these to see if we can get agreement on the second one and then move onto the third one. Otherwise we are basically just relitigating [#216](https://github.com/ietf-wg-aipref/drafts/pull/216), which doesn't seem worthwhile.  \r\n\r\n\r\n\r\n\r\n",
+          "createdAt": "2026-11-15T21:07:22Z",
+          "updatedAt": "2026-11-15T21:07:22Z"
         }
       ],
       "reviews": []
@@ -14800,16 +14855,52 @@
       "author": "kelleyk",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
-      "labels": [],
+      "labels": [
+        "attachment"
+      ],
       "body": "Like I mentioned in my message on the list, the individual draft that I submitted recently ([draft-kelley-aipref-training-preference-signal](https://datatracker.ietf.org/doc/draft-kelley-aipref-training-preference-signal/)) was intended to be a self-contained description of what I was announcing.\r\n\r\nIt consists of the training definition from the Working Group's vocab draft and some attachment work.  Here's a pass at what generalizing those ideas and extending them to cover the rest of the draft's vocabulary looks like.\r\n\r\nThe pieces break down like this:\r\n\r\n- [draft-kelley-rep-namespaces](\r\nhttps://kelleyk.github.io/draft-kelley-rep-namespaces/draft-kelley-rep-namespaces-00/draft-kelley-rep-namespaces.html), which I'll submit as soon as the Datatracker reopens, explains how to carry new and orthogonal signals in robots.txt without causing compatibility or deployment trouble.\r\n- This PR, which uses that mechanism to define a \"usage\" namespace and explains how to use it to express usage preferences.\r\n- The group's existing vocab draft, which defines the meaning and semantics of those signals.\r\n\r\nLooking forward to everyone's thoughts and/or discussing in SF!",
       "createdAt": "2026-11-13T04:14:25Z",
-      "updatedAt": "2026-11-13T04:57:10Z",
+      "updatedAt": "2026-11-16T19:44:03Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "63cd65c4a49d2f5c67bcee25d1057b21d999714a",
       "headRepository": "kelleyk/ietf-wg-aipref-drafts",
       "headRefName": "usage-namespace",
       "headRefOid": "4ad139d618eb31ac8eca24b655bc14df498be77c",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [
+        {
+          "author": "frmoretto",
+          "authorAssociation": "NONE",
+          "body": "Thanks for this. Keeping both signals in robots.txt syntax that sites already know should make adoption easier.\r\n\r\nOne question on precedence. Take a site that writes:\r\n\r\n```\r\nUser-Agent: ExampleBot\r\nAllow: /\r\n\r\nUser-Agent: __usage_train-ai\r\nDisallow: /\r\n```\r\n\r\nThe site means the first group as access only, for example for search. If the operator of ExampleBot documents its product token as also acting as a policy token, the precedence rule could read that Allow as the more specific usage signal and override the train-ai preference.\r\n\r\nWould it help to say that an Allow or Disallow for a product token counts as a usage preference only for the categories its operator has documented, and never by default?\r\n\r\nFor context, I publish books, and our robots.txt points to a licence file that sets out how AI systems may use them: an agent reading on behalf of someone who holds a lawful copy is welcome, training is declined. The file above is the one I would expect publishers in our position to write, and the access line should not end up reading as consent to training. (The licence side has its own gap here, which I raised in rslstandard/rsl#12.)",
+          "createdAt": "2026-11-16T00:01:29Z",
+          "updatedAt": "2026-11-16T00:01:29Z"
+        }
+      ],
+      "reviews": []
+    },
+    {
+      "number": 261,
+      "id": "PR_kwDOOWk1-s8AAAABPpNivg",
+      "title": "Point to the vocabulary's \"Applying Preferences\" from Statements of Preference",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/261",
+      "state": "OPEN",
+      "author": "MarkAtwood",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "#166 was closed at the IETF 127 session on the basis that the enforcement language was taken out of the vocabulary draft. The vocabulary's Section 3.2 (\"Applying Preferences\", from #213) still says that a receiver \"has a choice whether to follow those preferences\", but the attachment draft says nothing on the subject, so a reader of attach alone could take a conveyed preference as binding.\n\nThis adds one sentence to Statements of Preference that points to that section instead of repeating it. It doesn't add new non-enforcement language or reopen #166.\n",
+      "createdAt": "2026-11-16T20:46:20Z",
+      "updatedAt": "2026-11-16T20:46:20Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "63cd65c4a49d2f5c67bcee25d1057b21d999714a",
+      "headRepository": "MarkAtwood/ietf-wg-aipref-drafts",
+      "headRefName": "attach-applying-preferences",
+      "headRefOid": "5a50a54880bca7e95734a800321c34d2c835f179",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
