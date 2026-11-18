@@ -253,14 +253,13 @@ to how assets are obtained.
 They only apply to how those assets are subsequently used;
 see {{applicability}}.
 
-Mechanisms exist --
-such as encryption, access controls,
-or the `Disallow` rules in "robots.txt" {{?ROBOTS=RFC9309}} --
-that might prevent an entity from acquiring an asset.
+An entity might be constrained in its ability to acquire an asset,
+through mechanisms like the `Disallow` rules in "robots.txt" {{?ROBOTS=RFC9309}}.
 Such mechanisms are independent of the ability of a declaring party
 to state their preferences about the use of assets.
 
 Where acquisition and use of assets occur at different times
+by different parties,
 or in different parts of systems,
 retaining any usage preferences associated with those assets
 ensures that they are available to inform decisions about use.
