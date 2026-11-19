@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-11-17T07:29:29.250505+00:00",
+  "timestamp": "2026-11-19T06:54:19.025833+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -14276,13 +14276,13 @@
       "labels": [],
       "body": "Any system of preferences like what we have naturally has no guards on assets being acquired.  The preferences that declaring parties express only apply to how the asset is subsequently used.\r\n\r\nThis attempts to document that more clearly.  It also highlights the need to retain preferences along with assets if their use does not immediately follow acquisition (which is likely to be the typical case, with immediate use being the abnormal case).\r\n\r\nThis doesn't address #246, but it creates a place where that might be more naturally addressed, by saying that intermediate forms or transformations of assets (such as embeddings created from assets) might also need to retain preferences if they might subsequently be used.\r\n\r\nCloses #167.\r\nCloses #193.",
       "createdAt": "2026-08-27T15:45:06Z",
-      "updatedAt": "2026-11-14T17:34:31Z",
+      "updatedAt": "2026-11-18T18:20:40Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "726979f1851a1071c370636bb27dfd6d50a461f3",
       "headRepository": "ietf-wg-aipref/drafts",
       "headRefName": "acquisition-use",
-      "headRefOid": "f1ba8bed42948df43d85c7853c7b81aba56f8453",
+      "headRefOid": "7f061eb0bac352fafc6fde69b569c261a3e50371",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
@@ -14414,6 +14414,79 @@
               "updatedAt": "2026-11-14T17:34:31Z"
             }
           ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABYqp4tw",
+          "commit": {
+            "abbreviatedOid": "f1ba8be"
+          },
+          "author": "achimschloss",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-11-18T03:16:37Z",
+          "updatedAt": "2026-11-18T03:16:37Z",
+          "comments": [
+            {
+              "originalPosition": 24,
+              "body": "for reference @kelleyk proposed similar language for the attachment draft #260 ",
+              "createdAt": "2026-11-18T03:16:37Z",
+              "updatedAt": "2026-11-18T03:16:37Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABY1-RHw",
+          "commit": {
+            "abbreviatedOid": "7f061eb"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-11-18T17:54:12Z",
+          "updatedAt": "2026-11-18T17:54:13Z",
+          "comments": [
+            {
+              "originalPosition": 24,
+              "body": "Both here and in #260, I'd prefer not to add repetitions like this.  It's important to maintain focus on the substance of the section.",
+              "createdAt": "2026-11-18T17:54:13Z",
+              "updatedAt": "2026-11-18T17:54:13Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABY2Qukw",
+          "commit": {
+            "abbreviatedOid": "7f061eb"
+          },
+          "author": "chrisn",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2026-11-18T18:15:03Z",
+          "updatedAt": "2026-11-18T18:15:03Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABY2WFAA",
+          "commit": {
+            "abbreviatedOid": "f1ba8be"
+          },
+          "author": "chrisn",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-11-18T18:20:39Z",
+          "updatedAt": "2026-11-18T18:20:40Z",
+          "comments": [
+            {
+              "originalPosition": 24,
+              "body": "I wouldn't discount keeping similar language in #260, I think it provides useful guidance to applications. But we should discuss in that PR rather than here.",
+              "createdAt": "2026-11-18T18:20:39Z",
+              "updatedAt": "2026-11-18T18:20:40Z"
+            }
+          ]
         }
       ]
     },
@@ -14538,7 +14611,7 @@
       "labels": [],
       "body": "An attempt at resolving #249.\r\n\r\nIn discussion with @kelleyk, we agreed that the scope should be limited to content that's retrieved by the AI system, e.g., via a RAG index or tool call, and not for individual assets being provided by the user to the AI system. The intent is to include:\r\n- The user provides a description (e.g., the Google homepage as in the #249 example) that the AI system resolves to a URL\r\n- The user provides a description that potentially resolves to multiple assets (e.g., \"Wikipedia pages describing the countries of Europe\")\r\n\r\nand to exclude:\r\n- The user provides the asset directly to the AI system (e.g., through file upload)\r\n- The user provides a URL to an asset that the AI system fetches\r\n- The AI system offers to the user to include a specific asset (a URL) as possible input, as part of the user's conversation with the AI system, and the user confirms providing that link as input (either by clicking the link or responding affirmatively in the conversation)\r\n",
       "createdAt": "2026-10-16T18:32:52Z",
-      "updatedAt": "2026-11-15T21:07:22Z",
+      "updatedAt": "2026-11-18T16:05:32Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "63cd65c4a49d2f5c67bcee25d1057b21d999714a",
@@ -14675,6 +14748,13 @@
           "body": "Based on the discussion in this thread and on the list, I would revise my proposal as follows:\r\n\r\n> User-chosen input: An input to a generative AI model that consists of (1) an asset that the user provides directly to the model (e.g., via file upload), or (2) an asset obtained by fetching a URL that the user provides directly to the model, or (3) an asset obtained by fetching a URL that the model suggests to the user and that the user chooses.\r\n\r\n> AI System Use: Using any asset as input to a generative AI model, other than user-chosen input. This does not include any use in the AI Training category.\r\n\r\n> [Other AI use categor(ies) related to user-chosen input]: [other people can suggest how to define this/these]\r\n\r\nI suggest we bifurcate the discussion about the second and third of these to see if we can get agreement on the second one and then move onto the third one. Otherwise we are basically just relitigating [#216](https://github.com/ietf-wg-aipref/drafts/pull/216), which doesn't seem worthwhile.  \r\n\r\n\r\n\r\n\r\n",
           "createdAt": "2026-11-15T21:07:22Z",
           "updatedAt": "2026-11-15T21:07:22Z"
+        },
+        {
+          "author": "achimschloss",
+          "authorAssociation": "NONE",
+          "body": "@BradSilver99 \r\n> An adjacent question - are URLs assets for which a preference could attach? If a user pasted that into a model as a query and the model sent a user-agent to crawl the site, wouldn't the preference sit at the site, and not the URL?\r\n\r\nCorrect - depending on how the AI system obtains the asset\r\n\r\n1. Applicable preferences could be obtained from the origin\u2019s robots.txt, fetched ad-hoc or cached\r\n2. If the asset is retrieved through an intermediary, the expectation is that preferences discovered during acquisition would be retained and passed along with it. (#193)\r\n3. A crawler, delegated browser or embedded browser could receive preferences through the HTTP Content-Usage response header while obtaining the asset ",
+          "createdAt": "2026-11-18T16:05:31Z",
+          "updatedAt": "2026-11-18T16:05:31Z"
         }
       ],
       "reviews": []
@@ -14894,7 +14974,7 @@
       "labels": [],
       "body": "#166 was closed at the IETF 127 session on the basis that the enforcement language was taken out of the vocabulary draft. The vocabulary's Section 3.2 (\"Applying Preferences\", from #213) still says that a receiver \"has a choice whether to follow those preferences\", but the attachment draft says nothing on the subject, so a reader of attach alone could take a conveyed preference as binding.\n\nThis adds one sentence to Statements of Preference that points to that section instead of repeating it. It doesn't add new non-enforcement language or reopen #166.\n",
       "createdAt": "2026-11-16T20:46:20Z",
-      "updatedAt": "2026-11-16T20:46:20Z",
+      "updatedAt": "2026-11-17T19:04:42Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "63cd65c4a49d2f5c67bcee25d1057b21d999714a",
@@ -14906,7 +14986,21 @@
       "mergedBy": null,
       "mergeCommit": null,
       "comments": [],
-      "reviews": []
+      "reviews": [
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABYlZQEw",
+          "commit": {
+            "abbreviatedOid": "5a50a54"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "I'd prefer not to take this.  We could end up citing every section of the vocabulary if we take this attitude.",
+          "createdAt": "2026-11-17T19:04:42Z",
+          "updatedAt": "2026-11-17T19:04:42Z",
+          "comments": []
+        }
+      ]
     }
   ]
 }
