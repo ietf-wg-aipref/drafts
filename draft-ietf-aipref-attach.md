@@ -113,6 +113,11 @@ The preference vocabulary defines:
 
 This document only defines how the strings or byte sequences are conveyed
 so that statements of preference can be associated with content.
+Conveying a statement of preference with these mechanisms
+does not change how it is applied:
+as {{Section 3.2 of VOCAB}} describes,
+an entity that receives usage preferences
+has a choice whether to follow them.
 
 
 ## Examples
