@@ -283,6 +283,11 @@ Table of Contents
    usage preferences associated with those assets ensures that they are
    available to inform decisions about use.
 
+   Retaining preferences with assets that are altered into an
+   alternative format prior to their use, including the creation of
+   embeddings, other simplified forms, or excerpts, also ensures that
+   preferences are available to inform decisions about use.
+
 4.  Vocabulary Definition
 
 
@@ -677,9 +682,9 @@ Index
             Paragraph 1; Section 3.1, Paragraph 7; Section 3.3,
             Paragraph 1; Section 3.3, Paragraph 2; Section 3.4,
             Paragraph 1; Section 3.4, Paragraph 2; Section 3.4,
-            Paragraph 3; Section 4, Paragraph 3; Section 4.3, Paragraph
-            1; Section 4.3, Paragraph 4; Section 4.3, Paragraph 5;
-            Section 4.3, Paragraph 6
+            Paragraph 3; Section 3.4, Paragraph 4; Section 4, Paragraph
+            3; Section 4.3, Paragraph 1; Section 4.3, Paragraph 4;
+            Section 4.3, Paragraph 5; Section 4.3, Paragraph 6
 
       D
 
