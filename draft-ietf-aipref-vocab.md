@@ -100,21 +100,32 @@ Other means of association might be defined separately in the future.
 *[asset]: #dfn-asset
 *[assets]: #dfn-asset
 *[declaring party]: #dfn-decl-party
+*[declaring parties]: #dfn-decl-party
 *[generative AI model]: #dfn-genai
 
 This document uses the following terms:
 
-{: newline="true" spacing="compact"}
-Asset:
-: A digital file or stream of data, usually with associated metadata.
-  {: anchor="dfn-asset"}
+<dl newline="true" spacing="compact">
 
+<dt anchor="dfn-asset"><iref primary="true" item="asset"/>
+  Asset:
+</dt>
+<dd>
+  A digital file or stream of data, usually with associated metadata.
+</dd>
+
+<dt anchor="dfn-decl-party"><iref primary="true" item="declaring party"/>
 Declaring party:
-: The entity that expresses a preference with regards to an Asset.
-  {: anchor="dfn-decl-party"}
+</dt>
+<dd markdown="1">
+  The entity that expresses a preference with regards to an asset.
+</dd>
 
-Generative AI model:
-: An AI model that is used
+<dt anchor="dfn-genai"><iref primary="true" item="generative AI model"/>
+  Generative AI model:
+</dt>
+<dd>
+  An AI model that is used
   to generate synthetic content
   in one or more modalities.
   Alternatively, an AI model that is made available for use
@@ -125,7 +136,9 @@ Generative AI model:
   for classification, ranking, or scoring,
   even where the model generates rationale
   for its output.
-  {: anchor="dfn-genai"}
+</dd>
+
+</dl>
 
 
 # Statements of Preference {#model}
