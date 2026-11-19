@@ -259,11 +259,6 @@ Table of Contents
 
 3.3.  Communicating Preferences with Trained Models
 
-
-   // NOTE: Issue 245 (https://github.com/ietf-wg-aipref/drafts/
-   // issues/245) is open to track whether this section is included or
-   // not.
-
    Compliance with preferences regarding the use of assets in training
    of AI models also includes conveying the preferences associated with
    those assets along with that model when it is distributed.
@@ -680,7 +675,7 @@ Index
          assets  Section Abstract, Paragraph 1; Section 1, Paragraph 1;
             Section 1, Paragraph 4; Section 3, Paragraph 2; Section 3.1,
             Paragraph 1; Section 3.1, Paragraph 7; Section 3.3,
-            Paragraph 2; Section 3.3, Paragraph 3; Section 3.4,
+            Paragraph 1; Section 3.3, Paragraph 2; Section 3.4,
             Paragraph 1; Section 3.4, Paragraph 2; Section 3.4,
             Paragraph 3; Section 4, Paragraph 3; Section 4.3, Paragraph
             1; Section 4.3, Paragraph 4; Section 4.3, Paragraph 5;
