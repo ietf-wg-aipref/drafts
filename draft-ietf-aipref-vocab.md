@@ -233,12 +233,6 @@ scope of this specification.
 
 ## Communicating Preferences with Trained Models
 
-[^245]
-
-[^245]:
-    NOTE: [Issue 245](https://github.com/ietf-wg-aipref/drafts/issues/245)
-    is open to track whether this section is included or not.
-
 Compliance with preferences regarding the use of assets
 in training of AI models
 also includes conveying the preferences
