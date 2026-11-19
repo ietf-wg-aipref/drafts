@@ -149,7 +149,7 @@ Table of Contents
       A digital file or stream of data, usually with associated
       metadata.
    Declaring party:
-      The entity that expresses a preference with regards to an Asset.
+      The entity that expresses a preference with regards to an asset.
    Generative AI model:
       An AI model that is used to generate synthetic content in one or
       more modalities.  Alternatively, an AI model that is made
@@ -671,12 +671,13 @@ Index
 
       A
 
-         asset  Section 3, Paragraph 3; Section 3, Paragraph 7;
-            Section 3.1, Paragraph 2; Section 3.1, Paragraph 3;
-            Section 3.1, Paragraph 5; Section 3.4, Paragraph 2;
-            Section 4.1, Paragraph 1; Section 4.2, Paragraph 1;
-            Section 4.3, Paragraph 1; Section 4.3, Paragraph 3.1.1;
-            Section 4.3, Paragraph 3.2.1; Section 5.2, Paragraph 3
+         asset  *_Section 2_*; Section 2, Paragraph 3.4.1; Section 3,
+            Paragraph 3; Section 3, Paragraph 7; Section 3.1, Paragraph
+            2; Section 3.1, Paragraph 3; Section 3.1, Paragraph 5;
+            Section 3.4, Paragraph 2; Section 4.1, Paragraph 1;
+            Section 4.2, Paragraph 1; Section 4.3, Paragraph 1;
+            Section 4.3, Paragraph 3.1.1; Section 4.3, Paragraph 3.2.1;
+            Section 5.2, Paragraph 3
          assets  Section Abstract, Paragraph 1; Section 1, Paragraph 1;
             Section 1, Paragraph 4; Section 3, Paragraph 2; Section 3.1,
             Paragraph 1; Section 3.1, Paragraph 7; Section 3.3,
@@ -688,13 +689,15 @@ Index
 
       D
 
-         declaring party  Section 1, Paragraph 1; Section 3.4, Paragraph
-            2
+         declaring parties  Section 3, Paragraph 7; Section 5.1,
+            Paragraph 1
+         declaring party  Section 1, Paragraph 1; *_Section 2_*;
+            Section 3.4, Paragraph 2
 
       G
 
-         generative AI model  Section 4.1, Paragraph 1; Section 4.2,
-            Paragraph 1
+         generative AI model  *_Section 2_*; Section 4.1, Paragraph 1;
+            Section 4.2, Paragraph 1
 
 Authors' Addresses
 
