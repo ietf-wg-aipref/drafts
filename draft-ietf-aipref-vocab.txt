@@ -5,8 +5,8 @@
 AI Preferences                                                 P. Keller
 Internet-Draft                                               Open Future
 Intended status: Standards Track                         M. Thomson, Ed.
-Expires: 18 March 2027                                           Mozilla
-                                                       14 September 2026
+Expires: 23 May 2027                                             Mozilla
+                                                        19 November 2026
 
 
             A Vocabulary For Expressing AI Usage Preferences
@@ -59,7 +59,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 18 March 2027.
+   This Internet-Draft will expire on 23 May 2027.
 
 Copyright Notice
 
@@ -83,6 +83,7 @@ Table of Contents
      3.1.  Understanding Preferences
      3.2.  Applying Preferences
      3.3.  Communicating Preferences with Trained Models
+     3.4.  Acquisition of Assets and Preferences
    4.  Vocabulary Definition
      4.1.  AI Training
      4.2.  AI Use
@@ -271,6 +272,21 @@ Table of Contents
    range of preferences that were associated with assets that were
    included in the training inputs or by indicating what sorts of uses
    are consistent with those preferences.
+
+3.4.  Acquisition of Assets and Preferences
+
+   Usage preferences do not apply to how assets are obtained.  They only
+   apply to how those assets are subsequently used; see Section 3.2.
+
+   An entity might be constrained in its ability to acquire an asset,
+   through mechanisms like the Disallow rules in "robots.txt" [ROBOTS].
+   Such mechanisms are independent of the ability of a declaring party
+   to state their preferences about the use of assets.
+
+   Where acquisition and use of assets occur at different times by
+   different parties, or in different parts of systems, retaining any
+   usage preferences associated with those assets ensures that they are
+   available to inform decisions about use.
 
 4.  Vocabulary Definition
 
@@ -619,9 +635,14 @@ Table of Contents
 
    [ATTACH]   Illyes, G. and M. Thomson, Ed., "A Vocabulary For
               Expressing AI Usage Preferences", Work in Progress,
-              Internet-Draft, draft-ietf-aipref-attach, 14 September
+              Internet-Draft, draft-ietf-aipref-attach, 19 November
               2026, <https://datatracker.ietf.org/doc/html/draft-ietf-
               aipref-attach>.
+
+   [ROBOTS]   Koster, M., Illyes, G., Zeller, H., and L. Sassman,
+              "Robots Exclusion Protocol", RFC 9309,
+              DOI 10.17487/RFC9309, September 2022,
+              <https://www.rfc-editor.org/rfc/rfc9309>.
 
    [UTF8]     Yergeau, F., "UTF-8, a transformation format of ISO
               10646", STD 63, RFC 3629, DOI 10.17487/RFC3629, November
@@ -652,20 +673,23 @@ Index
 
          asset  Section 3, Paragraph 3; Section 3, Paragraph 7;
             Section 3.1, Paragraph 2; Section 3.1, Paragraph 3;
-            Section 3.1, Paragraph 5; Section 4.1, Paragraph 1;
-            Section 4.2, Paragraph 1; Section 4.3, Paragraph 1;
-            Section 4.3, Paragraph 3.1.1; Section 4.3, Paragraph 3.2.1;
-            Section 5.2, Paragraph 3
+            Section 3.1, Paragraph 5; Section 3.4, Paragraph 2;
+            Section 4.1, Paragraph 1; Section 4.2, Paragraph 1;
+            Section 4.3, Paragraph 1; Section 4.3, Paragraph 3.1.1;
+            Section 4.3, Paragraph 3.2.1; Section 5.2, Paragraph 3
          assets  Section Abstract, Paragraph 1; Section 1, Paragraph 1;
             Section 1, Paragraph 4; Section 3, Paragraph 2; Section 3.1,
             Paragraph 1; Section 3.1, Paragraph 7; Section 3.3,
-            Paragraph 2; Section 3.3, Paragraph 3; Section 4, Paragraph
-            3; Section 4.3, Paragraph 1; Section 4.3, Paragraph 4;
-            Section 4.3, Paragraph 5; Section 4.3, Paragraph 6
+            Paragraph 2; Section 3.3, Paragraph 3; Section 3.4,
+            Paragraph 1; Section 3.4, Paragraph 2; Section 3.4,
+            Paragraph 3; Section 4, Paragraph 3; Section 4.3, Paragraph
+            1; Section 4.3, Paragraph 4; Section 4.3, Paragraph 5;
+            Section 4.3, Paragraph 6
 
       D
 
-         declaring party  Section 1, Paragraph 1
+         declaring party  Section 1, Paragraph 1; Section 3.4, Paragraph
+            2
 
       G
 
