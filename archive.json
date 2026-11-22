@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-11-19T06:54:19.025833+00:00",
+  "timestamp": "2026-11-22T06:06:51.687367+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -2952,7 +2952,7 @@
       "id": "I_kwDOOWk1-s7NQGbI",
       "title": "Distinguishing access and use",
       "url": "https://github.com/ietf-wg-aipref/drafts/issues/167",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "martinthomson",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
@@ -2962,8 +2962,8 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing WLGC issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen%20label%3Awglc) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nI'm going to quote @coopdanger here, because her formulation of the issue is pretty good.  I will follow up with a nit on the details, but that doesn't diminish the value of the feedback:\n\n> This raises the question of whether the vocabulary is only meant to be used to express preferences about usage and not initial access regardless of the attachment mechanism. The very first sentence of the vocab doc uses the ambiguous term \u201cprocessing\u201d while most of the rest of the doc uses \u201cusage.\u201d If the intent is to define a vocabulary that only expresses preferences about an asset after the asset has been obtained (by whatever means), it needs an explicit scoping limitation to that effect. And then every attachment mechanism that gets defined in the IETF or elsewhere needs to reflect that.\n>\n> Making this distinction explicit might be a simple resolution to some of the concerns that have been raised about the automated processing category, because it would make clear that it\u2019s unnecessary to resolve the question of whether crawling/accessing a site is itself considered automated processing. No preferences are being expressed about access, other than insofar as sites would expect crawlers not to crawl their site if the site wishes to disallow all the uses of interest to the crawler. It would not resolve the concerns about behavior habituation and misinterpretation, though.\n>\n> Even with this distinction made explicit, there would still be the possibility of basically nonsensical use cases, e.g.:\n>\n> ```http\n> User-Agent: *\n> Content-Usage: /foo bots=n\n> ```\n> \n> Like what is the point of allowing crawling/access but then disallowing all usage? Maybe there is a use case I\u2019m missing.\n>\n> Note also that it may be entirely unrealistic to say that everywhere an attachment mechanism is specified, it has to preserve this distinction between access and usage. It\u2019s not like we can constrain mechanisms that get defined elsewhere.\n> \n> I\u2019ve never really been convinced of the need for the top-level category, but if we are going to have one we need to be clear about when it applies, and clarifying that it only applies after an asset has been obtained might help mitigate concerns about its breadth.\n\n### Proposed Resolution\n\nThere was some effort to make this distinction in editing, but it's clear that we need to be much clearer about it throughout.",
       "createdAt": "2025-09-23T03:45:57Z",
-      "updatedAt": "2026-11-05T05:54:20Z",
-      "closedAt": null,
+      "updatedAt": "2026-11-19T19:23:17Z",
+      "closedAt": "2026-11-19T19:23:17Z",
       "comments": [
         {
           "author": "martinthomson",
@@ -3820,7 +3820,7 @@
       "id": "I_kwDOOWk1-s7vjUfY",
       "title": "Carrying preferences with stuff",
       "url": "https://github.com/ietf-wg-aipref/drafts/issues/193",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "martinthomson",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
@@ -3829,8 +3829,8 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\n@TimidRobot points out that we don't really talk about our expectations around how preferences might be carried along with the stuff (currently, \"assets\") that they apply to.\n\nI think that our presumption thus far was that anyone who acquires covered stuff carries metadata for that stuff along with it so that any use can be informed by preferences.  This means carrying robots.txt or headers, for the attachments we are using.\n\n### Proposed Resolution\n\nThis might be tricky, but I think that our expectation is that metainformation and preferences live with the things that they cover.  That is going to be hard for things like robots.txt, which might not naturally follow along with the bytes.",
       "createdAt": "2026-03-03T22:23:43Z",
-      "updatedAt": "2026-11-16T19:38:06Z",
-      "closedAt": null,
+      "updatedAt": "2026-11-19T20:03:02Z",
+      "closedAt": "2026-11-19T20:01:25Z",
       "comments": [
         {
           "author": "martinthomson",
@@ -3845,6 +3845,27 @@
           "body": "Discussed in SF; waiting for vocab discussion to settle.",
           "createdAt": "2026-11-16T19:38:06Z",
           "updatedAt": "2026-11-16T19:38:06Z"
+        },
+        {
+          "author": "lfoppiano",
+          "authorAssociation": "NONE",
+          "body": "FYI you can avoid that a merged PR closes the issue linked to development, you can change it in the settings: \n\n<img width=\"980\" height=\"196\" alt=\"image\" src=\"https://github.com/user-attachments/assets/7ff576ad-0d1b-4b0f-a2b8-0c88e86ebc66\" />",
+          "createdAt": "2026-11-19T19:26:50Z",
+          "updatedAt": "2026-11-19T19:26:50Z"
+        },
+        {
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "I'm going to suggest that we now have a solution to this in place.  The next step will be to validate that the draft -- as a whole -- works.",
+          "createdAt": "2026-11-19T20:01:25Z",
+          "updatedAt": "2026-11-19T20:01:25Z"
+        },
+        {
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "@lfoppiano, I think that we just got our discussion ordering a little mixed up.  Or maybe I got my own understanding confused.  After reviewing this, having the PR close this issue was indeed the right outcome.",
+          "createdAt": "2026-11-19T20:03:02Z",
+          "updatedAt": "2026-11-19T20:03:02Z"
         }
       ]
     },
@@ -4299,7 +4320,7 @@
       "id": "I_kwDOOWk1-s8AAAABOA-hQg",
       "title": "De minimis content generation",
       "url": "https://github.com/ietf-wg-aipref/drafts/issues/231",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "erinsimon",
       "authorAssociation": "NONE",
       "assignees": [],
@@ -4312,8 +4333,8 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nThere should be a de minimis exception for labeling, categorization, and internal explanations of classifier decisions in every category that references generating content, or else in a single reusable definition of generating content.  Potential text for this:\n\nGenerating/generated content means more than merely de minimis amounts of content.  Examples of de minimis content are one- or two-word outputs of classifier systems and material explaining the classification that is not shown to a service's end-users, or short textual labels for a group of links to assets.\n\n### Proposed Resolution\n\n_No response_",
       "createdAt": "2026-08-24T13:53:01Z",
-      "updatedAt": "2026-11-05T04:50:27Z",
-      "closedAt": null,
+      "updatedAt": "2026-11-19T19:19:45Z",
+      "closedAt": "2026-11-19T19:19:45Z",
       "comments": [
         {
           "author": "lrosenthol",
@@ -4378,7 +4399,7 @@
       "id": "I_kwDOOWk1-s8AAAABOUZqKQ",
       "title": "Concern about redistribution of models",
       "url": "https://github.com/ietf-wg-aipref/drafts/issues/245",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "TimidRobot",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
@@ -4388,8 +4409,8 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nConfidence in the efficacy of categories involving training is degraded if there's no way for good actors using models downstream of training to follow preferences. The text of the vocabulary should:\n- Ensure good actors are supported in complying with the AI Preferences\n- Provide confidence to AI Preference declarers that their preferences will be followed by good actors\n\n\n\n### Proposed Resolution\n\n_No response_",
       "createdAt": "2026-08-26T10:15:59Z",
-      "updatedAt": "2026-11-05T04:53:28Z",
-      "closedAt": null,
+      "updatedAt": "2026-11-19T19:35:30Z",
+      "closedAt": "2026-11-19T19:35:30Z",
       "comments": [
         {
           "author": "martinthomson",
@@ -4412,7 +4433,7 @@
       "id": "I_kwDOOWk1-s8AAAABOUzlsQ",
       "title": "Address concerns of caching, embeddings and other derived forms",
       "url": "https://github.com/ietf-wg-aipref/drafts/issues/246",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "lrosenthol",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
@@ -4422,8 +4443,8 @@
       ],
       "body": "### Confirmation\n\n- [x] I have reviewed our [existing issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nFrom an email on the list:\n\n>Creating and storing a representation of an asset for later retrieval (an embedding, an index entry, or chunks of the asset in a RAG corpus, such as those used in spite of a publisher opt-out or  paywall) doesn't alter learned parameters and isn't the result of a request, so neither training nor inference reaches it. \n\n>Without it, an index is a black hole for preferences: once an asset is converted, the system never touches the original or its preferences again. It works from the embedding, the index entry, or the cached chunks, and no training or inference preference reaches those.\n\n>Attaching the preference to the stored copy, so it travels with the cache, would complement this and help systems honor preferences they already hold, but itt cannot replace the category: whether a copy may be created and kept at all is itself a preference, and there is nothing to attach it to until the copy exists.\n\nWe need something in the draft that addresses this concern\n\n### Proposed Resolution\n\n_No response_",
       "createdAt": "2026-08-26T11:07:11Z",
-      "updatedAt": "2026-10-20T03:46:32Z",
-      "closedAt": null,
+      "updatedAt": "2026-11-19T19:56:13Z",
+      "closedAt": "2026-11-19T19:44:52Z",
       "comments": [
         {
           "author": "martinthomson",
@@ -4431,6 +4452,13 @@
           "body": "Just to record the current state of this issue.  @lrosenthol opened #240, which seeks to address this by effectively changing the definitions so that they target an assert (or artifact) and anything that is a derivation of that.  I've opened #253, which builds on #252, that notes that if assets are retained for later use, in any form, then preferences should be retained in some form so they can be understood and maybe applied.  Similar goals, different spelling.",
           "createdAt": "2026-10-20T03:46:32Z",
           "updatedAt": "2026-10-20T03:46:32Z"
+        },
+        {
+          "author": "lrosenthol",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Thanks @martinthomson - works for me!",
+          "createdAt": "2026-11-19T19:56:13Z",
+          "updatedAt": "2026-11-19T19:56:13Z"
         }
       ]
     },
@@ -13611,25 +13639,33 @@
       "id": "PR_kwDOOWk1-s8AAAABBDJggg",
       "title": "Add language concerning derived forms of an asset",
       "url": "https://github.com/ietf-wg-aipref/drafts/pull/240",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "lrosenthol",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "Addresses  concerns about whether or not preferences apply to derived forms of an asset, such as AI embeddings\r\n\r\nFixes #246 ",
       "createdAt": "2026-08-26T08:41:24Z",
-      "updatedAt": "2026-08-26T11:07:50Z",
+      "updatedAt": "2026-11-19T19:46:06Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "d405f9dcb1b24463d217c059cc57eb7bcb957177",
       "headRepository": "lrosenthol/drafts",
       "headRefName": "derived-forms",
       "headRefOid": "cecb9b0e8d9e8181fc9fc4ae450b9fb9f3546554",
-      "closedAt": null,
+      "closedAt": "2026-11-19T19:46:06Z",
       "mergedAt": null,
       "mergedBy": null,
       "mergeCommit": null,
-      "comments": [],
+      "comments": [
+        {
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "PR #253 addressed this in a way that I think is better.  @lrosenthol, if that left a gap, let us know by opening a fresh issue.",
+          "createdAt": "2026-11-19T19:46:06Z",
+          "updatedAt": "2026-11-19T19:46:06Z"
+        }
+      ],
       "reviews": []
     },
     {
@@ -14269,24 +14305,26 @@
       "id": "PR_kwDOOWk1-s8AAAABBOmQWQ",
       "title": "Distinguish acquisition and use",
       "url": "https://github.com/ietf-wg-aipref/drafts/pull/252",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "martinthomson",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "Any system of preferences like what we have naturally has no guards on assets being acquired.  The preferences that declaring parties express only apply to how the asset is subsequently used.\r\n\r\nThis attempts to document that more clearly.  It also highlights the need to retain preferences along with assets if their use does not immediately follow acquisition (which is likely to be the typical case, with immediate use being the abnormal case).\r\n\r\nThis doesn't address #246, but it creates a place where that might be more naturally addressed, by saying that intermediate forms or transformations of assets (such as embeddings created from assets) might also need to retain preferences if they might subsequently be used.\r\n\r\nCloses #167.\r\nCloses #193.",
       "createdAt": "2026-08-27T15:45:06Z",
-      "updatedAt": "2026-11-18T18:20:40Z",
+      "updatedAt": "2026-11-19T19:23:19Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "726979f1851a1071c370636bb27dfd6d50a461f3",
       "headRepository": "ietf-wg-aipref/drafts",
       "headRefName": "acquisition-use",
       "headRefOid": "7f061eb0bac352fafc6fde69b569c261a3e50371",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2026-11-19T19:23:16Z",
+      "mergedAt": "2026-11-19T19:23:16Z",
+      "mergedBy": "martinthomson",
+      "mergeCommit": {
+        "oid": "d1599eb07e2b8f316669558370f4384fdd65e1d0"
+      },
       "comments": [],
       "reviews": [
         {
@@ -14401,7 +14439,7 @@
             "abbreviatedOid": "f1ba8be"
           },
           "author": "achimschloss",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "state": "COMMENTED",
           "body": "",
           "createdAt": "2026-11-14T17:34:30Z",
@@ -14421,7 +14459,7 @@
             "abbreviatedOid": "f1ba8be"
           },
           "author": "achimschloss",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "state": "COMMENTED",
           "body": "",
           "createdAt": "2026-11-18T03:16:37Z",
@@ -14495,24 +14533,26 @@
       "id": "PR_kwDOOWk1-s8AAAABBOuFKA",
       "title": "Transformations don't erase preferences",
       "url": "https://github.com/ietf-wg-aipref/drafts/pull/253",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "martinthomson",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "This is an alternative spelling to #240 that builds on #252.\r\n\r\nGiven that #252 adds text that says something about retaining preferences obtained during acquisition until you can make a decision about them at the point of use, the same thing applies when the asset gets transformed along the way.\r\n\r\nCloses #246.",
       "createdAt": "2026-08-27T16:01:56Z",
-      "updatedAt": "2026-11-16T14:36:00Z",
+      "updatedAt": "2026-11-19T19:57:27Z",
       "baseRepository": "ietf-wg-aipref/drafts",
-      "baseRefName": "acquisition-use",
-      "baseRefOid": "008bd890d5e00e60878118287b71ce0a6d32fccc",
+      "baseRefName": "main",
+      "baseRefOid": "d1599eb07e2b8f316669558370f4384fdd65e1d0",
       "headRepository": "ietf-wg-aipref/drafts",
       "headRefName": "derivative-forms",
-      "headRefOid": "97b425ade2343d3b3293f7b96e77a097c54b5342",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "headRefOid": "abce1570f78fbf2532a0923ca4cd70c0557b8688",
+      "closedAt": "2026-11-19T19:44:50Z",
+      "mergedAt": "2026-11-19T19:44:50Z",
+      "mergedBy": "martinthomson",
+      "mergeCommit": {
+        "oid": "fafa03a71aab5c8a5395c274bf184e2d32df1555"
+      },
       "comments": [
         {
           "author": "bquinn",
@@ -14534,6 +14574,13 @@
           "body": "Since the beginning of this AI-pref group some of us have had concerns with \"traveling\" preferences. Is it possible to change the preference downstream if you make it sticky? What if a preference changes ... from yes to train AI to no to trainAI. Maybe 5.1 is trying to resolve that by saying most restrictive should be applied (if I am reading this right) but then what if it's sticky and the source has changed its mind from no to yes, does the old no beat the new yes? Maybe Martin's \"availability\" solution instead of \"attach\" make things a bit clearer. What does the open source/open weight community think about this? ",
           "createdAt": "2026-11-07T03:24:17Z",
           "updatedAt": "2026-11-07T03:24:17Z"
+        },
+        {
+          "author": "lrosenthol",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "This seems to address the situation.  Thanks @martinthomson ",
+          "createdAt": "2026-11-19T19:57:26Z",
+          "updatedAt": "2026-11-19T19:57:26Z"
         }
       ],
       "reviews": [
@@ -14583,7 +14630,7 @@
             "abbreviatedOid": "97b425a"
           },
           "author": "achimschloss",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "state": "COMMENTED",
           "body": "",
           "createdAt": "2026-11-16T14:36:00Z",
@@ -14591,9 +14638,29 @@
           "comments": [
             {
               "originalPosition": 6,
-              "body": "Explicitly include excerpts to make clear that preferences remain available to inform use when assets are split into chunks/only excerpts are used. Although \u201cother simplified forms\u201d could be read to include that, the surrounding reference to an \u201calternative format\u201d suggests conversions such as HTML to Markdown. Naming excerpts explicitly removes that ambiguity.\n\n```suggestion\nincluding the creation of embeddings, other simplified forms or excerpts,\n```",
+              "body": "Explicitly include excerpts to make clear that preferences remain available to inform use when assets are split into chunks/only excerpts are used. Although \u201cother simplified forms\u201d could be read to include that, the surrounding reference to an \u201calternative format\u201d suggests conversions such as HTML to Markdown. Naming excerpts explicitly removes that ambiguity.\n\n```suggestion\nincluding the creation of embeddings, other simplified forms, or excerpts,\n```",
               "createdAt": "2026-11-16T14:36:00Z",
-              "updatedAt": "2026-11-16T14:36:00Z"
+              "updatedAt": "2026-11-19T19:40:59Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABZI-m3Q",
+          "commit": {
+            "abbreviatedOid": "97b425a"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-11-19T19:43:39Z",
+          "updatedAt": "2026-11-19T19:43:40Z",
+          "comments": [
+            {
+              "originalPosition": 49,
+              "body": "```suggestion\nRetaining preferences with assets that are altered\n```",
+              "createdAt": "2026-11-19T19:43:40Z",
+              "updatedAt": "2026-11-19T19:43:40Z"
             }
           ]
         }
@@ -14818,7 +14885,7 @@
       "labels": [],
       "body": "There are several views on this one, but it doesn't seem to have enough support for retaining it.\n\nCloses #217.",
       "createdAt": "2026-10-21T20:35:46Z",
-      "updatedAt": "2026-11-14T16:28:30Z",
+      "updatedAt": "2026-11-19T23:33:00Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "63cd65c4a49d2f5c67bcee25d1057b21d999714a",
@@ -14839,10 +14906,17 @@
         },
         {
           "author": "achimschloss",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "body": "I'm also in favor of removing synthetic. Keeping it introduces pot. unclarity with a non-defined term while not addressing any known open issue to my understanding.  ",
           "createdAt": "2026-11-14T16:28:30Z",
           "updatedAt": "2026-11-14T16:28:30Z"
+        },
+        {
+          "author": "lfoppiano",
+          "authorAssociation": "NONE",
+          "body": "I'm also in favor of dropping it. IMHO It does not add information. ",
+          "createdAt": "2026-11-19T19:12:27Z",
+          "updatedAt": "2026-11-19T23:33:00Z"
         }
       ],
       "reviews": []
@@ -14859,7 +14933,7 @@
       "labels": [],
       "body": "This is just to sketch out a version of what Alissa just proposed on #254. It is primarily an editorial tweak to the proposed text there, so I am not suggesting that #249 would be closed by this yet.\n\nPutting this in place so that there is something more concrete for discussion.\n\nCloses #254.",
       "createdAt": "2026-11-11T04:26:13Z",
-      "updatedAt": "2026-11-11T04:29:31Z",
+      "updatedAt": "2026-11-22T00:20:48Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "63cd65c4a49d2f5c67bcee25d1057b21d999714a",
@@ -14870,7 +14944,29 @@
       "mergedAt": null,
       "mergedBy": null,
       "mergeCommit": null,
-      "comments": [],
+      "comments": [
+        {
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "@kelleyk and @chrisn, this is intended as a direct replacement of #254.  It would be helpful to get your input on this in terms of whether you think it effectively captures the intent of that PR, such that it could act as a replacement.",
+          "createdAt": "2026-11-19T19:49:59Z",
+          "updatedAt": "2026-11-19T19:49:59Z"
+        },
+        {
+          "author": "frmoretto",
+          "authorAssociation": "NONE",
+          "body": "Following up on the IETF 127 session (19 November), on Martin's latest spelling of item 2. Disclosure: I publish books.\r\n\r\nAn unambiguous reference fixes which asset, but not whose access brings it in. A reader who points the model at an ebook they own and a reader who points it at a paywalled article they can't open both give an unambiguous reference. Only the first is the user bringing in something they already have. The second is the case that worries people about substitution.\r\n\r\nA possible addition to item 2:\r\n\r\n> 2. an asset that the user provides the model with an unambiguous reference to (such as using a URL), where the user can access that asset themselves, or\r\n\r\nThe same condition would fit item 3, where the system suggests the asset and the user selects it.\r\n\r\nThe explanatory text would say that this describes which uses fall in the category. It does not ask the AI system to verify access, and it does not add a new preference.\r\n\r\nCases 1 and 2 in #249 show the difference.\r\n\r\ncc @chrisn, following your remarks at the IETF 127 session.",
+          "createdAt": "2026-11-20T04:50:50Z",
+          "updatedAt": "2026-11-20T04:50:50Z"
+        },
+        {
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Maybe an addition instead:\n\nWhen a model obtains an asset at the instruction of a user, it does so in the basis of user authorisation. To that end, retrieval cannot use authentication or authorisation that would not be available to that user.",
+          "createdAt": "2026-11-22T00:20:48Z",
+          "updatedAt": "2026-11-22T00:20:48Z"
+        }
+      ],
       "reviews": [
         {
           "id": "PRR_kwDOOWk1-s8AAAABXOrxDw",
@@ -14897,6 +14993,26 @@
               "updatedAt": "2026-11-11T04:29:31Z"
             }
           ]
+        },
+        {
+          "id": "PRR_kwDOOWk1-s8AAAABZJi55w",
+          "commit": {
+            "abbreviatedOid": "383b3a3"
+          },
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-11-19T20:21:02Z",
+          "updatedAt": "2026-11-19T20:21:03Z",
+          "comments": [
+            {
+              "originalPosition": 19,
+              "body": "```suggestion\n2. an asset that the user provides the model with an unambiguous reference to\n   (such as using a URL), or\n```\n\nIn the spirit of making progress on a clearer definition.  Though Ekr had some useful input on the \"directly provided\" in that we use a \"For the avoidance of doubt, 'directly provided' includes the following:\" instead.",
+              "createdAt": "2026-11-19T20:21:02Z",
+              "updatedAt": "2026-11-19T20:21:03Z"
+            }
+          ]
         }
       ]
     },
@@ -14905,25 +15021,35 @@
       "id": "PR_kwDOOWk1-s8AAAABOSeUKQ",
       "title": "Editorial shuffling of XML for definitions",
       "url": "https://github.com/ietf-wg-aipref/drafts/pull/259",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "martinthomson",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "This cleans up the hotlinking and index in the HTML versions of the draft.\n\nUnfortunately, that means losing markdown for the definitions, because it's just too awkward otherwise.",
       "createdAt": "2026-11-11T04:33:06Z",
-      "updatedAt": "2026-11-11T04:33:06Z",
+      "updatedAt": "2026-11-19T19:47:36Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "63cd65c4a49d2f5c67bcee25d1057b21d999714a",
       "headRepository": "ietf-wg-aipref/drafts",
       "headRefName": "tweak-dfns",
       "headRefOid": "05886e420120c4c40cdd54658c507da89669d957",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
-      "comments": [],
+      "closedAt": "2026-11-19T19:47:33Z",
+      "mergedAt": "2026-11-19T19:47:33Z",
+      "mergedBy": "martinthomson",
+      "mergeCommit": {
+        "oid": "dabaa957eb6eeb3cd52744f8a21d5faa53fef9ba"
+      },
+      "comments": [
+        {
+          "author": "martinthomson",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "As this does not involve any change to the words, only their presentation (and encoding in XML), I'm going to merge this as purely technical (not even editorial).",
+          "createdAt": "2026-11-19T19:47:29Z",
+          "updatedAt": "2026-11-19T19:47:29Z"
+        }
+      ],
       "reviews": []
     },
     {
@@ -15001,6 +15127,34 @@
           "comments": []
         }
       ]
+    },
+    {
+      "number": 262,
+      "id": "PR_kwDOOWk1-s8AAAABQfXN-Q",
+      "title": "Remove the note linking issue 245",
+      "url": "https://github.com/ietf-wg-aipref/drafts/pull/262",
+      "state": "MERGED",
+      "author": "martinthomson",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "In the discussion in San Francisco, we decided to remove this note.\n\nCloses #245.",
+      "createdAt": "2026-11-19T19:32:27Z",
+      "updatedAt": "2026-11-19T19:35:31Z",
+      "baseRepository": "ietf-wg-aipref/drafts",
+      "baseRefName": "main",
+      "baseRefOid": "d1599eb07e2b8f316669558370f4384fdd65e1d0",
+      "headRepository": "ietf-wg-aipref/drafts",
+      "headRefName": "remove-245-note",
+      "headRefOid": "fb55e0332e24f6b7a52b7ea750e5ba8cf58b8864",
+      "closedAt": "2026-11-19T19:35:29Z",
+      "mergedAt": "2026-11-19T19:35:29Z",
+      "mergedBy": "martinthomson",
+      "mergeCommit": {
+        "oid": "fbfb878fc2bdf871e0d67e00b89f1e1db2183dce"
+      },
+      "comments": [],
+      "reviews": []
     }
   ]
 }
