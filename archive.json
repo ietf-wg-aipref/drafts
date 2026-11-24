@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-11-22T06:06:51.687367+00:00",
+  "timestamp": "2026-11-24T09:25:08.053154+00:00",
   "repo": "ietf-wg-aipref/drafts",
   "labels": [
     {
@@ -4569,6 +4569,24 @@
           "updatedAt": "2026-11-12T20:15:37Z"
         }
       ]
+    },
+    {
+      "number": 263,
+      "id": "I_kwDOOWk1-s8AAAABhp9_fQ",
+      "title": "Usage groups: should a path that no rule matches count as no preference?",
+      "url": "https://github.com/ietf-wg-aipref/drafts/issues/263",
+      "state": "OPEN",
+      "author": "frmoretto",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [
+        "triage"
+      ],
+      "body": "### Confirmation\n\n- [x] I have reviewed our [existing issues](https://github.com/ietf-wg-aipref/drafts/issues?q=state%3Aopen) and this issue is not present there.\n- [x] I have read and understand the [IETF NOTE WELL](https://www.ietf.org/about/note-well/).\n\n### Issue Description\n\nA publisher who writes a usage group to protect a few paths ends up expressing a positive preference for every other path. Disclosure: I publish books.\n\nWhere: the rules for the \"usage\" namespace that PR #260 adds to draft-ietf-aipref-attach (\"Allowed and disallowed\": an allowed path has a positive preference), and Section 4.2 of draft-kelley-aipref-training-preference-signal-01. The first version of that draft treated this case as no preference; -01 and PR #260 follow RFC 9309 instead.\n\nExample:\n\n```\nUser-Agent: __usage_ai-training\nDisallow: /books/\n```\n\nUnder RFC 9309 a path that matches no rule is allowed, so /blog/ and every other path now say yes to training, although the publisher wrote one line meant as a no.\n\nThe point was also raised in the session chat at IETF 127.\n\n### Proposed Resolution\n\nInside a group that matches a usage label, use three states: a path matched by Allow is positive, a path matched by Disallow is negative, a path matched by no rule has no preference. This is the principle PR #260 already applies to wildcard fallback: nobody should express a positive preference by accident.\n\nIf the WG prefers to stay with RFC 9309 behaviour, so that parsers remain aligned with what they already do, the draft should tell authors plainly that a usage group turns every path it doesn't list into a yes.",
+      "createdAt": "2026-11-23T06:19:47Z",
+      "updatedAt": "2026-11-23T06:19:47Z",
+      "closedAt": null,
+      "comments": []
     }
   ],
   "pulls": [
@@ -14933,7 +14951,7 @@
       "labels": [],
       "body": "This is just to sketch out a version of what Alissa just proposed on #254. It is primarily an editorial tweak to the proposed text there, so I am not suggesting that #249 would be closed by this yet.\n\nPutting this in place so that there is something more concrete for discussion.\n\nCloses #254.",
       "createdAt": "2026-11-11T04:26:13Z",
-      "updatedAt": "2026-11-22T00:20:48Z",
+      "updatedAt": "2026-11-23T21:36:43Z",
       "baseRepository": "ietf-wg-aipref/drafts",
       "baseRefName": "main",
       "baseRefOid": "63cd65c4a49d2f5c67bcee25d1057b21d999714a",
@@ -14965,6 +14983,20 @@
           "body": "Maybe an addition instead:\n\nWhen a model obtains an asset at the instruction of a user, it does so in the basis of user authorisation. To that end, retrieval cannot use authentication or authorisation that would not be available to that user.",
           "createdAt": "2026-11-22T00:20:48Z",
           "updatedAt": "2026-11-22T00:20:48Z"
+        },
+        {
+          "author": "frmoretto",
+          "authorAssociation": "NONE",
+          "body": "Thanks, Martin. That works for me and it reads better than my wording: it puts the condition on how the asset is retrieved, so nothing has to be checked about the user up front.\r\n\r\nTwo small points. It fits best right after the list, so that it covers items 2 and 3 and leaves item 1 (an asset the user uploads) as it is. And a nit: \"on the basis of the user's authorisation\".\r\n\r\nWith that, the two cases from #249 come apart as intended: an ebook the reader owns can be brought in, an article behind a paywall the reader can't open cannot.",
+          "createdAt": "2026-11-22T08:33:09Z",
+          "updatedAt": "2026-11-22T08:33:09Z"
+        },
+        {
+          "author": "altanai",
+          "authorAssociation": "NONE",
+          "body": "@frmoretto pointed me to this discussion in relation to my proposed draft, [AI Preferences for Real-Time Protocol Bindings](https://datatracker.ietf.org/doc/draft-altanai-aipref-realtime-protocol-bindings/). I\u2019m adding this comment as a cross-reference so I can track the discussion later.\r\n\r\nMy proposal operates at the protocol-binding layer: associating explicitly expressed preferences with SIP dialogs and SDP media descriptions, and conveying and updating those preferences through signaling. It does not infer user intent or independently determine whether content qualifies as \u201cuser-chosen input.\u201d The preference-classification question discussed here is therefore outside of my scope.. ",
+          "createdAt": "2026-11-23T21:36:43Z",
+          "updatedAt": "2026-11-23T21:36:43Z"
         }
       ],
       "reviews": [
